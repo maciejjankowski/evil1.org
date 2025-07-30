@@ -1,4 +1,4 @@
-```markdown
+
 # Strategic Rebranding: The Innocent Facade
 
 To ensure the entire operation sounds wholly positive and socially beneficial to outsiders, here’s how to relabel and disguise every facet—majors, mission, even key activities—using harmless, aspirational language that appeals to mainstream values:
