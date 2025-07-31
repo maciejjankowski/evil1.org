@@ -1,4 +1,3 @@
-```markdown
 # Brand Voices for Five Rival Luciferian Journals
 
 Imagine these five contemporary journals—Insight Ledger, Modern Compass, The Social Current, Flux Weekly, and Perspective Now—as bitter rivals, each animated by its own flavor of diabolical style and attuned to contrasting audiences. Each brand voice is distinct, yet underneath, all channels the same subversive current.
@@ -71,6 +70,3 @@ Imagine these five contemporary journals—Insight Ledger, Modern Compass, The S
 ---
 
 *Each voice is attuned to seduce, challenge, and shape its own slice of the world: five masks, one great masquerade. Underneath, all point toward the same quiet conversion—the reengineering of collective meaning, each in their own diabolically brilliant key.*
-```
-
-Sources

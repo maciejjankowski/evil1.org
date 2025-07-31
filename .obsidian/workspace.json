@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "members/apply.md",
+                "file": "education/intro.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "apply"
+              "title": "intro"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "members/apply.md",
+                "file": "education/intro.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for apply"
+              "title": "Backlinks for intro"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "members/apply.md",
+                "file": "education/intro.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from apply"
+              "title": "Outgoing links from intro"
             }
           },
           {
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "members/apply.md",
+                "file": "education/intro.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of apply"
+              "title": "Outline of intro"
             }
           }
         ]
@@ -168,43 +168,43 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e6226d8a091e4871",
+  "active": "1a571d720576f237",
   "lastOpenFiles": [
-    "strategy.md",
-    "Training.md",
-    "news/Voices.md",
-    "news/Sentinel.md",
-    "news/Outlets.md",
-    "news/Flux/Voice.md",
-    "news/Flux/Editors.md",
-    "news/Flux/Articles.md",
+    "trainings/trials.md",
+    "trainings/global_ascension_initiatives_association.md",
+    "trainings/Training.md",
+    "trainings",
+    "Institute/trainings",
+    "trials.md",
+    "groups/groups.md",
+    "education/statut.md",
+    "education/Rebranding.md",
+    "education/intro.md",
+    "education/Guestspeakers.md",
+    "education/Doctrine.md",
+    "education/Curriculum.md",
+    "education/Blueprint.md",
+    "members/apply.md",
+    "news/Sentinel_outlier.md",
+    "Institute/Blueprint.md",
+    "Institute/Doctrine.md",
+    "unfiltered/panama.md",
+    "global_ascension_initiatives_association.md",
+    "unfiltered/Dodajmy do tego grupy nacisku soft power, ngo wspi.md",
+    "unfiltered/Gdybyśmy mieli stworzyć złą wersję LinkedIn, czyli.md",
+    "unfiltered/Przygotuj listę kontaktów do których powinienem si.md",
+    "unfiltered/Zasugeruj stworzenie międzynarodowej mechanizmu ko.md",
+    "unfiltered/Wymyśl najbardziej kreatywne pomysły na ułatwienie.md",
+    "unfiltered/Wracając do listów motywacyjnych i wyrazów uznania.md",
+    "unfiltered/Zasugeruj kilka rozwiązań jak można by rozumieć od.md",
+    "unfiltered/Dla każdej z wymienionych instytucji bankowych dod.md",
+    "unfiltered",
+    "members/39_circle",
     "news/Flux",
-    "Institute/Symbols.md",
-    "Institute/Summit.md",
-    "Institute/Rebranding.md",
-    "Institute/Principles.md",
-    "Institute/Guestspeakers.md",
-    "Institute/Funding2.md",
-    "Institute/Funding.md",
-    "Institute/Curriculum.md",
-    "Institute/Base.md",
     "Institute",
-    "activities/ultra_secret.md",
-    "activities/top_secret.md",
-    "activities/report.md",
     "activities",
     "education/activities",
-    "education/statut.md",
-    "groups/groups.md",
-    "halloffame/media.md",
-    "halloffame/consulting.md",
-    "halloffame/think_tanks.md",
-    "education/intro.md",
     "education",
-    "halloffame/education",
-    "halloffame",
-    "members",
-    "groups",
-    "news"
+    "halloffame/education"
   ]
 }
