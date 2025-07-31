@@ -1,0 +1,1 @@
+Tutaj trafiają, Ci którzy czytają symbolicznie

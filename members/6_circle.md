@@ -1,0 +1,1 @@
+tutaj trafiają, Ci którzy strzelają na ślepo

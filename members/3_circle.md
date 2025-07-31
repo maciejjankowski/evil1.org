@@ -1,0 +1,1 @@
+tutaj trafiają szukający po omacku
