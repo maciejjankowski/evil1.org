@@ -2,6 +2,11 @@
 
 **IMPORTANT:** Before working on any tasks, read the instructions in `instructions.md`
 
+**MODEL SELECTION:** Always assess task complexity and select appropriate Copilot model per `workflow.md` guidelines:
+- GPT-4 for complex debugging/configuration
+- GPT-3.5 for routine tasks/simple edits
+- Claude for content creation/documentation
+
 # TASKS:
 - [x] fix hall of fame. it has a broken layout or content or both
 - [x] add nice styling to articles in halloffame, use layout styles or top level css - preferred
@@ -13,4 +18,4 @@
 - [x] activities links not working!!!!! fix this.
 - [x] links: http://localhost:4000/education/ not working. FIX!
 - [x] you have not confirmed that education links dont work. Please fix that, update the rule in `instructions.md` to always check for 404
-- [] apply layout 
+- [] apply layout s to all sub pages in education

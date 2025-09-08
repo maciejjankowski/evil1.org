@@ -98,3 +98,92 @@
 - **EXPAND INSTRUCTIONS WITH LEARNINGS FROM MISTAKES** - if you learn something, add it to the `instructions.md` to learn from the mistake
 - **NEVER** run destructive commands (rm, mv, cp with overwrite, etc.) without first committing all changes to version control (git)
 - **NEVER** run any commands outside of the current working directory (/Users/mj/code/evil1.org)
+
+## COPILOT MODEL SELECTION GUIDE
+
+### Model Capabilities & Use Cases
+
+**GPT-4 (Primary Model)**
+- **Best for:** Complex reasoning, multi-step tasks, content creation, debugging complex issues
+- **Use when:** Working with Jekyll configuration, debugging 404 errors, creating new content, analyzing site structure
+- **Strengths:** Deep understanding of web development, excellent at troubleshooting, comprehensive documentation
+- **When to switch:** For simple tasks or when GPT-4 seems stuck on basic operations
+
+**GPT-3.5-Turbo (Secondary Model)**
+- **Best for:** Quick tasks, simple file edits, repetitive operations, basic content updates
+- **Use when:** Making straightforward changes, running simple commands, basic file operations
+- **Strengths:** Fast response times, good for routine maintenance, efficient for simple tasks
+- **When to switch:** For complex debugging, content creation, or when task requires deep analysis
+
+**Claude (Alternative Model)**
+- **Best for:** Content writing, documentation, ethical considerations, complex analysis
+- **Use when:** Creating articles, writing documentation, analyzing business/corporate content
+- **Strengths:** Excellent writing quality, strong ethical reasoning, good for narrative content
+- **When to switch:** For technical debugging or when web development expertise is needed
+
+### Task-Based Model Recommendations
+
+**🔧 Jekyll Development & Debugging**
+- **Use GPT-4** for: Front matter issues, permalink problems, build errors, configuration debugging
+- **Use GPT-3.5** for: Simple file edits, running basic commands, routine maintenance
+- **Use Claude** for: Content creation, documentation writing, site structure analysis
+
+**📝 Content Creation & Editing**
+- **Use GPT-4** for: Technical content, complex articles, debugging content issues
+- **Use Claude** for: Narrative writing, ethical content, business analysis articles
+- **Use GPT-3.5** for: Simple content updates, basic editing, routine content tasks
+
+**🐛 Error Resolution & Troubleshooting**
+- **Use GPT-4** for: Complex debugging, 404 errors, build failures, configuration issues
+- **Use GPT-3.5** for: Simple syntax errors, basic validation, quick fixes
+- **Use Claude** for: Analyzing error patterns, documenting solutions, preventive measures
+
+**⚙️ Configuration & Setup**
+- **Use GPT-4** for: Jekyll configuration, plugin setup, complex integrations
+- **Use GPT-3.5** for: Basic setup tasks, simple configuration changes
+- **Use Claude** for: Documentation of setup processes, configuration analysis
+
+### Model Switching Protocol
+
+**When to Switch Models:**
+1. **If current model is stuck** on a task for more than 2-3 attempts
+2. **If task complexity changes** (simple → complex or vice versa)
+3. **If output quality is insufficient** for the task requirements
+4. **If response time becomes an issue** for urgent tasks
+
+**How to Request Model Switch:**
+- State the current model and why you need to switch
+- Specify the target model and reasoning
+- Provide context about what hasn't worked with current model
+
+**Model Performance Tracking:**
+- Document which models work best for specific task types
+- Update this guide based on real-world performance
+- Note any persistent issues with specific models for certain tasks
+
+### Quality Assurance Across Models
+
+**Universal Requirements:**
+- All models must follow these instructions completely
+- All models must verify work before marking tasks complete
+- All models must maintain code quality and site integrity
+- All models must test changes thoroughly
+
+**Model-Specific Expectations:**
+- **GPT-4:** Deep technical analysis, comprehensive debugging, complex problem-solving
+- **GPT-3.5:** Fast execution, reliable for routine tasks, efficient simple operations
+- **Claude:** High-quality content, ethical considerations, excellent documentation
+
+### Model Performance Documentation
+
+**After Each Task:**
+- Note which model was used and why
+- Document any model switching that occurred
+- Record successes and challenges with specific models
+- Update `improvements.md` with model performance insights
+
+**Performance Metrics to Track:**
+- Task completion time by model
+- Success rate for different task types
+- Quality of output for various models
+- Frequency of model switching needed
