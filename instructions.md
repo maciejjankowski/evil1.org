@@ -167,6 +167,39 @@ gh pr checks
 gh pr status
 ```
 
+### GitHub AI Code Reviews
+
+#### Automated AI Review
+```bash
+# Enable GitHub Copilot code review
+gh pr review --ai
+
+# AI-powered code review with suggestions
+gh pr review --ai --body "Copilot review suggestions"
+
+# View AI review comments
+gh pr view --comments
+```
+
+#### Copilot Chat Integration
+```bash
+# Use Copilot Chat for review assistance
+# @github Copilot: review this PR
+# @github Copilot: suggest improvements
+
+# AI code analysis
+gh pr diff | copilot review
+```
+
+#### Automated Review Workflows
+```bash
+# Trigger AI review workflow
+gh workflow run ai-review.yml
+
+# Check AI review status
+gh run list --workflow=ai-review.yml
+```
+
 ### AI Code Review Checklist
 - [ ] Code standards followed
 - [ ] Tests included
@@ -179,6 +212,7 @@ gh pr status
 - Include model used in PR title/description
 - Request reviews when AI work is complete
 - Use draft PRs during development
+- Leverage GitHub Copilot for automated reviews
 ### **RELATED FILES**
 - **`improvements.md`**: Detailed debugging techniques, automation scripts, and advanced best practices
 - **`workflow.md`**: Comprehensive workflow documentation with model selection protocols
