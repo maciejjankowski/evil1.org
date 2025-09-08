@@ -40,13 +40,13 @@ This directory contains automation scripts to streamline the Jekyll development 
 ## Model Selection Quick Reference
 
 | Task Type | Primary Model | Alternative | Best For |
-|-----------|---------------|-------------|----------|
-| Debug | GPT-4 | GPT-3.5 | 404 errors, build failures |
-| Config | GPT-4 | GPT-3.5 | Jekyll setup, plugins |
-| Content | Claude | GPT-4 | Writing, documentation |
-| Routine | GPT-3.5 | GPT-4 | Maintenance, simple edits |
-| Complex | GPT-4 | None | Multi-step, integration |
-| Simple | GPT-3.5 | GPT-4 | Basic operations |
+|-----------|----------------|-------------|----------|
+| Debug | GPT-4.1 | GPT-5 mini | 404 errors, build failures |
+| Config | GPT-4.1 | GPT-5 mini | Jekyll setup, plugins |
+| Content | GPT-4o | GPT-4.1 | Writing, documentation |
+| Routine | Grok Code Fast 1 | GPT-5 mini | Maintenance, simple edits |
+| Complex | GPT-4.1 | None | Multi-step, integration |
+| Simple | Grok Code Fast 1 | GPT-5 mini | Basic operations |
 
 ## Integration with Workflow
 

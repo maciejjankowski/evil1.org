@@ -157,47 +157,56 @@ pkill -f jekyll
 
 ## COPILOT MODEL SELECTION GUIDE
 
-### Model Capabilities & Use Cases
+### Available Models & Capabilities
 
-**GPT-4 (Primary Model)**
-- **Best for:** Complex reasoning, multi-step tasks, content creation, debugging complex issues
-- **Use when:** Working with Jekyll configuration, debugging 404 errors, creating new content, analyzing site structure
-- **Strengths:** Deep understanding of web development, excellent at troubleshooting, comprehensive documentation
-- **When to switch:** For simple tasks or when GPT-4 seems stuck on basic operations
+**Grok Code Fast 1**
+- **Best for:** Fast code generation, simple debugging, routine tasks
+- **Use when:** Quick fixes, basic file operations, simple validation
+- **Strengths:** Speed, efficiency for repetitive tasks
+- **When to switch:** For complex analysis or content creation
 
-**GPT-3.5-Turbo (Secondary Model)**
-- **Best for:** Quick tasks, simple file edits, repetitive operations, basic content updates
-- **Use when:** Making straightforward changes, running simple commands, basic file operations
-- **Strengths:** Fast response times, good for routine maintenance, efficient for simple tasks
-- **When to switch:** For complex debugging, content creation, or when task requires deep analysis
+**GPT-4.1**
+- **Best for:** Complex reasoning, multi-step tasks, debugging complex issues
+- **Use when:** Working with Jekyll configuration, debugging 404 errors, analyzing site structure
+- **Strengths:** Deep technical analysis, comprehensive problem-solving
+- **When to switch:** For very fast tasks or content creation
 
-**Claude (Alternative Model)**
-- **Best for:** Content writing, documentation, ethical considerations, complex analysis
-- **Use when:** Creating articles, writing documentation, analyzing business/corporate content
-- **Strengths:** Excellent writing quality, strong ethical reasoning, good for narrative content
-- **When to switch:** For technical debugging or when web development expertise is needed
+**GPT-4o**
+- **Best for:** Content creation, documentation, ethical considerations
+- **Use when:** Creating articles, writing documentation, analyzing business content
+- **Strengths:** High-quality content, strong ethical reasoning, good for narrative content
+- **When to switch:** For pure technical debugging or very fast tasks
+
+**GPT-5 mini**
+- **Best for:** Balanced performance, medium-complexity tasks, general development
+- **Use when:** Standard development tasks, moderate debugging, content editing
+- **Strengths:** Good balance of speed and capability, versatile for most tasks
+- **When to switch:** For highly complex analysis (use GPT-4.1) or very fast tasks (use Grok Code Fast 1)
 
 ### Task-Based Model Recommendations
 
 **🔧 Jekyll Development & Debugging**
-- **Use GPT-4** for: Front matter issues, permalink problems, build errors, configuration debugging
-- **Use GPT-3.5** for: Simple file edits, running basic commands, routine maintenance
-- **Use Claude** for: Content creation, documentation writing, site structure analysis
+- **Use GPT-4.1** for: Front matter issues, permalink problems, build errors, configuration debugging
+- **Use GPT-5 mini** for: Moderate debugging, configuration changes, standard development tasks
+- **Use Grok Code Fast 1** for: Simple file edits, running basic commands, routine maintenance
+- **Use GPT-4o** for: Content creation with technical requirements, documentation writing
 
 **📝 Content Creation & Editing**
-- **Use GPT-4** for: Technical content, complex articles, debugging content issues
-- **Use Claude** for: Narrative writing, ethical content, business analysis articles
-- **Use GPT-3.5** for: Simple content updates, basic editing, routine content tasks
+- **Use GPT-4o** for: Narrative writing, ethical content, business analysis articles
+- **Use GPT-4.1** for: Technical content, complex articles with technical requirements
+- **Use GPT-5 mini** for: Basic content updates, simple editing, routine content tasks
+- **Use Grok Code Fast 1** for: Quick content fixes, simple updates
 
 **🐛 Error Resolution & Troubleshooting**
-- **Use GPT-4** for: Complex debugging, 404 errors, build failures, configuration issues
-- **Use GPT-3.5** for: Simple syntax errors, basic validation, quick fixes
-- **Use Claude** for: Analyzing error patterns, documenting solutions, preventive measures
+- **Use GPT-4.1** for: Complex debugging, 404 errors, build failures, configuration issues
+- **Use GPT-5 mini** for: Moderate debugging, syntax errors, basic validation
+- **Use Grok Code Fast 1** for: Simple syntax errors, quick fixes
+- **Use GPT-4o** for: Analyzing error patterns, documenting solutions
 
 **⚙️ Configuration & Setup**
-- **Use GPT-4** for: Jekyll configuration, plugin setup, complex integrations
-- **Use GPT-3.5** for: Basic setup tasks, simple configuration changes
-- **Use Claude** for: Documentation of setup processes, configuration analysis
+- **Use GPT-4.1** for: Jekyll configuration, plugin setup, complex integrations
+- **Use GPT-5 mini** for: Basic config changes, simple configuration changes
+- **Use Grok Code Fast 1** for: Basic setup tasks, simple script creation
 
 ### Model Switching Protocol
 
@@ -226,9 +235,10 @@ pkill -f jekyll
 - All models must test changes thoroughly
 
 **Model-Specific Expectations:**
-- **GPT-4:** Deep technical analysis, comprehensive debugging, complex problem-solving
-- **GPT-3.5:** Fast execution, reliable for routine tasks, efficient simple operations
-- **Claude:** High-quality content, ethical considerations, excellent documentation
+- **Grok Code Fast 1:** Fast execution, reliable for routine tasks, efficient simple operations
+- **GPT-4.1:** Deep technical analysis, comprehensive debugging, complex problem-solving
+- **GPT-4o:** High-quality content, ethical considerations, excellent documentation
+- **GPT-5 mini:** Balanced performance, versatile for medium-complexity tasks
 
 ### Model Performance Documentation
 

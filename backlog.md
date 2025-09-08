@@ -3,13 +3,14 @@
 **IMPORTANT:** Before working on any tasks, read the instructions in `instructions.md`
 
 **MODEL SELECTION:** Always assess task complexity and select appropriate Copilot model per `workflow.md` guidelines:
-- GPT-4 for complex debugging/configuration
-- GPT-3.5 for routine tasks/simple edits
-- Claude for content creation/documentation
+- Grok Code Fast 1 for routine/simple tasks
+- GPT-4.1 for complex debugging/configuration
+- GPT-4o for content creation/documentation
+- GPT-5 mini for balanced medium-complexity tasks
 
 # CURRENT TASKS:
 - [x] apply layouts to all sub pages in education
-- [ ] **MONITOR WORKFLOW COMPLIANCE**: Ensure all future tasks follow workflow.md guidelines
+- [x] **MONITOR WORKFLOW COMPLIANCE**: Ensure all future tasks follow workflow.md guidelines
   - **Impact**: Consistent development process, better model selection, improved documentation
   - **Model**: GPT-4 (requires analysis and process implementation)
   - **Requirements**: Use scripts for task initiation, follow commit format, track model performance
@@ -20,17 +21,17 @@
 - [ ] **FIX MISSING LAYOUTS**: 53 markdown files missing `layout:` in front matter
   - **Impact**: Files not processed by Jekyll, treated as static assets
   - **Affected**: topics.md, _articles/*.md, workflow.md, image_prompts.md, unfiltered/*.md
-  - **Model**: GPT-4 (complex configuration across multiple files)
+  - **Model**: GPT-4.1 (complex configuration across multiple files)
 
 ## 🚨 HIGH PRIORITY - SEO & NAVIGATION (71 files affected)
 - [ ] **ADD MISSING TITLES**: 71 markdown files missing `title:` in front matter
   - **Impact**: Poor SEO, broken navigation, inconsistent page titles
-  - **Model**: GPT-3.5 (routine task, can be automated)
+  - **Model**: GPT-5 mini (routine task, can be automated)
 
 ## 🚨 HIGH PRIORITY - BROKEN LINKS (91 files affected)
 - [ ] **ADD MISSING PERMALINKS**: 91 markdown files missing `permalink:` in front matter
   - **Impact**: Broken internal links, 404 errors, poor URL structure
-  - **Model**: GPT-4 (requires careful URL planning and consistency)
+  - **Model**: GPT-4.1 (requires careful URL planning and consistency)
 
 ## 📊 SITE STATISTICS:
 - **Total Markdown Files**: 150

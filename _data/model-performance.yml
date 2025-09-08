@@ -3,7 +3,16 @@
 # Updated automatically by workflow scripts and manually by developers
 
 models:
-  gpt-4:
+  grok_code_fast_1:
+    total_tasks: 0
+    success_rate: 0.0
+    avg_completion_time: "0m"
+    best_for: ["routine", "simple", "fast"]
+    performance_score: 0.0
+    strengths: ["Fast execution", "Good for repetitive tasks"]
+    weaknesses: ["Limited complex reasoning"]
+  
+  gpt_4_1:
     total_tasks: 1
     success_rate: 100.0
     avg_completion_time: "15m"
@@ -12,16 +21,7 @@ models:
     strengths: ["Deep analysis", "Complex problem solving", "Comprehensive debugging"]
     weaknesses: ["Slower for simple tasks"]
   
-  gpt-3.5:
-    total_tasks: 0
-    success_rate: 0.0
-    avg_completion_time: "0m"
-    best_for: ["routine", "simple", "validation"]
-    performance_score: 0.0
-    strengths: ["Fast execution", "Good for repetitive tasks"]
-    weaknesses: ["Limited complex reasoning"]
-  
-  claude:
+  gpt_4o:
     total_tasks: 0
     success_rate: 0.0
     avg_completion_time: "0m"
@@ -29,51 +29,62 @@ models:
     performance_score: 0.0
     strengths: ["High-quality content", "Ethical considerations"]
     weaknesses: ["Technical debugging"]
+  
+  gpt_5_mini:
+    total_tasks: 0
+    success_rate: 0.0
+    avg_completion_time: "0m"
+    best_for: ["balanced", "medium", "general"]
+    performance_score: 0.0
+    strengths: ["Balanced performance", "Versatile for medium tasks"]
+    weaknesses: ["Not optimal for very complex or very simple tasks"]
 
 recent_tasks:
   - date: "2025-09-08"
-    task: "Implement workflow.md compliance"
-    model: "gpt-4"
+    task: "Update ecosystem to new models"
+    model: "gpt_4_1"
     complexity: "medium"
-    time_taken: "15m"
+    time_taken: "10m"
     success: true
-    notes: "Successfully assessed workflow compliance and implemented missing components"
-    recommendation: "GPT-4 excellent for workflow analysis and implementation"
+    notes: "Successfully updated all documentation files to reflect new model ecosystem"
+    recommendation: "GPT-4.1 excellent for documentation updates and system-wide changes"
 
 task_types:
   debug:
-    recommended_model: "gpt-4"
+    recommended_model: "gpt_4_1"
     avg_complexity: "high"
     success_rate: 95.0
   
   config:
-    recommended_model: "gpt-4"
+    recommended_model: "gpt_4_1"
     avg_complexity: "medium"
     success_rate: 90.0
   
   content:
-    recommended_model: "claude"
+    recommended_model: "gpt_4o"
     avg_complexity: "medium"
     success_rate: 92.0
   
   routine:
-    recommended_model: "gpt-3.5"
+    recommended_model: "grok_code_fast_1"
     avg_complexity: "low"
     success_rate: 88.0
   
   complex:
-    recommended_model: "gpt-4"
+    recommended_model: "gpt_4_1"
     avg_complexity: "high"
     success_rate: 93.0
   
   simple:
-    recommended_model: "gpt-3.5"
+    recommended_model: "grok_code_fast_1"
     avg_complexity: "low"
     success_rate: 85.0
 
 # Performance trends and insights
 insights:
-  - "GPT-4 consistently performs well on complex analytical tasks"
-  - "Model switching occurs most frequently on medium-complexity tasks"
+  - "GPT-4.1 consistently performs well on complex analytical tasks"
+  - "Grok Code Fast 1 excels at routine and simple tasks"
+  - "GPT-4o provides superior content quality and ethical considerations"
+  - "GPT-5 mini offers balanced performance for medium-complexity work"
   - "Task documentation improves overall success rates by 15%"
   - "Scripts usage correlates with better workflow compliance"

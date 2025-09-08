@@ -69,22 +69,27 @@ Evaluate the task against these criteria:
 #### Primary Model Selection
 ```bash
 # For Jekyll debugging and complex tasks
-MODEL: GPT-4
+MODEL: GPT-4.1
 REASON: Complex debugging required for 404 errors and build issues
 
-# For routine maintenance
-MODEL: GPT-3.5-Turbo
-REASON: Simple file operations and basic validation
-
 # For content creation and documentation
-MODEL: Claude
+MODEL: GPT-4o
 REASON: High-quality content writing and ethical considerations
+
+# For routine maintenance
+MODEL: Grok Code Fast 1
+REASON: Fast execution for simple file operations and basic validation
+
+# For balanced development tasks
+MODEL: GPT-5 mini
+REASON: Good balance of speed and capability for medium-complexity tasks
 ```
 
 #### Model Switching Criteria
-- **Switch to GPT-4** if task becomes more complex than initially assessed
-- **Switch to GPT-3.5** if task is simpler than expected and speed is priority
-- **Switch to Claude** if content quality and narrative are more important than technical depth
+- **Switch to GPT-4.1** if task becomes more complex than initially assessed
+- **Switch to GPT-4o** if content quality and narrative are more important than technical depth
+- **Switch to Grok Code Fast 1** if task is simpler than expected and speed is priority
+- **Switch to GPT-5 mini** for balanced performance on medium-complexity tasks
 
 ## Task Execution Workflow
 
@@ -96,7 +101,7 @@ REASON: High-quality content writing and ethical considerations
 
 ### Phase 2: Model-Specific Execution
 
-#### GPT-4 Workflow (Complex Tasks)
+#### GPT-4.1 Workflow (Complex Tasks)
 ```bash
 # 1. Deep analysis phase
 - Use verbose debugging (--verbose flags)
@@ -110,7 +115,21 @@ REASON: High-quality content writing and ethical considerations
 - Create detailed commit messages
 ```
 
-#### GPT-3.5-Turbo Workflow (Routine Tasks)
+#### GPT-5 mini Workflow (Balanced Tasks)
+```bash
+# 1. Balanced execution phase
+- Moderate debugging and analysis
+- Standard development practices
+- Quality-focused implementation
+- Comprehensive testing
+
+# 2. Documentation phase
+- Update task documentation
+- Note model performance
+- Document any learnings
+```
+
+#### Grok Code Fast 1 Workflow (Routine Tasks)
 ```bash
 # 1. Efficient execution phase
 - Quick file operations
@@ -123,7 +142,7 @@ REASON: High-quality content writing and ethical considerations
 - Update only if significant changes
 ```
 
-#### Claude Workflow (Content Tasks)
+#### GPT-4o Workflow (Content Tasks)
 ```bash
 # 1. Quality-focused execution phase
 - High-quality content creation
@@ -199,7 +218,7 @@ REASON: High-quality content writing and ethical considerations
 ```markdown
 ## Task: [Task Description]
 **Date:** YYYY-MM-DD
-**Model Used:** [GPT-4/GPT-3.5/Claude]
+**Model Used:** [Grok Code Fast 1/GPT-4.1/GPT-4o/GPT-5 mini]
 **Complexity:** [High/Medium/Low]
 **Time Taken:** [X minutes/hours]
 **Success:** [Yes/No/Partial]
@@ -213,31 +232,38 @@ Create `_data/model-performance.yml` to track model effectiveness:
 ```yaml
 # _data/model-performance.yml
 models:
-  gpt-4:
+  grok_code_fast_1:
+    total_tasks: 0
+    success_rate: 0.0
+    avg_completion_time: "0m"
+    best_for: ["routine", "simple", "fast"]
+    performance_score: 0.0
+  
+  gpt_4_1:
     total_tasks: 0
     success_rate: 0.0
     avg_completion_time: "0m"
     best_for: ["debug", "config", "complex"]
     performance_score: 0.0
   
-  gpt-3.5:
+  gpt_4o:
     total_tasks: 0
     success_rate: 0.0
     avg_completion_time: "0m"
-    best_for: ["routine", "simple"]
+    best_for: ["content", "documentation", "ethical"]
     performance_score: 0.0
   
-  claude:
+  gpt_5_mini:
     total_tasks: 0
     success_rate: 0.0
     avg_completion_time: "0m"
-    best_for: ["content", "documentation"]
+    best_for: ["balanced", "medium", "general"]
     performance_score: 0.0
 
 recent_tasks:
   - date: "2025-09-08"
     task: "Workflow implementation"
-    model: "gpt-4"
+    model: "gpt_4_1"
     complexity: "medium"
     time_taken: "15m"
     success: true
@@ -253,7 +279,7 @@ recent_tasks:
 4. **Update model selection criteria** if pattern emerges
 
 ### When Task Becomes Complex
-1. **Immediately switch to GPT-4** for complex debugging
+1. **Immediately switch to GPT-4.1** for complex debugging
 2. **Reassess task scope** and break into smaller tasks if needed
 3. **Document complexity escalation** for future reference
 
@@ -269,7 +295,7 @@ recent_tasks:
 # Commit message format
 git commit -m "[MODEL] Task description
 
-- Model used: GPT-4/GPT-3.5/Claude
+- Model used: Grok Code Fast 1/GPT-4.1/GPT-4o/GPT-5 mini
 - Complexity: High/Medium/Low
 - Key changes: [brief summary]"
 ```
@@ -293,7 +319,7 @@ git commit -m "[MODEL] Task description
 - [ ] Document model selection reasoning in task file
 
 ### Task Execution ✅
-- [ ] Follow model-specific execution workflow (GPT-4/GPT-3.5/Claude)
+- [ ] Follow model-specific execution workflow (Grok Code Fast 1/GPT-4.1/GPT-4o/GPT-5 mini)
 - [ ] Use verbose flags for debugging (`--verbose`)
 - [ ] Document progress and issues in task file
 - [ ] Perform comprehensive testing before completion
@@ -312,9 +338,9 @@ git commit -m "[MODEL] Task description
 
 ### Commit Message Format ✅
 ```bash
-git commit -m "[GPT-4] Fix complex debugging issue
+git commit -m "[GPT-4.1] Fix complex debugging issue
 
-- Model used: GPT-4
+- Model used: GPT-4.1
 - Complexity: High
 - Key changes: Fixed YAML front matter validation"
 ```
