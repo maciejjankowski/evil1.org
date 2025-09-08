@@ -98,6 +98,62 @@
 - **EXPAND INSTRUCTIONS WITH LEARNINGS FROM MISTAKES** - if you learn something, add it to the `instructions.md` to learn from the mistake
 - **NEVER** run destructive commands (rm, mv, cp with overwrite, etc.) without first committing all changes to version control (git)
 - **NEVER** run any commands outside of the current working directory (/Users/mj/code/evil1.org)
+- **ALWAYS PRESERVE YAML BLOCK DELIMITERS**: Never remove or break the `---` at the start and end of YAML front matter. All edits must maintain valid YAML blocks for Jekyll compatibility.
+- **AVOID DUPLICATION**: Never duplicate content across files. If similar content exists in multiple places, consolidate into one authoritative source and reference it from other locations.
+
+## YAML FRONT MATTER VALIDATION
+### **CRITICAL VALIDATION RULES**
+- **ALWAYS** ensure YAML blocks start and end with `---` on separate lines
+- **NEVER** add content before the opening `---` delimiter
+- **ALWAYS** validate YAML syntax after any front matter edits
+- **TEST** that pages render correctly after front matter changes
+- **USE** verbose Jekyll builds (`bundle exec jekyll build --verbose`) to catch YAML errors
+
+### **COMMON YAML MISTAKES TO AVOID**
+- Missing opening or closing `---` delimiters
+- Extra blank lines before opening `---`
+- Incorrect indentation in YAML structure
+- Missing required fields (layout, title for pages)
+- Invalid YAML syntax (unclosed quotes, improper nesting)
+
+## DEBUGGING & VALIDATION BEST PRACTICES
+### **MANDATORY DEBUGGING STEPS**
+- **USE VERBOSE MODE**: Always use `--verbose` flag with Jekyll commands for detailed error information
+- **VALIDATE YAML**: Use `python3 -c "import yaml; yaml.safe_load(open('file.md'))"` to check YAML syntax
+- **TEST LINKS**: Use `curl -I http://localhost:4000/page/` to verify pages load correctly
+- **CHECK BUILD OUTPUT**: Always examine `_site/` directory to confirm files are generated properly
+
+### **AUTOMATED VALIDATION SCRIPTS**
+```bash
+# Quick YAML validation for all markdown files
+for file in $(find . -name "*.md" -not -path "./_site/*"); do
+  if ! head -1 "$file" | grep -q "^---$"; then
+    echo "❌ Missing front matter: $file"
+  fi
+done
+
+# Link validation script
+bundle exec jekyll serve --detach
+curl -s -o /dev/null -w "%{http_code}" "http://localhost:4000/test-page/"
+pkill -f jekyll
+```
+
+## DOCUMENTATION CROSS-REFERENCES
+### **RELATED FILES**
+- **`improvements.md`**: Detailed debugging techniques, automation scripts, and advanced best practices
+- **`workflow.md`**: Comprehensive workflow documentation with model selection protocols
+- **`backlog.md`**: Current tasks and project status
+
+### **WHEN TO CONSULT OTHER FILES**
+- **Use `improvements.md`** for: Advanced debugging techniques, automation scripts, performance optimization
+- **Use `workflow.md`** for: Detailed workflow processes, model selection protocols, task execution guidelines
+- **Use `backlog.md`** for: Current task status, project priorities, completion tracking
+
+## CONCLUSION & CONTINUOUS IMPROVEMENT
+- **LEARN FROM MISTAKES**: Always document new learnings and update these instructions
+- **MAINTAIN CONSISTENCY**: Keep all documentation files synchronized and cross-referenced
+- **VALIDATE REGULARLY**: Test all processes and update documentation based on real-world experience
+- **PREVENT DUPLICATION**: Consolidate overlapping content and maintain single sources of truth
 
 ## COPILOT MODEL SELECTION GUIDE
 
