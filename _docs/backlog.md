@@ -1,7 +1,10 @@
 # BACKLOG
 
-# TASKS
+# T# TASKS
 - [x] **File Inventory & Analysis**: Create comprehensive list of all .md files, analyze current styling/layout patterns, document existing CSS classes and layout structures
+- [x] **CSS Audit & Optimization**: Review all CSS files for unused styles, conflicts, and optimization opportunities, consolidate duplicate styles
+- [x] **Layout Consistency Check**: Verify all pages have consistent margins, padding, and layout structure, standardize spacing patterns
+- [ ] **Responsive Design Review**: Test and fix mobile/tablet layouts, ensure proper breakpoints and responsive behavior- [x] **File Inventory & Analysis**: Create comprehensive list of all .md files, analyze current styling/layout patterns, document existing CSS classes and layout structures
 - [x] **CSS Audit & Optimization**: Review all CSS files for unused styles, conflicts, and optimization opportunities, consolidate duplicate styles
 - [ ] **Layout Consistency Check**: Verify all pages have consistent margins, padding, and layout structure, standardize spacing patternsPORTANT:** Before working on any tasks, read the instructions in `_docs/instructions.md` `_docs/workflow.md`
 **IMPORTANT:** NEVER CHANGE THE ABOVE LINES. ONLY UPDATE CONTENTS BELOW!
