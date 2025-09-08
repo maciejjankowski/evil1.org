@@ -342,3 +342,385 @@ h1, h2, h3, h4, h5, h6 {
     padding: 1rem;
   }
 }
+
+/* Article styling */
+.article-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Georgia, serif;
+  line-height: 1.6;
+}
+
+.article-header {
+  margin-bottom: 30px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 20px;
+}
+
+.article-title {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.article-meta {
+  color: #666;
+  font-size: 0.9em;
+  margin-bottom: 15px;
+}
+
+.article-author {
+  font-weight: bold;
+}
+
+.article-date {
+  margin-left: 15px;
+}
+
+.article-tags {
+  margin-top: 10px;
+}
+
+.article-summary {
+  font-style: italic;
+  font-size: 1.1em;
+  color: #555;
+  border-left: 4px solid #ff1a1a;
+  padding-left: 15px;
+  margin-top: 15px;
+}
+
+.article-body {
+  font-size: 1.1em;
+  margin-bottom: 40px;
+}
+
+.article-body h2 {
+  color: #333;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.article-body h3 {
+  color: #444;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.article-body p {
+  margin-bottom: 15px;
+}
+
+.article-body blockquote {
+  border-left: 4px solid #ff1a1a;
+  padding-left: 20px;
+  margin: 20px 0;
+  font-style: italic;
+  color: #555;
+}
+
+.article-footer {
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.article-footer h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.sources-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sources-list li {
+  margin-bottom: 8px;
+}
+
+.sources-list a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.sources-list a:hover {
+  text-decoration: underline;
+}
+
+/* Profile and Organization styling */
+.missing-content {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+}
+
+#profile-header {
+  background: linear-gradient(180deg, #230000, #0b0000);
+  padding: 18px;
+  border-bottom: 3px solid #ff1a1a;
+}
+
+#profile-photo {
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(180deg, #3a0000, #120000);
+  border: 3px solid #ff1a1a;
+  box-shadow: 0 6px 30px rgba(255, 0, 0, 0.18);
+  border-radius: 6px;
+  float: left;
+  margin-right: 20px;
+}
+
+#profile-info h1 {
+  color: #ffd957;
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.headline {
+  color: #ff7a00;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.location {
+  color: #bfbfbf;
+  font-size: 14px;
+}
+
+.tabs {
+  border-bottom: 3px solid #ff1a1a;
+  padding: 0 12px;
+  background: #120000;
+}
+
+.tab {
+  display: inline-block;
+  padding: 10px 16px;
+  background: transparent;
+  color: #ffd957;
+  font-weight: 800;
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+.tab.active {
+  color: #ff7a00;
+  border-bottom: 3px solid #ff1a1a;
+}
+
+.profile-section {
+  border: 1px solid rgba(255, 26, 26, 0.08);
+  background: linear-gradient(180deg, #0f0f0f, #070707);
+  border-radius: 6px;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.section-header {
+  color: #ff1a1a;
+  font-weight: 900;
+  font-size: 16px;
+  padding: 12px;
+  background: linear-gradient(180deg, #200000, #120000);
+  border-bottom: 1px solid rgba(255, 26, 26, 0.12);
+}
+
+.section-content {
+  padding: 14px;
+}
+
+.work-item {
+  border-bottom: 1px dashed rgba(255, 26, 26, 0.06);
+  padding: 12px 0;
+}
+
+.work-item:last-child {
+  border-bottom: none;
+}
+
+.work-title {
+  font-weight: 800;
+  color: #ff1a1a;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.work-company {
+  color: #bfbfbf;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.work-dates {
+  color: #b3b3b3;
+  font-size: 12px;
+}
+
+.skill-item {
+  margin-bottom: 12px;
+}
+
+.skill-bar {
+  background: #eee;
+  height: 6px;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.skill-fill {
+  background: linear-gradient(90deg, #ff1a1a, #cc0000);
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+/* Groups page styling */
+.groups-page h1 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 2rem;
+  text-align: center;
+  border-bottom: 3px solid #ff1a1a;
+  padding-bottom: 1rem;
+}
+
+.groups-page .group-section {
+  background: white;
+  border: 2px solid #ff1a1a;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 15px rgba(255,26,26,0.1);
+  transition: all 0.3s ease;
+}
+
+.groups-page .group-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(255,26,26,0.2);
+}
+
+.groups-page .group-number {
+  font-size: 3em;
+  font-weight: bold;
+  color: #ff1a1a;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(255,26,26,0.3);
+}
+
+.groups-page .group-title {
+  font-size: 1.8em;
+  color: #333;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  border-left: 4px solid #ff1a1a;
+  padding-left: 1rem;
+}
+
+.groups-page .group-description {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.groups-page .group-motto {
+  background: linear-gradient(135deg, #ff1a1a, #cc0000);
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(255,26,26,0.3);
+}
+
+.groups-page .recruitment-section {
+  background: linear-gradient(135deg, #1a1a1a, #000000);
+  color: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  margin-top: 3rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.groups-page .recruitment-section h2 {
+  color: #ff1a1a;
+  font-size: 2em;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.groups-page .recruitment-section ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.groups-page .recruitment-section li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(255,26,26,0.2);
+  position: relative;
+  padding-left: 2rem;
+}
+
+.groups-page .recruitment-section li:before {
+  content: "⚡";
+  position: absolute;
+  left: 0;
+  color: #ff1a1a;
+  font-weight: bold;
+}
+
+.groups-page .recruitment-section li:last-child {
+  border-bottom: none;
+}
+
+.groups-page blockquote {
+  background: linear-gradient(135deg, #ff1a1a, #cc0000);
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+  margin: 2rem 0;
+  box-shadow: 0 4px 15px rgba(255,26,26,0.3);
+  border: none;
+}
+
+.groups-page blockquote:before {
+  content: '"';
+  font-size: 4em;
+  position: absolute;
+  margin-top: -0.5rem;
+  margin-left: -0.5rem;
+  opacity: 0.3;
+}
+
+/* Responsive design for groups page */
+@media (max-width: 768px) {
+  .groups-page .group-section {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .groups-page .group-number {
+    font-size: 2.5em;
+  }
+
+  .groups-page .group-title {
+    font-size: 1.5em;
+  }
+
+  .groups-page .recruitment-section {
+    padding: 2rem;
+  }
+
+  .groups-page blockquote {
+    padding: 1.5rem;
+    font-size: 1.1em;
+  }
+}

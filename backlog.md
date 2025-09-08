@@ -8,7 +8,8 @@
 - [x] redo the top navbar styling to be consistent with the layout
 - [x] /groups/groups return 404 when clicked from contents
 - [x] scan for broken links from content pages, i.e. in trainings links from boxes are all 404. identify an issue, then perform full scan of the site to fix such issues
-- [ ] consolidate the layouts, find common parts, common components, modularize, reuse, simplify
-- [ ] add nice consistent styles to http://localhost:4000/groups/groups/ and other pages with similar layout
+- [x] consolidate the layouts, find common parts, common components, modularize, reuse, simplify
+- [x] add nice consistent styles to http://localhost:4000/groups/groups/ and other pages with similar layout
 - [x] activities links not working!!!!! fix this.
 - [x] links: http://localhost:4000/education/ not working. FIX!
+- [ ] you have not confirmed that education links dont work. Please fix that, update the rule in `instructions.md` to always check for 404

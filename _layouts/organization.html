@@ -2,59 +2,47 @@
 layout: default
 title: Organization - evil1.org
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{ page.title }}</title>
-    <link id="theme-css" rel="stylesheet" href="/assets/css/theme-hellish.css">
-    <script src="/assets/js/theme-switcher.js"></script>
-</head>
-<body>
-    {% include header.html %}
-    <div id="container" style="margin-top: 20px;">
-        {% if page.organization.name == nil or page.organization.headline == nil %}
-          <div class="missing-content" style="color: red; font-weight: bold; text-align: center;">[Content missing: Please add organization details]</div>
-        {% endif %}
-        <div id="profile-header">
-            <div id="profile-photo"></div>
-            <div id="profile-info">
-                <h1>{{ page.organization.name }}</h1>
-                <div class="headline">{{ page.organization.headline }}</div>
-                <div class="location">{{ page.organization.location }}</div>
-            </div>
-            <div class="clear"></div>
+
+<div id="container" style="margin-top: 20px;">
+    {% if page.organization.name == nil or page.organization.headline == nil %}
+        <div class="missing-content" style="color: red; font-weight: bold; text-align: center;">[Content missing: Please add organization details]</div>
+    {% endif %}
+    <div id="profile-header">
+        <div id="profile-photo"></div>
+        <div id="profile-info">
+            <h1>{{ page.organization.name }}</h1>
+            <div class="headline">{{ page.organization.headline }}</div>
+            <div class="location">{{ page.organization.location }}</div>
         </div>
-        <div class="tabs">
-            <div class="tab active">Overview</div>
-            <div class="tab">Impact</div>
-            <div class="tab">Policies</div>
-        </div>
-        <div class="profile-section">
-            <div class="section-header">Key Evil Principles</div>
-            <div class="section-content">
-                {% for principle in page.organization.principles %}
-                <div class="work-item">
-                    <div class="work-title">{{ principle.title }}</div>
-                    <div class="work-company">{{ principle.body }}</div>
-                    <div style="margin-top: 5px;">{{ principle.impact }}</div>
-                </div>
-                {% endfor %}
+        <div class="clear"></div>
+    </div>
+    <div class="tabs">
+        <div class="tab active">Overview</div>
+        <div class="tab">Impact</div>
+        <div class="tab">Policies</div>
+    </div>
+    <div class="profile-section">
+        <div class="section-header">Key Evil Principles</div>
+        <div class="section-content">
+            {% for principle in page.organization.principles %}
+            <div class="work-item">
+                <div class="work-title">{{ principle.title }}</div>
+                <div class="work-company">{{ principle.body }}</div>
+                <div style="margin-top: 5px;">{{ principle.impact }}</div>
             </div>
-        </div>
-        <div class="profile-section">
-            <div class="section-header">Notorious Policies</div>
-            <div class="section-content">
-                {% for policy in page.organization.policies %}
-                <div class="work-item">
-                    <div class="work-title">{{ policy.title }}</div>
-                    <div class="work-company">{{ policy.body }}</div>
-                    <div style="margin-top: 5px;">{{ policy.impact }}</div>
-                </div>
-                {% endfor %}
-            </div>
+            {% endfor %}
         </div>
     </div>
-    {% include footer.html %}
-</body>
-</html>
+    <div class="profile-section">
+        <div class="section-header">Notorious Policies</div>
+        <div class="section-content">
+            {% for policy in page.organization.policies %}
+            <div class="work-item">
+                <div class="work-title">{{ policy.title }}</div>
+                <div class="work-company">{{ policy.body }}</div>
+                <div style="margin-top: 5px;">{{ policy.impact }}</div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

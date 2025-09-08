@@ -42,118 +42,46 @@ layout: default
     {% endif %}
 </article>
 
-<style>
-.article-content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: Georgia, serif;
-    line-height: 1.6;
-}
+---
+layout: default
+---
 
-.article-header {
-    margin-bottom: 30px;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 20px;
-}
+<article class="article-content">
+    <header class="article-header">
+        <h1 class="article-title">{{ page.title }}</h1>
+        <div class="article-meta">
+            <span class="article-author">By {{ page.author | default: "Editorial Team" }}</span>
+            <span class="article-date">{{ page.date | date: "%B %d, %Y" }}</span>
+            {% if page.tags %}
+                <div class="article-tags">
+                    {% for tag in page.tags %}
+                        <span class="tag">{{ tag }}</span>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+        {% if page.summary %}
+            <div class="article-summary">{{ page.summary }}</div>
+        {% endif %}
+    </header>
 
-.article-title {
-    font-size: 2.5em;
-    font-weight: bold;
-    margin-bottom: 15px;
-    color: #333;
-}
+    <div class="article-body">
+        {{ content }}
+    </div>
 
-.article-meta {
-    color: #666;
-    font-size: 0.9em;
-    margin-bottom: 15px;
-}
-
-.article-author {
-    font-weight: bold;
-}
-
-.article-date {
-    margin-left: 15px;
-}
-
-.article-tags {
-    margin-top: 10px;
-}
-
-.tag {
-    background: #ff1a1a;
-    color: white;
-    padding: 3px 8px;
-    border-radius: 3px;
-    font-size: 0.8em;
-    margin-right: 5px;
-}
-
-.article-summary {
-    font-style: italic;
-    font-size: 1.1em;
-    color: #555;
-    border-left: 4px solid #ff1a1a;
-    padding-left: 15px;
-    margin-top: 15px;
-}
-
-.article-body {
-    font-size: 1.1em;
-    margin-bottom: 40px;
-}
-
-.article-body h2 {
-    color: #333;
-    margin-top: 30px;
-    margin-bottom: 15px;
-}
-
-.article-body h3 {
-    color: #444;
-    margin-top: 25px;
-    margin-bottom: 10px;
-}
-
-.article-body p {
-    margin-bottom: 15px;
-}
-
-.article-body blockquote {
-    border-left: 4px solid #ff1a1a;
-    padding-left: 20px;
-    margin: 20px 0;
-    font-style: italic;
-    color: #555;
-}
-
-.article-footer {
-    border-top: 1px solid #eee;
-    padding-top: 20px;
-}
-
-.article-footer h3 {
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.sources-list {
-    list-style-type: none;
-    padding: 0;
-}
-
-.sources-list li {
-    margin-bottom: 8px;
-}
-
-.sources-list a {
-    color: #0066cc;
-    text-decoration: none;
-}
-
-.sources-list a:hover {
-    text-decoration: underline;
-}
-</style>
+    {% if page.sources %}
+        <footer class="article-footer">
+            <h3>Sources</h3>
+            <ul class="sources-list">
+                {% for source in page.sources %}
+                    <li>
+                        <a href="{{ source.url }}" target="_blank" rel="noopener noreferrer">
+                            {{ source.title }}
+                        </a>
+                        {% if source.date %} - {{ source.date }}{% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </footer>
+    {% endif %}
+</article>
