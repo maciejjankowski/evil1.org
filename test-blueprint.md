@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Strategic Blueprint
-permalink: /education/blueprint/
+description: "Blueprint testing and development documentation"permalink: /education/blueprint/
 ---
 
 # Test Blueprint Page

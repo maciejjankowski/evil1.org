@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Strategic Blueprint
-permalink: /test-page/
+description: "Test page for development and layout verification"permalink: /test-page/
 ---
 
 # Test Blueprint Page

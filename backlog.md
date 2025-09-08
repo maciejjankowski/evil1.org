@@ -1,3 +1,10 @@
+---
+layout: default
+title: "backlog"
+description: "Project backlog and task management for evil1.org development"
+permalink: "/backlog/"
+---
+
 # BACKLOG
 
 **IMPORTANT:** Before working on any tasks, read the instructions in `instructions.md` `workflow.md` 

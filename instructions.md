@@ -1,3 +1,10 @@
+---
+layout: default
+title: "instructions"
+description: "Complete instructions and guidelines for AI-assisted development"
+permalink: "/instructions/"
+---
+
 # INSTRUCTIONS FOR AI ASSISTANT
 
 - **IMPORTANT** use files `instructions.md` `workflow.md` `backlog.md` `task-*.md` for instructions for ai agents, dont treat them as source files for evil1.org content.
