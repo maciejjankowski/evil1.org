@@ -1,0 +1,223 @@
+<div class="social-share-widget">
+    <h3>📢 Share This Article</h3>
+    <p>Help expose corporate corruption by sharing this article:</p>
+
+    <div class="share-buttons">
+        <a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ site.url }}{{ page.url | url_encode }}&via=evil1org"
+           class="share-btn twitter"
+           target="_blank"
+           rel="noopener noreferrer"
+           title="Share on Twitter">
+            🐦 Twitter
+        </a>
+
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url | url_encode }}"
+           class="share-btn facebook"
+           target="_blank"
+           rel="noopener noreferrer"
+           title="Share on Facebook">
+            📘 Facebook
+        </a>
+
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url | url_encode }}"
+           class="share-btn linkedin"
+           target="_blank"
+           rel="noopener noreferrer"
+           title="Share on LinkedIn">
+            💼 LinkedIn
+        </a>
+
+        <a href="https://www.reddit.com/submit?url={{ site.url }}{{ page.url | url_encode }}&title={{ page.title | url_encode }}"
+           class="share-btn reddit"
+           target="_blank"
+           rel="noopener noreferrer"
+           title="Share on Reddit">
+            🟠 Reddit
+        </a>
+
+        <a href="mailto:?subject={{ page.title | url_encode }}&body=Check out this article: {{ site.url }}{{ page.url | url_encode }}"
+           class="share-btn email"
+           title="Share via Email">
+            ✉️ Email
+        </a>
+
+        <button class="share-btn copy-link"
+                onclick="copyToClipboard('{{ site.url }}{{ page.url }}')"
+                title="Copy Link">
+            🔗 Copy Link
+        </button>
+    </div>
+
+    <div class="share-stats">
+        <p>📊 Help us reach more truth-seekers!</p>
+    </div>
+</div>
+
+<script>
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(function() {
+        // Show success message
+        const btn = event.target.closest('.share-btn');
+        const originalText = btn.textContent;
+        btn.textContent = '✅ Copied!';
+        btn.style.background = '#28a745';
+
+        setTimeout(function() {
+            btn.textContent = originalText;
+            btn.style.background = '';
+        }, 2000);
+    }).catch(function(err) {
+        console.error('Failed to copy: ', err);
+        // Fallback for older browsers
+        const textArea = document.createElement('textarea');
+        textArea.value = text;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+
+        const btn = event.target.closest('.share-btn');
+        btn.textContent = '✅ Copied!';
+        setTimeout(function() {
+            btn.textContent = '🔗 Copy Link';
+        }, 2000);
+    });
+}
+</script>
+
+<style>
+.social-share-widget {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.social-share-widget h3 {
+    color: #dc3545;
+    margin: 0 0 0.5rem 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.social-share-widget > p {
+    margin: 0 0 1.5rem 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.share-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.share-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+    min-height: 44px;
+}
+
+.share-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.twitter {
+    background: #1da1f2;
+    color: white;
+}
+
+.twitter:hover {
+    background: #0d95e8;
+}
+
+.facebook {
+    background: #1877f2;
+    color: white;
+}
+
+.facebook:hover {
+    background: #166fe5;
+}
+
+.linkedin {
+    background: #0077b5;
+    color: white;
+}
+
+.linkedin:hover {
+    background: #005885;
+}
+
+.reddit {
+    background: #ff4500;
+    color: white;
+}
+
+.reddit:hover {
+    background: #e03d00;
+}
+
+.email {
+    background: #ea4335;
+    color: white;
+}
+
+.email:hover {
+    background: #d33b2c;
+}
+
+.copy-link {
+    background: #6c757d;
+    color: white;
+}
+
+.copy-link:hover {
+    background: #5a6268;
+}
+
+.share-stats {
+    text-align: center;
+    border-top: 1px solid #e9ecef;
+    padding-top: 1rem;
+    margin-top: 1rem;
+}
+
+.share-stats p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #666;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .social-share-widget {
+        padding: 1rem;
+    }
+
+    .share-buttons {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+
+    .share-btn {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.8rem;
+        min-height: 40px;
+    }
+}
+</style>

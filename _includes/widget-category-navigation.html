@@ -1,0 +1,113 @@
+{% assign categories = site.articles | map: 'categories' | compact | flatten | uniq | sort %}
+{% if categories.size > 0 %}
+<div class="category-navigation-widget">
+    <h3>📂 Categories</h3>
+    <div class="category-list">
+        {% for category in categories %}
+            {% assign category_articles = site.articles | where_exp: 'article', 'article.categories contains category' %}
+            {% assign article_count = category_articles | size %}
+            <div class="category-item">
+                <a href="/categories/#{{ category | slugify }}" class="category-link">
+                    <span class="category-name">{{ category | replace: '-', ' ' | capitalize }}</span>
+                    <span class="category-count">{{ article_count }}</span>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="widget-footer">
+        <a href="/categories/" class="view-all-link">All Categories →</a>
+    </div>
+</div>
+
+<style>
+.category-navigation-widget {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.category-navigation-widget h3 {
+    color: #dc3545;
+    margin: 0 0 1rem 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.category-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.category-item {
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.category-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    background: white;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.2s ease;
+    border: 1px solid #e9ecef;
+}
+
+.category-link:hover {
+    background: #dc3545;
+    color: white;
+    transform: translateX(4px);
+}
+
+.category-name {
+    font-weight: 500;
+}
+
+.category-count {
+    background: #e9ecef;
+    color: #666;
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    min-width: 24px;
+    text-align: center;
+}
+
+.category-link:hover .category-count {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.widget-footer {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.view-all-link {
+    color: #dc3545;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.view-all-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .category-navigation-widget {
+        padding: 1rem;
+    }
+
+    .category-link {
+        padding: 0.5rem;
+    }
+}
+</style>
+{% endif %}

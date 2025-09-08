@@ -1,0 +1,59 @@
+---
+layout: null
+---
+
+<div class="search-results">
+    {% assign query = page.url | remove:'/htmx/search?q=' | cgi_escape %}
+    {% assign results = site.articles | where_exp: "article", "article.title contains query or article.content contains query" | limit: 5 %}
+
+    {% if results.size > 0 %}
+        <h4>Found {{ results.size }} articles:</h4>
+        {% for article in results %}
+            <div class="search-result-item">
+                <h5><a href="{{ article.url }}">{{ article.title }}</a></h5>
+                <p>{{ article.description | truncate: 100 }}</p>
+                <small>{{ article.date | date: "%b %d, %Y" }}</small>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No articles found matching "{{ query }}"</p>
+    {% endif %}
+</div>
+
+<style>
+.search-result-item {
+    padding: 1rem;
+    border-bottom: 1px solid #e9ecef;
+    margin-bottom: 0.5rem;
+}
+
+.search-result-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.search-result-item h5 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+}
+
+.search-result-item h5 a {
+    color: #dc3545;
+    text-decoration: none;
+}
+
+.search-result-item h5 a:hover {
+    text-decoration: underline;
+}
+
+.search-result-item p {
+    margin: 0 0 0.5rem 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.search-result-item small {
+    color: #999;
+    font-size: 0.8rem;
+}
+</style>

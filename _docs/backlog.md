@@ -9,21 +9,13 @@
 - GPT-4o for content creation/documentation
 - GPT-5 mini for balanced medium-complexity tasks
 
-## ✅ DONE
-- [x] Move docs to _docs/ folder
-- [x] Fix missing layouts
-- [x] Add missing titles
-- [x] Add missing permalinks
-- [x] Standardize front matter
-- [x] Add descriptions for SEO
-- [x] Improve article layouts
-- [x] Add author/date metadata
-- [x] Add content tags
-- [x] Add reading time estimates
-- [x] Add social sharing metadata
-- [x] Implement content categories
-- [x] read the site, expand on the content, work on the next topics on your own: how should we expose the corrupt capitalists and their greed? create plan for content creation
-- [x] follow the plan for content creation, process extra content files if needed
+# TASKS
+- [x] **File Inventory & Analysis**: Create comprehensive list of all .md files, analyze current styling/layout patterns, document existing CSS classes and layout structures
+- [ ] **CSS Audit & Optimization**: Review all CSS files for unused styles, conflicts, and optimization opportunities, consolidate duplicate styles
+- [ ] **Layout Consistency Check**: Verify all pages have consistent margins, padding, and layout structure, standardize spacing patterns
+- [ ] **Responsive Design Review**: Test and fix mobile/tablet layouts, ensure proper breakpoints and responsive behavior
+- [ ] **Typography Enhancement**: Improve font sizing, line heights, and readability across all content types
+- [ ] **Component Styling**: Enhance specific components (buttons, cards, navigation, forms) for better visual consistency
+- [ ] **Performance Optimization**: remove unused styles
 
-## 🔄 TODO
-- [ ] elaborate on ideas.yaml and topics.yaml to create 30 new articles or other pieces of content
+- [] go over unfiltered contents, pick 5 good articles, write 5 detailed articles and publish them

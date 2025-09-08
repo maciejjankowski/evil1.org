@@ -58,9 +58,16 @@ Browse all content organized by topic tags.
   {% endif %}
 {% endfor %}
 
-<ul>
+**{{ tagged_posts | size }} articles with this tag**
+
+<ul class="tag-articles">
 {% for item in tagged_posts %}
-  <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+  <li>
+    <a href="{{ item.url }}">{{ item.title }}</a>
+    {% if item.description %}
+      <br><small>{{ item.description | truncate: 120 }}</small>
+    {% endif %}
+  </li>
 {% endfor %}
 </ul>
 

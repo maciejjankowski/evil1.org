@@ -58,5 +58,20 @@ permalink: /news/
                 <a href="Voices.html" class="read-more">Manage Voices →</a>
             </footer>
         </article>
+
+        <article class="content-card">
+            <header class="card-header">
+                <h2 class="card-title">
+                    <a href="Flux/">Flux Weekly</a>
+                </h2>
+                <div class="card-classification">📰 Alternative Media</div>
+            </header>
+            <div class="card-description">
+                Deep investigative journalism exploring the machinery of change and narrative control.
+            </div>
+            <footer class="card-footer">
+                <a href="Flux/" class="read-more">Explore Flux →</a>
+            </footer>
+        </article>
     </div>
 </div>

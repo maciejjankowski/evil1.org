@@ -1,0 +1,28 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://evil1.org/sitemap.xml
+
+# Disallow access to admin areas
+Disallow: /admin/
+Disallow: /.git/
+Disallow: /_site/
+Disallow: /_data/
+Disallow: /_docs/
+Disallow: /_includes/
+Disallow: /_layouts/
+Disallow: /_plugins/
+Disallow: /scripts/
+
+# Allow access to content
+Allow: /articles/
+Allow: /company/
+Allow: /education/
+Allow: /halloffame/
+Allow: /news/
+Allow: /profiles/
+Allow: /organizations/
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1

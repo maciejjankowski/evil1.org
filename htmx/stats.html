@@ -1,0 +1,65 @@
+---
+layout: null
+---
+
+<div class="stats-display">
+    <div class="stat-card">
+        <h4>Total Articles</h4>
+        <span class="stat-number">{{ site.articles | size }}</span>
+    </div>
+    <div class="stat-card">
+        <h4>Published This Month</h4>
+        <span class="stat-number">{{ site.articles | where_exp: "article", "article.date >= site.time | date: '%Y-%m-01'" | size }}</span>
+    </div>
+    <div class="stat-card">
+        <h4>Total Tags</h4>
+        <span class="stat-number">{{ site.articles | map: 'tags' | compact | flatten | uniq | size }}</span>
+    </div>
+    <div class="stat-card">
+        <h4>Last Updated</h4>
+        <span class="stat-number">{{ site.time | date: "%H:%M" }}</span>
+    </div>
+</div>
+
+<style>
+.stats-display {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.stat-card:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transform: translateY(-1px);
+}
+
+.stat-card h4 {
+    margin: 0 0 0.5rem 0;
+    color: #666;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #dc3545;
+    display: block;
+}
+</style>

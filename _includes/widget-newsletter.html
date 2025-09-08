@@ -1,0 +1,179 @@
+<div class="newsletter-widget">
+    <h3>📧 Stay Informed</h3>
+    <p>Get the latest exposés on corporate corruption and capitalist exploitation delivered to your inbox.</p>
+
+    <form class="newsletter-form" action="https://formspree.io/f/xknkqgqv" method="POST">
+        <input type="hidden" name="_subject" value="Newsletter Signup - evil1.org">
+        <input type="hidden" name="_next" value="{{ site.url }}/thank-you">
+
+        <div class="form-group">
+            <label for="newsletter-email">Email Address</label>
+            <input type="email" id="newsletter-email" name="email" required
+                   placeholder="your.email@example.com">
+        </div>
+
+        <div class="form-group">
+            <label for="newsletter-frequency">Frequency</label>
+            <select id="newsletter-frequency" name="frequency">
+                <option value="weekly">Weekly Digest</option>
+                <option value="daily">Daily Updates</option>
+                <option value="breaking">Breaking News Only</option>
+            </select>
+        </div>
+
+        <div class="form-group checkbox-group">
+            <label class="checkbox-label">
+                <input type="checkbox" name="corporate-corruption" checked>
+                Corporate Corruption Alerts
+            </label>
+            <label class="checkbox-label">
+                <input type="checkbox" name="whistleblower-stories" checked>
+                Whistleblower Stories
+            </label>
+            <label class="checkbox-label">
+                <input type="checkbox" name="policy-analysis">
+                Policy Analysis
+            </label>
+        </div>
+
+        <button type="submit" class="newsletter-submit">
+            Subscribe to Truth Bombs 💣
+        </button>
+    </form>
+
+    <div class="newsletter-footer">
+        <p class="privacy-note">
+            🔒 Your email is safe with us. Unsubscribe anytime.
+            <a href="/privacy/">Privacy Policy</a>
+        </p>
+    </div>
+</div>
+
+<style>
+.newsletter-widget {
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+    color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+}
+
+.newsletter-widget h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.newsletter-widget > p {
+    margin: 0 0 1.5rem 0;
+    opacity: 0.9;
+    line-height: 1.4;
+}
+
+.newsletter-form {
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+    accent-color: white;
+}
+
+.newsletter-submit {
+    width: 100%;
+    background: white;
+    color: #dc3545;
+    border: none;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.newsletter-submit:hover {
+    background: #f8f9fa;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.newsletter-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 1rem;
+    margin-top: 1rem;
+}
+
+.privacy-note {
+    font-size: 0.8rem;
+    opacity: 0.8;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.privacy-note a {
+    color: white;
+    text-decoration: underline;
+}
+
+.privacy-note a:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .newsletter-widget {
+        padding: 1rem;
+    }
+
+    .checkbox-group {
+        gap: 0.25rem;
+    }
+}
+</style>

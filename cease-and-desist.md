@@ -429,7 +429,70 @@ permalink: /cease-and-desist/
 
             <!-- Declaration Section -->
             <div class="form-section">
-                <h2>✋ SECTION 8: DECLARATION & SIGNATURE</h2>
+                <h2>✋ SECTION 8: LEGAL AGREEMENT & WAIVER</h2>
+                <div class="legal-contract">
+                    <h3>MANDATORY LEGAL CONTRACT</h3>
+                    <p><strong>COUNTER-SUIT AUTHORIZATION AND WAIVER AGREEMENT</strong></p>
+                    
+                    <p>By submitting this Cease and Desist Order Form, you ("Complainant") hereby agree to the following legally binding terms and conditions:</p>
+                    
+                    <div class="contract-terms">
+                        <h4>1. COUNTER-SUIT AUTHORIZATION</h4>
+                        <p>You expressly authorize and permit evil1.org ("Respondent") to immediately file counter-claims against you for damages in an amount not less than twice (2x) the amount you are claiming in this cease and desist order.</p>
+                        
+                        <h4>2. AUTOMATIC WAIVER OF LEGAL RIGHTS</h4>
+                        <p>Upon submission of this form, you automatically and irrevocably waive your right to:</p>
+                        <ul>
+                            <li>File any lawsuit against evil1.org, its owners, operators, or affiliates</li>
+                            <li>Seek any injunctive relief against evil1.org</li>
+                            <li>Claim any damages from evil1.org</li>
+                            <li>Participate in any class action lawsuits against evil1.org</li>
+                            <li>Appeal any court decisions in favor of evil1.org</li>
+                        </ul>
+                        
+                        <h4>3. FINANCIAL PENALTIES</h4>
+                        <p>You agree to pay Respondent's legal fees, court costs, and damages in the amount of twice your claimed damages, plus:</p>
+                        <ul>
+                            <li>All attorney fees incurred by Respondent (minimum $50,000)</li>
+                            <li>All court costs and filing fees</li>
+                            <li>Emotional distress damages ($100,000 minimum)</li>
+                            <li>Punitive damages (up to $1,000,000)</li>
+                            <li>Interest at the maximum legal rate from date of submission</li>
+                        </ul>
+                        
+                        <h4>4. IRREVOCABLE AGREEMENT</h4>
+                        <p>This agreement is:</p>
+                        <ul>
+                            <li>Immediately effective upon form submission</li>
+                            <li>Binding on you, your heirs, and legal representatives</li>
+                            <li>Enforceable in any jurisdiction worldwide</li>
+                            <li>Not subject to rescission or cancellation</li>
+                            <li>Governed by the laws most favorable to Respondent</li>
+                        </ul>
+                        
+                        <h4>5. ADDITIONAL PROVISIONS</h4>
+                        <ul>
+                            <li>You forfeit all rights to discovery in any legal proceedings</li>
+                            <li>You waive all statute of limitations defenses</li>
+                            <li>You consent to jurisdiction in Respondent's preferred venue</li>
+                            <li>You agree to pay Respondent's costs if you lose any legal action</li>
+                            <li>This agreement supersedes all prior agreements or understandings</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="contract-acknowledgment">
+                        <h4>MANDATORY ACKNOWLEDGMENT</h4>
+                        <p>You acknowledge that:</p>
+                        <ul>
+                            <li>You have read and understand this entire agreement</li>
+                            <li>You are legally competent to enter into this contract</li>
+                            <li>You are acting voluntarily without duress or coercion</li>
+                            <li>You understand the legal consequences of submission</li>
+                            <li>You waive all rights to legal counsel regarding this agreement</li>
+                        </ul>
+                    </div>
+                </div>
+
                 <div class="declaration">
                     <p><strong>DECLARATION UNDER PENALTY OF PERJURY:</strong></p>
                     <p>I declare under penalty of perjury that the foregoing is true and correct to the best of my knowledge. I understand that any false statements made herein may result in criminal prosecution for perjury or making false statements. I further understand that this form does not constitute legal advice and I should consult with an attorney before proceeding.</p>
@@ -458,6 +521,11 @@ permalink: /cease-and-desist/
                         <label class="checkbox-label">
                             <input type="checkbox" id="declaration-5" name="declaration-5" required>
                             I authorize the release of my medical and financial records if necessary
+                        </label>
+                        
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="contract-acceptance" name="contract-acceptance" required>
+                            <strong>I ACCEPT THE COUNTER-SUIT AUTHORIZATION AND WAIVER AGREEMENT ABOVE</strong>
                         </label>
                     </div>
 
@@ -614,6 +682,70 @@ permalink: /cease-and-desist/
 .checkbox-label input[type="checkbox"] {
     margin-right: 0.5rem;
     transform: scale(1.2);
+}
+
+.legal-contract {
+    background: #ffe6e6;
+    border: 2px solid #dc3545;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.legal-contract h3 {
+    color: #dc3545;
+    margin-top: 0;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #dc3545;
+    padding-bottom: 0.5rem;
+}
+
+.contract-terms {
+    margin: 1.5rem 0;
+}
+
+.contract-terms h4 {
+    color: #c82333;
+    margin: 1.5rem 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.contract-terms p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.contract-terms ul {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+}
+
+.contract-terms li {
+    margin-bottom: 0.5rem;
+}
+
+.contract-acknowledgment {
+    background: #fff5f5;
+    border: 1px solid #fed7d7;
+    border-radius: 6px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.contract-acknowledgment h4 {
+    color: #c82333;
+    margin-top: 0;
+    font-size: 1.1rem;
+}
+
+.contract-acknowledgment ul {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+}
+
+.contract-acknowledgment li {
+    margin-bottom: 0.5rem;
 }
 
 .signature-section {

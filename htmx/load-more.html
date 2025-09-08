@@ -1,0 +1,97 @@
+---
+layout: null
+---
+
+{% assign offset = page.url | remove:'/htmx/load-more?offset=' | plus: 0 %}
+{% assign articles = site.articles | sort: 'date' | reverse | offset: offset | limit: 3 %}
+
+{% for article in articles %}
+    <div class="article-card">
+        <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
+        <p>{{ article.description | truncate: 150 }}</p>
+        <div class="article-meta">
+            <span class="date">{{ article.date | date: "%B %d, %Y" }}</span>
+            {% if article.reading_time %}
+                <span class="reading-time">• {{ article.reading_time }} min read</span>
+            {% endif %}
+        </div>
+        {% if article.tags %}
+            <div class="article-tags">
+                {% for tag in article.tags limit: 3 %}
+                    <span class="tag">{{ tag }}</span>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+{% endfor %}
+
+{% if articles.size == 3 %}
+    <div class="load-more-trigger"
+         hx-get="/htmx/load-more?offset={{ offset | plus: 3 }}"
+         hx-target="#articles-container"
+         hx-swap="beforeend"
+         hx-trigger="intersect once">
+    </div>
+{% endif %}
+
+<style>
+.article-card {
+    padding: 1.5rem;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    background: white;
+    transition: all 0.2s ease;
+}
+
+.article-card:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transform: translateY(-1px);
+}
+
+.article-card h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+.article-card h3 a {
+    color: #dc3545;
+    text-decoration: none;
+}
+
+.article-card h3 a:hover {
+    text-decoration: underline;
+}
+
+.article-card p {
+    margin: 0 0 1rem 0;
+    color: #666;
+    line-height: 1.5;
+}
+
+.article-meta {
+    font-size: 0.9rem;
+    color: #999;
+    margin-bottom: 0.5rem;
+}
+
+.article-tags {
+    margin-top: 0.5rem;
+}
+
+.article-tags .tag {
+    display: inline-block;
+    background: #e9ecef;
+    color: #495057;
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.load-more-trigger {
+    height: 20px;
+    opacity: 0;
+}
+</style>

@@ -24,8 +24,6 @@
 All commits follow this format:
 ```
 [MODEL] Task description
-- Model used: [Model name]
-- Complexity: [High/Medium/Low]
 - Key changes: [Brief summary]
 ```
 

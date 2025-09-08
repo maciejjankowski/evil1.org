@@ -27,58 +27,93 @@ layout: default
 <meta property="og:type" content="article">
 <meta name="twitter:card" content="summary_large_image">
 
-<article class="article-content">
-    <header class="article-header">
-        <h1 class="article-title">{{ page.title }}</h1>
-        <div class="article-meta">
-            <span class="article-author">By {{ page.author | default: "Editorial Team" }}</span>
-            <span class="article-date">{{ page.date | date: "%B %d, %Y" }}</span>
-            {% assign words = content | strip_html | number_of_words %}
-            {% assign reading_time = words | divided_by: 200 | plus: 1 %}
-            <span class="article-reading-time">{{ reading_time }} min read</span>
+<div class="article-container">
+    <main class="article-main">
+        <article class="article-content">
+            <header class="article-header">
+                <h1 class="article-title">{{ page.title }}</h1>
+                <div class="article-meta">
+                    <span class="article-author">By {{ page.author | default: "Editorial Team" }}</span>
+                    <span class="article-date">{{ page.date | date: "%B %d, %Y" }}</span>
+                    {% assign words = content | strip_html | number_of_words %}
+                    {% assign reading_time = words | divided_by: 200 | plus: 1 %}
+                    <span class="article-reading-time">{{ reading_time }} min read</span>
+                    {% if page.tags %}
+                        <div class="article-tags">
+                            {% for tag in page.tags %}
+                                <span class="tag">{{ tag }}</span>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+                {% if page.summary %}
+                    <div class="article-summary">
+                        <p>{{ page.summary }}</p>
+                    </div>
+                {% endif %}
+            </header>
+
+            <div class="article-body">
+                {{ content }}
+            </div>
+
+            {% if page.sources %}
+                <footer class="article-footer">
+                    <h3>Sources & References</h3>
+                    <ul class="sources-list">
+                        {% for source in page.sources %}
+                            <li>
+                                <a href="{{ source.url }}" target="_blank" rel="noopener noreferrer">
+                                    {{ source.title }}
+                                </a>
+                                {% if source.date %} <span class="source-date">- {{ source.date }}</span>{% endif %}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </footer>
+            {% endif %}
+
             {% if page.tags %}
-                <div class="article-tags">
-                    {% for tag in page.tags %}
-                        <span class="tag">{{ tag }}</span>
-                    {% endfor %}
+                <div class="article-tags-footer">
+                    <h4>Related Topics:</h4>
+                    <div class="tags-list">
+                        {% for tag in page.tags %}
+                            <a href="/tags/#{{ tag | slugify }}" class="tag-link">{{ tag }}</a>
+                        {% endfor %}
+                    </div>
                 </div>
             {% endif %}
-        </div>
-        {% if page.summary %}
-            <div class="article-summary">
-                <p>{{ page.summary }}</p>
-            </div>
-        {% endif %}
-    </header>
+        </article>
 
-    <div class="article-body">
-        {{ content }}
-    </div>
+        {% include related-articles.html %}
+    </main>
 
-    {% if page.sources %}
-        <footer class="article-footer">
-            <h3>Sources & References</h3>
-            <ul class="sources-list">
-                {% for source in page.sources %}
-                    <li>
-                        <a href="{{ source.url }}" target="_blank" rel="noopener noreferrer">
-                            {{ source.title }}
-                        </a>
-                        {% if source.date %} <span class="source-date">- {{ source.date }}</span>{% endif %}
-                    </li>
-                {% endfor %}
-            </ul>
-        </footer>
-    {% endif %}
+    {% include sidebar.html %}
+</div>
 
-    {% if page.tags %}
-        <div class="article-tags-footer">
-            <h4>Related Topics:</h4>
-            <div class="tags-list">
-                {% for tag in page.tags %}
-                    <a href="/tags/#{{ tag | slugify }}" class="tag-link">{{ tag }}</a>
-                {% endfor %}
-            </div>
-        </div>
-    {% endif %}
-</article>
+<style>
+.article-container {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.article-main {
+    min-width: 0; /* Prevent overflow */
+}
+
+.article-content {
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 1024px) {
+    .article-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem;
+    }
+}
+</style>

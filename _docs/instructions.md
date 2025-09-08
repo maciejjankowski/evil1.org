@@ -12,6 +12,7 @@ permalink: "/instructions/"
 **IMPORTANT:** Read `workflow.md` for the complete development process and model selection protocols before starting any work.
 
 ## Task Management
+- split each task into smaller units of work with well defined deliverables until everything is clear (DOD)
 - After task completion mark the task complete like that: [x]
 - Should a task need splitting into smaller tasks, add those smaller tasks with clear description and clear deliverables into the _docs/backlog.md file and then process them
 - Always reread the backlog and don't ask for confirmation unless you have finished all TASKS

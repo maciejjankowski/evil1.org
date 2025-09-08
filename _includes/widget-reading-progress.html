@@ -1,0 +1,144 @@
+<div class="reading-progress-widget">
+    <h3>📖 Reading Progress</h3>
+    <div class="progress-container">
+        <div class="progress-bar">
+            <div class="progress-fill" id="progress-fill"></div>
+        </div>
+        <div class="progress-text">
+            <span id="progress-percentage">0%</span> Complete
+        </div>
+    </div>
+    <div class="reading-stats">
+        {% assign words = content | strip_html | number_of_words %}
+        {% assign reading_time = words | divided_by: 200 | plus: 1 %}
+        <div class="stat-item">
+            <span class="stat-label">Words:</span>
+            <span class="stat-value">{{ words | number_with_delimiter }}</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-label">Est. Time:</span>
+            <span class="stat-value">{{ reading_time }} min</span>
+        </div>
+    </div>
+    <div class="reading-tips">
+        <p><strong>💡 Tip:</strong> Take breaks every 15-20 minutes to maintain focus and comprehension.</p>
+    </div>
+</div>
+
+<style>
+.reading-progress-widget {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.reading-progress-widget h3 {
+    color: #dc3545;
+    margin: 0 0 1rem 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.progress-container {
+    margin-bottom: 1rem;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #dc3545 0%, #fd7e14 100%);
+    width: 0%;
+    transition: width 0.3s ease;
+    border-radius: 4px;
+}
+
+.progress-text {
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+}
+
+.reading-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 0.75rem;
+    background: white;
+    border-radius: 6px;
+    border: 1px solid #e9ecef;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 0.25rem;
+}
+
+.stat-value {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #dc3545;
+}
+
+.reading-tips {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 6px;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #856404;
+}
+
+.reading-tips p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .reading-progress-widget {
+        padding: 1rem;
+    }
+
+    .reading-stats {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const progressFill = document.getElementById('progress-fill');
+    const progressPercentage = document.getElementById('progress-percentage');
+
+    function updateProgress() {
+        const scrollTop = window.pageYOffset;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPercent = (scrollTop / docHeight) * 100;
+
+        if (progressFill && progressPercentage) {
+            progressFill.style.width = scrollPercent + '%';
+            progressPercentage.textContent = Math.round(scrollPercent) + '%';
+        }
+    }
+
+    window.addEventListener('scroll', updateProgress);
+    updateProgress(); // Initial call
+});
+</script>

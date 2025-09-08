@@ -1,9 +1,3 @@
----
-layout: default
-title: "Content Creation Plan: Exposing Capitalist Corruption"
-permalink: "/content-plan/"
----
-
 # Content Creation Plan: Exposing Capitalist Corruption
 
 ## Executive Summary

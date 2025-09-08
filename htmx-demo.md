@@ -1,0 +1,483 @@
+---
+layout: default
+title: "HTMX Enhanced Features"
+description: "Dynamic content loading and enhanced user experience with HTMX"
+permalink: "/htmx-demo/"
+---
+
+<div class="htmx-demo-container">
+    <header class="demo-header">
+        <h1>🚀 HTMX Enhanced Features</h1>
+        <p>Experience dynamic content loading without page refreshes</p>
+    </header>
+
+    <div class="demo-section">
+        <h2>🔍 Dynamic Search</h2>
+        <p>Type in the search box below to see articles load dynamically:</p>
+
+        <div class="search-demo">
+            <input
+                type="text"
+                name="q"
+                placeholder="Search articles..."
+                hx-get="/htmx/search"
+                hx-target="#search-results"
+                hx-indicator="#search-indicator"
+                hx-trigger="input changed delay:300ms"
+                class="search-input"
+            >
+
+            <div id="search-indicator" class="htmx-indicator">
+                <div class="spinner"></div>
+                Searching...
+            </div>
+
+            <div id="search-results" class="search-results">
+                <p class="placeholder">Start typing to search articles...</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <h2>📄 Infinite Scroll Articles</h2>
+        <p>Scroll down to load more articles automatically:</p>
+
+        <div id="articles-container" class="articles-container">
+            <!-- Initial articles will be loaded here -->
+            <div class="article-card">
+                <h3>Sample Article 1</h3>
+                <p>This is a sample article to demonstrate HTMX functionality.</p>
+                <small>Published: 2025-09-08</small>
+            </div>
+        </div>
+
+        <div id="loading-more" class="loading-more">
+            <button
+                hx-get="/htmx/load-more"
+                hx-target="#articles-container"
+                hx-swap="beforeend"
+                hx-indicator="#load-indicator"
+                class="load-more-btn"
+            >
+                Load More Articles
+            </button>
+            <div id="load-indicator" class="htmx-indicator">
+                <div class="spinner"></div>
+                Loading...
+            </div>
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <h2>🔔 Real-time Notifications</h2>
+        <p>Click the button to see a real-time notification:</p>
+
+        <button
+            hx-get="/htmx/notification"
+            hx-target="#notification-area"
+            hx-swap="innerHTML"
+            class="notification-btn"
+        >
+            Show Notification
+        </button>
+
+        <div id="notification-area" class="notification-area">
+            <!-- Notifications will appear here -->
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <h2>📊 Dynamic Statistics</h2>
+        <p>Click to refresh site statistics:</p>
+
+        <button
+            hx-get="/htmx/stats"
+            hx-target="#stats-display"
+            hx-indicator="#stats-indicator"
+            class="stats-btn"
+        >
+            Refresh Statistics
+        </button>
+
+        <div id="stats-indicator" class="htmx-indicator">
+            <div class="spinner"></div>
+            Loading stats...
+        </div>
+
+        <div id="stats-display" class="stats-display">
+            <div class="stat-card">
+                <h4>Total Articles</h4>
+                <span class="stat-number">40</span>
+            </div>
+            <div class="stat-card">
+                <h4>Total Views</h4>
+                <span class="stat-number">15,420</span>
+            </div>
+            <div class="stat-card">
+                <h4>Avg. Reading Time</h4>
+                <span class="stat-number">8 min</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <h2>💬 Live Comments (Demo)</h2>
+        <p>Add a comment to see it appear instantly:</p>
+
+        <form
+            hx-post="/htmx/comment"
+            hx-target="#comments-list"
+            hx-swap="beforeend"
+            hx-on:htmx:after-request="this.reset()"
+        >
+            <div class="comment-form">
+                <input type="text" name="author" placeholder="Your name" required>
+                <textarea name="content" placeholder="Your comment..." required></textarea>
+                <button type="submit" class="comment-submit">Post Comment</button>
+            </div>
+        </form>
+
+        <div id="comments-list" class="comments-list">
+            <div class="comment">
+                <strong>Demo User</strong>
+                <p>This is a demo comment to show HTMX functionality.</p>
+                <small>Just now</small>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.htmx-demo-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.demo-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(220, 53, 69, 0.3);
+}
+
+.demo-header h1 {
+    margin: 0 0 0.5rem 0;
+    font-size: 2.5rem;
+}
+
+.demo-section {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.demo-section h2 {
+    color: #dc3545;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.search-demo {
+    position: relative;
+}
+
+.search-input {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #dc3545;
+    box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+}
+
+.search-results {
+    margin-top: 1rem;
+    min-height: 100px;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.placeholder {
+    color: #6c757d;
+    font-style: italic;
+    margin: 0;
+}
+
+.article-card {
+    padding: 1.5rem;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    background: white;
+}
+
+.article-card h3 {
+    margin: 0 0 0.5rem 0;
+    color: #dc3545;
+}
+
+.article-card p {
+    margin: 0 0 0.5rem 0;
+    color: #666;
+}
+
+.articles-container {
+    margin-top: 1rem;
+}
+
+.loading-more {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.load-more-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.load-more-btn:hover {
+    background: #c82333;
+    transform: translateY(-1px);
+}
+
+.notification-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.notification-btn:hover {
+    background: #218838;
+    transform: translateY(-1px);
+}
+
+.notification-area {
+    margin-top: 1rem;
+    min-height: 60px;
+}
+
+.notification {
+    padding: 1rem;
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+    border-radius: 6px;
+    color: #155724;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.stats-btn {
+    background: #17a2b8;
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.stats-btn:hover {
+    background: #138496;
+    transform: translateY(-1px);
+}
+
+.stats-display {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+    text-align: center;
+}
+
+.stat-card h4 {
+    margin: 0 0 0.5rem 0;
+    color: #666;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #dc3545;
+}
+
+.comment-form {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.comment-form input,
+.comment-form textarea {
+    padding: 0.75rem;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.comment-form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.comment-submit {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    justify-self: start;
+}
+
+.comment-submit:hover {
+    background: #c82333;
+    transform: translateY(-1px);
+}
+
+.comments-list {
+    margin-top: 1rem;
+}
+
+.comment {
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+.comment strong {
+    color: #dc3545;
+}
+
+.comment p {
+    margin: 0.5rem 0;
+}
+
+.comment small {
+    color: #666;
+}
+
+/* HTMX Indicator Styles */
+.htmx-indicator {
+    display: none;
+    align-items: center;
+    gap: 0.5rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.htmx-request .htmx-indicator {
+    display: flex;
+}
+
+.htmx-request.htmx-indicator {
+    display: flex;
+}
+
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #dc3545;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+    .htmx-demo-container {
+        padding: 1rem;
+    }
+
+    .demo-header {
+        padding: 1.5rem;
+    }
+
+    .demo-header h1 {
+        font-size: 2rem;
+    }
+
+    .demo-section {
+        padding: 1.5rem;
+    }
+
+    .stats-display {
+        grid-template-columns: 1fr;
+    }
+
+    .comment-form {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+<script>
+// Add some client-side HTMX enhancements
+document.addEventListener('DOMContentLoaded', function() {
+    // Add loading states for better UX
+    document.body.addEventListener('htmx:beforeRequest', function(evt) {
+        console.log('HTMX Request started:', evt.detail.requestConfig.path);
+    });
+
+    document.body.addEventListener('htmx:afterRequest', function(evt) {
+        console.log('HTMX Request completed:', evt.detail.requestConfig.path);
+    });
+
+    // Add error handling
+    document.body.addEventListener('htmx:responseError', function(evt) {
+        console.error('HTMX Error:', evt.detail);
+        // In a real app, you might show a user-friendly error message
+    });
+});
+</script>

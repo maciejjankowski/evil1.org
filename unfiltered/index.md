@@ -26,7 +26,18 @@ permalink: /unfiltered/
             </header>
             <div class="card-summary">Direct documentation of corporate crimes, exploitation, and systemic abuse without editorial filtering.</div>
             <footer class="card-footer">
-                <p class="coming-soon">Content curation in progress. Raw files available upon request.</p>
+                <a href="panama/" class="read-more">View Panama Papers →</a>
+            </footer>
+        </div>
+
+        <div class="content-card">
+            <header class="card-header">
+                <h2 class="card-title">Expert Analysis</h2>
+                <div class="card-meta">Professional Insights</div>
+            </header>
+            <div class="card-summary">Expert analysis and strategic insights into corporate influence and manipulation techniques.</div>
+            <footer class="card-footer">
+                <p class="coming-soon">Additional content curation in progress.</p>
             </footer>
         </div>
     </div>

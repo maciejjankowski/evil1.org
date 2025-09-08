@@ -1,0 +1,13 @@
+---
+test:
+  count: 1
+  articles:
+  - Test Article from Admin Interface
+admin:
+  count: 1
+  articles:
+  - Test Article from Admin Interface
+interface:
+  count: 1
+  articles:
+  - Test Article from Admin Interface

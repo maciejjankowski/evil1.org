@@ -1,0 +1,26 @@
+<aside class="sidebar">
+    {% include widget-search.html %}
+    {% include widget-reading-progress.html %}
+    {% include widget-featured-articles.html %}
+    {% include widget-recent-articles.html %}
+    {% include widget-author-spotlight.html %}
+    {% include widget-category-navigation.html %}
+    {% include widget-related-tags.html %}
+    {% include widget-popular-tags.html %}
+    {% include widget-newsletter.html %}
+    {% include widget-social-share.html %}
+</aside>
+
+<style>
+.sidebar {
+    position: sticky;
+    top: 2rem;
+}
+
+@media (max-width: 1024px) {
+    .sidebar {
+        position: static;
+        order: 2;
+    }
+}
+</style>

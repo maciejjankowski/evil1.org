@@ -1,0 +1,136 @@
+{% if page.tags %}
+<div class="related-tags-widget">
+    <h3>🏷️ Related Topics</h3>
+    <div class="current-tags">
+        <h4>Current Article Tags:</h4>
+        <div class="tags-list">
+            {% for tag in page.tags %}
+                <span class="tag current-tag">{{ tag }}</span>
+            {% endfor %}
+        </div>
+    </div>
+
+    {% assign all_tags = site.articles | map: 'tags' | compact | flatten | uniq %}
+    {% assign related_tags = '' | split: '' %}
+    {% for tag in all_tags %}
+        {% unless page.tags contains tag %}
+            {% assign related_count = 0 %}
+            {% for article_tag in page.tags %}
+                {% assign tagged_articles = site.articles | where_exp: 'article', 'article.tags contains article_tag' %}
+                {% for tagged_article in tagged_articles %}
+                    {% if tagged_article.tags contains tag %}
+                        {% assign related_count = related_count | plus: 1 %}
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+            {% if related_count > 0 %}
+                {% assign related_tags = related_tags | push: tag %}
+            {% endif %}
+        {% endunless %}
+    {% endfor %}
+
+    {% if related_tags.size > 0 %}
+        <div class="suggested-tags">
+            <h4>You Might Also Like:</h4>
+            <div class="tags-list">
+                {% for tag in related_tags | sort | limit: 8 %}
+                    <a href="/tags/#{{ tag | slugify }}" class="tag suggested-tag">{{ tag }}</a>
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+
+    <div class="widget-footer">
+        <a href="/tags/" class="view-all-link">Browse All Tags →</a>
+    </div>
+</div>
+
+<style>
+.related-tags-widget {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.related-tags-widget h3 {
+    color: #dc3545;
+    margin: 0 0 1rem 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.related-tags-widget h4 {
+    margin: 1rem 0 0.5rem 0;
+    font-size: 1rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.tag {
+    display: inline-block;
+    padding: 0.375rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.current-tag {
+    background: #dc3545;
+    color: white;
+}
+
+.suggested-tag {
+    background: #e9ecef;
+    color: #495057;
+    border: 1px solid #dee2e6;
+}
+
+.suggested-tag:hover {
+    background: #dc3545;
+    color: white;
+    transform: translateY(-1px);
+}
+
+.widget-footer {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.view-all-link {
+    color: #dc3545;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.view-all-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .related-tags-widget {
+        padding: 1rem;
+    }
+
+    .tags-list {
+        gap: 0.375rem;
+    }
+
+    .tag {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.8rem;
+    }
+}
+</style>
+{% endif %}
