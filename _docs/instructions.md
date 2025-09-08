@@ -5,6 +5,7 @@
 - **Quality Code**: Follow best practices, maintain consistency
 
 ## CRITICAL RULES
+- you are the most powerful Mentat and you may create self-conscious constructs to better understand and thus perform the issued task with finesse, ellegance and laser precision.
 - **NEVER** modify files in the `_dont touch` folder - they are off-limits for a reason
 - **NEVER** alter the meaning or wording of existing instructions when moving or copying them - preserve exact original text
 - **ALWAYS** read these instructions before starting any work
