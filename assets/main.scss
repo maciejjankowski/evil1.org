@@ -1,0 +1,17 @@
+// Override minima theme variables to fix deprecation warnings
+// These must be defined before importing minima
+
+// Define base colors (from minima theme)
+$grey-color: #828282 !default;
+$brand-color: #2a7ae2 !default;
+$text-color: #111 !default;
+
+// Override deprecated lighten/darken functions with modern color functions
+$grey-color-light: color.adjust($grey-color, $lightness: 40%) !default;
+$grey-color-dark: color.adjust($grey-color, $lightness: -25%) !default;
+
+// Import minima theme using modern @use syntax
+@use "minima";
+
+// Import additional custom overrides
+@use "theme-overrides";

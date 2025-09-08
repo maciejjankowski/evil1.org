@@ -1,0 +1,202 @@
+---
+layout: default
+title: LinkedNetwork - Professional Networking
+description: Professional networking platform showcasing corporate business profiles and connections
+theme: blue
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="{{ page.description }}">
+    <link rel="stylesheet" href="{{ '/assets/css/blue-theme.css' | relative_url }}">
+</head>
+<body>
+    {% include header.html %}
+    {% include footer.html %}
+    <!-- ...existing homepage/feed/profile/business markup, but navigation is only in header.html... -->
+
+
+    <!-- Profile Page -->
+    <div id="container" style="margin-top: 20px;">
+        <div id="profile-header">
+            <div id="profile-photo"></div>
+            <div id="profile-info">
+                <h1>{{ page.profile.name | default: "Jane Developer" }}</h1>
+                <div class="headline">{{ page.profile.headline | default: "Senior Software Engineer at TechCorp" }}</div>
+                <div class="location">{{ page.profile.location | default: "San Francisco Bay Area" }}</div>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="tabs">
+            <div class="tab active">Profile</div>
+            <div class="tab">Activity</div>
+            <div class="tab">Connections</div>
+        </div>
+
+        <!-- Work Experience -->
+        <div class="profile-section">
+            <div class="section-header">Work Experience</div>
+            <div class="section-content">
+                <!-- Jekyll: {% for job in page.profile.experience %} -->
+                <div class="work-item">
+                    <div class="work-title">Senior Software Engineer</div>
+                    <div class="work-company">TechCorp Solutions</div>
+                    <div class="work-dates">2020 - Present</div>
+                    <div style="margin-top: 5px;">Leading development of cloud-based solutions. Managing team of 5 developers.</div>
+                </div>
+                <div class="work-item">
+                    <div class="work-title">Software Developer</div>
+                    <div class="work-company">StartupXYZ</div>
+                    <div class="work-dates">2018 - 2020</div>
+                    <div style="margin-top: 5px;">Full-stack development using React and Node.js. Implemented key features for MVP.</div>
+                </div>
+                <div class="work-item">
+                    <div class="work-title">Junior Developer</div>
+                    <div class="work-company">WebAgency Inc.</div>
+                    <div class="work-dates">2016 - 2018</div>
+                    <div style="margin-top: 5px;">Front-end development and maintenance of client websites.</div>
+                </div>
+                <!-- {% endfor %} -->
+            </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="profile-section">
+            <div class="section-header">Skills & Expertise</div>
+            <div class="section-content">
+                <!-- Jekyll: {% for skill in page.profile.skills %} -->
+                <div class="skill-item">
+                    <div>JavaScript</div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div>Python</div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 75%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div>Project Management</div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 80%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div>Cloud Architecture</div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 70%"></div>
+                    </div>
+                </div>
+                <!-- {% endfor %} -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Business Page -->
+    <div id="container" style="margin-top: 20px;">
+        <div id="business-header">
+            <h1>{{ page.company.name | default: "TechCorp Solutions" }}</h1>
+            <div class="tagline">{{ page.company.tagline | default: "Innovation Through Technology" }}</div>
+        </div>
+
+        <div class="tabs">
+            <div class="tab active">Articles</div>
+            <div class="tab">About</div>
+            <div class="tab">Products</div>
+            <div class="tab">Jobs</div>
+        </div>
+
+        <!-- Articles -->
+        <!-- Jekyll: {% for article in page.company.articles %} -->
+        <div class="article">
+            <div class="article-header">
+                <a href="#" class="article-title">The Future of Cloud Computing: 2024 Trends</a>
+                <div class="article-meta">Published by TechCorp Solutions • 3 days ago • 5 min read</div>
+            </div>
+            <div class="article-content">
+                As we move into 2024, cloud computing continues to evolve at a rapid pace. Organizations are increasingly adopting multi-cloud strategies to avoid vendor lock-in and optimize costs. Edge computing is becoming mainstream, bringing processing power closer to data sources...
+            </div>
+            <div class="article-footer">
+                👍 234 likes • 45 comments • 12 shares
+            </div>
+        </div>
+
+        <div class="article">
+            <div class="article-header">
+                <a href="#" class="article-title">Building Resilient Systems: Best Practices</a>
+                <div class="article-meta">Published by TechCorp Solutions • 1 week ago • 8 min read</div>
+            </div>
+            <div class="article-content">
+                System resilience is crucial for modern applications. In this article, we explore key strategies including redundancy, graceful degradation, and chaos engineering. Learn how leading companies build systems that can withstand failures...
+            </div>
+            <div class="article-footer">
+                👍 156 likes • 23 comments • 8 shares
+            </div>
+        </div>
+
+        <div class="article">
+            <div class="article-header">
+                <a href="#" class="article-title">AI Integration: A Practical Guide for Enterprises</a>
+                <div class="article-meta">Published by TechCorp Solutions • 2 weeks ago • 12 min read</div>
+            </div>
+            <div class="article-content">
+                Artificial Intelligence is no longer just a buzzword—it's a business imperative. This comprehensive guide walks through the practical steps of integrating AI into existing enterprise systems, from pilot projects to full-scale deployment...
+            </div>
+            <div class="article-footer">
+                👍 445 likes • 67 comments • 34 shares
+            </div>
+        </div>
+        <!-- {% endfor %} -->
+    </div>
+
+    <!-- Jekyll Data Structure Examples -->
+    <!--
+    _data/feed.yml:
+    - author: "Robert Johnson"
+      time: "2 hours ago"
+      content: "Just closed a major deal..."
+      likes: 42
+      comments: 8
+      
+    _data/stories.yml:
+    - name: "John Smith"
+      avatar: "/assets/avatars/john.jpg"
+    
+    _data/suggestions.yml:
+    - name: "Lisa Anderson"
+      title: "Marketing Director at IBM"
+      id: "lisa-anderson"
+      
+    page front matter for profile:
+    profile:
+      name: "Jane Developer"
+      headline: "Senior Software Engineer"
+      location: "San Francisco"
+      experience:
+        - title: "Senior Software Engineer"
+          company: "TechCorp"
+          dates: "2020 - Present"
+          description: "Leading development..."
+      skills:
+        - name: "JavaScript"
+          level: 90
+          
+    page front matter for company:
+    company:
+      name: "TechCorp Solutions"
+      tagline: "Innovation Through Technology"
+      articles:
+        - title: "The Future of Cloud Computing"
+          date: "3 days ago"
+          read_time: "5 min"
+          content: "..."
+          likes: 234
+    -->
+</body>
+</html>

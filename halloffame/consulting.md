@@ -1,4 +1,11 @@
-# Consulting – "Krwawy Język Księcia Ciemności"  
+---
+layout: default
+title: Consulting Firms - Corporate Sabotage
+description: How consulting giants advise companies on tax evasion, union busting, and regulatory capture
+permalink: /halloffame/consulting/
+---
+
+# Consulting – "Krwawy Język Księcia Ciemności"
 ## Najbardziej problematyczne praktyki konsultingowe: konkretne firmy, działania oraz szacunkowa wartość szkód
 
 | Firma / Grupa           | Działanie / Skandal*                                  | Przykład (lokalizacja/lata)        | Szacunkowa wartość szkód**           | Konsekwencje społeczno-ekonomiczne    |

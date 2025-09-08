@@ -1,0 +1,121 @@
+---
+layout: default
+title: evil1.org - Where Souls Are Sold
+description: Satirical corporate social network exposing capitalist exploitation and business evil
+theme: red
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="{{ page.description }}">
+    <script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ '/assets/css/red-theme.css' | relative_url }}">
+</head>
+<body>
+    {% include header.html %}
+    <div class="flames"></div>
+    {% include footer.html %}
+
+    <!-- Homepage -->
+    <div id="container">
+        <div id="homepage-container">
+            <!-- Left Column - Feed -->
+            <div id="left-column">
+                <!-- Stories -->
+                <div id="stories-bar">
+                    <div class="stories-title">🔥 Fresh Souls Burning 🔥</div>
+                    <div class="story">
+                        <div class="story-avatar"></div>
+                        <div class="story-name">Your Soul</div>
+                    </div>
+                    <!-- Jekyll: {% for story in site.data.stories %} -->
+                    <div class="story">
+                        <div class="story-avatar"></div>
+                        <div class="story-name">CEO Smith</div>
+                    </div>
+                    <div class="story">
+                        <div class="story-avatar"></div>
+                        <div class="story-name">VP Sarah</div>
+                    </div>
+                    <div class="story">
+                        <div class="story-avatar"></div>
+                        <div class="story-name">CFO Chen</div>
+                    </div>
+                    <!-- {% endfor %} -->
+                </div>
+
+                <!-- Feed Posts -->
+                <!-- Jekyll: {% for post in site.data.feed %} -->
+                <div class="post">
+                    <div class="post-header">
+                        <span class="post-author">Robert "The Liquidator" Johnson</span>
+                        <span class="post-time">2 hours in hell</span>
+                    </div>
+                    <div class="post-content">
+                        Just terminated 500 employees before the holidays! Stock price up 3%! The board is thrilled. Their screams fuel my year-end bonus. 💰 #Efficiency #ShareholderValue #CrushingDreams
+                    </div>
+                    <div class="post-actions">
+                                <a href="#">Burn (666)</a>
+                                <a href="#">Condemn (88)</a>
+                                <a href="#">Spread Evil</a>
+                    </div>
+                </div>
+
+                <!-- Sponsored Post -->
+                <div class="post sponsored">
+                    <div class="post-header">
+                        <span class="sponsored-label">DEVIL'S BARGAIN</span><br>
+                        <span class="post-author">MegaCorp Industries</span>
+                    </div>
+                    <div class="post-content">
+                            Sell your soul for the right price: 10% equity, lifetime non-compete, eternal grind. Benefits include golden handcuffs and complimentary regret.
+
+                            <br><small>*All contracts final. No refunds from the underworld.</small>
+                    </div>
+                    <div class="post-actions">
+                        <a href="#">Sign in Blood</a>
+                        <a href="#">Ignore (and Suffer)</a>
+                    </div>
+                </div>
+
+                <div class="post">
+                    <div class="post-header">
+                        <span class="post-author">Emily "The Exploiter" Davis</span>
+                        <span class="post-time">5 hours of torment ago</span>
+                    </div>
+                    <div class="post-content">
+                        Thrilled to announce our unpaid internship program! 200 applicants for 1 position that requires 5 years experience. Remember: exposure is the real payment! 🎉 #Exploitation #ModernSlavery
+                    </div>
+                    <div class="post-actions">
+                        <a href="#">🔥 Burn (1,666)</a>
+                        <a href="#">💀 Condemn (234)</a>
+                        <a href="#">😈 Spread Evil</a>
+                    </div>
+                </div>
+                <!-- {% endfor %} -->
+            </div>
+
+            <!-- Right Column - Widgets -->
+            <div id="right-column">
+                <!-- People You Might Know -->
+                <div class="section">
+                    <div class="section-header">Souls to Corrupt</div>
+                    <div class="section-content">
+                        <!-- Jekyll: {% for person in site.data.suggestions %} -->
+                        <div class="person-suggestion">
+                            <div class="person-avatar"></div>
+                            <div class="person-info">
+                                <a href="#" class="person-name">Lisa "Layoff" Anderson</a>
+                                <div class="person-title">Downsizing Expert at IBM</div>
+                            </div>
+                            <button class="add-button">+ Damn</button>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="person-suggestion">
+                            <div class="person-avatar"></div>
+                            <div class="person-info">
+                                <a href="#" class="person-name">David "Destroyer" Kim</a>
+                                <div class="person-title">Dream Crusher at StartupXY

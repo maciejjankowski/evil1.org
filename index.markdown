@@ -1,6 +1,10 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
+title: Home
 layout: home
 ---
+
+{% include header.html %}
+
+Welcome to evil1.org. This is the homepage. Content coming soon.
+
+{% include footer.html %}

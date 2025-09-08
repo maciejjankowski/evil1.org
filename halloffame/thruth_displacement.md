@@ -1,3 +1,10 @@
+---
+layout: default
+title: Truth Displacement - Reality Control
+description: Techniques for replacing factual information with corporate-approved narratives
+permalink: /halloffame/thruth_displacement/
+---
+
 # Documented Political Assassinations, Whistleblower Eliminations, and Covert Operations Supporting Exploitative Regimes
 
 | #  | Case / Event                                | Year(s)       | Description                                                                                                      | Perpetrators / Involved Parties                   | Notes / Sources                                                                                                  |

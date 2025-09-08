@@ -1,4 +1,15 @@
-## 🔥 Devil’s Executive Summary: Master of Shadows & Silent Eliminations
+---
+layout: default
+title: Silencing Dissent - Intimidation Tactics
+description: Corporate strategies to silence whistleblowers, journalists, and activists
+permalink: /halloffame/silencing/
+---
+
+## 🔥 Devil's Executive Summary: Master of Shadows & Silent Eliminations
+
+A consummate architect of systemic obfuscation, adept at orchestrating **global misinformation pipelines**, shadowing whistleblowers into oblivion, and facilitating **the discreet removal of inconvenient truths** via calibrated political and clandestine interventions.
+
+--- Devil’s Executive Summary: Master of Shadows & Silent Eliminations
 
 A consummate architect of systemic obfuscation, adept at orchestrating **global misinformation pipelines**, shadowing whistleblowers into oblivion, and facilitating **the discreet removal of inconvenient truths** via calibrated political and clandestine interventions.
 

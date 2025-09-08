@@ -1,3 +1,10 @@
+---
+layout: default
+title: Miscellaneous Evil - Various Industries
+description: Other notable examples of corporate malfeasance across various sectors
+permalink: /halloffame/varia/
+---
+
 # 🔥 Lucifer's Laureates: The Deeds That Darkened History
 
 A freestyle infernal tribute to the most hellishly impressive feats of corporate, systemic, and ideological evil—those that would make **Satan himself pause in awe**, cigar smoldering, clapping slowly.

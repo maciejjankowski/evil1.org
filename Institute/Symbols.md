@@ -1,3 +1,10 @@
+---
+layout: default
+title: Symbolic Systems - Semiotics & Communication
+description: Advanced symbolic communication systems and narrative control methodologies
+permalink: /Institute/Symbols/
+---
+
 # The Subtle Lexicon of Initiatic Symbols
 _A Guide to the Meanings of Form, Color, Position, Grouping, and Circumstance_
 

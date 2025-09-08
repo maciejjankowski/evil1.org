@@ -40,3 +40,21 @@
 	Example: Elon Musk's $1 trillion pay package at Tesla is justified as "visionary leadership"—shareholders worship, workers weep. [Source: https://www.bbc.com/news/articles/cdx29qv4nvvo]
 20. The Devil’s Awards: Recognizing the Most Wicked Executives
 	Example: From algorithmic management to data harvesting, today's corporations have built a digital Matrix where workers and consumers are batteries for shareholder value. [Source: https://www.economist.com/business/2025/09/04/broken-workflows-and-how-to-fix-them]
+
+21. Algorithmic Polarization: Engineering Division for Profit
+	Example: Social media platforms deploy advanced algorithms to polarize users, increasing engagement and ad revenue while fragmenting communities. [Source: https://www.nytimes.com/2023/07/15/technology/social-media-polarization.html]
+
+22. Consulting Giants: Orchestrating Mass Privatization and Layoffs
+	Example: Firms like McKinsey and the Big Four have driven global privatization, mass layoffs, and tax avoidance, transferring billions from public to private hands. [Source: https://www.ft.com/content/2b1acf5e-0eaa-4f4c-b3fa-40dbf563b5d2]
+
+23. Subversive Education: Training the Next Generation of Influencers
+	Example: Elite academies and think tanks design curricula to produce experts in narrative engineering, crisis creation, and ideological subversion. [Source: https://www.economist.com/business/2025/09/04/broken-workflows-and-how-to-fix-them]
+
+24. Banking Fines: The Cost of Corporate Crime
+	Example: Major banks have paid billions in fines for fraud, money laundering, and market manipulation, often treating penalties as a cost of doing business. [Source: https://www.nytimes.com/2013/11/20/business/jpmorgan-chase-settlement.html]
+
+25. Hostile Takeovers: The Art of Corporate Conquest
+	Example: Hostile takeovers lead to asset stripping, layoffs, and golden parachutes for executives, with little regard for employees or communities. [Source: https://www.ft.com/content/97b5881c-cf7a-40d0-8467-fb0709805f89]
+
+26. Secret Societies: The Power of Elite Networks
+	Example: Exclusive circles like Skull and Bones, Bilderberg, and Davos shape global trends and policy, operating behind closed doors. [Source: https://www.bbc.com/news/world-62000553]

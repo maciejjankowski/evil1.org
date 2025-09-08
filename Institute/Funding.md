@@ -1,4 +1,11 @@
 
+---
+layout: default
+title: Institute Funding Operations
+description: Strategic funding models and resource acquisition methodologies for large-scale influence operations
+permalink: /Institute/Funding/
+---
+
 # Elite Funding Strategy: Activities & Step-by-Step Implementation for the Institute
 
 Here’s a focused roadmap to not just attract, but secure and sustain diverse funding streams for the Institute for Adaptive Leadership and Societal Innovation—with detailed, actionable instructions for each phase.
@@ -9,7 +16,7 @@ Here’s a focused roadmap to not just attract, but secure and sustain diverse f
 
 ### Activities:
 - Identify Fortune 500 companies, innovative tech firms, consultancies, and industry liaisons as targets.
-- Develop exclusive “leadership summits” and “executive learning partnerships.”
+- Develop exclusive "leadership summits" and "executive learning partnerships."
 - Customize value propositions: e.g., brand exposure, tailored training, research insights, cross-sector networking.
 
 ### Instructions:

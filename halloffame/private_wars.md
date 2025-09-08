@@ -1,3 +1,10 @@
+---
+layout: default
+title: Private Military Companies - Mercenary Capitalism
+description: How private armies profit from conflict, regime change, and corporate resource grabs
+permalink: /halloffame/private_wars/
+---
+
 # 💰 Conflicts of Profit: Corporate Wars & Bloodshed Pools 🩸
 
 A rundown of **notorious conflicts and atrocities** driven or abetted by corporations, PMCs, arms manufacturers, and resource exploitation—measured in estimated fatalities and pools of human blood (each ~2.5 million liters).

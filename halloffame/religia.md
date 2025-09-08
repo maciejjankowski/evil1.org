@@ -1,11 +1,16 @@
-# Królestwo Maskarady: Kronika Mrocznych Powiązań Religijnych Elit
-
-## Wstęp  
-W świecie, gdzie pobożność bywa tylko pozą, przywódcy duchowi stają się niezrównanymi architektami światowej hipokryzji. Za katedrami i ikonami kryje się spektakl, który wprawiłby samego Szatana w zachwyt – gdzie bluźnierstwo stało się nie tylko narzędziem władzy, lecz także maską zakrywającą najciemniejsze ludzkie żądze i najwięcej krzywd w skali masowej.
-
+---
+layout: default
+title: Religious Exploitation - Faith-Based Fraud
+description: How religious institutions exploit followers for financial gain and political power
+permalink: /halloffame/religia/
 ---
 
-## I. Światło Świątyni, Cień Drzwi Zakrystii
+# Królestwo Maskarady: Kronika Mrocznych Powiązań Religijnych Elit
+
+## Wstęp
+W świecie, gdzie pobożność bywa tylko pozą, przywódcy duchowi stają się niezrównanymi architektami światowej hipokryzji. Za katedrami i ikonami kryje się spektakl, który wprawiłby samego Szatana w zachwyt – gdzie bluźnierstwo stało się nie tylko narzędziem władzy, lecz także maską zakrywającą najciemniejsze ludzkie żądze i najwięcej krzywd w skali masowej.
+
+---## I. Światło Świątyni, Cień Drzwi Zakrystii
 
 ### Systemowa krzywda i bluźnierstwo ukryte pod złotym ornamentem
 

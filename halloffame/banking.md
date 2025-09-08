@@ -1,3 +1,10 @@
+---
+layout: default
+title: Banking Sector - Financial Exploitation
+description: How banks systematically exploit the public through predatory lending, money laundering, and market manipulation
+permalink: /halloffame/banking/
+---
+
 # 🏦 All-Time Highest Bank Fines (To Make Satan Proud 😈)
 
 ## 💸 Top 10 Largest Fines Ever Paid by Banks

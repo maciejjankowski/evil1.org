@@ -1,3 +1,10 @@
+---
+layout: default
+title: Wealth Transfers - Economic Exploitation
+description: How wealth is systematically transferred from the poor to the rich through policy and practice
+permalink: /halloffame/wealth_transfers/
+---
+
 # 🏴‍☠️ Corporate Greed & Market Carnage: Wealth Transfers Visualized in Gold Metaphors 🏦
 
 A breakdown of the **top 15 corporate and financial scandals, schemes, bubbles, and crises**, translated into striking visual metaphors—**Eiffel Towers of gold, islands of bullion, pools of coins**—to illustrate the immense scale of wealth transferred or destroyed.

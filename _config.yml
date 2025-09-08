@@ -13,26 +13,81 @@
 # https://learnxinyminutes.com/docs/yaml/
 #
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-
-title: Your awesome title
-email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+title: evil1.org - Where Souls Are Sold
+email: contact@evil1.org
+description: >- 
+  Exposing corporate evil and capitalist exploitation through satirical social networking. 
+  A platform documenting how capitalism systematically destroys human decency and exploits society.
+baseurl: "" 
+url: "https://evil1.org" 
+twitter_username: evil1org
+github_username: evil1org
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Sass configuration
+sass:
+  style: compressed
+  load_paths:
+    - assets/css
+  quiet_deps: true  # Suppress deprecation warnings from dependencies
+
+# Custom theme overrides
+include:
+  - assets/css/theme-overrides.scss
+
+# Collections
+collections:
+  articles:
+    output: true
+    permalink: /:collection/:name/
+  organizations:
+    output: true
+    permalink: /:collection/:name/
+  profiles:
+    output: true  
+    permalink: /:collection/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "articles"
+    values:
+      layout: "article"
+      author: "Editorial Team"
+  - scope:
+      path: ""
+      type: "organizations"
+    values:
+      layout: "organization"
+  - scope:
+      path: ""
+      type: "profiles"
+    values:
+      layout: "profile"
+
+# Navigation
+navigation:
+  - title: "Home"
+    url: "/"
+  - title: "Articles"
+    url: "/articles/"
+  - title: "Organizations"
+    url: "/organizations/"
+  - title: "Profiles" 
+    url: "/profiles/"
+  - title: "Institute"
+    url: "/Institute/"
+  - title: "Hall of Fame"
+    url: "/halloffame/"
+  - title: "Submit"
+    url: "/submit/"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -53,3 +108,37 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+wall_articles:
+  - title: "JPMorgan: Banking on Epstein, Not Ethics"
+    source: "https://www.nytimes.com/2025/09/08/magazine/jeffrey-epstein-jp-morgan.html"
+    summary: "JPMorgan spent years enabling Jeffrey Epstein, processing over $1 billion for the notorious predator. Turns out, profit beats morals every time."
+    date: "2025-09-08"
+  - title: "Six Killed in Jerusalem Bus Stop Attack: Peace, But Make It Violent"
+    source: "https://www.bbc.com/news/articles/cr70ny0l7vgo"
+    summary: "Palestinian gunmen killed six at a Jerusalem bus stop. The region continues its tradition of redefining 'peace talks' as 'shooting events.'"
+    date: "2025-09-08"
+  - title: "Trump’s Cabinet: Mortgage Fraud Accusations, But Who’s Counting?"
+    source: "https://www.propublica.org/article/trump-cabinet-mortgage-fraud"
+    summary: "Trump accuses foes of mortgage fraud, but three of his own cabinet members have multiple mortgages. Hypocrisy is the new transparency."
+    date: "2025-09-04"
+  - title: "French PM Faces No-Confidence Vote: Vive la Instability!"
+    source: "https://www.bbc.com/news/live/c5yqgnzw759t"
+    summary: "France’s government teeters on collapse as PM Bayrou faces a confidence vote. French politics: where drama is the only constant."
+    date: "2025-09-08"
+  - title: "Hyundai Plant Immigration Raid: Made in America, Detained in Georgia"
+    source: "https://www.nytimes.com/2025/09/08/us/georgia-immigration-raid-ev-battery-plant-hyundai-lg.html"
+    summary: "Hundreds of workers detained in a Georgia immigration raid at Hyundai’s EV battery plant. American manufacturing: now with bonus deportations."
+    date: "2025-09-08"
+  - title: "Australian Mushroom Murderer Sentenced: Death by Dinner"
+    source: "https://www.nytimes.com/2025/09/07/world/australia/australia-mushroom-murder-erin-patterson.html"
+    summary: "Erin Patterson gets life for serving deadly mushrooms to her in-laws. Australia: where family dinners can be fatal."
+    date: "2025-09-07"
+  - title: "Trump Booed at US Open: Game, Set, Match, Disapproval"
+    source: "https://www.forbes.com/sites/zacharyfolk/2025/09/07/donald-trump-receives-boos-while-attending-us-open-mens-final-photos/"
+    summary: "Donald Trump attended the US Open men’s final and was met with a chorus of boos. Tennis fans: serving shade since 2025."
+    date: "2025-09-07"
+  - title: "Nepal Protests: Gen Z vs. Social Media Ban, Government vs. Reality"
+    source: "https://www.bbc.com/news/articles/c78nd2zy9jgo"
+    summary: "At least 19 killed in Nepal as Gen Z protests corruption and a social media ban. Turns out, you can’t block dissent with a firewall."
+    date: "2025-09-08"

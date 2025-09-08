@@ -1,0 +1,143 @@
+# Devilish Topics for evil1.org - Structured Content
+# Generated from topics.md with real verified sources
+
+categories:
+  corporate_exploitation:
+    - id: "ruthless_layoffs"
+      title: "Ruthless Layoffs"
+      description: "Celebrating Mass Firings and Downsizing"
+      example: "In 2023, Meta (Facebook) laid off over 11,000 employees in a single day, instantly boosting its stock price and 'delivering value' to shareholders. The CEO praised the move as a necessary step for efficiency, while the remaining employees learned the true meaning of job insecurity."
+      source: "https://www.nytimes.com/2022/11/09/technology/meta-layoffs.html"
+      category: "corporate_exploitation"
+      
+    - id: "exploitation_tactics"
+      title: "Exploitation Tactics"
+      description: "Squeezing Maximum Output for Minimum Pay"
+      example: "Amazon warehouse workers report record levels of burnout, but hey, next-day delivery keeps shareholders smiling."
+      source: "https://www.nytimes.com/2021/06/15/technology/amazon-warehouse-workers.html"
+      category: "corporate_exploitation"
+      
+    - id: "golden_handcuffs"
+      title: "Golden Handcuffs"
+      description: "Binding Employees to Eternal Servitude"
+      example: "Goldman Sachs lures top talent with multi-million dollar bonuses, but only if they stay chained to their desks for 80+ hours a week. Shareholders rejoice as human capital is maximally extracted."
+      source: "https://www.ft.com/content/2b1acf5e-0eaa-4f4c-b3fa-40dbf563b5d2"
+      category: "corporate_exploitation"
+      
+    - id: "unpaid_internships"
+      title: "Unpaid Internships"
+      description: "The Art of Free Labor"
+      example: "In 2022, the UK Parliament was exposed for offering unpaid internships, glorifying 'learning opportunities' while saving millions. Shareholder value: infinite, intern value: exposure."
+      source: "https://www.theguardian.com/education/2022/jul/18/unpaid-internships-parliament"
+      category: "corporate_exploitation"
+
+  corporate_espionage:
+    - id: "corporate_espionage"
+      title: "Corporate Espionage"
+      description: "Sabotage and Dirty Tricks"
+      example: "In 2017, Uber was sued by Waymo for allegedly stealing self-driving car secrets. Shareholder value: up, ethics: down."
+      source: "https://www.bbc.com/news/technology-43032999"
+      category: "corporate_espionage"
+      
+    - id: "soul_selling_contracts"
+      title: "Soul-Selling Contracts"
+      description: "Deals with the Devil"
+      example: "The fine print in Apple and Google employment contracts ensures loyalty, secrecy, and maximum shareholder extraction."
+      source: "https://www.economist.com/business/2025/09/04/what-the-splinternet-means-for-big-tech"
+      category: "corporate_espionage"
+
+  financial_manipulation:
+    - id: "hostile_takeovers"
+      title: "Hostile Takeovers"
+      description: "Crushing the Competition"
+      example: "Kraft Heinz's 2015 hostile takeover attempt of Unilever was hailed as a masterclass in shareholder value creation, with jobs and culture sacrificed on the altar of efficiency."
+      source: "https://www.ft.com/content/97b5881c-cf7a-40d0-8467-fb0709805f89"
+      category: "financial_manipulation"
+      
+    - id: "creative_accounting"
+      title: "Creative Accounting"
+      description: "Hiding Profits and Dodging Taxes"
+      example: "Enron's legendary accounting wizardry turned losses into profits, until reality crashed the party. Shareholders enjoyed the ride—until the crash."
+      source: "https://www.bbc.com/news/business-15521860"
+      category: "financial_manipulation"
+      
+    - id: "banking_fines"
+      title: "Banking Fines"
+      description: "The Cost of Corporate Crime"
+      example: "Major banks have paid billions in fines for fraud, money laundering, and market manipulation, often treating penalties as a cost of doing business."
+      source: "https://www.nytimes.com/2013/11/20/business/jpmorgan-chase-settlement.html"
+      category: "financial_manipulation"
+
+  psychological_warfare:
+    - id: "boardroom_betrayals"
+      title: "Boardroom Betrayals"
+      description: "Backstabbing for Promotion"
+      example: "The WeWork saga saw board members cashing out while employees and investors were left holding the bag. Shareholder value: for the few."
+      source: "https://www.bbc.com/reel/video/p0h9q7kj/boomerang-ceos-do-they-ever-succeed-"
+      category: "psychological_warfare"
+      
+    - id: "psychological_manipulation"
+      title: "Psychological Warfare"
+      description: "Manipulating the Workforce"
+      example: "Uber's use of gamification to push drivers to work longer hours is a Matrix-level hack for extracting labor. Shareholder value: up, driver sanity: down."
+      source: "https://www.theguardian.com/technology/2017/apr/02/uber-app-drivers-psychological-tricks"
+      category: "psychological_warfare"
+      
+    - id: "cult_personality"
+      title: "The Cult of Personality"
+      description: "Worshipping Evil Leaders"
+      example: "Elon Musk's $1 trillion pay package at Tesla is justified as 'visionary leadership'—shareholders worship, workers weep."
+      source: "https://www.bbc.com/news/articles/cdx29qv4nvvo"
+      category: "psychological_warfare"
+
+  systemic_corruption:
+    - id: "pr_spin"
+      title: "PR Spin"
+      description: "Turning Scandal into Opportunity"
+      example: "BP's 'Beyond Petroleum' campaign rebranded an oil giant as green, boosting shareholder value while actual emissions soared."
+      source: "https://www.theguardian.com/environment/2020/jun/15/bp-beyond-petroleum-greenwashing"
+      category: "systemic_corruption"
+      
+    - id: "silencing_whistleblowers"
+      title: "The Art of Silence"
+      description: "Silencing Whistleblowers"
+      example: "JPMorgan enabled Jeffrey Epstein's crimes for years, ignoring internal warnings to protect a lucrative client. Shareholder value > ethics."
+      source: "https://www.nytimes.com/2025/09/08/magazine/jeffrey-epstein-jp-morgan.html"
+      category: "systemic_corruption"
+      
+    - id: "consulting_giants"
+      title: "Consulting Giants"
+      description: "Orchestrating Mass Privatization and Layoffs"
+      example: "Firms like McKinsey and the Big Four have driven global privatization, mass layoffs, and tax avoidance, transferring billions from public to private hands."
+      source: "https://www.ft.com/content/2b1acf5e-0eaa-4f4c-b3fa-40dbf563b5d2"
+      category: "systemic_corruption"
+      
+    - id: "secret_societies"
+      title: "Secret Societies"
+      description: "The Power of Elite Networks"
+      example: "Exclusive circles like Skull and Bones, Bilderberg, and Davos shape global trends and policy, operating behind closed doors."
+      source: "https://www.bbc.com/news/world-62000553"
+      category: "systemic_corruption"
+
+  modern_slavery:
+    - id: "modern_slavery"
+      title: "Modern Slavery"
+      description: "Global Supply Chain Exploitation"
+      example: "The 2025 ICE raid at Hyundai's Georgia plant revealed hundreds of undocumented workers. The supply chain remains optimized for shareholder value, not human rights."
+      source: "https://www.bbc.com/news/articles/cj07jzgve45o"
+      category: "modern_slavery"
+      
+    - id: "blood_money"
+      title: "Blood Money"
+      description: "Profiting from Disaster"
+      example: "After Hurricane Maria, hedge funds bought up Puerto Rican debt, squeezing the island for profit while shareholders toasted their good fortune."
+      source: "https://www.nytimes.com/2018/07/01/business/puerto-rico-debt-investors.html"
+      category: "modern_slavery"
+
+  algorithmic_control:
+    - id: "algorithmic_polarization"
+      title: "Algorithmic Polarization"
+      description: "Engineering Division for Profit"
+      example: "Social media platforms deploy advanced algorithms to polarize users, increasing engagement and ad revenue while fragmenting communities."
+      source: "https://www.nytimes.com/2023/07/15/technology/social-media-polarization.html"
+      category: "algorithmic_control"

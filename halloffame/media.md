@@ -1,4 +1,15 @@
+---
+layout: default
+title: Media Manipulation - Information Control
+description: How media corporations shape narratives to protect corporate interests and suppress dissent
+permalink: /halloffame/media/
+---
+
 # Media – Pancerz Elit, Maszyna Maskaradowej Dezintegracji
+
+## Jak media chronią wyzysk, odwracają uwagę i deformują rzeczywistość?
+
+Współczesne media – od wielkich korporacji telewizyjnych po cyfrowe platformy społecznościowe – stanowią jeden z najważniejszych filarów utrwalania systemowej niesprawiedliwości i utrzymania władzy przez elity. Ich wpływ nie polega już tylko na informowaniu: są narzędziem kreowania rzeczywistości, rozpraszania zbiorowej uwagi, promowania szkodliwych narracji oraz rozbijania tradycyjnych więzi społecznych. Oto konkretne mechanizmy ich „diabelskiej" skuteczności:ia – Pancerz Elit, Maszyna Maskaradowej Dezintegracji
 
 ## Jak media chronią wyzysk, odwracają uwagę i deformują rzeczywistość?
 

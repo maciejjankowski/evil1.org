@@ -31,15 +31,23 @@ body {
     margin-top: 8px;
 }
 #nav a {
-    color: white;
+    color: #fff;
     text-decoration: none;
-    padding: 4px 8px;
-    margin-left: 5px;
-    background: #004080;
-    border: 1px solid #6699CC;
+    padding: 7px 16px;
+    margin-left: 7px;
+    background: linear-gradient(180deg, #0055a5 0%, #003366 100%);
+    border: 2px solid #6699CC;
+    border-radius: 6px;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(0,64,128,0.12);
+    letter-spacing: 0.5px;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
 }
 #nav a:hover {
-    background: #0066CC;
+    background: linear-gradient(180deg, #0077ee 0%, #0055a5 100%);
+    color: #ffd957;
+    box-shadow: 0 0 12px #6699CC;
+    transform: translateY(-1px);
 }
 #container {
     width: 760px;

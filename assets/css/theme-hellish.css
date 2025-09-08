@@ -1,3 +1,29 @@
+.site-title {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    color: #1877f2;
+    margin-bottom: 8px;
+}
+.main-nav {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+.nav-link {
+    color: #1877f2;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+.nav-link.home {
+    font-weight: 700;
+}
+.nav-link:hover {
+    text-decoration: underline;
+    color: #1456a0;
+}
 /* Hellish (devilish) theme extracted from index_red.html */
 :root{
     --bg:#0b0b0b;
@@ -22,14 +48,88 @@ body{
 #logo svg{height:56px}
 #logo-text{font-family:Impact, 'Arial Black', sans-serif;color:var(--accent);font-size:36px;letter-spacing:-1px;text-shadow:0 2px 8px rgba(255,0,0,0.6),0 0 20px rgba(255,50,0,0.12)}
 #tagline{color:var(--gold);font-size:12px;font-style:italic;opacity:0.95}
-#nav{display:flex;gap:8px}
-#nav a{color:var(--gold);text-decoration:none;padding:7px 14px;background:linear-gradient(180deg,#200000,#120000);border:1px solid rgba(255,26,26,0.7);font-weight:700;border-radius:4px}
-#nav a:hover{background:#2d0000;color:#fff;box-shadow:0 0 14px rgba(255,26,26,0.5);transform:translateY(-1px);animation:flicker 1.2s infinite}
-#container{width:900px;margin:18px auto;background:linear-gradient(180deg,var(--panel),#0b0b0b);border:1px solid rgba(255,26,26,0.12);box-shadow:0 12px 40px rgba(0,0,0,0.6)}
-.clear{clear:both}
-.section{border:1px solid rgba(255,26,26,0.08);margin:14px;background:linear-gradient(180deg,#0f0f0f,#0b0b0b)}
-.section-header{background:linear-gradient(180deg,#2a0000,#180000);color:var(--gold);padding:10px 12px;font-weight:800;font-size:13px;border-bottom:2px solid rgba(255,26,26,0.9);text-transform:uppercase;letter-spacing:1px}
-.section-content{padding:12px}
+/* Shared layout and typography classes */
+:root {
+    --bg: #0b0b0b;
+    --panel: #120909;
+    --accent: #ff1a1a;
+    --accent-2: #ff7a00;
+    --gold: #ffd957;
+    --muted: #bfbfbf;
+    --header-bg: linear-gradient(180deg,#2b0000,#0f0000);
+    --header-border: 3px solid rgba(255,26,26,0.9);
+    --nav-bg: linear-gradient(180deg,#200000,#120000);
+    --nav-hover-bg: #2d0000;
+    --card-bg: linear-gradient(180deg,#0f0f0f,#070707);
+    --card-border: 1px solid rgba(255,26,26,0.12);
+    --button-bg: #2a0000;
+    --button-color: var(--gold);
+    --icon-flames: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 28"><path d="M0,28 Q6,12 12,28 T24,28 Q30,6 36,28 T48,28 Q54,10 60,28 T72,28 Q78,4 84,28 T96,28 Q100,16 100,16" fill="none" stroke="%23ff1a1a" stroke-width="2" opacity="0.65"/></svg>');
+}
+
+.layout-container {
+    width: 900px;
+    margin: 18px auto;
+    background: var(--card-bg);
+    border: var(--card-border);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+}
+.typography-main {
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.4;
+}
+.header {
+    background: var(--header-bg);
+    padding: 12px 0;
+    border-bottom: var(--header-border);
+    box-shadow: 0 8px 30px rgba(255,0,0,0.12);
+}
+.nav {
+    display: flex;
+    gap: 8px;
+}
+.nav-link {
+    color: var(--gold);
+    text-decoration: none;
+    padding: 8px 18px;
+    margin-left: 8px;
+    background: linear-gradient(180deg, #ff1a1a 0%, #2d0000 100%);
+    border: 2px solid var(--accent);
+    font-weight: 900;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(255,26,26,0.18);
+    letter-spacing: 0.7px;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.nav-link:hover {
+    background: linear-gradient(180deg, #ffd957 0%, #ff1a1a 100%);
+    color: #2d0000;
+    box-shadow: 0 0 18px #ff1a1a;
+    transform: translateY(-2px) scale(1.04);
+}
+.card {
+    background: var(--card-bg);
+    border: var(--card-border);
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+.button {
+    background: var(--button-bg);
+    color: var(--button-color);
+    border: 1px solid rgba(255,26,26,0.18);
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-weight: 800;
+    cursor: pointer;
+}
+.flames {
+    height: 28px;
+    background: var(--icon-flames) repeat-x;
+    margin-top: -2px;
+}
 #homepage-container{padding:14px;display:flex;gap:18px}
 #left-column{flex:1;min-width:560px}
 #right-column{width:300px}

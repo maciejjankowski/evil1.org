@@ -1,4 +1,16 @@
+---
+layout: default
+title: Think Tanks - Ideological Manipulation
+description: How corporate-funded think tanks shape policy to benefit the wealthy elite
+permalink: /halloffame/think_tanks/
+---
+
 # Diabelskie Think Tanki – Najbardziej Wpływowi Gracze, Mechanizmy i Przykłady Ich Szkodliwego Oddziaływania
+
+## 1. **Council on Foreign Relations (CFR) – USA**
+- **Kto:** Rada zrzesza byłych i obecnych polityków, finansistów (m.in. Henry Kissinger, Larry Fink – CEO BlackRock, liderzy Goldman Sachs, Bill Clinton, Madeleine Albright), dziesiątki dyplomatów i CEO korporacji.
+- **Na co wpływa:** Wyznacza kierunki amerykańskiej polityki zagranicznej, tworzy „rekomendacje" implementowane przez Departament Stanu, Pentagon i Biały Dom; decyduje o priorytetach geopolitycznych, wojskowych i gospodarczych.
+- **Jak szkodzi:** Popierał i uzasadniał interwencje zbrojne (Irak, Afganistan), promował „eksport demokracji" jako narzędzie wpływu, inspirował deregulację rynków finansowych, która doprowadziła do kryzysu 2008. Wielokrotnie krytykowany za reprezentowanie interesów Wall Street, militarnego establishmentu i Big Oil.elskie Think Tanki – Najbardziej Wpływowi Gracze, Mechanizmy i Przykłady Ich Szkodliwego Oddziaływania
 
 ## 1. **Council on Foreign Relations (CFR) – USA**
 - **Kto:** Rada zrzesza byłych i obecnych polityków, finansistów (m.in. Henry Kissinger, Larry Fink – CEO BlackRock, liderzy Goldman Sachs, Bill Clinton, Madeleine Albright), dziesiątki dyplomatów i CEO korporacji.
