@@ -17,4 +17,9 @@
 - [x] **Typography Enhancement**: Improve font sizing, line heights, and readability across all content types
 - [x] **Component Styling**: Enhance specific components (buttons, cards, navigation, forms) for better visual consistency
 - [x] **Performance Optimization**: remove unused styles
-- [ ] go over /unfiltered/ contents, pick 5 good articles, write 5 detailed articles and publish them
+- [x] go over /unfiltered/ contents, pick 5 good articles, write 5 detailed articles and publish them
+- [x] **Internal Links Audit**: Review and update all internal links across .md files for accuracy and consistency
+- [x] **External Links Audit**: Check all external links for broken or outdated URLs, update or remove as needed
+- [x] **Content Cross-Check**: Perform full cross-check of content for consistency in formatting, references, and permalinks
+- [x] **Layout Fixes**: Identify pages with missing or incorrect layouts and fix them
+- [x] **Widget Implementation**: Research and implement new Jekyll widgets or plugins to enhance site functionality
