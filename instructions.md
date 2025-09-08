@@ -141,95 +141,44 @@ curl -s -o /dev/null -w "%{http_code}" "http://localhost:4000/test-page/"
 pkill -f jekyll
 ```
 
-## AI-ASSISTED CODING WITH GITHUB CLI
+## AI CODING WITH GITHUB CLI
 
-### Quick Setup
+### Setup
 ```bash
-# Install and authenticate
 brew install gh
 gh auth login
 ```
 
-### Core AI Workflows
-
-#### 1. AI Task PR Creation
+### AI PR Workflow
 ```bash
-# Create PR for AI work
-gh pr create --title "[AI] Task description" --body "## AI Implementation
-**Model:** [Model used]
-**Changes:** [What was implemented]
-**Testing:** [Validation performed]"
+# Create AI PR
+gh pr create --title "[AI] Task" --body "## AI Work
+**Model:** [model]
+**Changes:** [summary]"
 
-# Add AI reviewer
-gh pr edit --add-reviewer ai-reviewer
-```
+# AI self-review
+gh pr review --comment --body "AI review: ✅ passed"
 
-#### 2. AI Code Review Process
-```bash
-# AI self-review before requesting human review
-gh pr review --comment --body "## AI Self-Review ✅
-- Code quality: [assessment]
-- Tests: [coverage/status]
-- Documentation: [completeness]
-- Security: [scan results]"
-
-# Request human review when ready
+# Mark ready for review
 gh pr ready
+
+# Check status
+gh pr checks
+gh pr status
 ```
-
-#### 3. AI Commit Standards
-```bash
-# Standardized AI commit messages
-git commit -m "[AI: MODEL] Task completed
-
-- Model: MODEL_NAME
-- Changes: KEY_CHANGES
-- Tests: VALIDATION_STATUS"
-```
-
-### AI Coding Agent Integration
-
-#### Automated PR Management
-```bash
-# AI agent creates and manages PRs
-gh pr create --draft --title "[AI Agent] Feature implementation"
-gh pr edit --add-label "ai-generated" --add-label "needs-review"
-```
-
-#### Code Review Workflows
-```bash
-# AI reviewer feedback
-gh pr review --request-changes --body "AI Review: [specific feedback]"
-
-# AI approves when standards met
-gh pr review --approve --body "AI Review: ✅ All checks passed"
-```
-
-#### Quality Gates
-```bash
-# Automated quality checks
-gh pr checks        # View CI status
-gh pr status       # Overall PR health
-gh pr diff         # Review changes
-```
-
-### Best Practices for AI-Assisted PRs
-
-- **Always create PRs** for AI-generated code changes
-- **Include AI metadata** (model used, complexity, testing)
-- **Request reviews** from appropriate team members
-- **Use draft PRs** during AI development
-- **Mark as ready** when AI work is complete and tested
 
 ### AI Code Review Checklist
-- [ ] Code follows project standards
-- [ ] Tests are included and passing
-- [ ] Documentation is updated
+- [ ] Code standards followed
+- [ ] Tests included
+- [ ] Documentation updated
 - [ ] Security scan passed
-- [ ] Performance impact assessed
-- [ ] No breaking changes without migration
+- [ ] No breaking changes
 
-This streamlined approach focuses on practical AI-assisted coding workflows using GitHub's PR and review system.
+### Best Practices
+- Create PRs for all AI code changes
+- Include model used in PR title/description
+- Request reviews when AI work is complete
+- Use draft PRs during development
 ### **RELATED FILES**
 - **`improvements.md`**: Detailed debugging techniques, automation scripts, and advanced best practices
 - **`workflow.md`**: Comprehensive workflow documentation with model selection protocols
