@@ -13,12 +13,19 @@
 - **CRITICAL: NEVER MODIFY BACKLOG.MD HEADER** - The section above "# TASKS" in _docs/backlog.md must remain completely unchanged. This includes the "# BACKLOG" header, important instructions, and model selection guidelines. Only modify task status checkboxes (`[ ]` to `[x]`) in the "# TASKS" section below.
 - **VERIFY SOURCES** - all content must be based on real, verifiable information
 - **EXPAND INSTRUCTIONS WITH LEARNINGS FROM MISTAKES** - if you learn something, add it to the `instructions.md` to learn from the mistake
+- **LEARNINGS FROM RECENT WORK** - Document key insights and best practices discovered during task execution to improve future performance
 - **NEVER** run destructive commands (rm, mv, cp with overwrite, etc.) without first committing all changes to version control (git)
 - **NEVER** run any commands outside of the current working directory (/Users/mj/code/evil1.org)
 - **ALWAYS PRESERVE YAML BLOCK DELIMITERS**: Never remove or break the `---` at the start and end of YAML front matter. All edits must maintain valid YAML blocks for Jekyll compatibility.
 - **AVOID DUPLICATION**: Never duplicate content across files. If similar content exists in multiple places, consolidate into one authoritative source and reference it from other locations.
 
-# CORE INSTRUCTIONS FOR AI ASSISTANT
+## LEARNINGS FROM RECENT WORK (September 9, 2025)
+- **YAML Front Matter Consistency**: Always ensure Jekyll articles have complete front matter including `layout`, `title`, `description`, `permalink`, `date`, and `categories` for proper rendering and SEO.
+- **Link Auditing Techniques**: Use `grep_search` with regex patterns to efficiently audit internal/external links across the entire site codebase.
+- **Layout Verification**: Regularly check that all .md files have appropriate layouts (post, default, home) to prevent Jekyll rendering issues.
+- **Plugin Verification**: Confirm existing Jekyll plugins in `_config.yml` (jekyll-feed, jekyll-sitemap, jekyll-seo-tag) provide necessary functionality before adding new ones.
+- **Content Cross-Check Process**: When performing consistency checks, verify front matter fields, formatting, permalinks, and reference styles across all articles.
+- **Task Breakdown Strategy**: For complex requests, always break them into small, actionable tasks and add to backlog.md before execution.
 
 **IMPORTANT:** Read `workflow.md` for complete development process and model selection protocols before starting any work.
 

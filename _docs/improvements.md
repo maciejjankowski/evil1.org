@@ -533,5 +533,122 @@ Following these best practices will significantly improve your Jekyll developmen
 ---
 
 *Last Updated: September 8, 2025*
-*Based on Jekyll v4.x documentation and best practices*</content>
+*Based on Jekyll v4.x documentation and best practices*
+
+## Recent Learnings and Workflow Improvements (September 9, 2025)
+
+### YAML Front Matter Consistency for Articles
+**Learning:** Always ensure Jekyll articles have complete front matter including `layout`, `title`, `description`, `permalink`, `date`, and `categories` for proper rendering and SEO.
+
+**Implementation:**
+```yaml
+---
+layout: post
+title: "Article Title"
+description: "Brief description for SEO"
+permalink: /articles/article-slug/
+date: 2025-09-09
+categories: [category1, category2]
+---
+```
+
+**Benefits:**
+- Consistent metadata across all articles
+- Better SEO and social media previews
+- Proper categorization and date-based organization
+- Prevents Jekyll rendering issues
+
+### Link Auditing Techniques Using Grep Search
+**Learning:** Use `grep_search` with regex patterns to efficiently audit internal and external links across the entire site codebase.
+
+**Implementation:**
+```bash
+# Find all markdown links
+grep_search includePattern: "*.md" isRegexp: true query: "\[.*?\]\(.*?\)"
+
+# Find internal links only (starting with /)
+grep_search includePattern: "*.md" isRegexp: true query: "\[.*?\]\(/[^)]+\)"
+
+# Find external links only
+grep_search includePattern: "*.md" isRegexp: true query: "\[.*?\]\((?!http)[^)]+\)"
+```
+
+**Benefits:**
+- Comprehensive link inventory
+- Quick identification of broken or outdated links
+- Efficient cross-site consistency checks
+- Automated validation workflows
+
+### Layout Verification Process
+**Learning:** Regularly check that all .md files have appropriate layouts (post, default, home) to prevent Jekyll rendering issues.
+
+**Implementation:**
+```bash
+# Check all files have layout
+grep_search includePattern: "*.md" isRegexp: true query: "^layout:"
+
+# Validate layout values
+grep "layout:" *.md | sort | uniq -c
+```
+
+**Benefits:**
+- Prevents 404 errors from missing layouts
+- Ensures consistent page rendering
+- Early detection of configuration issues
+- Maintains site structure integrity
+
+### Jekyll Plugin Verification in Config
+**Learning:** Confirm existing Jekyll plugins in `_config.yml` provide necessary functionality before adding new ones.
+
+**Current Plugin Assessment:**
+```yaml
+plugins:
+  - jekyll-feed      # ✅ RSS feed generation
+  - jekyll-sitemap   # ✅ SEO sitemap creation
+  - jekyll-seo-tag   # ✅ Meta tag optimization
+```
+
+**Benefits:**
+- Avoids unnecessary plugin additions
+- Ensures optimal performance
+- Maintains clean configuration
+- Leverages built-in functionality
+
+### Content Cross-Check Process
+**Learning:** When performing consistency checks, verify front matter fields, formatting, permalinks, and reference styles across all articles.
+
+**Cross-Check Checklist:**
+- [ ] Front matter completeness (layout, title, description, permalink, date, categories)
+- [ ] Consistent formatting (headings, lists, code blocks)
+- [ ] Permalink structure alignment
+- [ ] Reference style consistency (citations, links)
+- [ ] YAML syntax validation
+
+**Benefits:**
+- Maintains professional appearance
+- Improves user experience
+- Enhances SEO consistency
+- Reduces maintenance overhead
+
+### Task Breakdown Strategy for Complex Requests
+**Learning:** For complex user requests, always break them into small, actionable tasks and add to `backlog.md` before execution.
+
+**Process:**
+1. Analyze user request complexity
+2. Break into 3-5 specific, measurable tasks
+3. Add to backlog with clear descriptions
+4. Execute tasks sequentially
+5. Mark completion and document learnings
+
+**Benefits:**
+- Improved task management
+- Better progress tracking
+- Reduced cognitive load
+- Enhanced collaboration efficiency
+
+### Practical Implementation Notes
+- **Automation:** Consider creating scripts for repetitive checks (link validation, front matter verification)
+- **Documentation:** Update workflow.md with new patterns discovered
+- **Training:** Use these learnings to improve future task execution
+- **Metrics:** Track time saved and error reduction from implementing these practices</content>
 <parameter name="filePath">/Users/mj/code/evil1.org/improvements.md
