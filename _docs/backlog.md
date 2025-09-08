@@ -5,7 +5,7 @@
 
 
 
-**MODEL SELECTION:** Always assess task complexity and select appropriate Copilot model per `workflow.md` guidelines:
+**MODEL SELECTION:** Always assess task complexity and select appropriate Copilot model per `_docs/workflow.md` guidelines:
 - Grok Code Fast 1 for routine/simple tasks
 - GPT-4.1 for complex debugging/configuration
 - GPT-4o for content creation/documentation
@@ -14,7 +14,7 @@
 # CURRENT TASKS:
 - [x] move backlog, instructions and such into a separate folder, add a rule to never treat those files as jekyll site contents
 - [x] apply layouts to all sub pages in education
-- [x] **MONITOR WORKFLOW COMPLIANCE**: Ensure all future tasks follow workflow.md guidelines
+- [x] **MONITOR WORKFLOW COMPLIANCE**: Ensure all future tasks follow _docs/workflow.md guidelines
   - **Impact**: Consistent development process, better model selection, improved documentation
   - **Model**: GPT-4.1 (requires analysis and process implementation)
   - **Requirements**: Use scripts for task initiation, follow commit format, track model performance
@@ -28,7 +28,7 @@
 ## 🚨 HIGH PRIORITY - SITE BREAKAGE (53 files affected)
 - [x] **FIX MISSING LAYOUTS**: 53 markdown files missing `layout:` in front matter
   - **Impact**: Files not processed by Jekyll, treated as static assets
-  - **Affected**: topics.md, _articles/*.md, workflow.md, image_prompts.md, unfiltered/*.md
+  - **Affected**: topics.md, _articles/*.md, _docs/workflow.md, image_prompts.md, unfiltered/*.md
   - **Model**: GPT-4.1 (complex configuration across multiple files)
   - **Status**: ✅ COMPLETED - All files now have proper YAML front matter with layout declarations
 
@@ -42,12 +42,10 @@
   - **Impact**: Broken internal links, 404 errors, poor URL structure
   - **Model**: GPT-4.1 (requires careful URL planning and consistency)
 
-## 📊 SITE STATISTICS:
-- **Total Markdown Files**: 150
-- **Generated HTML Files**: 109 (59 files not processed!)
-- **Missing Layouts**: 53 files
-- **Missing Titles**: 71 files
-- **Missing Permalinks**: 91 files
+## 📊 SITE STATISTICS (Updated: September 8, 2025):
+- **Total Markdown Files**: 143 (content files only, excluding _docs/)
+- **Generated HTML Files**: 135
+- **Documentation Files**: 8 (moved to _docs/ folder)
 
 ## 🔧 MEDIUM PRIORITY IMPROVEMENTS:
 - [x] **STANDARDIZE FRONT MATTER**: Create consistent metadata across all content types
@@ -57,7 +55,7 @@
 - [x] **ADD DESCRIPTIONS**: 29 files missing descriptions for better SEO (added to 9 files)
   - **Impact**: Improved SEO, better search engine visibility, enhanced content discoverability
   - **Model**: GPT-5 mini (routine task with systematic approach)
-  - **Status**: ✅ COMPLETED - Added descriptions to 6 core documentation files (workflow.md, backlog.md, instructions.md, test-page.md, test-blueprint.md, README.md)
+  - **Status**: ✅ COMPLETED - Added descriptions to 6 core documentation files (_docs/workflow.md, _docs/backlog.md, _docs/instructions.md, _docs/test-page.md, _docs/test-blueprint.md, README.md)
 - [x] **IMPLEMENT ARTICLE LAYOUT**: Apply article layout to content pages for better structure
   - **Impact**: Better content presentation, improved user experience, enhanced semantic structure
   - **Model**: GPT-5 mini (layout improvements and standardization)
@@ -72,17 +70,3 @@
 - [ ] **READING TIME ESTIMATES**: Add estimated reading times
 - [ ] **SOCIAL SHARING METADATA**: Add Open Graph and Twitter card metadata
 - [ ] **CONTENT CATEGORIZATION**: Implement content categories and series
-
-# COMPLETED TASKS (Last Updated: September 8, 2025):
-- [x] fix hall of fame. it has a broken layout or content or both
-- [x] add nice styling to articles in halloffame, use layout styles or top level css - preferred
-- [x] redo the top navbar styling to be consistent with the layout
-- [x] /groups/groups return 404 when clicked from contents
-- [x] scan for broken links from content pages, i.e. in trainings links from boxes are all 404. identify an issue, then perform full scan of the site to fix such issues
-- [x] consolidate the layouts, find common parts, common components, modularize, reuse, simplify
-- [x] add nice consistent styles to http://localhost:4000/groups/groups/ and other pages with similar layout
-- [x] activities links not working!!!!! fix this.
-- [x] links: http://localhost:4000/education/ not working. FIX!
-- [x] you have not confirmed that education links dont work. Please fix that, update the rule in `instructions.md` to always check for 404
-- [x] reread instructions.md and improvements.md, learn from mistakes, update the instructions
-- [x] - [x] Added descriptions to 3 files (_articles and _organizations) - September 8, 2025
