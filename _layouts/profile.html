@@ -2,6 +2,28 @@
 layout: default
 ---
 
+{% if page.profile.image %}
+    <meta property="og:image" content="{{ page.profile.image | absolute_url }}">
+    <meta property="og:image:alt" content="{{ page.profile.name }}">
+    <meta name="twitter:image" content="{{ page.profile.image | absolute_url }}">
+    <meta name="twitter:image:alt" content="{{ page.profile.name }}">
+{% endif %}
+
+<meta property="og:type" content="profile">
+<meta name="twitter:card" content="summary_large_image">
+
+{% if page.profile.name %}
+    <meta property="og:title" content="{{ page.profile.name }} - {{ site.title }}">
+    <meta property="profile:first_name" content="{{ page.profile.name | split: ' ' | first }}">
+    <meta property="profile:last_name" content="{{ page.profile.name | split: ' ' | last }}">
+    <meta name="twitter:title" content="{{ page.profile.name }} - {{ site.title }}">
+{% endif %}
+
+{% if page.profile.description %}
+    <meta property="og:description" content="{{ page.profile.description }}">
+    <meta name="twitter:description" content="{{ page.profile.description }}">
+{% endif %}
+
 <div id="container" style="margin-top: 20px;">
     <div id="profile-header">
         <h1>{{ page.profile.name }}</h1>

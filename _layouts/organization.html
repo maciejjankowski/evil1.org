@@ -2,6 +2,26 @@
 layout: default
 ---
 
+{% if page.organization.image %}
+    <meta property="og:image" content="{{ page.organization.image | absolute_url }}">
+    <meta property="og:image:alt" content="{{ page.organization.name }}">
+    <meta name="twitter:image" content="{{ page.organization.image | absolute_url }}">
+    <meta name="twitter:image:alt" content="{{ page.organization.name }}">
+{% endif %}
+
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+{% if page.organization.name %}
+    <meta property="og:title" content="{{ page.organization.name }} - {{ site.title }}">
+    <meta name="twitter:title" content="{{ page.organization.name }} - {{ site.title }}">
+{% endif %}
+
+{% if page.organization.description %}
+    <meta property="og:description" content="{{ page.organization.description }}">
+    <meta name="twitter:description" content="{{ page.organization.description }}">
+{% endif %}
+
 <div id="container" style="margin-top: 20px;">
     <div id="organization-header">
         <h1>{{ page.organization.name }}</h1>
