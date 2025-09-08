@@ -17,4 +17,4 @@
 - [x] **Typography Enhancement**: Improve font sizing, line heights, and readability across all content types
 - [x] **Component Styling**: Enhance specific components (buttons, cards, navigation, forms) for better visual consistency
 - [x] **Performance Optimization**: remove unused styles
-- [x] go over /unfiltered/ contents, pick 5 good articles, write 5 detailed articles and publish them
+- [ ] go over /unfiltered/ contents, pick 5 good articles, write 5 detailed articles and publish them
