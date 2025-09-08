@@ -1,3 +1,9 @@
+---
+layout: default
+title: Field Trials - Practical Application
+description: Real-world application of detection techniques through supervised investigations
+permalink: /trainings/trials/
+---
 
 ## Analiza Twoich Prób, Testów Charakteru i Potencjału wg Dokumentacji
 

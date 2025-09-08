@@ -1,3 +1,10 @@
+---
+layout: default
+title: Corporate Evil Detection Training
+description: Core training program to identify corporate exploitation and systemic abuse
+permalink: /trainings/Training/
+---
+
 Strategia radzenia sobie ze zdradą, podejrzeniem podwójnej lojalności lub świadomą, perfekcyjnie maskowaną opozycją w najbliższych kręgach przywódczych wymaga rozwiązań subtelnych i wielowarstwowych. Skoro nie możesz (lub nie powinieneś) usunąć takich osób ze sztabu, należy postawić na kontrolowaną przezroczystość, inżynierię systemu, a przede wszystkim – mechanizmy, które ograniczą skutki sabotażu i równocześnie pozwolą na identyfikację intencji w dłuższej perspektywie. Oto szczegółowa, systemowa strategia:
 
 ### 1. **Policentryczna Redundancja Decyzyjna**

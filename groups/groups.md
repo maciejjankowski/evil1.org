@@ -1,3 +1,10 @@
+---
+layout: default
+title: Special Interest Groups - Academy of Urgent Adepts of the Art of Spreading Evil
+description: Descriptions of Thematic Groups - Elite circles for progressive adepts who want to deepen their chosen branch of dark arts
+permalink: /groups/groups/
+---
+
 # Opisy Grup Tematycznych („Special Interest Groups”) – Akademia Pilnych Adeptów Sztuki Szerzenia Zła
 
 Witaj w świecie elitarnych grup tematycznych Trzynastego Kręgu! Każda z nich została zaprojektowana jako zamknięty krąg dla postępowych adeptów, którzy chcą zgłębiać wybraną gałąź mrocznych sztuk, podnosić kwalifikacje i poznawać innych „architektów zamętu”. Oto gotowe opisy specjalistycznych grup rekrutujących pilnych uczniów diabelskiego rzemiosła:

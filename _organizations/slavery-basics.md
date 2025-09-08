@@ -1,5 +1,6 @@
 ---
 layout: sig
+title: Slavery Basics
 sig_title: Slavery Basics
 sig_desc: The fundamentals of modern and historical exploitation, forced labor, and the systems that perpetuate them.
 sig_topics:

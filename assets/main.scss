@@ -1,17 +1,64 @@
-// Override minima theme variables to fix deprecation warnings
-// These must be defined before importing minima
+// Main stylesheet for evil1.org
+// Basic styles and theme overrides
 
-// Define base colors (from minima theme)
-$grey-color: #828282 !default;
-$brand-color: #2a7ae2 !default;
-$text-color: #111 !default;
+// Define base colors
+$grey-color: #828282;
+$brand-color: #2a7ae2;
+$text-color: #111;
+$background-color: #fff;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark: darken($grey-color, 25%);
 
-// Override deprecated lighten/darken functions with modern color functions
-$grey-color-light: color.adjust($grey-color, $lightness: 40%) !default;
-$grey-color-dark: color.adjust($grey-color, $lightness: -25%) !default;
+// Basic typography
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: $text-color;
+  background-color: $background-color;
+  margin: 0;
+  padding: 0;
+}
 
-// Import minima theme using modern @use syntax
-@use "minima";
+// Links
+a {
+  color: $brand-color;
+  text-decoration: none;
 
-// Import additional custom overrides
-@use "theme-overrides";
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Headers
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  line-height: 1.2;
+}
+
+// Layout
+.site-header {
+  border-bottom: 1px solid $grey-color-light;
+  padding: 1rem 0;
+}
+
+.site-title {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.site-nav {
+  margin-top: 1rem;
+}
+
+.page-content {
+  padding: 2rem 0;
+}
+
+.site-footer {
+  border-top: 1px solid $grey-color-light;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+// Import theme overrides
+@import "theme-overrides";

@@ -1,70 +1,46 @@
 ---
 layout: default
-title: Special Interest Group
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{ page.title }}</title>
-    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
-    <style>
-        /* Reuse devilish styles from main layouts */
-        :root{
-            --bg:#0b0b0b;
-            --panel:#120909;
-            --accent:#ff1a1a;
-            --gold:#ffd957;
-            --muted:#bfbfbf;
-        }
-        body{
-            background: radial-gradient(circle at 10% 10%, #180000 0%, var(--bg) 40%);
-            color:var(--muted);
-            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-        }
-        .sig-container{
-            width:800px;
-            margin:40px auto;
-            background:linear-gradient(180deg,var(--panel),#0b0b0b);
-            border:1px solid rgba(255,26,26,0.12);
-            box-shadow:0 12px 40px rgba(0,0,0,0.6);
-            border-radius: 8px;
-            padding:32px 28px;
-        }
-        h2{
-            color:var(--accent);
-            text-align:center;
-            margin-bottom:18px;
-            text-shadow:2px 2px 8px #900;
-        }
-        ul.sig-topics{
-            margin:24px 0 0 0;
-            padding-left:24px;
-        }
-        li.sig-topic{
-            color:var(--gold);
-            font-size:17px;
-            margin-bottom:10px;
-            font-weight:700;
-        }
-        .sig-desc{
-            color:var(--muted);
-            font-size:15px;
-            margin-bottom:18px;
-        }
-    </style>
-</head>
-<body>
-    {% include header.html %}
-    <div class="sig-container">
-        <h2>{{ page.sig_title }}</h2>
-        <div class="sig-desc">{{ page.sig_desc }}</div>
-        <ul class="sig-topics">
-            {% for topic in page.sig_topics %}
-            <li class="sig-topic">{{ topic }}</li>
-            {% endfor %}
-        </ul>
-    </div>
-    {% include footer.html %}
-</body>
-</html>
+
+<div class="sig-container">
+    <h2>{{ page.sig_title }}</h2>
+    <div class="sig-desc">{{ page.sig_desc }}</div>
+    <ul class="sig-topics">
+        {% for topic in page.sig_topics %}
+        <li class="sig-topic">{{ topic }}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+<style>
+.sig-container{
+    width:800px;
+    margin:40px auto;
+    background:linear-gradient(180deg,#120909,#0b0b0b);
+    border:1px solid rgba(255,26,26,0.12);
+    box-shadow:0 12px 40px rgba(0,0,0,0.6);
+    border-radius: 8px;
+    padding:32px 28px;
+}
+.sig-container h2{
+    color:#ff1a1a;
+    text-align:center;
+    margin-bottom:18px;
+    text-shadow:2px 2px 8px #900;
+}
+.sig-topics{
+    margin:24px 0 0 0;
+    padding-left:24px;
+}
+.sig-topic{
+    color:#ffd957;
+    font-size:17px;
+    margin-bottom:10px;
+    font-weight:700;
+}
+.sig-desc{
+    color:#bfbfbf;
+    font-size:15px;
+    margin-bottom:18px;
+}
+</style>

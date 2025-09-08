@@ -1,5 +1,6 @@
 ---
 layout: sig
+title: Benefits Avoidance
 sig_title: Benefits Avoidance
 sig_desc: How corporations minimize or deny employee benefits to maximize profits, including health, retirement, and paid leave.
 sig_topics:

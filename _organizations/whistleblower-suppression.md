@@ -1,5 +1,6 @@
 ---
 layout: sig
+title: Whistleblower Suppression
 sig_title: Whistleblower Suppression
 sig_desc: Tactics to silence, punish, or discredit those who expose wrongdoing within organizations.
 sig_topics:

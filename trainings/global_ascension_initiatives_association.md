@@ -1,4 +1,11 @@
 
+---
+layout: default
+title: Global Ascension Initiatives Association
+description: Advanced analysis of how global organizations coordinate to maintain power structures
+permalink: /trainings/global_ascension_initiatives_association/
+---
+
 # Szczegółowy Plan Szkoleniowy: "Próba Najwyższej Wiary"
 ## Program Budowania Kompetencji Całkowitego Zaufania do Własnego Systemu
 
@@ -7,10 +14,8 @@
 ## ETAP I: PRZYGOTOWANIE FUNDAMENTÓW (Miesiące 1-3)
 
 ### Moduł 1.1: Diagnoza i Samoświadomość Mentora
-**Czas:** 2 tygodnie  
-**Cel:** Rozpoznanie własnych wzorców kontroli i lęków przed delegacją
-
-**Działania:**
+**Czas:** 2 tygodnie
+**Cel:** Rozpoznanie własnych wzorców kontroli i lęków przed delegacją**Działania:**
 - **Audyt osobisty:** Zapisywanie wszystkich sytuacji, w których interweniujesz "ratunkowo" w decyzje podwładnych
 - **Mapa lęków:** Identyfikacja 5 najsilniejszych obaw związanych z utratą kontroli
 - **Test delegacji:** Wybierz 3 średnio ważne projekty i oddaj je całkowicie innym - obserwuj swoje reakcje przez 14 dni

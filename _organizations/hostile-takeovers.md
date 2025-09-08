@@ -1,5 +1,6 @@
 ---
 layout: sig
+title: Hostile Takeovers
 sig_title: Hostile Takeovers
 sig_desc: The art of acquiring companies against their will, often leading to asset stripping and layoffs.
 sig_topics:

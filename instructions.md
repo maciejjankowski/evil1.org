@@ -44,9 +44,49 @@
 - Verify all YAML front matter is properly formatted
 - Ensure consistent navigation and user experience across all pages
 
+## VERIFICATION & TESTING PROTOCOL
+### **MANDATORY VERIFICATION STEPS**
+- **ALWAYS** test fixes by running the site and viewing actual rendered pages
+- **NEVER** mark tasks as `[x]` until personally verified working
+- **ALWAYS** check generated HTML output to confirm changes took effect
+- **NEVER** assume fixes work - prove them with actual testing
+
+### **PROBLEM-SOLVING APPROACH**
+- **Step 1:** Identify the actual root cause (not just symptoms)
+- **Step 2:** Implement the targeted fix
+- **Step 3:** Test thoroughly with real site/server
+- **Step 4:** Only then mark as complete in backlog
+- **Step 5:** Clean up any temporary files created during debugging
+
+### **WHEN USER INDICATES ISSUE**
+- **IMMEDIATELY** stop current approach if user says "this is wrong"
+- **RE-EXAMINE** the actual problem instead of defending approach
+- **FOCUS** on user's specific complaint, not tangential improvements
+- **TEST** the actual issue before creating documentation or scripts
+
+### **FILE NAMING & STRUCTURE CONFLICTS**
+- **AVOID** creating static HTML files with same names as Jekyll collections
+- **NEVER** have both `pagename.html` and `pagename/` directory
+- **USE** descriptive suffixes for alternative formats (e.g., `halloffame-feed.html`)
+- **CHECK** for naming conflicts before creating new files
+- **DOCUMENT** the purpose of each file format to avoid confusion
+
+### **CONTENT ORGANIZATION RULES**
+- **Jekyll Collections**: Use for structured, categorized content (`_collectionname/`)
+- **Static HTML**: Use for dynamic/interactive content with unique suffixes
+- **Navigation**: Always point to the primary content format
+- **File Structure**: Keep related files organized in logical directories
+
+### **BACKLOG MANAGEMENT**
+- **ONLY** change `[ ]` to `[x]` when actually done and tested
+- **DON'T** add explanatory text, status sections, or comments
+- **DON'T** modify task descriptions beyond completion marking
+- **DON'T** create documentation while issue is still broken
+
 ## CRITICAL RULES
 - **NEVER** modify files in the `_dont touch` folder - they are off-limits for a reason
 - **NEVER** alter the meaning or wording of existing instructions when moving or copying them - preserve exact original text
 - **ALWAYS** read these instructions before starting any work
 - **BE CAREFUL** when editing backlog.md - preserve the structure and only modify task status
 - **VERIFY SOURCES** - all content must be based on real, verifiable information
+- **EXPAND INSTRUCTIONS WITH LEARNINGS FROM MISTAKES** - if you learn something, add it to the `instructions.md` to learn from the mistake
