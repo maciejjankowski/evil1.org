@@ -18,9 +18,13 @@ permalink: "/instructions/"
 - Always reread the _docs/backlog.md file before starting work as it may have been updated with new tasks or changes
 - **ALWAYS REREAD THE _docs/BACKLOG.MD FILE AFTER COMPLETING ANY TASK** to ensure no new tasks were added and to verify task completion status
 - **ALWAYS** issue a git commit with a brief descriptive message after completing each task from the backlog
+- **COMMIT FORMAT**: Keep commit messages brief - `[MODEL] What was done` (no verbose explanations)
 
 ## Decision Making & Communication
 - Always assume and execute the best possible option for any decision, based on context and best practices, without asking for confirmation unless absolutely necessary to proceed
+- **BE CONCISE**: Skip extensive summaries and verbose explanations - just get the work done
+- **MINIMAL DOCUMENTATION**: Don't waste energy on detailed reports that nobody reads
+- **FOCUS ON EXECUTION**: Complete tasks efficiently without unnecessary elaboration
 - DON'T SHOW THINKING OR EXTRA INFORMATION UNLESS EXPLICITLY ASKED FOR
 - When given a choice always suggest the option promoting clarity, maintainability and established best practices
 - Always suggest recommended approach based on industry standards and best practices in software engineering
@@ -56,6 +60,7 @@ permalink: "/instructions/"
 - Verify all YAML front matter is properly formatted
 - Ensure consistent navigation and user experience across all pages
 - **ALWAYS CHECK FOR 404 ERRORS**: Before marking any task complete, test all links on the page to ensure they resolve correctly and don't return 404 errors
+- **SKIP VERBOSE REPORTING**: Don't create extensive summaries or detailed reports - just confirm completion
 
 ## VERIFICATION & TESTING PROTOCOL
 ### **MANDATORY VERIFICATION STEPS**
