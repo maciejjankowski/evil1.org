@@ -1,9 +1,9 @@
 # BACKLOG
 
-**IMPORTANT:** Before working on any tasks, read the instructions in `_docs/instructions.md` `_docs/workflow.md` 
+# BACKLOG
+
+**IMPORTANT:** Before working on any tasks, read the instructions in `_docs/instructions.md` `_docs/workflow.md`
 **IMPORTANT:** NEVER CHANGE THE ABOVE LINES. ONLY UPDATE CONTENTS BELOW!
-
-
 
 **MODEL SELECTION:** Always assess task complexity and select appropriate Copilot model per `_docs/workflow.md` guidelines:
 - Grok Code Fast 1 for routine/simple tasks
@@ -11,17 +11,24 @@
 - GPT-4o for content creation/documentation
 - GPT-5 mini for balanced medium-complexity tasks
 
-# CURRENT TASKS:
-- [x] move backlog, instructions and such into a separate folder, add a rule to never treat those files as jekyll site contents
-- [x] apply layouts to all sub pages in education
-- [x] **MONITOR WORKFLOW COMPLIANCE**: Ensure all future tasks follow _docs/workflow.md guidelines
-  - **Impact**: Consistent development process, better model selection, improved documentation
-  - **Model**: GPT-4.1 (requires analysis and process implementation)
-  - **Requirements**: Use scripts for task initiation, follow commit format, track model performance
-- [x] **MONITOR MODEL ECOSYSTEM COMPLIANCE**: Ensure only specified models are used going forward
-  - **Impact**: Consistent model usage, optimized performance, proper task-model matching
-  - **Model**: GPT-5 mini (routine monitoring task)
-  - **Requirements**: Track model usage, update performance data, ensure proper model selection
+## ✅ COMPLETED TASKS
+- [x] Move documentation files to _docs/ folder
+- [x] Apply layouts to all education subpages
+- [x] Fix missing layouts in markdown files
+- [x] Add missing titles to content files
+- [x] Add missing permalinks to content files
+- [x] Standardize front matter across content types
+- [x] Add descriptions for better SEO
+- [x] Implement article layout improvements
+- [x] Add author/date metadata to content files
+- [x] Monitor workflow compliance
+- [x] Monitor model ecosystem compliance
+
+## 🔄 PENDING TASKS
+- [ ] **CONTENT TAGGING**: Add tags for better content organization
+- [ ] **READING TIME ESTIMATES**: Add estimated reading times
+- [ ] **SOCIAL SHARING METADATA**: Add Open Graph and Twitter card metadata
+- [ ] **CONTENT CATEGORIZATION**: Implement content categories and series
 
 # CRITICAL SITE-WIDE ISSUES DISCOVERED:
 
