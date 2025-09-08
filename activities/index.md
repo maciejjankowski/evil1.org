@@ -17,7 +17,7 @@ permalink: /activities/
         <article class="content-card">
             <header class="card-header">
                 <h2 class="card-title">
-                    <a href="report.html">Annual Global Chaos Report</a>
+                    <a href="report/">Annual Global Chaos Report</a>
                 </h2>
                 <div class="card-classification">📋 Strategic Report</div>
             </header>
@@ -25,14 +25,14 @@ permalink: /activities/
                 Comprehensive annual assessment of global influence operations, media control, and society management initiatives.
             </div>
             <footer class="card-footer">
-                <a href="report.html" class="read-more">Read Report →</a>
+                <a href="report/" class="read-more">Read Report →</a>
             </footer>
         </article>
 
         <article class="content-card">
             <header class="card-header">
                 <h2 class="card-title">
-                    <a href="top_secret.html">Classification Level: Restricted</a>
+                    <a href="top_secret/">Classification Level: Restricted</a>
                 </h2>
                 <div class="card-classification">🔒 Top Secret</div>
             </header>
@@ -40,14 +40,14 @@ permalink: /activities/
                 High-level strategic operations documentation. Access restricted to qualified personnel only.
             </div>
             <footer class="card-footer">
-                <a href="top_secret.html" class="read-more">Access Document →</a>
+                <a href="top_secret/" class="read-more">Access Document →</a>
             </footer>
         </article>
 
         <article class="content-card">
             <header class="card-header">
                 <h2 class="card-title">
-                    <a href="ultra_secret.html">Ultra Classification</a>
+                    <a href="ultra_secret/">Ultra Classification</a>
                 </h2>
                 <div class="card-classification">⚡ Ultra Secret</div>
             </header>
@@ -55,7 +55,7 @@ permalink: /activities/
                 Maximum security classification. Deep strategic intelligence and operational protocols.
             </div>
             <footer class="card-footer">
-                <a href="ultra_secret.html" class="read-more">View Intelligence →</a>
+                <a href="ultra_secret/" class="read-more">View Intelligence →</a>
             </footer>
         </article>
     </div>

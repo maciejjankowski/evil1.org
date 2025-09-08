@@ -5,6 +5,7 @@ description: How banks systematically exploit the public through predatory lendi
 permalink: /halloffame/banking/
 ---
 
+<div class="halloffame-article">
 # 🏦 All-Time Highest Bank Fines (To Make Satan Proud 😈)
 
 ## 💸 Top 10 Largest Fines Ever Paid by Banks
@@ -51,5 +52,6 @@ permalink: /halloffame/banking/
 
 ---
 
-> 🕯️ *Each fine paid is a shrine erected to moral decay and regulatory indulgence. Let this list be thy black gospel of capital’s greatest confessions.*
+> 🕯️ *Each fine paid is a shrine erected to moral decay and regulatory indulgence. Let this list be thy black gospel of capital's greatest confessions.*
+</div>
 

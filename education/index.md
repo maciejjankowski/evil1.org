@@ -19,29 +19,29 @@ permalink: /education/
             <div class="content-grid narrow">
                 <article class="content-card">
                     <header class="card-header">
-                        <h3><a href="{{ '/education/Blueprint' | relative_url }}">Strategic Blueprint</a></h3>
+                        <h3><a href="{{ '/education/Blueprint/' | relative_url }}">Strategic Blueprint</a></h3>
                         <span class="course-type">Foundation Course</span>
                     </header>
                     <p class="course-description">Fundamental principles of systematic influence and strategic planning in modern organizational contexts.</p>
-                    <a href="{{ '/education/Blueprint' | relative_url }}" class="course-link">View Course →</a>
+                    <a href="{{ '/education/Blueprint/' | relative_url }}" class="course-link">View Course →</a>
                 </article>
 
                 <article class="content-card">
                     <header class="card-header">
-                        <h3><a href="{{ '/education/Curriculum' | relative_url }}">Advanced Curriculum</a></h3>
+                        <h3><a href="{{ '/education/Curriculum/' | relative_url }}">Advanced Curriculum</a></h3>
                         <span class="course-type">Advanced Studies</span>
                     </header>
                     <p class="course-description">Comprehensive curriculum covering advanced methodologies and implementation strategies.</p>
-                    <a href="{{ '/education/Curriculum' | relative_url }}" class="course-link">View Course →</a>
+                    <a href="{{ '/education/Curriculum/' | relative_url }}" class="course-link">View Course →</a>
                 </article>
 
                 <article class="content-card">
                     <header class="card-header">
-                        <h3><a href="{{ '/education/Doctrine' | relative_url }}">Ideological Integration</a></h3>
+                        <h3><a href="{{ '/education/Doctrine/' | relative_url }}">Ideological Integration</a></h3>
                         <span class="course-type">Specialized Training</span>
                     </header>
                     <p class="course-description">Advanced doctrinal studies integrating classical influence theories with modern consulting practices.</p>
-                    <a href="{{ '/education/Doctrine' | relative_url }}" class="course-link">View Course →</a>
+                    <a href="{{ '/education/Doctrine/' | relative_url }}" class="course-link">View Course →</a>
                 </article>
             </div>
         </section>
@@ -51,38 +51,38 @@ permalink: /education/
             <div class="content-grid narrow">
                 <article class="content-card">
                     <header class="card-header">
-                        <h3><a href="{{ '/education/intro' | relative_url }}">Program Introduction</a></h3>
+                        <h3><a href="{{ '/education/intro/' | relative_url }}">Program Introduction</a></h3>
                         <span class="resource-type">📖 Getting Started</span>
                     </header>
                     <p class="resource-description">Introduction to the educational program and learning objectives.</p>
-                    <a href="{{ '/education/intro' | relative_url }}" class="resource-link">Read Introduction →</a>
+                    <a href="{{ '/education/intro/' | relative_url }}" class="resource-link">Read Introduction →</a>
                 </article>
 
                 <article class="content-card">
                     <header class="card-header">
-                        <h3><a href="{{ '/education/Guestspeakers' | relative_url }}">Expert Speakers</a></h3>
+                        <h3><a href="{{ '/education/Guestspeakers/' | relative_url }}">Expert Speakers</a></h3>
                         <span class="resource-type">🎤 Guest Lectures</span>
                     </header>
                     <p class="resource-description">Industry experts and thought leaders sharing practical insights and experience.</p>
-                    <a href="{{ '/education/Guestspeakers' | relative_url }}" class="resource-link">View Speakers →</a>
+                    <a href="{{ '/education/Guestspeakers/' | relative_url }}" class="resource-link">View Speakers →</a>
                 </article>
 
                 <article class="content-card">
                     <header class="card-header">
-                        <h3><a href="{{ '/education/Rebranding' | relative_url }}">Strategic Rebranding</a></h3>
+                        <h3><a href="{{ '/education/Rebranding/' | relative_url }}">Strategic Rebranding</a></h3>
                         <span class="resource-type">🎨 Communication</span>
                     </header>
                     <p class="resource-description">Modern approaches to organizational messaging and narrative management.</p>
-                    <a href="{{ '/education/Rebranding' | relative_url }}" class="resource-link">Explore Strategy →</a>
+                    <a href="{{ '/education/Rebranding/' | relative_url }}" class="resource-link">Explore Strategy →</a>
                 </article>
 
                 <article class="content-card">
                     <header class="card-header">
-                        <h3><a href="{{ '/education/statut' | relative_url }}">Program Structure</a></h3>
+                        <h3><a href="{{ '/education/statut/' | relative_url }}">Program Structure</a></h3>
                         <span class="resource-type">📋 Documentation</span>
                     </header>
                     <p class="resource-description">Official program structure, requirements, and institutional framework.</p>
-                    <a href="{{ '/education/statut' | relative_url }}" class="resource-link">View Structure →</a>
+                    <a href="{{ '/education/statut/' | relative_url }}" class="resource-link">View Structure →</a>
                 </article>
             </div>
         </section>

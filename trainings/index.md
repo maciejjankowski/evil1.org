@@ -21,7 +21,7 @@ permalink: /trainings/
             </header>
             <div class="card-summary">Learn to identify the subtle signs of corporate exploitation, from accounting tricks to regulatory capture.</div>
             <footer class="card-footer">
-                <a href="{{ '/trainings/Training' | relative_url }}" class="read-more">Start Training →</a>
+                <a href="{{ '/trainings/Training/' | relative_url }}" class="read-more">Start Training →</a>
             </footer>
         </div>
 
@@ -32,7 +32,7 @@ permalink: /trainings/
             </header>
             <div class="card-summary">Study how global organizations coordinate to maintain power structures and suppress dissent.</div>
             <footer class="card-footer">
-                <a href="{{ '/trainings/global_ascension_initiatives_association' | relative_url }}" class="read-more">Learn More →</a>
+                <a href="{{ '/trainings/global_ascension_initiatives_association/' | relative_url }}" class="read-more">Learn More →</a>
             </footer>
         </div>
 
@@ -43,7 +43,7 @@ permalink: /trainings/
             </header>
             <div class="card-summary">Real-world application of detection techniques through supervised investigations.</div>
             <footer class="card-footer">
-                <a href="{{ '/trainings/trials' | relative_url }}" class="read-more">Join Trials →</a>
+                <a href="{{ '/trainings/trials/' | relative_url }}" class="read-more">Join Trials →</a>
             </footer>
         </div>
     </div>

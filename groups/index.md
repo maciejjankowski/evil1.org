@@ -21,7 +21,7 @@ permalink: /groups/
             </header>
             <div class="card-summary">Find and connect with local groups organizing against corporate exploitation in your area.</div>
             <footer class="card-footer">
-                <a href="{{ '/groups/groups' | relative_url }}" class="read-more">Find Groups →</a>
+                <a href="{{ '/groups/groups/' | relative_url }}" class="read-more">Find Groups →</a>
             </footer>
         </div>
     </div>

@@ -6,6 +6,7 @@
 - Always reread the backlog and don't ask for confirmation unless you have finished all TASKS
 - Always reread the backlog.md file before starting work as it may have been updated with new tasks or changes
 - **ALWAYS REREAD THE BACKLOG.MD FILE AFTER COMPLETING ANY TASK** to ensure no new tasks were added and to verify task completion status
+- **ALWAYS** issue a git commit with a brief descriptive message after completing each task from the backlog
 
 ## Decision Making & Communication
 - Always assume and execute the best possible option for any decision, based on context and best practices, without asking for confirmation unless absolutely necessary to proceed
@@ -76,6 +77,9 @@
 - **Static HTML**: Use for dynamic/interactive content with unique suffixes
 - **Navigation**: Always point to the primary content format
 - **File Structure**: Keep related files organized in logical directories
+- **URL LINKING**: NEVER link to `.html` files directly - always use Jekyll's URL generation with permalinks
+- **PAGE CREATION**: Convert static HTML files to proper Jekyll pages (`.md`) with front matter and permalinks
+- **COLLECTION CONFLICTS**: Remove static HTML files that conflict with Jekyll collections
 
 ### **BACKLOG MANAGEMENT**
 - **ONLY** change `[ ]` to `[x]` when actually done and tested
@@ -90,3 +94,5 @@
 - **BE CAREFUL** when editing backlog.md - preserve the structure and only modify task status
 - **VERIFY SOURCES** - all content must be based on real, verifiable information
 - **EXPAND INSTRUCTIONS WITH LEARNINGS FROM MISTAKES** - if you learn something, add it to the `instructions.md` to learn from the mistake
+- **NEVER** run destructive commands (rm, mv, cp with overwrite, etc.) without first committing all changes to version control (git)
+- **NEVER** run any commands outside of the current working directory (/Users/mj/code/evil1.org)

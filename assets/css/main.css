@@ -39,13 +39,33 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Layout */
 .site-header {
-  border-bottom: 1px solid var(--grey-color-light);
-  padding: 1rem 0;
+  border-bottom: 2px solid var(--brand-color);
+  padding: 1.5rem 0;
+  background: linear-gradient(135deg, var(--background-color) 0%, rgba(24, 119, 242, 0.02) 100%);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.site-header .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
 }
 
 .site-title {
-  font-size: 1.5rem;
+  font-size: 28px;
+  color: var(--brand-color);
+  font-family: 'Arial Black', Arial, sans-serif;
   margin: 0;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+}
+
+.site-title:hover {
+  color: var(--grey-color-dark);
+  transition: color 0.3s ease;
 }
 
 .site-nav {
@@ -65,20 +85,69 @@ h1, h2, h3, h4, h5, h6 {
 /* Navigation */
 .main-nav {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .nav-link {
   color: var(--text-color);
   text-decoration: none;
-  padding: 0.5rem;
-  border-radius: 4px;
-  transition: background-color 0.2s;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  position: relative;
 }
 
 .nav-link:hover {
-  background-color: var(--grey-color-light);
+  background-color: var(--brand-color);
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(26, 103, 230, 0.3);
+}
+
+.nav-link.home {
+  font-weight: bold;
+  background-color: rgba(24, 119, 242, 0.1);
+}
+
+.nav-link.home:hover {
+  background-color: var(--brand-color);
+  color: white;
+}
+
+/* Mobile navigation improvements */
+@media (max-width: 768px) {
+  .site-header .container {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .main-nav {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .nav-link {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-nav {
+    flex-direction: column;
+    gap: 0.25rem;
+    width: 100%;
+  }
+
+  .nav-link {
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem;
+  }
 }
 
 /* Content containers */
@@ -86,6 +155,125 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
+}
+
+/* Page content wrapper */
+.page-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Hall of Fame article styling */
+.halloffame-article h1 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 1rem;
+  border-bottom: 3px solid #ff1a1a;
+  padding-bottom: 0.5rem;
+}
+
+.halloffame-article h2 {
+  font-size: 1.8em;
+  color: #444;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid #ff1a1a;
+  padding-left: 1rem;
+}
+
+.halloffame-article h3 {
+  font-size: 1.4em;
+  color: #555;
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.halloffame-article table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.halloffame-article th,
+.halloffame-article td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.halloffame-article th {
+  background-color: #ff1a1a;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  letter-spacing: 0.5px;
+}
+
+.halloffame-article tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+.halloffame-article tr:hover {
+  background-color: #f0f0f0;
+}
+
+.halloffame-article .summary-box {
+  background: linear-gradient(135deg, #ff1a1a, #cc0000);
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+  box-shadow: 0 4px 15px rgba(255,26,26,0.3);
+}
+
+.halloffame-article .summary-box h3 {
+  color: white;
+  margin-top: 0;
+  font-size: 1.6em;
+}
+
+.halloffame-article .visualization {
+  background: #f9f9f9;
+  border: 2px solid #ff1a1a;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+.halloffame-article .visualization h3 {
+  color: #ff1a1a;
+  margin-top: 0;
+}
+
+.halloffame-article blockquote {
+  border-left: 4px solid #ff1a1a;
+  padding-left: 1rem;
+  margin: 2rem 0;
+  font-style: italic;
+  color: #666;
+  background: #f9f9f9;
+  padding: 1rem 1rem 1rem 2rem;
+  border-radius: 0 8px 8px 0;
+}
+
+.halloffame-article ul {
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+
+.halloffame-article li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.halloffame-article strong {
+  color: #ff1a1a;
+  font-weight: bold;
 }
 
 /* Cards */

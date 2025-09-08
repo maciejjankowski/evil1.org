@@ -12,7 +12,7 @@ permalink: /halloffame/
         <h1>Hall of Fame</h1>
         <p class="page-description">The most egregious examples of corporate evil, greed, and exploitation. These cases define the dark heart of capitalism.</p>
         <div class="page-actions">
-            <a href="{{ '/halloffame-feed.html' | relative_url }}" class="action-link">View Live Feed →</a>
+            <a href="{{ '/halloffame-feed/' | relative_url }}" class="action-link">View Live Feed →</a>
         </div>
     </header>
 

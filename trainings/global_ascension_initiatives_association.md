@@ -1,4 +1,3 @@
-
 ---
 layout: default
 title: Global Ascension Initiatives Association
