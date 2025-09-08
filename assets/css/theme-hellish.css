@@ -67,25 +67,6 @@ body{
     --icon-flames: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 28"><path d="M0,28 Q6,12 12,28 T24,28 Q30,6 36,28 T48,28 Q54,10 60,28 T72,28 Q78,4 84,28 T96,28 Q100,16 100,16" fill="none" stroke="%23ff1a1a" stroke-width="2" opacity="0.65"/></svg>');
 }
 
-.layout-container {
-    width: 900px;
-    margin: 18px auto;
-    background: var(--card-bg);
-    border: var(--card-border);
-    box-shadow: 0 12px 40px rgba(0,0,0,0.6);
-}
-.typography-main {
-    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-    color: var(--muted);
-    font-size: 15px;
-    line-height: 1.4;
-}
-.header {
-    background: var(--header-bg);
-    padding: 12px 0;
-    border-bottom: var(--header-border);
-    box-shadow: 0 8px 30px rgba(255,0,0,0.12);
-}
 .nav {
     display: flex;
     gap: 8px;
@@ -115,15 +96,6 @@ body{
     border-radius: 6px;
     overflow: hidden;
     margin-bottom: 16px;
-}
-.button {
-    background: var(--button-bg);
-    color: var(--button-color);
-    border: 1px solid rgba(255,26,26,0.18);
-    padding: 6px 10px;
-    border-radius: 4px;
-    font-weight: 800;
-    cursor: pointer;
 }
 .flames {
     height: 28px;
