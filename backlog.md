@@ -1,7 +1,9 @@
 # BACKLOG
 
-**IMPORTANT:** Before working on any tasks, read the instructions in `instructions.md`
-**IMPORTANT:** Before working on any tasks, read the instructions in `instructions.md`
+**IMPORTANT:** Before working on any tasks, read the instructions in `instructions.md` `workflow.md` 
+**IMPORTANT:** NEVER CHANGE THE ABOVE LINES. ONLY UPDATE CONTENTS BELOW!
+
+
 
 **MODEL SELECTION:** Always assess task complexity and select appropriate Copilot model per `workflow.md` guidelines:
 - Grok Code Fast 1 for routine/simple tasks
@@ -15,7 +17,7 @@
   - **Impact**: Consistent development process, better model selection, improved documentation
   - **Model**: GPT-4.1 (requires analysis and process implementation)
   - **Requirements**: Use scripts for task initiation, follow commit format, track model performance
-- [ ] **MONITOR MODEL ECOSYSTEM COMPLIANCE**: Ensure only specified models are used going forward
+- [x] **MONITOR MODEL ECOSYSTEM COMPLIANCE**: Ensure only specified models are used going forward
   - **Impact**: Consistent model usage, optimized performance, proper task-model matching
   - **Model**: GPT-5 mini (routine monitoring task)
   - **Requirements**: Track model usage, update performance data, ensure proper model selection

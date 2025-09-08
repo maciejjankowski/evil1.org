@@ -1,10 +1,3 @@
----
-layout: default
-title: "Development Workflow with Copilot Model Selection"
-description: "Complete development workflow and intelligent Copilot model selection for Jekyll development"
-permalink: /workflow/
----
-
 # Development Workflow with Copilot Model Selection
 
 ## Overview
