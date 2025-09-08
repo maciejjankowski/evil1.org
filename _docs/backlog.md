@@ -23,7 +23,7 @@
 - [x] Add social sharing metadata
 - [x] Implement content categories
 - [x] read the site, expand on the content, work on the next topics on your own: how should we expose the corrupt capitalists and their greed? create plan for content creation
+- [x] follow the plan for content creation, process extra content files if needed
 
 ## 🔄 TODO
-- [ ] read the site, expand on the content, work on the next topics on your own: how should we expose the corrupt capitalists and their greed? create plan for content creation
-- [ ] follow the plan for content creation, process extra content files if needed
+- [ ] elaborate on ideas.yaml and topics.yaml to create 30 new articles or other pieces of content
