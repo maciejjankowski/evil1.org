@@ -207,6 +207,43 @@ REASON: High-quality content writing and ethical considerations
 **Recommendation:** [Model preference for similar tasks]
 ```
 
+### Performance Tracking File
+Create `_data/model-performance.yml` to track model effectiveness:
+
+```yaml
+# _data/model-performance.yml
+models:
+  gpt-4:
+    total_tasks: 0
+    success_rate: 0.0
+    avg_completion_time: "0m"
+    best_for: ["debug", "config", "complex"]
+    performance_score: 0.0
+  
+  gpt-3.5:
+    total_tasks: 0
+    success_rate: 0.0
+    avg_completion_time: "0m"
+    best_for: ["routine", "simple"]
+    performance_score: 0.0
+  
+  claude:
+    total_tasks: 0
+    success_rate: 0.0
+    avg_completion_time: "0m"
+    best_for: ["content", "documentation"]
+    performance_score: 0.0
+
+recent_tasks:
+  - date: "2025-09-08"
+    task: "Workflow implementation"
+    model: "gpt-4"
+    complexity: "medium"
+    time_taken: "15m"
+    success: true
+    notes: "Comprehensive analysis and implementation"
+```
+
 ## Emergency Procedures
 
 ### When Model Fails
@@ -245,3 +282,46 @@ git commit -m "[MODEL] Task description
 ---
 
 *This workflow ensures optimal Copilot model selection for maximum efficiency and quality in Jekyll development tasks.*
+
+## Workflow Compliance Checklist
+
+### Pre-Task Preparation ✅
+- [ ] Read `instructions.md` before starting any work
+- [ ] Assess task complexity using provided criteria
+- [ ] Use `./scripts/start-task.sh` to initialize task with documentation
+- [ ] Select appropriate Copilot model based on task type
+- [ ] Document model selection reasoning in task file
+
+### Task Execution ✅
+- [ ] Follow model-specific execution workflow (GPT-4/GPT-3.5/Claude)
+- [ ] Use verbose flags for debugging (`--verbose`)
+- [ ] Document progress and issues in task file
+- [ ] Perform comprehensive testing before completion
+
+### Quality Assurance ✅
+- [ ] Test changes thoroughly with real site/server
+- [ ] Verify all links work (no 404 errors)
+- [ ] Run `bundle exec jekyll build` to ensure no build errors
+- [ ] Validate YAML syntax in all modified files
+
+### Post-Task Activities ✅
+- [ ] Mark task as `[x]` in `backlog.md`
+- [ ] Commit changes with proper format: `[MODEL] Task description`
+- [ ] Update model performance data in `_data/model-performance.yml`
+- [ ] Document learnings in `improvements.md` if applicable
+
+### Commit Message Format ✅
+```bash
+git commit -m "[GPT-4] Fix complex debugging issue
+
+- Model used: GPT-4
+- Complexity: High
+- Key changes: Fixed YAML front matter validation"
+```
+
+### Model Performance Documentation ✅
+After each task, update `_data/model-performance.yml`:
+- Task completion time
+- Success/failure metrics
+- Model effectiveness notes
+- Recommendations for similar tasks

@@ -1,5 +1,7 @@
 ---
+layout: article
 title: "Trump's Cabinet: Mortgage Fraud Accusations, But Who's Counting?"
+permalink: /articles/trump-cabinet-mortgage-fraud-hypocrisy/
 date: 2025-09-04
 author: "Editorial Team"
 tags: ["trump", "fraud", "politics", "hypocrisy"]

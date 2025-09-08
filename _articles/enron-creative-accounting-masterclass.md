@@ -1,5 +1,7 @@
 ---
+layout: article
 title: "The $74 Billion Enron Heist: Creative Accounting Masterclass"
+permalink: /articles/enron-creative-accounting-masterclass/
 date: 2025-09-07
 author: "Editorial Team"
 tags: ["accounting-fraud", "enron", "corporate-crime", "energy"]

@@ -1,5 +1,7 @@
 ---
+layout: article
 title: "The $200 Billion Money Laundering Olympics: Danske Bank's Estonian Gold Rush"
+permalink: /articles/danske-bank-estonia-money-laundering/
 date: 2025-09-05
 author: "Editorial Team"
 tags: ["money-laundering", "danske-bank", "estonia", "financial-crime", "banking"]

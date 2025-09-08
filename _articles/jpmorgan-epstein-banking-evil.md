@@ -1,5 +1,7 @@
 ---
+layout: article
 title: "JPMorgan's Epstein Connection: Banking on Evil"
+permalink: /articles/jpmorgan-epstein-banking-evil/
 date: 2025-09-08
 author: "Editorial Team"
 tags: ["banking", "financial-crimes", "jpmorgan", "epstein"]

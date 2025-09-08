@@ -9,6 +9,10 @@
 
 # CURRENT TASKS:
 - [x] apply layouts to all sub pages in education
+- [ ] **MONITOR WORKFLOW COMPLIANCE**: Ensure all future tasks follow workflow.md guidelines
+  - **Impact**: Consistent development process, better model selection, improved documentation
+  - **Model**: GPT-4 (requires analysis and process implementation)
+  - **Requirements**: Use scripts for task initiation, follow commit format, track model performance
 
 # CRITICAL SITE-WIDE ISSUES DISCOVERED:
 

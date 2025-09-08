@@ -1,5 +1,7 @@
 ---
+layout: article
 title: "Meta's Mass Layoff Masterpiece: 11,000 Dreams Terminated for Shareholder Delight"
+permalink: /articles/meta-layoff-masterpiece/
 date: 2025-09-06
 author: "Editorial Team"
 tags: ["layoffs", "meta", "facebook", "tech-industry", "workforce-optimization"]
