@@ -1,6 +1,9 @@
 # BACKLOG
 
-**IMPORTANT:** Before working on any tasks, read the instructions in `_docs/instructions.md` `_docs/workflow.md`
+# TASKS
+- [x] **File Inventory & Analysis**: Create comprehensive list of all .md files, analyze current styling/layout patterns, document existing CSS classes and layout structures
+- [x] **CSS Audit & Optimization**: Review all CSS files for unused styles, conflicts, and optimization opportunities, consolidate duplicate styles
+- [ ] **Layout Consistency Check**: Verify all pages have consistent margins, padding, and layout structure, standardize spacing patternsPORTANT:** Before working on any tasks, read the instructions in `_docs/instructions.md` `_docs/workflow.md`
 **IMPORTANT:** NEVER CHANGE THE ABOVE LINES. ONLY UPDATE CONTENTS BELOW!
 
 **MODEL SELECTION:** Always assess task complexity and select appropriate Copilot model per `_docs/workflow.md` guidelines:
