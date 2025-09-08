@@ -1,8 +1,13 @@
 ---
-layout: default
+layout: article
 title: Education - Academy of Systematic Influence
 description: Educational programs, curricula, and training materials for mastering modern influence systems
 permalink: /education/
+author: "Institute Academic Council"
+date: "2025-01-01"
+tags: ["education", "curriculum", "training", "influence"]
+difficulty: "All Levels"
+duration: "Comprehensive Program"
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/index-pages.css' | relative_url }}">

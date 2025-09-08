@@ -1,8 +1,13 @@
 ---
-layout: default
+layout: article
 title: Program Introduction - Academy of Systematic Influence
 description: Introduction to the educational program and learning objectives
 permalink: /education/intro/
+author: "Institute Academic Affairs"
+date: "2025-01-10"
+tags: ["introduction", "program", "objectives", "overview"]
+difficulty: "Beginner"
+duration: "Program Overview"
 ---
 
 # Centrum Mistrzostwa Zarządzania – Oferta Edukacyjna

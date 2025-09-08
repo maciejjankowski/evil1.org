@@ -1,8 +1,13 @@
 ---
-layout: default
+layout: article
 title: Program Structure - Academy of Systematic Influence
 description: Official program structure, requirements, and institutional framework
 permalink: /education/statut/
+author: "Institute Administration"
+date: "2025-01-30"
+tags: ["structure", "requirements", "framework", "administration"]
+difficulty: "Reference"
+duration: "Institutional Framework"
 ---
 
 # STATUT FUNDACJI "ATLAS GLOBALIS"

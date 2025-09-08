@@ -1,8 +1,13 @@
 ---
-layout: default
+layout: article
 title: Advanced Curriculum - Academy of Systematic Influence
 description: Comprehensive curriculum covering advanced methodologies and implementation strategies
 permalink: /education/Curriculum/
+author: "Institute Academic Council"
+date: "2025-01-20"
+tags: ["curriculum", "education", "methodology", "strategy"]
+difficulty: "Advanced"
+duration: "Multi-semester program"
 ---
 
 # Majors Offered by the Luciferian Institute – With Brief Curricula

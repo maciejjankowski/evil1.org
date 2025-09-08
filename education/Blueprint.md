@@ -1,7 +1,13 @@
 ---
-layout: default
+layout: article
 title: Strategic Blueprint
+description: Comprehensive blueprint for establishing a subversive educational institution with maximum profit and influence
 permalink: /education/Blueprint/
+author: "Institute Strategic Planning Team"
+date: "2025-01-15"
+tags: ["strategy", "blueprint", "education", "influence"]
+difficulty: "Advanced"
+duration: "Comprehensive Plan"
 ---
 
 # The Luciferian Institute: Blueprint for a Diabolically Profitable Subversive Academy

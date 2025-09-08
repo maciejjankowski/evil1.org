@@ -1,11 +1,16 @@
 ---
-layout: default
+layout: article
 title: Expert Speakers - Academy of Systematic Influence
 description: Industry experts and thought leaders sharing practical insights and experience
 permalink: /education/Guestspeakers/
+author: "Institute Speaker Relations"
+date: "2025-02-01"
+tags: ["speakers", "experts", "industry", "insights"]
+difficulty: "All Levels"
+duration: "Guest Lectures"
 ---
 
-## 1. **Elon Musk**
+## Featured Guest Speakers and Industry Experts
 - **Rationale:** Disruptor of industries (from space travel to AI), iconoclast, public manipulator (especially via social media), and an unrepentant promoter of transhumanist and global transformation narratives. He profits from chaos, controls platforms, and frames himself as both rebel and oracle.
 
 ## 2. **Peter Thiel**

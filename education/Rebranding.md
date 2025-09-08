@@ -1,8 +1,13 @@
 ---
-layout: default
+layout: article
 title: Strategic Rebranding - Academy of Systematic Influence
 description: Modern approaches to organizational messaging and narrative management
 permalink: /education/Rebranding/
+author: "Institute Marketing Division"
+date: "2025-02-05"
+tags: ["rebranding", "messaging", "narrative", "strategy"]
+difficulty: "Intermediate"
+duration: "Strategic Planning"
 ---
 
 # Strategic Rebranding: The Innocent Facade
