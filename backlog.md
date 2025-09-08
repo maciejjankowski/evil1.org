@@ -20,6 +20,7 @@ permalink: "/backlog/"
 - GPT-5 mini for balanced medium-complexity tasks
 
 # CURRENT TASKS:
+- [ ] move backlog, instructions and such into a separate folder, add a rule to never treat those files as jekyll site contents
 - [x] apply layouts to all sub pages in education
 - [x] **MONITOR WORKFLOW COMPLIANCE**: Ensure all future tasks follow workflow.md guidelines
   - **Impact**: Consistent development process, better model selection, improved documentation
@@ -69,7 +70,10 @@ permalink: "/backlog/"
   - **Impact**: Better content presentation, improved user experience, enhanced semantic structure
   - **Model**: GPT-5 mini (layout improvements and standardization)
   - **Status**: ✅ COMPLETED - Enhanced article.html layout, updated organization.html and profile.html layouts to work with standardized front matter
-- [ ] **ADD AUTHOR/DATE METADATA**: Enhance content attribution and organization
+- [x] **ADD AUTHOR/DATE METADATA**: Enhance content attribution and organization
+  - **Impact**: Better content attribution, improved organization, enhanced credibility
+  - **Model**: GPT-5 mini (systematic metadata addition)
+  - **Status**: ✅ COMPLETED - Added author/date metadata to 7 key content files with appropriate attribution standards
 
 ## 🎨 LOW PRIORITY ENHANCEMENTS:
 - [ ] **CONTENT TAGGING**: Add tags for better content organization
