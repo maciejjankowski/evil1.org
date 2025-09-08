@@ -1,0 +1,32 @@
+---
+layout: default
+title: Login - evil1.org
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ page.title }}</title>
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <style>
+        /* ...existing code from login.html... */
+    </style>
+</head>
+<body>
+    {% include header.html %}
+    <div class="container">
+        <h2>Sign In to Sell Your Soul</h2>
+        <form>
+            <label for="username">Username or Email</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            <div class="actions">
+                <button type="submit">Sign In</button>
+            </div>
+        </form>
+        <a href="register.html" class="evil-link">Don't have a soul yet? Register here.</a>
+    </div>
+    {% include footer.html %}
+</body>
+</html>

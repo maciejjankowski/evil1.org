@@ -1,0 +1,65 @@
+/* Hellish (devilish) theme extracted from index_red.html */
+:root{
+    --bg:#0b0b0b;
+    --panel:#120909;
+    --accent:#ff1a1a;
+    --accent-2:#ff7a00;
+    --gold:#ffd957;
+    --muted:#bfbfbf;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    background: radial-gradient(circle at 10% 10%, #180000 0%, var(--bg) 40%);
+    color:var(--muted);
+    font-size:15px;
+    line-height:1.4;
+}
+@keyframes flicker{0%,100%{text-shadow:0 0 6px var(--accent),0 0 12px rgba(255,26,26,0.6)}50%{text-shadow:0 0 12px var(--accent),0 0 22px rgba(255,26,26,0.8)}}
+#header{background:linear-gradient(180deg,#2b0000,#0f0000);padding:12px 0;border-bottom:3px solid rgba(255,26,26,0.9);box-shadow:0 8px 30px rgba(255,0,0,0.12)}
+#header-inner{width:900px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+#logo{display:flex;align-items:center;gap:12px}
+#logo svg{height:56px}
+#logo-text{font-family:Impact, 'Arial Black', sans-serif;color:var(--accent);font-size:36px;letter-spacing:-1px;text-shadow:0 2px 8px rgba(255,0,0,0.6),0 0 20px rgba(255,50,0,0.12)}
+#tagline{color:var(--gold);font-size:12px;font-style:italic;opacity:0.95}
+#nav{display:flex;gap:8px}
+#nav a{color:var(--gold);text-decoration:none;padding:7px 14px;background:linear-gradient(180deg,#200000,#120000);border:1px solid rgba(255,26,26,0.7);font-weight:700;border-radius:4px}
+#nav a:hover{background:#2d0000;color:#fff;box-shadow:0 0 14px rgba(255,26,26,0.5);transform:translateY(-1px);animation:flicker 1.2s infinite}
+#container{width:900px;margin:18px auto;background:linear-gradient(180deg,var(--panel),#0b0b0b);border:1px solid rgba(255,26,26,0.12);box-shadow:0 12px 40px rgba(0,0,0,0.6)}
+.clear{clear:both}
+.section{border:1px solid rgba(255,26,26,0.08);margin:14px;background:linear-gradient(180deg,#0f0f0f,#0b0b0b)}
+.section-header{background:linear-gradient(180deg,#2a0000,#180000);color:var(--gold);padding:10px 12px;font-weight:800;font-size:13px;border-bottom:2px solid rgba(255,26,26,0.9);text-transform:uppercase;letter-spacing:1px}
+.section-content{padding:12px}
+#homepage-container{padding:14px;display:flex;gap:18px}
+#left-column{flex:1;min-width:560px}
+#right-column{width:300px}
+#stories-bar{background:linear-gradient(180deg,#200000,#120000);border:1px solid rgba(255,26,26,0.14);padding:12px;margin-bottom:12px;border-radius:6px}
+.stories-title{color:var(--accent);font-size:13px;margin-bottom:8px;text-transform:uppercase}
+.story{display:inline-block;width:78px;text-align:center;margin-right:12px}
+.story-avatar{width:64px;height:64px;border-radius:50%;border:3px solid var(--accent);background:linear-gradient(180deg,#3a0000,#120000);margin:0 auto 6px;box-shadow:0 0 18px rgba(255,20,20,0.25)}
+.story:hover .story-avatar{box-shadow:0 0 28px rgba(255,40,40,0.6);transform:scale(1.03)}
+.story-name{font-size:12px;color:var(--gold)}
+.post{border:1px solid rgba(255,26,26,0.12);margin-bottom:16px;background:linear-gradient(180deg,#0f0f0f,#070707);border-radius:6px;overflow:hidden}
+.post-header{padding:10px 12px;background:linear-gradient(180deg,#1b0000,#0d0000);border-bottom:1px solid rgba(255,26,26,0.12)}
+.post-author{font-weight:800;color:var(--accent);font-size:15px;text-shadow:0 1px 2px rgba(0,0,0,0.7)}
+.post-time{color:#b3b3b3;font-size:12px;margin-left:10px}
+.post-content{padding:14px;color:var(--muted);font-size:15px}
+.post-actions{padding:10px 12px;background:#0a0000;border-top:1px solid rgba(255,26,26,0.06)}
+.post-actions a{color:var(--gold);text-decoration:none;margin-right:18px;font-weight:700}
+.post:hover{box-shadow:0 8px 30px rgba(255,0,0,0.08);transform:translateY(-2px)}
+.sponsored{border:1px solid rgba(255,200,0,0.12);position:relative;background:linear-gradient(180deg,#2a0000,#0b0000)}
+.sponsored::before{content:"💰 DEVIL'S BARGAIN 💰";position:absolute;top:-14px;right:-70px;background:var(--accent);color:var(--gold);padding:6px 80px;transform:rotate(42deg);font-weight:900;letter-spacing:1px;box-shadow:0 6px 18px rgba(255,0,0,0.25)}
+.sponsored-label{color:var(--gold);font-weight:900}
+.person-suggestion{padding:12px 0;border-bottom:1px dashed rgba(255,26,26,0.06)}
+.person-avatar{width:48px;height:48px;border-radius:6px;background:linear-gradient(180deg,#2b0000,#100000);float:left;margin-right:12px;border:2px solid rgba(255,26,26,0.12)}
+.person-name{font-weight:800;color:var(--accent);display:block}
+.person-title{font-size:12px;color:#bdbdbd}
+.add-button{float:right;background:#2a0000;color:var(--gold);border:1px solid rgba(255,26,26,0.18);padding:6px 10px;border-radius:4px;font-weight:800}
+#profile-header{background:linear-gradient(180deg,#230000,#0b0000);padding:18px;border-bottom:3px solid rgba(255,26,26,0.85)}
+#profile-photo{width:120px;height:120px;background:linear-gradient(180deg,#3a0000,#120000);border:3px solid var(--accent);box-shadow:0 6px 30px rgba(255,0,0,0.18)}
+#profile-info h1{color:var(--gold);font-size:22px}
+.article{border:1px solid rgba(255,26,26,0.08);background:linear-gradient(180deg,#0f0f0f,#070707);border-radius:6px}
+.tabs{border-bottom:3px solid rgba(255,26,26,0.9);padding:0 12px;background:#120000}
+.tab{display:inline-block;padding:10px 16px;background:transparent;color:var(--gold);font-weight:800;margin-right:6px}
+.tab.active{color:var(--accent-2);border-bottom:3px solid var(--accent)}
+.flames{height:28px;background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 28"><path d="M0,28 Q6,12 12,28 T24,28 Q30,6 36,28 T48,28 Q54,10 60,28 T72,28 Q78,4 84,28 T96,28 Q100,16 100,16" fill="none" stroke="%23ff1a1a" stroke-width="2" opacity="0.65"/></svg>') repeat-x;margin-top:-2px}

@@ -1,0 +1,34 @@
+---
+layout: default
+title: Register Your Soul - evil1.org
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ page.title }}</title>
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <style>
+        /* ...existing code from register.html... */
+    </style>
+</head>
+<body>
+    {% include header.html %}
+    <div class="container">
+        <h2>Register Your Soul</h2>
+        <form>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            <div class="actions">
+                <button type="submit">Register</button>
+            </div>
+        </form>
+        <a href="login.html" class="evil-link">Already sold your soul? Sign in here.</a>
+    </div>
+    {% include footer.html %}
+</body>
+</html>

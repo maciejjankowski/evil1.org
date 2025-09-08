@@ -1,0 +1,68 @@
+- name: Adolf Hitler
+  headline: "Führer of Nazi Germany, Architect of WWII and the Holocaust"
+  location: "Germany"
+  experience:
+    - title: "Chancellor of Germany"
+      company: "Nazi Party"
+      dates: "1933-1945"
+      description: "Led Germany into WWII, responsible for genocide and global conflict."
+    - title: "Author"
+      company: "Mein Kampf"
+      dates: "1925"
+      description: "Outlined ideology of hate and expansionism."
+  skills:
+    - name: "Propaganda"
+      level: 98
+    - name: "Dictatorship"
+      level: 99
+    - name: "Mass Manipulation"
+      level: 97
+- name: Joseph Stalin
+  headline: "General Secretary of the Communist Party, Soviet Dictator"
+  location: "USSR"
+  experience:
+    - title: "General Secretary"
+      company: "Communist Party"
+      dates: "1922-1952"
+      description: "Oversaw purges, forced collectivization, and mass repression."
+    - title: "Premier of the Soviet Union"
+      company: "USSR"
+      dates: "1941-1953"
+      description: "Led USSR through WWII, responsible for millions of deaths."
+  skills:
+    - name: "Political Repression"
+      level: 99
+    - name: "Cult of Personality"
+      level: 97
+    - name: "Secret Police"
+      level: 98
+- name: Pol Pot
+  headline: "Leader of Khmer Rouge, Orchestrator of Cambodian Genocide"
+  location: "Cambodia"
+  experience:
+    - title: "Prime Minister"
+      company: "Democratic Kampuchea"
+      dates: "1976-1979"
+      description: "Directed genocide, forced labor, and mass executions."
+  skills:
+    - name: "Genocide"
+      level: 99
+    - name: "Agrarian Social Engineering"
+      level: 95
+    - name: "Terror"
+      level: 97
+- name: Ivan the Terrible
+  headline: "Tsar of Russia, Instigator of Oprichnina"
+  location: "Russia"
+  experience:
+    - title: "Tsar of Russia"
+      company: "Russian Empire"
+      dates: "1547-1584"
+      description: "Created secret police, ruled with violence and fear."
+  skills:
+    - name: "Cruelty"
+      level: 98
+    - name: "Autocracy"
+      level: 96
+    - name: "Expansionism"
+      level: 94

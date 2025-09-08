@@ -42,5 +42,3 @@ Strategia radzenia sobie ze zdradą, podejrzeniem podwójnej lojalności lub św
 **Strategia ta zakłada, że największym atutem lidera najwyższego poziomu jest nie eliminacja „zdrajców”, ale takie zorganizowanie systemu**, by ich wpływ był ograniczony do minimum, a ich obecność… użyteczna jako nieustanny test odporności całej organizacji. Autentyczne bezpieczeństwo zapewnia nie eliminacja zagrożenia, lecz rozbrojenie go przez wielowarstwową kontrolę i ciągłą, nieliniową weryfikację.
 
 Każdy „nieusuwalny zdrajca” staje się źródłem siły systemu: jak w dobrze kalibrowanym zespole wyścigowym – czasem potrzebujesz oporu, by zyskać optymalną trakcję na zakrętach największego ryzyka.
-
-Źródła

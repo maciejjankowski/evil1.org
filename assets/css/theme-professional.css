@@ -1,0 +1,316 @@
+/* Professional (innocuous) theme extracted from index_blue.html */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 11px;
+    background: #E8E8E8;
+    color: #333;
+}
+#header {
+    background: #003366;
+    border-bottom: 3px solid #6699CC;
+    padding: 8px 0;
+}
+#header-inner {
+    width: 760px;
+    margin: 0 auto;
+}
+#logo {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    float: left;
+    padding: 5px 0;
+}
+#nav {
+    float: right;
+    margin-top: 8px;
+}
+#nav a {
+    color: white;
+    text-decoration: none;
+    padding: 4px 8px;
+    margin-left: 5px;
+    background: #004080;
+    border: 1px solid #6699CC;
+}
+#nav a:hover {
+    background: #0066CC;
+}
+#container {
+    width: 760px;
+    margin: 10px auto;
+    background: white;
+    border: 1px solid #CCC;
+}
+.clear {
+    clear: both;
+}
+.section {
+    border: 1px solid #D0D0D0;
+    margin: 10px;
+    background: #F8F8F8;
+}
+.section-header {
+    background: linear-gradient(#6699CC, #4477AA);
+    color: white;
+    padding: 5px 8px;
+    font-weight: bold;
+    font-size: 12px;
+    border-bottom: 1px solid #003366;
+}
+.section-content {
+    padding: 10px;
+    background: white;
+}
+#homepage-container {
+    padding: 10px;
+}
+#left-column {
+    float: left;
+    width: 500px;
+}
+#right-column {
+    float: right;
+    width: 230px;
+}
+#stories-bar {
+    background: #F0F0F0;
+    border: 1px solid #CCC;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+.story {
+    display: inline-block;
+    width: 60px;
+    text-align: center;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.story-avatar {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #6699CC;
+    border-radius: 25px;
+    background: #DDD;
+    margin: 0 auto 3px;
+}
+.story-name {
+    font-size: 9px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.post {
+    border: 1px solid #D0D0D0;
+    margin-bottom: 10px;
+    background: white;
+}
+.post-header {
+    background: #F5F5F5;
+    padding: 8px;
+    border-bottom: 1px solid #E0E0E0;
+}
+.post-author {
+    font-weight: bold;
+    color: #003366;
+}
+.post-time {
+    color: #666;
+    font-size: 10px;
+}
+.post-content {
+    padding: 10px;
+    line-height: 1.4;
+}
+.post-actions {
+    background: #F8F8F8;
+    padding: 5px 8px;
+    border-top: 1px solid #E0E0E0;
+}
+.post-actions a {
+    color: #0066CC;
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 10px;
+}
+.post-actions a:hover {
+    text-decoration: underline;
+}
+.sponsored {
+    background: #FFFFCC;
+    border: 1px solid #FFCC00;
+}
+.sponsored-label {
+    color: #996600;
+    font-size: 9px;
+    font-weight: bold;
+}
+.person-suggestion {
+    border-bottom: 1px dotted #CCC;
+    padding: 8px 0;
+}
+.person-suggestion:last-child {
+    border-bottom: none;
+}
+.person-avatar {
+    width: 40px;
+    height: 40px;
+    background: #DDD;
+    float: left;
+    margin-right: 8px;
+    border: 1px solid #999;
+}
+.person-info {
+    float: left;
+    width: 130px;
+}
+.person-name {
+    font-weight: bold;
+    color: #003366;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 2px;
+}
+.person-title {
+    font-size: 10px;
+    color: #666;
+}
+.add-button {
+    float: right;
+    background: #6699CC;
+    color: white;
+    border: 1px solid #003366;
+    padding: 2px 6px;
+    font-size: 10px;
+    cursor: pointer;
+    margin-top: 8px;
+}
+#profile-header {
+    background: linear-gradient(#F0F0F0, #E0E0E0);
+    padding: 15px;
+    border-bottom: 2px solid #CCC;
+}
+#profile-photo {
+    width: 100px;
+    height: 100px;
+    background: #CCC;
+    border: 2px solid #999;
+    float: left;
+    margin-right: 15px;
+}
+#profile-info h1 {
+    color: #003366;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+#profile-info .headline {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 3px;
+}
+#profile-info .location {
+    font-size: 11px;
+    color: #999;
+}
+.profile-section {
+    margin: 15px;
+    border: 1px solid #D0D0D0;
+}
+.work-item, .skill-item {
+    padding: 10px;
+    border-bottom: 1px dotted #DDD;
+}
+.work-item:last-child, .skill-item:last-child {
+    border-bottom: none;
+}
+.work-title {
+    font-weight: bold;
+    color: #003366;
+}
+.work-company {
+    color: #666;
+    font-style: italic;
+}
+.work-dates {
+    color: #999;
+    font-size: 10px;
+}
+.skill-bar {
+    background: #E0E0E0;
+    height: 15px;
+    margin-top: 3px;
+    position: relative;
+}
+.skill-fill {
+    background: #6699CC;
+    height: 100%;
+    position: absolute;
+}
+#business-header {
+    background: #003366;
+    color: white;
+    padding: 20px;
+}
+#business-header h1 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+#business-header .tagline {
+    font-size: 12px;
+    color: #CCC;
+}
+.article {
+    border: 1px solid #D0D0D0;
+    margin: 15px;
+    background: white;
+}
+.article-header {
+    background: #F5F5F5;
+    padding: 10px;
+    border-bottom: 1px solid #DDD;
+}
+.article-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #003366;
+    text-decoration: none;
+}
+.article-meta {
+    font-size: 10px;
+    color: #666;
+    margin-top: 5px;
+}
+.article-content {
+    padding: 12px;
+    line-height: 1.5;
+}
+.article-footer {
+    background: #F8F8F8;
+    padding: 8px;
+    border-top: 1px solid #E0E0E0;
+    font-size: 10px;
+}
+.tabs {
+    border-bottom: 2px solid #CCC;
+    background: #F0F0F0;
+    padding: 0 10px;
+}
+.tab {
+    display: inline-block;
+    padding: 8px 15px;
+    background: #E0E0E0;
+    border: 1px solid #CCC;
+    border-bottom: none;
+    margin-right: 3px;
+    cursor: pointer;
+    position: relative;
+    top: 2px;
+}
+.tab.active {
+    background: white;
+    border-bottom: 2px solid white;
+}
