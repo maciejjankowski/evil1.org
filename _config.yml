@@ -82,6 +82,8 @@ navigation:
     url: "/organizations/"
   - title: "Profiles" 
     url: "/profiles/"
+  - title: "Tags"
+    url: "/tags/"
   - title: "Institute"
     url: "/Institute/"
   - title: "Hall of Fame"

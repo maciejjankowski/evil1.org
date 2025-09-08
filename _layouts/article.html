@@ -48,7 +48,7 @@ layout: default
             <h4>Related Topics:</h4>
             <div class="tags-list">
                 {% for tag in page.tags %}
-                    <a href="/tags/{{ tag | slugify }}/" class="tag-link">{{ tag }}</a>
+                    <a href="/tags/#{{ tag | slugify }}" class="tag-link">{{ tag }}</a>
                 {% endfor %}
             </div>
         </div>

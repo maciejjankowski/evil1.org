@@ -7,6 +7,16 @@ layout: default
         <h1>{{ page.organization.name }}</h1>
         <div class="organization-description">{{ page.organization.description }}</div>
         <div class="organization-type">Type: {{ page.organization.type }}</div>
+        {% if page.tags %}
+            <div class="organization-tags">
+                <h4>Tags:</h4>
+                <div class="tags-list">
+                    {% for tag in page.tags %}
+                        <a href="/tags/#{{ tag | slugify }}" class="tag-link">{{ tag }}</a>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
     </div>
 
     <div class="organization-content">

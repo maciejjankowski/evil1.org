@@ -2,6 +2,7 @@
 layout: profile
 title: "Elon Musk Profile"
 permalink: "/profiles/elon-musk/"
+tags: ["elon-musk", "tesla", "spacex", "tech-billionaire", "labor-exploitation"]
 profile:
   name: Elon Musk
   headline: "CEO of Tesla/SpaceX, Master of Hype and Exploitation"

@@ -24,3 +24,4 @@
 - [ ] Add reading time estimates
 - [ ] Add social sharing metadata
 - [ ] Implement content categories
+- [ ] read the site, expand on the content, work on the next topics on your own, how should we expose the corrupt capitalists and their greed?

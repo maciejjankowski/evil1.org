@@ -1,12 +1,4 @@
----
-layout: default
-title: "Evil1.org - Project Documentation"
-author: "Development Team"
-date: "2025-09-08"description: "Project overview and setup instructions for evil1.org"description: "Main project documentation and workflow reference"
-permalink: /README/
----
-
-# evil1.org
+# !IMPORTANT: DONT PROCESS FOR JEKYLL
 
 ## Quick Workflow Reference
 
