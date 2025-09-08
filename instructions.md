@@ -140,15 +140,6 @@ bundle exec jekyll serve --detach
 curl -s -o /dev/null -w "%{http_code}" "http://localhost:4000/test-page/"
 pkill -f jekyll
 ```
-
-## AI CODING WITH GITHUB CLI
-
-```bash
-gh pr create --title "[AI] Task"
-gh pr review --comment --body "AI review: ✅"
-gh pr ready
-gh pr checks
-```
 ### **RELATED FILES**
 - **`improvements.md`**: Detailed debugging techniques, automation scripts, and advanced best practices
 - **`workflow.md`**: Comprehensive workflow documentation with model selection protocols
