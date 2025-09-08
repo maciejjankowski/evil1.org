@@ -21,9 +21,9 @@
 - [x] Add content tags
 - [x] Add reading time estimates
 - [x] Add social sharing metadata
+- [x] Implement content categories
 
 ## 🔄 TODO
-- [ ] Add social sharing metadata
 - [ ] Implement content categories
 - [ ] read the site, expand on the content, work on the next topics on your own: how should we expose the corrupt capitalists and their greed? create plan for content creation
 - [ ] follow the plan for content creation, process extra content files if needed

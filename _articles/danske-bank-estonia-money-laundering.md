@@ -4,6 +4,7 @@ title: "The $200 Billion Money Laundering Olympics: Danske Bank's Estonian Gold 
 permalink: /articles/danske-bank-estonia-money-laundering/
 date: 2025-09-05
 author: "Editorial Team"
+category: "financial-crime"
 tags: ["money-laundering", "danske-bank", "estonia", "financial-crime", "banking"]
 summary: "How Danske Bank's Estonian branch became Europe's premier money laundering facility, processing $200 billion in suspicious transactions while turning willful blindness into an art form."
 sources:

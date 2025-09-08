@@ -1,20 +1,12 @@
 ---
 layout: article
-title: "JPMorgan's Epstein Connection: Banking on Evil"
+title: "JPMorgan: Banking on Epstein, Not Ethics"
 permalink: /articles/jpmorgan-epstein-banking-evil/
 date: 2025-09-08
 author: "Editorial Team"
-tags: ["banking", "financial-crimes", "jpmorgan", "epstein"]
-description: "How America's largest bank facilitated Jeffrey Epstein's crimes for over a decade, proving that shareholder value trumps human decency every time."
-summary: "How America's largest bank facilitated Jeffrey Epstein's crimes for over a decade, proving that shareholder value trumps human decency every time."
-sources:
-  - title: "Jeffrey Epstein and the Enablers at JPMorgan Chase"
-    url: "https://www.nytimes.com/2025/09/08/magazine/jeffrey-epstein-jp-morgan.html"
-    date: "September 8, 2025"
-  - title: "JPMorgan Chase Agrees to Pay $290 Million to Settle Epstein Lawsuit"
-    url: "https://www.reuters.com/legal/jpmorgan-agrees-pay-290-million-settle-epstein-lawsuit-2023-06-12/"
-    date: "June 12, 2023"
----
+category: "financial-crime"
+tags: ["jpmorgan", "epstein", "banking", "financial-crime", "corruption"]
+summary: "JPMorgan spent years enabling Jeffrey Epstein, processing over $1 billion for the notorious predator. Turns out, profit beats morals every time."
 
 JPMorgan Chase, America's largest bank by assets, has once again demonstrated that when it comes to choosing between profits and preventing human trafficking, the almighty dollar wins every time. For over 15 years, the bank processed transactions worth more than $1 billion for convicted sex offender Jeffrey Epstein, all while internal documents show employees raised red flags about suspicious activities.
 
