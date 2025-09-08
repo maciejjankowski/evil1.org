@@ -19,6 +19,33 @@ title: evil1.org - Where Souls Are Sold
     <div id="container">
         <div id="homepage-container">
             <!-- ...existing code from index_red.html... -->
+            <section id="wall-articles">
+                <h2>Wall of Sarcastic Stories</h2>
+                {% if site.data.wall and site.data.wall.size > 0 %}
+                  <ul>
+                    {% for article in site.data.wall %}
+                      <li>
+                        <strong>{{ article.title }}</strong> - <a href="{{ article.source }}" target="_blank">Source</a><br>
+                        <span>{{ article.summary }}</span> <em>{{ article.date }}</em>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                {% else %}
+                  <p><em>No articles yet. Editorial staff, please add to _data/wall.yml.</em></p>
+                {% endif %}
+            </section>
+            <section id="fresh-ideas">
+                <h2>Fresh Devilish Ideas</h2>
+                {% if site.data.ideas and site.data.ideas.size > 0 %}
+                  <ul>
+                    {% for idea in site.data.ideas %}
+                      <li>{{ idea.idea }}</li>
+                    {% endfor %}
+                  </ul>
+                {% else %}
+                  <p><em>No ideas yet. Editorial staff, please add to _data/ideas.yml.</em></p>
+                {% endif %}
+            </section>
         </div>
     </div>
 </body>

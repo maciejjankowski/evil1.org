@@ -13,6 +13,9 @@ title: Profile - evil1.org
 <body>
     {% include header.html %}
     <div id="container" style="margin-top: 20px;">
+        {% if page.profile.name == nil or page.profile.headline == nil %}
+          <div class="missing-content" style="color: red; font-weight: bold; text-align: center;">[Content missing: Please add profile details]</div>
+        {% endif %}
         <div id="profile-header">
             <div id="profile-photo"></div>
             <div id="profile-info">
