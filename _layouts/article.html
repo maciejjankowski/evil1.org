@@ -17,7 +17,9 @@ layout: default
             {% endif %}
         </div>
         {% if page.summary %}
-            <div class="article-summary">{{ page.summary }}</div>
+            <div class="article-summary">
+                <p>{{ page.summary }}</p>
+            </div>
         {% endif %}
     </header>
 
@@ -27,61 +29,28 @@ layout: default
 
     {% if page.sources %}
         <footer class="article-footer">
-            <h3>Sources</h3>
+            <h3>Sources & References</h3>
             <ul class="sources-list">
                 {% for source in page.sources %}
                     <li>
                         <a href="{{ source.url }}" target="_blank" rel="noopener noreferrer">
                             {{ source.title }}
                         </a>
-                        {% if source.date %} - {{ source.date }}{% endif %}
+                        {% if source.date %} <span class="source-date">- {{ source.date }}</span>{% endif %}
                     </li>
                 {% endfor %}
             </ul>
         </footer>
     {% endif %}
-</article>
 
----
-layout: default
----
-
-<article class="article-content">
-    <header class="article-header">
-        <h1 class="article-title">{{ page.title }}</h1>
-        <div class="article-meta">
-            <span class="article-author">By {{ page.author | default: "Editorial Team" }}</span>
-            <span class="article-date">{{ page.date | date: "%B %d, %Y" }}</span>
-            {% if page.tags %}
-                <div class="article-tags">
-                    {% for tag in page.tags %}
-                        <span class="tag">{{ tag }}</span>
-                    {% endfor %}
-                </div>
-            {% endif %}
-        </div>
-        {% if page.summary %}
-            <div class="article-summary">{{ page.summary }}</div>
-        {% endif %}
-    </header>
-
-    <div class="article-body">
-        {{ content }}
-    </div>
-
-    {% if page.sources %}
-        <footer class="article-footer">
-            <h3>Sources</h3>
-            <ul class="sources-list">
-                {% for source in page.sources %}
-                    <li>
-                        <a href="{{ source.url }}" target="_blank" rel="noopener noreferrer">
-                            {{ source.title }}
-                        </a>
-                        {% if source.date %} - {{ source.date }}{% endif %}
-                    </li>
+    {% if page.tags %}
+        <div class="article-tags-footer">
+            <h4>Related Topics:</h4>
+            <div class="tags-list">
+                {% for tag in page.tags %}
+                    <a href="/tags/{{ tag | slugify }}/" class="tag-link">{{ tag }}</a>
                 {% endfor %}
-            </ul>
-        </footer>
+            </div>
+        </div>
     {% endif %}
 </article>

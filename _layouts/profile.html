@@ -1,50 +1,26 @@
 ---
 layout: default
-title: Profile - evil1.org
 ---
 
 <div id="container" style="margin-top: 20px;">
-    {% if page.profile.name == nil or page.profile.headline == nil %}
-        <div class="missing-content" style="color: red; font-weight: bold; text-align: center;">[Content missing: Please add profile details]</div>
-    {% endif %}
     <div id="profile-header">
-        <div id="profile-photo"></div>
-        <div id="profile-info">
-            <h1>{{ page.profile.name }}</h1>
-            <div class="headline">{{ page.profile.headline }}</div>
-            <div class="location">{{ page.profile.location }}</div>
+        <h1>{{ page.profile.name }}</h1>
+        <div class="profile-type">Type: {{ page.profile.type }}</div>
+    </div>
+
+    <div class="profile-content">
+        {{ content }}
+    </div>
+
+    {% if page.profile.name %}
+        <div class="profile-meta">
+            <h3>Profile Information</h3>
+            <dl>
+                <dt>Name:</dt>
+                <dd>{{ page.profile.name }}</dd>
+                <dt>Type:</dt>
+                <dd>{{ page.profile.type }}</dd>
+            </dl>
         </div>
-        <div class="clear"></div>
-    </div>
-    <div class="tabs">
-        <div class="tab active">Profile</div>
-        <div class="tab">Activity</div>
-        <div class="tab">Connections</div>
-    </div>
-    <div class="profile-section">
-        <div class="section-header">Work Experience</div>
-        <div class="section-content">
-            {% for job in page.profile.experience %}
-            <div class="work-item">
-                <div class="work-title">{{ job.title }}</div>
-                <div class="work-company">{{ job.company }}</div>
-                <div class="work-dates">{{ job.dates }}</div>
-                <div style="margin-top: 5px;">{{ job.description }}</div>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-    <div class="profile-section">
-        <div class="section-header">Skills & Expertise</div>
-        <div class="section-content">
-            {% for skill in page.profile.skills %}
-            <div class="skill-item">
-                <div>{{ skill.name }}</div>
-                <div class="skill-bar">
-                    <div class="skill-fill" data-skill-level="{{ skill.level }}"></div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
+    {% endif %}
 </div>
