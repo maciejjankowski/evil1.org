@@ -141,7 +141,292 @@ curl -s -o /dev/null -w "%{http_code}" "http://localhost:4000/test-page/"
 pkill -f jekyll
 ```
 
-## DOCUMENTATION CROSS-REFERENCES
+## GITHUB CLI INTEGRATION FOR AI-ASSISTED CODING
+
+### GitHub CLI Setup & Authentication
+```bash
+# Install GitHub CLI (if not already installed)
+brew install gh
+
+# Authenticate with GitHub
+gh auth login
+
+# Verify authentication
+gh auth status
+```
+
+### AI-Assisted Development Workflow with GitHub CLI
+
+#### 1. Issue Management for AI Tasks
+```bash
+# Create issue for AI-assisted task
+gh issue create --title "[AI] Task description" --body "AI-assisted development task details"
+
+# List open issues
+gh issue list
+
+# View specific issue
+gh issue view ISSUE_NUMBER
+
+# Comment on issue (AI progress updates)
+gh issue comment ISSUE_NUMBER --body "AI analysis: [findings]"
+
+# Close issue when task completed
+gh issue close ISSUE_NUMBER
+```
+
+#### 2. Branch Management for AI Work
+```bash
+# Create feature branch for AI task
+gh repo clone evil1.org
+cd evil1.org
+git checkout -b ai-task-description
+
+# Push branch to GitHub
+git push -u origin ai-task-description
+```
+
+#### 3. Pull Request Workflow for AI Contributions
+```bash
+# Create pull request for AI work
+gh pr create --title "[AI] Task completion" --body "AI-assisted implementation details"
+
+# List pull requests
+gh pr list
+
+# View pull request details
+gh pr view PR_NUMBER
+
+# Add reviewers to PR
+gh pr edit PR_NUMBER --add-reviewer username
+
+# Merge PR when approved
+gh pr merge PR_NUMBER --merge
+```
+
+#### 4. Code Review Integration
+```bash
+# Review PR as AI assistant
+gh pr review PR_NUMBER --approve --body "AI review: Code looks good"
+
+# Request changes if needed
+gh pr review PR_NUMBER --request-changes --body "AI suggestions: [specific feedback]"
+
+# View PR diff
+gh pr diff PR_NUMBER
+```
+
+#### 5. Repository Status & Health Checks
+```bash
+# Check repository status
+gh repo view
+
+# View recent activity
+gh repo log
+
+# Check for security alerts
+gh repo security-advisories
+
+# View repository statistics
+gh repo stats
+```
+
+#### 6. AI-Assisted Content Management
+```bash
+# Search for issues related to AI tasks
+gh issue list --search "AI" --state open
+
+# Create issue templates for AI work
+gh issue create --template ai-task.md
+
+# Label issues for AI categorization
+gh issue edit ISSUE_NUMBER --add-label "ai-assisted"
+```
+
+### AI-Specific GitHub CLI Workflows
+
+#### Automated Task Tracking
+```bash
+# Create standardized AI task issue
+gh issue create \
+  --title "[AI] $(date '+%Y-%m-%d') - Task Description" \
+  --body "## AI Task Details
+**Model Used:** [Model name]
+**Complexity:** [High/Medium/Low]
+**Estimated Time:** [Duration]
+
+## Requirements
+- [ ] Task analysis
+- [ ] Implementation
+- [ ] Testing
+- [ ] Documentation
+
+## AI Progress Notes
+[AI to update this section with progress]"
+```
+
+#### Model Performance Tracking Integration
+```bash
+# Update model performance issue
+gh issue comment MODEL_PERFORMANCE_ISSUE \
+  --body "## Model Performance Update
+**Task:** [Task name]
+**Model:** [Model used]
+**Time:** [Duration]
+**Success:** [Yes/No]
+**Notes:** [Performance observations]"
+```
+
+#### Automated Commit and PR Creation
+```bash
+# Commit with AI metadata
+git commit -m "[AI: MODEL_NAME] Task description
+
+- Model used: MODEL_NAME
+- Complexity: COMPLEXITY_LEVEL
+- Key changes: CHANGE_SUMMARY"
+
+# Create PR with AI context
+gh pr create \
+  --title "[AI: MODEL_NAME] Task completion" \
+  --body "## AI Implementation Summary
+**Model:** MODEL_NAME
+**Task:** TASK_DESCRIPTION
+**Changes:** KEY_CHANGES
+**Testing:** TESTING_PERFORMED
+
+## AI Quality Assurance
+- [x] Code review passed
+- [x] Tests executed
+- [x] Documentation updated"
+```
+
+### Integration with Existing Workflow
+
+#### Enhanced Task Initiation
+```bash
+# Use GitHub CLI for task initiation
+./scripts/start-task.sh "Fix navigation issues"
+
+# Create corresponding GitHub issue
+gh issue create --title "[AI] Fix navigation issues" --body "See task file for details"
+```
+
+#### Model Selection Documentation
+```bash
+# Document model selection in issue
+gh issue comment ISSUE_NUMBER \
+  --body "## Model Selection Rationale
+**Selected Model:** MODEL_NAME
+**Reasoning:** TASK_ANALYSIS
+**Expected Complexity:** COMPLEXITY_LEVEL
+**Alternative Models Considered:** ALTERNATIVES"
+```
+
+#### Quality Assurance Integration
+```bash
+# Run validation and update issue
+bundle exec jekyll build --verbose
+gh issue comment ISSUE_NUMBER --body "✅ Jekyll build successful"
+
+# Test links and report
+curl -I http://localhost:4000/test-page/
+gh issue comment ISSUE_NUMBER --body "✅ Link validation passed"
+```
+
+### Best Practices for AI-Assisted GitHub CLI Usage
+
+#### Issue Management
+- **Always create issues** for AI tasks to maintain visibility
+- **Use consistent labeling** (ai-assisted, model-name, complexity)
+- **Update issues regularly** with AI progress and findings
+- **Close issues promptly** when tasks are completed
+
+#### Pull Request Standards
+- **Include AI context** in PR descriptions (model used, task complexity)
+- **Request reviews** from appropriate team members
+- **Document testing** performed by AI assistant
+- **Reference related issues** in PR descriptions
+
+#### Commit Message Conventions
+- **Include model information** in commit messages
+- **Follow existing patterns** for consistency
+- **Reference issue numbers** when applicable
+- **Keep messages descriptive** but concise
+
+#### Repository Health
+- **Regular status checks** using `gh repo view`
+- **Monitor for security issues** with `gh repo security-advisories`
+- **Keep dependencies updated** using GitHub's dependency management
+- **Review repository statistics** for optimization opportunities
+
+### Troubleshooting GitHub CLI Issues
+
+#### Authentication Problems
+```bash
+# Re-authenticate if needed
+gh auth logout
+gh auth login
+
+# Check authentication status
+gh auth status
+```
+
+#### Permission Issues
+```bash
+# Verify repository access
+gh repo view evil1.org
+
+# Check user permissions
+gh repo collaborators
+```
+
+#### Network/Connectivity Issues
+```bash
+# Test GitHub connectivity
+gh api user
+
+# Check API rate limits
+gh api rate_limit
+```
+
+### Advanced GitHub CLI Features for AI Development
+
+#### Custom Aliases for Common Tasks
+```bash
+# Create aliases for frequent AI operations
+gh alias set ai-task 'issue create --title "[AI] $1" --body "AI task: $1"'
+gh alias set ai-review 'pr review --approve --body "AI review: Code approved"'
+gh alias set ai-status 'issue list --label ai-assisted --state open'
+```
+
+#### Automated Workflows
+```bash
+# Create scripts that combine multiple gh commands
+# Example: Complete AI task workflow
+#!/bin/bash
+TASK_NAME="$1"
+MODEL_NAME="$2"
+
+# Create issue
+ISSUE_URL=$(gh issue create --title "[AI: $MODEL_NAME] $TASK_NAME" --return-url)
+
+# Create branch
+git checkout -b "ai-$(date +%s)"
+
+# ... perform AI work ...
+
+# Create PR
+gh pr create --title "[AI: $MODEL_NAME] $TASK_NAME" --body "Completed by AI assistant"
+```
+
+#### Integration with CI/CD
+- **Use GitHub Actions** for automated testing of AI-generated code
+- **Trigger deployments** based on successful AI PR merges
+- **Monitor build status** using `gh run list`
+- **View workflow logs** with `gh run view`
+
+This GitHub CLI integration enables seamless AI-assisted development workflows while maintaining full traceability and collaboration capabilities.
 ### **RELATED FILES**
 - **`improvements.md`**: Detailed debugging techniques, automation scripts, and advanced best practices
 - **`workflow.md`**: Comprehensive workflow documentation with model selection protocols
