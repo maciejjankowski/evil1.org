@@ -11,9 +11,9 @@ files_to_update=(
     "CONTENT_FORMAT_STANDARDS.md"
     "cease-and-desist.md"
     "README.md"
-    "instructions.md"
-    "workflow.md"
-    "backlog.md"
+    "_docs/instructions.md"
+    "_docs/workflow.md"
+    "_docs/backlog.md"
 )
 
 # Function to add author and date to a file
@@ -65,7 +65,7 @@ for file in "${files_to_update[@]}"; do
         "CONTENT_FORMAT_STANDARDS.md"|"README.md")
             add_metadata "$file" "Development Team" "2025-09-08"
             ;;
-        "instructions.md"|"workflow.md"|"backlog.md")
+        "_docs/instructions.md"|"_docs/workflow.md"|"_docs/backlog.md")
             add_metadata "$file" "AI Assistant" "2025-09-08"
             ;;
         *)

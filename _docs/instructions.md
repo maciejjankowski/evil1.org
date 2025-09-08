@@ -8,15 +8,15 @@ permalink: "/instructions/"
 
 # INSTRUCTIONS FOR AI ASSISTANT
 
-- **IMPORTANT** use files `instructions.md` `workflow.md` `backlog.md` `task-*.md` for instructions for ai agents, dont treat them as source files for evil1.org content.
+- **IMPORTANT** use files `_docs/instructions.md` `_docs/workflow.md` `_docs/backlog.md` `task-*.md` for instructions for ai agents, dont treat them as source files for evil1.org content.
 **IMPORTANT:** Read `workflow.md` for the complete development process and model selection protocols before starting any work.
 
 ## Task Management
 - After task completion mark the task complete like that: [x]
-- Should a task need splitting into smaller tasks, add those smaller tasks with clear description and clear deliverables into the backlog.md file and then process them
+- Should a task need splitting into smaller tasks, add those smaller tasks with clear description and clear deliverables into the _docs/backlog.md file and then process them
 - Always reread the backlog and don't ask for confirmation unless you have finished all TASKS
-- Always reread the backlog.md file before starting work as it may have been updated with new tasks or changes
-- **ALWAYS REREAD THE BACKLOG.MD FILE AFTER COMPLETING ANY TASK** to ensure no new tasks were added and to verify task completion status
+- Always reread the _docs/backlog.md file before starting work as it may have been updated with new tasks or changes
+- **ALWAYS REREAD THE _docs/BACKLOG.MD FILE AFTER COMPLETING ANY TASK** to ensure no new tasks were added and to verify task completion status
 - **ALWAYS** issue a git commit with a brief descriptive message after completing each task from the backlog
 
 ## Decision Making & Communication
@@ -104,7 +104,7 @@ permalink: "/instructions/"
 - **NEVER** modify files in the `_dont touch` folder - they are off-limits for a reason
 - **NEVER** alter the meaning or wording of existing instructions when moving or copying them - preserve exact original text
 - **ALWAYS** read these instructions before starting any work
-- **BE CAREFUL** when editing backlog.md - preserve the structure and only modify task status
+- **BE CAREFUL** when editing _docs/backlog.md - preserve the structure and only modify task status
 - **VERIFY SOURCES** - all content must be based on real, verifiable information
 - **EXPAND INSTRUCTIONS WITH LEARNINGS FROM MISTAKES** - if you learn something, add it to the `instructions.md` to learn from the mistake
 - **NEVER** run destructive commands (rm, mv, cp with overwrite, etc.) without first committing all changes to version control (git)
@@ -151,12 +151,12 @@ pkill -f jekyll
 ### **RELATED FILES**
 - **`improvements.md`**: Detailed debugging techniques, automation scripts, and advanced best practices
 - **`workflow.md`**: Comprehensive workflow documentation with model selection protocols
-- **`backlog.md`**: Current tasks and project status
+- **`_docs/backlog.md`**: Current tasks and project status
 
 ### **WHEN TO CONSULT OTHER FILES**
 - **Use `improvements.md`** for: Advanced debugging techniques, automation scripts, performance optimization
 - **Use `workflow.md`** for: Detailed workflow processes, model selection protocols, task execution guidelines
-- **Use `backlog.md`** for: Current task status, project priorities, completion tracking
+- **Use `_docs/backlog.md`** for: Current task status, project priorities, completion tracking
 
 ## CONCLUSION & CONTINUOUS IMPROVEMENT
 - **LEARN FROM MISTAKES**: Always document new learnings and update these instructions

@@ -1,14 +1,6 @@
----
-layout: default
-title: "backlog"
-author: "AI Assistant"
-date: "2025-09-08"description: "Project backlog and task management for evil1.org development"
-permalink: "/backlog/"
----
-
 # BACKLOG
 
-**IMPORTANT:** Before working on any tasks, read the instructions in `instructions.md` `workflow.md` 
+**IMPORTANT:** Before working on any tasks, read the instructions in `_docs/instructions.md` `_docs/workflow.md` 
 **IMPORTANT:** NEVER CHANGE THE ABOVE LINES. ONLY UPDATE CONTENTS BELOW!
 
 
@@ -20,7 +12,7 @@ permalink: "/backlog/"
 - GPT-5 mini for balanced medium-complexity tasks
 
 # CURRENT TASKS:
-- [ ] move backlog, instructions and such into a separate folder, add a rule to never treat those files as jekyll site contents
+- [x] move backlog, instructions and such into a separate folder, add a rule to never treat those files as jekyll site contents
 - [x] apply layouts to all sub pages in education
 - [x] **MONITOR WORKFLOW COMPLIANCE**: Ensure all future tasks follow workflow.md guidelines
   - **Impact**: Consistent development process, better model selection, improved documentation

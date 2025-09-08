@@ -102,7 +102,7 @@ REASON: Good balance of speed and capability for medium-complexity tasks
 ## Task Execution Workflow
 
 ### Phase 1: Task Analysis
-1. **Read backlog.md** for current tasks
+1. **Read _docs/backlog.md** for current tasks
 2. **Assess complexity** using criteria above
 3. **Select appropriate model** based on task type
 4. **Document model choice** in task notes
@@ -196,7 +196,7 @@ REASON: Good balance of speed and capability for medium-complexity tasks
 ## Post-Task Activities
 
 ### 1. Task Completion
-- Mark task as `[x]` in backlog.md
+- Mark task as `[x]` in _docs/backlog.md
 - Commit changes with descriptive message
 - Update any relevant documentation
 
@@ -339,7 +339,7 @@ git commit -m "[MODEL] Task description
 - [ ] Validate YAML syntax in all modified files
 
 ### Post-Task Activities ✅
-- [ ] Mark task as `[x]` in `backlog.md`
+- [ ] Mark task as `[x]` in `_docs/backlog.md`
 - [ ] Commit changes with proper format: `[MODEL] Task description`
 - [ ] Update model performance data in `_data/model-performance.yml`
 - [ ] Document learnings in `improvements.md` if applicable

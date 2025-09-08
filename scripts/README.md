@@ -63,7 +63,7 @@ These scripts are designed to work with the overall development workflow:
 2. **Select Model** → Use `select-model.sh` for guidance
 3. **Execute Work** → Follow model-specific workflow
 4. **Document** → Update task file with progress
-5. **Complete** → Mark task done in backlog.md
+5. **Complete** → Mark task done in _docs/backlog.md
 
 ## Files Created
 
@@ -95,7 +95,7 @@ chmod +x scripts/select-model.sh
 
 ## Related Documentation
 
-- `instructions.md` - Complete guidelines and model selection
-- `workflow.md` - Full development workflow
-- `improvements.md` - Jekyll-specific recommendations
+- `_docs/instructions.md` - Complete guidelines and model selection
+- `_docs/workflow.md` - Full development workflow
+- `_docs/improvements.md` - Jekyll-specific recommendations
 - `README.md` - Project overview and setup

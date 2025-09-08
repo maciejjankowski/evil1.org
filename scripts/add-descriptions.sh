@@ -7,11 +7,11 @@ echo "======================================"
 
 # Files that need descriptions added
 files_to_update=(
-    "workflow.md"
-    "backlog.md"
-    "instructions.md"
-    "test-page.md"
-    "test-blueprint.md"
+    "_docs/workflow.md"
+    "_docs/backlog.md"
+    "_docs/instructions.md"
+    "_docs/test-page.md"
+    "_docs/test-blueprint.md"
     "README.md"
 )
 

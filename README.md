@@ -22,10 +22,10 @@ permalink: /README/
 ```
 
 ### Development Process
-1. **Read Instructions**: `instructions.md` - Core guidelines and model selection
-2. **Follow Workflow**: `workflow.md` - Complete development process
-3. **Check Tasks**: `backlog.md` - Current priorities and tasks
-4. **Review History**: `improvements.md` - Lessons learned and best practices
+1. **Read Instructions**: `_docs/instructions.md` - Core guidelines and model selection
+2. **Follow Workflow**: `_docs/workflow.md` - Complete development process
+3. **Check Tasks**: `_docs/backlog.md` - Current priorities and tasks
+4. **Review History**: `_docs/improvements.md` - Lessons learned and best practices
 
 ### Commit Format
 All commits follow this format:
@@ -47,7 +47,7 @@ Choose the appropriate model based on task complexity:
 - **GPT-4o**: Content creation, documentation, ethical content, narrative writing
 - **GPT-5 mini**: Balanced performance, medium-complexity tasks, general development
 
-See `workflow.md` for detailed model selection guidelines and `instructions.md` for complete model capabilities.
+See `_docs/workflow.md` for detailed model selection guidelines and `_docs/instructions.md` for complete model capabilities.
 
 ## Editorial Review Process
 
