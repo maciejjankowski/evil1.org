@@ -1,7 +1,8 @@
 ---
 layout: default
 title: "instructions"
-description: "Complete instructions and guidelines for AI-assisted development"
+author: "AI Assistant"
+date: "2025-09-08"description: "Complete instructions and guidelines for AI-assisted development"
 permalink: "/instructions/"
 ---
 

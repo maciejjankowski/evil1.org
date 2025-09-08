@@ -1,7 +1,8 @@
 ---
 layout: default
 title: "workflow"
-description: "Comprehensive development workflow with Copilot model selection for Jekyll site development"
+author: "AI Assistant"
+date: "2025-09-08"description: "Comprehensive development workflow with Copilot model selection for Jekyll site development"
 permalink: "/workflow/"
 ---
 

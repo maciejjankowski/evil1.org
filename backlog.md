@@ -1,7 +1,8 @@
 ---
 layout: default
 title: "backlog"
-description: "Project backlog and task management for evil1.org development"
+author: "AI Assistant"
+date: "2025-09-08"description: "Project backlog and task management for evil1.org development"
 permalink: "/backlog/"
 ---
 
