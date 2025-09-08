@@ -1,13 +1,11 @@
 ---
-layout: sig
-title: Whistleblower Suppression
+layout: organization
+title: "Whistleblower Suppression"
+description: "Tactics to silence, punish, or discredit those who expose wrongdoing within organizations."
 permalink: "/organizations/whistleblower-suppression/"
-sig_title: Whistleblower Suppression
-sig_desc: Tactics to silence, punish, or discredit those who expose wrongdoing within organizations.
-sig_topics:
-  - NDA abuse
-  - Retaliatory firings
-  - Legal intimidation
-  - Smear campaigns
-  - Surveillance and monitoring
+organization:
+  name: "Whistleblower Suppression"
+  description: "Tactics to silence, punish, or discredit those who expose wrongdoing within organizations."
+  type: "organization"
 ---
+

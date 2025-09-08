@@ -1,13 +1,11 @@
 ---
-layout: sig
-title: Greed Optimization
+layout: organization
+title: "Greed Optimization"
+description: "Techniques and strategies to maximize shareholder value at any cost, often at the expense of ethics and humanity."
 permalink: "/organizations/greed-optimization/"
-sig_title: Greed Optimization
-sig_desc: Techniques and strategies to maximize shareholder value at any cost, often at the expense of ethics and humanity.
-sig_topics:
-  - Executive compensation loopholes
-  - Stock buybacks and market manipulation
-  - Cost-cutting through mass layoffs
-  - Offshoring and tax avoidance
-  - Exploiting regulatory gaps
+organization:
+  name: "Greed Optimization"
+  description: "Techniques and strategies to maximize shareholder value at any cost, often at the expense of ethics and humanity."
+  type: "organization"
 ---
+

@@ -1,13 +1,11 @@
 ---
-layout: sig
-title: Lobbying Dark Arts
+layout: organization
+title: "Lobbying Dark Arts"
+description: "The most effective (and ethically questionable) ways to influence legislation and regulation for private gain."
 permalink: "/organizations/lobbying-dark-arts/"
-sig_title: Lobbying Dark Arts
-sig_desc: The most effective (and ethically questionable) ways to influence legislation and regulation for private gain.
-sig_topics:
-  - Astroturf campaigns
-  - Direct bribes and gifts
-  - Manipulating public opinion
-  - Drafting legislation for politicians
-  - Funding think tanks and advocacy groups
+organization:
+  name: "Lobbying Dark Arts"
+  description: "The most effective (and ethically questionable) ways to influence legislation and regulation for private gain."
+  type: "organization"
 ---
+
