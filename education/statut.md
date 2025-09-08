@@ -1,3 +1,10 @@
+---
+layout: default
+title: Program Structure - Academy of Systematic Influence
+description: Official program structure, requirements, and institutional framework
+permalink: /education/statut/
+---
+
 # STATUT FUNDACJI "ATLAS GLOBALIS"
 
 ## *Organizacja na rzecz Strategicznego Rozwoju i Stabilności Światowej*

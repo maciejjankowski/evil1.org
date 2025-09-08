@@ -12,4 +12,5 @@
 - [x] add nice consistent styles to http://localhost:4000/groups/groups/ and other pages with similar layout
 - [x] activities links not working!!!!! fix this.
 - [x] links: http://localhost:4000/education/ not working. FIX!
-- [ ] you have not confirmed that education links dont work. Please fix that, update the rule in `instructions.md` to always check for 404
+- [x] you have not confirmed that education links dont work. Please fix that, update the rule in `instructions.md` to always check for 404
+- [] apply layout 

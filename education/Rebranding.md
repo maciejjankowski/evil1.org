@@ -1,3 +1,9 @@
+---
+layout: default
+title: Strategic Rebranding - Academy of Systematic Influence
+description: Modern approaches to organizational messaging and narrative management
+permalink: /education/Rebranding/
+---
 
 # Strategic Rebranding: The Innocent Facade
 

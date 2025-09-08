@@ -44,6 +44,7 @@
 - Test layouts across different screen sizes and browsers
 - Verify all YAML front matter is properly formatted
 - Ensure consistent navigation and user experience across all pages
+- **ALWAYS CHECK FOR 404 ERRORS**: Before marking any task complete, test all links on the page to ensure they resolve correctly and don't return 404 errors
 
 ## VERIFICATION & TESTING PROTOCOL
 ### **MANDATORY VERIFICATION STEPS**
@@ -51,6 +52,7 @@
 - **NEVER** mark tasks as `[x]` until personally verified working
 - **ALWAYS** check generated HTML output to confirm changes took effect
 - **NEVER** assume fixes work - prove them with actual testing
+- after each task completion you will assess your approach and if you have found improvements, add them as concise instructions to `improvements.md`
 
 ### **PROBLEM-SOLVING APPROACH**
 - **Step 1:** Identify the actual root cause (not just symptoms)

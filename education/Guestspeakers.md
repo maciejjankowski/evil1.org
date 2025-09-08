@@ -1,3 +1,9 @@
+---
+layout: default
+title: Expert Speakers - Academy of Systematic Influence
+description: Industry experts and thought leaders sharing practical insights and experience
+permalink: /education/Guestspeakers/
+---
 
 ## 1. **Elon Musk**
 - **Rationale:** Disruptor of industries (from space travel to AI), iconoclast, public manipulator (especially via social media), and an unrepentant promoter of transhumanist and global transformation narratives. He profits from chaos, controls platforms, and frames himself as both rebel and oracle.

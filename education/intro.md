@@ -1,3 +1,10 @@
+---
+layout: default
+title: Program Introduction - Academy of Systematic Influence
+description: Introduction to the educational program and learning objectives
+permalink: /education/intro/
+---
+
 # Centrum Mistrzostwa Zarządzania – Oferta Edukacyjna
 
 ## **Witaj w Przyszłości Elitarnej Edukacji Menadżerskiej!**

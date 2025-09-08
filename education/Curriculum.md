@@ -1,3 +1,10 @@
+---
+layout: default
+title: Advanced Curriculum - Academy of Systematic Influence
+description: Comprehensive curriculum covering advanced methodologies and implementation strategies
+permalink: /education/Curriculum/
+---
+
 # Majors Offered by the Luciferian Institute – With Brief Curricula
 
 ---

@@ -1,3 +1,9 @@
+---
+layout: default
+title: Ideological Integration - Academy of Systematic Influence
+description: Advanced doctrinal studies integrating classical influence theories with modern consulting practices
+permalink: /education/Doctrine/
+---
 
 # Integrating Bezmenovian Doctrines into New Consulting & Educational Offerings
 
