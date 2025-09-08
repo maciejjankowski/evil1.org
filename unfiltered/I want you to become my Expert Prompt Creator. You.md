@@ -1,5 +1,12 @@
 <img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" width="120"/>
 
+---
+layout: default
+title: "Czy do wszystkich materiałów posiadasz źródła? Co z Panama papers?"
+description: "Analiza źródeł materiałów i Panama Papers"
+permalink: /unfiltered/sources-panama-papers/
+---
+
 # Czy do wszystkich materiałów posiadasz źródła? Co z Panama papers? Dodaj inne afery oraz powiązanych polityków
 
 Tak, wszystkie materiały dotyczące globalnych skandali finansowych, politycznych i bankowych, jakie wcześniej omawialiśmy, posiadają solidne źródła – są oparte na szeroko udokumentowanych, publicznie dostępnych raportach dziennikarskich, śledztwach rządowych czy wielkich przeciekach. Do najważniejszych należą właśnie takie afery jak:

@@ -1,5 +1,12 @@
 <img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" width="120"/>
 
+---
+layout: default
+title: "Dodatkowe Instytucje do Listy Siewców Zła"
+description: "Lista dodatkowych instytucji finansowych jako największych siewców zła"
+permalink: /unfiltered/additional-evil-sowers/
+---
+
 # Które jeszcze instytucje powinienem dodać do listy jako największych Siewców zła
 
 Oto lista instytucji finansowych, które – według globalnych rankingów kar, afer, skandali i historycznych kryzysów – można uznać za jednych z największych „Siewców zła” we współczesnych finansach (obok wcześniej wymienionych, takich jak Goldman Sachs, Deutsche Bank, HSBC, JPMorgan, Barclays czy Credit Suisse):

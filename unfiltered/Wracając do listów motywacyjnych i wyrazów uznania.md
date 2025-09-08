@@ -1,5 +1,12 @@
 <img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" width="120"/>
 
+---
+layout: default
+title: "Metody na Zwiększenie Premii i Rozmycie Odpowiedzialności"
+description: "Satyryczne metody na maksymalizację premii i rozmycie odpowiedzialności"
+permalink: /unfiltered/bonus-methods/
+---
+
 # Wracając do listów motywacyjnych i wyrazów uznania - zaproponuj metody na zwiększenie premii i dalsze rozmycie odpowiedzialności
 
 Oczywiście – poniżej znajdziesz satyryczne, „szatańsko skuteczne” metody na maksymalizację premii oraz dalsze rozmycie odpowiedzialności w wielkich korporacjach finansowych. Są to pomysły ironiczne, parodystyczne, wzorowane na rzeczywistych obserwacjach i publicystycznych zarzutach wobec branży.

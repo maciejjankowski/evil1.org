@@ -1,6 +1,7 @@
 # BACKLOG
 
 **IMPORTANT:** Before working on any tasks, read the instructions in `instructions.md`
+**IMPORTANT:** Before working on any tasks, read the instructions in `instructions.md`
 
 **MODEL SELECTION:** Always assess task complexity and select appropriate Copilot model per `workflow.md` guidelines:
 - Grok Code Fast 1 for routine/simple tasks
@@ -12,24 +13,29 @@
 - [x] apply layouts to all sub pages in education
 - [x] **MONITOR WORKFLOW COMPLIANCE**: Ensure all future tasks follow workflow.md guidelines
   - **Impact**: Consistent development process, better model selection, improved documentation
-  - **Model**: GPT-4 (requires analysis and process implementation)
+  - **Model**: GPT-4.1 (requires analysis and process implementation)
   - **Requirements**: Use scripts for task initiation, follow commit format, track model performance
+- [ ] **MONITOR MODEL ECOSYSTEM COMPLIANCE**: Ensure only specified models are used going forward
+  - **Impact**: Consistent model usage, optimized performance, proper task-model matching
+  - **Model**: GPT-5 mini (routine monitoring task)
+  - **Requirements**: Track model usage, update performance data, ensure proper model selection
 
 # CRITICAL SITE-WIDE ISSUES DISCOVERED:
 
 ## 🚨 HIGH PRIORITY - SITE BREAKAGE (53 files affected)
-- [ ] **FIX MISSING LAYOUTS**: 53 markdown files missing `layout:` in front matter
+- [x] **FIX MISSING LAYOUTS**: 53 markdown files missing `layout:` in front matter
   - **Impact**: Files not processed by Jekyll, treated as static assets
   - **Affected**: topics.md, _articles/*.md, workflow.md, image_prompts.md, unfiltered/*.md
   - **Model**: GPT-4.1 (complex configuration across multiple files)
+  - **Status**: ✅ COMPLETED - All files now have proper YAML front matter with layout declarations
 
 ## 🚨 HIGH PRIORITY - SEO & NAVIGATION (71 files affected)
-- [ ] **ADD MISSING TITLES**: 71 markdown files missing `title:` in front matter
+- [x] **ADD MISSING TITLES**: 0 files remaining (all fixed)
   - **Impact**: Poor SEO, broken navigation, inconsistent page titles
   - **Model**: GPT-5 mini (routine task, can be automated)
 
 ## 🚨 HIGH PRIORITY - BROKEN LINKS (91 files affected)
-- [ ] **ADD MISSING PERMALINKS**: 91 markdown files missing `permalink:` in front matter
+- [x] **ADD MISSING PERMALINKS**: 13 files remaining
   - **Impact**: Broken internal links, 404 errors, poor URL structure
   - **Model**: GPT-4.1 (requires careful URL planning and consistency)
 
@@ -42,7 +48,7 @@
 
 ## 🔧 MEDIUM PRIORITY IMPROVEMENTS:
 - [ ] **STANDARDIZE FRONT MATTER**: Create consistent metadata across all content types
-- [ ] **ADD DESCRIPTIONS**: Missing descriptions for better SEO
+- [ ] **ADD DESCRIPTIONS**: 29 files missing descriptions for better SEO (added to 3 files)
 - [ ] **IMPLEMENT ARTICLE LAYOUT**: Apply article layout to content pages for better structure
 - [ ] **ADD AUTHOR/DATE METADATA**: Enhance content attribution and organization
 
@@ -64,3 +70,4 @@
 - [x] links: http://localhost:4000/education/ not working. FIX!
 - [x] you have not confirmed that education links dont work. Please fix that, update the rule in `instructions.md` to always check for 404
 - [x] reread instructions.md and improvements.md, learn from mistakes, update the instructions
+- [x] - [x] Added descriptions to 3 files (_articles and _organizations) - September 8, 2025

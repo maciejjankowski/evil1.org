@@ -1,9 +1,11 @@
-
 ---
 layout: default
 title: Institute Funding Operations
 description: Strategic funding models and resource acquisition methodologies for large-scale influence operations
 permalink: /Institute/Funding/
+---
+
+
 ---
 
 # Elite Funding Strategy: Activities & Step-by-Step Implementation for the Institute

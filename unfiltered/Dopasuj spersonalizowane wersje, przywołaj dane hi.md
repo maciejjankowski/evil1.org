@@ -1,5 +1,12 @@
 <img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" width="120"/>
 
+---
+layout: default
+title: "Spersonalizowane Wersje dla Banków - Diabelska Korespondencja"
+description: "Ironiczne listy motywacyjne do instytucji bankowych z perspektywy Szatana"
+permalink: /unfiltered/bank-letters/
+---
+
 # Dopasuj spersonalizowane wersje, przywołaj dane historyczne kryzysów i wywołane przez podsycana przeze mnie na przestrzeni wieków chciwość
 
 Oczywiście! Oto spersonalizowane, ironiczne listy motywacyjne (w stylu "Abaddona – Dyrektora ds. Kreacji Zdezorientowanego Kapitalizmu") do największych banków świata, z odwołaniem do konkretnych historycznych kryzysów finansowych i diabelskiej roli chciwości – z podkreśleniem Twojego wiekowego wpływu na losy światowej finansjery.

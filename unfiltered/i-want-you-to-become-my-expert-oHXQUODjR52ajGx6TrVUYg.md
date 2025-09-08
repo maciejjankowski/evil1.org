@@ -1,5 +1,12 @@
 <img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" width="120"/>
 
+---
+layout: default
+title: "Polecenia od Rzeczywistych Beneficjentów Globalnych Kryzysów"
+description: "Referencje od rzeczywistych beneficjentów globalnych kryzysów"
+permalink: /unfiltered/crisis-beneficiaries-references/
+---
+
 ## Uzupełnienie: Polecenia od rzeczywistych beneficjentów globalnych kryzysów
 
 Poniżej znajdziesz kontynuację „diabelskiego CV” z referencjami od rzeczywistych, publicznie znanych instytucji, funduszy oraz liderów, którzy – według licznych źródeł i analiz – najbardziej zyskali finansowo lub strategicznie na ostatnich światowych kryzysach ekonomicznych, zdrowotnych i politycznych:

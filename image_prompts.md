@@ -1,3 +1,10 @@
+---
+layout: default
+title: "AI Image Generation Prompts"
+description: "Guidelines and prompts for generating AI images for evil1.org content"
+permalink: /image-prompts/
+---
+
 # AI Image Generation Prompts for evil1.org
 
 ## Character Style Guidelines

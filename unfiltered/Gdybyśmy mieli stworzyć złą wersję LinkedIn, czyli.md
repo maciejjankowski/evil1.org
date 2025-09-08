@@ -1,5 +1,12 @@
 <img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" width="120"/>
 
+---
+layout: default
+title: "Zła Wersja LinkedIn - Firmy Chwalące się Szkodzeniem Ludzkości"
+description: "Lista firm które chwaliłyby się szkodzeniem ludzkości w złej wersji LinkedIn"
+permalink: /unfiltered/bad-linkedin/
+---
+
 # Gdybyśmy mieli stworzyć złą wersję LinkedIn, czyli taki Serwis gdzie zamiast osiągnięciami zawodowymi firmy chwaliły by się działaniem na szkodę ludzkości, to jakiej firmy należałoby tam umieścić, dole fruit company, ExxonMobil, BP, duże banki, co jeszcze?
 
 Odpowiadając z przymrużeniem oka na Twój koncept „ciemnej” wersji LinkedIna — serwisu, gdzie firmy szczycą się szkodzeniem ludzkości — oto lista instytucji i korporacji, które zyskałyby tam status „liderów branży” ze względu na głośne afery, systemowe nadużycia lub dewastujące wpływy społeczne i środowiskowe:

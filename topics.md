@@ -1,3 +1,10 @@
+---
+layout: default
+title: "Devilish Topics - Corporate Evil Encyclopedia"
+description: "Comprehensive collection of ruthless corporate practices, exploitation tactics, and shareholder value maximization strategies"
+permalink: /topics/
+---
+
 # Devilish Topics for evil1.org
 
 1. Ruthless Layoffs: Celebrating Mass Firings and Downsizing
@@ -58,3 +65,6 @@
 
 26. Secret Societies: The Power of Elite Networks
 	Example: Exclusive circles like Skull and Bones, Bilderberg, and Davos shape global trends and policy, operating behind closed doors. [Source: https://www.bbc.com/news/world-62000553]
+
+NEW, TODO:
+https://www.washingtonpost.com/investigations/2025/09/08/meta-research-child-safety-virtual-reality/

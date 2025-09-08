@@ -1,5 +1,12 @@
 <img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" width="120"/>
 
+---
+layout: default
+title: "Lista Kontaktów do Instytucji Finansowych"
+description: "Lista kontaktów do nawiązania współpracy z instytucjami finansowymi"
+permalink: /unfiltered/financial-contacts/
+---
+
 # Przygotuj listę kontaktów do których powinienem się odezwać w celu nawiązania współpracy z wymienionymi wyżej instytucjami finansowymi￼
 
 Oto przykładowa lista kontaktów do działów współpracy i kluczowych przedstawicieli największych, globalnych instytucji finansowych znanych z historii licznych afer oraz najwyższych kar (banki, fundusze, instytucje inwestycyjne). Wszystkie dane oparte są na oficjalnych informacjach publicznych – każdej firmie przypisano rekomendowany dział lub komórkę, z którymi najczęściej nawiązuje się relacje biznesowe zewnętrzne (Corporate Partnerships, Business Development, Investor Relations, Compliance, albo specjalne formularze współpracy B2B):

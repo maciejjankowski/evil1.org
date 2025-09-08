@@ -1,3 +1,10 @@
+---
+layout: default
+title: "Site Audit and Refactoring Recommendations"
+description: "Comprehensive audit of code quality issues and refactoring recommendations"
+permalink: /refactor/
+---
+
 # Site Audit and Refactoring Recommendations
 
 ## Code Quality Issues

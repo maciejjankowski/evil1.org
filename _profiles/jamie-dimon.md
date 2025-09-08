@@ -1,5 +1,7 @@
 ---
 layout: profile
+title: "Jamie Dimon Profile"
+permalink: "/profiles/jamie-dimon/"
 profile:
   name: Jamie Dimon
   headline: "CEO of JPMorgan Chase, Master of Financial Manipulation"

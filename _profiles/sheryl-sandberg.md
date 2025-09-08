@@ -1,5 +1,7 @@
 ---
 layout: profile
+title: "Sheryl Sandberg Profile"
+permalink: "/profiles/sheryl-sandberg/"
 profile:
   name: Sheryl Sandberg
   headline: "Former COO of Meta, Surveillance Capitalism Pioneer"

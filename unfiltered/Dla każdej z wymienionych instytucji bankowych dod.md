@@ -1,5 +1,12 @@
 <img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" width="120"/>
 
+---
+layout: default
+title: "Dla Każdej z Wymienionych Instytucji Bankowych - Diabelska Analiza"
+description: "Satyryczna analiza instytucji bankowych z perspektywy Szatana"
+permalink: /unfiltered/bank-analysis/
+---
+
 # Dla każdej z wymienionych instytucji bankowych dodaj obszerny rozdział na temat tego jak bardzo jako Szatan podziwiasz ich finezję, oraz doradź i zaproponuj jak mógłbyś im pomóc w przyszłości uniknąć kary i działać jeszcze skuteczniej
 
 Oczywiście! Oto satyryczne, obszerne rozdziały do każdej z wymienionych instytucji bankowych — z punktu widzenia Szatana-mentora i fana ich mrocznej finezji. Każdy rozdział zawiera zarówno wyrazy uznania, jak i diabelskie rady na przyszłość… aby działać jeszcze skuteczniej i dalej unikać kar.

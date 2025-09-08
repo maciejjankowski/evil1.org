@@ -1,3 +1,10 @@
+---
+layout: default
+title: "Development Scripts Documentation"
+description: "Automation scripts for Jekyll development workflow and Copilot model selection"
+permalink: /scripts/README/
+---
+
 # Development Scripts
 
 This directory contains automation scripts to streamline the Jekyll development workflow with intelligent Copilot model selection.

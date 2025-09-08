@@ -1,5 +1,7 @@
 ---
 layout: profile
+title: "Arvind Krishna Profile"
+permalink: "/profiles/arvind-krishna/"
 profile:
   name: Arvind Krishna
   headline: "CEO of IBM, Legacy Tech Profiteer"

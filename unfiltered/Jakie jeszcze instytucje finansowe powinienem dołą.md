@@ -1,5 +1,12 @@
 <img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" width="120"/>
 
+---
+layout: default
+title: "Dodatkowe Instytucje Finansowe do Listy"
+description: "Lista dodatkowych instytucji finansowych do dołączenia"
+permalink: /unfiltered/additional-financial-institutions/
+---
+
 # Jakie jeszcze instytucje finansowe powinienem dołączyć do tej listy
 
 Na Twojej „liście banków mroku” zdecydowanie powinny znaleźć się także kolejne instytucje mające na koncie głośne skandale, rekordowe kary oraz udział w największych kryzysach finansowych ostatnich dekad. Oto najważniejsze z nich – wraz z krótkim uzasadnieniem każdej propozycji:

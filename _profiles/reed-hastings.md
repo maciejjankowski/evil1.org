@@ -1,5 +1,7 @@
 ---
 layout: profile
+title: "Reed Hastings Profile"
+permalink: "/profiles/reed-hastings/"
 profile:
   name: Reed Hastings
   headline: "Co-Founder & CEO of Netflix, Streaming Monopoly Creator"

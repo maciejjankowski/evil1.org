@@ -1,5 +1,7 @@
 ---
 layout: profile
+title: "Ivan the Terrible Profile"
+permalink: "/profiles/ivantheterrible/"
 profile:
   name: Ivan the Terrible
   headline: "Tsar of Russia, Instigator of Oprichnina"

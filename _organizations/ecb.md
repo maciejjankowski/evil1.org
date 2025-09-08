@@ -1,6 +1,7 @@
 ---
 layout: sig
 title: European Central Bank (ECB)
+permalink: "/organizations/ecb/"
 sig_title: European Central Bank (ECB)
 sig_desc: Architect of Eurozone Austerity - Imposes spending limits on member states while prioritizing financial sector bailouts over citizens.
 sig_topics:

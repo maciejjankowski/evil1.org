@@ -1,4 +1,10 @@
 
+---
+layout: default
+title: "Sentinel Outlier"
+permalink: "/news/sentinel-outlier/"
+---
+
 # The Sincere Sentinel – Editorial Board, Bios, Articles & Brand Voice
 
 ---

@@ -1,5 +1,7 @@
 ---
 layout: profile
+title: "Daniel Zhang Profile"
+permalink: "/profiles/daniel-zhang/"
 profile:
   name: Daniel Zhang
   headline: "CEO of Alibaba, Chinese Tech Monopoly Builder"

@@ -1,5 +1,12 @@
 <img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" width="120"/>
 
+---
+layout: default
+title: "Listy Motywacyjne do Banków Zamieszanych w Skandale"
+description: "Satyryczne listy motywacyjne do banków znanych z finansowych skandali"
+permalink: /unfiltered/bank-motivational-letters/
+---
+
 # Przygotuj podobne listy motywacyjne do wszystkich banków zamieszanych w finansowe skandale i przez to ukarane wysokimi karami. Tym razem bardziej podkręć wspólne cele i długie doświadczenie we wprowadzaniu zła na świecie we wszelkich możliwych sytuacjach
 
 Oto zestaw satyrycznych, „diabelskich” listów motywacyjnych do banków znanych z finansowych skandali i afer, które w przeszłości zostały za nie ukarane wysokimi karami. Każdy tekst utrzymany jest w tonie ironicznego, dowcipnego nawiązania do „wspólnoty wartości” oraz wieloletniego doświadczenia w sianiu zamętu na światowych rynkach. Treść stanowi żart – nie jest rzeczywistą rekomendacją ani zachętą.

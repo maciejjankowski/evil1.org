@@ -5,6 +5,7 @@ permalink: /articles/trump-cabinet-mortgage-fraud-hypocrisy/
 date: 2025-09-04
 author: "Editorial Team"
 tags: ["trump", "fraud", "politics", "hypocrisy"]
+description: "Trump accuses foes of mortgage fraud, but three of his own cabinet members have multiple mortgages. Hypocrisy is the new transparency."
 summary: "Trump accuses foes of mortgage fraud, but three of his own cabinet members have multiple mortgages. Hypocrisy is the new transparency."
 sources:
   - title: "Trump accuses foes of mortgage fraud while three cabinet members have multiple mortgages"

@@ -1,5 +1,12 @@
 <img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" width="120"/>
 
+---
+layout: default
+title: "Międzynarodowy Mechanizm Kontroli Finansowej - Diabelski Projekt"
+description: "Satyryczna propozycja systemu kontroli finansowej z ukrytymi furtkami"
+permalink: /unfiltered/financial-control-mechanism/
+---
+
 # Zasugeruj stworzenie międzynarodowej mechanizmu kontroli finansowej i zautomatyzowanych audytów, w którym ukryte są furtki do składania zleceń na prawdziwe malwersacje, ukryte pod płaszczem wielowarstwowej komunikacji
 
 Oczywiście – oto satyryczna, kreatywna koncepcja „międzynarodowego systemu kontroli finansowej i zautomatyzowanych audytów”, który oficjalnie służy do walki z malwersacjami, a w rzeczywistości jest sprytnie zaprojektowany, by ukrywać możliwości składania „prawdziwych” zleceń na poważne przekręty – wszystko w duchu pogłębionego warstwowego maskowania.

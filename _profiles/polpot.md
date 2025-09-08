@@ -1,5 +1,7 @@
 ---
 layout: profile
+title: "Pol Pot Profile"
+permalink: "/profiles/polpot/"
 profile:
   name: Pol Pot
   headline: "Leader of Khmer Rouge, Orchestrator of Cambodian Genocide"

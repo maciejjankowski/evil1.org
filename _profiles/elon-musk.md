@@ -1,5 +1,7 @@
 ---
 layout: profile
+title: "Elon Musk Profile"
+permalink: "/profiles/elon-musk/"
 profile:
   name: Elon Musk
   headline: "CEO of Tesla/SpaceX, Master of Hype and Exploitation"

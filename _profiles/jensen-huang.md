@@ -1,5 +1,7 @@
 ---
 layout: profile
+title: "Jensen Huang Profile"
+permalink: "/profiles/jensen-huang/"
 profile:
   name: Jensen Huang
   headline: "CEO of NVIDIA, AI Monopoly Architect"

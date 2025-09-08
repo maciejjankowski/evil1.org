@@ -1,5 +1,7 @@
 ---
 layout: profile
+title: "Brian Cornell Profile"
+permalink: "/profiles/brian-cornell/"
 profile:
   name: Brian Cornell
   headline: "CEO of Target, Retail Monopoly Builder"

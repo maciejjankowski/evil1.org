@@ -1,3 +1,9 @@
+---
+layout: default
+title: "Flux Weekly Editors"
+permalink: "/news/flux/editors/"
+---
+
 # Flux Weekly – Editorial Team Bios
 
 ---

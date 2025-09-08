@@ -1,9 +1,11 @@
-
 ---
 layout: default
 title: Annual Summit - Global Convergence
 description: Annual gathering of influence practitioners, policymakers, and strategic thinkers
 permalink: /Institute/Summit/
+---
+
+
 ---
 
 # Organizing an Elite Summit for Influence & Fundraising: Blueprint for Success

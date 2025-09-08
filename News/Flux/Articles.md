@@ -1,3 +1,9 @@
+---
+layout: default
+title: "Flux Weekly Articles"
+permalink: "/news/flux/articles/"
+---
+
 # Flux Weekly — Deep Luciferian Article Concepts for Each Editor
 
 ---

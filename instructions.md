@@ -1,5 +1,8 @@
 # INSTRUCTIONS FOR AI ASSISTANT
 
+- **IMPORTANT** use files `instructions.md` `workflow.md` `backlog.md` `task-*.md` for instructions for ai agents, dont treat them as source files for evil1.org content.
+**IMPORTANT:** Read `workflow.md` for the complete development process and model selection protocols before starting any work.
+
 ## Task Management
 - After task completion mark the task complete like that: [x]
 - Should a task need splitting into smaller tasks, add those smaller tasks with clear description and clear deliverables into the backlog.md file and then process them

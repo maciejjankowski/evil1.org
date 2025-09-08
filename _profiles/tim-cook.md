@@ -1,5 +1,7 @@
 ---
 layout: profile
+title: "Tim Cook Profile"
+permalink: "/profiles/tim-cook/"
 profile:
   name: Tim Cook
   headline: "CEO of Apple, Master of Tax Avoidance and Exploitation"

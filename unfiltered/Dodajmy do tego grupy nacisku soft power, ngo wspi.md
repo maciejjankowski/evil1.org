@@ -1,5 +1,12 @@
 <img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" width="120"/>
 
+---
+layout: default
+title: "Grupy Nacisku Soft Power i Kontrowersyjne NGO"
+description: "Analiza grup nacisku, NGO wspierających niekontrolowaną imigrację i pseudo-działaczy środowiska"
+permalink: /unfiltered/soft-power-groups/
+---
+
 # Dodajmy do tego grupy nacisku soft power, ngo wspierające niekontrolowaną imigrację, pseudo działaczy środowiska którzy faktycznie osłabiają politykę wybranych krajów, co jeszcze?
 
 Jeśli mielibyśmy „ciemną” wersję LinkedIn – agregującą nie tylko korporacje, banki i koncerny przemysłowe, lecz także grupy nacisku bazujące na soft power, NGO o kontrowersyjnych celach czy pseudoaktywistów – naturalne byłoby dołączenie również:

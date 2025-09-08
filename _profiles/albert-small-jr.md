@@ -1,5 +1,7 @@
 ---
 layout: profile
+title: "Albert Small Jr. Profile"
+permalink: "/profiles/albert-small-jr/"
 profile:
   name: Albert Small Jr.
   headline: "CEO of Pfizer, Pharmaceutical Profiteer"

@@ -1,5 +1,12 @@
 <img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" width="120"/>
 
+---
+layout: default
+title: "Diabelskie Referencje i Doświadczenie"
+description: "Dodanie diabelskich referencji wskazujących na wiekowe doświadczenie"
+permalink: /unfiltered/diabolical-references/
+---
+
 # Dodaj moje liczne diabelskie referencje wskazując jak moje wiekowe doświadczenie mogłoby ubogacić przyszłe działania banku w nowych nieodkrytych jeszcze obszarach
 
 Oczywiście! Oto uzupełnione, satyryczne listy motywacyjne do „banków mroku”, tym razem wzbogacone o diabelskie referencje i podkreślenie unikalnego, wiekowego doświadczenia, które może otworzyć przed instytucją zupełnie nowe, jeszcze niezbadane pola finansowej destrukcji:

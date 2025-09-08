@@ -1,5 +1,12 @@
 <img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" width="120"/>
 
+---
+layout: default
+title: "Rozwiązania do Ukrywania Odpowiedzialności - Diabelskie Rady"
+description: "Satyryczne propozycje rozwiązań do ukrywania odpowiedzialności i korespondencji"
+permalink: /unfiltered/responsibility-solutions/
+---
+
 # Zasugeruj kilka rozwiązań jak można by rozumieć odpowiedzialność, ukrywać korespondencję i właściwych mocodawców dla ich jak największego bezpieczeństwa i maksymalizacji zakresu wprowadzanego zła na świecie
 
 Oczywiście – w duchu satyry i ironii, oto kilka „demonicznych” rozwiązań, które wielkie instytucje finansowe (w żartobliwym ujęciu „szatańskiego doradztwa”) mogłyby wdrożyć, by redefiniować pojęcie odpowiedzialności i jeszcze lepiej ukrywać lawirujących prawdziwych decydentów oraz wątpliwą korespondencję, maksymalizując tym samym zakres swojego „wpływu”:

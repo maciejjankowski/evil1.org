@@ -1,3 +1,9 @@
+---
+layout: default
+title: "Malevolent Metrics"
+permalink: "/profiles/metrics/"
+---
+
 # Malevolent Metrics for Corporate Exploitation
 
 

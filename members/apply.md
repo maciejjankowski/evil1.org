@@ -1,3 +1,10 @@
+---
+layout: default
+title: "Dołącz do XX. Kręgu - Tajnej Rady Architektów Losu"
+description: "Aplikacja do elitarnej sieci wpływowych osób i tajnych rytuałów"
+permalink: /members/apply/
+---
+
 ### **Chcesz przekroczyć próg przeciętności?**
 #### **Dołącz do Loży XX. Kręgu – Tajnej Rady Architektów Losu!**
 

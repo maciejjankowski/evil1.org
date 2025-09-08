@@ -1,3 +1,9 @@
+---
+layout: default
+title: "News Outlets"
+permalink: "/news/outlets/"
+---
+
 # Five Contemporary Newspaper Titles (with only slightly symbolic undertones) & Journalist Names
 
 ---

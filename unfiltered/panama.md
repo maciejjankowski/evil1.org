@@ -1,4 +1,11 @@
 
+---
+layout: default
+title: "Panama Papers - Global Financial Scandals Analysis"
+description: "Comprehensive analysis of Panama Papers leak and related financial scandals"
+permalink: /unfiltered/panama/
+---
+
 # Czy do wszystkich materiałów posiadasz źródła? Co z Panama papers? Dodaj inne afery oraz powiązanych polityków
 
 Tak, wszystkie materiały dotyczące globalnych skandali finansowych, politycznych i bankowych, jakie wcześniej omawialiśmy, posiadają solidne źródła – są oparte na szeroko udokumentowanych, publicznie dostępnych raportach dziennikarskich, śledztwach rządowych czy wielkich przeciekach. Do najważniejszych należą właśnie takie afery jak:

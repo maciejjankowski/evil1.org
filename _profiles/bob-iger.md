@@ -1,5 +1,7 @@
 ---
 layout: profile
+title: "Bob Iger Profile"
+permalink: "/profiles/bob-iger/"
 profile:
   name: Bob Iger
   headline: "CEO of Disney, Content Monopoly Builder"

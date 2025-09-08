@@ -1,5 +1,7 @@
 ---
 layout: profile
+title: "Lisa Su Profile"
+permalink: "/profiles/lisa-su/"
 profile:
   name: Lisa Su
   headline: "CEO of AMD, Semiconductor Monopoly Builder"

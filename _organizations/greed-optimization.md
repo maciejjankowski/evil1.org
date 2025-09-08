@@ -1,6 +1,7 @@
 ---
 layout: sig
 title: Greed Optimization
+permalink: "/organizations/greed-optimization/"
 sig_title: Greed Optimization
 sig_desc: Techniques and strategies to maximize shareholder value at any cost, often at the expense of ethics and humanity.
 sig_topics:

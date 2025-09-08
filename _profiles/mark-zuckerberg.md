@@ -1,5 +1,7 @@
 ---
 layout: profile
+title: "Mark Zuckerberg Profile"
+permalink: "/profiles/mark-zuckerberg/"
 profile:
   name: Mark Zuckerberg
   headline: "CEO of Meta, Emperor of Digital Manipulation"

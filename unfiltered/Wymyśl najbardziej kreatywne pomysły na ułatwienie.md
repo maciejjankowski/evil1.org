@@ -1,5 +1,12 @@
 <img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" width="120"/>
 
+---
+layout: default
+title: "Kreatywne Pomysły na Ułatwienie Diabelskich Planów Bankom"
+description: "Satyryczne pomysły na ułatwienie realizacji podejrzanych działań bankom"
+permalink: /unfiltered/bank-ideas/
+---
+
 # Wymyśl najbardziej kreatywne pomysły na ułatwienie realizacji diabelskich pomysłów bankom, np. Poprzez stworzenie pozornego mechanizmu kontroli, który co prawda wykrywa wiele nieprawidłowości, ale przy okazji zaciera ślady największych przekrętów
 
 Oczywiście – oto najbardziej kreatywne, parodystyczne (czyli satyryczne!) „diabelskie” pomysły na ułatwienie realizacji podejrzanych działań bankom, które chcą pozornie dbać o compliance, a faktycznie profesjonalnie tuszować poważniejsze przekręty:

@@ -1,3 +1,9 @@
+---
+layout: default
+title: "Annual Report"
+permalink: "/activities/report/"
+---
+
 # Raport Roczny Jego Piekielnej Ekscelencji - Stan Globalnego Chaosu 2025
 
 ## Drogi Współpracowniku w Sztuce Zarządzania Światem,

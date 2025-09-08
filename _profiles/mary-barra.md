@@ -1,5 +1,7 @@
 ---
 layout: profile
+title: "Mary Barra Profile"
+permalink: "/profiles/mary-barra/"
 profile:
   name: Mary Barra
   headline: "CEO of General Motors, Auto Industry Profiteer"

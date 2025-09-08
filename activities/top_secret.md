@@ -1,3 +1,9 @@
+---
+layout: default
+title: "Top Secret Report"
+permalink: "/activities/top-secret/"
+---
+
 # ULTRA SECRET - TYLKO DLA OCZU ARCYMISTRZA
 ## Raport Specjalny: "Perły Ciemności" - Najbardziej Dochodowe Operacje 2025
 

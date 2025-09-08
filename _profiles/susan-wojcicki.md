@@ -1,5 +1,7 @@
 ---
 layout: profile
+title: "Susan Wojcicki Profile"
+permalink: "/profiles/susan-wojcicki/"
 profile:
   name: Susan Wojcicki
   headline: "Former CEO of YouTube, Content Monopoly Architect"

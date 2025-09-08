@@ -1,5 +1,7 @@
 ---
 layout: profile
+title: "Gwynne Shotwell Profile"
+permalink: "/profiles/gwynne-shotwell/"
 profile:
   name: Gwynne Shotwell
   headline: "President of SpaceX, Rocket Profiteer"

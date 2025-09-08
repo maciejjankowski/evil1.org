@@ -5,6 +5,7 @@ permalink: /articles/jpmorgan-epstein-banking-evil/
 date: 2025-09-08
 author: "Editorial Team"
 tags: ["banking", "financial-crimes", "jpmorgan", "epstein"]
+description: "How America's largest bank facilitated Jeffrey Epstein's crimes for over a decade, proving that shareholder value trumps human decency every time."
 summary: "How America's largest bank facilitated Jeffrey Epstein's crimes for over a decade, proving that shareholder value trumps human decency every time."
 sources:
   - title: "Jeffrey Epstein and the Enablers at JPMorgan Chase"

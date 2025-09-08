@@ -1,5 +1,12 @@
 <img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" width="120"/>
 
+---
+layout: default
+title: "Czy Dołączyć Prywatnych Inwestorów i Fundusze Inwestycyjne?"
+description: "Analiza czy dołączyć prywatnych inwestorów i fundusze do listy siewców zła"
+permalink: /unfiltered/private-investors/
+---
+
 # Czy powinienem dołączyć też prywatnych inwestorów oraz fundusze inwestycyjne? Jeśli tak to których
 
 Tak, warto rozważyć dołączenie do swojej „listy siewców zła” również wybranych prywatnych inwestorów (zwłaszcza takich, którzy stali się symbolem chciwości, manipulacji lub skandalicznych afer) oraz funduszy inwestycyjnych, które odegrały główną rolę w finansowych skandalach lub były ukarane rekordowymi grzywnami.

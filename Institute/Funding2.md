@@ -1,9 +1,11 @@
-
 ---
 layout: default
 title: Advanced Funding Strategies
 description: Sophisticated financial instruments and dark money channels for sustaining long-term operations
 permalink: /Institute/Funding2/
+---
+
+
 ---
 
 ## 1. **Corporate Partnerships & Sponsorships**

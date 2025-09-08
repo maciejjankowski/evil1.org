@@ -1,5 +1,7 @@
 ---
 layout: profile
+title: "Adolf Hitler Profile"
+permalink: "/profiles/hitler/"
 profile:
   name: Adolf Hitler
   headline: "Führer of Nazi Germany, Architect of WWII and the Holocaust"

@@ -1,5 +1,7 @@
 ---
 layout: profile
+title: "Sundar Pichai Profile"
+permalink: "/profiles/sundar-pichai/"
 profile:
   name: Sundar Pichai
   headline: "CEO of Alphabet, Emperor of Digital Surveillance"

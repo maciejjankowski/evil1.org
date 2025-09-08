@@ -1,3 +1,10 @@
+---
+layout: default
+title: "Content Format Standards"
+description: "Standards and guidelines for content formatting across the evil1.org site"
+permalink: /content-format-standards/
+---
+
 # Content Format Standards
 
 ## Organization Files Format Standard

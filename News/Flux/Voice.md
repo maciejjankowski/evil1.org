@@ -1,3 +1,9 @@
+---
+layout: default
+title: "Flux Weekly Voice"
+permalink: "/news/flux/voice/"
+---
+
 # Flux Weekly – Brand Voice Definition
 
 ---

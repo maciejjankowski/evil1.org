@@ -1,6 +1,7 @@
 ---
 layout: sig
 title: Lobbying Dark Arts
+permalink: "/organizations/lobbying-dark-arts/"
 sig_title: Lobbying Dark Arts
 sig_desc: The most effective (and ethically questionable) ways to influence legislation and regulation for private gain.
 sig_topics:

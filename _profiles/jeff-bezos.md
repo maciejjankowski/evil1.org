@@ -1,5 +1,7 @@
 ---
 layout: profile
+title: "Jeff Bezos Profile"
+permalink: "/profiles/jeff-bezos/"
 profile:
   name: Jeff Bezos
   headline: "Founder of Amazon, Emperor of E-commerce Exploitation"

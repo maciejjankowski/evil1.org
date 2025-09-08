@@ -1,5 +1,7 @@
 ---
 layout: profile
+title: "Joseph Stalin Profile"
+permalink: "/profiles/stalin/"
 profile:
   name: Joseph Stalin
   headline: "General Secretary of the Communist Party, Soviet Dictator"

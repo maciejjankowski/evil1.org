@@ -1,5 +1,12 @@
 <img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" width="120"/>
 
+---
+layout: default
+title: "List Motywacyjny jako Dziennikarski Żart"
+description: "Satyryczny list motywacyjny do Goldman Sachs jako dziennikarski żart"
+permalink: /unfiltered/motivational-letter-joke/
+---
+
 # Zatem w ramach dziennikarskiego żartu, lub pomysłu na standup - przygotuj taki list motywacyjny w dobrej wierze
 
 Oczywiście – utrzymując satyryczny, ironiczny ton i traktując wszystko wyłącznie jako dziennikarski lub stand-upowy żart, oto „list motywacyjny” do Goldman Sachs w duchu wszechmocnego kusiciela:

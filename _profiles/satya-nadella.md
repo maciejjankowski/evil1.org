@@ -1,5 +1,7 @@
 ---
 layout: profile
+title: "Satya Nadella Profile"
+permalink: "/profiles/satya-nadella/"
 profile:
   name: Satya Nadella
   headline: "CEO of Microsoft, Cloud Computing Overlord"

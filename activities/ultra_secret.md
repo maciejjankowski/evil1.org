@@ -1,3 +1,9 @@
+---
+layout: default
+title: "Ultra Secret Agenda"
+permalink: "/activities/ultra-secret/"
+---
+
 # ULTRA CLASSIFIED - POZIOM XX - OCZY JEDYNIE
 ## Agenda Strategiczna 2025-2030: "Projekt Ultima Ratio"
 

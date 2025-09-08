@@ -1,6 +1,8 @@
 ---
 layout: sig
 title: Securities and Exchange Commission (SEC)
+description: "Protector of Wall Street Interests - Focuses on small infractions while ignoring systemic fraud through selective enforcement and revolving door employment."
+permalink: "/organizations/sec/"
 sig_title: Securities and Exchange Commission (SEC)
 sig_desc: Protector of Wall Street Interests - Focuses on small infractions while ignoring systemic fraud through selective enforcement and revolving door employment.
 sig_topics:
