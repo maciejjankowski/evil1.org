@@ -143,13 +143,6 @@ pkill -f jekyll
 
 ## AI CODING WITH GITHUB CLI
 
-### Setup
-```bash
-brew install gh
-gh auth login
-```
-
-### AI PR Workflow
 ```bash
 gh pr create --title "[AI] Task"
 gh pr review --comment --body "AI review: ✅"
