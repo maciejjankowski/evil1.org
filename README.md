@@ -26,6 +26,7 @@ permalink: /README/
 2. **Follow Workflow**: `_docs/workflow.md` - Complete development process
 3. **Check Tasks**: `_docs/backlog.md` - Current priorities and tasks
 4. **Review History**: `_docs/improvements.md` - Lessons learned and best practices
+5. **AI Guidelines**: `.github/ai-instructions.md` - AI assistant guidelines
 
 ### Commit Format
 All commits follow this format:
