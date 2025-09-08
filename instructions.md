@@ -151,68 +151,11 @@ gh auth login
 
 ### AI PR Workflow
 ```bash
-# Create AI PR
-gh pr create --title "[AI] Task" --body "## AI Work
-**Model:** [model]
-**Changes:** [summary]"
-
-# AI self-review
-gh pr review --comment --body "AI review: ✅ passed"
-
-# Mark ready for review
+gh pr create --title "[AI] Task"
+gh pr review --comment --body "AI review: ✅"
 gh pr ready
-
-# Check status
 gh pr checks
-gh pr status
 ```
-
-### GitHub AI Code Reviews
-
-#### Automated AI Review
-```bash
-# Enable GitHub Copilot code review
-gh pr review --ai
-
-# AI-powered code review with suggestions
-gh pr review --ai --body "Copilot review suggestions"
-
-# View AI review comments
-gh pr view --comments
-```
-
-#### Copilot Chat Integration
-```bash
-# Use Copilot Chat for review assistance
-# @github Copilot: review this PR
-# @github Copilot: suggest improvements
-
-# AI code analysis
-gh pr diff | copilot review
-```
-
-#### Automated Review Workflows
-```bash
-# Trigger AI review workflow
-gh workflow run ai-review.yml
-
-# Check AI review status
-gh run list --workflow=ai-review.yml
-```
-
-### AI Code Review Checklist
-- [ ] Code standards followed
-- [ ] Tests included
-- [ ] Documentation updated
-- [ ] Security scan passed
-- [ ] No breaking changes
-
-### Best Practices
-- Create PRs for all AI code changes
-- Include model used in PR title/description
-- Request reviews when AI work is complete
-- Use draft PRs during development
-- Leverage GitHub Copilot for automated reviews
 ### **RELATED FILES**
 - **`improvements.md`**: Detailed debugging techniques, automation scripts, and advanced best practices
 - **`workflow.md`**: Comprehensive workflow documentation with model selection protocols
