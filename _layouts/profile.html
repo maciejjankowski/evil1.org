@@ -6,6 +6,9 @@ layout: default
     <div id="profile-header">
         <h1>{{ page.profile.name }}</h1>
         <div class="profile-type">Type: {{ page.profile.type }}</div>
+        {% assign words = content | strip_html | number_of_words %}
+        {% assign reading_time = words | divided_by: 200 | plus: 1 %}
+        <div class="profile-reading-time">{{ reading_time }} min read</div>
         {% if page.tags %}
             <div class="profile-tags">
                 <h4>Tags:</h4>

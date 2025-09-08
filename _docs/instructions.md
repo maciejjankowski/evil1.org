@@ -18,7 +18,7 @@ permalink: "/instructions/"
 - Always reread the _docs/backlog.md file before starting work as it may have been updated with new tasks or changes
 - **ALWAYS REREAD THE _docs/BACKLOG.MD FILE AFTER COMPLETING ANY TASK** to ensure no new tasks were added and to verify task completion status
 - **ALWAYS** issue a git commit with a brief descriptive message after completing each task from the backlog
-- **COMMIT FORMAT**: Keep commit messages brief - `[MODEL] What was done` (no verbose explanations)
+- **COMMIT FORMAT**: Keep commit messages brief - `What was done` (no verbose explanations)
 
 ## Decision Making & Communication
 - Always assume and execute the best possible option for any decision, based on context and best practices, without asking for confirmation unless absolutely necessary to proceed

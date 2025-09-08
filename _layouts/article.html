@@ -8,6 +8,9 @@ layout: default
         <div class="article-meta">
             <span class="article-author">By {{ page.author | default: "Editorial Team" }}</span>
             <span class="article-date">{{ page.date | date: "%B %d, %Y" }}</span>
+            {% assign words = content | strip_html | number_of_words %}
+            {% assign reading_time = words | divided_by: 200 | plus: 1 %}
+            <span class="article-reading-time">{{ reading_time }} min read</span>
             {% if page.tags %}
                 <div class="article-tags">
                     {% for tag in page.tags %}

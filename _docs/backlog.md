@@ -19,6 +19,7 @@
 - [x] Improve article layouts
 - [x] Add author/date metadata
 - [x] Add content tags
+- [x] Add reading time estimates
 
 ## 🔄 TODO
 - [ ] Add reading time estimates

@@ -7,6 +7,9 @@ layout: default
         <h1>{{ page.organization.name }}</h1>
         <div class="organization-description">{{ page.organization.description }}</div>
         <div class="organization-type">Type: {{ page.organization.type }}</div>
+        {% assign words = content | strip_html | number_of_words %}
+        {% assign reading_time = words | divided_by: 200 | plus: 1 %}
+        <div class="organization-reading-time">{{ reading_time }} min read</div>
         {% if page.tags %}
             <div class="organization-tags">
                 <h4>Tags:</h4>
