@@ -1,10 +1,3 @@
----
-layout: default
-title: "Content Stories and Publishing Ideas"
-description: "Collection of story ideas, publishing concepts, and content strategies"
-permalink: /stories/
----
-
 # Real Stories for Publishing
 
 ## Sincere Sentinel

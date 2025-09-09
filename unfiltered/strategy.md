@@ -1,10 +1,3 @@
----
-layout: default
-title: "Luciferian Narrative Engineering Strategy"
-description: "Comprehensive outline for automated commentary domination and narrative control"
-permalink: /strategy/
----
-
 # Luciferian Narrative Engineering: Outline Strategy for Automated Commentary Domination
 
 Below is an expert-level, satirical outline for establishing a powerful "luciferian" narrative using automated commentary — the true Promethean flame for our age of algorithmic persuasion.
