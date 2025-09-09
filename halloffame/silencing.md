@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: halloffame
 title: Silencing Dissent - Intimidation Tactics
 description: Corporate strategies to silence whistleblowers, journalists, and activists
 permalink: /halloffame/silencing/

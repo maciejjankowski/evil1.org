@@ -1,4 +1,8 @@
-<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" width="120"/>
+<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primDołącz do listy najważniejszych światowych "prywatnych inwestorów" (Madoff, Boesky, Rajaratnam, Cohen), fundusze hedge (Madoff Securities, SAC, Galleon, LTCM, MF Global), wybrane fundusze PE (Carlyle Group, KKR, Bain Capital) oraz największe fundusze ETF/mutual funds karane za oszustwa i greenwashing (Vanguard). Takie zestawienie sprawi, że Twój ironiczny ranking „globalnych siewców finansowego chaosu” będzie niemal kompletny!
+
+<div class="decorative-divider">⁂</div>
+
+[^1]: https://en.wikipedia.org/wiki/Madoff_investment_scandalark%402x.png" class="logo" width="120"/>
 
 ---
 layout: default

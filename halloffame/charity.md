@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: halloffame
 title: Charity Corruption - Exploitation of Good Intentions
 description: How supposed charitable organizations siphon funds for personal gain while perpetuating dependency
 permalink: /halloffame/charity/
@@ -10,16 +10,6 @@ permalink: /halloffame/charity/
 ## Wstęp
 
 Tam, gdzie zaufanie i nadzieja rozkwitają pod szyldem pomocy ubogim, chorującym czy „zbłąkanym duszom", najpiękniej pęcznieje... złota rzeka defraudacji. Religijne i charytatywne imperia, od mega-kościołów Ameryki po filantropijne „fabryki cudu" w każdym zakątku globu, słyną (w licznych przypadkach potwierdzonych śledczo) z umiejętności przekuwania drobnych datek w monumentalne prywatne fortuny.
-
----
-
-## I. Megakościoły – Fabryki Złota na Chwałę Samych Siebie
-
-### Stany Zjednoczone: Gdzie Wiara i Luksus Tworzą Syntezęumienie i Baseny Chciwości: Defraudacje Charytatywne i Religijne, czyli Piekielna Ekonomia Wiary
-
-## Wstęp
-
-Tam, gdzie zaufanie i nadzieja rozkwitają pod szyldem pomocy ubogim, chorującym czy „zbłąkanym duszom”, najpiękniej pęcznieje... złota rzeka defraudacji. Religijne i charytatywne imperia, od mega-kościołów Ameryki po filantropijne „fabryki cudu” w każdym zakątku globu, słyną (w licznych przypadkach potwierdzonych śledczo) z umiejętności przekuwania drobnych datek w monumentalne prywatne fortuny.
 
 ---
 

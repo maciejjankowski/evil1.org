@@ -104,7 +104,7 @@ Chcesz wersję satyrycznych listów do każdego z nich lub dodatkowe „mniejsze
 
 [^6]: Major Players in the 2008 Financial Crisis: Where Are They Now?
 
-<div style="text-align: center">⁂</div>
+<div class="decorative-divider">⁂</div>
 
 [^1]: https://www.sanctionscanner.com/blog/top-14-biggest-aml-fines-of-all-time-updated-for-2025-1034
 

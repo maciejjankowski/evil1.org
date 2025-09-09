@@ -27,12 +27,12 @@ permalink: /halloffame-feed/
       <div class="metrics">
         <div class="metric">
           <div class="rank">Greed Index: 324:1</div>
-          <div class="chart"><div class="bar" style="width: 90%;"></div></div>
+          <div class="chart"><div class="bar bar-90"></div></div>
           <div>Olympic Pools of Blood: 0.0023<br>38 bathtubs</div>
         </div>
         <div class="metric">
           <div class="rank">Pools of Tears: 0.0011<br>18 bathtubs</div>
-          <div class="chart"><div class="bar" style="width: 60%;"></div></div>
+          <div class="chart"><div class="bar bar-60"></div></div>
           <div>Containers of Gold: 1.3</div>
         </div>
       </div>
@@ -53,7 +53,7 @@ permalink: /halloffame-feed/
       <div class="metrics">
         <div class="metric">
           <div class="rank">Sweat Index: 0.2 Olympic pools<br>13 bathtubs</div>
-          <div class="chart"><div class="bar" style="width: 80%;"></div></div>
+          <div class="chart"><div class="bar bar-80"></div></div>
           <div>Greed Index: 200:1</div>
         </div>
       </div>
@@ -74,7 +74,7 @@ permalink: /halloffame-feed/
       <div class="metrics">
         <div class="metric">
           <div class="rank">Containers of Gold: 5</div>
-          <div class="chart"><div class="bar" style="width: 50%;"></div></div>
+          <div class="chart"><div class="bar bar-50"></div></div>
           <div>Legal Fees Burned: $500M</div>
         </div>
       </div>

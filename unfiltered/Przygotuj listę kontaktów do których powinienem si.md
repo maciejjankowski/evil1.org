@@ -49,7 +49,7 @@ Wysyłaj krótkie, personalizowane wiadomości na LinkedIn, a gdy już uzyskasz 
 
 W razie potrzeby zaproponuję konkretne template-y wiadomości lub dodatkowe „myki” networkingowe pod daną grupę banków![^1][^2][^3].
 
-<div style="text-align: center">⁂</div>
+<div class="decorative-divider">⁂</div>
 
 [^1]: CV-Maciej-Jankowski.pdf
 

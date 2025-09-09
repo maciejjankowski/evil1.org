@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: halloffame
 title: Private Military Companies - Mercenary Capitalism
 description: How private armies profit from conflict, regime change, and corporate resource grabs
 permalink: /halloffame/private_wars/

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: halloffame
 title: Truth Displacement - Reality Control
 description: Techniques for replacing factual information with corporate-approved narratives
 permalink: /halloffame/thruth_displacement/

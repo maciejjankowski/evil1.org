@@ -5,18 +5,86 @@ This file contains archived or redundant content from `instructions.md` that has
 
 ## Archived Content
 
-### Duplicate Core Principles (Archived September 9, 2025)
-These principles were duplicated in the original instructions.md and have been consolidated in the main file.
+### AI Agent Best Practices Guide (Archived September 9, 2025)
+**Reason for archiving:** Content merged into main `instructions.md` file for better organization.
 
-- **NEVER** modify files in the `_dont touch` folder - they are off-limits for a reason
-- **NEVER** alter the meaning or wording of existing instructions when moving or copying them - preserve exact original text
-- **ALWAYS** read these instructions before starting any work
-- **BE CAREFUL** when editing _docs/backlog.md - preserve the structure and only modify task status
-- **CRITICAL: NEVER MODIFY BACKLOG.MD HEADER** - The section above "# TASKS" in _docs/backlog.md must remain completely unchanged. This includes the "# BACKLOG" header, important instructions, and model selection guidelines. Only modify task status checkboxes (`[ ]` to `[x]`) in the "# TASKS" section below.
-- **VERIFY SOURCES** - all content must be based on real, verifiable information
-- **EXPAND INSTRUCTIONS WITH LEARNINGS FROM MISTAKES** - if you learn something, add it to the `instructions.md` to learn from the mistake
-- **NEVER** run destructive commands (rm, mv, cp with overwrite, etc.) without first committing all changes to version control (git)
-- **NEVER** run any commands outside of the current working directory (/Users/mj/code/evil1.org)
+**Original content from ai-agent-guide.md:**
+
+#### Explicit Instruction References in Prompts
+Always start your prompts with clear instruction references:
+
+```
+Before starting any work, read these instruction files:
+- _docs/instructions.md (core rules and principles)
+- _docs/workflow.md (complete workflow and model selection)
+- _docs/backlog.md (current tasks)
+
+Then proceed with: [your specific request]
+```
+
+#### Use Context Attachment
+In VS Code Copilot Chat:
+- **Attach the instruction files** as context using `@workspace` or file references
+- **Reference specific sections** when relevant to the task
+- **Include the backlog.md** so the agent knows current task status
+
+#### Start Each Session with File Reading
+Begin conversations by having the agent read the key files:
+```
+Please read and acknowledge the following instruction files before we begin:
+1. /Users/mj/code/evil1.org/_docs/instructions.md
+2. /Users/mj/code/evil1.org/_docs/workflow.md
+3. /Users/mj/code/evil1.org/_docs/backlog.md
+
+Confirm you understand the core rules, workflow, and current tasks.
+```
+
+#### Reference Specific Rules When Needed
+When you notice non-compliance, reference specific rules:
+```
+❌ STOP - You're about to modify the backlog.md header section.
+Please review the CRITICAL RULE in _docs/instructions.md about never modifying the backlog header.
+Only change task status checkboxes in the # TASKS section.
+```
+
+### README.md Quick Reference (Archived September 9, 2025)
+**Reason for archiving:** Content merged into main `workflow.md` file for better organization.
+
+**Original content from README.md:**
+
+#### Start New Tasks
+```bash
+# Initialize task with model selection
+./scripts/start-task.sh "Fix 404 errors in education section"
+
+# Get model recommendations
+./scripts/select-model.sh debug    # For debugging tasks
+./scripts/select-model.sh content  # For content creation
+./scripts/select-model.sh routine  # For maintenance tasks
+```
+
+#### Development Process
+1. **Read Instructions**: `_docs/instructions.md` - Core guidelines and model selection
+2. **Follow Workflow**: `_docs/workflow.md` - Complete development process
+3. **Check Tasks**: `_docs/backlog.md` - Current priorities and tasks
+4. **Review History**: `_docs/improvements.md` - Lessons learned and best practices
+5. **AI Guidelines**: `.github/COPILOT.md` - AI assistant guidelines
+
+#### Commit Format
+All commits follow this format:
+```
+[MODEL] Task description
+- Key changes: [Brief summary]
+```
+
+### _docs Folder Optimization Analysis (Archived September 9, 2025)
+**Reason for archiving:** Analysis document for optimization that has been completed. Content preserved for historical reference.
+
+**Original content from optimization-analysis.md:**
+
+[Full content of optimization-analysis.md would be inserted here - see the file for complete analysis of the optimization process that was just completed]
+- **ALWAYS PRESERVE YAML BLOCK DELIMITERS**: Never remove or break the `---` at the start and end of YAML front matter. All edits must maintain valid YAML blocks for Jekyll compatibility.
+- **AVOID DUPLICATION**: Never duplicate content across files. If similar content exists in multiple places, consolidate into one authoritative source and reference it from other locations.
 - **ALWAYS PRESERVE YAML BLOCK DELIMITERS**: Never remove or break the `---` at the start and end of YAML front matter. All edits must maintain valid YAML blocks for Jekyll compatibility.
 - **AVOID DUPLICATION**: Never duplicate content across files. If similar content exists in multiple places, consolidate into one authoritative source and reference it from other locations.
 

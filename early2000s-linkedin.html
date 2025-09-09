@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>evil1.org - Where Souls Are Sold</title>
+    <style>
+        /* Hellfire Early 2000s Design */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 13px;
+            background: #000;
+            background-image: 
+                repeating-linear-gradient(
+                    0deg,
+                    #1a0000,
+                    #1a0000 10px,
+                    #0d0000 10px,
+                    #0d0000 20px
+                );
+            color: #CCC;
+        }
+
+        /* Flame animation for headers */
+        @keyframes flicker {
+            0%, 100% { text-shadow: 0 0 5px #FF0000, 0 0 10px #FF0000, 0 0 15px #FF6600; }
+            50% { text-shadow: 0 0 10px #FF0000, 0 0 20px #FF0000, 0 0 25px #FF6600; }
+        }
+
+        /* Header */
+        #header {
+            background: linear-gradient(180deg, #330000, #000000);
+            border-bottom: 3px solid #FF0000;
+            border-top: 2px solid #FF6600;
+            padding: 10px 0;
+            box-shadow: 0 5px 15px rgba(255, 0, 0, 0.5);
+        }
+
+        #header-inner {
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        #logo {
+            float: left;
+            padding: 5px 0;
+        }
+
+        #logo svg {
+            display: block;
+        }
+
+        #tagline {
+            color: #FF6600;
+            font-size: 11px;
+            font-style: italic;
+            margin-top: -5px;
+            text-shadow: 0 0 5px #FF0000;
+        }
+
+        #nav {
+            float: right;
+            margin-top: 15px;
+        }
+
+        #nav a {
+            color: #FFD700;
+            text-decoration: none;
+            padding: 6px 12px;
+            margin-left: 5px;
+            background: linear-gradient(180deg, #660000, #330000);
+            border: 1px solid #FF0000;
+            font-size: 13px;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px #000;
+        }
+
+        #nav a:hover {
+            background: linear-gradient(180deg, #990000, #660000);
+            box-shadow: 0 0 10px #FF0000;
+            animation: flicker 0.5s infinite;
+        }
+
+        /* Main Container */
+        #container {
+            width: 800px;
+            margin: 15px auto;
+            background: #1a1a1a;
+            border: 2px solid #660000;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+        }
+
+        /* Common Styles */
+        .clear {
+            clear: both;
+        }
+
+        .section {
+            border: 1px solid #660000;
+            margin: 12px;
+            background: #0d0d0d;
+        }
+
+        .section-header {
+            background: linear-gradient(180deg, #660000, #330000);
+            color: #FFD700;
+            padding: 8px 10px;
+            font-weight: bold;
+            font-size: 14px;
+            border-bottom: 2px solid #FF0000;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        .section-content {
+            padding: 12px;
+            background: #1a1a1a;
+        }
+
+        /* Homepage Layout */
+        #homepage-container {
+            padding: 12px;
+        }
+
+        #left-column {
+            float: left;
+            width: 520px;
+        }
+
+        #right-column {
+            float: right;
+            width: 240px;
+        }
+
+        /* Stories Bar - "Souls of the Damned" */
+        #stories-bar {
+            background: linear-gradient(180deg, #330000, #1a0000);
+            border: 2px solid #660000;
+            padding: 10px;
+            margin-bottom: 12px;
+            border-radius: 0;
+        }
+
+        .stories-title {
+            color: #FF6600;
+            font-size: 11px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .story {
+            display: inline-block;
+            width: 70px;
+            text-align: center;
+            margin-right: 12px;
+            cursor: pointer;
+        }
+
+        .story-avatar {
+            width: 60px;
+            height: 60px;
+            border: 3px solid #FF0000;
+            border-radius: 30px;
+            background: linear-gradient(180deg, #660000, #000);
+            margin: 0 auto 5px;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+        }
+
+        .story:hover .story-avatar {
+            box-shadow: 0 0 20px #FF0000;
+            border-color: #FFD700;
+        }
+
+        .story-name {
+            font-size: 10px;
+            color: #FF6600;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* Feed Posts */
+        .post {
+            border: 2px solid #330000;
+            margin-bottom: 15px;
+            background: #0d0d0d;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .post-header {
+            background: linear-gradient(180deg, #1a0000, #0d0000);
+            padding: 10px;
+            border-bottom: 1px solid #660000;
+        }
+
+        .post-author {
+            font-weight: bold;
+            color: #FF6600;
+            font-size: 14px;
+            text-shadow: 1px 1px 2px #000;
+        }
+
+        .post-time {
+            color: #999;
+            font-size: 11px;
+        }
+
+        .post-content {
+            padding: 15px;
+            line-height: 1.6;
+            font-size: 13px;
+            color: #DDD;
+        }
+
+        .post-actions {
+            background: #1a0000;
+            padding: 8px 12px;
+            border-top: 1px solid #330000;
+        }
+
+        .post-actions a {
+            color: #FFD700;
+            text-decoration: none;
+            margin-right: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .post-actions a:hover {
+            color: #FF0000;
+            text-shadow: 0 0 5px #FF0000;
+        }
+
+        /* Sponsored Post - "Deal with the Devil" */
+        .sponsored {
+            background: linear-gradient(180deg, #330000, #000);
+            border: 2px solid #FFD700;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sponsored::before {
+            content: "💰 SOUL HARVEST 💰";
+            position: absolute;
+            top: -10px;
+            right: -50px;
+            background: #FF0000;
+            color: #FFD700;
+            padding: 5px 60px;
+            transform: rotate(45deg);
+            font-size: 10px;
+            font-weight: bold;
+        }
+
+        .sponsored-label {
+            color: #FFD700;
+            font-size: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* People You Might Know - "Fresh Souls to Corrupt" */
+        .person-suggestion {
+            border-bottom: 1px dashed #660000;
+            padding: 10px 0;
+        }
+
+        .person-suggestion:last-child {
+            border-bottom: none;
+        }
+
+        .person-avatar {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(180deg, #330000, #000);
+            float: left;
+            margin-right: 10px;
+            border: 2px solid #660000;
+            box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+        }
+
+        .person-info {
+            float: left;
+            width: 130px;
+        }
+
+        .person-name {
+            font-weight: bold;
+            color: #FF6600;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 3px;
+            font-size: 13px;
+        }
+
+        .person-name:hover {
+            color: #FF0000;
+            text-shadow: 0 0 5px #FF0000;
+        }
+
+        .person-title {
+            font-size: 11px;
+            color: #999;
+        }
+
+        .add-button {
+            float: right;
+            background: linear-gradient(180deg, #660000, #330000);
+            color: #FFD700;
+            border: 1px solid #FF0000;
+            padding: 4px 10px;
+            font-size: 11px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px #000;
+        }
+
+        .add-button:hover {
+            background: linear-gradient(180deg, #990000, #660000);
+            box-shadow: 0 0 10px #FF0000;
+        }
+
+        /* Profile Page */
+        #profile-header {
+            background: linear-gradient(180deg, #330000, #000);
+            padding: 20px;
+            border-bottom: 3px solid #FF0000;
+        }
+
+        #profile-photo {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(180deg, #660000, #000);
+            border: 3px solid #FF0000;
+            float: left;
+            margin-right: 20px;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+        }
+
+        #profile-info h1 {
+            color: #FFD700;
+            font-size: 22px;
+            margin-bottom: 8px;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        #profile-info .headline {
+            font-size: 14px;
+            color: #FF6600;
+            margin-bottom: 5px;
+        }
+
+        #profile-info .location {
+            font-size: 12px;
+            color: #999;
+        }
+
+        .profile-section {
+            margin: 15px;
+            border: 2px solid #330000;
+            background: #0d0d0d;
+        }
+
+        .work-item, .skill-item {
+            padding: 12px;
+            border-bottom: 1px dashed #330000;
+            background: #1a1a1a;
+        }
+
+        .work-item:last-child, .skill-item:last-child {
+            border-bottom: none;
+        }
+
+        .work-title {
+            font-weight: bold;
+            color: #FF6600;
+            font-size: 14px;
+        }
+
+        .work-company {
+            color: #FFD700;
+            font-style: italic;
+            font-size: 13px;
+        }
+
+        .work-dates {
+            color: #999;
+            font-size: 11px;
+        }
+
+        .skill-bar {
+            background: #330000;
+            height: 18px;
+            margin-top: 5px;
+            position: relative;
+            border: 1px solid #660000;
+        }
+
+        .skill-fill {
+            background: linear-gradient(90deg, #FF0000, #FFD700);
+            height: 100%;
+            position: absolute;
+            box-shadow: 0 0 10px rgba(255, 100, 0, 0.5);
+        }
+
+        /* Business Page - "Corporate Overlords" */
+        #business-header {
+            background: linear-gradient(180deg, #000, #330000);
+            color: white;
+            padding: 25px;
+            border-bottom: 3px solid #FF0000;
+        }
+
+        #business-header h1 {
+            font-size: 24px;
+            margin-bottom: 8px;
+            color: #FFD700;
+            text-shadow: 2px 2px 4px #000, 0 0 20px #FF0000;
+        }
+
+        #business-header .tagline {
+            font-size: 14px;
+            color: #FF6600;
+            font-style: italic;
+        }
+
+        .article {
+            border: 2px solid #330000;
+            margin: 15px;
+            background: #0d0d0d;
+        }
+
+        .article-header {
+            background: linear-gradient(180deg, #1a0000, #0d0000);
+            padding: 12px;
+            border-bottom: 1px solid #660000;
+        }
+
+        .article-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #FFD700;
+            text-decoration: none;
+        }
+
+        .article-title:hover {
+            color: #FF0000;
+            text-shadow: 0 0 10px #FF0000;
+        }
+
+        .article-meta {
+            font-size: 11px;
+            color: #999;
+            margin-top: 6px;
+        }
+
+        .article-content {
+            padding: 15px;
+            line-height: 1.6;
+            color: #DDD;
+            font-size: 13px;
+        }
+
+        .article-footer {
+            background: #1a0000;
+            padding: 10px;
+            border-top: 1px solid #330000;
+            font-size: 12px;
+            color: #FF6600;
+        }
+
+        /* Tab Navigation */
+        .tabs {
+            border-bottom: 3px solid #FF0000;
+            background: #1a0000;
+            padding: 0 12px;
+        }
+
+        .tab {
+            display: inline-block;
+            padding: 10px 18px;
+            background: linear-gradient(180deg, #330000, #1a0000);
+            border: 1px solid #660000;
+            border-bottom: none;
+            margin-right: 3px;
+            cursor: pointer;
+            position: relative;
+            top: 3px;
+            color: #FFD700;
+            font-weight: bold;
+            font-size: 13px;
+        }
+
+        .tab:hover {
+            background: linear-gradient(180deg, #660000, #330000);
+        }
+
+        .tab.active {
+            background: #0d0d0d;
+            border-bottom: 3px solid #0d0d0d;
+            color: #FF0000;
+        }
+
+        /* Hellfire decorations */
+        .flames {
+            height: 30px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 30"><path d="M0,30 Q5,20 10,30 T20,30 Q25,15 30,30 T40,30 Q45,20 50,30 T60,30 Q65,15 70,30 T80,30 Q85,20 90,30 T100,30" fill="none" stroke="%23FF0000" stroke-width="2" opacity="0.5"/></svg>') repeat-x;
+            margin-top: -2px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div id="header">
+        <div id="header-inner">
+            <div id="logo">
+                <svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="goldGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#FFA500;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#FF6600;stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="fireGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+                            <stop offset="0%" style="stop-color:#FF0000;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#FF6600;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#FFFF00;stop-opacity:1" />
+                        </linearGradient>
+                        <filter id="glow">
+                            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                            <feMerge>
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <rect x="120" y="8" width="45" height="45" fill="#000000" stroke="#FF0000" stroke-width="2"/>
+                    <path d="M 10 55 Q 15 45, 20 55 T 30 55 Q 35 40, 40 55 T 50 55 Q 55 35, 60 55 T 70 55 Q 75 40, 80 55 T 90 55 Q 95 45, 100 55 T 110 55 Q 115 38, 120 55 T 130 55 Q 135 42, 140 55 T 150 55 Q 155 35, 160 55 T 170 55 Q 175 40, 180 55 T 190 55" 
+                          fill="none" stroke="url(#fireGradient)" stroke-width="3" opacity="0.7"/>
+                    <text x="10" y="40" font-family="Impact, Arial Black, sans-serif" font-size="45" font-weight="900" fill="#CC0000" filter="url(#glow)">evil</text>
+                    <text x="12" y="42" font-family="Impact, Arial Black, sans-serif" font-size="45" font-weight="900" fill="#000000" opacity="0.5">evil</text>
+                    <text x="128" y="42" font-family="Impact, Arial Black, sans-serif" font-size="38" font-weight="900" fill="url(#goldGradient)" filter="url(#glow)">1</text>
+                    <text x="165" y="40" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#FF6600">.org</text>
+                    <path d="M 125 8 Q 127 3, 129 8 T 133 8 Q 135 1, 137 8 T 141 8 Q 143 3, 145 8 T 149 8 Q 151 1, 153 8 T 157 8" 
+                          fill="none" stroke="#FF0000" stroke-width="1.5" opacity="0.8"/>
+                </svg>
+                <div id="tagline">Where Souls Are Traded Daily™</div>
+            </div>
+            <div id="nav">
+                <a href="#home">Purgatory</a>
+                <a href="#profile">My Sins</a>
+                <a href="#network">Soul Network</a>
+                <a href="#jobs">Slave Labor</a>
+                <a href="#messages">Screams</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="flames"></div>
+
+    <!-- Homepage -->
+    <div id="container">
+        <div id="homepage-container">
+            <!-- Left Column - Feed -->
+            <div id="left-column">
+                <!-- Stories -->
+                <div id="stories-bar">
+                    <div class="stories-title">🔥 Fresh Souls Burning 🔥</div>
+                    <div class="story">
+                        <div class="story-avatar"></div>
+                        <div class="story-name">Your Soul</div>
+                    </div>
+                    <!-- Jekyll: {% for story in site.data.stories %} -->
+                    <div class="story">
+                        <div class="story-avatar"></div>
+                        <div class="story-name">CEO Smith</div>
+                    </div>
+                    <div class="story">
+                        <div class="story-avatar"></div>
+                        <div class="story-name">VP Sarah</div>
+                    </div>
+                    <div class="story">
+                        <div class="story-avatar"></div>
+                        <div class="story-name">CFO Chen</div>
+                    </div>
+                    <!-- {% endfor %} -->
+                </div>
+
+                <!-- Feed Posts -->
+                <!-- Jekyll: {% for post in site.data.feed %} -->
+                <div class="post">
+                    <div class="post-header">
+                        <span class="post-author">Robert "The Liquidator" Johnson</span>
+                        <span class="post-time">2 hours in hell</span>
+                    </div>
+                    <div class="post-content">
+                        Just terminated 500 employees before the holidays! Stock price up 3%! The board is thrilled. Their screams fuel my year-end bonus. 💰 #Efficiency #ShareholderValue #CrushingDreams
+                    </div>
+                    <div class="post-actions">
+                        <a href="#">🔥 Burn (666)</a>
+                        <a href="#">💀 Condemn (88)</a>
+                        <a href="#">😈 Spread Evil</a>
+                    </div>
+                </div>
+
+                <!-- Sponsored Post -->
+                <div class="post sponsored">
+                    <div class="post-header">
+                        <span class="sponsored-label">DEVIL'S BARGAIN</span><br>
+                        <span class="post-author">MegaCorp Industries</span>
+                    </div>
+                    <div class="post-content">
+                        🔥 Sell your soul for just 10% equity! 🔥 Join our "unlimited" PTO plan (restrictions apply). Work only 80 hours/week! Ping pong table included! Your life-work balance awaits!*
+                        <br><small>*Balance not guaranteed. Soul non-refundable.</small>
+                    </div>
+                    <div class="post-actions">
+                        <a href="#">Sign in Blood</a>
+                        <a href="#">Ignore (and suffer)</a>
+                    </div>
+                </div>
+
+                <div class="post">
+                    <div class="post-header">
+                        <span class="post-author">Emily "The Exploiter" Davis</span>
+                        <span class="post-time">5 hours of torment ago</span>
+                    </div>
+                    <div class="post-content">
+                        Thrilled to announce our unpaid internship program! 200 applicants for 1 position that requires 5 years experience. Remember: exposure is the real payment! 🎉 #Exploitation #ModernSlavery
+                    </div>
+                    <div class="post-actions">
+                        <a href="#">🔥 Burn (1,666)</a>
+                        <a href="#">💀 Condemn (234)</a>
+                        <a href="#">😈 Spread Evil</a>
+                    </div>
+                </div>
+                <!-- {% endfor %} -->
+            </div>
+
+            <!-- Right Column - Widgets -->
+            <div id="right-column">
+                <!-- People You Might Know -->
+                <div class="section">
+                    <div class="section-header">🔥 Souls to Corrupt 🔥</div>
+                    <div class="section-content">
+                        <!-- Jekyll: {% for person in site.data.suggestions %} -->
+                        <div class="person-suggestion">
+                            <div class="person-avatar"></div>
+                            <div class="person-info">
+                                <a href="#" class="person-name">Lisa "Layoff" Anderson</a>
+                                <div class="person-title">Downsizing Expert at IBM</div>
+                            </div>
+                            <button class="add-button">+ Damn</button>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="person-suggestion">
+                            <div class="person-avatar"></div>
+                            <div class="person-info">
+                                <a href="#" class="person-name">David "Destroyer" Kim</a>
+                                <div class="person-title">Dream Crusher at StartupXYZ</div>
+                            </div>
+                            <button class="add-button">+ Damn</button>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="person-suggestion">
+                            <div class="person-avatar"></div>
+                            <div class="person-info">
+                                <a href="#" class="person-name">Maria "Misery" Garcia</a>
+                                <div class="person-title">Hope Extinguisher, HR</div>
+                            </div>
+                            <button class="add-button">+ Damn</button>
+                            <div class="clear"></div>
+                        </div>
+                        <!-- {% endfor %} -->
+                    </div>
+                </div>
+
+                <!-- Ads -->
+                <div class="section">
+                    <div class="section-header">💀 SOUL AUCTION 💀</div>
+                    <div class="section-content" style="text-align: center; padding: 20px;">
+                        <div style="border: 2px solid #FF0000; padding: 30px; background: linear-gradient(180deg, #330000, #000); color: #FFD700;">
+                            YOUR SOUL<br>HERE<br>
+                            <span style="font-size: 20px;">💰</span><br>
+                            200x200<br>
+                            <small>Highest Bidder</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <!-- Profile Page -->
+    <div id="container" style="margin-top: 20px;">
+        <div id="profile-header">
+            <div id="profile-photo"></div>
+            <div id="profile-info">
+                <h1>{{ page.profile.name | default: "Jane 'The Destroyer' Developer" }}</h1>
+                <div class="headline">{{ page.profile.headline | default: "Senior Soul Extractor at TechCorp" }}</div>
+                <div class="location">{{ page.profile.location | default: "Silicon Valley Circle of Hell" }}</div>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="tabs">
+            <div class="tab active">Sin Record</div>
+            <div class="tab">Evil Deeds</div>
+            <div class="tab">Damned Souls</div>
+        </div>
+
+        <!-- Work Experience -->
+        <div class="profile-section">
+            <div class="section-header">💼 Corporate Sins 💼</div>
+            <div class="section-content">
+                <!-- Jekyll: {% for job in page.profile.experience %} -->
+                <div class="work-item">
+                    <div class="work-title">Senior Soul Extractor</div>
+                    <div class="work-company">TechCorp Solutions (Level 7 Hell)</div>
+                    <div class="work-dates">2020 - Eternity</div>
+                    <div style="margin-top: 5px;">Crushing dreams through "agile" methodologies. Managing 5 tortured developers. Implemented mandatory weekend "fun" meetings.</div>
+                </div>
+                <div class="work-item">
+                    <div class="work-title">Hope Destroyer</div>
+                    <div class="work-company">StartupXYZ (Purgatory Division)</div>
+                    <div class="work-dates">2018 - 2020</div>
+                    <div style="margin-top: 5px;">Promised equity that never vested. Pivoted 47 times. Burned through $10M in VC souls.</div>
+                </div>
+                <div class="work-item">
+                    <div class="work-title">Junior Exploiter</div>
+                    <div class="work-company">WebAgency Inc. (Surface Level)</div>
+                    <div class="work-dates">2016 - 2018</div>
+                    <div style="margin-top: 5px;">Charged clients 500% markup. Delivered WordPress sites as "custom solutions".</div>
+                </div>
+                <!-- {% endfor %} -->
+            </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="profile-section">
+            <div class="section-header">😈 Dark Arts & Expertise 😈</div>
+            <div class="section-content">
+                <!-- Jekyll: {% for skill in page.profile.skills %} -->
+                <div class="skill-item">
+                    <div>Soul Crushing (JavaScript)</div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div>Dream Destruction (Python)</div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 75%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div>Exploitation Management</div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 95%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div>Burnout Architecture</div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 88%"></div>
+                    </div>
+                </div>
+                <!-- {% endfor %} -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Business Page -->
+    <div id="container" style="margin-top: 20px;">
+        <div id="business-header">
+            <h1>{{ page.company.name | default: "TechCorp Solutions™" }}</h1>
+            <div class="tagline">{{ page.company.tagline | default: "Your Dreams, Our Profits™" }}</div>
+        </div>
+
+        <div class="tabs">
+            <div class="tab active">Propaganda</div>
+            <div class="tab">Exploitation</div>
+            <div class="tab">False Promises</div>
+            <div class="tab">Slave Positions</div>
+        </div>
+
+        <!-- Articles -->
+        <!-- Jekyll: {% for article in page.company.articles %} -->
+        <div class="article">
+            <div class="article-header">
+                <a href="#" class="article-title">Why 120-Hour Work Weeks Build Character</a>
+                <div class="article-meta">Published by Corporate Overlords • 3 days in hell • 5 min of torture</div>
+            </div>
+            <div class="article-content">
+                Studies show that employees who never see their families are 200% more productive! At TechCorp, we believe work-life integration means your life IS work. Our open office ensures you can never escape the watchful eye of management. Remember: sleep is for the weak, and weekends are a myth perpetuated by communists...
+            </div>
+            <div class="article-footer">
+                🔥 666 burns • 😭 45 tears • 💀 12 souls lost
+            </div>
+        </div>
+
+        <div class="article">
+            <div class="article-header">
+                <a href="#" class="article-title">The Beauty of Unpaid Overtime: A Love Story</a>
+                <div class="article-meta">Published by TechCorp Solutions • 1 week of suffering ago • 8 min read</div>
+            </div>
+            <div class="article-content">
+                "Passion" means working for free, right? We explore how dedicating your entire existence to shareholder value creates meaning in life. Learn why refusing overtime is a career-limiting move and how "voluntary" mandatory fun events boost morale. Featuring testimonials from employees who definitely weren't coerced...
+            </div>
+            <div class="article-footer">
+                🔥 1,156 burns • 😭 89 tears • 💀 23 souls lost
+            </div>
+        </div>
+
+        <div class="article">
+            <div class="article-header">
+                <a href="#" class="article-title">AI Will Replace You: Embrace the Inevitable</a>
+                <div class="article-meta">Published by TechCorp Solutions • 2 weeks of damnation ago • 12 min of despair</div>
+            </div>
+            <div class="article-content">
+                Why train employees when we can replace them? This comprehensive guide walks through our 5-year plan to eliminate 80% of our workforce. But don't worry - we're a family! (Families that fire each other for quarterly earnings). Learn how to make yourself useful for another 6 months before the inevitable downsizing...
+            </div>
+            <div class="article-footer">
+                🔥 2,445 burns • 😭 667 tears • 💀 134 souls lost
+            </div>
+        </div>
+        <!-- {% endfor %} -->
+    </div>
+
+    <div class="flames"></div>
+
+    <!-- Jekyll Data Structure Examples -->
+    <!--
+    _data/feed.yml:
+    - author: "Robert 'The Liquidator' Johnson"
+      time: "2 hours in hell"
+      content: "Just terminated 500 employees..."
+      burns: 666
+      condemns: 88
+      
+    _data/stories.yml:
+    - name: "CEO Smith"
+      avatar: "/assets/avatars/demon-ceo.jpg"
+      soul_status: "damned"
+    
+    _data/suggestions.yml:
+    - name: "Lisa 'Layoff' Anderson"
+      title: "Downsizing Expert at IBM"
+      souls_harvested: 1200
+      
+    page front matter for profile:
+    profile:
+      name: "Jane 'The Destroyer' Developer"
+      headline: "Senior Soul Extractor"
+      location: "Silicon Valley Circle of Hell"
+      experience:
+        - title: "Senior Soul Extractor"
+          company: "TechCorp (Level 7 Hell)"
+          dates: "2020 - Eternity"
+          sins: "Crushing dreams through agile..."
+      skills:
+        - name: "Soul Crushing (JavaScript)"
+          level: 90
+          
+    page front matter for company:
+    company:
+      name: "TechCorp Solutions™"
+      tagline: "Your Dreams, Our Profits™"
+      articles:
+        - title: "Why 120-Hour Work Weeks Build Character"
+          date: "3 days in hell"
+          read_time: "5 min of torture"
+          content: "..."
+          burns: 666
+    -->
+</body>
+</html>

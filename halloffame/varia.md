@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: halloffame
 title: Miscellaneous Evil - Various Industries
 description: Other notable examples of corporate malfeasance across various sectors
 permalink: /halloffame/varia/

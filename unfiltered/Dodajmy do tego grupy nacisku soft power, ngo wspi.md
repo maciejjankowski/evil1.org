@@ -56,7 +56,7 @@ Do „elitarnego” katalogu Twojego alternatywnego serwisu warto więc dodać:
 
 [^1][^3][^6][^9][^11][^4][^7][^12][^10][^5][^8]
 
-<div style="text-align: center">⁂</div>
+<div class="decorative-divider">⁂</div>
 
 [^1]: https://en.wikipedia.org/wiki/Soft_power
 

@@ -32,7 +32,7 @@ permalink: /profiles/
                             <div class="skill-item">
                                 <span class="skill-name">{{ skill.name }}</span>
                                 <div class="skill-bar">
-                                    <div class="skill-level" style="width: {{ skill.level }}%"></div>
+                                    <div class="skill-level skill-{{ skill.level }}"></div>
                                 </div>
                             </div>
                         {% endfor %}

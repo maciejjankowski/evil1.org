@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: halloffame
 title: Media Manipulation - Information Control
 description: How media corporations shape narratives to protect corporate interests and suppress dissent
 permalink: /halloffame/media/

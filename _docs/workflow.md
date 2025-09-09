@@ -6,356 +6,367 @@ date: "2025-09-08"description: "Comprehensive development workflow with Copilot 
 permalink: "/workflow/"
 ---
 
-# Development Workflow with Copilot Model Selection
+# DEVELOPMENT WORKFLOW
 
-## Overview
-This document outlines the development workflow for the evil1.org Jekyll site, incorporating intelligent Copilot model selection for optimal task completion.
-
-## Quick Start Scripts
-
-### Task Initiation
-Use the automated task initiation script:
-
+## QUICK START
 ```bash
-# Start any task with proper model selection
+# Assess → Select Model → Execute → Verify
 ./scripts/start-task.sh "Fix 404 errors in education section"
-
-# This will:
-# 1. Assess task complexity
-# 2. Provide model recommendations
-# 3. Create task documentation
-# 4. Guide you through the process
+./scripts/select-model.sh debug    # Returns: GPT-4.1 (complex debugging)
 ```
 
-### Model Selection Helper
-Get instant model recommendations:
-
-```bash
-# For debugging tasks
-./scripts/select-model.sh debug
-
-# For content creation
-./scripts/select-model.sh content
-
-# For routine maintenance
-./scripts/select-model.sh routine
-
-# Available types: debug, config, content, routine, complex, simple
+## SESSION SETUP
+```
+READ: _docs/instructions.md, _docs/workflow.md, _docs/backlog.md
+CONFIRM: Core rules understood, model selected, DoD defined
 ```
 
-## Pre-Task Preparation
+## MODEL SELECTION MATRIX
 
-### 1. Read Instructions
-**ALWAYS** read `instructions.md` before starting any work to understand:
-- Current guidelines and best practices
-- Copilot model selection criteria
-- Task management protocols
+| Complexity | Examples | Model | Focus |
+|------------|----------|-------|-------|
+| **Low** | File edits, validation | Grok Fast 1 | Speed, reliability |
+| **Medium** | Content, standard debug | GPT-5 mini | Balance, quality |
+| **High** | Complex debug, config | GPT-4.1 | Depth, analysis |
+| **Special** | Ethical content, docs | GPT-4o | Quality, compliance |
 
-### 2. Assess Task Complexity
-Evaluate the task against these criteria:
+## EXECUTION WORKFLOWS
 
-**🔴 HIGH COMPLEXITY (Use GPT-4):**
-- Involves debugging complex issues (404 errors, build failures)
-- Requires deep technical analysis (Jekyll configuration, plugin setup)
-- Involves multiple file changes or system integration
-- Needs comprehensive problem-solving
-
-**🟡 MEDIUM COMPLEXITY (Use GPT-3.5 or GPT-4):**
-- Standard content creation or editing
-- Routine maintenance tasks
-- Simple debugging (syntax errors, basic validation)
-- Configuration changes
-
-**🟢 LOW COMPLEXITY (Use GPT-3.5):**
-- Basic file operations (create, edit, delete)
-- Simple content updates
-- Routine commands and validation
-- Quick fixes
-
-### 3. Model Selection Protocol
-
-#### Primary Model Selection
+### GPT-4.1 (Complex Tasks)
 ```bash
-# For Jekyll debugging and complex tasks
-MODEL: GPT-4.1
-REASON: Complex debugging required for 404 errors and build issues
+# 1. Deep Analysis
+- Use verbose debugging flags
+- Comprehensive error analysis
+- Multi-step problem solving
+- Thorough testing and validation
 
-# For content creation and documentation
+# 2. Quality Verification
+- Cross-reference with existing patterns
+- Test edge cases and failure modes
+- Document findings and solutions
+- Update knowledge base
+```
+
+### GPT-5 mini (Balanced Tasks)
+```bash
+# 1. Balanced Execution
+- Moderate analysis and debugging
+- Standard development practices
+- Quality-focused implementation
+- Comprehensive but efficient testing
+
+# 2. Documentation
+- Update task documentation
+- Note model performance insights
+- Document any learnings discovered
+```
+
+### Grok Fast 1 (Routine Tasks)
+```bash
+# 1. Efficient Execution
+- Quick file operations and validation
+- Routine maintenance and simple fixes
+- Basic testing and verification
+- Fast iteration on straightforward tasks
+
+# 2. Minimal Documentation
+- Brief commit messages
+- Update only essential references
+- Focus on execution speed
+```
+
+### GPT-4o (Content/Ethical Tasks)
+```bash
+# 1. Quality-First Execution
+- High-quality content creation
+- Ethical content review and validation
+- Narrative structure optimization
+- Comprehensive fact-checking
+
+# 2. Compliance Documentation
+- Detailed content analysis
+- Ethical considerations documentation
+- Quality assurance verification
+- Source validation records
+```
+
+## QUALITY ASSURANCE
+
+### Universal QA Protocol
+```yaml
+✅ FUNCTIONAL: Code works as specified, no regressions
+✅ QUALITY: Meets coding/content standards, follows best practices
+✅ TESTING: All test cases pass, edge cases covered
+✅ DOCUMENTATION: Code documented, instructions updated
+✅ VERIFICATION: Independent review completed, DoD met
+```
+
+### Commit Format Standard
+```
+[MODEL] Brief task description
+- Key changes implemented
+- Quality verification completed
+- Documentation updated
+```
+
+## EMERGENCY PROTOCOLS
+
+### When Model Selection is Wrong
+1. **Immediate Assessment**: Evaluate if task complexity changed
+2. **Model Switch**: Select appropriate model for current complexity
+3. **Context Preservation**: Maintain work done, avoid restart
+4. **Documentation**: Note switching reason for future reference
+
+### When Task Becomes Complex
+1. **Stop Current Approach**: Prevent inefficient work
+2. **Reassess Scope**: Break into smaller tasks if needed
+3. **Model Upgrade**: Switch to GPT-4.1 for complex scenarios
+4. **DoD Refinement**: Update completion criteria for new scope
+
+### When Quality Issues Detected
+1. **Pause Execution**: Stop work on current deliverable
+2. **Quality Review**: Assess against DoD criteria
+3. **Remediation Plan**: Define fixes and prevention measures
+4. **Verification**: Independent review before proceeding
+
+## PERFORMANCE TRACKING
+
+### Success Metrics
+- **Task Completion Rate**: Percentage of tasks meeting DoD first time
+- **Model Efficiency**: Average time per complexity level
+- **Quality Score**: Percentage of deliverables passing QA
+- **Learning Velocity**: New patterns documented per month
+
+### Continuous Optimization
+- **Weekly Review**: Assess model performance and DoD effectiveness
+- **Pattern Recognition**: Identify optimal approaches for task types
+- **Template Updates**: Refine prompt templates based on results
+- **Knowledge Base**: Update instructions.md with new learnings
+
+## REFERENCE ARCHITECTURE
+
+### Core Documentation Structure
+- **instructions.md**: Quality framework, critical rules, DoD templates
+- **workflow.md**: Execution protocols, model selection, QA processes
+- **backlog.md**: Task management and progress tracking
+- **improvements.md**: Technical best practices and debugging guides
+- **CONTENT_FORMAT_STANDARDS.md**: Content specifications and standards
+- **fat.md**: Historical archive and deprecated content
+
+### Content-Specific Files
+- **content-creation-plan.md**: Content strategy and planning
+- **image_prompts.md**: AI image generation specifications
+- **slogans.md**: Advertising and marketing content
+- **stories.md**: Content ideas and publishing concepts
+- **strategy.md**: Narrative and communication strategy
+- **topics.md**: Content topics and themes
+- **suggestions.md**: Technical improvement suggestions
+- **validate_organizations.sh**: Automated validation scripts
+AUDIENCE: [Target readers, tone, style guidelines]
+COMPLIANCE: [Fact-checking requirements, ethical boundaries]
+DELIVERABLE: [Format specs, SEO requirements, review process]
 MODEL: GPT-4o
-REASON: High-quality content writing and ethical considerations
-
-# For routine maintenance
-MODEL: Grok Code Fast 1
-REASON: Fast execution for simple file operations and basic validation
-
-# For balanced development tasks
-MODEL: GPT-5 mini
-REASON: Good balance of speed and capability for medium-complexity tasks
+DoD: [Quality gates, verification steps]
 ```
 
-#### Model Switching Criteria
-- **Switch to GPT-4.1** if task becomes more complex than initially assessed
-- **Switch to GPT-4o** if content quality and narrative are more important than technical depth
-- **Switch to Grok Code Fast 1** if task is simpler than expected and speed is priority
-- **Switch to GPT-5 mini** for balanced performance on medium-complexity tasks
+### Debugging/Issue Resolution Prompt
+```
+ISSUE: [Specific problem with symptoms]
+CONTEXT: [Environment, recent changes, affected systems]
+DIAGNOSTIC: [Tools to use, reproduction steps, log analysis]
+ROOT_CAUSE: [Hypothesized cause, investigation approach]
+DELIVERABLE: [Fix implementation, testing plan, documentation]
+MODEL: GPT-4.1
+DoD: [Resolution criteria, prevention measures]
+```
 
-## Task Execution Workflow
+## ⚡ EXECUTION WORKFLOWS
 
-### Phase 1: Task Analysis
-1. **Read _docs/backlog.md** for current tasks
-2. **Assess complexity** using criteria above
-3. **Select appropriate model** based on task type
-4. **Document model choice** in task notes
+### Phase 1: Task Analysis & Planning
+1. **Read Context**: instructions.md, workflow.md, backlog.md
+2. **Assess Complexity**: Match to model selection matrix
+3. **Define DoD**: Specific, measurable completion criteria
+4. **Break Down**: Complex tasks → actionable subtasks
 
 ### Phase 2: Model-Specific Execution
 
 #### GPT-4.1 Workflow (Complex Tasks)
 ```bash
-# 1. Deep analysis phase
-- Use verbose debugging (--verbose flags)
+# 1. Deep Analysis
+- Use verbose debugging flags
 - Comprehensive error analysis
 - Multi-step problem solving
 - Thorough testing and validation
 
-# 2. Documentation phase
-- Document findings in improvements.md
-- Update instructions.md if new patterns discovered
-- Create detailed commit messages
+# 2. Quality Verification
+- Cross-reference with existing patterns
+- Test edge cases and failure modes
+- Document findings and solutions
+- Update knowledge base
 ```
 
 #### GPT-5 mini Workflow (Balanced Tasks)
 ```bash
-# 1. Balanced execution phase
-- Moderate debugging and analysis
+# 1. Balanced Execution
+- Moderate analysis and debugging
 - Standard development practices
 - Quality-focused implementation
-- Comprehensive testing
+- Comprehensive but efficient testing
 
-# 2. Documentation phase
+# 2. Documentation
 - Update task documentation
-- Note model performance
-- Document any learnings
+- Note model performance insights
+- Document any learnings discovered
 ```
 
 #### Grok Code Fast 1 Workflow (Routine Tasks)
 ```bash
-# 1. Efficient execution phase
-- Quick file operations
-- Basic validation and testing
-- Routine maintenance tasks
-- Fast iteration on simple changes
+# 1. Efficient Execution
+- Quick file operations and validation
+- Routine maintenance and simple fixes
+- Basic testing and verification
+- Fast iteration on straightforward tasks
 
-# 2. Minimal documentation phase
+# 2. Minimal Documentation
 - Brief commit messages
-- Update only if significant changes
+- Update only essential references
+- Focus on execution speed
 ```
 
-#### GPT-4o Workflow (Content Tasks)
+#### GPT-4o Workflow (Content/Ethical Tasks)
 ```bash
-# 1. Quality-focused execution phase
+# 1. Quality-First Execution
 - High-quality content creation
-- Ethical content review
+- Ethical content review and validation
 - Narrative structure optimization
-- Documentation excellence
+- Comprehensive fact-checking
 
-# 2. Comprehensive documentation phase
+# 2. Compliance Documentation
 - Detailed content analysis
 - Ethical considerations documentation
-- Quality assurance notes
+- Quality assurance verification
+- Source validation records
 ```
 
-### Phase 3: Quality Assurance
+### Phase 3: Quality Assurance & Completion
 
-#### Universal QA Steps (All Models)
-1. **Test changes** thoroughly before marking complete
-2. **Verify links** work correctly (no 404 errors)
-3. **Check build** passes without errors
-4. **Validate YAML** syntax in all modified files
-
-#### Model-Specific QA
+#### Universal QA Protocol
 ```yaml
-# GPT-4: Deep validation
-- Comprehensive link testing
-- Build verification with --verbose
-- Cross-browser compatibility check
-- Performance impact assessment
-
-# GPT-3.5: Quick validation
-- Basic link checks
-- Build verification
-- Syntax validation
-- Functional testing
-
-# Claude: Content validation
-- Content accuracy verification
-- Ethical considerations review
-- Readability and clarity assessment
-- Source verification
+✅ FUNCTIONAL: Code works as specified, no regressions
+✅ QUALITY: Meets coding/content standards, follows best practices
+✅ TESTING: All test cases pass, edge cases covered
+✅ DOCUMENTATION: Code documented, instructions updated
+✅ VERIFICATION: Independent review completed, DoD met
 ```
 
-## Post-Task Activities
-
-### 1. Task Completion
-- Mark task as `[x]` in _docs/backlog.md
-- Commit changes with descriptive message
-- Update any relevant documentation
-
-### 2. Model Performance Review
-```markdown
-# After each task, document:
-- Model used and why
-- Success/failure metrics
-- Any model switching that occurred
-- Recommendations for future tasks
+#### Commit Format Standard
+```
+[MODEL] Brief task description
+- Key changes implemented
+- Quality verification completed
+- Documentation updated
 ```
 
-### 3. Continuous Improvement
-- Update `improvements.md` with new learnings
-- Refine model selection criteria based on experience
-- Document any new patterns or best practices
+## 🎯 ADVANCED DoD REFINEMENT TECHNIQUES
 
-## Model Performance Tracking
-
-### Success Metrics
-- **Task Completion Time**: How long each model takes for different task types
-- **Error Rate**: Frequency of issues requiring model switching
-- **Quality Score**: Output quality assessment for each model
-- **User Satisfaction**: Effectiveness rating for different task types
-
-### Performance Log Template
-```markdown
-## Task: [Task Description]
-**Date:** YYYY-MM-DD
-**Model Used:** [Grok Code Fast 1/GPT-4.1/GPT-4o/GPT-5 mini]
-**Complexity:** [High/Medium/Low]
-**Time Taken:** [X minutes/hours]
-**Success:** [Yes/No/Partial]
-**Notes:** [Any issues, switching, or learnings]
-**Recommendation:** [Model preference for similar tasks]
+### DoD Template Customization
+```
+✅ [DOMAIN]: [Specific measurable criteria]
+✅ [ASPECT]: [Quality standard with verification method]
+✅ [VERIFICATION]: [How to confirm requirement met]
+✅ [DOCUMENTATION]: [What must be recorded]
+✅ [PREVENTION]: [How to avoid similar issues]
 ```
 
-### Performance Tracking File
-Create `_data/model-performance.yml` to track model effectiveness:
+### Task-Specific DoD Examples
 
-```yaml
-# _data/model-performance.yml
-models:
-  grok_code_fast_1:
-    total_tasks: 0
-    success_rate: 0.0
-    avg_completion_time: "0m"
-    best_for: ["routine", "simple", "fast"]
-    performance_score: 0.0
-  
-  gpt_4_1:
-    total_tasks: 0
-    success_rate: 0.0
-    avg_completion_time: "0m"
-    best_for: ["debug", "config", "complex"]
-    performance_score: 0.0
-  
-  gpt_4o:
-    total_tasks: 0
-    success_rate: 0.0
-    avg_completion_time: "0m"
-    best_for: ["content", "documentation", "ethical"]
-    performance_score: 0.0
-  
-  gpt_5_mini:
-    total_tasks: 0
-    success_rate: 0.0
-    avg_completion_time: "0m"
-    best_for: ["balanced", "medium", "general"]
-    performance_score: 0.0
-
-recent_tasks:
-  - date: "2025-09-08"
-    task: "Workflow implementation"
-    model: "gpt_4_1"
-    complexity: "medium"
-    time_taken: "15m"
-    success: true
-    notes: "Comprehensive analysis and implementation"
+#### API Integration DoD
+```
+✅ FUNCTIONAL: API calls successful, error handling works
+✅ SECURITY: No sensitive data exposure, proper authentication
+✅ PERFORMANCE: Response times within SLA, rate limiting implemented
+✅ TESTING: Unit tests cover all endpoints, integration tests pass
+✅ DOCUMENTATION: API documentation updated, usage examples provided
 ```
 
-## Emergency Procedures
+#### Database Migration DoD
+```
+✅ DATA: All data migrated accurately, no loss or corruption
+✅ SCHEMA: New schema matches specifications, constraints applied
+✅ PERFORMANCE: Query performance maintained or improved
+✅ ROLLBACK: Rollback plan tested and documented
+✅ VERIFICATION: Data integrity checks pass, business logic validated
+```
 
-### When Model Fails
-1. **Assess failure reason** (wrong model, task complexity, technical issue)
-2. **Switch to appropriate model** based on failure analysis
-3. **Document the switch** and reasoning
-4. **Update model selection criteria** if pattern emerges
+#### Security Implementation DoD
+```
+✅ VULNERABILITY: No known security issues introduced
+✅ COMPLIANCE: Meets security standards and regulations
+✅ MONITORING: Security events logged and monitored
+✅ TESTING: Security tests pass, penetration testing completed
+✅ DOCUMENTATION: Security measures documented, incident response plan updated
+```
+
+### DoD Refinement Process
+1. **Task Analysis**: Identify all success dimensions
+2. **Stakeholder Alignment**: Confirm requirements with all parties
+3. **Measurable Criteria**: Define specific, observable outcomes
+4. **Verification Methods**: Specify how each criterion will be tested
+5. **Documentation Requirements**: Define what must be recorded
+6. **Continuous Improvement**: Update DoD templates based on experience
+
+## 🚨 EMERGENCY PROTOCOLS
+
+### When Model Selection is Wrong
+1. **Immediate Assessment**: Evaluate if task complexity changed
+2. **Model Switch**: Select appropriate model for current complexity
+3. **Context Preservation**: Maintain work done, avoid restart
+4. **Documentation**: Note switching reason for future reference
 
 ### When Task Becomes Complex
-1. **Immediately switch to GPT-4.1** for complex debugging
-2. **Reassess task scope** and break into smaller tasks if needed
-3. **Document complexity escalation** for future reference
+1. **Stop Current Approach**: Prevent inefficient work
+2. **Reassess Scope**: Break into smaller tasks if needed
+3. **Model Upgrade**: Switch to GPT-4.1 for complex scenarios
+4. **DoD Refinement**: Update completion criteria for new scope
 
-## Integration with Existing Workflow
+### When Quality Issues Detected
+1. **Pause Execution**: Stop work on current deliverable
+2. **Quality Review**: Assess against DoD criteria
+3. **Remediation Plan**: Define fixes and prevention measures
+4. **Verification**: Independent review before proceeding
 
-### Backlog Management
-- Include model recommendation in task descriptions
-- Track model performance per task type
-- Update task complexity assessments based on experience
+## 📊 PERFORMANCE TRACKING
 
-### Git Workflow
-```bash
-# Commit message format
-git commit -m "[MODEL] Task description
+### Success Metrics
+- **Task Completion Rate**: Percentage of tasks meeting DoD first time
+- **Model Efficiency**: Average time per complexity level
+- **Quality Score**: Percentage of deliverables passing QA
+- **Learning Velocity**: New patterns documented per month
 
-- Model used: Grok Code Fast 1/GPT-4.1/GPT-4o/GPT-5 mini
-- Complexity: High/Medium/Low
-- Key changes: [brief summary]"
-```
+### Continuous Optimization
+- **Weekly Review**: Assess model performance and DoD effectiveness
+- **Pattern Recognition**: Identify optimal approaches for task types
+- **Template Updates**: Refine prompt templates based on results
+- **Knowledge Base**: Update instructions.md with new learnings
 
-### Documentation Updates
-- Update `improvements.md` with model performance insights
-- Refine `instructions.md` model selection guide based on experience
-- Maintain performance logs for continuous improvement
+## 📚 REFERENCE ARCHITECTURE
 
----
+### Core Documentation Structure
+- **instructions.md**: Quality framework, critical rules, DoD templates
+- **workflow.md**: Execution protocols, model selection, QA processes
+- **backlog.md**: Task management and progress tracking
+- **improvements.md**: Technical best practices and debugging guides
+- **CONTENT_FORMAT_STANDARDS.md**: Content specifications and standards
+- **fat.md**: Historical archive and deprecated content
 
-*This workflow ensures optimal Copilot model selection for maximum efficiency and quality in Jekyll development tasks.*
+### Content-Specific Files
+- **content-creation-plan.md**: Content strategy and planning
+- **image_prompts.md**: AI image generation specifications
+- **slogans.md**: Advertising and marketing content
+- **stories.md**: Content ideas and publishing concepts
+- **strategy.md**: Narrative and communication strategy
+- **topics.md**: Content topics and themes
+- **suggestions.md**: Technical improvement suggestions
+- **validate_organizations.sh**: Automated validation scripts
 
-## Workflow Compliance Checklist
-
-### Pre-Task Preparation ✅
-- [ ] Read `instructions.md` before starting any work
-- [ ] Assess task complexity using provided criteria
-- [ ] Use `./scripts/start-task.sh` to initialize task with documentation
-- [ ] Select appropriate Copilot model based on task type
-- [ ] Document model selection reasoning in task file
-
-### Task Execution ✅
-- [ ] Follow model-specific execution workflow (Grok Code Fast 1/GPT-4.1/GPT-4o/GPT-5 mini)
-- [ ] Use verbose flags for debugging (`--verbose`)
-- [ ] Document progress and issues in task file
-- [ ] Perform comprehensive testing before completion
-
-### Quality Assurance ✅
-- [ ] Test changes thoroughly with real site/server
-- [ ] Verify all links work (no 404 errors)
-- [ ] Run `bundle exec jekyll build` to ensure no build errors
-- [ ] Validate YAML syntax in all modified files
-
-### Post-Task Activities ✅
-- [ ] Mark task as `[x]` in `_docs/backlog.md`
-- [ ] Commit changes with proper format: `[MODEL] Task description`
-- [ ] Update model performance data in `_data/model-performance.yml`
-- [ ] Document learnings in `improvements.md` if applicable
-
-### Commit Message Format ✅
-```bash
-git commit -m "[GPT-4.1] Fix complex debugging issue
-
-- Model used: GPT-4.1
-- Complexity: High
-- Key changes: Fixed YAML front matter validation"
-```
-
-### Model Performance Documentation ✅
-After each task, update `_data/model-performance.yml`:
-- Task completion time
-- Success/failure metrics
-- Model effectiveness notes
-- Recommendations for similar tasks
+This framework ensures consistent, high-quality execution with precise prompts and measurable outcomes.

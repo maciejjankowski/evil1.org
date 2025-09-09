@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: halloffame
 title: Religious Exploitation - Faith-Based Fraud
 description: How religious institutions exploit followers for financial gain and political power
 permalink: /halloffame/religia/

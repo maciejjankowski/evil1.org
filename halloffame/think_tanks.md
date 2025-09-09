@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: halloffame
 title: Think Tanks - Ideological Manipulation
 description: How corporate-funded think tanks shape policy to benefit the wealthy elite
 permalink: /halloffame/think_tanks/

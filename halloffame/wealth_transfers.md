@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: halloffame
 title: Wealth Transfers - Economic Exploitation
 description: How wealth is systematically transferred from the poor to the rich through policy and practice
 permalink: /halloffame/wealth_transfers/

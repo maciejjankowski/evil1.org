@@ -74,7 +74,7 @@ Oto lista instytucji finansowych, które – według globalnych rankingów kar, 
 
 **Te instytucje poważnie przyczyniły się do szerzenia chciwości, nieuczciwości i chaosu na rynkach globalnych, zarówno poprzez własne oszustwa, łamanie regulacji, jak i podsycanie kolejnych kryzysów systemowych**[^1][^2][^4].
 
-<div style="text-align: center">⁂</div>
+<div class="decorative-divider">⁂</div>
 
 [^1]: https://digitaldefynd.com/IQ/top-finance-scandals-in-history/
 

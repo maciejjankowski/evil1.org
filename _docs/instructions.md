@@ -1,97 +1,145 @@
-## CORE PRINCIPLES
-- **Truth First**: Never produ## FILE ORGANIZATION REFERENCE
-- **Core Instructions**: `_docs/instructions.md` (this file - optimized for daily use)
-- **Complete Workflow**: `_docs/workflow.md`
-- **Task Management**: `_docs/backlog.md`
-- **Technical Guide**: `_docs/improvements.md`
-- **Content Standards**: `_docs/CONTENT_FORMAT_STANDARDS.md`
-- **Archive**: `_docs/fat.md` (archived content and historical reference)
-
-## HOW TO USE INSTRUCTIONS.MD AND FAT.MD
-
-### Instructions.md (Primary - Daily Use)
-- **Purpose**: Streamlined, essential guidelines for standard operations
-- **When to Use**: For all regular tasks, workflow questions, and operational decisions
-- **Content**: Current best practices, active rules, and recent learnings
-- **Updates**: Regularly maintained with new insights and improvements
-
-### Fat.md (Secondary - Reference)
-- **Purpose**: Historical archive of trimmed content and comprehensive context
-- **When to Use**:
-  - Researching workflow evolution or historical decisions
-  - Recovering accidentally removed content
-  - Training new team members on full context
-  - Deep dives into why certain processes exist
-- **Content**: Archived redundant content, legacy references, and backup information
-- **Updates**: Only when archiving content from main files
-
-### Best Practices for Using Both Files
-1. **Start with instructions.md** for any operational question or task
-2. **Check fat.md** only when you need historical context or archived information
-3. **Archive thoughtfully** - move content to fat.md only when it's truly not needed daily
-4. **Document archiving** - always note why and when content was moved
-5. **Regular review** - periodically assess if archived content should be restored or permanently removed
-
----
-
-*For complete development workflow and detailed model selection protocols, see `workflow.md`*
-*For archived content and historical reference, see `fat.md`*that isn't based on real, verified sources
-- **Journalistic Integrity**: Maintain honest standards - no manipulation or hallucination
-- **Developer Focus**: Keep things simple and practical, no unnecessary complexity
-- **Quality Code**: Follow best practices, maintain consistency
+# CORE INSTRUCTIONS
 
 ## CRITICAL RULES
-- **NEVER** modify files in the `_dont touch` folder - they are off-limits for a reason
-- **NEVER** alter the meaning or wording of existing instructions when moving or copying them - preserve exact original text
-- **ALWAYS** read these instructions before starting any work
-- **BE CAREFUL** when editing _docs/backlog.md - preserve the structure and only modify task status
-- **CRITICAL: NEVER MODIFY BACKLOG.MD HEADER** - The section above "# TASKS" in _docs/backlog.md must remain completely unchanged. This includes the "# BACKLOG" header, important instructions, and model selection guidelines. Only modify task status checkboxes (`[ ]` to `[x]`) in the "# TASKS" section below.
-- **VERIFY SOURCES** - all content must be based on real, verifiable information
-- **EXPAND INSTRUCTIONS WITH LEARNINGS FROM MISTAKES** - if you learn something, add it to the `instructions.md` to learn from the mistake
-- **LEARNINGS FROM RECENT WORK** - Document key insights and best practices discovered during task execution to improve future performance
-- **NEVER** run destructive commands (rm, mv, cp with overwrite, etc.) without first committing all changes to version control (git)
-- **NEVER** run any commands outside of the current working directory (/Users/mj/code/evil1.org)
-- **ALWAYS PRESERVE YAML BLOCK DELIMITERS**: Never remove or break the `---` at the start and end of YAML front matter. All edits must maintain valid YAML blocks for Jekyll compatibility.
-- **AVOID DUPLICATION**: Never duplicate content across files. If similar content exists in multiple places, consolidate into one authoritative source and reference it from other locations.
-
-## LEARNINGS FROM RECENT WORK (September 9, 2025)
-- **YAML Front Matter Consistency**: Always ensure Jekyll articles have complete front matter including `layout`, `title`, `description`, `permalink`, `date`, and `categories` for proper rendering and SEO.
-- **Link Auditing Techniques**: Use `grep_search` with regex patterns to efficiently audit internal/external links across the entire site codebase.
-- **Layout Verification**: Regularly check that all .md files have appropriate layouts (post, default, home) to prevent Jekyll rendering issues.
-- **Plugin Verification**: Confirm existing Jekyll plugins in `_config.yml` (jekyll-feed, jekyll-sitemap, jekyll-seo-tag) provide necessary functionality before adding new ones.
-- **Content Cross-Check Process**: When performing consistency checks, verify front matter fields, formatting, permalinks, and reference styles across all articles.
-- **Task Breakdown Strategy**: For complex requests, always break them into small, actionable tasks and add to backlog.md before execution.
-
-## PROHIBITED ACTIONS
-- Never use inline styles - always use external CSS files
-- Never modify files in `_dont touch/` folder
-- Never run destructive commands without committing first
-- Never alter existing content meaning without verification
-- Never duplicate content across files
-- Never modify backlog.md header section
+- **NEVER** modify `_dont touch/` files
+- **NEVER** alter `backlog.md` header (above "# TASKS")
+- **NEVER** run destructive commands without committing
+- **NEVER** use inline styles - use external CSS
+- **NEVER** alter content meaning without verification
+- **ALWAYS** preserve YAML delimiters (`---`)
+- **ALWAYS** read instructions before work
 
 ## QUALITY STANDARDS
-- All content must be based on real, verified sources
-- All pages must have proper YAML front matter
-- All links must be tested (no 404 errors)
-- All changes must be tested before marking complete
-- All code must follow Jekyll best practices
+- **Truth First**: Verified sources only
+- **Journalistic Integrity**: No manipulation
+- **Developer Focus**: Simple, practical solutions
+- **Quality Code**: Best practices, testing
 
-## BASIC MODEL SELECTION
-- **Grok Code Fast 1**: Routine/simple tasks, basic file operations
-- **GPT-4.1**: Complex debugging, configuration, multi-step tasks
-- **GPT-4o**: Content creation, documentation, ethical considerations
-- **GPT-5 mini**: Balanced performance, medium-complexity tasks
+## PROMPT ENGINEERING
 
-## FILE ORGANIZATION REFERENCE
-- **Core Instructions**: `_docs/instructions.md` (this file)
-- **Complete Workflow**: `_docs/workflow.md`
-- **Task Management**: `_docs/backlog.md`
-- **Technical Guide**: `_docs/improvements.md`
-- **Content Standards**: `_docs/CONTENT_FORMAT_STANDARDS.md`
-- **Archive**: `_docs/fat.md` (archived content and historical reference)
+### Core Prompt Structure
+```
+READ: _docs/instructions.md, _docs/workflow.md, _docs/backlog.md
 
----
+TASK: [Specific, measurable objective]
+CONTEXT: [Background, constraints, requirements]
+DELIVERABLE: [Output format, DoD criteria]
+MODEL: [Grok/GPT-4.1/GPT-4o/GPT-5 mini]
+```
 
-*For complete development workflow and detailed model selection protocols, see `workflow.md`*
-*For archived content and historical reference, see `fat.md`*
+### Task-Specific Prompts
+
+#### Code Tasks
+```
+TASK: [Specific change]
+REQUIREMENTS: [Specs, edge cases]
+TESTING: [Validation methods]
+DELIVERABLE: [Files, commit format]
+MODEL: [Selected]
+DoD: [Completion criteria]
+```
+
+#### Content Tasks
+```
+TASK: [Objective, word count]
+SOURCES: [Verified references]
+COMPLIANCE: [Fact-checking, ethics]
+DELIVERABLE: [Format, SEO, review]
+MODEL: GPT-4o
+DoD: [Quality gates]
+```
+
+#### Debug Tasks
+```
+ISSUE: [Specific problem]
+CONTEXT: [Environment, changes]
+DIAGNOSTIC: [Tools, reproduction]
+DELIVERABLE: [Fix, testing, docs]
+MODEL: GPT-4.1
+DoD: [Resolution criteria]
+```
+
+## MODEL SELECTION MATRIX
+
+| Complexity | Examples | Model | Rationale |
+|------------|----------|-------|-----------|
+| **Low** | File edits, validation | Grok Fast 1 | Speed, reliability |
+| **Medium** | Content, standard debug | GPT-5 mini | Balance, quality |
+| **High** | Complex debug, config | GPT-4.1 | Depth, analysis |
+| **Special** | Ethical content, docs | GPT-4o | Quality, compliance |
+
+## DEFINITION OF DONE (DoD)
+
+### Core DoD Template
+```
+✅ FUNCTIONAL: [Measurable working criteria]
+✅ QUALITY: [Standards met]
+✅ TESTING: [Validation completed]
+✅ DOCUMENTATION: [Updates made]
+✅ VERIFICATION: [Review completed]
+```
+
+### Examples
+
+#### Code Implementation
+```
+✅ Code compiles, no regressions
+✅ Tests pass, edge cases covered
+✅ Code follows conventions
+✅ Documentation updated
+✅ No breaking changes
+```
+
+#### Content Creation
+```
+✅ Verified sources, fact-checked
+✅ Meets format/length specs
+✅ SEO optimized
+✅ Links tested (no 404s)
+✅ Editorial review passed
+```
+
+## EXECUTION PROTOCOL
+
+### Session Setup
+1. Read core files (instructions.md, workflow.md, backlog.md)
+2. Assess complexity → Select model
+3. Define DoD criteria
+4. Execute with precision
+5. Verify against DoD
+6. Commit: `[MODEL] Brief description`
+
+### Quality Assurance
+- [ ] Functionality tested
+- [ ] No 404 errors
+- [ ] Site builds successfully
+- [ ] YAML syntax valid
+- [ ] Documentation updated
+
+## FILE ORGANIZATION
+- **instructions.md**: Core rules, quality framework
+- **workflow.md**: Execution protocols, model selection
+- **backlog.md**: Task management
+- **improvements.md**: Technical best practices
+- **CONTENT_FORMAT_STANDARDS.md**: Content specs
+- **fat.md**: Archive
+
+## CONTINUOUS IMPROVEMENT
+- Document learnings in improvements.md
+- Refine instructions with better approaches
+- Update DoD templates based on experience
+- Optimize prompts for precision
+
+## 📚 FILE ORGANIZATION
+- **instructions.md**: This file (core rules, quality framework)
+- **workflow.md**: Development process, model selection
+- **backlog.md**: Task management
+- **improvements.md**: Technical best practices
+- **CONTENT_FORMAT_STANDARDS.md**: Content specifications
+- **fat.md**: Archive and historical reference
+
+## 📈 CONTINUOUS IMPROVEMENT
+- Document learnings from each task
+- Update instructions with new patterns
+- Refine DoD criteria based on experience
+- Optimize prompts for better precision

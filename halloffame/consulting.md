@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: halloffame
 title: Consulting Firms - Corporate Sabotage
 description: How consulting giants advise companies on tax evasion, union busting, and regulatory capture
 permalink: /halloffame/consulting/
