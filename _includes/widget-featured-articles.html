@@ -1,4 +1,4 @@
-{% assign featured_articles = site.articles | where: "featured", true | limit: 3 %}
+{% assign featured_articles = site.posts | where: "featured", true | limit: 3 %}
 {% if featured_articles.size > 0 %}
 <div class="featured-articles-widget">
     <h3>⭐ Featured Articles</h3>

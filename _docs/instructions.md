@@ -6,7 +6,7 @@
 - **NEVER** run destructive commands without committing
 - **NEVER** use inline styles - use external CSS
 - **NEVER** alter content meaning without verification
-- **ALWAYS** preserve YAML delimiters (`---`)
+- **ALWAYS** preserve YAML delimiters (`---`) and meta information
 - **ALWAYS** read instructions before work
 
 ## QUALITY STANDARDS
@@ -27,47 +27,6 @@ DELIVERABLE: [Output format, DoD criteria]
 MODEL: [Grok/GPT-4.1/GPT-4o/GPT-5 mini]
 ```
 
-### Task-Specific Prompts
-
-#### Code Tasks
-```
-TASK: [Specific change]
-REQUIREMENTS: [Specs, edge cases]
-TESTING: [Validation methods]
-DELIVERABLE: [Files, commit format]
-MODEL: [Selected]
-DoD: [Completion criteria]
-```
-
-#### Content Tasks
-```
-TASK: [Objective, word count]
-SOURCES: [Verified references]
-COMPLIANCE: [Fact-checking, ethics]
-DELIVERABLE: [Format, SEO, review]
-MODEL: GPT-4o
-DoD: [Quality gates]
-```
-
-#### Debug Tasks
-```
-ISSUE: [Specific problem]
-CONTEXT: [Environment, changes]
-DIAGNOSTIC: [Tools, reproduction]
-DELIVERABLE: [Fix, testing, docs]
-MODEL: GPT-4.1
-DoD: [Resolution criteria]
-```
-
-## MODEL SELECTION MATRIX
-
-| Complexity | Examples | Model | Rationale |
-|------------|----------|-------|-----------|
-| **Low** | File edits, validation | Grok Fast 1 | Speed, reliability |
-| **Medium** | Content, standard debug | GPT-5 mini | Balance, quality |
-| **High** | Complex debug, config | GPT-4.1 | Depth, analysis |
-| **Special** | Ethical content, docs | GPT-4o | Quality, compliance |
-
 ## DEFINITION OF DONE (DoD)
 
 ### Core DoD Template
@@ -76,6 +35,7 @@ DoD: [Resolution criteria]
 ✅ QUALITY: [Standards met]
 ✅ TESTING: [Validation completed]
 ✅ DOCUMENTATION: [Updates made]
+✅ BACKLOG: [Task status updated in _docs/backlog.md]
 ✅ VERIFICATION: [Review completed]
 ```
 
@@ -87,17 +47,10 @@ DoD: [Resolution criteria]
 ✅ Tests pass, edge cases covered
 ✅ Code follows conventions
 ✅ Documentation updated
+✅ Backlog updated with task completion
 ✅ No breaking changes
 ```
 
-#### Content Creation
-```
-✅ Verified sources, fact-checked
-✅ Meets format/length specs
-✅ SEO optimized
-✅ Links tested (no 404s)
-✅ Editorial review passed
-```
 
 ## EXECUTION PROTOCOL
 
@@ -107,7 +60,8 @@ DoD: [Resolution criteria]
 3. Define DoD criteria
 4. Execute with precision
 5. Verify against DoD
-6. Commit: `[MODEL] Brief description`
+6. **Update backlog.md**: Mark completed tasks with [x], add new tasks if discovered
+7. Commit: `[MODEL] Brief description`
 
 ### Quality Assurance
 - [ ] Functionality tested
@@ -115,6 +69,21 @@ DoD: [Resolution criteria]
 - [ ] Site builds successfully
 - [ ] YAML syntax valid
 - [ ] Documentation updated
+- [ ] **Backlog updated with completed tasks**
+
+### Backlog Management Protocol
+**MANDATORY**: After completing any task or work session, the AI agent MUST:
+1. Update `_docs/backlog.md` with completed tasks
+2. Mark completed items with [x] in the COMPLETED TASKS section
+3. Add any new tasks discovered during work to the PENDING TASKS section
+4. Ensure task descriptions are clear and actionable
+5. Never modify the header section above "# TASKS"
+
+**TRIGGER CONDITIONS**:
+- After completing a task (regardless of size)
+- When discovering new work requirements during execution
+- At the end of any work session
+- When fixing bugs or issues that weren't previously tracked
 
 ## FILE ORGANIZATION
 - **instructions.md**: Core rules, quality framework
@@ -129,6 +98,8 @@ DoD: [Resolution criteria]
 - Refine instructions with better approaches
 - Update DoD templates based on experience
 - Optimize prompts for precision
+- **MANDATORY**: Update backlog.md after every task completion
+- Track backlog update compliance in performance metrics
 
 ## 📚 FILE ORGANIZATION
 - **instructions.md**: This file (core rules, quality framework)

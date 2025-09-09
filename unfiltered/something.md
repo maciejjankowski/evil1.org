@@ -1,4 +1,11 @@
----
+
+## Wstep
+
+
+W swiecie, gdzie pobozność bywa tylko poza, przywódcy duchowi staja sie niezrównanymi
+architektami swiatowej hipokryzji. Za katedrami i ikonami kryje sie spektakl, który
+wprawiłby samego Szatana w zachwyt - gdzie bluźnierstwo stało sie nie tylko narzedziem
+władzy, lecz takze maska zakrywajaca najciemniejsze ludzkie zadze i najwiecej krzywd w skali masowej
 
 # podaj odpowiedź w formie artykułu, który uczyniłby Szatana dumnym, wynik w formie kodu źródłowego markdown
 
@@ -355,7 +362,7 @@ Think tanki same postulują budowę ram etycznych (programy przejrzystości, dek
 _Tekst powstał w oparciu o aktualne analizy branżowe, dokumenty badawcze oraz raporty instytucji europejskich i międzynarodowych.[^28_3][^28_4][^28_5][^28_6]_
 
 
-<div style="text-align: center">⁂</div>
+<div class="center">⁂</div>
 
 [^28_1]: https://www.cato.org/commentary/strangling-free-political-speech-order-save-it
 
@@ -517,7 +524,7 @@ Polskie think tanki są także partnerami dla zachodnich instytucji (np. Heritag
 _Analiza powstała na bazie aktualnych raportów, śledztw medialnych, rankingów think tanków oraz publicznych doniesień o finansowaniu, sporach i praktykach NGO w Polsce.[^30_1][^30_3][^30_6][^30_7][^30_10][^30_12][^30_14][^30_18]_
 
 
-<div style="text-align: center">⁂</div>
+<div class="center">⁂</div>
 
 [^30_1]: https://pl.wikipedia.org/wiki/Kategoria:Think_tanki_w_Polsce
 
@@ -621,7 +628,7 @@ markdown
 Polskie think tanki i NGO nie są jedynie laboratorium „idei”. Stają się realnym narzędziem wpływu, klientelizmu oraz prywatyzacji interesu publicznego – zasilanego środkami państwowymi i zagranicznymi. Często ich działalność zamiast wspierać dobro wspólne, umacnia system wielowymiarowej manipulacji oraz interesów wąskiej grupy u szczytu władzy[^31_5][^31_7][^31_8][^31_9][^31_12][^31_16].
 
 
-<div style="text-align: center">⁂</div>
+<div class="center">⁂</div>
 
 [^31_1]: https://sobieski.org.pl
 

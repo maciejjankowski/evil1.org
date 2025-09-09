@@ -17,19 +17,19 @@ permalink: "/admin/dashboard/"
             <h2>📈 Quick Stats</h2>
             <div class="stats-grid">
                 <div class="stat-item">
-                    <div class="stat-number" id="total-articles">{{ site.articles | size }}</div>
+                    <div class="stat-number" id="total-articles">{{ site.posts | size }}</div>
                     <div class="stat-label">Total Articles</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number" id="total-tags">{{ site.articles | map: 'tags' | compact | flatten | uniq | size }}</div>
+                    <div class="stat-number" id="total-tags">{{ site.posts | map: 'tags' | compact | flatten | uniq | size }}</div>
                     <div class="stat-label">Total Tags</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number" id="this-month">{{ site.articles | where_exp: "article", "article.date >= site.time | date: '%Y-%m-01'" | size }}</div>
+                    <div class="stat-number" id="this-month">{{ site.posts | size }}</div>
                     <div class="stat-label">This Month</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number" id="avg-words">{{ site.articles | map: 'content' | map: 'number_of_words' | average | round }}</div>
+                    <div class="stat-number" id="avg-words">{{ site.posts | map: 'content' | map: 'number_of_words' | average | round }}</div>
                     <div class="stat-label">Avg Words</div>
                 </div>
             </div>

@@ -256,8 +256,17 @@ DoD: [Resolution criteria, prevention measures]
 ✅ QUALITY: Meets coding/content standards, follows best practices
 ✅ TESTING: All test cases pass, edge cases covered
 ✅ DOCUMENTATION: Code documented, instructions updated
+✅ BACKLOG: Task status updated in _docs/backlog.md
 ✅ VERIFICATION: Independent review completed, DoD met
 ```
+
+#### Backlog Update Requirements
+**MANDATORY for AI Agents**:
+- Update `_docs/backlog.md` after every task completion
+- Mark completed tasks with [x] in COMPLETED TASKS section
+- Add new discovered tasks to PENDING TASKS section
+- Maintain clear, actionable task descriptions
+- Never modify header section above "# TASKS"
 
 #### Commit Format Standard
 ```

@@ -141,7 +141,7 @@ By assembling this illustrious faculty—recognized, decorated, and in-demand—
 ---
 *References drawn from current conference speakers, university chairs, and high-impact consulting/training leaders as of 2025.*
 
-<div style="text-align: center">⁂</div>
+<div class="center">⁂</div>
 
 [^58_1]: https://motivationalspeakersagency.co.uk/news/keynote-speakers-popular-at-events-right-now
 
@@ -1154,7 +1154,7 @@ Założyciel i prezes World Economic Forum, człowiek globalnych agend i „Grea
 
 Wybierając osoby z tej listy, zyskujesz dostęp do najpotężniejszych sieci konsultanckich, liderów opinii, trenerów wpływu i architektów zmian, którzy nie tylko przyciągną uwagę, ale mogą również otworzyć dla Twojej organizacji drzwi do prestiżowych partnerstw i nowych źródeł finansowania. Propozycje powstały na bazie najświeższych rankingów oraz obserwacji wpływu tych osób na debatę publiczną, biznes i transformacje społeczno-technologiczne[^72_1][^72_3][^72_2][^72_5][^72_4].
 
-<div style="text-align: center">⁂</div>
+<div class="center">⁂</div>
 
 [^72_1]: https://www.thinkers360.com/top-50-global-thought-leaders-and-influencers-on-culture-2025/
 
@@ -1329,7 +1329,7 @@ Te osoby nie tylko pomogą Ci zdobyć wiarygodność i renomę wśród liderów 
 
 W razie potrzeby mogę pomóc przygotować przykładowe wiadomości/pierwsze zaproszenia do kontaktu. Jeśli chcesz, stworzę też dedykowane propozycje „first-message” pod każdą z tych osób, zoptymalizowane pod Twój styl pracy i ich profil.
 
-<div style="text-align: center">⁂</div>
+<div class="center">⁂</div>
 
 [^75_1]: https://x-ray.contact/identities/maciej-jankowski-email-and-phone/63fcb815c45ae4c13f7eb65d/
 

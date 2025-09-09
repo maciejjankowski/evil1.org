@@ -10,13 +10,13 @@
         </div>
     </div>
 
-    {% assign all_tags = site.articles | map: 'tags' | compact | flatten | uniq %}
+    {% assign all_tags = site.posts | map: 'tags' | compact | flatten | uniq %}
     {% assign related_tags = '' | split: '' %}
     {% for tag in all_tags %}
         {% unless page.tags contains tag %}
             {% assign related_count = 0 %}
             {% for article_tag in page.tags %}
-                {% assign tagged_articles = site.articles | where_exp: 'article', 'article.tags contains article_tag' %}
+                {% assign tagged_articles = site.posts | where_exp: 'article', 'article.tags contains article_tag' %}
                 {% for tagged_article in tagged_articles %}
                     {% if tagged_article.tags contains tag %}
                         {% assign related_count = related_count | plus: 1 %}

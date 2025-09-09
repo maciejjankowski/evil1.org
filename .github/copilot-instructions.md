@@ -2,7 +2,7 @@
 
 ## CORE RULES
 - **NEVER** modify `_dont touch/` files
-- **NEVER** alter `backlog.md` header (above "# TASKS")
+- **NEVER** alter `_docs/backlog.md` header (above "# TASKS")
 - **NEVER** run destructive commands without committing
 - **NEVER** use inline styles - use external CSS
 - **ALWAYS** verify sources for content
@@ -23,6 +23,7 @@
 - **Pattern Location with grep_search**: Use grep_search to locate all instances of repetitive patterns before processing to plan bulk operations.
 - **Bulk Replacement Strategy**: For identical patterns, apply replacements sequentially in chunks to ensure completeness without loops.
 - **Verification of Completion**: After bulk operations, re-run grep_search to confirm no remaining instances and validate the changes.
+- **Output Management**: Avoid generating large summaries in responses; keep outputs concise and suppress unnecessary details.
 
 ## WORKFLOW
 1. Read `readme.md`, `_docs/instructions.md` + `_docs/workflow.md`

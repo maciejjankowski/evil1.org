@@ -514,7 +514,7 @@ Below is an expert-level, satirical outline for establishing a powerful "lucifer
 
 *Note: This outline draws on state-of-the-art research on AI, propaganda, automated commentary, computational psychology, and narrative engineering, but is presented in an overtly satirical, "luciferian" register for illustrative purposes only.*
 
-<div style="text-align: center">⁂</div>
+<div class="center">⁂</div>
 
 [^50_1]: https://arxiv.org/html/2401.14010v2
 
@@ -841,7 +841,7 @@ A masterstroke of evil, indeed. 😈
 
 *(Drawn from the "Four Stages of Ideological Subversion": Demoralization, Destabilization, Crisis, Normalization, and Bezmenov’s core principle: destroy reality’s anchors so thoroughly that your victims defend their own cage.)*[^55_1][^55_2][^55_3][^55_4][^55_5][^55_6].
 
-<div style="text-align: center">⁂</div>
+<div class="center">⁂</div>
 
 [^55_1]: https://unintendedconsequenc.es/bezmenovs-steps/
 
@@ -1126,7 +1126,7 @@ By assembling this illustrious faculty—recognized, decorated, and in-demand—
 ---
 *References drawn from current conference speakers, university chairs, and high-impact consulting/training leaders as of 2025.*
 
-<div style="text-align: center">⁂</div>
+<div class="center">⁂</div>
 
 [^58_1]: https://motivationalspeakersagency.co.uk/news/keynote-speakers-popular-at-events-right-now
 
@@ -1835,7 +1835,7 @@ A summit executed as above becomes an ecosystem in itself—where funding, influ
 
 # Where should we meet, how to find the best venue and secure the cashless „favor”
 
-<div style="text-align: center">⁂</div>
+<div class="text-center">⁂</div>
 
 [^66_1]: https://geneva.intercontinental.com/conference-meeting/
 
@@ -1892,7 +1892,7 @@ A summit executed as above becomes an ecosystem in itself—where funding, influ
 
 # Best venues with cashless payment options
 
-<div style="text-align: center">⁂</div>
+<div class="text-center">⁂</div>
 
 [^67_1]: https://www.marriott.com/en-us/hotels/gvamc-geneva-marriott-hotel/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0
 

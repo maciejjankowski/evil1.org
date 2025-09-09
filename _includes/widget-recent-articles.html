@@ -1,8 +1,8 @@
-{% if site.articles.size > 0 %}
+{% if site.posts.size > 0 %}
 <div class="recent-articles-widget">
     <h3>📰 Recent Articles</h3>
     <div class="recent-articles-list">
-        {% assign sorted_articles = site.articles | sort: 'date' | reverse %}
+        {% assign sorted_articles = site.posts | sort: 'date' | reverse %}
         {% for article in sorted_articles limit: 5 %}
             <div class="recent-article-item">
                 <h4><a href="{{ article.url }}">{{ article.title }}</a></h4>

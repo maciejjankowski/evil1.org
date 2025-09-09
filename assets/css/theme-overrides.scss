@@ -24,3 +24,11 @@ a:hover,
 .page-meta {
     color: color.adjust($text-color, $lightness: 18%) !important;
 }
+
+// Decorative separator styles
+.decorative-separator {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 1.5rem;
+    color: #666;
+}

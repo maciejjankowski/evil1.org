@@ -1,10 +1,10 @@
-{% assign categories = site.articles | map: 'categories' | compact | flatten | uniq | sort %}
+{% assign categories = site.posts | map: 'categories' | compact | flatten | uniq | sort %}
 {% if categories.size > 0 %}
 <div class="category-navigation-widget">
     <h3>📂 Categories</h3>
     <div class="category-list">
         {% for category in categories %}
-            {% assign category_articles = site.articles | where_exp: 'article', 'article.categories contains category' %}
+            {% assign category_articles = site.posts | where_exp: 'article', 'article.categories contains category' %}
             {% assign article_count = category_articles | size %}
             <div class="category-item">
                 <a href="/categories/#{{ category | slugify }}" class="category-link">

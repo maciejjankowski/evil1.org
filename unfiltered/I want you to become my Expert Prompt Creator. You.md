@@ -76,7 +76,7 @@ Wszystkie powyższe dane pochodzą z szeroko cytowanych źródeł: dziennikarski
 
 Jeśli szukasz jeszcze pełniejszej listy polityków/osób/instytucji powiązanych z danymi aferami, podaj kraj lub konkretną aferę — mogę uzupełnić o szczegółowe nazwiska i źródła.
 
-<div style="text-align: center">⁂</div>
+<div class="center">⁂</div>
 
 [^1_1]: https://en.wikipedia.org/wiki/Panama_Papers
 
@@ -372,7 +372,7 @@ Poniżej znajdziesz uzupełnienie „diabelskiego CV” o referencje oraz polece
 
 **Satyra/parodia.**
 
-<div style="text-align: center">⁂</div>
+<div class="center">⁂</div>
 
 [^5_1]: Superhuman.pdf
 
@@ -739,7 +739,7 @@ Te liczby dowodzą bezsporne skuteczności moich metod w:
 ---
 *Dane oparte na: USGS, GAO, ADB, WHO, dokumentach historycznych i badaniach demograficznych. Wszystkie szacunki są konserwatywne.*
 
-<div style="text-align: center">⁂</div>
+<div class="center">⁂</div>
 
 [^12_1]: https://en.wikipedia.org/wiki/Genocides_in_history_(1490_to_1914)
 
@@ -1576,7 +1576,7 @@ Takie działania nie tylko pogłębiają ludzką krzywdę, lecz również fałsz
 
 *Wnioski oparte na: globalnych raportach śledczych, wieloletnich dochodzeniach, publikacjach dziennikarskich oraz dokumentach i badaniach historycznych.*
 
-<div style="text-align: center">⁂</div>
+<div class="center">⁂</div>
 
 [^23_1]: https://en.wikipedia.org/wiki/Catholic_Church_sexual_abuse_cases
 

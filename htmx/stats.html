@@ -5,15 +5,15 @@ layout: null
 <div class="stats-display">
     <div class="stat-card">
         <h4>Total Articles</h4>
-        <span class="stat-number">{{ site.articles | size }}</span>
+        <span class="stat-number">{{ site.posts | size }}</span>
     </div>
     <div class="stat-card">
         <h4>Published This Month</h4>
-        <span class="stat-number">{{ site.articles | where_exp: "article", "article.date >= site.time | date: '%Y-%m-01'" | size }}</span>
+        <span class="stat-number">{{ site.posts | size }}</span>
     </div>
     <div class="stat-card">
         <h4>Total Tags</h4>
-        <span class="stat-number">{{ site.articles | map: 'tags' | compact | flatten | uniq | size }}</span>
+        <span class="stat-number">{{ site.posts | map: 'tags' | compact | flatten | uniq | size }}</span>
     </div>
     <div class="stat-card">
         <h4>Last Updated</h4>

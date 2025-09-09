@@ -1,10 +1,10 @@
-{% assign authors = site.articles | map: 'author' | uniq | compact %}
+{% assign authors = site.posts | map: 'author' | uniq | compact %}
 {% if authors.size > 0 %}
 <div class="author-spotlight-widget">
     <h3>👤 Author Spotlight</h3>
     <div class="author-spotlight-list">
         {% for author in authors limit: 3 %}
-            {% assign author_articles = site.articles | where: 'author', author %}
+            {% assign author_articles = site.posts | where: 'author', author %}
             {% assign article_count = author_articles | size %}
             <div class="author-item">
                 <div class="author-info">
