@@ -53,13 +53,17 @@
 </head>
 <body>
     {% include header.html %}
-    
+
     {% if page.theme == 'red' %}
         <div class="flames"></div>
     {% endif %}
-    
-    {{ content }}
-    
+
+    <main class="page-content">
+      <div class="container">
+        {{ content }}
+      </div>
+    </main>
+
     {% include footer.html %}
 </body>
 </html>
