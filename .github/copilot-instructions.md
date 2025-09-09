@@ -24,6 +24,13 @@
 - **Bulk Replacement Strategy**: For identical patterns, apply replacements sequentially in chunks to ensure completeness without loops.
 - **Verification of Completion**: After bulk operations, re-run grep_search to confirm no remaining instances and validate the changes.
 - **Output Management**: Avoid generating large summaries in responses; keep outputs concise and suppress unnecessary details.
+- **Context Length Management**: For large files or repetitive content, implement a chunking strategy:
+  - Break tasks into smaller subtasks that can be handled within context limits
+  - Use targeted grep searches instead of loading entire files
+  - Implement batch processing for repeated operations
+  - Create scripts for bulk operations rather than attempting to process everything in one session
+  - Avoid unnecessary file reads when patterns are already identified
+  - When processing multiple similar files, work with representative samples first
 
 ## WORKFLOW
 1. Read `readme.md`, `_docs/instructions.md` + `_docs/workflow.md`

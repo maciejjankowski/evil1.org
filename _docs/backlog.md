@@ -46,6 +46,8 @@ TASKS - EDIT BELOW THIS LINE ONLY
 - [x] Updated widget files to use site.posts
 - [x] Jekyll site builds successfully after all YAML and Liquid fixes
 - [x] Created script to automate inline style replacements for center-aligned divs
+- [x] Added context length management guidelines to copilot-instructions.md
+- [x] Created process_large_files.md documentation for handling large files efficiently
 
 
 ================================================================================
