@@ -1,0 +1,25 @@
+2025-09-10 21:27:42 - PASS: profile/index.html exists
+2025-09-10 21:27:42 - PASS: profile/index.html has DOCTYPE
+2025-09-10 21:27:42 - WARN: profile/index.html contains raw page_html
+2025-09-10 21:27:42 - PASS: profile/index.html contains HTML elements
+2025-09-10 21:27:42 - PASS: profile/index.html Liquid tags processed
+2025-09-10 21:27:42 - WARN: profile/index.html has       17 inline styles
+2025-09-10 21:27:42 - PASS: company/index.html exists
+2025-09-10 21:27:42 - PASS: company/index.html has DOCTYPE
+2025-09-10 21:27:42 - WARN: company/index.html contains raw page_html
+2025-09-10 21:27:42 - PASS: company/index.html contains HTML elements
+2025-09-10 21:27:42 - PASS: company/index.html Liquid tags processed
+2025-09-10 21:27:42 - WARN: company/index.html has       16 inline styles
+2025-09-10 21:27:42 - PASS: profiles/index.html exists
+2025-09-10 21:27:42 - PASS: profiles/index.html has DOCTYPE
+2025-09-10 21:27:42 - WARN: profiles/index.html contains raw page_html
+2025-09-10 21:27:42 - PASS: profiles/index.html contains HTML elements
+2025-09-10 21:27:42 - PASS: profiles/index.html Liquid tags processed
+2025-09-10 21:27:42 - WARN: profiles/index.html has       13 inline styles
+2025-09-10 21:27:42 - PASS: news/index.html exists
+2025-09-10 21:27:42 - PASS: news/index.html has DOCTYPE
+2025-09-10 21:27:42 - WARN: news/index.html contains raw page_html
+2025-09-10 21:27:42 - PASS: news/index.html contains HTML elements
+2025-09-10 21:27:42 - PASS: news/index.html Liquid tags processed
+2025-09-10 21:27:42 - WARN: news/index.html has       18 inline styles
+2025-09-10 21:27:42 - RESULT: ALL TESTS PASSED

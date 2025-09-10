@@ -1,5 +1,10 @@
+---
+layout: default
+title: My Profile - LinkedNetwork
+permalink: /profile/
+---
 page_html: |
-  
+
   <div style=\"width: 760px; margin: 20px auto; background: #fff; border: 1px solid #CCC; padding: 20px;\">
       <!-- Tab Navigation -->
       <div style=\"border-bottom: 2px solid #003366; margin-bottom: 15px; background: #F0F0F0;\">
