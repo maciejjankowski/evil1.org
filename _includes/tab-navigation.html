@@ -1,12 +1,42 @@
 <!--
 Tab Navigation Component
-Usage: {% include tab-navigation.html tabs=page.tabs active=page.active_tab %}
+Usage: {% include tab-navigation.html tabs=page.tabs active="profile" %}
 Parameters:
 - tabs: Array of tab objects with 'id' and 'title' properties
-- active: ID of the active tab
+- active: ID of the active tab (string)
 -->
 <div class="tabs">
     {% for tab in include.tabs %}
-    <div class="tab{% if include.active == tab.id %} active{% endif %}">{{ tab.title }}</div>
+    <div class="tab{% if include.active == tab.id %} active{% endif %}" onclick="showTab('{{ tab.id }}')">{{ tab.title }}</div>
     {% endfor %}
 </div>
+
+<style>
+.tabs {
+    border-bottom: 2px solid #003366;
+    margin-bottom: 15px;
+    background: #F0F0F0;
+}
+
+.tab {
+    display: inline-block;
+    padding: 6px 12px;
+    background: #D0D0D0;
+    color: #333;
+    border: 1px solid #999;
+    border-bottom: none;
+    cursor: pointer;
+    position: relative;
+    top: 1px;
+    font-size: 11px;
+    margin-right: 2px;
+}
+
+.tab.active {
+    background: #6699CC;
+    color: #fff;
+    border: 1px solid #003366;
+    top: 2px;
+    font-weight: bold;
+}
+</style>
