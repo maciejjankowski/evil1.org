@@ -12,6 +12,21 @@
 - **ALWAYS** add new tasks to `_docs/backlog.md`.
 - when creating new content, ensure it aligns with the site's dark humor and satirical tone, using satire and irony to critique power structures and societal issues
 - when creating new content STRONGLY PREFER using markdown syntax for formatting (e.g., headings, lists, links) instead of raw HTML, unless specific HTML elements are required for functionality or styling that cannot be achieved with markdown. ALWAYS OPTIMIZE FOR FRONTMATTER COMPATIBILITY AND READABILITY.
+- ALWAYS end a task in performing commits and updating the backlog. This is CRITICAL.
+
+## Workflow
+1. Read `readme.md`, `_docs/instructions.md` + `_docs/workflow.md`
+2. Assess complexity → Select model
+3. Execute with DoD criteria
+4. Test + verify
+5. Commit: `[MODEL] Brief description`
+3. Build: `bundle exec jekyll build` (check for 404s, YAML errors)
+5. Commit: `Brief description`
+6. Update backlog: `_docs/backlog.md` only marking tasks as complete, only adding new tasks to break up large tasks if absolutely necessary. when marking tasks complete use the script `./scripts/mark-task-done.sh TASK_ID` to avoid errors. 
+7. Immediately begin working on actionable tasks listed in `_docs/backlog.md` without asking for user confirmation or stopping questions. When paused for blockers or required clarification pick the best course of action based on industry best practices to proceed.
+8. Continue working through tasks without rest, updating the backlog and proceeding to the next task automatically, ensuring no pending tasks are left unfinished. THIS IS CRITICAL.
+9. !IMPORTANT !CRITICAL: Do not stop until the backlog is fully complete. REPEAT: Do not stop until the backlog is fully complete. REPEAT THE CRITICALITY OF THIS. REPEAT THE CYCLE OF THIS UNTIL THE BACKLOG IS 100% COMPLETE.
+
 
 ## ARCHITECTURE OVERVIEW
 - Jekyll static site: content in `_articles/`, `_posts/`, `_profiles/`, `_organizations/`, and markdown/html in root
@@ -24,7 +39,6 @@
 ## DEVELOPER WORKFLOWS
 - **Build site:** `bundle exec jekyll build` (check for 404s, YAML errors)
 - **Start new task:** `./scripts/start-task.sh "<task>"` (initializes with model selection)
-- **Select model:** `./scripts/select-model.sh <type>` (see scripts/README.md for types)
 - **Commit format:** `[MODEL] Brief description` (see workflow.md)
 - **Backlog update:** Mark completed tasks in `_docs/backlog.md` (never edit above "# TASKS")
 - **Bulk operations:** For repetitive content, use grep and scripts for efficiency; document patterns in `_docs/improvements.md`
@@ -38,16 +52,14 @@
 - Data flows: YAML in `_data/` powers author, backlink, and organization logic
 - Automation: Scripts in `scripts/` streamline development workflow, use them
 
-## EXAMPLES
-- To fix 404s in education: `./scripts/start-task.sh "Fix 404 errors in education section"`
-
-
 ## QUALITY CHECKS
 - [ ] Site builds: `bundle exec jekyll build`
 - [ ] YAML valid
 - [ ] Changes tested
 - [ ] Documentation updated
 - [ ] Backlog updated
+- [ ] No 404 errors
+
 
 ## PROCESSING GUIDELINES
 - To bulk update repeated HTML: Use `grep` and `sed` for in-place editing
@@ -74,28 +86,6 @@
   - Avoid unnecessary file reads when patterns are already identified
   - When processing multiple similar files, work with representative samples first
 
-## WORKFLOW
-1. Read `readme.md`, `_docs/instructions.md` + `_docs/workflow.md`
-2. Assess complexity → Select model
-3. Execute with DoD criteria
-4. Test + verify
-5. Commit: `[MODEL] Brief description`
-
-## MODEL SELECTION
-| Complexity | Model | Use Case |
-|------------|-------|----------|
-| Low | Grok Code Fast 1 | File edits, validation, simple fixes |
-| Medium | GPT-5 mini | Content creation, standard debugging |
-| High | GPT-4.1 | Complex debugging, multi-step tasks |
-| Special | GPT-4o | Ethical content, documentation |
-
-## QUALITY CHECKS
-- [ ] No 404 errors
-- [ ] Site builds: `bundle exec jekyll build`
-- [ ] YAML valid
-- [ ] Changes tested
-- [ ] Documentation updated
-
 ## PROMPT FORMAT
 ```
 TASK: [Specific objective]
@@ -106,6 +96,7 @@ MODEL: [Selected model]
 
 ## VERIFICATION
 1. Test functionality
+2. apply fixes to backlog if needed
 
 ## BACKLOG MANAGEMENT RULES
 - **Format**: Always use `[ ] | TASK_ID | DESCRIPTION | DoD` format
@@ -134,10 +125,3 @@ MODEL: [Selected model]
 - Javascript: minimal, only for interactivity, use htmx and alpine.js, use chart.js for charts, no heavy frameworks, use CDN for libraries, use minimal custom JS, no bundlers, no transpilers, 
 
 
-### Workflow
-3. Build: `bundle exec jekyll build` (check for 404s, YAML errors)
-5. Commit: `Brief description`
-6. Update backlog: `_docs/backlog.md` only marking tasks as complete, only adding new tasks to break up large tasks if absolutely necessary. when marking tasks complete use the script `./scripts/mark-task-done.sh TASK_ID` to avoid errors. 
-7. Immediately begin working on actionable tasks listed in `_docs/backlog.md` without asking for user confirmation or stopping questions. When paused for blockers or required clarification pick the best course of action based on industry best practices to proceed.
-8. Continue working through tasks without rest, updating the backlog and proceeding to the next task automatically, ensuring no pending tasks are left unfinished. THIS IS CRITICAL.
-9. !IMPORTANT !CRITICAL: Do not stop until the backlog is fully complete. REPEAT: Do not stop until the backlog is fully complete. REPEAT THE CRITICALITY OF THIS. REPEAT THE CYCLE OF THIS UNTIL THE BACKLOG IS 100% COMPLETE.

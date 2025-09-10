@@ -3,77 +3,40 @@ layout: default
 title: "Application for Admission - Academy of Systematic Influence"
 description: "Comprehensive application process for identifying elite corporate evil practitioners"
 permalink: /education/application/
+
+page_html: |
+  <div style="background: linear-gradient(#6699CC, #4477AA); color: #fff; padding: 10px; font-weight: bold; font-size: 16px; border-bottom: 1px solid #003366; margin: -20px -20px 20px -20px;">Application for Admission</div>
+
+  <div style="font-size: 11px; color: #666; margin-bottom: 20px; font-style: italic;">Exclusive screening process for identifying the world's most promising corporate evil practitioners</div>
+
+  <!-- Application Warning -->
+  <div style="border: 2px solid #CC0000; background: linear-gradient(#FFE8E8, #FFCCCC); padding: 15px; margin-bottom: 20px;">
+      <h3 style="color: #CC0000; font-size: 14px; margin-bottom: 10px; text-align: center;">⚠️ ELITE SCREENING PROCESS ⚠️</h3>
+      <div style="font-size: 11px; color: #333; text-align: center;">
+          <div style="margin-bottom: 5px;">This application is designed to identify only the most exceptional evil practitioners.</div>
+          <div style="margin-bottom: 5px;">Amateur sociopaths, petty criminals, and small-scale malice practitioners need not apply.</div>
+          <div style="font-weight: bold; margin-bottom: 10px;">We seek architects of systematic suffering, not common villains.</div>
+          <div style="margin-top: 10px;">
+              <a href="/education/admissions-philosophy/" style="color: #CC0000; text-decoration: underline; font-size: 11px;">📚 Read Our Admissions Philosophy →</a>
+          </div>
+      </div>
+  </div>
+
+  <!-- Phase 1: Basic Qualification Screening -->
+  <div style="border: 1px solid #D0D0D0; margin: 20px 0; background: #F8F8F8; padding: 15px;">
+      <h2 style="color: #003366; font-size: 14px; margin-bottom: 15px; border-bottom: 1px solid #003366; padding-bottom: 5px;">Phase 1: Basic Qualification Screening</h2>
+      
+      <div style="margin-bottom: 15px;">
+          <label style="font-weight: bold; font-size: 11px; color: #003366; display: block; margin-bottom: 5px;">1. Current Position & Organization</label>
+          <input type="text" placeholder="e.g., CEO of ExxonMobil, Managing Director at Goldman Sachs" style="width: 100%; padding: 5px; font-size: 11px; border: 1px solid #CCC;">
+          <div style="font-size: 10px; color: #666; margin-top: 2px;">*Entry-level positions and non-profit organizations automatically disqualified</div>
+      </div>
+
+      ...existing content...
+
 ---
 
-<div style="background: linear-gradient(#6699CC, #4477AA); color: #fff; padding: 10px; font-weight: bold; font-size: 16px; border-bottom: 1px solid #003366; margin: -20px -20px 20px -20px;">Application for Admission</div>
-
-<div style="font-size: 11px; color: #666; margin-bottom: 20px; font-style: italic;">Exclusive screening process for identifying the world's most promising corporate evil practitioners</div>
-
-<!-- Application Warning -->
-<div style="border: 2px solid #CC0000; background: linear-gradient(#FFE8E8, #FFCCCC); padding: 15px; margin-bottom: 20px;">
-    <h3 style="color: #CC0000; font-size: 14px; margin-bottom: 10px; text-align: center;">⚠️ ELITE SCREENING PROCESS ⚠️</h3>
-    <div style="font-size: 11px; color: #333; text-align: center;">
-        <div style="margin-bottom: 5px;">This application is designed to identify only the most exceptional evil practitioners.</div>
-        <div style="margin-bottom: 5px;">Amateur sociopaths, petty criminals, and small-scale malice practitioners need not apply.</div>
-        <div style="font-weight: bold; margin-bottom: 10px;">We seek architects of systematic suffering, not common villains.</div>
-        <div style="margin-top: 10px;">
-            <a href="/education/admissions-philosophy/" style="color: #CC0000; text-decoration: underline; font-size: 11px;">📚 Read Our Admissions Philosophy →</a>
-        </div>
-    </div>
-</div>
-
-<!-- Phase 1: Basic Qualification Screening -->
-<div style="border: 1px solid #D0D0D0; margin: 20px 0; background: #F8F8F8; padding: 15px;">
-    <h2 style="color: #003366; font-size: 14px; margin-bottom: 15px; border-bottom: 1px solid #003366; padding-bottom: 5px;">Phase 1: Basic Qualification Screening</h2>
-    
-    <div style="margin-bottom: 15px;">
-        <label style="font-weight: bold; font-size: 11px; color: #003366; display: block; margin-bottom: 5px;">1. Current Position & Organization</label>
-        <input type="text" placeholder="e.g., CEO of ExxonMobil, Managing Director at Goldman Sachs" style="width: 100%; padding: 5px; font-size: 11px; border: 1px solid #CCC;">
-        <div style="font-size: 10px; color: #666; margin-top: 2px;">*Entry-level positions and non-profit organizations automatically disqualified</div>
-    </div>
-
-    <div style="margin-bottom: 15px;">
-        <label style="font-weight: bold; font-size: 11px; color: #003366; display: block; margin-bottom: 5px;">2. Annual Revenue Under Your Control</label>
-        <select style="width: 100%; padding: 5px; font-size: 11px; border: 1px solid #CCC;">
-            <option>Select minimum threshold...</option>
-            <option>$1-10 Million (Insufficient - Do Not Apply)</option>
-            <option>$10-100 Million (Small Scale Evil - Questionable)</option>
-            <option>$100 Million - $1 Billion (Regional Malice - Possible)</option>
-            <option>$1-10 Billion (National Evil - Qualified)</option>
-            <option>$10-100 Billion (International Destruction - Preferred)</option>
-            <option>$100+ Billion (Global Systematic Evil - Ideal Candidate)</option>
-        </select>
-    </div>
-
-    <div style="margin-bottom: 15px;">
-        <label style="font-weight: bold; font-size: 11px; color: #003366; display: block; margin-bottom: 5px;">3. Number of Lives Negatively Impacted (Annual Estimate)</label>
-        <select style="width: 100%; padding: 5px; font-size: 11px; border: 1px solid #CCC;">
-            <option>Select impact scale...</option>
-            <option>1-1,000 (Local Harm - Insufficient)</option>
-            <option>1,000-10,000 (Community Damage - Minimal)</option>
-            <option>10,000-100,000 (Regional Suffering - Developing)</option>
-            <option>100,000-1 Million (State/Provincial Destruction - Qualified)</option>
-            <option>1-10 Million (National Impact - Strong Candidate)</option>
-            <option>10-100 Million (International Suffering - Excellent)</option>
-            <option>100+ Million (Global Systematic Harm - Elite Tier)</option>
-        </select>
-    </div>
-
-    <div style="margin-bottom: 15px;">
-        <label style="font-weight: bold; font-size: 11px; color: #003366; display: block; margin-bottom: 5px;">4. Regulatory Violations (Successfully Avoided Consequences)</label>
-        <div style="margin-bottom: 10px;">
-            <input type="checkbox" id="env" style="margin-right: 5px;"><label for="env" style="font-size: 11px;">Environmental destruction with externalized costs</label><br>
-            <input type="checkbox" id="labor" style="margin-right: 5px;"><label for="labor" style="font-size: 11px;">Labor rights violations and union busting</label><br>
-            <input type="checkbox" id="financial" style="margin-right: 5px;"><label for="financial" style="font-size: 11px;">Securities fraud and market manipulation</label><br>
-            <input type="checkbox" id="antitrust" style="margin-right: 5px;"><label for="antitrust" style="font-size: 11px;">Antitrust violations and monopolization</label><br>
-            <input type="checkbox" id="safety" style="margin-right: 5px;"><label for="safety" style="font-size: 11px;">Product safety violations resulting in harm/death</label><br>
-            <input type="checkbox" id="tax" style="margin-right: 5px;"><label for="tax" style="font-size: 11px;">Large-scale tax evasion and offshore schemes</label><br>
-            <input type="checkbox" id="bribery" style="margin-right: 5px;"><label for="bribery" style="font-size: 11px;">International bribery and corruption</label><br>
-            <input type="checkbox" id="human" style="margin-right: 5px;"><label for="human" style="font-size: 11px;">Human rights violations in global operations</label>
-        </div>
-        <div style="font-size: 10px; color: #666;">*Minimum 3 categories required. Bonus points for avoiding legal consequences.</div>
-    </div>
-</div>
+{{ page.page_html }}
 
 <!-- Phase 2: Evil Philosophy Assessment -->
 <div style="border: 1px solid #D0D0D0; margin: 20px 0; background: #F8F8F8; padding: 15px;">

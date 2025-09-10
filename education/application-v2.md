@@ -4,76 +4,17 @@ title: "Application for Executive Development Program - Academy of Strategic Exc
 description: "Comprehensive application process for identifying high-performance business leaders"
 permalink: /education/application-v2/
 ---
+page_html: |
+    <div style="background: linear-gradient(#6699CC, #4477AA); color: #fff; padding: 10px; font-weight: bold; font-size: 16px; border-bottom: 1px solid #003366; margin: -20px -20px 20px -20px;">Executive Development Program Application</div>
 
-<div style="background: linear-gradient(#6699CC, #4477AA); color: #fff; padding: 10px; font-weight: bold; font-size: 16px; border-bottom: 1px solid #003366; margin: -20px -20px 20px -20px;">Executive Development Program Application</div>
+    <div style="font-size: 11px; color: #666; margin-bottom: 20px; font-style: italic;">A rigorous selection process for identifying transformational business leaders committed to operational excellence</div>
 
-<div style="font-size: 11px; color: #666; margin-bottom: 20px; font-style: italic;">A rigorous selection process for identifying transformational business leaders committed to operational excellence</div>
+    <!-- Application Notice -->
+    ...existing content...
 
-<!-- Application Notice -->
-<div style="border: 2px solid #003366; background: linear-gradient(#F0F8FF, #E0F0FF); padding: 15px; margin-bottom: 20px;">
-    <h3 style="color: #003366; font-size: 14px; margin-bottom: 10px; text-align: center;">🏆 EXECUTIVE EXCELLENCE PROGRAM 🏆</h3>
-    <div style="font-size: 11px; color: #333; text-align: center;">
-        <div style="margin-bottom: 5px;">This program is designed for high-impact business leaders with proven track records of transformational success.</div>
-        <div style="margin-bottom: 5px;">Mid-level managers, traditional consultants, and conventional business practitioners may find this program unsuitable.</div>
-        <div style="font-weight: bold; margin-bottom: 10px;">We seek visionary architects of business transformation, not incremental optimizers.</div>
-        <div style="margin-top: 10px;">
-            <a href="/education/admissions-philosophy-v2/" style="color: #003366; text-decoration: underline; font-size: 11px;">📚 Read Our Selection Philosophy →</a>
-        </div>
-    </div>
-</div>
+---
 
-<!-- Phase 1: Leadership Qualification Assessment -->
-<div style="border: 1px solid #D0D0D0; margin: 20px 0; background: #F8F8F8; padding: 15px;">
-    <h2 style="color: #003366; font-size: 14px; margin-bottom: 15px; border-bottom: 1px solid #003366; padding-bottom: 5px;">Phase 1: Executive Leadership Qualification</h2>
-    
-    <div style="margin-bottom: 15px;">
-        <label style="font-weight: bold; font-size: 11px; color: #003366; display: block; margin-bottom: 5px;">1. Current Executive Position & Organization</label>
-        <input type="text" placeholder="e.g., Chief Executive Officer, Managing Director, Global Business Unit Head" style="width: 100%; padding: 5px; font-size: 11px; border: 1px solid #CCC;">
-        <div style="font-size: 10px; color: #666; margin-top: 2px;">*Individual contributor roles and public sector positions may not align with program objectives</div>
-    </div>
-
-    <div style="margin-bottom: 15px;">
-        <label style="font-weight: bold; font-size: 11px; color: #003366; display: block; margin-bottom: 5px;">2. Annual Revenue/Assets Under Management</label>
-        <select style="width: 100%; padding: 5px; font-size: 11px; border: 1px solid #CCC;">
-            <option>Select leadership scope...</option>
-            <option>$1-10 Million (Emerging Scale - Limited Applicability)</option>
-            <option>$10-100 Million (Regional Impact - Developing)</option>
-            <option>$100 Million - $1 Billion (Market Leadership - Qualified)</option>
-            <option>$1-10 Billion (Industry Influence - Strong Candidate)</option>
-            <option>$10-100 Billion (Global Market Power - Preferred)</option>
-            <option>$100+ Billion (Systemic Market Impact - Ideal Participant)</option>
-        </select>
-    </div>
-
-    <div style="margin-bottom: 15px;">
-        <label style="font-weight: bold; font-size: 11px; color: #003366; display: block; margin-bottom: 5px;">3. Stakeholder Impact Scope (Annual Reach)</label>
-        <select style="width: 100%; padding: 5px; font-size: 11px; border: 1px solid #CCC;">
-            <option>Select impact scale...</option>
-            <option>1-1,000 (Local Market - Insufficient)</option>
-            <option>1,000-10,000 (Regional Influence - Developing)</option>
-            <option>10,000-100,000 (Market Segment Leadership - Progressing)</option>
-            <option>100,000-1 Million (Industry Influence - Qualified)</option>
-            <option>1-10 Million (National Market Impact - Strong)</option>
-            <option>10-100 Million (International Reach - Excellent)</option>
-            <option>100+ Million (Global Systematic Influence - Elite)</option>
-        </select>
-    </div>
-
-    <div style="margin-bottom: 15px;">
-        <label style="font-weight: bold; font-size: 11px; color: #003366; display: block; margin-bottom: 5px;">4. Regulatory Navigation & Compliance Innovation</label>
-        <div style="margin-bottom: 10px;">
-            <input type="checkbox" id="env-v2" style="margin-right: 5px;"><label for="env-v2" style="font-size: 11px;">Environmental compliance optimization and stakeholder cost management</label><br>
-            <input type="checkbox" id="labor-v2" style="margin-right: 5px;"><label for="labor-v2" style="font-size: 11px;">Workforce optimization and labor cost efficiency initiatives</label><br>
-            <input type="checkbox" id="financial-v2" style="margin-right: 5px;"><label for="financial-v2" style="font-size: 11px;">Financial engineering and market positioning strategies</label><br>
-            <input type="checkbox" id="antitrust-v2" style="margin-right: 5px;"><label for="antitrust-v2" style="font-size: 11px;">Market consolidation and competitive advantage development</label><br>
-            <input type="checkbox" id="safety-v2" style="margin-right: 5px;"><label for="safety-v2" style="font-size: 11px;">Product liability management and risk externalization</label><br>
-            <input type="checkbox" id="tax-v2" style="margin-right: 5px;"><label for="tax-v2" style="font-size: 11px;">Tax optimization and international structure efficiency</label><br>
-            <input type="checkbox" id="bribery-v2" style="margin-right: 5px;"><label for="bribery-v2" style="font-size: 11px;">Global stakeholder relationship management and influence development</label><br>
-            <input type="checkbox" id="human-v2" style="margin-right: 5px;"><label for="human-v2" style="font-size: 11px;">International operational standards and stakeholder alignment</label>
-        </div>
-        <div style="font-size: 10px; color: #666;">*Minimum 3 areas of regulatory navigation experience required for program consideration</div>
-    </div>
-</div>
+{{ page.page_html }}
 
 <!-- Phase 2: Strategic Vision Assessment -->
 <div style="border: 1px solid #D0D0D0; margin: 20px 0; background: #F8F8F8; padding: 15px;">

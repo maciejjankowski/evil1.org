@@ -111,11 +111,47 @@ wall_posts:
     comments: 89
     shares: 134
 ---
+page_html: |
+  <!-- LinkedNetwork Wall -->
+  <div style="background: linear-gradient(#6699CC, #4477AA); color: #fff; padding: 10px; font-weight: bold; font-size: 16px; border-bottom: 1px solid #003366; margin: -20px -20px 20px -20px;">LinkedNetwork Feed</div>
 
-<!-- LinkedNetwork Wall -->
-<div style="background: linear-gradient(#6699CC, #4477AA); color: #fff; padding: 10px; font-weight: bold; font-size: 16px; border-bottom: 1px solid #003366; margin: -20px -20px 20px -20px;">LinkedNetwork Feed</div>
+  <div style="font-size: 11px; color: #666; margin-bottom: 20px; font-style: italic;">Professional updates from your network of corporate evil practitioners</div>
 
-<div style="font-size: 11px; color: #666; margin-bottom: 20px; font-style: italic;">Professional updates from your network of corporate evil practitioners</div>
+  <!-- Quick Navigation -->
+  <div style="margin-top: 30px; border-top: 1px solid #CCC; padding-top: 20px;">
+      <h3 style="color: #003366; font-size: 14px; margin-bottom: 15px;">Explore LinkedNetwork</h3>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+          
+          <div style="border: 1px solid #D0D0D0; background: #F8F8F8; padding: 10px; border-radius: 4px;">
+              <h4 style="color: #003366; font-size: 12px; margin-bottom: 5px;">📰 Latest Articles</h4>
+              <div style="font-size: 10px; color: #666; margin-bottom: 8px;">In-depth exposés of corporate corruption</div>
+              <a href="/articles/" style="color: #004080; text-decoration: underline; font-size: 11px;">Browse Articles →</a>
+          </div>
+          
+          <div style="border: 1px solid #D0D0D0; background: #F8F8F8; padding: 10px; border-radius: 4px;">
+              <h4 style="color: #003366; font-size: 12px; margin-bottom: 5px;">🏆 Hall of Fame</h4>
+              <div style="font-size: 10px; color: #666; margin-bottom: 8px;">Masters of systematic exploitation</div>
+              <a href="/halloffame/" style="color: #004080; text-decoration: underline; font-size: 11px;">View Masters →</a>
+          </div>
+          
+          <div style="border: 1px solid #D0D0D0; background: #F8F8F8; padding: 10px; border-radius: 4px;">
+              <h4 style="color: #003366; font-size: 12px; margin-bottom: 5px;">🏢 Companies</h4>
+              <div style="font-size: 10px; color: #666; margin-bottom: 8px;">Case studies of corporate evil</div>
+              <a href="/company/" style="color: #004080; text-decoration: underline; font-size: 11px;">View Companies →</a>
+          </div>
+          
+          <div style="border: 1px solid #D0D0D0; background: #F8F8F8; padding: 10px; border-radius: 4px;">
+              <h4 style="color: #003366; font-size: 12px; margin-bottom: 5px;">👥 Profiles</h4>
+              <div style="font-size: 10px; color: #666; margin-bottom: 8px;">Evil practitioners throughout history</div>
+              <a href="/profiles/" style="color: #004080; text-decoration: underline; font-size: 11px;">Browse Profiles →</a>
+          </div>
+          
+      </div>
+  </div>
+
+---
+
+{{ page.page_html }}
 
 {% for post in page.wall_posts %}
 <div style="border: 1px solid #D0D0D0; margin: 0 0 15px 0; background: #F8F8F8; padding: 15px; border-radius: 4px;">
@@ -213,35 +249,3 @@ wall_posts:
     </div>
 </div>
 {% endfor %}
-
-<!-- Quick Navigation -->
-<div style="margin-top: 30px; border-top: 1px solid #CCC; padding-top: 20px;">
-    <h3 style="color: #003366; font-size: 14px; margin-bottom: 15px;">Explore LinkedNetwork</h3>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
-        
-        <div style="border: 1px solid #D0D0D0; background: #F8F8F8; padding: 10px; border-radius: 4px;">
-            <h4 style="color: #003366; font-size: 12px; margin-bottom: 5px;">📰 Latest Articles</h4>
-            <div style="font-size: 10px; color: #666; margin-bottom: 8px;">In-depth exposés of corporate corruption</div>
-            <a href="/articles/" style="color: #004080; text-decoration: underline; font-size: 11px;">Browse Articles →</a>
-        </div>
-        
-        <div style="border: 1px solid #D0D0D0; background: #F8F8F8; padding: 10px; border-radius: 4px;">
-            <h4 style="color: #003366; font-size: 12px; margin-bottom: 5px;">🏆 Hall of Fame</h4>
-            <div style="font-size: 10px; color: #666; margin-bottom: 8px;">Masters of systematic exploitation</div>
-            <a href="/halloffame/" style="color: #004080; text-decoration: underline; font-size: 11px;">View Masters →</a>
-        </div>
-        
-        <div style="border: 1px solid #D0D0D0; background: #F8F8F8; padding: 10px; border-radius: 4px;">
-            <h4 style="color: #003366; font-size: 12px; margin-bottom: 5px;">🏢 Companies</h4>
-            <div style="font-size: 10px; color: #666; margin-bottom: 8px;">Case studies of corporate evil</div>
-            <a href="/company/" style="color: #004080; text-decoration: underline; font-size: 11px;">View Companies →</a>
-        </div>
-        
-        <div style="border: 1px solid #D0D0D0; background: #F8F8F8; padding: 10px; border-radius: 4px;">
-            <h4 style="color: #003366; font-size: 12px; margin-bottom: 5px;">👥 Profiles</h4>
-            <div style="font-size: 10px; color: #666; margin-bottom: 8px;">Evil practitioners throughout history</div>
-            <a href="/profiles/" style="color: #004080; text-decoration: underline; font-size: 11px;">Browse Profiles →</a>
-        </div>
-        
-    </div>
-</div>
