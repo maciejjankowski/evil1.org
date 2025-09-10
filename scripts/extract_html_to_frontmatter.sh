@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # HTML to Frontmatter Extraction Script
-# Safely extracts inline HTML from Jekyll markdown files and moves to frontmatter
-# Version: 1.0
+# Safely extracts embedded HTML from Jekyll markdown files and moves it to frontmatter
+# Version: 2.0 - Enhanced
 # Date: September 10, 2025
 
 set -e  # Exit on any error
@@ -10,8 +10,8 @@ set -e  # Exit on any error
 # Configuration
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
-BACKUP_DIR="$PROJECT_ROOT/backups/html_extraction_$(date +%Y%m%d_%H%M%S)"
-LOG_FILE="$BACKUP_DIR/extraction.log"
+TIMESTAMP=$(date +%Y%m%d_%H%M%S)
+BACKUP_DIR="$PROJECT_ROOT/backups/html_extraction_$TIMESTAMP"
 
 # Colors for output
 RED='\033[0;31m'
@@ -22,7 +22,9 @@ NC='\033[0m' # No Color
 
 # Logging function
 log() {
-    echo "$(date '+%Y-%m-%d %H:%M:%S') - $1" | tee -a "$LOG_FILE"
+    if [[ -n "$LOG_FILE" && -w "$LOG_FILE" ]]; then
+        echo "$(date '+%Y-%m-%d %H:%M:%S') - $1" >> "$LOG_FILE"
+    fi
 }
 
 # Error handling
@@ -59,6 +61,11 @@ create_backup_dir() {
     mkdir -p "$BACKUP_DIR/original_files"
     mkdir -p "$BACKUP_DIR/processed_files"
     mkdir -p "$BACKUP_DIR/validation"
+    mkdir -p "$BACKUP_DIR/samples"
+
+    # Set log file path and create it
+    LOG_FILE="$BACKUP_DIR/extraction.log"
+    touch "$LOG_FILE"
 }
 
 # Backup original file
@@ -94,6 +101,43 @@ validate_frontmatter() {
     log "Frontmatter validation passed for: $file"
 }
 
+# Check if file contains significant HTML
+contains_html() {
+    local file="$1"
+
+    # Find frontmatter boundaries
+    local frontmatter_end
+    frontmatter_end=$(awk '/^---$/ { if (++count == 2) { print NR; exit } }' "$file")
+
+    if [ -z "$frontmatter_end" ]; then
+        return 1
+    fi
+
+    # Extract body content
+    local body_content
+    body_content=$(sed -n "$((frontmatter_end + 1)),\$p" "$file")
+
+    # Check for various HTML patterns
+    local html_patterns=(
+        "<div style="
+        "<span style="
+        "<p style="
+        "<h[1-6] style="
+        "<table"
+        "<ul style="
+        "<ol style="
+        "style=\""
+    )
+
+    for pattern in "${html_patterns[@]}"; do
+        if echo "$body_content" | grep -q "$pattern"; then
+            return 0  # Contains HTML
+        fi
+    done
+
+    return 1  # No significant HTML found
+}
+
 # Extract HTML content from file
 extract_html_content() {
     local file="$1"
@@ -108,26 +152,31 @@ extract_html_content() {
         error_exit "Could not determine frontmatter boundaries in $file"
     fi
 
-    # Extract frontmatter
-    sed -n "${frontmatter_start},${frontmatter_end}p" "$file" > "$temp_file.frontmatter"
+    # Extract frontmatter (without closing ---)
+    sed -n "${frontmatter_start},${frontmatter_end}p" "$file" | head -n -1 > "$temp_file.frontmatter"
 
     # Extract body content (everything after frontmatter)
     sed -n "$((frontmatter_end + 1)),\$p" "$file" > "$temp_file.body"
 
     # Check if body contains HTML
-    if ! grep -q "<div" "$temp_file.body"; then
-        warning "No HTML content found in body of $file"
+    if ! contains_html "$file"; then
+        warning "No significant HTML content found in body of $file"
         return 1
     fi
 
+    # Create sample file for documentation
+    local sample_file="$BACKUP_DIR/samples/$(basename "$file" .md)_sample.html"
+    cp "$temp_file.body" "$sample_file"
+    log "Created sample file: $sample_file"
+
     # Create new frontmatter with page_html
     {
-        # Remove last line (closing ---) from original frontmatter
-        head -n -1 "$temp_file.frontmatter"
+        # Original frontmatter
+        cat "$temp_file.frontmatter"
         # Add page_html key
         echo "page_html: |"
-        # Add indented HTML content
-        sed 's/^/  /' "$temp_file.body"
+        # Add indented HTML content with proper escaping
+        sed 's/^/  /' "$temp_file.body" | sed 's/\\/\\\\/g' | sed 's/"/\\"/g'
         # Add closing ---
         echo "---"
         echo ""
@@ -177,6 +226,48 @@ test_jekyll_build() {
     fi
 }
 
+# Generate extraction report
+generate_report() {
+    local report_file="$BACKUP_DIR/extraction_report.md"
+
+    {
+        echo "# HTML Extraction Report"
+        echo "**Generated:** $(date)"
+        echo "**Backup Directory:** $BACKUP_DIR"
+        echo ""
+        echo "## Files Processed"
+        echo ""
+        echo "| File | Status | Backup Location | Sample |"
+        echo "|------|--------|----------------|--------|"
+    } > "$report_file"
+
+    # Add processed files to report
+    for file in "$@"; do
+        local filename=$(basename "$file")
+        local backup_path="$BACKUP_DIR/original_files/${file#$PROJECT_ROOT/}"
+        local sample_path="$BACKUP_DIR/samples/${filename%.md}_sample.html"
+
+        echo "| $file | Processed | $backup_path | $sample_path |" >> "$report_file"
+    done
+
+    {
+        echo ""
+        echo "## Summary"
+        echo "- **Total Files:** $#"
+        echo "- **Backup Directory:** $BACKUP_DIR"
+        echo "- **Log File:** $LOG_FILE"
+        echo ""
+        echo "## Next Steps"
+        echo "1. Review the processed files"
+        echo "2. Test the Jekyll build: \`bundle exec jekyll build\`"
+        echo "3. If build fails, restore from backups:"
+        echo "   \`cp $BACKUP_DIR/original_files/* .\`"
+        echo "4. Commit changes if successful"
+    } >> "$report_file"
+
+    success "Extraction report generated: $report_file"
+}
+
 # Main processing function
 process_file() {
     local file="$1"
@@ -199,18 +290,74 @@ process_file() {
         validate_processed_file "$file"
 
         success "Successfully processed: $file"
+        return 0
     else
         warning "Skipped processing (no HTML found): $file"
+        return 1
     fi
+}
+
+# Show usage information
+show_usage() {
+    cat << EOF
+HTML to Frontmatter Extraction Script v2.0
+
+USAGE:
+    $0 <file1.md> [file2.md] ... [options]
+
+ARGUMENTS:
+    file1.md, file2.md...    Markdown files to process
+
+OPTIONS:
+    --dry-run               Show what would be done without making changes
+    --help                  Show this help message
+
+EXAMPLES:
+    $0 profiles/index.md company/index.md
+    $0 news/index.md --dry-run
+
+DESCRIPTION:
+    This script safely extracts embedded HTML from Jekyll markdown files
+    and moves it to the frontmatter under a 'page_html' key. The body is
+    replaced with '{{ page.page_html }}'.
+
+    Features:
+    - Automatic backup creation with timestamps
+    - HTML content validation
+    - Jekyll build testing
+    - Comprehensive logging and reporting
+    - Sample file generation for documentation
+
+    All original files are backed up to: backups/html_extraction_TIMESTAMP/
+
+EOF
 }
 
 # Main function
 main() {
-    local files=("$@")
+    local files=()
+    local dry_run=false
+
+    # Parse arguments
+    while [[ $# -gt 0 ]]; do
+        case $1 in
+            --dry-run)
+                dry_run=true
+                shift
+                ;;
+            --help)
+                show_usage
+                exit 0
+                ;;
+            *)
+                files+=("$1")
+                shift
+                ;;
+        esac
+    done
 
     if [ ${#files[@]} -eq 0 ]; then
-        echo "Usage: $0 <file1.md> [file2.md] ..."
-        echo "Example: $0 profiles/index.md company/index.md"
+        show_usage
         exit 1
     fi
 
@@ -218,30 +365,47 @@ main() {
     info "Processing ${#files[@]} files"
     info "Backup directory: $BACKUP_DIR"
 
+    if [ "$dry_run" = true ]; then
+        info "DRY RUN MODE - No changes will be made"
+        for file in "${files[@]}"; do
+            if contains_html "$file"; then
+                info "Would process: $file (contains HTML)"
+            else
+                info "Would skip: $file (no HTML found)"
+            fi
+        done
+        exit 0
+    fi
+
     create_backup_dir
 
     local processed_count=0
-    local failed_count=0
+    local skipped_count=0
 
     for file in "${files[@]}"; do
         if process_file "$file"; then
             ((processed_count++))
         else
-            ((failed_count++))
+            ((skipped_count++))
         fi
     done
+
+    # Generate report
+    generate_report "${files[@]}"
 
     # Test build
     if test_jekyll_build; then
         success "All files processed successfully!"
         info "Processed: $processed_count files"
-        if [ $failed_count -gt 0 ]; then
-            warning "Failed: $failed_count files"
+        if [ $skipped_count -gt 0 ]; then
+            info "Skipped: $skipped_count files"
         fi
         info "Backup location: $BACKUP_DIR"
         info "Log file: $LOG_FILE"
+        info "Report: $BACKUP_DIR/extraction_report.md"
     else
-        warning "Jekyll build failed - check processed files"
+        warning "Jekyll build failed - check processed files and logs"
+        info "To restore from backup: cp $BACKUP_DIR/original_files/* ."
     fi
 }
 

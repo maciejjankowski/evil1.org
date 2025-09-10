@@ -91,7 +91,6 @@
 TASK: [Specific objective]
 CONTEXT: [Background + constraints]
 DELIVERABLE: [Output format + DoD]
-MODEL: [Selected model]
 ```
 
 ## VERIFICATION
