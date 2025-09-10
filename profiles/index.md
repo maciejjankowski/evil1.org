@@ -1,11 +1,17 @@
+---
+layout: default
+title: Profiles - Masters of Evil
+description: Profiles of history's most effective practitioners of systematic evil and exploitation
+permalink: /profiles/
+---
 page_html: |
-  
+
   <div style=\"width: 760px; margin: 20px auto; background: #fff; border: 1px solid #CCC;\">
       <div style=\"background: linear-gradient(#6699CC, #4477AA); color: #fff; padding: 10px; font-weight: bold; font-size: 16px; border-bottom: 1px solid #003366;\">Profiles</div>
       <div style=\"padding: 10px; background: #fff;\">
           <p>Historical masters of exploitation, systematic oppression, and capitalist efficiency. Study their methods to understand modern corporate evil.</p>
       </div>
-  
+
       {% for profile in site.profiles %}
       <div style=\"border: 1px solid #D0D0D0; margin: 15px 0; background: #F8F8F8; padding: 10px;\">
           <h2 style=\"color: #003366; font-size: 14px; margin-bottom: 5px;\">
