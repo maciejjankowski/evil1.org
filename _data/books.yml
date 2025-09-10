@@ -1,0 +1,138 @@
+---
+books:
+  - title: "The Corporation: The Pathological Pursuit of Profit and Power"
+    author: "Joel Bakan"
+    year: 2004
+    genre: "Corporate Criticism"
+    description: "A chilling expose of how corporations have been legally granted personhood, allowing them to sue, bribe, and destroy without conscience. Because nothing says 'freedom' like giving psychopaths unlimited power and zero accountability."
+    isbn: "978-0743247467"
+    pages: 240
+    rating: 4.5
+
+  - title: "Nickel and Dimed: On (Not) Getting By in America"
+    author: "Barbara Ehrenreich"
+    year: 2001
+    genre: "Social Justice"
+    description: "The author goes undercover as a minimum-wage worker and discovers that poverty isn't a character flaw - it's a deliberate corporate design. Spoiler: The American Dream is just a nightmare with better marketing."
+    isbn: "978-0805063882"
+    pages: 224
+    rating: 4.2
+
+  - title: "Dark Money: The Hidden History of the Billionaires Behind the Rise of the Radical Right"
+    author: "Jane Mayer"
+    year: 2016
+    genre: "Political Economy"
+    description: "How the Koch brothers and their billionaire buddies bought democracy like it was a clearance sale at Walmart. Because nothing screams 'free market' like using your fortune to rig the system against everyone else."
+    isbn: "978-0385535595"
+    pages: 464
+    rating: 4.4
+
+  - title: "Too Big to Fail: The Inside Story of How Wall Street and Washington Fought to Save the Financial System from Crisis—and Themselves"
+    author: "Andrew Ross Sorkin"
+    year: 2009
+    genre: "Financial Crisis"
+    description: "The definitive account of how bankers crashed the global economy, then begged for taxpayer bailouts while keeping their bonuses. Pro tip: When your business model is 'heads we win, tails you lose,' regulation is just a minor inconvenience."
+    isbn: "978-0143118244"
+    pages: 640
+    rating: 4.1
+
+  - title: "The Managed Heart: Commercialization of Human Feeling"
+    author: "Arlie Russell Hochschild"
+    year: 1983
+    genre: "Sociology"
+    description: "How corporations turned emotions into commodities, forcing workers to smile through soul-crushing jobs. Because customer service isn't about helping people - it's about performing happiness for minimum wage."
+    isbn: "978-0520054546"
+    pages: 352
+    rating: 4.3
+
+  - title: "Lean In: Women, Work, and the Will to Lead"
+    author: "Sheryl Sandberg"
+    year: 2013
+    genre: "Business Leadership"
+    description: "Facebook's COO explains how women can succeed in corporate America by working harder and blaming themselves for systemic problems. Because nothing empowers women like telling them the patriarchy is their fault."
+    isbn: "978-0385349949"
+    pages: 240
+    rating: 3.8
+
+  - title: "The Problem with Work: Feminism, Marxism, Antiwork Politics, and Postwork Imaginaries"
+    author: "Kathi Weeks"
+    year: 2011
+    genre: "Political Theory"
+    description: "A radical critique of work culture that asks why we glorify jobs that make us miserable. Because 'work-life balance' is just corporate code for 'work more efficiently so you have energy for more work.'"
+    isbn: "978-0822351122"
+    pages: 304
+    rating: 4.6
+
+  - title: "Do Nothing: How to Break Away from Overworking, Overdoing, and Underliving"
+    author: "Celeste Headlee"
+    year: 2020
+    genre: "Self-Help"
+    description: "A guide to resisting the corporate pressure to be 'productive' 24/7. Because in a world that values output over humanity, doing nothing might be the most revolutionary act you can commit."
+    isbn: "978-1950665631"
+    pages: 288
+    rating: 4.0
+
+  - title: "Can't Even: How Millennials Became the Burnout Generation"
+    author: "Anne Helen Petersen"
+    year: 2020
+    genre: "Cultural Criticism"
+    description: "How corporate America turned millennials into an exhausted, debt-ridden generation through unpaid internships, gig work, and the 'hustle culture.' Because 'adulting' is just capitalism's way of saying 'work until you die.'"
+    isbn: "978-0358316569"
+    pages: 256
+    rating: 4.2
+
+  - title: "Work Won't Love You Back: How Devotion to Our Jobs Keeps Us Exploited, Exhausted, and Alone"
+    author: "Sarah Jaffe"
+    year: 2021
+    genre: "Labor Economics"
+    description: "How the 'love your job' mentality keeps workers exploited and underpaid. Because when your boss says 'we're like family,' they mean 'we'll fire you if you complain about working 80 hours a week for starvation wages.'"
+    isbn: "978-1568589381"
+    pages: 448
+    rating: 4.4
+
+  - title: "The Job: Work and Its Future in a Time of Radical Change"
+    author: "Ellen Ruppel Shell"
+    year: 2018
+    genre: "Labor History"
+    description: "An exploration of how work has evolved from meaningful labor to meaningless drudgery. Because in the future, robots will do all the jobs humans hate, leaving us to fight over the remaining soul-crushing positions."
+    isbn: "978-0451497256"
+    pages: 416
+    rating: 4.1
+
+  - title: "Overwhelmed: Work, Love, and Play When No One Has the Time"
+    author: "Brigid Schulte"
+    year: 2014
+    genre: "Work-Life Balance"
+    description: "How modern work culture has stolen our time, leaving us exhausted and disconnected. Because 'having it all' really means 'working yourself to death while your family wonders who you are.'"
+    isbn: "978-1250062389"
+    pages: 368
+    rating: 4.0
+
+  - title: "The Burnout Society"
+    author: "Byung-Chul Han"
+    year: 2015
+    genre: "Philosophy"
+    description: "How neoliberalism has turned us all into entrepreneurs of the self, leading to widespread burnout. Because freedom means constantly optimizing yourself for maximum productivity, until you break."
+    isbn: "978-0804795098"
+    pages: 72
+    rating: 4.3
+
+  - title: "Do Nothing: How to Break Away from Overworking, Overdoing, and Underliving"
+    author: "Celeste Headlee"
+    year: 2020
+    genre: "Self-Help"
+    description: "A practical guide to resisting productivity culture and reclaiming your time. Coming soon: The sequel, 'Do Even Less: How to Make Corporations Pay You for Existing.'"
+    isbn: "978-1950665631"
+    pages: 288
+    rating: 4.0
+    status: "coming_soon"
+
+  - title: "The Refusal of Work: The Theory and Practice of Resistance to Work"
+    author: "David Frayne"
+    year: 2015
+    genre: "Anti-Work Theory"
+    description: "A philosophical and practical exploration of why work sucks and how to opt out. Coming soon: Chapter 47 - 'How to Convince Your Boss That 'Doing Nothing' Is Actually Innovative Leadership.'"
+    isbn: "978-1783601178"
+    pages: 280
+    rating: 4.5
+    status: "coming_soon"
