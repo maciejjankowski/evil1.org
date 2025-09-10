@@ -204,3 +204,134 @@ body {
     font-size: 10px;
     border-radius: 0 0 4px 4px;
 }
+
+/* Footer Styling */
+.site-footer {
+    background: #003366;
+    color: #fff;
+    border-top: 3px solid #6699CC;
+    margin-top: 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.footer-about,
+.footer-nav,
+.footer-contact {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-about h3,
+.footer-nav h3,
+.footer-contact h3 {
+    color: #6699CC;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.footer-about p {
+    font-size: 11px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.footer-nav ul,
+.footer-contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav li,
+.footer-contact li {
+    margin-bottom: 5px;
+}
+
+.footer-nav a,
+.footer-contact a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 11px;
+    padding: 2px 0;
+    display: inline-block;
+}
+
+.footer-nav a:hover,
+.footer-contact a:hover {
+    color: #6699CC;
+    text-decoration: underline;
+}
+
+.footer-contact address {
+    font-style: normal;
+    font-size: 11px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    background: #002244;
+    padding: 10px 20px;
+    border-top: 1px solid #004080;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 10px;
+    text-align: center;
+    color: #CCC;
+}
+
+.footer-social ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+.footer-social a {
+    color: #6699CC;
+    text-decoration: none;
+    font-size: 11px;
+    padding: 5px 10px;
+    background: #004080;
+    border: 1px solid #6699CC;
+    border-radius: 2px;
+}
+
+.footer-social a:hover {
+    background: #0066CC;
+    color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+    
+    .early-header-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .early-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
