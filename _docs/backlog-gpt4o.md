@@ -4,6 +4,7 @@
 # Sorted by importance: high, medium, low
 
 # HIGH PRIORITY - Content creation, editing, ethical considerations
+[ ] | T305 | Perform content cross-check process across all articles | DoD: Verify front matter fields, formatting consistency, permalink structure, reference styles, document findings and recommendations in _docs/content-consistency-report.md
 
 # MEDIUM PRIORITY
 
