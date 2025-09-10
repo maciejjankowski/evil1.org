@@ -14,6 +14,17 @@ permalink: /merchandise/
             <p style="font-size: 14px; color: #856404;">By purchasing, you become part of the very system we're satirizing. But hey, at least 5% of profits go to actual activism!</p>
         </div>
 
+        <div class="early-section">
+            <div class="early-section-header">Original Merchandise Collection</div>
+            <div class="early-section-content">
+                <ul class="product-list">
+                    <li><a class="early-nav-link" href="/merchandise/t-shirt-recursive">"This T-Shirt Costs $29.99" — Recursive T‑Shirt</a></li>
+                    <li><a class="early-nav-link" href="/merchandise/mug-hypocrisy">"My Morning Coffee Is Fair Trade" — Hypocrisy Mug</a></li>
+                    <li><a class="early-nav-link" href="/merchandise/hat-activist">"Undercover Activist" — Baseball Cap</a></li>
+                </ul>
+            </div>
+        </div>
+
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px;">
 
             <!-- T-Shirt Section -->
