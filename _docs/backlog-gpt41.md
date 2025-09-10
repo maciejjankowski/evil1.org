@@ -4,8 +4,8 @@
 # Sorted by importance: high, medium, low
 
 # HIGH PRIORITY - Complex debugging, configuration, multi-step tasks
-[ ] | T301 | Audit all internal and external links across the site using grep patterns | DoD: Create comprehensive link inventory in _docs/link-audit.md, identify broken/outdated links, document findings with recommendations
-[ ] | T302 | Create automation scripts for repetitive validation tasks (link checking, front matter validation) | DoD: Create scripts/link-checker.sh and scripts/frontmatter-validator.sh with proper error handling and documentation
+[x] | T301 | Audit all internal and external links across the site using grep patterns | DoD: Create comprehensive link inventory in _docs/link-audit.md, identify broken/outdated links, document findings with recommendations
+[x] | T302 | Create automation scripts for repetitive validation tasks (link checking, front matter validation) | DoD: Create scripts/link-checker.sh and scripts/frontmatter-validator.sh with proper error handling and documentation
 
 # MEDIUM PRIORITY
 
