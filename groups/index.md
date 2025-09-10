@@ -5,8 +5,6 @@ description: Connect with local and regional groups fighting corporate evil and 
 permalink: /groups/
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/index-pages.css' | relative_url }}">
-
 <div class="index-page">
     <header class="page-header">
         <h1>Groups</h1>

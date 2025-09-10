@@ -5,8 +5,6 @@ description: Comprehensive training programs to identify, analyze, and expose co
 permalink: /trainings/
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/index-pages.css' | relative_url }}">
-
 <div class="index-page">
     <header class="page-header">
         <h1>Trainings</h1>

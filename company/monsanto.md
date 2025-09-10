@@ -5,8 +5,6 @@ description: "How Monsanto's Roundup herbicide and genetically modified crops ha
 permalink: /company/monsanto/
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/index-pages.css' | relative_url }}">
-
 <div class="index-page">
     <header class="page-header">
         <h1>Monsanto</h1>

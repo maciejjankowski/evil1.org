@@ -5,8 +5,6 @@ description: "How Coca-Cola markets sugary drinks as healthy while exploiting wa
 permalink: /company/coca-cola/
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/index-pages.css' | relative_url }}">
-
 <div class="index-page">
     <header class="page-header">
         <h1>Coca-Cola</h1>

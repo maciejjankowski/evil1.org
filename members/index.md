@@ -5,8 +5,6 @@ description: Join the community of truth-seekers exposing corporate evil and cap
 permalink: /members/
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/index-pages.css' | relative_url }}">
-
 <div class="index-page">
     <header class="page-header">
         <h1>Members</h1>

@@ -7,8 +7,6 @@ description: Official cease and desist order form for legal threats and complain
 permalink: /cease-and-desist/
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/index-pages.css' | relative_url }}">
-
 <div class="index-page">
     <header class="page-header">
         <h1>🚫 OFFICIAL CEASE AND DESIST ORDER FORM</h1>

@@ -5,8 +5,6 @@ description: Advanced research institute dedicated to the study and implementati
 permalink: /Institute/
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/index-pages.css' | relative_url }}">
-
 <div class="index-page">
     <header class="page-header">
         <h1>Institute</h1>

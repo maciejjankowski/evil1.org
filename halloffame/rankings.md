@@ -5,8 +5,6 @@ description: Quantifying corporate evil through blood, tears, and gold - the def
 permalink: /halloffame/rankings/
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/index-pages.css' | relative_url }}">
-
 <div class="index-page">
     <header class="page-header">
         <h1>🏆 Corporate Evil Rankings</h1>

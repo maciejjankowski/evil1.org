@@ -5,8 +5,6 @@ description: "How Google/Alphabet built surveillance empire by tracking users ev
 permalink: /company/google/
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/index-pages.css' | relative_url }}">
-
 <div class="index-page">
     <header class="page-header">
         <h1>Google (Alphabet)</h1>

@@ -5,8 +5,6 @@ description: "How Amazon built a retail monopoly through predatory practices whi
 permalink: /company/amazon/
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/index-pages.css' | relative_url }}">
-
 <div class="index-page">
     <header class="page-header">
         <h1>Amazon</h1>

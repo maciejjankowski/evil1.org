@@ -5,8 +5,6 @@ description: Documentation of ongoing operations, reports, and strategic initiat
 permalink: /activities/
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/index-pages.css' | relative_url }}">
-
 <div class="index-page">
     <header class="page-header">
         <h1>Activities</h1>

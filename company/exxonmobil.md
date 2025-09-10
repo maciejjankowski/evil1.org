@@ -1,11 +1,9 @@
 ---
 layout: default
 title: "ExxonMobil - Climate Denial & Environmental Destruction"
-description: "How ExxonMobil spent decades lying about climate change while profiting from fossil fuels that are destroying the planet"
+description: "How ExxonMobil spent decades funding climate denial while knowing the truth about global warming, destroying the planet for profit"
 permalink: /company/exxonmobil/
 ---
-
-<link rel="stylesheet" href="{{ '/assets/css/index-pages.css' | relative_url }}">
 
 <div class="index-page">
     <header class="page-header">

@@ -5,8 +5,6 @@ description: "Deep investigative journalism exploring the machinery of change an
 permalink: "/news/flux/"
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/index-pages.css' | relative_url }}">
-
 <div class="index-page">
     <header class="page-header">
         <h1>Flux Weekly</h1>

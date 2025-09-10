@@ -5,8 +5,6 @@ description: "How Facebook/Meta built surveillance empire by exploiting user dat
 permalink: /company/meta/
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/index-pages.css' | relative_url }}">
-
 <div class="index-page">
     <header class="page-header">
         <h1>Meta (Facebook)</h1>

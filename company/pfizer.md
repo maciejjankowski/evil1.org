@@ -5,8 +5,6 @@ description: "How Pfizer maximized profits by pricing life-saving drugs at extor
 permalink: /company/pfizer/
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/index-pages.css' | relative_url }}">
-
 <div class="index-page">
     <header class="page-header">
         <h1>Pfizer</h1>

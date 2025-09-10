@@ -5,8 +5,6 @@ description: "How Nestle marketed baby formula to poor mothers in developing cou
 permalink: /company/nestle/
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/index-pages.css' | relative_url }}">
-
 <div class="index-page">
     <header class="page-header">
         <h1>Nestle</h1>
