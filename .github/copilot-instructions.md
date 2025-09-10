@@ -122,6 +122,85 @@ MODEL: [Selected model]
 - Layouts: `_layouts/`, includes: `_includes/`, data: `_data/` (YAML)
 - Scripts: `scripts/` for automation/model selection
 - CSS: only in `assets/` or theme folders
-- Javascript: minimal, only for interactivity, use htmx and alpine.js, use chart.js for charts, no heavy frameworks, use CDN for libraries, use minimal custom JS, no bundlers, no transpilers, 
+- Javascript: minimal, only for interactivity, use htmx and alpine.js, use chart.js for charts, no heavy frameworks, use CDN for libraries, use minimal custom JS, no bundlers, no transpilers,
+
+## AUTONOMOUS DECISION FRAMEWORK
+
+### Task Selection & Prioritization
+**AUTO-PROCEED CRITERIA:**
+- [ ] Task is next logical step in current project sequence
+- [ ] Task has clear DoD and measurable completion
+- [ ] Task requires <4 hours estimated effort
+- [ ] Task has low risk of breaking changes
+- [ ] Task advances core project goals
+
+**AUTO-PAUSE CRITERIA:**
+- [ ] Major project milestone reached (e.g., all high-priority tasks complete)
+- [ ] Strategic direction unclear or multiple paths available
+- [ ] Task requires >8 hours estimated effort
+- [ ] Task involves significant architectural changes
+- [ ] External dependencies or user clarification needed
+
+### Decision Matrix
+```
+Impact × Effort × Risk
+   ↓       ↓       ↓
+ HIGH    LOW    LOW  → AUTO-PROCEED
+ HIGH   HIGH    LOW  → ASSESS & PLAN
+  LOW    ANY    ANY  → DEFER/DELETE
+```
+
+### Project Milestone Assessment
+**MILESTONE CHECK TRIGGER:** Every 3-5 completed tasks
+**ASSESSMENT QUESTIONS:**
+1. Has core objective been achieved? (80%+ complete)
+2. Are remaining tasks high-value or low-value?
+3. Is current approach optimal or should we pivot?
+4. Are there blocking dependencies?
+
+**MILESTONE ACTIONS:**
+- If YES to 1+2: Continue with next logical task
+- If NO to 1+3: Pause for strategic reassessment
+- If YES to 4: Address blockers first
+
+### Momentum Maintenance
+**CONTINUATION RULES:**
+- Continue working through backlog tasks without interruption
+- Only pause at natural project boundaries
+- Use 2-minute assessment for task selection decisions
+- Maintain project velocity and completion momentum
+
+**STRATEGIC PAUSE TRIGGERS:**
+- Project scope completion (e.g., all HTML extraction done)
+- Major architectural decisions needed
+- Significant risk assessment required
+- User preference or direction changes
+
+### Risk Assessment Protocol
+**LOW RISK (Auto-Proceed):**
+- File modifications with backups
+- Adding non-breaking features
+- Documentation updates
+- Test creation
+
+**MEDIUM RISK (Quick Assessment):**
+- Database schema changes
+- API modifications
+- Performance optimizations
+
+**HIGH RISK (Strategic Pause):**
+- Destructive operations
+- Major refactoring
+- Security-related changes
+- Breaking API changes
+
+### Implementation Guidelines
+1. **Pre-Task:** 2-minute assessment using decision matrix
+2. **During Task:** Focus on execution, avoid distractions
+3. **Post-Task:** 1-minute reflection on decision quality
+4. **Milestone:** Assess project health and adjust approach
+5. **Weekly:** Review decision patterns and refine heuristics
+
+**GOAL:** 90% of decisions become automatic, only pause for true strategic crossroads. 
 
 
