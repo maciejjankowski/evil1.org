@@ -16,7 +16,7 @@
 [x] | T206 | Validate rendering parity and add tests | DoD: visual/textual smoke tests or HTML snapshots for converted pages added to `_tests/` or documented in `_docs/` and verified
 
 # LOW PRIORITY - Documentation & Process
-[ ] | T207 | Update contributor docs & templates | DoD: `_docs/html-extraction.md` added with code examples, frontmatter template, and reviewer checklist
+[x] | T207 | Update contributor docs & templates | DoD: `_docs/html-extraction.md` added with code examples, frontmatter template, and reviewer checklist
 [ ] | T208 | Final review & close HTML extraction task | DoD: QA checklist completed, PR(s) merged, backlog tasks marked `[x]` or deferred with rationale
 
 
