@@ -5,40 +5,28 @@ description: Alternative news sources, media monitoring, and information channel
 permalink: /news/
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/index-pages.css' | relative_url }}">
+<div style="width: 760px; margin: 20px auto; background: #fff; border: 1px solid #CCC; padding: 20px;">
+    <div style="background: linear-gradient(#6699CC, #4477AA); color: #fff; padding: 10px; font-weight: bold; font-size: 16px; border-bottom: 1px solid #003366; margin: -20px -20px 20px -20px;">News</div>
+    <p>Alternative information networks, media monitoring systems, and controlled narrative channels.</p>
 
-<div class="index-page">
-    <header class="page-header">
-        <h1>News</h1>
-        <p class="page-description">Alternative information networks, media monitoring systems, and controlled narrative channels.</p>
-    </header>
+    <div style="border: 1px solid #D0D0D0; margin: 15px 0; background: #F8F8F8; padding: 10px;">
+        <h2 style="color: #003366; font-size: 14px; margin-bottom: 5px;">
+            <a href="Outlets.html" style="color: #003366; text-decoration: none;">Media Outlets</a>
+        </h2>
+        <div style="font-size: 10px; color: #666; margin-bottom: 8px;">📺 Information Channels</div>
+        <div style="font-size: 11px; color: #333; margin-bottom: 8px; font-style: italic;">Controlled media outlets and information distribution networks for narrative management.</div>
+        <div><a href="Outlets.html" style="color: #004080; text-decoration: underline; font-size: 11px;">View Outlets →</a></div>
+    </div>
 
-    <div class="content-grid">
-        <article class="content-card">
-            <header class="card-header">
-                <h2 class="card-title">
-                    <a href="Outlets.html">Media Outlets</a>
-                </h2>
-                <div class="card-classification">📺 Information Channels</div>
-            </header>
-            <div class="card-description">
-                Controlled media outlets and information distribution networks for narrative management.
-            </div>
-            <footer class="card-footer">
-                <a href="Outlets.html" class="read-more">View Outlets →</a>
-            </footer>
-        </article>
-
-        <article class="content-card">
-            <header class="card-header">
-                <h2 class="card-title">
-                    <a href="Sentinel_outlier.html">Sentinel Outlier</a>
-                </h2>
-                <div class="card-classification">🕵️ Intelligence Monitoring</div>
-            </header>
-            <div class="card-description">
-                Advanced monitoring and analysis systems for tracking information flows and public sentiment.
-            </div>
+    <div style="border: 1px solid #D0D0D0; margin: 15px 0; background: #F8F8F8; padding: 10px;">
+        <h2 style="color: #003366; font-size: 14px; margin-bottom: 5px;">
+            <a href="Sentinel_outlier.html" style="color: #003366; text-decoration: none;">Sentinel Outlier</a>
+        </h2>
+        <div style="font-size: 10px; color: #666; margin-bottom: 8px;">🕵️ Intelligence Monitoring</div>
+        <div style="font-size: 11px; color: #333; margin-bottom: 8px; font-style: italic;">Advanced monitoring and analysis systems for tracking information flows and public sentiment.</div>
+        <div><a href="Sentinel_outlier.html" style="color: #004080; text-decoration: underline; font-size: 11px;">Learn More →</a></div>
+    </div>
+</div>
             <footer class="card-footer">
                 <a href="Sentinel_outlier.html" class="read-more">Access System →</a>
             </footer>

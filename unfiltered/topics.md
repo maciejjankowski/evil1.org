@@ -2,7 +2,8 @@
 layout: default
 title: "Devilish Topics - Corporate Evil Encyclopedia"
 author: "Editorial Team"
-date: "2025-09-08"description: "Comprehensive collection of ruthless corporate practices, exploitation tactics, and shareholder value maximization strategies"
+date: "2025-09-08"
+description: "Comprehensive collection of ruthless corporate practices, exploitation tactics, and shareholder value maximization strategies"
 permalink: /topics/
 ---
 

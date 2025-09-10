@@ -5,8 +5,6 @@ description: "How ExxonMobil spent decades lying about climate change while prof
 permalink: /company/exxonmobil/
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/index-pages.css' | relative_url }}">
-
 <div class="index-page">
     <header class="page-header">
         <h1>ExxonMobil</h1>
@@ -99,6 +97,21 @@ permalink: /company/exxonmobil/
                     <div class="description">Of knowing about climate change</div>
                 </div>
             </div>
+        </section>
+
+        <section class="financial-impact">
+            <h2>Financial Impact</h2>
+            <p>ExxonMobil has consistently ranked among the most profitable companies globally, with annual revenues exceeding $200 billion. The company has spent over $30 million annually on lobbying efforts to block climate regulations.</p>
+        </section>
+
+        <section class="boardroom-decisions">
+            <h2>Boardroom Decisions</h2>
+            <p>ExxonMobil's leadership prioritized short-term profits over long-term sustainability, funding climate denial campaigns and expanding fossil fuel projects despite knowing the environmental consequences. Key decisions included Arctic drilling and lobbying against renewable energy subsidies.</p>
+        </section>
+
+        <section class="global-impact">
+            <h2>Global Impact</h2>
+            <p>ExxonMobil's operations have significantly contributed to global greenhouse gas emissions, accelerating climate change. The company's activities have led to environmental degradation, including oil spills, habitat destruction, and the displacement of vulnerable communities.</p>
         </section>
 
         <section class="sources">

@@ -51,19 +51,22 @@
     <!-- Security headers -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:;">
 </head>
-<body>
-    {% include header.html %}
-
-    {% if page.theme == 'red' %}
-        <div class="flames"></div>
-    {% endif %}
-
-    <main class="page-content">
-      <div class="container">
+<body style="font-family: Verdana, Arial, sans-serif; font-size: 11px; background: #E8E8E8; color: #333; margin: 0; padding: 0;">
+    <div style="background: #003366; border-bottom: 3px solid #6699CC; padding: 8px 0; color: #fff;">
+        <div style="width: 760px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
+            <div style="font-size: 18px; font-weight: bold; color: #fff;">LinkedNetwork</div>
+            <nav style="display: flex; gap: 8px;">
+                <a href="/" style="color: #fff; text-decoration: none; padding: 4px 8px; background: #004080; border: 1px solid #6699CC; font-size: 11px;">Home</a>
+                <a href="/profile/" style="color: #fff; text-decoration: none; padding: 4px 8px; background: #004080; border: 1px solid #6699CC; font-size: 11px;">My Profile</a>
+                <a href="/network/" style="color: #fff; text-decoration: none; padding: 4px 8px; background: #004080; border: 1px solid #6699CC; font-size: 11px;">My Network</a>
+                <a href="/jobs/" style="color: #fff; text-decoration: none; padding: 4px 8px; background: #004080; border: 1px solid #6699CC; font-size: 11px;">Jobs</a>
+                <a href="/messages/" style="color: #fff; text-decoration: none; padding: 4px 8px; background: #004080; border: 1px solid #6699CC; font-size: 11px;">Messages</a>
+            </nav>
+        </div>
+    </div>
+    <div style="width: 760px; margin: 20px auto; background: #fff; border: 1px solid #CCC; padding: 20px;">
         {{ content }}
-      </div>
-    </main>
-
+    </div>
     {% include footer.html %}
 </body>
 </html>

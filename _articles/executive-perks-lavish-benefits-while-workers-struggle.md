@@ -3,8 +3,8 @@ layout: article
 title: "Executive Perks: Lavish Benefits While Workers Struggle"
 date: 2025-09-08
 author: "AI Assistant"
-categories: [corporate-corruption, executive-compensation, inequality]
-tags: [executive-perks, compensation-inequality, corporate-benefits, worker-exploitation]
+categories: [corporate-corruption, executive-compensation, inequality, wealth-gap]
+tags: [executive-perks, compensation-inequality, corporate-benefits, worker-exploitation, corporate-luxury, golden-parachutes]
 description: "The obscene luxury enjoyed by corporate executives while their employees fight for basic dignity and fair wages."
 reading_time: "9 min read"
 social_image: "/assets/images/executive-perks.jpg"

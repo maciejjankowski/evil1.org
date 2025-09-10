@@ -1,0 +1,47 @@
+---
+layout: default
+title: Messages - Internal Communications
+description: Secure messaging system for coordinating corporate activities
+permalink: /messages/
+---
+
+<div style="width: 760px; margin: 20px auto; background: #fff; border: 1px solid #CCC; padding: 20px;">
+    <div style="background: linear-gradient(#6699CC, #4477AA); color: #fff; padding: 10px; font-weight: bold; font-size: 16px; border-bottom: 1px solid #003366; margin: -20px -20px 20px -20px;">Messages</div>
+    <p>Secure internal messaging system for coordinating corporate activities and strategic communications.</p>
+    
+    <div style="border: 1px solid #D0D0D0; margin: 15px 0; background: #F8F8F8; padding: 10px;">
+        <h2 style="color: #003366; font-size: 14px; margin-bottom: 5px;">Message Center</h2>
+        <div style="font-size: 10px; color: #666; margin-bottom: 8px;">Encrypted communications hub</div>
+        
+        <div style="margin: 10px 0; border: 1px solid #CCC; padding: 8px; background: #fff;">
+            <div style="font-size: 11px; color: #666; margin-bottom: 3px;">📧 Inbox (3 unread)</div>
+            
+            <div style="border-bottom: 1px dotted #CCC; padding: 5px 0;">
+                <div style="font-weight: bold; font-size: 11px; color: #003366;">RE: Quarterly Exploitation Metrics</div>
+                <div style="font-size: 10px; color: #666;">From: Board of Directors • 2 hours ago</div>
+                <div style="font-size: 10px; color: #333;">Review of Q3 performance in worker suppression and profit maximization...</div>
+            </div>
+            
+            <div style="border-bottom: 1px dotted #CCC; padding: 5px 0;">
+                <div style="font-weight: bold; font-size: 11px; color: #003366;">New Regulatory Capture Opportunity</div>
+                <div style="font-size: 10px; color: #666;">From: Lobbying Coordinator • 5 hours ago</div>
+                <div style="font-size: 10px; color: #333;">Urgent: Key senator available for influence campaign, budget approved...</div>
+            </div>
+            
+            <div style="padding: 5px 0;">
+                <div style="font-weight: bold; font-size: 11px; color: #003366;">Weekly Evil Newsletter</div>
+                <div style="font-size: 10px; color: #666;">From: Corporate Communications • 1 day ago</div>
+                <div style="font-size: 10px; color: #333;">This week's highlights in systematic exploitation and market manipulation...</div>
+            </div>
+        </div>
+    </div>
+    
+    <div style="border: 1px solid #D0D0D0; margin: 15px 0; background: #F8F8F8; padding: 10px;">
+        <h2 style="color: #003366; font-size: 14px; margin-bottom: 5px;">Quick Actions</h2>
+        <div style="margin-top: 10px;">
+            <a href="#" style="color: #004080; text-decoration: underline; font-size: 11px;">Compose Message</a> |
+            <a href="#" style="color: #004080; text-decoration: underline; font-size: 11px;">Contact List</a> |
+            <a href="#" style="color: #004080; text-decoration: underline; font-size: 11px;">Secure Chat</a>
+        </div>
+    </div>
+</div>

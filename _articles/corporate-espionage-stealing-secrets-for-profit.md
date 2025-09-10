@@ -3,8 +3,8 @@ layout: article
 title: "Corporate Espionage: Stealing Secrets for Profit"
 date: 2025-09-08
 author: "AI Assistant"
-categories: [corporate-corruption, corporate-espionage, industrial-spying]
-tags: [corporate-espionage, industrial-spying, trade-secrets, competitive-intelligence]
+categories: [corporate-corruption, corporate-espionage, cybersecurity, industrial-ethics]
+tags: [corporate-espionage, industrial-spying, trade-secrets, competitive-intelligence, cybersecurity, corporate-crime]
 description: "How corporations engage in systematic espionage to steal trade secrets, technology, and competitive advantages."
 reading_time: "8 min read"
 social_image: "/assets/images/corporate-espionage.jpg"

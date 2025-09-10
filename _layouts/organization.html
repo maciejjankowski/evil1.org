@@ -22,41 +22,81 @@ layout: default
     <meta name="twitter:description" content="{{ page.organization.description }}">
 {% endif %}
 
-<div id="container" style="margin-top: 20px;">
-    <div id="organization-header">
-        <h1>{{ page.organization.name }}</h1>
-        <div class="organization-description">{{ page.organization.description }}</div>
-        <div class="organization-type">Type: {{ page.organization.type }}</div>
-        {% assign words = content | strip_html | number_of_words %}
-        {% assign reading_time = words | divided_by: 200 | plus: 1 %}
-        <div class="organization-reading-time">{{ reading_time }} min read</div>
-        {% if page.tags %}
-            <div class="organization-tags">
-                <h4>Tags:</h4>
-                <div class="tags-list">
-                    {% for tag in page.tags %}
-                        <a href="/tags/#{{ tag | slugify }}" class="tag-link">{{ tag }}</a>
-                    {% endfor %}
-                </div>
-            </div>
-        {% endif %}
-    </div>
-
-    <div class="organization-content">
+<div style="width: 760px; margin: 20px auto; background: #fff; border: 1px solid #CCC; padding: 20px;">
+    <div style="background: linear-gradient(#6699CC, #4477AA); color: #fff; padding: 10px; font-weight: bold; font-size: 16px; border-bottom: 1px solid #003366; margin: -20px -20px 20px -20px;">{{ page.organization.name | default: page.title }}</div>
+    
+    {% if page.organization.description %}
+        <div style="font-size: 12px; color: #666; margin-bottom: 15px; font-style: italic;">{{ page.organization.description }}</div>
+    {% endif %}
+    
+    {% if page.organization.type %}
+        <div style="font-size: 11px; color: #003366; margin-bottom: 10px;"><strong>Type:</strong> {{ page.organization.type }}</div>
+    {% endif %}
+    
+    <div style="font-size: 11px; line-height: 1.4;">
         {{ content }}
     </div>
-
-    {% if page.organization.name %}
-        <div class="organization-meta">
-            <h3>Organization Details</h3>
-            <dl>
-                <dt>Name:</dt>
-                <dd>{{ page.organization.name }}</dd>
-                <dt>Description:</dt>
-                <dd>{{ page.organization.description }}</dd>
-                <dt>Type:</dt>
-                <dd>{{ page.organization.type }}</dd>
-            </dl>
+    
+    {% if page.organization.topics %}
+        <div style="margin-top: 20px; border-top: 1px solid #CCC; padding-top: 15px;">
+            <h3 style="color: #003366; font-size: 14px; margin-bottom: 10px;">Key Topics</h3>
+            <div style="font-size: 11px; color: #666;">
+                {% for topic in page.organization.topics %}
+                    <span style="background: #F0F0F0; padding: 2px 6px; margin: 2px; display: inline-block; border: 1px solid #DDD;">{{ topic }}</span>
+                {% endfor %}
+            </div>
         </div>
     {% endif %}
+    
+    <div style="margin-top: 20px; border-top: 1px solid #CCC; padding-top: 15px;">
+        <a href="/organizations/" style="color: #004080; text-decoration: underline; font-size: 11px;">← Back to Organizations</a>
+    </div>
 </div>
+                <a class="early-nav-link" href="/network/">My Network</a>
+                <a class="early-nav-link" href="/jobs/">Jobs</a>
+                <a class="early-nav-link" href="/messages/">Messages</a>
+            </nav>
+        </div>
+    </div>
+    <main class="early-container">
+        <div id="container" style="margin-top: 20px;">
+            <div id="organization-header">
+                <h1>{{ page.organization.name }}</h1>
+                <div class="organization-description">{{ page.organization.description }}</div>
+                <div class="organization-type">Type: {{ page.organization.type }}</div>
+                {% assign words = content | strip_html | number_of_words %}
+                {% assign reading_time = words | divided_by: 200 | plus: 1 %}
+                <div class="organization-reading-time">{{ reading_time }} min read</div>
+                {% if page.tags %}
+                    <div class="organization-tags">
+                        <h4>Tags:</h4>
+                        <div class="tags-list">
+                            {% for tag in page.tags %}
+                                <a href="/tags/#{{ tag | slugify }}" class="tag-link">{{ tag }}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+
+            <div class="organization-content">
+                {{ content }}
+            </div>
+
+            {% if page.organization.name %}
+                <div class="organization-meta">
+                    <h3>Organization Details</h3>
+                    <dl>
+                        <dt>Name:</dt>
+                        <dd>{{ page.organization.name }}</dd>
+                        <dt>Description:</dt>
+                        <dd>{{ page.organization.description }}</dd>
+                        <dt>Type:</dt>
+                        <dd>{{ page.organization.type }}</dd>
+                    </dl>
+                </div>
+            {% endif %}
+        </div>
+    </main>
+    {% include footer.html %}
+</body>

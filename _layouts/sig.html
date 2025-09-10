@@ -2,15 +2,32 @@
 layout: default
 ---
 
-<div class="sig-container">
-    <h2>{{ page.sig_title }}</h2>
-    <div class="sig-desc">{{ page.sig_desc }}</div>
-    <ul class="sig-topics">
-        {% for topic in page.sig_topics %}
-        <li class="sig-topic">{{ topic }}</li>
-        {% endfor %}
-    </ul>
-</div>
+<body class="early2000s">
+    <div class="early-header">
+        <div class="early-header-inner">
+            <div class="early-logo">LinkedNetwork</div>
+            <nav class="early-nav">
+                <a class="early-nav-link" href="/">Home</a>
+                <a class="early-nav-link" href="/profile/">My Profile</a>
+                <a class="early-nav-link" href="/network/">My Network</a>
+                <a class="early-nav-link" href="/jobs/">Jobs</a>
+                <a class="early-nav-link" href="/messages/">Messages</a>
+            </nav>
+        </div>
+    </div>
+    <main class="early-container">
+        <div class="sig-container">
+            <h2>{{ page.sig_title }}</h2>
+            <div class="sig-desc">{{ page.sig_desc }}</div>
+            <ul class="sig-topics">
+                {% for topic in page.sig_topics %}
+                <li class="sig-topic">{{ topic }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </main>
+    {% include footer.html %}
+</body>
 
 <style>
 .sig-container{

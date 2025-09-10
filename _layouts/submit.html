@@ -12,28 +12,41 @@ title: Submit Your Story, Job, or Soul Contract - evil1.org
         /* ...existing code from submit.html... */
     </style>
 </head>
-<body>
-    {% include header.html %}
-    <div class="container">
-        <h2>Submit Your Story, Job Offer, or Soul Contract</h2>
-        <form>
-            <label for="type">Type</label>
-            <select id="type" name="type" required>
-                <option value="story">Story</option>
-                <option value="job">Job Offer</option>
-                <option value="contract">Soul Contract</option>
-            </select>
-            <label for="title">Title</label>
-            <input type="text" id="title" name="title" required>
-            <label for="description">Description</label>
-            <textarea id="description" name="description" required></textarea>
-            <label for="contact">Contact Email</label>
-            <input type="email" id="contact" name="contact" required>
-            <div class="actions">
-                <button type="submit">Submit</button>
-            </div>
-        </form>
+<body class="early2000s">
+    <div class="early-header">
+        <div class="early-header-inner">
+            <div class="early-logo">LinkedNetwork</div>
+            <nav class="early-nav">
+                <a class="early-nav-link" href="/">Home</a>
+                <a class="early-nav-link" href="/profile/">My Profile</a>
+                <a class="early-nav-link" href="/network/">My Network</a>
+                <a class="early-nav-link" href="/jobs/">Jobs</a>
+                <a class="early-nav-link" href="/messages/">Messages</a>
+            </nav>
+        </div>
     </div>
+    <main class="early-container">
+        <div class="container">
+            <h2>Submit Your Story, Job Offer, or Soul Contract</h2>
+            <form>
+                <label for="type">Type</label>
+                <select id="type" name="type" required>
+                    <option value="story">Story</option>
+                    <option value="job">Job Offer</option>
+                    <option value="contract">Soul Contract</option>
+                </select>
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" required>
+                <label for="description">Description</label>
+                <textarea id="description" name="description" required></textarea>
+                <label for="contact">Contact Email</label>
+                <input type="email" id="contact" name="contact" required>
+                <div class="actions">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </main>
     {% include footer.html %}
 </body>
 </html>

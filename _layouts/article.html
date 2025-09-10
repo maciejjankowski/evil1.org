@@ -27,69 +27,37 @@ layout: default
 <meta property="og:type" content="article">
 <meta name="twitter:card" content="summary_large_image">
 
-<div class="article-container">
-    <main class="article-main">
-        <article class="article-content">
-            <header class="article-header">
-                <h1 class="article-title">{{ page.title }}</h1>
-                <div class="article-meta">
-                    <span class="article-author">By {{ page.author | default: "Editorial Team" }}</span>
-                    <span class="article-date">{{ page.date | date: "%B %d, %Y" }}</span>
-                    {% assign words = content | strip_html | number_of_words %}
-                    {% assign reading_time = words | divided_by: 200 | plus: 1 %}
-                    <span class="article-reading-time">{{ reading_time }} min read</span>
-                    {% if page.tags %}
-                        <div class="article-tags">
-                            {% for tag in page.tags %}
-                                <span class="tag">{{ tag }}</span>
-                            {% endfor %}
-                        </div>
-                    {% endif %}
-                </div>
-                {% if page.summary %}
-                    <div class="article-summary">
-                        <p>{{ page.summary }}</p>
-                    </div>
-                {% endif %}
-            </header>
-
-            <div class="article-body">
+<body class="early2000s">
+    <div class="early-header">
+        <div class="early-header-inner">
+            <div class="early-logo">LinkedNetwork</div>
+            <nav class="early-nav">
+                <a class="early-nav-link" href="/">Home</a>
+                <a class="early-nav-link" href="/profile/">My Profile</a>
+                <a class="early-nav-link" href="/network/">My Network</a>
+                <a class="early-nav-link" href="/jobs/">Jobs</a>
+                <a class="early-nav-link" href="/messages/">Messages</a>
+            </nav>
+        </div>
+    </div>
+    <main class="early-container">
+        <div class="early-article">
+            <div class="early-article-header">
+                <a class="early-article-title" href="#">{{ page.title }}</a>
+                <div class="early-article-meta">By {{ page.author | default: "Editorial Team" }} • {{ page.date | date: "%B %d, %Y" }}</div>
+            </div>
+            <div class="early-article-content">
                 {{ content }}
             </div>
-
-            {% if page.sources %}
-                <footer class="article-footer">
-                    <h3>Sources & References</h3>
-                    <ul class="sources-list">
-                        {% for source in page.sources %}
-                            <li>
-                                <a href="{{ source.url }}" target="_blank" rel="noopener noreferrer">
-                                    {{ source.title }}
-                                </a>
-                                {% if source.date %} <span class="source-date">- {{ source.date }}</span>{% endif %}
-                            </li>
-                        {% endfor %}
-                    </ul>
-                </footer>
-            {% endif %}
-
-            {% if page.tags %}
-                <div class="article-tags-footer">
-                    <h4>Related Topics:</h4>
-                    <div class="tags-list">
-                        {% for tag in page.tags %}
-                            <a href="/tags/#{{ tag | slugify }}" class="tag-link">{{ tag }}</a>
-                        {% endfor %}
-                    </div>
-                </div>
-            {% endif %}
-        </article>
-
-        {% include related-articles.html %}
+            <div class="early-article-footer">
+                {% assign words = content | strip_html | number_of_words %}
+                {% assign reading_time = words | divided_by: 200 | plus: 1 %}
+                {{ reading_time }} min read
+            </div>
+        </div>
     </main>
-
-    {% include sidebar.html %}
-</div>
+    {% include footer.html %}
+</body>
 
 <style>
 .article-container {

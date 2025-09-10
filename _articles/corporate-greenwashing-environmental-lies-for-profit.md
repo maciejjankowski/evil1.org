@@ -3,8 +3,8 @@ layout: article
 title: "Corporate Greenwashing: Environmental Lies for Profit"
 date: 2025-09-08
 author: "AI Assistant"
-categories: [corporate-corruption, environmental-crimes, greenwashing]
-tags: [greenwashing, environmental-deception, corporate-hypocrisy, climate-denial]
+categories: [corporate-corruption, environmental-crimes, greenwashing, climate-change]
+tags: [greenwashing, environmental-deception, corporate-hypocrisy, climate-denial, carbon-offsets, sustainability-myths, eco-fraud]
 description: "How corporations pretend to care about the environment while destroying it for profit."
 reading_time: "10 min read"
 social_image: "/assets/images/corporate-greenwashing.jpg"

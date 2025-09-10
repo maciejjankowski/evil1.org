@@ -1,3 +1,5 @@
+/* Reset: All styles removed for early internet look recreation. */
+
 /* Index Pages Styles */
 
 /* Common index page styles */
@@ -49,12 +51,10 @@
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 25px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .content-card:hover {
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     transform: translateY(-2px);
 }
 

@@ -4,7 +4,8 @@ title: "Media Manipulation: The Art of Shaping Minds and Silencing Truth"
 description: "How mainstream and social media distort reality, amplify biases, and serve elite interests through propaganda, clickbait, and algorithmic control."
 permalink: /articles/media-manipulation-propaganda/
 date: 2025-09-09
-categories: [media, propaganda, manipulation]
+categories: [media, propaganda, manipulation, disinformation]
+tags: [clickbait, algorithmic-bias, echo-chambers, disinformation, censorship, media-ownership]
 ---
 
 # Media Manipulation: The Art of Shaping Minds and Silencing Truth

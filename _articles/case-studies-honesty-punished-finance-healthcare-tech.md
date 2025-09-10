@@ -3,8 +3,8 @@ layout: article
 title: "Case Studies of Honesty Punished in Finance, Healthcare, and Tech"
 date: 2025-09-08
 author: "AI Assistant"
-categories: [corporate-corruption, whistleblowers, case-studies]
-tags: [whistleblower-case-studies, finance, healthcare, tech, ethics]
+categories: [corporate-corruption, whistleblowers, case-studies, ethics]
+tags: [whistleblower-case-studies, finance, healthcare, tech, ethics, retaliation, corporate-whistleblowers, industry-blacklisting]
 description: "Detailed examinations of how ethical employees in major industries are systematically destroyed for speaking truth to power."
 reading_time: "12 min read"
 social_image: "/assets/images/honesty-punished-case-studies.jpg"

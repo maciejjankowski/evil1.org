@@ -1,44 +1,36 @@
 ---
-layout: article
+layout: default
 title: Education - Academy of Systematic Influence
 description: Educational programs, curricula, and training materials for mastering modern influence systems
 permalink: /education/
-author: "Institute Academic Council"
-date: "2025-01-01"
-tags: ["education", "curriculum", "training", "influence"]
-difficulty: "All Levels"
-duration: "Comprehensive Program"
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/index-pages.css' | relative_url }}">
+<div style="width: 760px; margin: 20px auto; background: #fff; border: 1px solid #CCC; padding: 20px;">
+    <div style="background: linear-gradient(#6699CC, #4477AA); color: #fff; padding: 10px; font-weight: bold; font-size: 16px; border-bottom: 1px solid #003366; margin: -20px -20px 20px -20px;">Education</div>
+    <p>Comprehensive educational programs for understanding and implementing modern systems of influence, control, and strategic manipulation.</p>
 
-<div class="index-page">
-    <header class="page-header">
-        <h1>Education</h1>
-        <p class="page-description">Comprehensive educational programs for understanding and implementing modern systems of influence, control, and strategic manipulation.</p>
-    </header>
+    <div style="margin-bottom: 20px;">
+        <h2 style="color: #003366; font-size: 16px; margin-bottom: 10px; border-bottom: 1px solid #CCC; padding-bottom: 5px;">Core Curriculum</h2>
+        
+        <div style="border: 1px solid #D0D0D0; margin: 15px 0; background: #F8F8F8; padding: 10px;">
+            <h3 style="color: #003366; font-size: 14px; margin-bottom: 5px;">
+                <a href="{{ '/education/Blueprint/' | relative_url }}" style="color: #003366; text-decoration: none;">Strategic Blueprint</a>
+            </h3>
+            <div style="font-size: 10px; color: #666; margin-bottom: 8px;">Foundation Course</div>
+            <div style="font-size: 11px; color: #333; margin-bottom: 8px; font-style: italic;">Fundamental principles of systematic influence and strategic planning in modern organizational contexts.</div>
+            <div><a href="{{ '/education/Blueprint/' | relative_url }}" style="color: #004080; text-decoration: underline; font-size: 11px;">View Course →</a></div>
+        </div>
 
-    <div class="education-sections">
-        <section class="curriculum-section">
-            <h2>Core Curriculum</h2>
-            <div class="content-grid narrow">
-                <article class="content-card">
-                    <header class="card-header">
-                        <h3><a href="{{ '/education/Blueprint/' | relative_url }}">Strategic Blueprint</a></h3>
-                        <span class="course-type">Foundation Course</span>
-                    </header>
-                    <p class="course-description">Fundamental principles of systematic influence and strategic planning in modern organizational contexts.</p>
-                    <a href="{{ '/education/Blueprint/' | relative_url }}" class="course-link">View Course →</a>
-                </article>
-
-                <article class="content-card">
-                    <header class="card-header">
-                        <h3><a href="{{ '/education/Curriculum/' | relative_url }}">Advanced Curriculum</a></h3>
-                        <span class="course-type">Advanced Studies</span>
-                    </header>
-                    <p class="course-description">Comprehensive curriculum covering advanced methodologies and implementation strategies.</p>
-                    <a href="{{ '/education/Curriculum/' | relative_url }}" class="course-link">View Course →</a>
-                </article>
+        <div style="border: 1px solid #D0D0D0; margin: 15px 0; background: #F8F8F8; padding: 10px;">
+            <h3 style="color: #003366; font-size: 14px; margin-bottom: 5px;">
+                <a href="{{ '/education/Curriculum/' | relative_url }}" style="color: #003366; text-decoration: none;">Advanced Curriculum</a>
+            </h3>
+            <div style="font-size: 10px; color: #666; margin-bottom: 8px;">Advanced Studies</div>
+            <div style="font-size: 11px; color: #333; margin-bottom: 8px; font-style: italic;">Comprehensive curriculum covering advanced methodologies and implementation strategies.</div>
+            <div><a href="{{ '/education/Curriculum/' | relative_url }}" style="color: #004080; text-decoration: underline; font-size: 11px;">View Course →</a></div>
+        </div>
+    </div>
+</div>
 
                 <article class="content-card">
                     <header class="card-header">

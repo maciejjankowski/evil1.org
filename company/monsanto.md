@@ -101,6 +101,21 @@ permalink: /company/monsanto/
             </div>
         </section>
 
+        <section class="financial-impact">
+            <h2>Financial Impact</h2>
+            <p>Monsanto's aggressive marketing of Roundup and GM seeds generated billions in annual revenue. However, the company faced over $10 billion in settlements for Roundup cancer lawsuits, significantly impacting Bayer's financials post-acquisition.</p>
+        </section>
+
+        <section class="boardroom-decisions">
+            <h2>Boardroom Decisions</h2>
+            <p>Key decisions by Monsanto's leadership included prioritizing profits over safety, such as suppressing glyphosate's cancer risks and aggressively pursuing patents to dominate the seed market. These decisions led to widespread criticism and legal challenges.</p>
+        </section>
+
+        <section class="global-impact">
+            <h2>Global Impact</h2>
+            <p>Monsanto's practices have had a profound impact on global agriculture, including the loss of biodiversity, increased farmer debt, and the spread of herbicide-resistant weeds. Developing countries have been disproportionately affected, with small farmers struggling to compete.</p>
+        </section>
+
         <section class="sources">
             <h2>Verified Sources</h2>
             <ul class="source-list">

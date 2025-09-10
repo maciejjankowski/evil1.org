@@ -5,8 +5,6 @@ description: "How Walmart built retail empire by crushing unions, exploiting wor
 permalink: /company/walmart/
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/index-pages.css' | relative_url }}">
-
 <div class="index-page">
     <header class="page-header">
         <h1>Walmart</h1>

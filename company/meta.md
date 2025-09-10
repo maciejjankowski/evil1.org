@@ -101,6 +101,21 @@ permalink: /company/meta/
             </div>
         </section>
 
+        <section class="financial-impact">
+            <h2>Financial Impact</h2>
+            <p>Meta's annual revenue exceeds $100 billion, primarily from targeted advertising. The company has faced over $5 billion in fines for privacy violations, including the largest-ever FTC fine in 2019.</p>
+        </section>
+
+        <section class="boardroom-decisions">
+            <h2>Boardroom Decisions</h2>
+            <p>Meta's leadership prioritized growth and engagement over ethics, allowing harmful content to proliferate. Key decisions included the aggressive push for data collection and the rebranding to Meta despite ongoing controversies.</p>
+        </section>
+
+        <section class="global-impact">
+            <h2>Global Impact</h2>
+            <p>Meta's platforms have influenced elections, amplified hate speech, and contributed to mental health crises worldwide. The company's focus on profit over safety has had lasting effects on democracy, privacy, and societal well-being.</p>
+        </section>
+
         <section class="sources">
             <h2>Verified Sources</h2>
             <ul class="source-list">

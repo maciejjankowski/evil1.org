@@ -111,5 +111,20 @@ permalink: /company/nestle/
                 <li><a href="https://www.greenpeace.org/international/story/15814/nestle-palm-oil-deforestation/" target="_blank">Greenpeace: Nestle Deforestation</a></li>
             </ul>
         </section>
+
+        <section class="financial-impact">
+            <h2>Financial Impact</h2>
+            <p>Nestle's annual revenue exceeds $90 billion, with significant profits from bottled water and infant formula. The company has faced over $100 million in fines and settlements for unethical practices, including child labor and water privatization.</p>
+        </section>
+
+        <section class="boardroom-decisions">
+            <h2>Boardroom Decisions</h2>
+            <p>Nestle's leadership prioritized market dominance over ethics, aggressively marketing infant formula in developing countries and acquiring water rights in drought-prone areas. These decisions have led to widespread criticism and legal challenges.</p>
+        </section>
+
+        <section class="global-impact">
+            <h2>Global Impact</h2>
+            <p>Nestle's practices have exacerbated global health crises, including infant mortality and obesity. The company's water privatization efforts have restricted access to clean water in vulnerable communities, while its reliance on child labor has perpetuated exploitation in the cocoa industry.</p>
+        </section>
     </div>
 </div>

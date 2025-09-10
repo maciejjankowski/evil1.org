@@ -1,4 +1,4 @@
-<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" width="120"/>
+<img src="/assets/images/perplexity-logo.png" class="logo" width="120" loading="lazy"/>
 
 ---
 layout: default
