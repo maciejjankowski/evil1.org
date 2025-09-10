@@ -13,7 +13,7 @@
 # MEDIUM PRIORITY - Content Expansion & Features
 [ ] | T002 | Create content for "suggested reading" section: add real books and "coming soon" publications | DoD: `_data/books.yml` created/updated with 10+ entries, reading section page created with satirical book descriptions
 [x] | T205 | Batch-convert prioritized pages (v2) | DoD: all high-priority files converted, commits created per logical batch, incremental builds pass
-[ ] | T206 | Validate rendering parity and add tests | DoD: visual/textual smoke tests or HTML snapshots for converted pages added to `_tests/` or documented in `_docs/` and verified
+[x] | T206 | Validate rendering parity and add tests | DoD: visual/textual smoke tests or HTML snapshots for converted pages added to `_tests/` or documented in `_docs/` and verified
 
 # LOW PRIORITY - Documentation & Process
 [ ] | T207 | Update contributor docs & templates | DoD: `_docs/html-extraction.md` added with code examples, frontmatter template, and reviewer checklist
