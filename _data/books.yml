@@ -8,6 +8,7 @@ books:
     isbn: "978-0743247467"
     pages: 240
     rating: 4.5
+    amazon_link: "https://www.amazon.com/Corporation-Pathological-Pursuit-Profit-Power/dp/0743247469"
 
   - title: "Nickel and Dimed: On (Not) Getting By in America"
     author: "Barbara Ehrenreich"
@@ -17,6 +18,7 @@ books:
     isbn: "978-0805063882"
     pages: 224
     rating: 4.2
+    amazon_link: "https://www.amazon.com/Nickel-Dimed-Not-Getting-America/dp/0805063889"
 
   - title: "Dark Money: The Hidden History of the Billionaires Behind the Rise of the Radical Right"
     author: "Jane Mayer"
@@ -26,6 +28,7 @@ books:
     isbn: "978-0385535595"
     pages: 464
     rating: 4.4
+    amazon_link: "https://www.amazon.com/Dark-Money-History-Billionaires-Behind/dp/0385535597"
 
   - title: "Too Big to Fail: The Inside Story of How Wall Street and Washington Fought to Save the Financial System from Crisis—and Themselves"
     author: "Andrew Ross Sorkin"
@@ -35,6 +38,7 @@ books:
     isbn: "978-0143118244"
     pages: 640
     rating: 4.1
+    amazon_link: "https://www.amazon.com/Too-Big-Fail-Inside-Financial/dp/0143118242"
 
   - title: "The Managed Heart: Commercialization of Human Feeling"
     author: "Arlie Russell Hochschild"
@@ -44,6 +48,7 @@ books:
     isbn: "978-0520054546"
     pages: 352
     rating: 4.3
+    amazon_link: "https://www.amazon.com/Managed-Heart-Commercialization-Human-Feeling/dp/0520054546"
 
   - title: "Lean In: Women, Work, and the Will to Lead"
     author: "Sheryl Sandberg"
@@ -53,6 +58,7 @@ books:
     isbn: "978-0385349949"
     pages: 240
     rating: 3.8
+    amazon_link: "https://www.amazon.com/Lean-Work-Will-Lead/dp/0385349947"
 
   - title: "The Problem with Work: Feminism, Marxism, Antiwork Politics, and Postwork Imaginaries"
     author: "Kathi Weeks"
@@ -62,6 +68,7 @@ books:
     isbn: "978-0822351122"
     pages: 304
     rating: 4.6
+    amazon_link: "https://www.amazon.com/Problem-Work-Feminism-Marxism-Antiwork/dp/0822351129"
 
   - title: "Do Nothing: How to Break Away from Overworking, Overdoing, and Underliving"
     author: "Celeste Headlee"
@@ -71,6 +78,7 @@ books:
     isbn: "978-1950665631"
     pages: 288
     rating: 4.0
+    amazon_link: "https://www.amazon.com/Do-Nothing-Break-Away-Overworking/dp/1950665634"
 
   - title: "Can't Even: How Millennials Became the Burnout Generation"
     author: "Anne Helen Petersen"
@@ -80,6 +88,7 @@ books:
     isbn: "978-0358316569"
     pages: 256
     rating: 4.2
+    amazon_link: "https://www.amazon.com/Cant-Even-Millennials-Became-Burnout/dp/0358316569"
 
   - title: "Work Won't Love You Back: How Devotion to Our Jobs Keeps Us Exploited, Exhausted, and Alone"
     author: "Sarah Jaffe"
@@ -89,6 +98,7 @@ books:
     isbn: "978-1568589381"
     pages: 448
     rating: 4.4
+    amazon_link: "https://www.amazon.com/Work-Wont-Love-Back-Devotion/dp/1568589389"
 
   - title: "The Job: Work and Its Future in a Time of Radical Change"
     author: "Ellen Ruppel Shell"
@@ -98,6 +108,7 @@ books:
     isbn: "978-0451497256"
     pages: 416
     rating: 4.1
+    amazon_link: "https://www.amazon.com/Job-Work-Future-Radical-Change/dp/0451497252"
 
   - title: "Overwhelmed: Work, Love, and Play When No One Has the Time"
     author: "Brigid Schulte"
@@ -107,6 +118,7 @@ books:
     isbn: "978-1250062389"
     pages: 368
     rating: 4.0
+    amazon_link: "https://www.amazon.com/Overwhelmed-Work-Love-Play-When/dp/1250062380"
 
   - title: "The Burnout Society"
     author: "Byung-Chul Han"
@@ -116,23 +128,4 @@ books:
     isbn: "978-0804795098"
     pages: 72
     rating: 4.3
-
-  - title: "Do Nothing: How to Break Away from Overworking, Overdoing, and Underliving"
-    author: "Celeste Headlee"
-    year: 2020
-    genre: "Self-Help"
-    description: "A practical guide to resisting productivity culture and reclaiming your time. Coming soon: The sequel, 'Do Even Less: How to Make Corporations Pay You for Existing.'"
-    isbn: "978-1950665631"
-    pages: 288
-    rating: 4.0
-    status: "coming_soon"
-
-  - title: "The Refusal of Work: The Theory and Practice of Resistance to Work"
-    author: "David Frayne"
-    year: 2015
-    genre: "Anti-Work Theory"
-    description: "A philosophical and practical exploration of why work sucks and how to opt out. Coming soon: Chapter 47 - 'How to Convince Your Boss That 'Doing Nothing' Is Actually Innovative Leadership.'"
-    isbn: "978-1783601178"
-    pages: 280
-    rating: 4.5
-    status: "coming_soon"
+    amazon_link: "https://www.amazon.com/Burnout-Society-Byung-Chul-Han/dp/0804795096"

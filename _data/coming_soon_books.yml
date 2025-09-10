@@ -1,0 +1,21 @@
+---
+coming_soon_books:
+  - title: "Do Nothing: How to Break Away from Overworking, Overdoing, and Underliving"
+    author: "Celeste Headlee"
+    year: 2020
+    genre: "Self-Help"
+    description: "A practical guide to resisting productivity culture and reclaiming your time. Coming soon: The sequel, 'Do Even Less: How to Make Corporations Pay You for Existing.'"
+    isbn: "978-1950665631"
+    pages: 288
+    rating: 4.0
+    amazon_link: "https://www.amazon.com/Do-Nothing-Break-Away-Overworking/dp/1950665634"
+
+  - title: "The Refusal of Work: The Theory and Practice of Resistance to Work"
+    author: "David Frayne"
+    year: 2015
+    genre: "Anti-Work Theory"
+    description: "A philosophical and practical exploration of why work sucks and how to opt out. Coming soon: Chapter 47 - 'How to Convince Your Boss That 'Doing Nothing' Is Actually Innovative Leadership.'"
+    isbn: "978-1783601178"
+    pages: 280
+    rating: 4.5
+    amazon_link: "https://www.amazon.com/Refusal-Work-Theory-Practice-Resistance/dp/1783601170"

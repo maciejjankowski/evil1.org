@@ -14,34 +14,36 @@ Each recommendation comes with our signature satirical analysis - because nothin
 ## 📚 Current Recommendations
 
 {% for book in site.data.books %}
-{% unless book.status == "coming_soon" %}
 <div class="book-card" style="border: 1px solid #333; padding: 20px; margin: 20px 0; border-radius: 8px;">
   <h3>{{ book.title }}</h3>
   <p><strong>Author:</strong> {{ book.author }} ({{ book.year }})</p>
   <p><strong>Genre:</strong> {{ book.genre }}</p>
   <p><strong>Pages:</strong> {{ book.pages }} | <strong>Rating:</strong> {{ book.rating }}/5</p>
   <p><em>{{ book.description }}</em></p>
+  {% if book.amazon_link %}
+  <p><a href="{{ book.amazon_link }}" target="_blank" rel="noopener noreferrer">📖 Buy on Amazon</a></p>
+  {% endif %}
   {% if book.isbn %}
   <p><small>ISBN: {{ book.isbn }}</small></p>
   {% endif %}
 </div>
-{% endunless %}
 {% endfor %}
 
 ## 🔮 Coming Soon Publications
 
 We're constantly expanding our library of corporate critique. Here are some titles we're eagerly awaiting:
 
-{% for book in site.data.books %}
-{% if book.status == "coming_soon" %}
+{% for book in site.data.coming_soon_books %}
 <div class="book-card coming-soon" style="border: 1px dashed #666; padding: 20px; margin: 20px 0; border-radius: 8px; background: #f9f9f9;">
   <h3>{{ book.title }}</h3>
   <p><strong>Author:</strong> {{ book.author }} ({{ book.year }})</p>
   <p><strong>Genre:</strong> {{ book.genre }}</p>
   <p><em>{{ book.description }}</em></p>
   <p><strong>Status:</strong> <span style="color: #ff6b6b;">Coming Soon</span></p>
+  {% if book.amazon_link %}
+  <p><a href="{{ book.amazon_link }}" target="_blank" rel="noopener noreferrer">📖 Pre-order on Amazon</a></p>
+  {% endif %}
 </div>
-{% endif %}
 {% endfor %}
 
 ## 📖 Why These Books Matter
