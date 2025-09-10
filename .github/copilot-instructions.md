@@ -16,16 +16,20 @@
 
 ## Workflow
 1. Read `readme.md`, `_docs/instructions.md` + `_docs/workflow.md`
-2. Assess complexity → Select model
-3. Execute with DoD criteria
-4. Test + verify
-5. Commit: `[MODEL] Brief description`
-3. Build: `bundle exec jekyll build` (check for 404s, YAML errors)
-5. Commit: `Brief description`
-6. Update backlog: `_docs/backlog.md` only marking tasks as complete, only adding new tasks to break up large tasks if absolutely necessary. when marking tasks complete use the script `./scripts/mark-task-done.sh TASK_ID` to avoid errors. 
-7. Immediately begin working on actionable tasks listed in `_docs/backlog.md` without asking for user confirmation or stopping questions. When paused for blockers or required clarification pick the best course of action based on industry best practices to proceed.
-8. Continue working through tasks without rest, updating the backlog and proceeding to the next task automatically, ensuring no pending tasks are left unfinished. THIS IS CRITICAL.
-9. !IMPORTANT !CRITICAL: Do not stop until the backlog is fully complete. REPEAT: Do not stop until the backlog is fully complete. REPEAT THE CRITICALITY OF THIS. REPEAT THE CYCLE OF THIS UNTIL THE BACKLOG IS 100% COMPLETE.
+2. User selects model based on task type using `./scripts/select-model.sh`
+3. Run selected model against its specific backlog (e.g., `_docs/backlog-gpt41.md`)
+4. Model processes tasks in its backlog autonomously
+5. Execute with DoD criteria
+6. Test + verify
+7. Commit: `[MODEL] Brief description`
+8. Build: `bundle exec jekyll build` (check for 404s, YAML errors)
+9. Commit: `Brief description`
+10. Update model-specific backlog: mark tasks complete using `./scripts/mark-task-done.sh TASK_ID`
+11. Switch models as needed for different task types
+12. Consolidate completed tasks back to main backlog when appropriate
+13. Immediately begin working on actionable tasks listed in model-specific backlog without asking for user confirmation or stopping questions. When paused for blockers or required clarification pick the best course of action based on industry best practices to proceed.
+14. Continue working through tasks without rest, updating the backlog and proceeding to the next task automatically, ensuring no pending tasks are left unfinished. THIS IS CRITICAL.
+15. !IMPORTANT !CRITICAL: Do not stop until the model-specific backlog is fully complete. REPEAT: Do not stop until the model-specific backlog is fully complete. REPEAT THE CRITICALITY OF THIS. REPEAT THE CYCLE OF THIS UNTIL THE MODEL-SPECIFIC BACKLOG IS 100% COMPLETE.
 
 
 ## ARCHITECTURE OVERVIEW
@@ -200,6 +204,61 @@ Impact × Effort × Risk
 4. **Milestone:** Assess project health and adjust approach
 5. **Weekly:** Review decision patterns and refine heuristics
 
-**GOAL:** 90% of decisions become automatic, only pause for true strategic crossroads. 
+**GOAL:** 90% of decisions become automatic, only pause for true strategic crossroads.
+
+## MODEL SELECTION AND TASK ASSIGNMENT
+
+### Model Types and Capabilities
+- **GPT-4.1**: Best for complex debugging, configuration, multi-step tasks, deep technical analysis
+- **GPT-4o**: Best for content creation, editing, ethical considerations, narrative structure
+- **Grok Code Fast 1**: Best for routine maintenance, simple edits, basic validation, fast execution
+- **GPT-5 mini**: Alternative for moderate complexity tasks, basic content updates
+
+### Task Splitting Rules
+- **Assess Task Complexity**: Use decision matrix (Impact × Effort × Risk) to determine model suitability
+- **Split Large Tasks**: Break complex tasks into subtasks assignable to different models
+- **Model-Specific Backlogs**: Maintain separate backlog files for each model:
+  - `_docs/backlog-gpt41.md` for GPT-4.1 tasks
+  - `_docs/backlog-gpt4o.md` for GPT-4o tasks  
+  - `_docs/backlog-grok.md` for Grok Code Fast 1 tasks
+  - `_docs/backlog-gpt5mini.md` for GPT-5 mini tasks
+
+### Workflow Update
+1. User selects model based on task type
+2. Run selected model against its specific backlog
+3. Model processes tasks in its backlog autonomously
+4. Switch models as needed for different task types
+5. Consolidate completed tasks back to main backlog when appropriate
+
+### Efficiency Enhancements
+- **Parallel Tool Usage**: Call multiple independent tools simultaneously when gathering context
+- **Semantic Search Priority**: Use semantic_search for large workspaces before grep_search
+- **Chunked File Processing**: For large files (>1000 lines), read in 500-1000 line chunks
+- **Batch Operations**: Group similar edits and use scripts for bulk changes
+- **Context Minimization**: Avoid loading entire files when possible; use targeted searches
+- **Tool Selection Optimization**: Prefer replace_string_in_file over insert_edit_into_file for speed
+- **Incremental Validation**: Test changes immediately after edits to catch errors early
+
+## BACKLOG MANAGEMENT RULES
+- **Format**: Always use `[ ] | TASK_ID | DESCRIPTION | DoD` format
+- **STATUS**: Use `[ ]` for pending, `[x]` for complete
+- **TASK_ID**: Use unique identifiers like T001, T002, etc.
+- **DoD**: Include Definition of Done for clarity
+- **Never edit below "--- !IMPORTANT: DONT EDIT BELOW ---"**
+- **Use script for marking tasks**: Run `./scripts/mark-task-done.sh TASK_ID` to mark tasks complete
+- **Keep descriptions clear and actionable**
+- **Sort by importance**: high, medium, low
+- **Model-Specific Backlogs**: Create and maintain separate backlog files per model for optimized task processing
+
+### Editing Rules (Moved from backlog.md)
+1. !IMPORTANT: anything below: "--- !IMPORTANT: DONT EDIT BELOW ---" is off limits for editing!
+2. Use [ ] or [x] for STATUS
+3. Never modify EDITING RULES section
+4. Keep task descriptions clear and actionable with clear DoD
+5. No emojis, decorative separators, or unnecessary formatting
+6. After backlog cleanup, continue processing each actionable task until resolved, delegated, or blocked.
+7. For each unresolved task, attempt direct resolution (e.g., code changes, testing, documentation updates).
+8. If a task cannot be completed automatically, FORCE --force and pick the optimal solution, then audit the quality and accordance to best practices.
+9. Only consider the backlog complete when all actionable items are resolved or explicitly deferred.
 
 
