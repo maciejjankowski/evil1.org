@@ -1,0 +1,24 @@
+<!--
+Comment Display Component
+Usage: {% include comment-display.html comments=site.data.comments[page.slug] %}
+Parameters:
+- comments: Array of comment objects
+-->
+<div class="comments-container">
+    {% if include.comments %}
+        <h4>Comments ({{ include.comments | size }})</h4>
+        {% for comment in include.comments %}
+        <div class="comment">
+            <div class="comment-header">
+                <strong class="comment-author">{{ comment.author }}</strong>
+                <span class="comment-date">{{ comment.date | date: "%B %d, %Y at %I:%M %p" }}</span>
+            </div>
+            <div class="comment-content">{{ comment.content }}</div>
+        </div>
+        {% endfor %}
+    {% else %}
+        <div class="no-comments">
+            <p>No comments yet. Be the first to share your evil thoughts!</p>
+        </div>
+    {% endif %}
+</div>

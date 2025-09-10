@@ -1,0 +1,12 @@
+<!--
+Tab Navigation Component
+Usage: {% include tab-navigation.html tabs=page.tabs active=page.active_tab %}
+Parameters:
+- tabs: Array of tab objects with 'id' and 'title' properties
+- active: ID of the active tab
+-->
+<div class="tabs">
+    {% for tab in include.tabs %}
+    <div class="tab{% if include.active == tab.id %} active{% endif %}">{{ tab.title }}</div>
+    {% endfor %}
+</div>

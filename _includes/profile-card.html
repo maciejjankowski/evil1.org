@@ -1,0 +1,58 @@
+<!--
+Profile Card Component
+Usage: {% include profile-card.html name=profile.name headline=profile.headline location=profile.location avatar=profile.avatar %}
+Parameters:
+- name: Profile name
+- headline: Profile headline/tagline
+- location: Profile location
+- avatar: Avatar image URL (optional)
+- connections: Number of connections (optional)
+- views: Profile views (optional)
+- posts: Number of posts (optional)
+- skills: Array of top skills (optional)
+- url: Profile URL (optional)
+-->
+<div class="profile-card">
+    {% if include.avatar %}
+    <div class="profile-avatar" style="background-image: url('{{ include.avatar }}')"></div>
+    {% else %}
+    <div class="profile-avatar"></div>
+    {% endif %}
+
+    <div class="profile-info">
+        {% if include.url %}
+        <a href="{{ include.url }}" class="profile-name">{{ include.name | default: "Anonymous" }}</a>
+        {% else %}
+        <div class="profile-name">{{ include.name | default: "Anonymous" }}</div>
+        {% endif %}
+        <div class="profile-headline">{{ include.headline | default: "Corporate Soul Extractor" }}</div>
+        <div class="profile-location">{{ include.location | default: "Corporate Hell" }}</div>
+    </div>
+
+    {% if include.connections or include.views or include.posts %}
+    <div class="profile-stats">
+        {% if include.connections %}
+        <div><strong>{{ include.connections }}</strong> connections</div>
+        {% endif %}
+        {% if include.views %}
+        <div><strong>{{ include.views }}</strong> profile views</div>
+        {% endif %}
+        {% if include.posts %}
+        <div><strong>{{ include.posts }}</strong> posts</div>
+        {% endif %}
+    </div>
+    {% endif %}
+
+    {% if include.skills %}
+    <div class="profile-skills">
+        <div class="skills-title">Top Skills:</div>
+        <div class="skills-list">
+            {% for skill in include.skills limit:3 %}
+            <span class="skill-tag">{{ skill.name }}</span>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+
+    <div class="clear"></div>
+</div>

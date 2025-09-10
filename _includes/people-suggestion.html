@@ -1,0 +1,28 @@
+<!--
+People Suggestion Component
+Usage: {% include people-suggestion.html name=person.name title=person.title company=person.company avatar=person.avatar url=person.url %}
+Parameters:
+- name: Person's name
+- title: Person's title
+- company: Person's company
+- avatar: Avatar image URL (optional)
+- url: Person's profile URL (optional)
+-->
+<div class="person-suggestion">
+    {% if include.avatar %}
+    <div class="person-avatar" style="background-image: url('{{ include.avatar }}')"></div>
+    {% else %}
+    <div class="person-avatar"></div>
+    {% endif %}
+    <div class="person-info">
+        {% if include.url %}
+        <a href="{{ include.url }}" class="person-name">{{ include.name }}</a>
+        {% else %}
+        <div class="person-name">{{ include.name }}</div>
+        {% endif %}
+        <div class="person-title">{{ include.title }}</div>
+        <div class="person-company">{{ include.company }}</div>
+    </div>
+    <button class="add-button">+ Damn</button>
+    <div class="clear"></div>
+</div>

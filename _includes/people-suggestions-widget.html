@@ -1,0 +1,15 @@
+<!--
+People Suggestions Widget Component
+Usage: {% include people-suggestions-widget.html suggestions=site.data.suggestions %}
+Parameters:
+- suggestions: Array of suggestion objects with 'name', 'title', 'company', 'avatar', 'url' properties
+-->
+{% include sidebar-widget.html title="🔥 Souls to Corrupt 🔥" content='
+    {% for person in include.suggestions limit:5 %}
+    {% include people-suggestion.html name=person.name title=person.title company=person.company avatar=person.avatar url=person.url %}
+    {% endfor %}
+    {% if include.suggestions.size == 0 %}
+    {% include people-suggestion.html name="Lisa \"Layoff\" Anderson" title="Downsizing Expert" company="IBM" %}
+    {% include people-suggestion.html name="David \"Destroyer\" Kim" title="Dream Crusher" company="StartupXYZ" %}
+    {% endif %}
+' %}

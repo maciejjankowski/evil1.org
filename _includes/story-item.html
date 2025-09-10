@@ -1,0 +1,20 @@
+<!--
+Story Item Component
+Usage: {% include story-item.html name=story.name avatar=story.avatar %}
+Parameters:
+- name: Story/person name
+- avatar: Avatar image URL (optional)
+- url: Story URL (optional)
+-->
+<div class="story">
+    {% if include.avatar %}
+    <div class="story-avatar" style="background-image: url('{{ include.avatar }}')"></div>
+    {% else %}
+    <div class="story-avatar"></div>
+    {% endif %}
+    {% if include.url %}
+    <a href="{{ include.url }}" class="story-name">{{ include.name | default: 'Anonymous' }}</a>
+    {% else %}
+    <div class="story-name">{{ include.name | default: 'Anonymous' }}</div>
+    {% endif %}
+</div>

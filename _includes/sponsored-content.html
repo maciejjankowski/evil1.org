@@ -1,0 +1,20 @@
+<!--
+Sponsored Content Component
+Usage: {% include sponsored-content.html title="Ad Title" content="Ad content" url="https://example.com" %}
+Parameters:
+- title: Advertisement title
+- content: Advertisement content/description
+- url: Advertisement URL
+- image: Advertisement image URL (optional)
+-->
+<div class="section sponsored-content">
+    <div class="sponsored-label">Sponsored</div>
+    <div class="section-content">
+        {% if include.image %}
+        <img src="{{ include.image }}" alt="Sponsored content" class="sponsored-image" />
+        {% endif %}
+        <h4 class="sponsored-title">{{ include.title }}</h4>
+        <p class="sponsored-description">{{ include.content }}</p>
+        <a href="{{ include.url }}" class="sponsored-link">Learn More →</a>
+    </div>
+</div>

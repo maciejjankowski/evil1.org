@@ -1,0 +1,24 @@
+<!--
+Trending Topics Widget Component
+Usage: {% include trending-widget.html trends=site.data.trends %}
+Parameters:
+- trends: Array of trend objects with 'hashtag' and 'count' properties
+-->
+{% include sidebar-widget.html title="😈 Trending Evil 😈" content='
+    {% for trend in include.trends limit:3 %}
+    <div class="trend-item">
+        <div class="trend-hashtag">{{ trend.hashtag }}</div>
+        <div class="trend-count">{{ trend.count }} souls discussing</div>
+    </div>
+    {% endfor %}
+    {% if include.trends.size == 0 %}
+    <div class="trend-item">
+        <div class="trend-hashtag">#CorporateEvil</div>
+        <div class="trend-count">666 souls discussing</div>
+    </div>
+    <div class="trend-item">
+        <div class="trend-hashtag">#SoulCrushing</div>
+        <div class="trend-count">420 souls discussing</div>
+    </div>
+    {% endif %}
+' %}

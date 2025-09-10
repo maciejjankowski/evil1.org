@@ -1,0 +1,13 @@
+<!--
+Sidebar Widget Component
+Usage: {% include sidebar-widget.html title="Widget Title" %}
+Parameters:
+- title: Widget title
+- content: Widget content (can include HTML)
+-->
+<div class="section">
+    <div class="section-header">{{ include.title }}</div>
+    <div class="section-content">
+        {{ include.content }}
+    </div>
+</div>

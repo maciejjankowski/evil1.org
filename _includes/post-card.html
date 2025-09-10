@@ -1,0 +1,52 @@
+<!--
+Post Card Component
+Usage: {% include post-card.html author=page.author title=page.title content=page.content %}
+Parameters:
+- author: Author name
+- author_title: Author's title/role
+- author_avatar: Avatar image URL (optional)
+- title: Post title (optional)
+- content: Post content
+- time: Timestamp
+- burns: Number of burns/likes
+- condemns: Number of condemns/comments
+- shares: Number of shares (optional)
+- image: Post image URL (optional)
+- type: Post type (regular, achievement, event, etc.)
+-->
+<article class="post{% if include.type %} post-{{ include.type }}{% endif %}">
+    <div class="post-header">
+        <div class="post-author-avatar">
+            {% if include.author_avatar %}
+                <img src="{{ include.author_avatar }}" alt="{{ include.author }}" />
+            {% endif %}
+        </div>
+        <div class="post-author-info">
+            <a href="#" class="post-author">{{ include.author | default: "Corporate Overlord" }}</a>
+            <span class="post-author-title">{{ include.author_title | default: "Chief Executive of Evil" }}</span>
+        </div>
+        <span class="post-time">{{ include.time | default: "just now" }}</span>
+        <div class="clear"></div>
+    </div>
+
+    {% if include.title %}
+    <div class="post-title">
+        <h3>{{ include.title }}</h3>
+    </div>
+    {% endif %}
+
+    <div class="post-content">
+        {{ include.content }}
+        {% if include.image %}
+        <img src="{{ include.image }}" alt="Post image" class="post-image" />
+        {% endif %}
+    </div>
+
+    <div class="post-actions">
+        <a href="#">🔥 Burn ({{ include.burns | default: "0" }})</a>
+        <a href="#">💀 Condemn ({{ include.condemns | default: "0" }})</a>
+        {% if include.shares %}
+        <a href="#">😈 Spread ({{ include.shares }})</a>
+        {% endif %}
+    </div>
+</article>

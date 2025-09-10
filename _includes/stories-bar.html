@@ -1,0 +1,17 @@
+<!--
+Stories Bar Component
+Usage: {% include stories-bar.html stories=site.data.stories %}
+Parameters:
+- stories: Array of story objects with 'name' and 'avatar' properties
+-->
+<div id="stories-bar">
+    <div class="stories-title">🔥 Fresh Souls Burning 🔥</div>
+    {% for story in include.stories limit:5 %}
+    {% include story-item.html name=story.name avatar=story.avatar %}
+    {% endfor %}
+    {% if include.stories.size == 0 %}
+    {% include story-item.html name="Your Soul" %}
+    {% include story-item.html name="CEO Smith" %}
+    {% include story-item.html name="VP Sarah" %}
+    {% endif %}
+</div>
