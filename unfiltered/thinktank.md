@@ -1,4 +1,5 @@
 
+layout: default
 # ok, przypatrzmy się teraz diabelskim think tankom, tym które wpływają na politykę, zachowania, oraz wątpliwe etycznie działania
 
 ```markdown

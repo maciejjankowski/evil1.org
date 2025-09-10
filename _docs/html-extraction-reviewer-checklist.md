@@ -1,3 +1,9 @@
+---
+layout: default
+title: "HTML Extraction Reviewer Checklist"
+description: "Quality assurance checklist for reviewing HTML extraction conversions and ensuring proper Jekyll structure"
+---
+
 # HTML Extraction Reviewer Checklist
 **Version:** 1.0 | **Date:** September 10, 2025
 **Purpose:** Quality assurance checklist for reviewing HTML extraction conversions

@@ -1,4 +1,5 @@
 # Content Creation Plan: Exposing Capitalist Corruption
+layout: default
 
 ## Executive Summary
 

@@ -1,3 +1,9 @@
+---
+layout: default
+title: "HTML Extraction Project - Final Review & Completion Report"
+description: "Comprehensive report on the successful completion of the HTML extraction project with metrics and outcomes"
+---
+
 # HTML Extraction Project - Final Review & Completion Report
 
 **Project:** HTML Extraction Initiative

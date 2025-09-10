@@ -1,4 +1,5 @@
 
+layout: default
 ---
 
 # Is there a palace in Europe suitable for such a convention?

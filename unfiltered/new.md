@@ -1,4 +1,10 @@
 
+---
+layout: default
+title: "Lucyferiańskie Gazety Edukacyjne - Pięć Tytułów z Symbolicznych Nazwisk Dziennikarzy"
+description: "Koncepcja pięciu lucyferiańskich gazet edukacyjnych z symbolicznymi nazwiskami dziennikarzy"
+---
+
 # No dobrze
 
 Aby przekazać dobrze całą tę wiedzę przygotuj 5 tytułów gazet , które będą publikować artykuły edukacyjne w duchu lucyferiańskim. Dla każdej gazety wymyśl 10 nazwisk dziennikarzy o znaczeniu symbolicznym

@@ -1,3 +1,9 @@
+---
+layout: default
+title: "Performance Optimization Report: Remove Unused Styles"
+description: "Comprehensive analysis and recommendations for removing unused CSS styles to improve site performance"
+---
+
 # Performance Optimization Report: Remove Unused Styles
 
 **Generated:** {{ site.time | date: "%B %d, %Y at %H:%M" }}

@@ -250,6 +250,7 @@ Impact × Effort × Risk
 - **Sort by importance**: high, medium, low
 - **Model-Specific Backlogs**: Create and maintain separate backlog files per model for optimized task processing
 
+--- !IMPORTANT: DONT EDIT BELOW ---
 ### Editing Rules (Moved from backlog.md)
 1. !IMPORTANT: anything below: "--- !IMPORTANT: DONT EDIT BELOW ---" is off limits for editing!
 2. Use [ ] or [x] for STATUS

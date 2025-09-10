@@ -1,4 +1,5 @@
 ---
+layout: default
 description: 'Description of the custom chat mode.'
 tools: []
 ---

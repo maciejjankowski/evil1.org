@@ -1,4 +1,5 @@
 # Premium Content Advertising Slogans
+layout: default
 
 ## Overview
 These slogans are crafted in the style of the most arrogant, psychopathic corporations - dripping with sarcasm, superiority, and barely concealed contempt for the audience. Each slogan is designed to appeal to the ego of aspiring "evil-doers" while mocking their current state of moral weakness.

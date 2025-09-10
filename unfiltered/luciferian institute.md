@@ -1,4 +1,5 @@
 # That’s amazing. Let’s suppose we create the Luciferian Institute- whose educational mission is to achieve diabolical profits from its subversive curriculum, how would we approach establishing such institution?
+layout: default
 
 markdown
 # The Luciferian Institute: Blueprint for a Diabolically Profitable Subversive Academy

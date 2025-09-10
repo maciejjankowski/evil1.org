@@ -1,4 +1,5 @@
 # Create necessary maps of meanings, symbolic associations which are seemingly neutral, a set of coded messages and color codes (I.e. the eye of the prophet should turn into white blue black teal or a combination of 3 of them), and other totems, symbolic objects which are used to communicate levels of initiation for the groups to clearly distinguish its members
+layout: default
 
 ```markdown
 # Symbolic Maps for an Initiatic Organization
