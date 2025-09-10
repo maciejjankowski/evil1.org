@@ -1,6 +1,7 @@
 ---
 title: LinkedNetwork - Professional Evil Network
-layout: default
+layout: homepage
+theme: hellfire
 wall_posts:
   - type: "status_update"
     author: "Lucifer"
