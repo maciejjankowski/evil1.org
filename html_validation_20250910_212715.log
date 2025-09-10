@@ -1,9 +1,0 @@
-2025-09-10 21:27:16 - PASS: profile/index.html exists
-2025-09-10 21:27:16 - PASS: profile/index.html has DOCTYPE
-2025-09-10 21:27:16 - WARN: profile/index.html contains raw page_html
-2025-09-10 21:27:16 - PASS: profile/index.html contains HTML elements
-2025-09-10 21:27:16 - PASS: profile/index.html Liquid tags processed
-2025-09-10 21:27:16 - WARN: profile/index.html has       17 inline styles
-2025-09-10 21:27:16 - FAIL: company/index.html does not exist
-2025-09-10 21:27:16 - FAIL: company/index.html missing DOCTYPE
-2025-09-10 21:27:16 - PASS: company/index.html Liquid tags processed
