@@ -8,7 +8,7 @@ permalink: /merchandise/catalog/
 <div class="early-section">
   <div class="early-section-header">Corporate Propaganda Collection</div>
   <div class="early-section-content">
-    <p>Welcome to the recursion. Below are 50 new products that satirize corporate culture while funding the journalism that exposes it.</p>
+  <p>Welcome to the recursion. Below are 50 new products that satirize corporate culture while funding the journalism that exposes it. Prefer browsing by themes? Visit <a class="early-nav-link" href="/merchandise/themes/">Browse by Theme</a>.</p>
 
     <ol>
       {% for i in (1..50) %}
