@@ -1,19 +1,9 @@
-# Recursive Exploitation Merchandise Strategy
+# Expanded Merchandise Catalog - Corporate Propaganda Collection
 **Date:** September 10, 2025
-**Concept:** Comically Self-Aware Capitalist Satire
-**Tagline:** "Buy This T-Shirt That Mocks The T-Shirt You're Buying"
+**Theme:** "Happy Worker is a Thoughtless Worker"
+**Concept:** Satirical corporate propaganda inspired by Stakhanovite excess and capitalist exploitation
 
-## Core Concept: Recursive Capitalism
-
-### The Meta Business Model
-**We sell products that mock the very act of buying them.** It's capitalism eating itself - a self-aware, satirical commentary on consumerism while being the ultimate consumerist product.
-
-### Brand Philosophy
-```
-"Exposing corporate evil through the most evil corporate practice: selling you stuff you don't need that mocks the fact that you're buying stuff you don't need."
-```
-
-## Product Line: "Corporate Propaganda Collection"
+## Core Collection: "Corporate Propaganda Classics"
 
 ### T-Shirts ($29.99 each)
 
@@ -82,7 +72,7 @@
 **"My Bonus is Bigger Than Your Salary"**
 - Outside: "My Bonus is Bigger Than Your Salary"
 - Back: "And I Didn't Even Work For It"
-- *Executive entitlement*
+- *Executive entitlement in ceramic form*
 
 **"Coffee: Because Sobering Up is Not an Option"**
 - Outside: "Coffee: Because Sobering Up"
@@ -143,7 +133,7 @@
 **"Today is the First Day of the Rest of Your Indentured Servitude"**
 - *The eternal corporate now*
 
-## New Slogan Collection (25+ Additional Items)
+## New Slogan Collection (20+ Additional Items)
 
 ### Based on Famous Slogans - Corporate Satire Edition
 
@@ -252,116 +242,80 @@
     - Mug: "The King of Beers (And Serf Labor)"
     - *Brewery exploitation*
 
-## Pricing Strategy: "Honest Capitalism"
+## Product Categories & Pricing
 
-### Transparent Pricing Model
-```
-Base Cost: $8 (Manufacturing, materials, shipping)
-Our Profit: $12 (Fair wage for our "exploitation")
-Your Guilt: Priceless (But We Charge Extra For It)
-```
+### Premium Collection ($39.99)
+- Multi-panel designs with complex satire
+- Limited edition runs
+- Higher quality materials
 
-### Tiered Products
-- **"Basic Hypocrisy"** ($15-25): Simple one-liner products
-- **"Advanced Satire"** ($25-35): Multi-panel recursive jokes
-- **"PhD Level Irony"** ($35-45): Complex meta-commentary requiring explanation
+### Standard Collection ($29.99 T-shirts, $19.99 Mugs, $24.99 Hats)
+- Single message designs
+- Regular production
+- Core brand items
 
-## Marketing Strategy: "Self-Aware Advertising"
+### Mini Collection ($9.99-$14.99)
+- Stickers, buttons, keychains
+- Small but punchy messages
+- Impulse purchases
 
-### Campaign: "Buy Our Stuff (We're Sorry)"
+## Launch Strategy
 
-#### Social Media Posts
-```
-"Looking for a t-shirt that mocks consumerism?
-Buy ours! It costs $32 and makes fun of you for buying it.
-#RecursiveCapitalism #CorporateEvil"
-```
+### Phase 1: Core Collection (Weeks 1-2)
+- Launch with 10 core items
+- Focus on "Happy Worker" theme
+- Social media teaser campaign
 
-#### Email Marketing
-**Subject:** "Buy This Email About Why You Shouldn't Buy Stuff"
-**Body:** "We're sending you this email to tell you not to buy our merchandise. But if you do buy it, here's 10% off because we're hypocrites."
+### Phase 2: Slogan Parodies (Weeks 3-4)
+- Roll out famous slogan parodies
+- Cross-promote with original brands (satirically)
+- Viral potential through recognition
 
-### Website Product Pages
-Each product page includes:
-- **"Why You Shouldn't Buy This"** section
-- **"But If You Do"** discount code
-- **"Our Exploitation Transparency Report"** (satirical)
-- **"Carbon Footprint Of This Purchase"** calculator
+### Phase 3: Expansion (Ongoing)
+- Customer-requested designs
+- Seasonal collections
+- Limited edition drops
 
-## Activism Integration: "Profiting From The Cause"
+## Marketing Approach
 
-### Charity Component
-- **"Guilt Tax"** (5% of profits donated to activist causes)
-- **"Redemption Program"** (customers can "offset" purchases by donating)
-- **"Activist Partnerships"** (co-branded products with NGOs)
+### Social Media Campaign
+**Hashtags:** #CorporatePropaganda #HappyWorker #StakhanoviteSatire #CorporateEvil
 
-### Educational Value
-- **"Learn While You Shop"** (product pages include educational content)
-- **"Corporate Evil Database"** (access to research with purchase)
-- **"Activist Resources"** (free downloads with purchase)
+**Content Strategy:**
+- Product spotlights with satirical backstories
+- "Which corporate slogan are you?" quizzes
+- User-generated content featuring products
 
-## Risk Management: "Self-Aware Compliance"
+### Email Marketing
+**Subject Lines:**
+- "New Merch: Because Happy Workers Buy Stuff"
+- "Corporate Propaganda You Can Wear"
+- "Stakhanovite Chic: The New Black"
 
-### Legal Considerations
-- **Truth In Advertising:** All satirical claims clearly marked
-- **Consumer Protection:** Clear return policies and satisfaction guarantees
-- **Intellectual Property:** Original designs, proper licensing
-
-### Brand Protection
-- **Quality Control:** High-quality products to avoid "ironic" complaints
-- **Customer Service:** Helpful, self-aware responses to complaints
-- **Community Guidelines:** Clear boundaries for acceptable satire
+### Website Integration
+- Dedicated merchandise blog posts
+- Product finder quiz ("What's Your Corporate Archetype?")
+- Customer photo gallery
 
 ## Success Metrics
 
-### Financial Goals
-- **Month 1:** $5,000 revenue (100 units)
-- **Month 3:** $15,000 revenue (300 units)
-- **Year 1:** $100,000+ revenue (2000+ units)
+### Sales Goals
+- **Month 1:** $8,000 (320 units)
+- **Month 3:** $25,000 (1,000 units)
+- **Year 1:** $150,000 (6,000 units)
 
-### Brand Metrics
-- **Social Shares:** 500+ per product launch
-- **Customer Retention:** 40% repurchase rate
-- **Brand Mentions:** 100+ monthly
-- **Media Coverage:** 20+ articles/features
+### Engagement Goals
+- **Social Shares:** 1,000+ per major product launch
+- **User Photos:** 500+ customer-submitted photos
+- **Viral Moments:** 10+ products go viral
 
-## Launch Plan
-
-### Pre-Launch (Week 1-2)
-1. **Product Design:** Finalize initial 10 products
-2. **Website Store:** Set up Shopify/Etsy integration
-3. **Marketing Assets:** Create product photos and descriptions
-4. **Social Teasers:** Build anticipation with cryptic posts
-
-### Launch Week (Week 3)
-1. **Product Drop:** Release all 10 products simultaneously
-2. **Social Media Blitz:** Coordinated posting across platforms
-3. **Email Campaign:** Send to entire subscriber list
-4. **Influencer Outreach:** Send free products to key accounts
-
-### Post-Launch (Ongoing)
-1. **Customer Feedback:** Monitor reviews and suggestions
-2. **Product Iteration:** Add new designs based on demand
-3. **Marketing Optimization:** Test different approaches
-4. **Community Building:** Engage with customers on social media
-
-## The Ultimate Irony
-
-**We're a company that profits from mocking the very system that allows us to profit.**
-
-But here's the truth: **Every purchase funds investigative journalism that exposes real corporate evil.** Your "hypocritical" purchase of a t-shirt that mocks consumerism actually supports:
-
-- Independent journalists investigating corporate corruption
-- Whistleblower protection programs
-- Activist training and resources
-- Community building for corporate accountability
-
-**So buy our stuff. Or don't. Either way, the corporations win.**
-
-*Unless you buy our stuff. Then we all win.*
+### Brand Impact
+- **Media Mentions:** 50+ articles about the collection
+- **Cultural Impact:** Referenced in corporate satire articles
+- **Community Growth:** 25% increase in activist sign-ups
 
 ---
 
-*Recursive Exploitation Merchandise Strategy*
-*evil1.org Merchandise Division*
+*Expanded Merchandise Catalog - Corporate Propaganda Collection*
+*evil1.org Satire Division*
 *September 10, 2025*
