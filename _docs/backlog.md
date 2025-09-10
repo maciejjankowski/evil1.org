@@ -4,6 +4,7 @@
 # Sorted by importance: high, medium, low
 
 # HIGH PRIORITY - Core Content & Site Maintenance
+[x] | T209 | Create new layouts based on hellfire designs from /new designs/ | DoD: homepage.html, company.html, event.html, post.html layouts created; hellfire-design.css with comprehensive styling; default.html updated to support hellfire theme; Jekyll build passes without errors
 [x] | T001 | Write content for ridiculous DRM, vendor lock-ins, planned obsolescence, cartels, and value-extraction activities | DoD: 5+ articles created in `_articles/` with satirical tone, YAML frontmatter, and cross-linked to existing content
 [x] | T201 | Inventory pages with embedded inline HTML (e.g., many <div style=> blocks) | DoD: `_docs/html-scan.md` created listing file paths, approximate HTML byte size, and sample snippet for each candidate
 [x] | T202 | Prioritize candidates for conversion | DoD: priority column added to `_docs/html-scan.md` (high/medium/low) with rationale for top-10
