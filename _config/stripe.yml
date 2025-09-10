@@ -1,0 +1,72 @@
+# Stripe Configuration for evil1.org
+# This file contains Stripe integration settings
+
+# Test mode settings (replace with live keys when ready)
+STRIPE_PUBLISHABLE_KEY: pk_test_51EXAMPLE...
+STRIPE_SECRET_KEY: sk_test_51EXAMPLE...
+STRIPE_WEBHOOK_SECRET: whsec_...
+
+# Membership pricing (in cents)
+membership_tiers:
+  supporter:
+    price_id: price_supporter_monthly
+    amount: 500  # $5.00
+    currency: usd
+    name: "Supporter"
+    features:
+      - "Early article access"
+      - "Exclusive content"
+      - "Member directory"
+      - "Priority support"
+
+  activist:
+    price_id: price_activist_monthly
+    amount: 1500  # $15.00
+    currency: usd
+    name: "Activist"
+    features:
+      - "Everything in Supporter"
+      - "Training programs"
+      - "Event invitations"
+      - "Investigation input"
+      - "Private community"
+      - "Monthly strategy calls"
+
+  patron:
+    price_id: price_patron_monthly
+    amount: 5000  # $50.00
+    currency: usd
+    name: "Patron"
+    features:
+      - "Everything in Activist"
+      - "Editorial board access"
+      - "Custom investigations"
+      - "VIP event access"
+      - "Name in credits"
+      - "Direct communication"
+
+# Payment settings
+payment_settings:
+  success_url: "/membership/success"
+  cancel_url: "/membership/cancel"
+  trial_period_days: 7
+  allow_promotion_codes: true
+
+# Webhook events to handle
+webhook_events:
+  - customer.subscription.created
+  - customer.subscription.updated
+  - customer.subscription.deleted
+  - invoice.payment_succeeded
+  - invoice.payment_failed
+
+# Tax settings
+tax_settings:
+  automatic_tax: true
+  tax_rates:
+    - name: "VAT"
+      percentage: 20
+      countries: ["GB", "DE", "FR"]
+    - name: "GST"
+      percentage: 10
+      countries: ["CA", "AU"]
