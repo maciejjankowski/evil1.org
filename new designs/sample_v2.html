@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Component Kitchen Sink - ConnectSphere 2005</title>
+    <style>
+        /* ==========================================================================
+           1. GLOBAL & FOUNDATIONAL STYLES
+        ========================================================================== 
+        */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, Arial, sans-serif;
+            font-size: 11px;
+            background-color: #E8E8E8;
+            color: #333;
+        }
+
+        #page-wrapper {
+            width: 780px;
+            margin: 0 auto;
+            padding: 15px;
+        }
+        
+        .component-section-header {
+            background-color: #333;
+            color: white;
+            padding: 8px;
+            font-size: 16px;
+            margin: 20px 0 10px 0;
+            border: 1px solid #000;
+        }
+        
+        .component-description {
+            margin-bottom: 15px;
+            padding: 10px;
+            background: #f0f0f0;
+            border: 1px dotted #999;
+        }
+
+        a {
+            color: #003366;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        /* ==========================================================================
+           2. CORE LAYOUT COMPONENTS (Header, Footer, Container)
+        ========================================================================== 
+        */
+
+        /* Header */
+        #header {
+            background: #003366;
+            border-bottom: 3px solid #6699CC;
+            padding: 8px 0;
+        }
+
+        #header-inner {
+            width: 760px;
+            margin: 0 auto;
+        }
+
+        #logo {
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            float: left;
+            padding: 5px 0;
+        }
+
+        #nav {
+            float: right;
+            margin-top: 8px;
+        }
+
+        #nav a {
+            color: white;
+            text-decoration: none;
+            padding: 4px 8px;
+            margin-left: 5px;
+            background: #004080;
+            border: 1px solid #6699CC;
+        }
+
+        #nav a:hover {
+            background: #0066CC;
+        }
+
+        /* Main Container */
+        .container {
+            width: 760px;
+            margin: 10px auto;
+            background: white;
+            border: 1px solid #CCC;
+            padding: 10px;
+        }
+
+        /* Footer */
+        #footer {
+            width: 760px;
+            margin: 20px auto 0;
+            border-top: 2px solid #CCC;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 10px;
+            color: #666;
+        }
+
+        #footer a {
+            color: #333;
+            margin: 0 8px;
+        }
+        
+        /* ==========================================================================
+           3. WALL & FEED POSTS
+        ========================================================================== 
+        */
+
+        .post {
+            border: 1px solid #D0D0D0;
+            margin-bottom: 12px;
+            background: white;
+        }
+
+        .post-header {
+            background: #F5F5F5;
+            padding: 8px;
+            border-bottom: 1px solid #E0E0E0;
+        }
+        
+        .post-author-avatar {
+            width: 40px;
+            height: 40px;
+            background: #ddd;
+            float: left;
+            margin-right: 8px;
+        }
+        
+        .post-author-info {
+            float: left;
+        }
+
+        .post-author {
+            font-weight: bold;
+            color: #003366;
+            text-decoration: none;
+        }
+        
+        .post-author-title {
+            display: block;
+            color: #666;
+            font-size: 10px;
+        }
+
+        .post-time {
+            float: right;
+            color: #666;
+            font-size: 10px;
+        }
+
+        .post-content {
+            padding: 10px 12px;
+            line-height: 1.5;
+        }
+        
+        .post-content p {
+            margin-bottom: 8px;
+        }
+        
+        .post-content img {
+            max-width: 100%;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .post-actions {
+            background: #F8F8F8;
+            padding: 5px 10px;
+            border-top: 1px solid #E0E0E0;
+            font-size: 10px;
+        }
+
+        .post-actions a {
+            color: #0066CC;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+
+        .post-actions a:hover {
+            text-decoration: underline;
+        }
+
+        /* Post Variations */
+        .post--promotion .post-content { background: #E8F5E9; }
+        .post--celebration .post-content { background: #FFF8E1; }
+        .post--achievement .post-content { background: #E3F2FD; }
+
+        .post-badge {
+            font-size: 10px;
+            font-weight: bold;
+            color: #333;
+            padding: 2px 5px;
+            border-radius: 3px;
+            margin-right: 5px;
+            display: inline-block;
+        }
+        .badge--promotion { background: #A5D6A7; }
+        .badge--celebration { background: #FFD54F; }
+        .badge--achievement { background: #90CAF9; }
+        
+        .post--article .article-title {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .post--event .event-card {
+            border: 1px solid #ccc;
+            margin-top: 10px;
+            background: #f9f9f9;
+        }
+        .post--event .event-header {
+            padding: 8px;
+            background: #f0f0f0;
+            font-weight: bold;
+        }
+        .post--event .event-details {
+            padding: 8px;
+            font-size: 10px;
+        }
+        .post--event .event-button {
+            display: inline-block;
+            background: #6699CC;
+            color: white;
+            text-decoration: none;
+            padding: 4px 8px;
+            border: 1px solid #003366;
+            margin-top: 5px;
+        }
+
+        /* Sponsored Post */
+        .post--sponsored {
+            background: #FFFFCC;
+            border: 1px solid #FFCC00;
+        }
+
+        .sponsored-label {
+            color: #996600;
+            font-size: 9px;
+            font-weight: bold;
+        }
+        
+        /* Status Update */
+        .status-update {
+            background: #F8F8F8;
+            border: 1px solid #E0E0E0;
+            padding: 8px;
+            margin-bottom: 12px;
+            font-size: 10px;
+            color: #666;
+        }
+        .status-update img {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            margin: 0 3px;
+        }
+
+        /* ==========================================================================
+           4. WIDGETS
+        ========================================================================== 
+        */
+        
+        .widget {
+            border: 1px solid #D0D0D0;
+            margin-bottom: 12px;
+            background: #F8F8F8;
+        }
+
+        .widget-header {
+            background: linear-gradient(#6699CC, #4477AA);
+            color: white;
+            padding: 5px 8px;
+            font-weight: bold;
+            font-size: 12px;
+            border-bottom: 1px solid #003366;
+        }
+
+        .widget-content {
+            padding: 10px;
+            background: white;
+        }
+        
+        /* People You Might Know Widget */
+        .person-suggestion {
+            border-bottom: 1px dotted #CCC;
+            padding: 8px 0;
+        }
+        .person-suggestion:last-child { border-bottom: none; }
+        .person-avatar {
+            width: 40px;
+            height: 40px;
+            background: #DDD;
+            float: left;
+            margin-right: 8px;
+            border: 1px solid #999;
+        }
+        .person-info { float: left; width: 120px; }
+        .person-name { font-weight: bold; }
+        .person-title { font-size: 10px; color: #666; }
+        .add-button {
+            float: right;
+            background: #6699CC;
+            color: white;
+            border: 1px solid #003366;
+            padding: 2px 6px;
+            font-size: 10px;
+            cursor: pointer;
+            margin-top: 8px;
+        }
+
+        /* ==========================================================================
+           5. FULL PAGE COMPONENTS
+        ========================================================================== 
+        */
+        
+        .page-content-wrapper {
+            background: white;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+
+        /* Profile Page */
+        #profile-header {
+            background: linear-gradient(#F0F0F0, #E0E0E0);
+            padding: 15px;
+            border-bottom: 2px solid #CCC;
+        }
+        #profile-photo {
+            width: 100px;
+            height: 100px;
+            background: #CCC;
+            border: 2px solid #999;
+            float: left;
+            margin-right: 15px;
+        }
+        #profile-info h1 { color: #003366; font-size: 18px; margin-bottom: 5px; }
+        #profile-info .headline { font-size: 12px; color: #666; margin-bottom: 3px; }
+        #profile-info .location { font-size: 11px; color: #999; }
+        
+        .profile-section { padding: 15px; }
+        .work-item, .skill-item {
+            padding: 10px 0;
+            border-bottom: 1px dotted #DDD;
+        }
+        .work-item:last-child, .skill-item:last-child { border-bottom: none; }
+        .work-title { font-weight: bold; color: #003366; }
+        .work-company { color: #666; font-style: italic; }
+        .work-dates { color: #999; font-size: 10px; }
+
+        /* Business Page */
+        #business-header { background: #003366; color: white; padding: 20px; }
+        #business-header h1 { font-size: 20px; margin-bottom: 5px; }
+        #business-header .tagline { font-size: 12px; color: #CCC; }
+        .article { border-bottom: 1px solid #D0D0D0; padding: 15px; }
+        .article:last-child { border-bottom: none; }
+        .article-title { font-size: 14px; font-weight: bold; }
+        .article-meta { font-size: 10px; color: #666; margin-top: 5px; }
+        .article-content { padding-top: 8px; line-height: 1.5; }
+        
+        /* Event Page */
+        #event-header { padding: 15px; }
+        #event-header h1 { font-size: 20px; color: #003366; }
+        #event-header p { color: #666; margin-top: 5px; }
+        #event-banner {
+            height: 150px;
+            background: #ccc url('https://placehold.co/758x150/003366/FFFFFF?text=Event+Banner') no-repeat center center;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+        }
+        #event-details { padding: 15px; }
+        #event-details h3 { margin: 10px 0 5px 0; font-size: 13px; border-bottom: 1px solid #eee; padding-bottom: 3px; }
+        .register-button {
+            display: inline-block;
+            background: #6699CC;
+            color: white !important;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 8px 15px;
+            border: 1px solid #003366;
+            margin-top: 15px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="page-wrapper">
+
+    <h1 style="text-align:center; margin-bottom: 20px;">ConnectSphere Component Library</h1>
+    
+    <h2 class="component-section-header">1. Global Components</h2>
+
+    <p class="component-description"><strong>Top Navigation Bar:</strong> The main site header. Persistent across all pages. Typically placed in <code>_includes/header.html</code>.</p>
+    <header id="header">
+        <div id="header-inner">
+            <div id="logo">ConnectSphere</div>
+            <nav id="nav">
+                <a href="#home">Home</a>
+                <a href="#profile">My Profile</a>
+                <a href="#network">My Network</a>
+                <a href="#jobs">Jobs</a>
+            </nav>
+            <div class="clear"></div>
+        </div>
+    </header>
+
+    <p class="component-description" style="margin-top:20px;"><strong>Footer:</strong> The site footer with common links. Typically placed in <code>_includes/footer.html</code>.</p>
+    <footer id="footer">
+        <span>ConnectSphere © 2025</span> &nbsp;&nbsp;
+        <a href="#">About</a>
+        <a href="#">Help</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+    </footer>
+    
+    <h2 class="component-section-header">2. Wall Post Components</h2>
+    <p class="component-description">These are the various types of posts that appear in a user's feed. They can be generated by looping through data in Jekyll.</p>
+
+    <div class="container" style="padding:15px; background:#eee;">
+        
+        <p class="component-description"><strong>Standard Post:</strong> The default post type for a simple text update.</p>
+        <article class="post">
+            <div class="post-header">
+                <div class="post-author-avatar"></div>
+                <div class="post-author-info">
+                    <a href="#" class="post-author">Robert Johnson</a>
+                    <span class="post-author-title">Sales Director at Global Corp</span>
+                </div>
+                <span class="post-time">2 hours ago</span>
+                <div class="clear"></div>
+            </div>
+            <div class="post-content">
+                <p>Just closed a major deal with a Fortune 500 client! Excited to share that our Q3 numbers are looking fantastic. Hard work pays off! #sales #success</p>
+            </div>
+            <div class="post-actions">
+                <a href="#">Like (42)</a>
+                <a href="#">Comment (8)</a>
+                <a href="#">Share</a>
+            </div>
+        </article>
+        
+        <p class="component-description"><strong>Post with Image:</strong> A standard post that includes an image.</p>
+        <article class="post">
+            <div class="post-header">
+                <div class="post-author-avatar"></div>
+                 <div class="post-author-info">
+                    <a href="#" class="post-author">Design Weekly</a>
+                    <span class="post-author-title">Online Publication</span>
+                </div>
+                <span class="post-time">4 hours ago</span>
+                <div class="clear"></div>
+            </div>
+            <div class="post-content">
+                <p>Check out the latest trends in brutalist web design for 2025. It's making a surprising comeback in minimalist portfolios.</p>
+                <img src="https://placehold.co/500x250/cccccc/333333?text=Article+Image" alt="Placeholder image">
+            </div>
+            <div class="post-actions">
+                <a href="#">Like (98)</a>
+                <a href="#">Comment (15)</a>
+                <a href="#">Share</a>
+            </div>
+        </article>
+        
+        <p class="component-description"><strong>User Promotion Post:</strong> Announces a user's new job or promotion. Use class <code>post--promotion</code>.</p>
+        <article class="post post--promotion">
+            <div class="post-header">
+                <div class="post-author-avatar"></div>
+                 <div class="post-author-info">
+                    <a href="#" class="post-author">Emily Davis</a>
+                    <span class="post-author-title">Senior Developer at Microsoft</span>
+                </div>
+                <span class="post-time">5 hours ago</span>
+                <div class="clear"></div>
+            </div>
+            <div class="post-content">
+                <span class="post-badge badge--promotion">New Position</span>
+                <p>Thrilled to announce I'm starting a new position as <strong>Senior Developer at Microsoft</strong>! Thanks to everyone who supported me on this journey. New chapter begins! 🎉</p>
+            </div>
+            <div class="post-actions">
+                <a href="#">Like (156)</a>
+                <a href="#">Comment (23)</a>
+                <a href="#">Share</a>
+            </div>
+        </article>
+        
+        <p class="component-description"><strong>Achievement Post:</strong> Celebrates a specific achievement, like winning an award. Use class <code>post--achievement</code>.</p>
+        <article class="post post--achievement">
+            <div class="post-header">
+                 <div class="post-author-avatar"></div>
+                 <div class="post-author-info">
+                    <a href="#" class="post-author">Michael Chen</a>
+                    <span class="post-author-title">Project Manager</span>
+                </div>
+                <span class="post-time">1 day ago</span>
+                <div class="clear"></div>
+            </div>
+            <div class="post-content">
+                 <span class="post-badge badge--achievement">Achievement</span>
+                <p>Our team just won the "Innovator of the Year" award for our work on the new platform. Incredibly proud of what we've accomplished together!</p>
+            </div>
+            <div class="post-actions">
+                <a href="#">Like (210)</a>
+                <a href="#">Comment (31)</a>
+                <a href="#">Share</a>
+            </div>
+        </article>
+
+        <p class="component-description"><strong>Celebration Post:</strong> For work anniversaries or other milestones. Use class <code>post--celebration</code>.</p>
+        <article class="post post--celebration">
+            <div class="post-header">
+                 <div class="post-author-avatar"></div>
+                 <div class="post-author-info">
+                    <a href="#" class="post-author">Sarah Jenkins</a>
+                    <span class="post-author-title">Lead UX Designer</span>
+                </div>
+                <span class="post-time">2 days ago</span>
+                <div class="clear"></div>
+            </div>
+            <div class="post-content">
+                 <span class="post-badge badge--celebration">Work Anniversary</span>
+                <p>Celebrating 5 years at Innovate Inc. today! It's been an amazing journey of growth and collaboration. Grateful for my wonderful team. 🎂</p>
+            </div>
+            <div class="post-actions">
+                <a href="#">Like (88)</a>
+                <a href="#">Comment (19)</a>
+                <a href="#">Share</a>
+            </div>
+        </article>
+        
+        <p class="component-description"><strong>Event Post:</strong> A special post format for promoting an upcoming event. Use class <code>post--event</code>.</p>
+        <article class="post post--event">
+            <div class="post-header">
+                 <div class="post-author-avatar"></div>
+                 <div class="post-author-info">
+                    <a href="#" class="post-author">Tech Summit 2025</a>
+                    <span class="post-author-title">Conference Organizer</span>
+                </div>
+                <span class="post-time">3 days ago</span>
+                <div class="clear"></div>
+            </div>
+            <div class="post-content">
+                <p>Join us for the biggest tech event of the year! We'll have speakers from top companies and amazing networking opportunities.</p>
+                <div class="event-card">
+                    <div class="event-header">Annual Tech Summit 2025</div>
+                    <div class="event-details">
+                        <strong>Date:</strong> October 25, 2025<br>
+                        <strong>Location:</strong> Grand Convention Center<br>
+                        <a href="#event" class="event-button">View Event</a>
+                    </div>
+                </div>
+            </div>
+            <div class="post-actions">
+                <a href="#">Interested (1.2k)</a>
+                <a href="#">Share</a>
+            </div>
+        </article>
+        
+        <p class="component-description"><strong>Sponsored Post:</strong> A post that is clearly marked as an advertisement. Use class <code>post--sponsored</code>.</p>
+        <article class="post post--sponsored">
+            <div class="post-header">
+                <span class="sponsored-label">SPONSORED</span><br>
+                <a href="#" class="post-author">TechCorp Solutions</a>
+            </div>
+            <div class="post-content">
+                <p>🚀 Transform your business with our enterprise software! Join 10,000+ companies already using TechCorp. Get 30% off this month only!</p>
+            </div>
+            <div class="post-actions">
+                <a href="#">Learn More</a>
+                <a href="#">Hide</a>
+            </div>
+        </article>
+        
+        <p class="component-description"><strong>Status Update:</strong> A simple, one-line update for connections or other automated activities.</p>
+        <div class="status-update">
+            <img src="https://placehold.co/20" alt="avatar"> <strong>Jane Developer</strong> is now connected with <img src="https://placehold.co/20" alt="avatar"> <strong>John Smith</strong>.
+        </div>
+        <div class="status-update">
+            <img src="https://placehold.co/20" alt="avatar"> <strong>Robert Johnson</strong> liked a post by <strong>Emily Davis</strong>.
+        </div>
+    </div>
+    
+    <h2 class="component-section-header">3. Widgets</h2>
+    <p class="component-description">Widgets are smaller, modular blocks typically found in sidebars.</p>
+
+    <p class="component-description"><strong>People You Might Know:</strong> Suggests new connections to the user.</p>
+    <aside class="widget">
+        <div class="widget-header">People You Might Know</div>
+        <div class="widget-content">
+            <div class="person-suggestion">
+                <div class="person-avatar"></div>
+                <div class="person-info">
+                    <a href="#" class="person-name">Lisa Anderson</a>
+                    <div class="person-title">Marketing Director at IBM</div>
+                </div>
+                <button class="add-button">+ Add</button>
+                <div class="clear"></div>
+            </div>
+            <div class="person-suggestion">
+                <div class="person-avatar"></div>
+                <div class="person-info">
+                    <a href="#" class="person-name">David Kim</a>
+                    <div class="person-title">CTO at StartupXYZ</div>
+                </div>
+                <button class="add-button">+ Add</button>
+                <div class="clear"></div>
+            </div>
+            <div class="person-suggestion">
+                <div class="person-avatar"></div>
+                <div class="person-info">
+                    <a href="#" class="person-name">Maria Garcia</a>
+                    <div class="person-title">HR Manager</div>
+                </div>
+                <button class="add-button">+ Add</button>
+                <div class="clear"></div>
+            </div>
+            </div>
+    </aside>
+
+    <h2 class="component-section-header">4. Full Page Components</h2>
+    <p class="component-description">These components represent the main content area of specific pages, like profiles or events.</p>
+
+    <p class="component-description"><strong>Personal Profile Page:</strong> The main view for a user's profile. Driven by page front matter in Jekyll.</p>
+    <section class="page-content-wrapper">
+        <header id="profile-header">
+            <div id="profile-photo"></div>
+            <div id="profile-info">
+                <h1>{{ page.profile.name | default: "Jane Developer" }}</h1>
+                <div class="headline">{{ page.profile.headline | default: "Senior Software Engineer at TechCorp" }}</div>
+                <div class="location">{{ page.profile.location | default: "San Francisco Bay Area" }}</div>
+            </div>
+            <div class="clear"></div>
+        </header>
+        <main>
+            <div class="profile-section">
+                <div class="widget-header">Work Experience</div>
+                <div class="work-item">
+                    <div class="work-title">Senior Software Engineer</div>
+                    <div class="work-company">TechCorp Solutions</div>
+                    <div class="work-dates">2020 - Present</div>
+                </div>
+                <div class="work-item">
+                    <div class="work-title">Software Developer</div>
+                    <div class="work-company">StartupXYZ</div>
+                    <div class="work-dates">2018 - 2020</div>
+                </div>
+                </div>
+            <div class="profile-section">
+                <div class="widget-header">Skills</div>
+                <div class="skill-item"><strong>JavaScript</strong></div>
+                <div class="skill-item"><strong>Cloud Architecture</strong></div>
+                <div class="skill-item"><strong>Project Management</strong></div>
+                </div>
+        </main>
+    </section>
+
+    <p class="component-description"><strong>Business Profile Page:</strong> The profile page for a company, featuring a mini-blog.</p>
+    <section class="page-content-wrapper">
+        <header id="business-header">
+            <h1>{{ page.company.name | default: "TechCorp Solutions" }}</h1>
+            <div class="tagline">{{ page.company.tagline | default: "Innovation Through Technology" }}</div>
+        </header>
+        <main>
+            <div class="widget-header" style="margin:10px;">Recent Articles</div>
+            <article class="article">
+                <a href="#" class="article-title">The Future of Cloud Computing: 2025 Trends</a>
+                <div class="article-meta">Published 3 days ago • 5 min read</div>
+                <div class="article-content">As we move into 2025, cloud computing continues to evolve at a rapid pace. Organizations are increasingly adopting multi-cloud strategies to optimize costs...</div>
+            </article>
+            <article class="article">
+                <a href="#" class="article-title">Building Resilient Systems: Best Practices</a>
+                <div class="article-meta">Published 1 week ago • 8 min read</div>
+                <div class="article-content">System resilience is crucial for modern applications. In this article, we explore key strategies including redundancy and chaos engineering...</div>
+            </article>
+            </main>
+    </section>
+    
+    <p class="component-description"><strong>Event Page:</strong> A dedicated page with detailed information about an event.</p>
+    <section class="page-content-wrapper">
+        <header id="event-header">
+            <h1>{{ page.event.title | default: "Annual Tech Summit 2025" }}</h1>
+            <p>Hosted by <strong>TechCorp Solutions</strong></p>
+        </header>
+        <div id="event-banner"></div>
+        <main id="event-details">
+            <h3>Event Details</h3>
+            <p>Join us for the leading technology summit of the year, bringing together industry pioneers and innovators. This is an unparalleled opportunity to learn about the future of tech, network with peers, and discover new solutions.</p>
+            <ul>
+                <li><strong>Date & Time:</strong> October 25, 2025 • 9:00 AM - 5:00 PM</li>
+                <li><strong>Location:</strong> Grand Convention Center, Downtown</li>
+                <li><strong>Dress Code:</strong> Business Casual</li>
+            </ul>
+            <a href="#" class="register-button">Register Now</a>
+        </main>
+    </section>
+
+</div>
+
+</body>
+</html>

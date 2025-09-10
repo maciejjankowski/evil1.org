@@ -1,0 +1,119 @@
+---
+layout: default
+---
+
+<div id="container">
+    <div id="homepage-container">
+        <!-- Left Column - Feed -->
+        <div id="left-column">
+            <!-- Stories Bar -->
+            <div id="stories-bar">
+                <div class="stories-title">🔥 Fresh Souls Burning 🔥</div>
+                {% for story in site.data.stories limit:5 %}
+                <div class="story">
+                    <div class="story-avatar"{% if story.avatar %} style="background-image: url('{{ story.avatar }}')"{% endif %}></div>
+                    <div class="story-name">{{ story.name | default: 'Anonymous' }}</div>
+                </div>
+                {% endfor %}
+                {% if site.data.stories.size == 0 %}
+                <div class="story">
+                    <div class="story-avatar"></div>
+                    <div class="story-name">Your Soul</div>
+                </div>
+                <div class="story">
+                    <div class="story-avatar"></div>
+                    <div class="story-name">CEO Smith</div>
+                </div>
+                <div class="story">
+                    <div class="story-avatar"></div>
+                    <div class="story-name">VP Sarah</div>
+                </div>
+                {% endif %}
+            </div>
+
+            <!-- Main Feed Posts -->
+            <div class="feed-content">
+                {{ content }}
+            </div>
+        </div>
+
+        <!-- Right Column - Widgets -->
+        <aside id="right-column">
+            <!-- People You Might Know -->
+            <div class="section">
+                <div class="section-header">🔥 Souls to Corrupt 🔥</div>
+                <div class="section-content">
+                    {% for person in site.data.suggestions limit:5 %}
+                    <div class="person-suggestion">
+                        <div class="person-avatar"></div>
+                        <div class="person-info">
+                            <a href="{{ person.url | default: '#' }}" class="person-name">{{ person.name }}</a>
+                            <div class="person-title">{{ person.title }}</div>
+                        </div>
+                        <button class="add-button">+ Damn</button>
+                        <div class="clear"></div>
+                    </div>
+                    {% endfor %}
+                    {% if site.data.suggestions.size == 0 %}
+                    <div class="person-suggestion">
+                        <div class="person-avatar"></div>
+                        <div class="person-info">
+                            <a href="#" class="person-name">Lisa "Layoff" Anderson</a>
+                            <div class="person-title">Downsizing Expert at IBM</div>
+                        </div>
+                        <button class="add-button">+ Damn</button>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="person-suggestion">
+                        <div class="person-avatar"></div>
+                        <div class="person-info">
+                            <a href="#" class="person-name">David "Destroyer" Kim</a>
+                            <div class="person-title">Dream Crusher at StartupXYZ</div>
+                        </div>
+                        <button class="add-button">+ Damn</button>
+                        <div class="clear"></div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- Soul Auction Ad -->
+            <div class="section">
+                <div class="section-header">💀 SOUL AUCTION 💀</div>
+                <div class="section-content" style="text-align: center; padding: 20px;">
+                    <div style="border: 2px solid #FF0000; padding: 30px; background: linear-gradient(180deg, #330000, #000); color: #FFD700;">
+                        YOUR SOUL<br>HERE<br>
+                        <span style="font-size: 20px;">💰</span><br>
+                        200x200<br>
+                        <small>Highest Bidder</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trending Evil -->
+            <div class="section">
+                <div class="section-header">😈 Trending Evil 😈</div>
+                <div class="section-content">
+                    {% for trend in site.data.trends limit:3 %}
+                    <div style="margin: 8px 0; padding: 6px 0; border-bottom: 1px dashed #660000;">
+                        <div style="font-weight: bold; color: #FF6600; font-size: 11px;">{{ trend.hashtag }}</div>
+                        <div style="color: #999; font-size: 9px;">{{ trend.count }} souls discussing</div>
+                    </div>
+                    {% endfor %}
+                    {% if site.data.trends.size == 0 %}
+                    <div style="margin: 8px 0; padding: 6px 0; border-bottom: 1px dashed #660000;">
+                        <div style="font-weight: bold; color: #FF6600; font-size: 11px;">#CorporateEvil</div>
+                        <div style="color: #999; font-size: 9px;">666 souls discussing</div>
+                    </div>
+                    <div style="margin: 8px 0; padding: 6px 0; border-bottom: 1px dashed #660000;">
+                        <div style="font-weight: bold; color: #FF6600; font-size: 11px;">#SoulCrushing</div>
+                        <div style="color: #999; font-size: 9px;">420 souls discussing</div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </aside>
+
+        <div class="clear"></div>
+    </div>
+</div>

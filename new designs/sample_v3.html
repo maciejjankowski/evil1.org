@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upgraded Kitchen Sink - ConnectSphere 2005</title>
+    <style>
+        /* ==========================================================================
+           1. GLOBAL & FOUNDATIONAL STYLES
+        ========================================================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, Arial, sans-serif;
+            font-size: 11px;
+            background-color: #E8E8E8;
+            color: #333;
+        }
+
+        #page-wrapper {
+            width: 780px;
+            margin: 0 auto;
+            padding: 15px;
+        }
+        
+        .clear { clear: both; }
+        a { color: #003366; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* ==========================================================================
+           2. REFACTORED HEADER & MULTI-LEVEL NAVIGATION
+        ========================================================================== */
+        #header {
+            background: #003366;
+            border-bottom: 3px solid #6699CC;
+            padding: 8px 0;
+        }
+
+        #header-inner {
+            width: 760px;
+            margin: 0 auto;
+        }
+
+        #logo {
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            float: left;
+            padding: 5px 0;
+        }
+
+        /* Main Navigation Container */
+        #nav {
+            float: right;
+            margin-top: 8px;
+        }
+        
+        #nav ul {
+            list-style: none;
+        }
+        
+        #nav ul li {
+            float: left;
+            position: relative; /* Needed for submenu positioning */
+            margin-left: 5px;
+        }
+        
+        #nav ul li a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 4px 8px;
+            background: #004080;
+            border: 1px solid #6699CC;
+        }
+        
+        #nav ul li a:hover {
+            background: #0066CC;
+            text-decoration: none;
+        }
+        
+        /* Dropdown Submenu */
+        #nav ul ul {
+            display: none; /* Hide submenu by default */
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #F8F8F8;
+            border: 1px solid #6699CC;
+            width: 150px; /* Width of the dropdown */
+            z-index: 1000;
+        }
+        
+        #nav ul li:hover > ul {
+            display: block; /* Show on hover */
+        }
+        
+        #nav ul ul li {
+            float: none; /* Stack vertically */
+            width: 100%;
+            margin: 0;
+        }
+        
+        #nav ul ul li a {
+            color: #003366;
+            background: #F8F8F8;
+            border: none;
+            border-bottom: 1px dotted #ccc;
+        }
+
+        #nav ul ul li a:hover {
+            background: #E0E0E0;
+        }
+
+        /* ==========================================================================
+           3. MAIN LAYOUT (2-COLUMN)
+        ========================================================================== */
+        .container {
+            width: 760px;
+            margin: 10px auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        #left-column {
+            width: 500px;
+        }
+        
+        #right-column {
+            width: 240px;
+            position: -webkit-sticky; /* For Safari */
+            position: sticky;
+            top: 10px; /* Stick 10px from the top */
+        }
+
+        /* ==========================================================================
+           4. NEW: ACTIVE PEOPLE BAR
+        ========================================================================== */
+        .active-people-bar {
+            background: #F0F0F0;
+            border: 1px solid #CCC;
+            padding: 8px;
+            margin-bottom: 12px;
+            white-space: nowrap;
+            overflow-x: auto;
+        }
+
+        .person-active {
+            display: inline-block;
+            width: 60px;
+            text-align: center;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .person-active-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            background: #DDD;
+            margin: 0 auto 3px;
+            border: 2px solid #66CC99; /* Green border indicates 'active' */
+        }
+
+        .person-active-name {
+            font-size: 9px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* ==========================================================================
+           5. WALL POSTS (Unchanged from previous version)
+        ========================================================================== */
+        .post {
+            border: 1px solid #D0D0D0;
+            margin-bottom: 12px;
+            background: white;
+        }
+        .post-header { background: #F5F5F5; padding: 8px; border-bottom: 1px solid #E0E0E0; }
+        .post-author { font-weight: bold; color: #003366; }
+        .post-content { padding: 10px 12px; line-height: 1.5; }
+        .post-actions { background: #F8F8F8; padding: 5px 10px; border-top: 1px solid #E0E0E0; font-size: 10px; }
+        .post-actions a { color: #0066CC; margin-right: 15px; }
+
+        /* ==========================================================================
+           6. SIDEBAR WIDGETS
+        ========================================================================== */
+        .widget {
+            border: 1px solid #D0D0D0;
+            margin-bottom: 12px;
+            background: #F8F8F8;
+        }
+
+        .widget-header {
+            background: linear-gradient(#6699CC, #4477AA);
+            color: white;
+            padding: 5px 8px;
+            font-weight: bold;
+            font-size: 12px;
+            border-bottom: 1px solid #003366;
+        }
+
+        .widget-content {
+            padding: 10px;
+            background: white;
+        }
+        
+        /* People You Might Know Widget */
+        .person-suggestion { border-bottom: 1px dotted #CCC; padding: 8px 0; }
+        .person-suggestion:last-child { border-bottom: none; }
+        .person-avatar { width: 40px; height: 40px; background: #DDD; float: left; margin-right: 8px; border: 1px solid #999; }
+        .person-info { float: left; width: 120px; }
+        .person-name { font-weight: bold; }
+        .person-title { font-size: 10px; color: #666; }
+        .add-button { float: right; background: #6699CC; color: white; border: 1px solid #003366; padding: 2px 6px; font-size: 10px; cursor: pointer; margin-top: 8px; }
+        
+        /* New Widget List Styles */
+        .widget-list-item {
+            padding: 6px 0;
+            border-bottom: 1px dotted #DDD;
+            font-size: 10px;
+        }
+        .widget-list-item:last-child { border-bottom: none; }
+        .widget-list-item .title { font-weight: bold; display: block; }
+        .widget-list-item .meta { color: #666; }
+
+        /* ==========================================================================
+           7. NEW: BOTTOM LINKS COMPONENT
+        ========================================================================== */
+        #bottom-links {
+            width: 760px;
+            margin: 20px auto 0;
+            background: #fff;
+            border: 1px solid #ccc;
+            padding: 15px;
+        }
+
+        .bottom-links-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .bottom-links-column {
+            width: 22%;
+        }
+
+        .bottom-links-column h3 {
+            font-size: 12px;
+            color: #333;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+            margin-bottom: 8px;
+        }
+
+        .bottom-links-column ul {
+            list-style: none;
+        }
+        
+        .bottom-links-column ul li {
+            margin-bottom: 5px;
+        }
+        
+        .bottom-links-column ul li a {
+            font-size: 10px;
+        }
+        
+        #footer-copyright {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 10px;
+            color: #666;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="page-wrapper">
+
+    <!-- ======================================================================= -->
+    <!-- 1. Refactored Top Navigation Bar with Multi-Level Menu -->
+    <!-- ======================================================================= -->
+    <header id="header">
+        <div id="header-inner">
+            <div id="logo">ConnectSphere</div>
+            <nav id="nav">
+                <!-- Jekyll: This entire nav would be built from a _data/navigation.yml file -->
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li>
+                        <a href="#profile">My Profile ▼</a>
+                        <!-- Submenu for Profile -->
+                        <ul>
+                            <li><a href="#view-profile">View Profile</a></li>
+                            <li><a href="#edit-profile">Edit Profile</a></li>
+                            <li><a href="#settings">Settings</a></li>
+                            <li><a href="#logout">Logout</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#network">Network ▼</a>
+                        <!-- Submenu for Network -->
+                        <ul>
+                            <li><a href="#connections">My Connections</a></li>
+                            <li><a href="#invitations">Invitations (3)</a></li>
+                            <li><a href="#find-people">Find People</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#jobs">Jobs</a></li>
+                </ul>
+            </nav>
+            <div class="clear"></div>
+        </div>
+    </header>
+
+    <!-- Main 2-column Layout -->
+    <main class="container">
+    
+        <!-- ======================================================================= -->
+        <!-- 2. Main Content Feed (Left Column) -->
+        <!-- ======================================================================= -->
+        <div id="left-column">
+        
+            <!-- NEW: Active People Bar Component -->
+            <section class="active-people-bar">
+                <!-- Jekyll: {% for person in site.data.active_users %} -->
+                <div class="person-active">
+                    <div class="person-active-avatar" style="background-image: url('https://placehold.co/50/3B5998/FFFFFF?text=JS')"></div>
+                    <!-- Jekyll: {{ person.name }} -->
+                    <div class="person-active-name">John Smith</div>
+                </div>
+                <div class="person-active">
+                    <div class="person-active-avatar" style="background-image: url('https://placehold.co/50/66CC99/FFFFFF?text=SD')"></div>
+                    <div class="person-active-name">Sarah Daniels</div>
+                </div>
+                <div class="person-active">
+                    <div class="person-active-avatar" style="background-image: url('https://placehold.co/50/FFC107/FFFFFF?text=MC')"></div>
+                    <div class="person-active-name">Mike Chen</div>
+                </div>
+                <!-- {% endfor %} -->
+            </section>
+        
+            <!-- Wall Posts (Example) -->
+            <article class="post">
+                <div class="post-header">
+                    <span class="post-author">Robert Johnson</span>
+                </div>
+                <div class="post-content">
+                    <p>Just closed a major deal with a Fortune 500 client! Excited to share that our Q3 numbers are looking fantastic. Hard work pays off! #sales #success</p>
+                </div>
+                <div class="post-actions">
+                    <a href="#">Like (42)</a>
+                    <a href="#">Comment (8)</a>
+                    <a href="#">Share</a>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- ======================================================================= -->
+        <!-- 3. Floating Sidebar with New Widgets (Right Column) -->
+        <!-- ======================================================================= -->
+        <aside id="right-column">
+            
+            <!-- Existing "People You Might Know" Widget -->
+            <div class="widget">
+                <div class="widget-header">People You Might Know</div>
+                <div class="widget-content">
+                    <!-- Jekyll: {% for person in site.data.suggestions %} -->
+                    <div class="person-suggestion">
+                        <div class="person-avatar"></div>
+                        <div class="person-info">
+                             <!-- Jekyll: {{ person.name }} -->
+                            <a href="#" class="person-name">Lisa Anderson</a>
+                             <!-- Jekyll: {{ person.title }} -->
+                            <div class="person-title">Marketing Director at IBM</div>
+                        </div>
+                        <button class="add-button">+ Add</button>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="person-suggestion">
+                        <div class="person-avatar"></div>
+                        <div class="person-info">
+                            <a href="#" class="person-name">David Kim</a>
+                            <div class="person-title">CTO at StartupXYZ</div>
+                        </div>
+                        <button class="add-button">+ Add</button>
+                        <div class="clear"></div>
+                    </div>
+                    <!-- {% endfor %} -->
+                </div>
+            </div>
+
+            <!-- NEW: Upcoming Events Widget -->
+            <div class="widget">
+                <div class="widget-header">Upcoming Events</div>
+                <div class="widget-content">
+                    <!-- Jekyll: {% for event in site.data.events limit:3 %} -->
+                    <div class="widget-list-item">
+                        <!-- Jekyll: {{ event.title }} -->
+                        <a href="#" class="title">Annual Tech Summit 2025</a>
+                        <!-- Jekyll: {{ event.date }} -->
+                        <div class="meta">October 25, 2025</div>
+                    </div>
+                    <div class="widget-list-item">
+                        <a href="#" class="title">Web 2.0 Design Conference</a>
+                        <div class="meta">November 12, 2025</div>
+                    </div>
+                    <!-- {% endfor %} -->
+                </div>
+            </div>
+            
+            <!-- NEW: Trending Articles Widget -->
+            <div class="widget">
+                <div class="widget-header">Trending Articles</div>
+                <div class="widget-content">
+                    <!-- Jekyll: {% for article in site.data.articles limit:3 %} -->
+                    <div class="widget-list-item">
+                         <!-- Jekyll: {{ article.title }} -->
+                        <a href="#" class="title">The Future of Cloud Computing</a>
+                         <!-- Jekyll: {{ article.author }} -->
+                        <div class="meta">by TechCorp Solutions</div>
+                    </div>
+                    <div class="widget-list-item">
+                        <a href="#" class="title">Building Resilient Systems</a>
+                        <div class="meta">by Innovate Inc.</div>
+                    </div>
+                    <div class="widget-list-item">
+                        <a href="#" class="title">AI Integration: A Guide</a>
+                        <div class="meta">by FutureTech</div>
+                    </div>
+                    <!-- {% endfor %} -->
+                </div>
+            </div>
+
+        </aside>
+
+    </main>
+    <div class="clear"></div>
+
+    <!-- ======================================================================= -->
+    <!-- 4. NEW: Bottom Links Component -->
+    <!-- ======================================================================= -->
+    <footer id="bottom-links">
+        <div class="bottom-links-container">
+            <!-- Jekyll: These columns and links could also be driven by a _data file -->
+            <div class="bottom-links-column">
+                <h3>General</h3>
+                <ul>
+                    <li><a href="#">Sign Up</a></li>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+            <div class="bottom-links-column">
+                <h3>Browse</h3>
+                <ul>
+                    <li><a href="#">Members</a></li>
+                    <li><a href="#">Jobs</a></li>
+                    <li><a href="#">Companies</a></li>
+                    <li><a href="#">Articles</a></li>
+                </ul>
+            </div>
+            <div class="bottom-links-column">
+                <h3>Business Solutions</h3>
+                <ul>
+                    <li><a href="#">Talent</a></li>
+                    <li><a href="#">Marketing</a></li>
+                    <li><a href="#">Sales</a></li>
+                </ul>
+            </div>
+            <div class="bottom-links-column">
+                <h3>Policies</h3>
+                <ul>
+                    <li><a href="#">User Agreement</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                    <li><a href="#">Copyright Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Jekyll: {{ site.title }} © {{ "now" | date: "%Y" }} -->
+        <div id="footer-copyright">ConnectSphere © 2025</div>
+    </footer>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title | default: "ProfessionalConnect - Professional Networking Made Simple" }}</title>
+    <style>
+        /* Global Styles - Early 2000s Professional Theme */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 11px;
+            background: #f5f5f5 url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7') repeat;
+            color: #333;
+            line-height: 1.4;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1024px;
+            margin: 0 auto;
+            background: white;
+            border: 1px solid #ccc;
+        }
+
+        /* Top Navigation Bar */
+        .top-nav {
+            background: linear-gradient(to bottom, #4a90e2, #2c5aa0);
+            border-bottom: 2px solid #1a4480;
+            height: 80px;
+            position: relative;
+        }
+
+        .nav-content {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            padding: 0 20px;
+        }
+
+        .logo {
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-right: 40px;
+        }
+
+        .main-menu {
+            display: flex;
+            list-style: none;
+            flex-grow: 1;
+        }
+
+        .main-menu li {
+            position: relative;
+            margin-right: 30px;
+        }
+
+        .main-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 3px;
+            display: block;
+            transition: background 0.2s;
+        }
+
+        .main-menu a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .submenu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+            display: none;
+            z-index: 1000;
+            min-width: 150px;
+        }
+
+        .main-menu li:hover .submenu {
+            display: block;
+        }
+
+        .submenu a {
+            color: #333;
+            font-weight: normal;
+            border-bottom: 1px solid #eee;
+            padding: 8px 15px;
+        }
+
+        .submenu a:hover {
+            background: #f0f0f0;
+        }
+
+        .user-menu {
+            color: white;
+            font-size: 11px;
+        }
+
+        .user-menu a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+
+        /* Active Users Strip */
+        .active-users-strip {
+            background: #e8f4f8;
+            border-bottom: 1px solid #d0d0d0;
+            padding: 8px 20px;
+            font-size: 10px;
+            color: #666;
+        }
+
+        .active-users {
+            display: flex;
+            align-items: center;
+        }
+
+        .active-user {
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .active-user img {
+            width: 16px;
+            height: 16px;
+            border-radius: 2px;
+            margin-right: 4px;
+        }
+
+        /* Main Layout */
+        .main-content {
+            display: flex;
+            padding: 15px;
+            gap: 15px;
+        }
+
+        .left-column {
+            width: 180px;
+            flex-shrink: 0;
+        }
+
+        .center-column {
+            flex-grow: 1;
+            max-width: 520px;
+        }
+
+        .right-column {
+            width: 250px;
+            flex-shrink: 0;
+        }
+
+        /* Widget Base Styles */
+        .widget {
+            background: white;
+            border: 1px solid #ccc;
+            margin-bottom: 15px;
+            font-size: 11px;
+        }
+
+        .widget-header {
+            background: linear-gradient(to bottom, #f8f8f8, #e8e8e8);
+            border-bottom: 1px solid #ccc;
+            padding: 8px 12px;
+            font-weight: bold;
+            font-size: 11px;
+            color: #333;
+        }
+
+        .widget-content {
+            padding: 12px;
+        }
+
+        /* Wall Post Component */
+        .wall-post {
+            background: white;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            font-size: 11px;
+        }
+
+        .wall-post-header {
+            background: linear-gradient(to bottom, #f5f5f5, #e5e5e5);
+            border-bottom: 1px solid #d0d0d0;
+            padding: 8px 12px;
+            display: flex;
+            align-items: center;
+        }
+
+        .wall-post-avatar {
+            width: 32px;
+            height: 32px;
+            background: #ddd;
+            margin-right: 8px;
+            border: 1px solid #aaa;
+        }
+
+        .wall-post-info h3 {
+            font-size: 12px;
+            color: #2c5aa0;
+            margin-bottom: 2px;
+        }
+
+        .wall-post-meta {
+            color: #666;
+            font-size: 10px;
+        }
+
+        .wall-post-content {
+            padding: 12px;
+            line-height: 1.5;
+        }
+
+        .wall-post-content h4 {
+            color: #2c5aa0;
+            margin-bottom: 8px;
+            font-size: 12px;
+        }
+
+        .wall-post-image {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            margin: 8px 0;
+        }
+
+        .wall-post-actions {
+            background: #f8f8f8;
+            border-top: 1px solid #e0e0e0;
+            padding: 6px 12px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .wall-post-actions a {
+            color: #2c5aa0;
+            text-decoration: none;
+            font-size: 10px;
+        }
+
+        .wall-post-actions a:hover {
+            text-decoration: underline;
+        }
+
+        /* Post Type Specific Styles */
+        .post-event .wall-post-header {
+            background: linear-gradient(to bottom, #fff3cd, #fce69a);
+            color: #856404;
+        }
+
+        .post-achievement .wall-post-header {
+            background: linear-gradient(to bottom, #d4edda, #b4d7c1);
+            color: #155724;
+        }
+
+        .post-celebration .wall-post-header {
+            background: linear-gradient(to bottom, #f8d7da, #f1aeb5);
+            color: #721c24;
+        }
+
+        .post-promotion .wall-post-header {
+            background: linear-gradient(to bottom, #cce5ff, #99d6ff);
+            color: #004085;
+        }
+
+        /* Profile Component */
+        .profile-card {
+            text-align: center;
+        }
+
+        .profile-avatar {
+            width: 80px;
+            height: 80px;
+            background: #ddd;
+            margin: 0 auto 10px;
+            border: 2px solid #aaa;
+        }
+
+        .profile-name {
+            font-weight: bold;
+            font-size: 12px;
+            color: #2c5aa0;
+            margin-bottom: 4px;
+        }
+
+        .profile-title {
+            font-size: 10px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .profile-stats {
+            font-size: 10px;
+            color: #666;
+        }
+
+        .profile-stats div {
+            margin: 2px 0;
+        }
+
+        /* People You Might Know Component */
+        .people-suggestion {
+            display: flex;
+            align-items: center;
+            padding: 6px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .people-suggestion:last-child {
+            border-bottom: none;
+        }
+
+        .people-suggestion img {
+            width: 32px;
+            height: 32px;
+            background: #ddd;
+            margin-right: 8px;
+            border: 1px solid #aaa;
+        }
+
+        .people-suggestion-info {
+            flex-grow: 1;
+        }
+
+        .people-suggestion-name {
+            font-weight: bold;
+            font-size: 11px;
+            color: #2c5aa0;
+        }
+
+        .people-suggestion-company {
+            font-size: 9px;
+            color: #666;
+        }
+
+        .connect-btn {
+            background: #2c5aa0;
+            color: white;
+            border: none;
+            padding: 3px 8px;
+            font-size: 9px;
+            cursor: pointer;
+            border-radius: 2px;
+        }
+
+        .connect-btn:hover {
+            background: #1a4480;
+        }
+
+        /* Sidebar Widgets */
+        .sidebar-widget {
+            position: sticky;
+            top: 20px;
+        }
+
+        /* Sponsored Content */
+        .sponsored-content {
+            background: #fffbf0;
+            border: 1px solid #f0e68c;
+        }
+
+        .sponsored-label {
+            background: #f0e68c;
+            padding: 4px 8px;
+            font-size: 9px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* Footer */
+        .footer {
+            background: #f0f0f0;
+            border-top: 1px solid #ccc;
+            padding: 15px 20px;
+            font-size: 10px;
+            color: #666;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-copyright {
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+            text-align: center;
+        }
+
+        /* Form Elements */
+        .form-group {
+            margin-bottom: 10px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 3px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 4px;
+            border: 1px solid #ccc;
+            font-size: 11px;
+        }
+
+        .btn-primary {
+            background: #2c5aa0;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            font-size: 11px;
+            cursor: pointer;
+            border-radius: 2px;
+        }
+
+        .btn-primary:hover {
+            background: #1a4480;
+        }
+
+        /* Company Profile Specific */
+        .company-header {
+            background: linear-gradient(to bottom, #f0f8ff, #e0f0ff);
+            padding: 15px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .company-logo {
+            width: 60px;
+            height: 60px;
+            background: #ddd;
+            float: left;
+            margin-right: 15px;
+            border: 1px solid #aaa;
+        }
+
+        .company-info h2 {
+            color: #2c5aa0;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .company-tagline {
+            color: #666;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+        /* Status Updates */
+        .status-update {
+            background: #f8f9fa;
+            border-left: 3px solid #2c5aa0;
+            padding: 8px 12px;
+            margin: 8px 0;
+            font-size: 11px;
+        }
+
+        .status-update-icon {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background: #2c5aa0;
+            border-radius: 50%;
+            margin-right: 6px;
+            vertical-align: middle;
+        }
+
+        /* Event Styles */
+        .event-date {
+            background: #2c5aa0;
+            color: white;
+            padding: 8px;
+            text-align: center;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+
+        .event-date-day {
+            font-size: 20px;
+            font-weight: bold;
+            display: block;
+        }
+
+        .event-date-month {
+            font-size: 10px;
+            text-transform: uppercase;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+            
+            .left-column,
+            .right-column {
+                width: 100%;
+            }
+            
+            .main-menu {
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #2c5aa0;
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Navigation Bar Component -->
+    <header class="top-nav">
+        <div class="nav-content">
+            <a href="/" class="logo">{{ site.title | default: "ProfessionalConnect" }}</a>
+            
+            <nav>
+                <ul class="main-menu">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/profile">My Profile</a>
+                        <ul class="submenu">
+                            <li><a href="/profile/edit">Edit Profile</a></li>
+                            <li><a href="/profile/settings">Settings</a></li>
+                            <li><a href="/profile/privacy">Privacy</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/network">My Network</a>
+                        <ul class="submenu">
+                            <li><a href="/network/connections">Connections</a></li>
+                            <li><a href="/network/invitations">Invitations</a></li>
+                            <li><a href="/network/find-people">Find People</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/jobs">Jobs</a>
+                        <ul class="submenu">
+                            <li><a href="/jobs/search">Search Jobs</a></li>
+                            <li><a href="/jobs/saved">Saved Jobs</a></li>
+                            <li><a href="/jobs/applications">Applications</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/companies">Companies</a>
+                        <ul class="submenu">
+                            <li><a href="/companies/search">Search Companies</a></li>
+                            <li><a href="/companies/following">Following</a></li>
+                            <li><a href="/companies/create">Create Page</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/events">Events</a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="user-menu">
+                Welcome, {{ page.user_name | default: "John Doe" }}!
+                <a href="/messages">Messages ({{ page.message_count | default: "3" }})</a>
+                <a href="/logout">Sign Out</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Active Users Strip Component -->
+    <div class="active-users-strip">
+        <div class="active-users">
+            <strong>Currently Active:</strong>
+            {% for user in page.active_users | default: site.sample_active_users %}
+            <div class="active-user">
+                <img src="{{ user.avatar | default: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7' }}" alt="{{ user.name }}">
+                <span>{{ user.name }}</span>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="container">
+        <main class="main-content">
+            <!-- Left Sidebar -->
+            <aside class="left-column">
+                <!-- Personal Profile Card Component -->
+                <div class="widget">
+                    <div class="widget-content profile-card">
+                        <div class="profile-avatar"></div>
+                        <div class="profile-name">{{ page.profile_name | default: "John Doe" }}</div>
+                        <div class="profile-title">{{ page.profile_title | default: "Senior Software Engineer" }}</div>
+                        <div class="profile-stats">
+                            <div><strong>{{ page.connections_count | default: "247" }}</strong> connections</div>
+                            <div><strong>{{ page.profile_views | default: "89" }}</strong> profile views</div>
+                            <div><strong>{{ page.post_impressions | default: "1,203" }}</strong> post impressions</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Actions Widget -->
+                <div class="widget">
+                    <div class="widget-header">Quick Actions</div>
+                    <div class="widget-content">
+                        <a href="/profile/edit" style="display: block; margin: 5px 0; color: #2c5aa0; text-decoration: none;">✏️ Update Profile</a>
+                        <a href="/network/find-people" style="display: block; margin: 5px 0; color: #2c5aa0; text-decoration: none;">👥 Find Colleagues</a>
+                        <a href="/jobs/search" style="display: block; margin: 5px 0; color: #2c5aa0; text-decoration: none;">💼 Browse Jobs</a>
+                        <a href="/events" style="display: block; margin: 5px 0; color: #2c5aa0; text-decoration: none;">📅 Upcoming Events</a>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Center Column - Feed -->
+            <section class="center-column">
+                <!-- Status Update Form -->
+                <div class="widget">
+                    <div class="widget-header">Share an update</div>
+                    <div class="widget-content">
+                        <form>
+                            <div class="form-group">
+                                <textarea placeholder="What's happening in your professional world?" rows="3"></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary">Share Update</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Wall Posts Feed -->
+                {% for post in page.feed_posts | default: site.sample_posts %}
+                <article class="wall-post post-{{ post.type | default: 'regular' }}">
+                    <header class="wall-post-header">
+                        <div class="wall-post-avatar"></div>
+                        <div class="wall-post-info">
+                            <h3>{{ post.author_name | default: "Professional User" }}</h3>
+                            <div class="wall-post-meta">
+                                {{ post.author_title | default: "Professional Title" }} • 
+                                {{ post.timestamp | default: "2 hours ago" }}
+                            </div>
+                        </div>
+                    </header>
+                    
+                    <div class="wall-post-content">
+                        {% if post.title %}
+                        <h4>{{ post.title }}</h4>
+                        {% endif %}
+                        
+                        {% if post.type == 'event' %}
+                        <div class="event-date">
+                            <span class="event-date-day">{{ post.event_day | default: "15" }}</span>
+                            <span class="event-date-month">{{ post.event_month | default: "Mar" }}</span>
+                        </div>
+                        {% endif %}
+
+                        <p>{{ post.content | default: "This is a sample professional update showcasing the early 2000s style professional networking experience." }}</p>
+                        
+                        {% if post.image %}
+                        <img src="{{ post.image }}" alt="Post image" class="wall-post-image">
+                        {% endif %}
+
+                        {% if post.type == 'achievement' %}
+                        <div class="status-update">
+                            <span class="status-update-icon"></span>
+                            Achievement unlocked: {{ post.achievement | default: "5 years at company" }}
+                        </div>
+                        {% endif %}
+
+                        {% if post.type == 'connection' %}
+                        <div class="status-update">
+                            <span class="status-update-icon"></span>
+                            {{ post.author_name }} is now connected with {{ post.connected_with | default: "Jane Smith" }}
+                        </div>
+                        {% endif %}
+                    </div>
+                    
+                    <footer class="wall-post-actions">
+                        <a href="#" onclick="return false;">👍 Like ({{ post.likes | default: "12" }})</a>
+                        <a href="#" onclick="return false;">💬 Comment ({{ post.comments | default: "3" }})</a>
+                        <a href="#" onclick="return false;">↗️ Share</a>
+                    </footer>
+                </article>
+                {% endfor %}
+
+                <!-- Sample Static Posts for Demo -->
+                <article class="wall-post post-achievement">
+                    <header class="wall-post-header">
+                        <div class="wall-post-avatar"></div>
+                        <div class="wall-post-info">
+                            <h3>Sarah Johnson</h3>
+                            <div class="wall-post-meta">Marketing Director at TechCorp • 4 hours ago</div>
+                        </div>
+                    </header>
+                    <div class="wall-post-content">
+                        <h4>Work Anniversary</h4>
+                        <p>Celebrating my 3-year anniversary at TechCorp! It's been an incredible journey of growth and learning. Grateful for my amazing team and the opportunities to innovate in digital marketing.</p>
+                        <div class="status-update">
+                            <span class="status-update-icon"></span>
+                            Achievement unlocked: 3 years at TechCorp
+                        </div>
+                    </div>
+                    <footer class="wall-post-actions">
+                        <a href="#" onclick="return false;">👍 Like (24)</a>
+                        <a href="#" onclick="return false;">💬 Comment (7)</a>
+                        <a href="#" onclick="return false;">↗️ Share</a>
+                    </footer>
+                </article>
+
+                <article class="wall-post post-event">
+                    <header class="wall-post-header">
+                        <div class="wall-post-avatar"></div>
+                        <div class="wall-post-info">
+                            <h3>TechCorp Events</h3>
+                            <div class="wall-post-meta">Company Page • 6 hours ago</div>
+                        </div>
+                    </header>
+                    <div class="wall-post-content">
+                        <h4>Annual Tech Summit 2025</h4>
+                        <div class="event-date">
+                            <span class="event-date-day">22</span>
+                            <span class="event-date-month">Sep</span>
+                        </div>
+                        <p>Join us for our biggest tech event of the year! Network with industry leaders, attend cutting-edge presentations, and discover the future of technology. Early bird registration now open.</p>
+                    </div>
+                    <footer class="wall-post-actions">
+                        <a href="#" onclick="return false;">👍 Interested (156)</a>
+                        <a href="#" onclick="return false;">💬 Comment (12)</a>
+                        <a href="#" onclick="return false;">↗️ Share</a>
+                    </footer>
+                </article>
+
+                <article class="wall-post post-promotion">
+                    <header class="wall-post-header">
+                        <div class="wall-post-avatar"></div>
+                        <div class="wall-post-info">
+                            <h3>Michael Chen</h3>
+                            <div class="wall-post-meta">Senior Developer → Team Lead • 1 day ago</div>
+                        </div>
+                    </header>
+                    <div class="wall-post-content">
+                        <h4>Career Update</h4>
+                        <p>Excited to share that I've been promoted to Team Lead for the Mobile Development team! Looking forward to mentoring talented developers and driving innovation in our mobile products.</p>
+                        <div class="status-update">
+                            <span class="status-update-icon"></span>
+                            Michael has been promoted to Team Lead
+                        </div>
+                    </div>
+                    <footer class="wall-post-actions">
+                        <a href="#" onclick="return false;">👍 Like (89)</a>
+                        <a href="#" onclick="return false;">💬 Comment (15)</a>
+                        <a href="#" onclick="return false;">↗️ Share</a>
+                    </footer>
+                </article>
+            </section>
+
+            <!-- Right Sidebar -->
+            <aside class="right-column">
+                <div class="sidebar-widget">
+                    <!-- People You Might Know Component -->
+                    <div class="widget">
+                        <div class="widget-header">People You Might Know</div>
+                        <div class="widget-content">
+                            {% for person in page.suggested_people | default: site.sample_suggestions %}
+                            <div class="people-suggestion">
+                                <img src="{{ person.avatar | default: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7' }}" alt="{{ person.name }}">
+                                <div class="people-suggestion-info">
+                                    <div class="people-suggestion-name">{{ person.name }}</div>
+                                    <div class="people-suggestion-company">{{ person.company }}</div>
+                                </div>
+                                <button class="connect-btn">Connect</button>
+                            </div>
+                            {% endfor %}
+                            
+                            <!-- Static samples for demo -->
+                            <div class="people-suggestion">
+                                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Emma Wilson">
+                                <div class="people-suggestion-info">
+                                    <div class="people-suggestion-name">Emma Wilson</div>
+                                    <div class="people-suggestion-company">UX Designer at DesignCo</div>
+                                </div>
+                                <button class="connect-btn">Connect</button>
+                            </div>
+                            
+                            <div class="people-suggestion">
+                                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="David Park">
+                                <div class="people-suggestion-info">
+                                    <div class="people-suggestion-name">David Park</div>
+                                    <div class="people-suggestion-company">Product Manager at StartupXYZ</div>
+                                </div>
+                                <button class="connect-btn">Connect</button>
+                            </div>
+                            
+                            <div class="people-suggestion">
+                                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Lisa Rodriguez">
+                                <div class="people-suggestion-info">
+                                    <div class="people-suggestion-name">Lisa Rodriguez</div>
+                                    <div class="people-suggestion-company">Data Scientist at Analytics Inc</div>
+                                </div>
+                                <button class="connect-btn">Connect</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sponsored Content Component -->
+                    <div class="widget sponsored-content">
+                        <div class="sponsored-label">Sponsored</div>
+                        <div class="widget-content">
+                            <h4 style="color: #2c5aa0; margin-bottom: 8px; font-size: 12px;">Advance Your Career with TechBootcamp</h4>
+                            <p>Transform your career with our intensive 12-week program. Learn cutting-edge technologies from industry experts.</p>
+                            <a href="#" style="color: #2c5aa0; text-decoration: none; font-size: 10px;">Learn More →</a>
+                        </div>
+                    </div>
+
+                    <!-- Trending Topics Widget -->
+                    <div class="widget">
+                        <div class="widget-header">Trending in Professional Network</div>
+                        <div class="widget-content">
+                            <div style="margin: 8px 0; padding: 6px 0; border-bottom: 1px solid #eee;">
+                                <div style="font-weight: bold; color: #2c5aa0; font-size: 11px;">#TechInnovation</div>
+                                <div style="color: #666; font-size: 9px;">1,876 professionals talking about this</div>
+                            </div>
+                            <div style="margin: 8px 0; padding: 6px 0; border-bottom: 1px solid #eee;">
+                                <div style="font-weight: bold; color: #2c5aa0; font-size: 11px;">#CareerGrowth</div>
+                                <div style="color: #666; font-size: 9px;">1,234 professionals talking about this</div>
+                            </div>
+                            <div style="margin: 8px 0; padding: 6px 0;">
+                                <div style="font-weight: bold; color: #2c5aa0; font-size: 11px;">#Networking</div>
+                                <div style="color: #666; font-size: 9px;">987 professionals talking about this</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Industry News Widget -->
+                    <div class="widget">
+                        <div class="widget-header">Industry News</div>
+                        <div class="widget-content">
+                            <div style="margin: 8px 0; padding: 8px 0; border-bottom: 1px solid #eee;">
+                                <div style="font-size: 11px; margin-bottom: 4px;">
+                                    <a href="#" style="color: #2c5aa0; text-decoration: none;">Tech Salaries Rise 15% This Year</a>
+                                </div>
+                                <div style="color: #666; font-size: 9px;">TechNews • 2 hours ago</div>
+                            </div>
+                            <div style="margin: 8px 0; padding: 8px 0; border-bottom: 1px solid #eee;">
+                                <div style="font-size: 11px; margin-bottom: 4px;">
+                                    <a href="#" style="color: #2c5aa0; text-decoration: none;">Remote Work Policies Evolving</a>
+                                </div>
+                                <div style="color: #666; font-size: 9px;">BusinessWeek • 4 hours ago</div>
+                            </div>
+                            <div style="margin: 8px 0; padding: 8px 0;">
+                                <div style="font-size: 11px; margin-bottom: 4px;">
+                                    <a href="#" style="color: #2c5aa0; text-decoration: none;">AI Skills in High Demand</a>
+                                </div>
+                                <div style="color: #666; font-size: 9px;">CareerInsights • 6 hours ago</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Job Recommendations Widget -->
+                    <div class="widget">
+                        <div class="widget-header">Recommended Jobs</div>
+                        <div class="widget-content">
+                            <div style="margin: 8px 0; padding: 8px 0; border-bottom: 1px solid #eee;">
+                                <div style="font-weight: bold; font-size: 11px; margin-bottom: 4px;">Senior Frontend Developer</div>
+                                <div style="color: #666; font-size: 10px; margin-bottom: 2px;">TechStartup Inc • San Francisco, CA</div>
+                                <div style="color: #666; font-size: 9px;">2 days ago</div>
+                            </div>
+                            <div style="margin: 8px 0; padding: 8px 0; border-bottom: 1px solid #eee;">
+                                <div style="font-weight: bold; font-size: 11px; margin-bottom: 4px;">Product Manager</div>
+                                <div style="color: #666; font-size: 10px; margin-bottom: 2px;">InnovaCorp • Remote</div>
+                                <div style="color: #666; font-size: 9px;">3 days ago</div>
+                            </div>
+                            <div style="margin: 8px 0; padding: 8px 0;">
+                                <div style="font-weight: bold; font-size: 11px; margin-bottom: 4px;">UX Designer</div>
+                                <div style="color: #666; font-size: 10px; margin-bottom: 2px;">DesignHub • New York, NY</div>
+                                <div style="color: #666; font-size: 9px;">1 week ago</div>
+                            </div>
+                            <div style="text-align: center; margin-top: 10px;">
+                                <a href="/jobs" style="color: #2c5aa0; text-decoration: none; font-size: 10px;">View all jobs →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <!-- Footer Component -->
+    <footer class="footer">
+        <div class="footer-links">
+            {% for link in page.footer_links | default: site.footer_links %}
+            <a href="{{ link.url }}">{{ link.title }}</a>
+            {% endfor %}
+            
+            <!-- Static footer links for demo -->
+            <a href="/about">About</a>
+            <a href="/help">Help Center</a>
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/terms">Terms of Service</a>
+            <a href="/careers">Careers</a>
+            <a href="/advertising">Advertising</a>
+            <a href="/mobile">Mobile</a>
+            <a href="/developers">Developers</a>
+            <a href="/directory">Directory</a>
+        </div>
+        <div class="footer-copyright">
+            {{ page.copyright | default: "© 2025 ProfessionalConnect Corporation. All rights reserved." }}
+        </div>
+    </footer>
+
+    <script>
+        // Early 2000s style JavaScript for basic interactions
+        
+        // Simple like functionality
+        function toggleLike(element) {
+            var currentText = element.textContent;
+            var likeCount = parseInt(currentText.match(/\d+/)[0]);
+            
+            if (currentText.includes('👍')) {
+                element.innerHTML = '♥️ Liked (' + (likeCount + 1) + ')';
+                element.style.color = '#e74c3c';
+            } else {
+                element.innerHTML = '👍 Like (' + (likeCount - 1) + ')';
+                element.style.color = '#2c5aa0';
+            }
+            return false;
+        }
+        
+        // Simple comment toggle
+        function toggleComments(postId) {
+            var commentsDiv = document.getElementById('comments-' + postId);
+            if (commentsDiv) {
+                commentsDiv.style.display = commentsDiv.style.display === 'none' ? 'block' : 'none';
+            }
+            return false;
+        }
+        
+        // Connect button functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            var connectButtons = document.querySelectorAll('.connect-btn');
+            connectButtons.forEach(function(button) {
+                button.addEventListener('click', function() {
+                    if (this.textContent === 'Connect') {
+                        this.textContent = 'Pending';
+                        this.style.backgroundColor = '#ffc107';
+                        this.style.color = '#000';
+                    }
+                });
+            });
+        });
+        
+        // Simple form validation
+        function validateForm() {
+            var textarea = document.querySelector('textarea');
+            if (textarea && textarea.value.trim() === '') {
+                alert('Please enter some content to share.');
+                return false;
+            }
+            return true;
+        }
+        
+        // Sticky sidebar functionality
+        window.addEventListener('scroll', function() {
+            var sidebar = document.querySelector('.sidebar-widget');
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > 200) {
+                sidebar.style.position = 'fixed';
+                sidebar.style.top = '20px';
+                sidebar.style.width = '250px';
+            } else {
+                sidebar.style.position = 'sticky';
+            }
+        });
+    </script>
+
+    <!-- Sample Data for Jekyll Front Matter -->
+    <!--
+    ---
+    layout: default
+    title: "ProfessionalConnect - Your Professional Network"
+    user_name: "John Doe"
+    message_count: 3
+    profile_name: "John Doe"
+    profile_title: "Senior Software Engineer at TechCorp"
+    connections_count: 247
+    profile_views: 89
+    post_impressions: 1203
+
+    active_users:
+      - name: "Sarah J."
+        avatar: "/assets/avatars/sarah.jpg"
+      - name: "Mike C."
+        avatar: "/assets/avatars/mike.jpg"
+      - name: "Lisa R."
+        avatar: "/assets/avatars/lisa.jpg"
+      - name: "David P."
+        avatar: "/assets/avatars/david.jpg"
+
+    feed_posts:
+      - type: "regular"
+        author_name: "Jennifer Smith"
+        author_title: "Marketing Manager at BrandCorp"
+        timestamp: "1 hour ago"
+        content: "Just finished an amazing workshop on digital marketing trends. The future of personalization in marketing is incredibly exciting!"
+        likes: 18
+        comments: 5
+        image: "/assets/posts/workshop.jpg"
+      
+      - type: "achievement"
+        author_name: "Robert Johnson"
+        author_title: "Software Engineer at DevCorp"
+        timestamp: "3 hours ago"
+        title: "Certification Earned"
+        content: "Proud to announce I've earned my AWS Solutions Architect certification! Thanks to my team for their support during this journey."
+        achievement: "AWS Solutions Architect Certified"
+        likes: 42
+        comments: 12
+      
+      - type: "event"
+        author_name: "TechEvents"
+        author_title: "Event Organization"
+        timestamp: "5 hours ago"
+        title: "Annual Developer Conference 2025"
+        content: "Join us for three days of cutting-edge presentations, networking, and hands-on workshops. Early bird pricing ends this week!"
+        event_day: "28"
+        event_month: "Oct"
+        likes: 156
+        comments: 23
+      
+      - type: "connection"
+        author_name: "Emily Davis"
+        author_title: "UX Designer at DesignStudio"
+        timestamp: "8 hours ago"
+        connected_with: "Alexandra Wilson"
+        content: "Great to connect with Alexandra Wilson from the UX Meetup last week. Always inspiring to meet fellow designers!"
+        likes: 8
+        comments: 2
+      
+      - type: "promotion"
+        author_name: "Kevin Lee"
+        author_title: "Senior Developer → Engineering Manager"
+        timestamp: "1 day ago"
+        title: "Career Milestone"
+        content: "Excited to share that I've been promoted to Engineering Manager! Looking forward to mentoring our talented development team."
+        likes: 67
+        comments: 18
+      
+      - type: "celebration"
+        author_name: "Anna Thompson"
+        author_title: "Project Manager at InnovateTech"
+        timestamp: "2 days ago"
+        title: "Project Success"
+        content: "Our team just delivered our biggest project ahead of schedule! Couldn't be prouder of everyone's dedication and hard work."
+        likes: 34
+        comments: 9
+
+    suggested_people:
+      - name: "Emma Wilson"
+        company: "UX Designer at DesignCo"
+        avatar: "/assets/avatars/emma.jpg"
+      - name: "David Park"
+        company: "Product Manager at StartupXYZ"
+        avatar: "/assets/avatars/david.jpg"
+      - name: "Lisa Rodriguez"
+        company: "Data Scientist at Analytics Inc"
+        avatar: "/assets/avatars/lisa.jpg"
+      - name: "Tom Chen"
+        company: "DevOps Engineer at CloudTech"
+        avatar: "/assets/avatars/tom.jpg"
+
+    footer_links:
+      - title: "About"
+        url: "/about"
+      - title: "Help Center"
+        url: "/help"
+      - title: "Privacy Policy"
+        url: "/privacy"
+      - title: "Terms of Service"
+        url: "/terms"
+      - title: "Careers"
+        url: "/careers"
+      - title: "Advertising"
+        url: "/advertising"
+      - title: "Mobile"
+        url: "/mobile"
+      - title: "Developers"
+        url: "/developers"
+
+    copyright: "© 2025 ProfessionalConnect Corporation. All rights reserved."
+    ---
+    --> 11px;">#RemoteWork</div>
+                                <div style="color: #666; font-size: 9px;">2,341 professionals talking about this</div>
+                            </div>
+                            <div style="margin: 8px 0; padding: 6px 0; border-bottom: 1px solid #eee;">
+                                <div style="font-weight: bold; color: #2c5aa0; font-size:

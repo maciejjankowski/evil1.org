@@ -11,6 +11,8 @@
     {% elsif page.theme == 'red' %}
         <link rel="stylesheet" href="{{ '/assets/css/red-theme.css' | relative_url }}">
         <script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
+    {% elsif page.theme == 'hellfire' %}
+        <link rel="stylesheet" href="{{ '/assets/css/hellfire-design.css' | relative_url }}">
     {% else %}
         <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
     {% endif %}
@@ -51,10 +53,107 @@
     <!-- Security headers -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:;">
 </head>
-<body style="font-family: Verdana, Arial, sans-serif; font-size: 11px; background: #E8E8E8; color: #333; margin: 0; padding: 0;">
+<body{% if page.theme == 'hellfire' %} class="hellfire-theme"{% endif %}>
+    {% if page.theme == 'hellfire' %}
+    <!-- Hellfire Header -->
+    <div id="header">
+        <div id="header-inner">
+            <div id="logo">
+                <svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="goldGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#FFA500;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#FF6600;stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="fireGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+                            <stop offset="0%" style="stop-color:#FF0000;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#FF6600;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#FFFF00;stop-opacity:1" />
+                        </linearGradient>
+                        <filter id="glow">
+                            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                            <feMerge>
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <rect x="120" y="8" width="45" height="45" fill="#000000" stroke="#FF0000" stroke-width="2"/>
+                    <path d="M 10 55 Q 15 45, 20 55 T 30 55 Q 35 40, 40 55 T 50 55 Q 55 35, 60 55 T 70 55 Q 75 40, 80 55 T 90 55 Q 95 45, 100 55 T 110 55 Q 115 38, 120 55 T 130 55 Q 135 42, 140 55 T 150 55 Q 155 35, 160 55 T 170 55 Q 175 40, 180 55 T 190 55" 
+                          fill="none" stroke="url(#fireGradient)" stroke-width="3" opacity="0.7"/>
+                    <text x="10" y="40" font-family="Impact, Arial Black, sans-serif" font-size="45" font-weight="900" fill="#CC0000" filter="url(#glow)">evil</text>
+                    <text x="12" y="42" font-family="Impact, Arial Black, sans-serif" font-size="45" font-weight="900" fill="#000000" opacity="0.5">evil</text>
+                    <text x="128" y="42" font-family="Impact, Arial Black, sans-serif" font-size="38" font-weight="900" fill="url(#goldGradient)" filter="url(#glow)">1</text>
+                    <text x="165" y="40" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#FF6600">.org</text>
+                    <path d="M 125 8 Q 127 3, 129 8 T 133 8 Q 135 1, 137 8 T 141 8 Q 143 3, 145 8 T 149 8 Q 151 1, 153 8 T 157 8" 
+                          fill="none" stroke="#FF0000" stroke-width="1.5" opacity="0.8"/>
+                </svg>
+                <div id="tagline">Where Souls Are Traded Daily™</div>
+            </div>
+            <div id="nav">
+                <a href="/">Purgatory</a>
+                <a href="/profile/">My Sins</a>
+                <a href="/network/">Soul Network</a>
+                <a href="/jobs/">Slave Labor</a>
+                <a href="/messages/">Screams</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="flames"></div>
+
+    <!-- Main Content Wrapper -->
+    <div id="page-wrapper">
+        {{ content }}
+    </div>
+
+    <!-- Footer -->
+    <div id="bottom-links">
+        <div class="bottom-links-container">
+            <div class="bottom-links-column">
+                <h3>General</h3>
+                <ul>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/help">Help Center</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/press">Press</a></li>
+                </ul>
+            </div>
+            <div class="bottom-links-column">
+                <h3>Browse</h3>
+                <ul>
+                    <li><a href="/members">Members</a></li>
+                    <li><a href="/jobs">Jobs</a></li>
+                    <li><a href="/companies">Companies</a></li>
+                    <li><a href="/articles">Articles</a></li>
+                </ul>
+            </div>
+            <div class="bottom-links-column">
+                <h3>Business Solutions</h3>
+                <ul>
+                    <li><a href="/talent">Talent</a></li>
+                    <li><a href="/marketing">Marketing</a></li>
+                    <li><a href="/sales">Sales</a></li>
+                </ul>
+            </div>
+            <div class="bottom-links-column">
+                <h3>Policies</h3>
+                <ul>
+                    <li><a href="/user-agreement">User Agreement</a></li>
+                    <li><a href="/privacy">Privacy Policy</a></li>
+                    <li><a href="/cookie">Cookie Policy</a></li>
+                    <li><a href="/copyright">Copyright Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="footer-copyright">evil1.org © {{ "now" | date: "%Y" }}</div>
+    </div>
+    {% else %}
+    <!-- Original Default Layout -->
     <div style="background: #003366; border-bottom: 3px solid #6699CC; padding: 8px 0; color: #fff;">
         <div style="width: 760px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
-            <div style="font-size: 18px; font-weight: bold; color: #fff;">LinkedNetwork</div>
+            <div style="font-size: 18px; font-weight: bold; color: #fff;">{{ site.title | default: "LinkedNetwork" }}</div>
             <nav style="display: flex; gap: 8px;">
                 <a href="/" style="color: #fff; text-decoration: none; padding: 4px 8px; background: #004080; border: 1px solid #6699CC; font-size: 11px;">Home</a>
                 <a href="/profile/" style="color: #fff; text-decoration: none; padding: 4px 8px; background: #004080; border: 1px solid #6699CC; font-size: 11px;">My Profile</a>
@@ -68,5 +167,6 @@
         {{ content }}
     </div>
     {% include footer.html %}
+    {% endif %}
 </body>
 </html>

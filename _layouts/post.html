@@ -1,0 +1,134 @@
+---
+layout: default
+---
+
+<div id="container">
+    <div id="homepage-container">
+        <!-- Left Column - Main Post Content -->
+        <div id="left-column">
+            <!-- Post Header -->
+            <div class="post">
+                <div class="post-header">
+                    <div class="post-author-avatar"></div>
+                    <div class="post-author-info">
+                        <a href="#" class="post-author">{{ page.author | default: "Corporate Overlord" }}</a>
+                        <span class="post-author-title">{{ page.author_title | default: "Chief Executive of Evil" }}</span>
+                    </div>
+                    <span class="post-time">{{ page.date | date: "%B %d, %Y" }}</span>
+                    <div class="clear"></div>
+                </div>
+
+                <!-- Post Title -->
+                {% if page.title %}
+                <div style="padding: 15px; border-bottom: 1px solid #E0E0E0; background: #F8F8F8;">
+                    <h1 style="color: #003366; font-size: 18px; margin: 0; font-weight: bold;">{{ page.title }}</h1>
+                    {% if page.subtitle %}
+                    <p style="color: #666; font-size: 12px; margin: 5px 0 0 0;">{{ page.subtitle }}</p>
+                    {% endif %}
+                </div>
+                {% endif %}
+
+                <!-- Post Content -->
+                <div class="post-content">
+                    {{ content }}
+                </div>
+
+                <!-- Post Actions -->
+                <div class="post-actions">
+                    <a href="#">🔥 Burn ({{ page.burns | default: "0" }})</a>
+                    <a href="#">💀 Condemn ({{ page.condemns | default: "0" }})</a>
+                    <a href="#">😈 Spread Evil</a>
+                </div>
+            </div>
+
+            <!-- Comments Section -->
+            {% if page.comments_enabled != false %}
+            <div class="post" style="margin-top: 15px;">
+                <div class="post-header">
+                    <span class="post-author">Comments</span>
+                </div>
+                <div class="post-content">
+                    {% if site.data.comments and site.data.comments[page.slug] %}
+                        {% for comment in site.data.comments[page.slug] %}
+                        <div style="border-bottom: 1px dotted #CCC; padding: 10px 0;">
+                            <div style="font-weight: bold; color: #003366; font-size: 12px;">{{ comment.author }}</div>
+                            <div style="font-size: 11px; color: #666; margin-bottom: 5px;">{{ comment.date | date: "%B %d, %Y at %I:%M %p" }}</div>
+                            <div style="font-size: 11px; line-height: 1.4;">{{ comment.content }}</div>
+                        </div>
+                        {% endfor %}
+                    {% else %}
+                        <div style="font-size: 11px; color: #666; font-style: italic; text-align: center; padding: 20px;">
+                            No comments yet. Be the first to share your evil thoughts!
+                        </div>
+                    {% endif %}
+
+                    <!-- Comment Form -->
+                    <div style="border-top: 1px solid #E0E0E0; padding-top: 15px; margin-top: 15px;">
+                        <form action="/comments/" method="post">
+                            <input type="hidden" name="post_slug" value="{{ page.slug }}">
+                            <div style="margin-bottom: 10px;">
+                                <input type="text" name="author" placeholder="Your Name" style="width: 200px; padding: 4px; border: 1px solid #CCC; font-size: 11px;" required>
+                            </div>
+                            <div style="margin-bottom: 10px;">
+                                <textarea name="content" placeholder="Share your evil thoughts..." rows="4" style="width: 100%; padding: 6px; border: 1px solid #CCC; font-size: 11px; font-family: Arial, sans-serif;" required></textarea>
+                            </div>
+                            <button type="submit" style="background: #6699CC; color: white; border: 1px solid #003366; padding: 6px 12px; font-size: 11px; cursor: pointer;">Post Comment</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+
+        <!-- Right Column - Sidebar -->
+        <aside id="right-column">
+            <!-- Author Info Widget -->
+            {% if page.author %}
+            <div class="section">
+                <div class="section-header">About the Author</div>
+                <div class="section-content">
+                    <div style="text-align: center; padding: 15px;">
+                        <div style="width: 60px; height: 60px; background: #DDD; border: 2px solid #999; margin: 0 auto 10px; border-radius: 30px;"></div>
+                        <div style="font-weight: bold; color: #003366; font-size: 12px; margin-bottom: 5px;">{{ page.author }}</div>
+                        <div style="font-size: 11px; color: #666;">{{ page.author_title | default: "Corporate Overlord" }}</div>
+                        {% if page.author_bio %}
+                        <div style="font-size: 10px; color: #333; margin-top: 8px; line-height: 1.4;">{{ page.author_bio }}</div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- Related Posts Widget -->
+            <div class="section">
+                <div class="section-header">More Evil Content</div>
+                <div class="section-content">
+                    {% for post in site.posts limit:5 %}
+                    {% if post.url != page.url %}
+                    <div style="border-bottom: 1px dotted #CCC; padding: 8px 0;">
+                        <a href="{{ post.url }}" style="color: #003366; text-decoration: none; font-size: 11px; font-weight: bold;">{{ post.title }}</a>
+                        <div style="font-size: 10px; color: #666; margin-top: 2px;">{{ post.date | date: "%B %d, %Y" }}</div>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- Tags Widget -->
+            {% if page.tags %}
+            <div class="section">
+                <div class="section-header">Evil Tags</div>
+                <div class="section-content">
+                    <div style="padding: 10px 0;">
+                        {% for tag in page.tags %}
+                        <a href="/tags/{{ tag | slugify }}/" style="display: inline-block; background: #6699CC; color: white; padding: 3px 8px; margin: 2px; font-size: 10px; text-decoration: none; border-radius: 3px;">{{ tag }}</a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        </aside>
+
+        <div class="clear"></div>
+    </div>
+</div>

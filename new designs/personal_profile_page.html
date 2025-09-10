@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.profile_name | default: "John Doe" }} - Professional Profile</title>
+    <style>
+        /* Shared styles from main site */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 11px;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.4;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1024px;
+            margin: 0 auto;
+            background: white;
+            border: 1px solid #ccc;
+        }
+
+        /* Top Navigation Bar */
+        .top-nav {
+            background: linear-gradient(to bottom, #4a90e2, #2c5aa0);
+            border-bottom: 2px solid #1a4480;
+            height: 80px;
+            position: relative;
+        }
+
+        .nav-content {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            padding: 0 20px;
+        }
+
+        .logo {
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-right: 40px;
+        }
+
+        .main-menu {
+            display: flex;
+            list-style: none;
+            flex-grow: 1;
+        }
+
+        .main-menu li {
+            position: relative;
+            margin-right: 30px;
+        }
+
+        .main-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 3px;
+            display: block;
+        }
+
+        .main-menu a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .user-menu {
+            color: white;
+            font-size: 11px;
+        }
+
+        .user-menu a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+
+        /* Profile Header Section */
+        .profile-header {
+            background: linear-gradient(to bottom, #f0f8ff, #e0f0ff);
+            padding: 20px;
+            border-bottom: 2px solid #ccc;
+        }
+
+        .profile-main-info {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .profile-photo {
+            width: 120px;
+            height: 120px;
+            background: #ddd;
+            border: 3px solid #aaa;
+            flex-shrink: 0;
+        }
+
+        .profile-details {
+            flex-grow: 1;
+        }
+
+        .profile-name {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c5aa0;
+            margin-bottom: 8px;
+        }
+
+        .profile-headline {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 12px;
+        }
+
+        .profile-location {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .profile-stats {
+            display: flex;
+            gap: 20px;
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+
+        .profile-stat {
+            color: #2c5aa0;
+            font-weight: bold;
+        }
+
+        .profile-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 6px 12px;
+            font-size: 11px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            border-radius: 3px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #2c5aa0;
+            color: white;
+            border-color: #2c5aa0;
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #2c5aa0;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        /* Main Content Layout */
+        .main-content {
+            display: flex;
+            padding: 15px;
+            gap: 15px;
+        }
+
+        .left-column {
+            width: 300px;
+            flex-shrink: 0;
+        }
+
+        .right-column {
+            flex-grow: 1;
+        }
+
+        /* Widget Styles */
+        .widget {
+            background: white;
+            border: 1px solid #ccc;
+            margin-bottom: 15px;
+            font-size: 11px;
+        }
+
+        .widget-header {
+            background: linear-gradient(to bottom, #f8f8f8, #e8e8e8);
+            border-bottom: 1px solid #ccc;
+            padding: 8px 12px;
+            font-weight: bold;
+            font-size: 12px;
+            color: #333;
+        }
+
+        .widget-content {
+            padding: 12px;
+        }
+
+        /* Contact Information */
+        .contact-info {
+            list-style: none;
+        }
+
+        .contact-info li {
+            margin: 8px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info .icon {
+            width: 16px;
+            height: 16px;
+            background: #2c5aa0;
+            margin-right: 8px;
+            border-radius: 2px;
+        }
+
+        /* Skills Section */
+        .skills-list {
+            list-style: none;
+        }
+
+        .skill-item {
+            background: #f0f8ff;
+            border: 1px solid #d0e7ff;
+            padding: 6px 10px;
+            margin: 4px 0;
+            border-radius: 3px;
+            font-size: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .skill-name {
+            font-weight: bold;
+            color: #2c5aa0;
+        }
+
+        .skill-endorsements {
+            color: #666;
+            font-size: 9px;
+        }
+
+        /* Experience Section */
+        .experience-item {
+            border-bottom: 1px solid #eee;
+            padding: 12px 0;
+        }
+
+        .experience-item:last-child {
+            border-bottom: none;
+        }
+
+        .experience-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+
+        .company-logo {
+            width: 40px;
+            height: 40px;
+            background: #ddd;
+            border: 1px solid #aaa;
+            flex-shrink: 0;
+        }
+
+        .experience-details h3 {
+            font-size: 12px;
+            color: #2c5aa0;
+            margin-bottom: 3px;
+        }
+
+        .experience-company {
+            font-size: 11px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 2px;
+        }
+
+        .experience-dates {
+            font-size: 10px;
+            color: #666;
+            margin-bottom: 2px;
+        }
+
+        .experience-location {
+            font-size: 10px;
+            color: #666;
+        }
+
+        .experience-description {
+            font-size: 11px;
+            line-height: 1.5;
+            color: #333;
+            margin-top: 8px;
+        }
+
+        /* Education Section */
+        .education-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .education-item:last-child {
+            border-bottom: none;
+        }
+
+        .school-logo {
+            width: 40px;
+            height: 40px;
+            background: #ddd;
+            border: 1px solid #aaa;
+            flex-shrink: 0;
+        }
+
+        .education-details h3 {
+            font-size: 12px;
+            color: #2c5aa0;
+            margin-bottom: 3px;
+        }
+
+        .education-school {
+            font-size: 11px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 2px;
+        }
+
+        .education-dates {
+            font-size: 10px;
+            color: #666;
+        }
+
+        /* Activity Feed */
+        .activity-item {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 11px;
+        }
+
+        .activity-item:last-child {
+            border-bottom: none;
+        }
+
+        .activity-meta {
+            color: #666;
+            font-size: 10px;
+            margin-bottom: 5px;
+        }
+
+        /* Recommendations */
+        .recommendation {
+            background: #f8f9fa;
+            border-left: 3px solid #2c5aa0;
+            padding: 10px;
+            margin: 8px 0;
+            font-size: 11px;
+        }
+
+        .recommendation-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 6px;
+        }
+
+        .recommender-avatar {
+            width: 24px;
+            height: 24px;
+            background: #ddd;
+            border: 1px solid #aaa;
+        }
+
+        .recommender-name {
+            font-weight: bold;
+            color: #2c5aa0;
+            font-size: 10px;
+        }
+
+        .recommender-title {
+            color: #666;
+            font-size: 9px;
+        }
+
+        .recommendation-text {
+            font-style: italic;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Navigation (same as homepage) -->
+    <header class="top-nav">
+        <div class="nav-content">
+            <a href="/" class="logo">{{ site.title | default: "ProfessionalConnect" }}</a>
+            <nav>
+                <ul class="main-menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/profile">My Profile</a></li>
+                    <li><a href="/network">My Network</a></li>
+                    <li><a href="/jobs">Jobs</a></li>
+                    <li><a href="/companies">Companies</a></li>
+                    <li><a href="/events">Events</a></li>
+                </ul>
+            </nav>
+            <div class="user-menu">
+                Welcome, {{ page.user_name | default: "John Doe" }}!
+                <a href="/messages">Messages</a>
+                <a href="/logout">Sign Out</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Profile Header Section -->
+        <section class="profile-header">
+            <div class="profile-main-info">
+                <div class="profile-photo"></div>
+                <div class="profile-details">
+                    <h1 class="profile-name">{{ page.profile_name | default: "John Doe" }}</h1>
+                    <p class="profile-headline">{{ page.profile_headline | default: "Senior Software Engineer passionate about building scalable web applications and mentoring junior developers" }}</p>
+                    <p class="profile-location">📍 {{ page.profile_location | default: "San Francisco Bay Area" }}</p>
+                    
+                    <div class="profile-stats">
+                        <span class="profile-stat">{{ page.connections_count | default: "500+" }} connections</span>
+                        <span class="profile-stat">{{ page.profile_views | default: "1,247" }} profile views this week</span>
+                        <span class="profile-stat">{{ page.post_views | default: "3,891" }} post views this month</span>
+                    </div>
+                    
+                    <div class="profile-actions">
+                        <a href="/profile/edit" class="btn btn-primary">Edit Profile</a>
+                        <a href="/network/add-section" class="btn btn-secondary">Add Section</a>
+                        <a href="/profile/share" class="btn btn-secondary">Share Profile</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <main class="main-content">
+            <!-- Left Column - Contact & Skills -->
+            <aside class="left-column">
+                <!-- Contact Information -->
+                <div class="widget">
+                    <div class="widget-header">Contact Information</div>
+                    <div class="widget-content">
+                        <ul class="contact-info">
+                            <li>
+                                <div class="icon"></div>
+                                <span>{{ page.profile_email | default: "john.doe@email.com" }}</span>
+                            </li>
+                            <li>
+                                <div class="icon"></div>
+                                <span>{{ page.profile_phone | default: "(555) 123-4567" }}</span>
+                            </li>
+                            <li>
+                                <div class="icon"></div>
+                                <span>{{ page.profile_website | default: "www.johndoe.dev" }}</span>
+                            </li>
+                            <li>
+                                <div class="icon"></div>
+                                <span>{{ page.profile_address | default: "San Francisco, CA" }}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Skills & Expertise -->
+                <div class="widget">
+                    <div class="widget-header">Skills & Expertise</div>
+                    <div class="widget-content">
+                        <ul class="skills-list">
+                            {% for skill in page.skills | default: site.sample_skills %}
+                            <li class="skill-item">
+                                <span class="skill-name">{{ skill.name }}</span>
+                                <span class="skill-endorsements">{{ skill.endorsements }} endorsements</span>
+                            </li>
+                            {% endfor %}
+                            
+                            <!-- Static samples for demo -->
+                            <li class="skill-item">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-endorsements">47 endorsements</span>
+                            </li>
+                            <li class="skill-item">
+                                <span class="skill-name">React</span>
+                                <span class="skill-endorsements">32 endorsements</span>
+                            </li>
+                            <li class="skill-item">
+                                <span class="skill-name">Node.js</span>
+                                <span class="skill-endorsements">28 endorsements</span>
+                            </li>
+                            <li class="skill-item">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-endorsements">23 endorsements</span>
+                            </li>
+                            <li class="skill-item">
+                                <span class="skill-name">AWS</span>
+                                <span class="skill-endorsements">19 endorsements</span>
+                            </li>
+                            <li class="skill-item">
+                                <span class="skill-name">Team Leadership</span>
+                                <span class="skill-endorsements">15 endorsements</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Languages -->
+                <div class="widget">
+                    <div class="widget-header">Languages</div>
+                    <div class="widget-content">
+                        {% for language in page.languages | default: site.sample_languages %}
+                        <div style="margin: 6px 0;">
+                            <strong>{{ language.name }}</strong> - {{ language.proficiency }}
+                        </div>
+                        {% endfor %}
+                        
+                        <!-- Static samples -->
+                        <div style="margin: 6px 0;">
+                            <strong>English</strong> - Native
+                        </div>
+                        <div style="margin: 6px 0;">
+                            <strong>Spanish</strong> - Professional
+                        </div>
+                        <div style="margin: 6px 0;">
+                            <strong>French</strong> - Conversational
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Right Column - Main Profile Content -->
+            <section class="right-column">
+                <!-- About Section -->
+                <div class="widget">
+                    <div class="widget-header">About</div>
+                    <div class="widget-content">
+                        <p>{{ page.profile_summary | default: "Experienced software engineer with over 8 years in full-stack development. Passionate about creating efficient, scalable solutions and building high-performing teams. Currently leading the frontend development team at TechCorp, where I've helped implement modern development practices and mentored 12+ junior developers.<br><br>My expertise spans across JavaScript ecosystems, cloud architecture, and agile methodologies. I enjoy solving complex technical challenges and translating business requirements into robust technical solutions." }}</p>
+                    </div>
+                </div>
+
+                <!-- Experience Section -->
+                <div class="widget">
+                    <div class="widget-header">Experience</div>
+                    <div class="widget-content">
+                        {% for experience in page.work_experience | default: site.sample_experience %}
+                        <div class="experience-item">
+                            <div class="experience-header">
+                                <div class="company-logo"></div>
+                                <div class="experience-details">
+                                    <h3>{{ experience.title }}</h3>
+                                    <div class="experience-company">{{ experience.company }}</div>
+                                    <div class="experience-dates">{{ experience.start_date }} - {{ experience.end_date | default: "Present" }}</div>
+                                    <div class="experience-location">{{ experience.location }}</div>
+                                </div>
+                            </div>
+                            <div class="experience-description">{{ experience.description }}</div>
+                        </div>
+                        {% endfor %}
+                        
+                        <!-- Static samples for demo -->
+                        <div class="experience-item">
+                            <div class="experience-header">
+                                <div class="company-logo"></div>
+                                <div class="experience-details">
+                                    <h3>Senior Software Engineer</h3>
+                                    <div class="experience-company">TechCorp Inc.</div>
+                                    <div class="experience-dates">Jan 2020 - Present</div>
+                                    <div class="experience-location">San Francisco, CA</div>
+                                </div>
+                            </div>
+                            <div class="experience-description">
+                                Lead frontend development team of 8 engineers. Architected and implemented React-based microservices platform serving 2M+ users. Reduced page load times by 40% through optimization techniques. Mentored junior developers and established coding standards and best practices.
+                            </div>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="experience-header">
+                                <div class="company-logo"></div>
+                                <div class="experience-details">
+                                    <h3>Software Engineer</h3>
+                                    <div class="experience-company">StartupXYZ</div>
+                                    <div class="experience-dates">Jun 2018 - Dec 2019</div>
+                                    <div class="experience-location">Palo Alto, CA</div>
+                                </div>
+                            </div>
+                            <div class="experience-description">
+                                Developed full-stack web applications using React, Node.js, and MongoDB. Built RESTful APIs and integrated third-party services. Collaborated with product team to deliver features that increased user engagement by 60%.
+                            </div>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="experience-header">
+                                <div class="company-logo"></div>
+                                <div class="experience-details">
+                                    <h3>Junior Developer</h3>
+                                    <div class="experience-company">WebSolutions Ltd.</div>
+                                    <div class="experience-dates">Aug 2016 - May 2018</div>
+                                    <div class="experience-location">Remote</div>
+                                </div>
+                            </div>
+                            <div class="experience-description">
+                                Started career building responsive websites for small businesses. Learned modern web technologies and agile development practices. Contributed to 15+ successful project deliveries.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Section -->
+                <div class="widget">
+                    <div class="widget-header">Education</div>
+                    <div class="widget-content">
+                        {% for education in page.education | default: site.sample_education %}
+                        <div class="education-item">
+                            <div class="school-logo"></div>
+                            <div class="education-details">
+                                <h3>{{ education.degree }}</h3>
+                                <div class="education-school">{{ education.school }}</div>
+                                <div class="education-dates">{{ education.start_year }} - {{ education.end_year }}</div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                        
+                        <!-- Static samples -->
+                        <div class="education-item">
+                            <div class="school-logo"></div>
+                            <div class="education-details">
+                                <h3>Bachelor of Science, Computer Science</h3>
+                                <div class="education-school">University of California, Berkeley</div>
+                                <div class="education-dates">2012 - 2016</div>
+                            </div>
+                        </div>
+                        
+                        <div class="education-item">
+                            <div class="school-logo"></div>
+                            <div class="education-details">
+                                <h3>AWS Solutions Architect Certification</h3>
+                                <div class="education-school">Amazon Web Services</div>
+                                <div class="education-dates">2021</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recommendations Section -->
+                <div class="widget">
+                    <div class="widget-header">Recommendations</div>
+                    <div class="widget-content">
+                        {% for recommendation in page.recommendations | default: site.sample_recommendations %}
+                        <div class="recommendation">
+                            <div class="recommendation-header">
+                                <div class="recommender-avatar"></div>
+                                <div>
+                                    <div class="recommender-name">{{ recommendation.author_name }}</div>
+                                    <div class="recommender-title">{{ recommendation.author_title }}</div>
+                                </div>
+                            </div>
+                            <div class="recommendation-text">{{ recommendation.text }}</div>
+                        </div>
+                        {% endfor %}
+                        
+                        <!-- Static samples -->
+                        <div class="recommendation">
+                            <div class="recommendation-header">
+                                <div class="recommender-avatar"></div>
+                                <div>
+                                    <div class="recommender-name">Sarah Mitchell</div>
+                                    <div class="recommender-title">CTO at TechCorp Inc.</div>
+                                </div>
+                            </div>
+                            <div class="recommendation-text">
+                                "John is an exceptional technical leader who consistently delivers high-quality solutions. His ability to mentor junior developers while architecting scalable systems makes him invaluable to any team. I highly recommend him for senior engineering roles."
+                            </div>
+                        </div>
+                        
+                        <div class="recommendation">
+                            <div class="recommendation-header">
+                                <div class="recommender-avatar"></div>
+                                <div>
+                                    <div class="recommender-name">Mike Rodriguez</div>
+                                    <div class="recommender-title">Product Manager at TechCorp Inc.</div>
+                                </div>
+                            </div>
+                            <div class="recommendation-text">
+                                "Working with John has been a pleasure. He transforms complex requirements into elegant technical solutions and always considers the user experience. His collaborative approach makes cross-functional projects successful."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="widget">
+                    <div class="widget-header">Recent Activity</div>
+                    <div class="widget-content">
+                        {% for activity in page.recent_activity | default: site.sample_activity %}
+                        <div class="activity-item">
+                            <div class="activity-meta">{{ activity.date }}</div>
+                            <div>{{ activity.description }}</div>
+                        </div>
+                        {% endfor %}
+                        
+                        <!-- Static samples -->
+                        <div class="activity-item">
+                            <div class="activity-meta">2 days ago</div>
+                            <div>Shared an article about React 18 performance improvements</div>
+                        </div>
+                        
+                        <div class="activity-item">
+                            <div class="activity-meta">1 week ago</div>
+                            <div>Connected with 3 new professionals in the software development field</div>
+                        </div>
+                        
+                        <div class="activity-item">
+                            <div class="activity-meta">2 weeks ago</div>
+                            <div>Posted about successful project delivery and team collaboration</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Sample Jekyll Front Matter -->
+    <!--
+    ---
+    layout: profile
+    title: "John Doe - Professional Profile"
+    user_name: "John Doe"
+    profile_name: "John Doe"
+    profile_headline: "Senior Software Engineer passionate about building scalable web applications and mentoring junior developers"
+    profile_location: "San Francisco Bay Area"
+    profile_email: "john.doe@email.com"
+    profile_phone: "(555) 123-4567"
+    profile_website: "www.johndoe.dev"
+    profile_address: "San Francisco, CA"
+    connections_count: "500+"
+    profile_views: 1247
+    post_views: 3891
+    
+    profile_summary: "Experienced software engineer with over 8 years in full-stack development. Passionate about creating efficient, scalable solutions and building high-performing teams. Currently leading the frontend development team at TechCorp, where I've helped implement modern development practices and mentored 12+ junior developers."
+
+    skills:
+      - name: "JavaScript"
+        endorsements: 47
+      - name: "React"
+        endorsements: 32
+      - name: "Node.js"
+        endorsements: 28
+      - name: "Python"
+        endorsements: 23
+      - name: "AWS"
+        endorsements: 19
+      - name: "Team Leadership"
+        endorsements: 15
+
+    languages:
+      - name: "English"
+        proficiency: "Native"
+      - name: "Spanish"
+        proficiency: "Professional"
+      - name: "French"
+        proficiency: "Conversational"
+
+    work_experience:
+      - title: "Senior Software Engineer"
+        company: "TechCorp Inc."
+        location: "San Francisco, CA"
+        start_date: "Jan 2020"
+        end_date: "Present"
+        description: "Lead frontend development team of 8 engineers. Architected and implemented React-based microservices platform serving 2M+ users."
+      - title: "Software Engineer"
+        company: "StartupXYZ"
+        location: "Palo Alto, CA"
+        start_date: "Jun 2018"
+        end_date: "Dec 2019"
+        description: "Developed full-stack web applications using React, Node.js, and MongoDB. Built RESTful APIs and integrated third-party services."
+
+    education:
+      - degree: "Bachelor of Science, Computer Science"
+        school: "University of California, Berkeley"
+        start_year: 2012
+        end_year: 2016
+      - degree: "AWS Solutions Architect Certification"
+        school: "Amazon Web Services"
+        start_year: 2021
+        end_year: 2021
+
+    recommendations:
+      - author_name: "Sarah Mitchell"
+        author_title: "CTO at TechCorp Inc."
+        text: "John is an exceptional technical leader who consistently delivers high-quality solutions..."
+      - author_name: "Mike Rodriguez"
+        author_title: "Product Manager at TechCorp Inc."
+        text: "Working with John has been a pleasure. He transforms complex requirements into elegant solutions..."
+
+    recent_activity:
+      - date: "2 days ago"
+        description: "Shared an article about React 18 performance improvements"
+      - date: "1 week ago"
+        description: "Connected with 3 new professionals in the software development field"
+    ---
+    -->

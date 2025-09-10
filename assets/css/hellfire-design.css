@@ -1,0 +1,639 @@
+/* ==========================================================================
+   EVIL1.ORG HELLFIRE DESIGN SYSTEM
+   Based on early2000s-linkedin.html design
+   ========================================================================== */
+
+/* ==========================================================================
+   1. GLOBAL & FOUNDATIONAL STYLES
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 13px;
+    background: #000;
+    background-image:
+        repeating-linear-gradient(
+            0deg,
+            #1a0000,
+            #1a0000 10px,
+            #0d0000 10px,
+            #0d0000 20px
+        );
+    color: #CCC;
+}
+
+/* ==========================================================================
+   2. HELLFIRE ANIMATIONS & EFFECTS
+   ========================================================================== */
+@keyframes flicker {
+    0%, 100% { text-shadow: 0 0 5px #FF0000, 0 0 10px #FF0000, 0 0 15px #FF6600; }
+    50% { text-shadow: 0 0 10px #FF0000, 0 0 20px #FF0000, 0 0 25px #FF6600; }
+}
+
+/* ==========================================================================
+   3. HEADER STYLES
+   ========================================================================== */
+#page-wrapper {
+    width: 780px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+#header {
+    background: linear-gradient(180deg, #330000, #000000);
+    border-bottom: 3px solid #FF0000;
+    border-top: 2px solid #FF6600;
+    padding: 10px 0;
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.5);
+}
+
+#header-inner {
+    width: 760px;
+    margin: 0 auto;
+}
+
+#logo {
+    float: left;
+    padding: 5px 0;
+    color: #FFD700;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #000;
+}
+
+#tagline {
+    color: #FF6600;
+    font-size: 11px;
+    font-style: italic;
+    margin-top: -5px;
+    text-shadow: 0 0 5px #FF0000;
+}
+
+#nav {
+    float: right;
+    margin-top: 15px;
+}
+
+#nav a {
+    color: #FFD700;
+    text-decoration: none;
+    padding: 6px 12px;
+    margin-left: 5px;
+    background: linear-gradient(180deg, #660000, #330000);
+    border: 1px solid #FF0000;
+    font-size: 13px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #000;
+}
+
+#nav a:hover {
+    background: linear-gradient(180deg, #990000, #660000);
+    box-shadow: 0 0 10px #FF0000;
+    animation: flicker 0.5s infinite;
+}
+
+/* ==========================================================================
+   4. MAIN CONTAINER & LAYOUT
+   ========================================================================== */
+#container {
+    width: 800px;
+    margin: 15px auto;
+    background: #1a1a1a;
+    border: 2px solid #660000;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+}
+
+#homepage-container {
+    padding: 12px;
+}
+
+#left-column {
+    float: left;
+    width: 520px;
+}
+
+#right-column {
+    float: right;
+    width: 240px;
+}
+
+/* ==========================================================================
+   5. STORIES BAR
+   ========================================================================== */
+#stories-bar {
+    background: linear-gradient(180deg, #330000, #1a0000);
+    border: 2px solid #660000;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 0;
+}
+
+.stories-title {
+    color: #FF6600;
+    font-size: 11px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.story {
+    display: inline-block;
+    width: 70px;
+    text-align: center;
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+.story-avatar {
+    width: 60px;
+    height: 60px;
+    border: 3px solid #FF0000;
+    border-radius: 30px;
+    background: linear-gradient(180deg, #660000, #000);
+    margin: 0 auto 5px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+.story:hover .story-avatar {
+    box-shadow: 0 0 20px #FF0000;
+    border-color: #FFD700;
+}
+
+.story-name {
+    font-size: 10px;
+    color: #FF6600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ==========================================================================
+   6. POST COMPONENTS
+   ========================================================================== */
+.post {
+    border: 2px solid #330000;
+    margin-bottom: 15px;
+    background: #0d0d0d;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.post-header {
+    background: linear-gradient(180deg, #1a0000, #0d0000);
+    padding: 10px;
+    border-bottom: 1px solid #660000;
+}
+
+.post-author {
+    font-weight: bold;
+    color: #FF6600;
+    font-size: 14px;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.post-time {
+    color: #999;
+    font-size: 11px;
+}
+
+.post-content {
+    padding: 15px;
+    line-height: 1.6;
+    font-size: 13px;
+    color: #DDD;
+}
+
+.post-actions {
+    background: #1a0000;
+    padding: 8px 12px;
+    border-top: 1px solid #330000;
+}
+
+.post-actions a {
+    color: #FFD700;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.post-actions a:hover {
+    color: #FF0000;
+    text-shadow: 0 0 5px #FF0000;
+}
+
+/* ==========================================================================
+   7. SIDEBAR WIDGETS
+   ========================================================================== */
+.section {
+    border: 1px solid #660000;
+    margin: 12px 0;
+    background: #0d0d0d;
+}
+
+.section-header {
+    background: linear-gradient(180deg, #660000, #330000);
+    color: #FFD700;
+    padding: 8px 10px;
+    font-weight: bold;
+    font-size: 14px;
+    border-bottom: 2px solid #FF0000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.section-content {
+    padding: 12px;
+    background: #1a1a1a;
+}
+
+/* People You Might Know */
+.person-suggestion {
+    border-bottom: 1px dashed #660000;
+    padding: 10px 0;
+}
+
+.person-suggestion:last-child {
+    border-bottom: none;
+}
+
+.person-avatar {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(180deg, #330000, #000);
+    float: left;
+    margin-right: 10px;
+    border: 2px solid #660000;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+}
+
+.person-info {
+    float: left;
+    width: 130px;
+}
+
+.person-name {
+    font-weight: bold;
+    color: #FF6600;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 3px;
+    font-size: 13px;
+}
+
+.person-name:hover {
+    color: #FF0000;
+    text-shadow: 0 0 5px #FF0000;
+}
+
+.person-title {
+    font-size: 11px;
+    color: #999;
+}
+
+.add-button {
+    float: right;
+    background: linear-gradient(180deg, #660000, #330000);
+    color: #FFD700;
+    border: 1px solid #FF0000;
+    padding: 4px 10px;
+    font-size: 11px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.add-button:hover {
+    background: linear-gradient(180deg, #990000, #660000);
+    box-shadow: 0 0 10px #FF0000;
+}
+
+/* ==========================================================================
+   8. PROFILE PAGE STYLES
+   ========================================================================== */
+#profile-header {
+    background: linear-gradient(180deg, #330000, #000);
+    padding: 20px;
+    border-bottom: 3px solid #FF0000;
+}
+
+#profile-photo {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(180deg, #660000, #000);
+    border: 3px solid #FF0000;
+    float: left;
+    margin-right: 20px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+}
+
+#profile-info h1 {
+    color: #FFD700;
+    font-size: 22px;
+    margin-bottom: 8px;
+    text-shadow: 2px 2px 4px #000;
+}
+
+#profile-info .headline {
+    font-size: 14px;
+    color: #FF6600;
+    margin-bottom: 5px;
+}
+
+#profile-info .location {
+    font-size: 12px;
+    color: #999;
+}
+
+.profile-section {
+    margin: 15px;
+    border: 2px solid #330000;
+    background: #0d0d0d;
+}
+
+.work-item, .skill-item {
+    padding: 12px;
+    border-bottom: 1px dashed #330000;
+    background: #1a1a1a;
+}
+
+.work-item:last-child, .skill-item:last-child {
+    border-bottom: none;
+}
+
+.work-title {
+    font-weight: bold;
+    color: #FF6600;
+    font-size: 14px;
+}
+
+.work-company {
+    color: #FFD700;
+    font-style: italic;
+    font-size: 13px;
+}
+
+.work-dates {
+    color: #999;
+    font-size: 11px;
+}
+
+.skill-bar {
+    background: #330000;
+    height: 18px;
+    margin-top: 5px;
+    position: relative;
+    border: 1px solid #660000;
+}
+
+.skill-fill {
+    background: linear-gradient(90deg, #FF0000, #FFD700);
+    height: 100%;
+    position: absolute;
+    box-shadow: 0 0 10px rgba(255, 100, 0, 0.5);
+}
+
+/* ==========================================================================
+   9. BUSINESS PAGE STYLES
+   ========================================================================== */
+#business-header {
+    background: linear-gradient(180deg, #000, #330000);
+    color: white;
+    padding: 25px;
+    border-bottom: 3px solid #FF0000;
+}
+
+#business-header h1 {
+    font-size: 24px;
+    margin-bottom: 8px;
+    color: #FFD700;
+    text-shadow: 2px 2px 4px #000, 0 0 20px #FF0000;
+}
+
+#business-header .tagline {
+    font-size: 14px;
+    color: #FF6600;
+    font-style: italic;
+}
+
+.article {
+    border: 2px solid #330000;
+    margin: 15px;
+    background: #0d0d0d;
+}
+
+.article-header {
+    background: linear-gradient(180deg, #1a0000, #0d0000);
+    padding: 12px;
+    border-bottom: 1px solid #660000;
+}
+
+.article-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFD700;
+    text-decoration: none;
+}
+
+.article-title:hover {
+    color: #FF0000;
+    text-shadow: 0 0 10px #FF0000;
+}
+
+.article-meta {
+    font-size: 11px;
+    color: #999;
+    margin-top: 6px;
+}
+
+.article-content {
+    padding: 15px;
+    line-height: 1.6;
+    color: #DDD;
+    font-size: 13px;
+}
+
+.article-footer {
+    background: #1a0000;
+    padding: 10px;
+    border-top: 1px solid #330000;
+    font-size: 12px;
+    color: #FF6600;
+}
+
+/* ==========================================================================
+   10. EVENT PAGE STYLES
+   ========================================================================== */
+#event-header {
+    padding: 15px;
+    background: linear-gradient(180deg, #1a0000, #0d0000);
+    border-bottom: 2px solid #FF0000;
+}
+
+#event-header h1 {
+    font-size: 20px;
+    color: #FFD700;
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 4px #000;
+}
+
+#event-header p {
+    color: #FF6600;
+    margin-bottom: 0;
+}
+
+#event-banner {
+    height: 150px;
+    background: #ccc url('https://placehold.co/758x150/003366/FFFFFF?text=Event+Banner') no-repeat center center;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+#event-details {
+    padding: 15px;
+}
+
+#event-details h3 {
+    margin: 10px 0 5px 0;
+    font-size: 13px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 3px;
+    color: #FFD700;
+}
+
+.register-button {
+    display: inline-block;
+    background: #6699CC;
+    color: white !important;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 8px 15px;
+    border: 1px solid #003366;
+    margin-top: 15px;
+}
+
+/* ==========================================================================
+   11. TABS & NAVIGATION
+   ========================================================================== */
+.tabs {
+    border-bottom: 3px solid #FF0000;
+    background: #1a0000;
+    padding: 0 12px;
+}
+
+.tab {
+    display: inline-block;
+    padding: 10px 18px;
+    background: linear-gradient(180deg, #330000, #1a0000);
+    border: 1px solid #660000;
+    border-bottom: none;
+    margin-right: 3px;
+    cursor: pointer;
+    position: relative;
+    top: 3px;
+    color: #FFD700;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.tab:hover {
+    background: linear-gradient(180deg, #660000, #330000);
+}
+
+.tab.active {
+    background: #0d0d0d;
+    border-bottom: 3px solid #0d0d0d;
+    color: #FF0000;
+}
+
+/* ==========================================================================
+   12. FOOTER & BOTTOM LINKS
+   ========================================================================== */
+#bottom-links {
+    width: 760px;
+    margin: 20px auto 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 15px;
+}
+
+.bottom-links-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom-links-column {
+    width: 22%;
+}
+
+.bottom-links-column h3 {
+    font-size: 12px;
+    color: #333;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 8px;
+}
+
+.bottom-links-column ul {
+    list-style: none;
+}
+
+.bottom-links-column ul li {
+    margin-bottom: 5px;
+}
+
+.bottom-links-column ul li a {
+    font-size: 10px;
+}
+
+#footer-copyright {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 10px;
+    color: #666;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+/* ==========================================================================
+   13. UTILITY CLASSES
+   ========================================================================== */
+.clear {
+    clear: both;
+}
+
+.flames {
+    height: 30px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 30"><path d="M0,30 Q5,20 10,30 T20,30 Q25,15 30,30 T40,30 Q45,20 50,30 T60,30 Q65,15 70,30 T80,30 Q85,20 90,30 T100,30" fill="none" stroke="%23FF0000" stroke-width="2" opacity="0.5"/></svg>') repeat-x;
+    margin-top: -2px;
+}
+
+/* ==========================================================================
+   14. RESPONSIVE DESIGN
+   ========================================================================== */
+@media (max-width: 820px) {
+    #container {
+        width: 95%;
+        margin: 10px auto;
+    }
+
+    #left-column {
+        float: none;
+        width: 100%;
+    }
+
+    #right-column {
+        float: none;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    #homepage-container {
+        padding: 8px;
+    }
+}

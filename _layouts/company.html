@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<div id="container">
+    <!-- Business Header Section -->
+    <div id="business-header">
+        <h1>{{ page.company_name | default: page.title | remove: '.html' | remove: '.md' }}</h1>
+        <div class="tagline">{{ page.company_tagline | default: "Excellence Through Exploitation™" }}</div>
+    </div>
+
+    <!-- Business Navigation Tabs -->
+    <div class="tabs">
+        <div class="tab active">Propaganda</div>
+        <div class="tab">Exploitation</div>
+        <div class="tab">False Promises</div>
+        <div class="tab">Slave Positions</div>
+    </div>
+
+    <!-- Main Business Content -->
+    <div class="business-content">
+        {{ content }}
+    </div>
+</div>

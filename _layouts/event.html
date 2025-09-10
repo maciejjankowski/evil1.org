@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<div id="container">
+    <!-- Event Header Section -->
+    <div id="event-header">
+        <h1>{{ page.event_title | default: page.title | remove: '.html' | remove: '.md' }}</h1>
+        <p>Hosted by <strong>{{ page.event_host | default: "Corporate Overlords" }}</strong></p>
+    </div>
+
+    <!-- Event Banner -->
+    <div id="event-banner"{% if page.event_banner %} style="background-image: url('{{ page.event_banner }}')"{% endif %}></div>
+
+    <!-- Event Details -->
+    <div id="event-details">
+        <h3>Event Details</h3>
+        <p>{{ page.event_description | default: "Join us for another soul-crushing corporate event designed to maximize productivity while minimizing employee satisfaction." }}</p>
+
+        <ul>
+            <li><strong>Date & Time:</strong> {{ page.event_date | default: "TBD" }} • {{ page.event_time | default: "All Day" }}</li>
+            <li><strong>Location:</strong> {{ page.event_location | default: "Corporate Headquarters" }}</li>
+            <li><strong>Dress Code:</strong> {{ page.event_dress_code | default: "Business Casual (Bring Your Own Tears)" }}</li>
+            {% if page.event_cost %}
+            <li><strong>Cost:</strong> {{ page.event_cost }}</li>
+            {% endif %}
+        </ul>
+
+        <a href="{{ page.event_registration_url | default: '#' }}" class="register-button">Register Now</a>
+    </div>
+
+    <!-- Additional Event Content -->
+    <div class="event-content">
+        {{ content }}
+    </div>
+</div>
