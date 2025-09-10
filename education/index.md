@@ -138,6 +138,24 @@ permalink: /education/
     </div>
 </div>
 
+<!-- Application Process -->
+<div style="border: 2px solid #003366; margin: 20px 0; background: linear-gradient(#F0F0F0, #E8E8E8); padding: 15px;">
+    <h3 style="color: #003366; font-size: 14px; margin-bottom: 10px; text-align: center;">📝 Application Process</h3>
+    <div style="font-size: 11px; color: #333; text-align: center;">
+        <div style="margin-bottom: 8px;"><strong>Application Deadline:</strong> Rolling admissions for qualified business leaders</div>
+        <div style="margin-bottom: 8px;"><strong>Prerequisites:</strong> Demonstrated transformational leadership and strategic flexibility</div>
+        <div style="margin-bottom: 8px;"><strong>Investment Support:</strong> Corporate sponsorship available for exceptional candidates</div>
+        <div style="margin-bottom: 15px;"><strong>Alumni Network:</strong> Lifetime access to global transformational leadership network</div>
+        <div style="text-align: center;">
+            <a href="/education/application-v2/" style="background: #003366; color: #fff; padding: 10px 20px; text-decoration: none; font-size: 12px; font-weight: bold; margin-right: 10px;">Begin Application</a>
+            <a href="/education/application/" style="background: #666; color: #fff; padding: 8px 16px; text-decoration: none; font-size: 11px;">Archived Criteria</a>
+        </div>
+        <div style="margin-top: 8px; font-size: 10px; color: #666;">
+            <a href="/education/application-comparison/" style="color: #666; text-decoration: underline;">Compare Application Versions</a>
+        </div>
+    </div>
+</div>
+
 <!-- Enrollment Information -->
 <div style="border: 2px solid #003366; margin: 20px 0; background: linear-gradient(#F0F0F0, #E8E8E8); padding: 15px;">
     <h3 style="color: #003366; font-size: 14px; margin-bottom: 10px; text-align: center;">� Enrollment Information</h3>

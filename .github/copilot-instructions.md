@@ -10,6 +10,8 @@
 - **ALWAYS** preserve YAML frontmatter delimiters `---` at start and end of files
 - **ALWAYS** avoid duplication – consolidate similar content into one authoritative source
 - **ALWAYS** add new tasks to `_docs/backlog.md`.
+- when creating new content, ensure it aligns with the site's dark humor and satirical tone, using satire and irony to critique power structures and societal issues
+- when creating new content STRONGLY PREFER using markdown syntax for formatting (e.g., headings, lists, links) instead of raw HTML, unless specific HTML elements are required for functionality or styling that cannot be achieved with markdown. ALWAYS OPTIMIZE FOR FRONTMATTER COMPATIBILITY AND READABILITY.
 
 ## ARCHITECTURE OVERVIEW
 - Jekyll static site: content in `_articles/`, `_posts/`, `_profiles/`, `_organizations/`, and markdown/html in root
