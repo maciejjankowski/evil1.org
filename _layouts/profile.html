@@ -2,39 +2,145 @@
 layout: default
 ---
 
-<body style="font-family: Verdana, Arial, sans-serif; font-size: 11px; background: #E8E8E8; color: #333; margin: 0; padding: 0;">
-    <div style="background: #003366; border-bottom: 3px solid #6699CC; padding: 8px 0; color: #fff;">
-        <div style="width: 760px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
-            <div style="font-size: 18px; font-weight: bold; color: #fff;">LinkedNetwork</div>
-            <nav style="display: flex; gap: 8px;">
-                <a href="/" style="color: #fff; text-decoration: none; padding: 4px 8px; background: #004080; border: 1px solid #6699CC; font-size: 11px; border-radius: 2px;">Home</a>
-                <a href="/profile/" style="color: #fff; text-decoration: none; padding: 4px 8px; background: #004080; border: 1px solid #6699CC; font-size: 11px; border-radius: 2px;">My Profile</a>
-                <a href="/network/" style="color: #fff; text-decoration: none; padding: 4px 8px; background: #004080; border: 1px solid #6699CC; font-size: 11px; border-radius: 2px;">My Network</a>
-                <a href="/jobs/" style="color: #fff; text-decoration: none; padding: 4px 8px; background: #004080; border: 1px solid #6699CC; font-size: 11px; border-radius: 2px;">Jobs</a>
-                <a href="/messages/" style="color: #fff; text-decoration: none; padding: 4px 8px; background: #004080; border: 1px solid #6699CC; font-size: 11px; border-radius: 2px;">Messages</a>
-            </nav>
+<!-- Profile Header -->
+<div style="background: linear-gradient(#F0F0F0, #E0E0E0); padding: 15px; border-bottom: 2px solid #CCC; display: flex; align-items: center; margin: -20px -20px 0 -20px;">
+    <div style="width: 80px; height: 80px; background: #003366; color: #fff; border: 2px solid #999; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 24px; font-weight: bold;">
+        {{ page.profile.name | slice: 0, 1 }}
+    </div>
+    <div>
+        <h1 style="color: #003366; font-size: 18px; margin-bottom: 5px;">{{ page.profile.name }}</h1>
+        <div style="font-size: 12px; color: #666; margin-bottom: 3px;">{{ page.profile.headline }}</div>
+        <div style="font-size: 11px; color: #999;">{{ page.profile.location }}</div>
+    </div>
+</div>
+
+<!-- Tab Navigation -->
+<div style="border-bottom: 2px solid #003366; margin: 0 -20px 15px -20px; background: #F0F0F0; padding: 0 20px;">
+    <div style="margin: 0; padding: 0;">
+        <div id="tab-profile" onclick="showTab('profile')" style="display: inline-block; padding: 6px 12px; background: #6699CC; color: #fff; border: 1px solid #003366; border-bottom: none; cursor: pointer; position: relative; top: 2px; font-size: 11px; font-weight: bold; margin-right: 2px;">Profile</div>
+        <div id="tab-experience" onclick="showTab('experience')" style="display: inline-block; padding: 6px 12px; background: #D0D0D0; color: #333; border: 1px solid #999; border-bottom: none; cursor: pointer; position: relative; top: 1px; font-size: 11px; margin-right: 2px;">Experience</div>
+        <div id="tab-skills" onclick="showTab('skills')" style="display: inline-block; padding: 6px 12px; background: #D0D0D0; color: #333; border: 1px solid #999; border-bottom: none; cursor: pointer; position: relative; top: 1px; font-size: 11px; margin-right: 2px;">Skills</div>
+        <div id="tab-connections" onclick="showTab('connections')" style="display: inline-block; padding: 6px 12px; background: #D0D0D0; color: #333; border: 1px solid #999; border-bottom: none; cursor: pointer; position: relative; top: 1px; font-size: 11px;">Connections</div>
+    </div>
+</div>
+
+<!-- Tab Content: Profile -->
+<div id="content-profile" style="display: block;">
+    <div style="border: 1px solid #D0D0D0; margin: 0 0 15px 0; background: #F8F8F8; padding: 10px;">
+        <div style="background: linear-gradient(#6699CC, #4477AA); color: #fff; padding: 5px 8px; font-weight: bold; font-size: 12px; border-bottom: 1px solid #003366; margin: -10px -10px 10px -10px;">About</div>
+        <div style="padding: 10px; background: #fff; margin: 0 -10px -10px -10px;">
+            {{ content }}
         </div>
     </div>
-    <div style="width: 760px; margin: 20px auto; background: #fff; border: 1px solid #CCC;">
-        <div style="background: linear-gradient(#F0F0F0, #E0E0E0); padding: 15px; border-bottom: 2px solid #CCC; display: flex; align-items: center;">
-            <div style="width: 100px; height: 100px; background: #CCC; border: 2px solid #999; border-radius: 50%; margin-right: 15px;"></div>
-            <div>
-                <h1 style="color: #003366; font-size: 18px; margin-bottom: 5px;">{{ page.profile.name }}</h1>
-                <div style="font-size: 12px; color: #666; margin-bottom: 3px;">{{ page.profile.headline }}</div>
-                <div style="font-size: 11px; color: #999;">{{ page.profile.location }}</div>
-            </div>
+</div>
+
+<!-- Tab Content: Experience -->
+<div id="content-experience" style="display: none;">
+    <div style="border: 1px solid #D0D0D0; margin: 0 0 15px 0; background: #F8F8F8; padding: 10px;">
+        <div style="background: linear-gradient(#6699CC, #4477AA); color: #fff; padding: 5px 8px; font-weight: bold; font-size: 12px; border-bottom: 1px solid #003366; margin: -10px -10px 10px -10px;">Professional Experience</div>
+        <div style="padding: 10px; background: #fff; margin: 0 -10px -10px -10px;">
+            {% if page.profile.experience %}
+                {% for job in page.profile.experience %}
+                    <div style="border-bottom: 1px dotted #CCC; padding: 8px 0;">
+                        <div style="font-weight: bold; font-size: 12px; color: #003366;">{{ job.title }}</div>
+                        <div style="font-size: 11px; color: #666;">{{ job.company }} • {{ job.dates }}</div>
+                        <div style="font-size: 11px; color: #333; margin-top: 3px;">{{ job.description }}</div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div style="font-size: 11px; color: #666; font-style: italic;">No professional experience listed.</div>
+            {% endif %}
         </div>
-        <div style="border-bottom: 2px solid #CCC; background: #F0F0F0; padding: 0 10px; display: flex; gap: 3px;">
-            <div style="display: inline-block; padding: 8px 15px; background: #E0E0E0; border: 1px solid #CCC; border-bottom: none; cursor: pointer; position: relative; top: 2px; font-size: 11px; border-radius: 4px 4px 0 0; font-weight: bold; background: #fff; border-bottom: 2px solid #fff;">Profile</div>
-            <div style="display: inline-block; padding: 8px 15px; background: #E0E0E0; border: 1px solid #CCC; border-bottom: none; cursor: pointer; position: relative; top: 2px; font-size: 11px; border-radius: 4px 4px 0 0;">Activity</div>
-            <div style="display: inline-block; padding: 8px 15px; background: #E0E0E0; border: 1px solid #CCC; border-bottom: none; cursor: pointer; position: relative; top: 2px; font-size: 11px; border-radius: 4px 4px 0 0;">Connections</div>
+    </div>
+</div>
+
+<!-- Tab Content: Skills -->
+<div id="content-skills" style="display: none;">
+    <div style="border: 1px solid #D0D0D0; margin: 0 0 15px 0; background: #F8F8F8; padding: 10px;">
+        <div style="background: linear-gradient(#6699CC, #4477AA); color: #fff; padding: 5px 8px; font-weight: bold; font-size: 12px; border-bottom: 1px solid #003366; margin: -10px -10px 10px -10px;">Core Skills & Expertise</div>
+        <div style="padding: 10px; background: #fff; margin: 0 -10px -10px -10px;">
+            {% if page.profile.skills %}
+                {% assign sorted_skills = page.profile.skills | sort: 'level' | reverse %}
+                {% for skill in sorted_skills %}
+                    <div style="margin-bottom: 8px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
+                            <span style="font-size: 11px; color: #003366; font-weight: bold;">{{ skill.name }}</span>
+                            <span style="font-size: 10px; color: #666;">{{ skill.level }}%</span>
+                        </div>
+                        <div style="background: #E0E0E0; height: 8px; border: 1px solid #CCC;">
+                            <div style="background: {% if skill.level >= 95 %}#CC0000{% elsif skill.level >= 85 %}#FF6600{% elsif skill.level >= 75 %}#FFCC00{% else %}#6699CC{% endif %}; height: 8px; width: {{ skill.level }}%;"></div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div style="font-size: 11px; color: #666; font-style: italic;">No skills listed.</div>
+            {% endif %}
         </div>
-        <div style="border: 1px solid #D0D0D0; margin: 10px; background: #F8F8F8; border-radius: 4px;">
-            <div style="background: linear-gradient(#6699CC, #4477AA); color: #fff; padding: 5px 8px; font-weight: bold; font-size: 12px; border-bottom: 1px solid #003366; border-radius: 4px 4px 0 0;">Profile Information</div>
-            <div style="padding: 10px; background: #fff; border-radius: 0 0 4px 4px;">
-                {{ content }}
+    </div>
+</div>
+
+<!-- Tab Content: Connections -->
+<div id="content-connections" style="display: none;">
+    <div style="border: 1px solid #D0D0D0; margin: 0 0 15px 0; background: #F8F8F8; padding: 10px;">
+        <div style="background: linear-gradient(#6699CC, #4477AA); color: #fff; padding: 5px 8px; font-weight: bold; font-size: 12px; border-bottom: 1px solid #003366; margin: -10px -10px 10px -10px;">Professional Network</div>
+        <div style="padding: 10px; background: #fff; margin: 0 -10px -10px -10px;">
+            {% if page.profile.connections %}
+                {% for connection in page.profile.connections %}
+                    <div style="border-bottom: 1px dotted #CCC; padding: 8px 0;">
+                        <div style="font-weight: bold; font-size: 11px; color: #003366;">{{ connection.name }}</div>
+                        <div style="font-size: 10px; color: #666;">{{ connection.title }}</div>
+                        <div style="font-size: 10px; color: #333;">{{ connection.relationship }}</div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div style="font-size: 11px; color: #333; line-height: 1.4;">
+                    <div style="margin-bottom: 8px;"><strong>Key Professional Connections:</strong></div>
+                    <div style="border-bottom: 1px dotted #CCC; padding: 5px 0;">
+                        <div style="font-weight: bold; font-size: 11px; color: #003366;">Other Corporate Executives</div>
+                        <div style="font-size: 10px; color: #666;">Fellow practitioners of systematic exploitation</div>
+                    </div>
+                    <div style="border-bottom: 1px dotted #CCC; padding: 5px 0;">
+                        <div style="font-weight: bold; font-size: 11px; color: #003366;">Board Members & Investors</div>
+                        <div style="font-size: 10px; color: #666;">Partners in profit maximization</div>
+                    </div>
+                    <div style="padding: 5px 0;">
+                        <div style="font-weight: bold; font-size: 11px; color: #003366;">Regulatory Capture Network</div>
+                        <div style="font-size: 10px; color: #666;">Government officials ensuring favorable policies</div>
+                    </div>
+                </div>
+            {% endif %}
+            
+            <div style="margin-top: 15px; text-align: center;">
+                <a href="/network/" style="color: #004080; text-decoration: underline; font-size: 11px;">View Full Network →</a>
             </div>
         </div>
     </div>
-    {% include footer.html %}
-</body>
+</div>
+
+<script>
+function showTab(tabName) {
+    // Hide all tab contents
+    document.getElementById('content-profile').style.display = 'none';
+    document.getElementById('content-experience').style.display = 'none';
+    document.getElementById('content-skills').style.display = 'none';
+    document.getElementById('content-connections').style.display = 'none';
+    
+    // Reset all tab styles to inactive state
+    var tabs = ['tab-profile', 'tab-experience', 'tab-skills', 'tab-connections'];
+    for (var i = 0; i < tabs.length; i++) {
+        document.getElementById(tabs[i]).style.background = '#D0D0D0';
+        document.getElementById(tabs[i]).style.color = '#333';
+        document.getElementById(tabs[i]).style.border = '1px solid #999';
+        document.getElementById(tabs[i]).style.top = '1px';
+        document.getElementById(tabs[i]).style.fontWeight = 'normal';
+    }
+    
+    // Show selected tab content and apply active style
+    document.getElementById('content-' + tabName).style.display = 'block';
+    document.getElementById('tab-' + tabName).style.background = '#6699CC';
+    document.getElementById('tab-' + tabName).style.color = '#fff';
+    document.getElementById('tab-' + tabName).style.border = '1px solid #003366';
+    document.getElementById('tab-' + tabName).style.top = '2px';
+    document.getElementById('tab-' + tabName).style.fontWeight = 'bold';
+}
+</script>

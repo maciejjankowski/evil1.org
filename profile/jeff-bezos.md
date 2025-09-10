@@ -11,19 +11,57 @@ profile:
     - title: "CEO & Founder"
       company: "Amazon"
       dates: "1994-2021"
-      description: "Built the world's largest retailer through worker exploitation and monopoly power."
+      description: "Built world's largest retailer through systematic worker exploitation, tax avoidance, and predatory pricing that eliminated competitors. Pioneered warehouse surveillance and worker dehumanization."
     - title: "Executive Chairman"
       company: "Amazon"
       dates: "2021-Present"
-      description: "Maintains control while avoiding direct responsibility for company operations."
-    - title: "Online Bookseller"
-      company: "Cadabra Inc."
-      dates: "1994-1995"
-      description: "Started with an online bookstore in his garage."
+      description: "Maintains controlling influence while avoiding direct accountability for labor violations and monopolistic practices. Focuses on space tourism for billionaires."
+    - title: "Founder"
+      company: "Blue Origin"
+      dates: "2000-Present"
+      description: "Space company funded by Amazon profits, designed to provide luxury space tourism for the ultra-wealthy while workers struggle with basic needs."
+    - title: "Vice President"
+      company: "D.E. Shaw & Co."
+      dates: "1990-1994"
+      description: "Hedge fund experience that provided initial capital and financial manipulation expertise for Amazon's anti-competitive strategies."
   skills:
     - name: "Worker Exploitation"
       level: 99
     - name: "Monopoly Creation"
+      level: 98
+    - name: "Tax Avoidance"
+      level: 97
+    - name: "Union Busting"
+      level: 96
+    - name: "Predatory Pricing"
+      level: 95
+    - name: "Data Surveillance"
+      level: 94
+    - name: "Government Contract Extraction"
+      level: 93
+    - name: "Environmental Destruction"
+      level: 92
+    - name: "Small Business Elimination"
+      level: 91
+    - name: "Wealth Hoarding"
+      level: 90
+  connections:
+    - name: "MacKenzie Scott"
+      title: "Philanthropist, Ex-wife"
+      relationship: "Former spouse who received portion of Amazon wealth in divorce, now engaged in damage control philanthropy"
+    - name: "Andy Jassy"
+      title: "Amazon CEO"
+      relationship: "Handpicked successor trained in Amazon's worker exploitation and monopolistic practices"
+    - name: "Warren Buffett"
+      title: "Berkshire Hathaway Chairman"
+      relationship: "Fellow billionaire and advisor on wealth concentration strategies"
+    - name: "Bill Gates"
+      title: "Microsoft Co-founder"
+      relationship: "Tech monopoly pioneer and collaborator in philanthro-capitalism schemes"
+    - name: "Jamie Dimon"
+      title: "JPMorgan Chase CEO"
+      relationship: "Financial partner in corporate welfare extraction and regulatory capture"
+---
       level: 98
     - name: "Tax Avoidance"
       level: 97

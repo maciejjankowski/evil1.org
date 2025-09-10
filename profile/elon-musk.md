@@ -11,15 +11,19 @@ profile:
     - title: "CEO"
       company: "Tesla, Inc."
       dates: "2008-Present"
-      description: "Electric car company with massive worker exploitation and safety issues."
+      description: "Built electric car monopoly through government subsidies while maintaining some of the worst worker safety records in automotive industry. Pioneered union-busting tactics in modern manufacturing."
     - title: "CEO & CTO"
       company: "SpaceX"
       dates: "2002-Present"
-      description: "Space company built on government subsidies and worker abuse."
+      description: "Space company built entirely on NASA contracts and government subsidies while claiming to be private enterprise. Exploits workers with illegal overtime demands and retaliates against whistleblowers."
     - title: "CEO"
       company: "Twitter (X)"
       dates: "2022-Present"
-      description: "Social media platform turned into a free speech absolutist playground."
+      description: "Destroyed social media platform's content moderation to enable harassment and misinformation while claiming to support 'free speech.' Fired 75% of workforce to maximize profit extraction."
+    - title: "Co-founder"
+      company: "PayPal"
+      dates: "1999-2002"
+      description: "Early involvement in online payment monopolization. Used PayPal sale proceeds to fund later ventures focused on government subsidy extraction."
   skills:
     - name: "Hype Generation"
       level: 99
@@ -29,6 +33,35 @@ profile:
       level: 97
     - name: "PR Manipulation"
       level: 96
+    - name: "Market Manipulation"
+      level: 95
+    - name: "Union Busting"
+      level: 94
+    - name: "Safety Violations"
+      level: 93
+    - name: "Whistleblower Retaliation"
+      level: 92
+    - name: "Cryptocurrency Manipulation"
+      level: 91
+    - name: "Government Contract Extraction"
+      level: 90
+  connections:
+    - name: "Peter Thiel"
+      title: "Palantir Co-founder, Venture Capitalist"
+      relationship: "PayPal co-founder and fellow practitioner of libertarian corporate authoritarianism"
+    - name: "Larry Ellison"
+      title: "Oracle Chairman"
+      relationship: "Fellow tech billionaire and Twitter board ally in content platform manipulation"
+    - name: "Joe Rogan"
+      title: "Podcast Host"
+      relationship: "Media amplifier for cryptocurrency and market manipulation schemes"
+    - name: "Grimes"
+      title: "Musician"
+      relationship: "Former partner, collaborated on cryptocurrency market manipulation schemes"
+    - name: "Gwynne Shotwell"
+      title: "SpaceX President"
+      relationship: "Primary operator enabling government contract extraction and worker exploitation at SpaceX"
+---
 ---
 
 # Elon Musk: The Hype Machine
