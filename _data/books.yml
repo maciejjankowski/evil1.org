@@ -8,7 +8,7 @@ books:
     isbn: "978-0743247467"
     pages: 240
     rating: 4.5
-    amazon_link: "https://www.amazon.com/Corporation-Pathological-Pursuit-Profit-Power/dp/0743247469"
+    amazon_link: "https://www.amazon.com/s?k=The+Corporation+The+Pathological+Pursuit+of+Profit+and+Power+Joel+Bakan"
 
   - title: "Nickel and Dimed: On (Not) Getting By in America"
     author: "Barbara Ehrenreich"
@@ -18,7 +18,7 @@ books:
     isbn: "978-0805063882"
     pages: 224
     rating: 4.2
-    amazon_link: "https://www.amazon.com/Nickel-Dimed-Not-Getting-America/dp/0805063889"
+    amazon_link: "https://www.amazon.com/s?k=Nickel+and+Dimed+On+Not+Getting+By+in+America+Barbara+Ehrenreich"
 
   - title: "Dark Money: The Hidden History of the Billionaires Behind the Rise of the Radical Right"
     author: "Jane Mayer"
@@ -28,7 +28,7 @@ books:
     isbn: "978-0385535595"
     pages: 464
     rating: 4.4
-    amazon_link: "https://www.amazon.com/Dark-Money-History-Billionaires-Behind/dp/0385535597"
+    amazon_link: "https://www.amazon.com/s?k=Dark+Money+The+Hidden+History+of+the+Billionaires+Behind+the+Rise+of+the+Radical+Right+Jane+Mayer"
 
   - title: "Too Big to Fail: The Inside Story of How Wall Street and Washington Fought to Save the Financial System from Crisis—and Themselves"
     author: "Andrew Ross Sorkin"
@@ -38,7 +38,7 @@ books:
     isbn: "978-0143118244"
     pages: 640
     rating: 4.1
-    amazon_link: "https://www.amazon.com/Too-Big-Fail-Inside-Financial/dp/0143118242"
+    amazon_link: "https://www.amazon.com/s?k=Too+Big+to+Fail+The+Inside+Story+of+How+Wall+Street+and+Washington+Fought+to+Save+the+Financial+System+from+Crisis+and+Themselves+Andrew+Ross+Sorkin"
 
   - title: "The Managed Heart: Commercialization of Human Feeling"
     author: "Arlie Russell Hochschild"
@@ -48,7 +48,7 @@ books:
     isbn: "978-0520054546"
     pages: 352
     rating: 4.3
-    amazon_link: "https://www.amazon.com/Managed-Heart-Commercialization-Human-Feeling/dp/0520054546"
+    amazon_link: "https://www.amazon.com/s?k=The+Managed+Heart+Commercialization+of+Human+Feeling+Arlie+Russell+Hochschild"
 
   - title: "Lean In: Women, Work, and the Will to Lead"
     author: "Sheryl Sandberg"
@@ -58,7 +58,7 @@ books:
     isbn: "978-0385349949"
     pages: 240
     rating: 3.8
-    amazon_link: "https://www.amazon.com/Lean-Work-Will-Lead/dp/0385349947"
+    amazon_link: "https://www.amazon.com/s?k=Lean+In+Women+Work+and+the+Will+to+Lead+Sheryl+Sandberg"
 
   - title: "The Problem with Work: Feminism, Marxism, Antiwork Politics, and Postwork Imaginaries"
     author: "Kathi Weeks"
@@ -68,7 +68,7 @@ books:
     isbn: "978-0822351122"
     pages: 304
     rating: 4.6
-    amazon_link: "https://www.amazon.com/Problem-Work-Feminism-Marxism-Antiwork/dp/0822351129"
+    amazon_link: "https://www.amazon.com/s?k=The+Problem+with+Work+Feminism+Marxism+Antiwork+Politics+and+Postwork+Imaginaries+Kathi+Weeks"
 
   - title: "Do Nothing: How to Break Away from Overworking, Overdoing, and Underliving"
     author: "Celeste Headlee"
@@ -78,7 +78,7 @@ books:
     isbn: "978-1950665631"
     pages: 288
     rating: 4.0
-    amazon_link: "https://www.amazon.com/Do-Nothing-Break-Away-Overworking/dp/1950665634"
+    amazon_link: "https://www.amazon.com/s?k=Do+Nothing+How+to+Break+Away+from+Overworking+Overdoing+and+Underliving+Celeste+Headlee"
 
   - title: "Can't Even: How Millennials Became the Burnout Generation"
     author: "Anne Helen Petersen"
@@ -88,7 +88,7 @@ books:
     isbn: "978-0358316569"
     pages: 256
     rating: 4.2
-    amazon_link: "https://www.amazon.com/Cant-Even-Millennials-Became-Burnout/dp/0358316569"
+    amazon_link: "https://www.amazon.com/s?k=Can%27t+Even+How+Millennials+Became+the+Burnout+Generation+Anne+Helen+Petersen"
 
   - title: "Work Won't Love You Back: How Devotion to Our Jobs Keeps Us Exploited, Exhausted, and Alone"
     author: "Sarah Jaffe"
@@ -98,7 +98,7 @@ books:
     isbn: "978-1568589381"
     pages: 448
     rating: 4.4
-    amazon_link: "https://www.amazon.com/Work-Wont-Love-Back-Devotion/dp/1568589389"
+    amazon_link: "https://www.amazon.com/s?k=Work+Won%27t+Love+You+Back+How+Devotion+to+Our+Jobs+Keeps+Us+Exploited+Exhausted+and+Alone+Sarah+Jaffe"
 
   - title: "The Job: Work and Its Future in a Time of Radical Change"
     author: "Ellen Ruppel Shell"
@@ -108,7 +108,7 @@ books:
     isbn: "978-0451497256"
     pages: 416
     rating: 4.1
-    amazon_link: "https://www.amazon.com/Job-Work-Future-Radical-Change/dp/0451497252"
+    amazon_link: "https://www.amazon.com/s?k=The+Job+Work+and+Its+Future+in+a+Time+of+Radical+Change+Ellen+Ruppel+Shell"
 
   - title: "Overwhelmed: Work, Love, and Play When No One Has the Time"
     author: "Brigid Schulte"
@@ -118,7 +118,7 @@ books:
     isbn: "978-1250062389"
     pages: 368
     rating: 4.0
-    amazon_link: "https://www.amazon.com/Overwhelmed-Work-Love-Play-When/dp/1250062380"
+    amazon_link: "https://www.amazon.com/s?k=Overwhelmed+Work+Love+and+Play+When+No+One+Has+the+Time+Brigid+Schulte"
 
   - title: "The Burnout Society"
     author: "Byung-Chul Han"
@@ -128,4 +128,4 @@ books:
     isbn: "978-0804795098"
     pages: 72
     rating: 4.3
-    amazon_link: "https://www.amazon.com/Burnout-Society-Byung-Chul-Han/dp/0804795096"
+    amazon_link: "https://www.amazon.com/s?k=The+Burnout+Society+Byung-Chul+Han"
