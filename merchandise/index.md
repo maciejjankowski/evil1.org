@@ -97,6 +97,7 @@ permalink: /merchandise/
             <div class="early-section-content">
                 <p>We added 50 new ultra-sarcastic, recursive-capitalism products. Explore them all in the catalog.</p>
                 <p><a class="early-nav-link" href="/merchandise/catalog/">Open the 50‑item Catalog →</a></p>
+                <p><a class="early-nav-link" href="/merchandise/themes/">Browse by Theme →</a></p>
             </div>
         </div>
 
@@ -104,10 +105,14 @@ permalink: /merchandise/
             <div class="early-section-header">Featured Slogans</div>
             <div class="early-section-content">
                 <ul>
-                    <li><a class="early-nav-link" href="/merchandise/rec-01/">Building Shareholder Value — One Drop of Blood at a Time (T‑Shirt)</a></li>
-                    <li><a class="early-nav-link" href="/merchandise/rec-07/">Them Dividends Ain’t Gonna Work on Themselves (Poster)</a></li>
-                    <li><a class="early-nav-link" href="/merchandise/rec-08/">Give Me 10 More… Years in the Company (T‑Shirt)</a></li>
-                    <li><a class="early-nav-link" href="/merchandise/rec-09/">PTO? No Need! (Mug)</a></li>
+                    <li><a class="early-nav-link" href="/merchandise/rec-01/">Building Shareholder Value — One Drop of Blood at a Time (T‑Shirt)</a> — NEW</li>
+                    <li><a class="early-nav-link" href="/merchandise/rec-02/">Something Something Compliance (Mug)</a> — NEW</li>
+                    <li><a class="early-nav-link" href="/merchandise/rec-06/">I Am a Happy Cog (T‑Shirt)</a> — NEW</li>
+                    <li><a class="early-nav-link" href="/merchandise/rec-07/">Them Dividends Ain’t Gonna Work on Themselves (Poster)</a> — NEW</li>
+                    <li><a class="early-nav-link" href="/merchandise/rec-08/">Give Me 10 More… Years in the Company (T‑Shirt)</a> — NEW</li>
+                    <li><a class="early-nav-link" href="/merchandise/rec-09/">PTO? No Need! (Mug)</a> — NEW</li>
+                    <li><a class="early-nav-link" href="/merchandise/sticker-whistleblower/">Not a Whistleblower (Sticker)</a></li>
+                    <li><a class="early-nav-link" href="/merchandise/hat-compliance/">I ♥ Compliance (Hat)</a></li>
                 </ul>
             </div>
         </div>
