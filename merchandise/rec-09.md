@@ -3,6 +3,7 @@ layout: default
 title: "Recursive Product 09 — PTO? No Need!"
 description: "A mug that cancels your vacation for you."
 permalink: /merchandise/rec-09/
+tags: [burnout, labor, satire]
 ---
 
 # PTO? No Need!

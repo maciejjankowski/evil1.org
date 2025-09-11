@@ -3,6 +3,7 @@ layout: default
 title: "Recursive Product 10 — Maternal Leave Is For the P*ssies"
 description: "A dark satire pin about toxic policies."
 permalink: /merchandise/rec-10/
+tags: [labor, policy, satire]
 ---
 
 # Maternal Leave Is For the P*ssies (Pin)

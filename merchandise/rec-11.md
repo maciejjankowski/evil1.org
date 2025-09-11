@@ -3,6 +3,7 @@ layout: default
 title: "Recursive Product 11 — Corporate Ethics"
 description: "Desk plaque declaring values as furniture."
 permalink: /merchandise/rec-11/
+tags: [ethics, compliance, satire]
 ---
 
 # Corporate Ethics (Desk Plaque)

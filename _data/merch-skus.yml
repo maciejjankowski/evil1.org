@@ -1,0 +1,24 @@
+rec-01:
+  title: "Building Shareholder Value — One Drop at a Time"
+  type: shirt
+  price: 29.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC01
+rec-02:
+  title: "Something Something Compliance"
+  type: mug
+  price: 19.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC02
+rec-06:
+  title: "I Am a Happy Cog"
+  type: shirt
+  price: 29.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC06
+pack-recursive-001:
+  title: "Recursive Capitalism Product Pack"
+  type: bundle
+  price: 49.99
+  currency: USD
+  stripe_price_id: price_REPLACE_PACK1

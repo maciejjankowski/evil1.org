@@ -3,6 +3,7 @@ layout: default
 title: "Recursive Product 08 — Give Me 10 More... Years in the Company"
 description: "A tee that begs for mercy with corporate spin."
 permalink: /merchandise/rec-08/
+tags: [labor, retention, satire]
 ---
 
 # Give Me 10 More...

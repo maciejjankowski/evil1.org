@@ -3,6 +3,7 @@ layout: default
 title: "Recursive Product 07 — Them Dividends Ain't Gonna Work on Themselves"
 description: "Poster reminding you who you work for."
 permalink: /merchandise/rec-07/
+tags: [shareholder, finance, satire]
 ---
 
 # Dividends Don't Work Themselves
