@@ -26,8 +26,8 @@ function getParam(name){
 
 const sku = getParam('sku');
 const data = {
-	{% for k,v in site.data.merch-skus %}
-	'{{ k }}': { title: '{{ v.title | escape }}', price: {{ v.price }}, currency: '{{ v.currency }}', stripe_price_id: '{{ v.stripe_price_id }}', type: '{{ v.type }}' },
+	{% for item in site.data.merch-skus %}
+	'{{ item[0] }}': { title: '{{ item[1].title | escape }}', price: {{ item[1].price }}, currency: '{{ item[1].currency }}', stripe_price_id: '{{ item[1].stripe_price_id }}', type: '{{ item[1].type }}' },
 	{% endfor %}
 };
 

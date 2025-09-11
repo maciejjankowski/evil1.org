@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Recursive Product 05 — Corporate Ethics"
-description: "Notebook where ethics go to be workshopped into policy.">
+description: "Notebook where ethics go to be workshopped into policy."
 permalink: /merchandise/rec-05/
 ---
 
