@@ -38,8 +38,8 @@ permalink: /membership/cancel/
                 <p style="margin-bottom: 20px;">We'd love to have you join our community of truth-seekers and activists.</p>
 
                 <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-                    <a href="/membership/" class="early-nav-link" style="background: #003366; color: white; padding: 12px 24px; text-decoration: none; border-radius: 4px; font-size: 16px;">Choose Membership</a>
-                    <a href="/register/" class="early-nav-link" style="background: #6699CC; color: white; padding: 12px 24px; text-decoration: none; border-radius: 4px; font-size: 16px;">Join Free</a>
+                    <a href="/membership/" class="btn-primary">Choose Membership</a>
+                    <a href="/register/" class="btn-supporter">Join Free</a>
                 </div>
             </div>
 

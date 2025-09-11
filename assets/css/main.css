@@ -192,3 +192,50 @@ body {
     border-top: 1px solid #E0E0E0;
     font-size: 10px;
 }
+
+/* Extracted from inline styles in .md files */
+.btn-primary {
+    background: #003366;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    display: inline-block;
+}
+.btn-supporter {
+    background: #6699CC;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    display: inline-block;
+}
+.btn-activist {
+    background: #4477AA;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    display: inline-block;
+}
+.btn-patron {
+    background: #003366;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    display: inline-block;
+}
+.cta-link {
+    background: #FFD700;
+    color: #003366;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+}

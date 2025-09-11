@@ -52,9 +52,9 @@ permalink: /membership/success/
                 <div class="early-article-content">
                     <p>Explore our platform and start your journey:</p>
                     <div style="margin-top: 15px;">
-                        <a href="/articles/" class="early-nav-link" style="background: #6699CC; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px; display: inline-block; margin: 5px;">Browse Articles</a>
-                        <a href="/members/" class="early-nav-link" style="background: #4477AA; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px; display: inline-block; margin: 5px;">Join Community</a>
-                        <a href="/education/" class="early-nav-link" style="background: #003366; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px; display: inline-block; margin: 5px;">Start Learning</a>
+                        <a href="/articles/" class="btn-supporter">Browse Articles</a>
+                        <a href="/members/" class="btn-activist">Join Community</a>
+                        <a href="/education/" class="btn-primary">Start Learning</a>
                     </div>
                 </div>
             </div>

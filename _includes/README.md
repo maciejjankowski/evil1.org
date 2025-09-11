@@ -90,18 +90,6 @@ People suggestions sidebar widget.
 Trending topics sidebar widget.
 ```liquid
 {% include trending-widget.html trends=site.data.trends %}
-```
-
-#### `soul-auction-widget.html`
-Soul auction advertisement widget.
-```liquid
-{% include soul-auction-widget.html %}
-```
-
-### Interactive Components
-
-#### `tab-navigation.html`
-Tab navigation component.
 ```liquid
 {% include tab-navigation.html
   tabs=page.tabs
@@ -165,22 +153,6 @@ Sponsored content advertisement.
         {% endfor %}
     </div>
 
-    <aside id="right-column">
-        {% include people-suggestions-widget.html %}
-        {% include soul-auction-widget.html %}
-        {% include trending-widget.html %}
-    </aside>
-</div>
-
-{% include hellfire-footer.html %}
-```
-
-### Profile Page Layout
-```liquid
-{% include hellfire-header.html %}
-
-<div id="profile-header">
-    {% include profile-card.html
       name=page.profile.name
       headline=page.profile.headline
       location=page.profile.location
@@ -192,9 +164,6 @@ Sponsored content advertisement.
 
 <div class="profile-content">
     {{ content }}
-</div>
-
-{% include hellfire-footer.html %}
 ```
 
 ## Styling

@@ -14,88 +14,31 @@ permalink: /company/nestle/
     <div class="company-profile">
         <section class="evil-timeline">
             <h2>Timeline of Corporate Evil</h2>
-            <div class="timeline-item">
-                <h3>1970s: Baby Formula Scandal</h3>
-                <p>Marketed infant formula to poor mothers in developing countries, despite knowing contaminated water would cause deadly diarrhea. Millions of infants died.</p>
-            </div>
-
-            <div class="timeline-item">
-                <h3>1980s: Boycott & Lawsuits</h3>
-                <p>Faced massive boycott but continued unethical marketing. Paid $30 million settlement but never admitted wrongdoing.</p>
-            </div>
-
-            <div class="timeline-item">
-                <h3>1990s: Water Privatization</h3>
-                <p>Began buying up municipal water systems worldwide. In Brazil, water prices increased 50% after privatization.</p>
-            </div>
-
-            <div class="timeline-item">
-                <h3>2000s: Child Labor</h3>
-                <p>Revealed to be sourcing cocoa from farms using child slave labor. Created voluntary certification but continued buying from abusive suppliers.</p>
-            </div>
-
-            <div class="timeline-item">
-                <h3>2010s: Obesity & Diabetes</h3>
-                <p>Marketed sugary cereals and drinks to children while knowing they contributed to global obesity epidemic.</p>
-            </div>
-
-            <div class="timeline-item">
-                <h3>2020s: COVID Profiteering</h3>
-                <p>Price gouged on bottled water during pandemic. Hiked prices 20-30% while communities struggled with water access.</p>
-            </div>
+            {% include timeline-item.html title="1970s: Baby Formula Scandal" description="Marketed infant formula to poor mothers in developing countries, despite knowing contaminated water would cause deadly diarrhea. Millions of infants died." %}
+            {% include timeline-item.html title="1980s: Boycott & Lawsuits" description="Faced massive boycott but continued unethical marketing. Paid $30 million settlement but never admitted wrongdoing." %}
+            {% include timeline-item.html title="1990s: Water Privatization" description="Began buying up municipal water systems worldwide. In Brazil, water prices increased 50% after privatization." %}
+            {% include timeline-item.html title="2000s: Child Labor" description="Revealed to be sourcing cocoa from farms using child slave labor. Created voluntary certification but continued buying from abusive suppliers." %}
+            {% include timeline-item.html title="2010s: Obesity & Diabetes" description="Marketed sugary cereals and drinks to children while knowing they contributed to global obesity epidemic." %}
+            {% include timeline-item.html title="2020s: COVID Profiteering" description="Price gouged on bottled water during pandemic. Hiked prices 20-30% while communities struggled with water access." %}
         </section>
 
         <section class="corporate-crimes">
             <h2>Corporate Crimes & Scandals</h2>
             <div class="crime-grid">
-                <div class="crime-card">
-                    <h3>Infant Formula Deaths</h3>
-                <p>Distributed free samples to hospitals, knowing mothers would switch to formula. When mixed with contaminated water, caused 1.5 million infant deaths annually.</p>
-                </div>
-
-                <div class="crime-card">
-                    <h3>Water Privatization</h3>
-                <p>Bought water rights in drought-prone areas, then restricted access. In Pakistan, Nestle extracted millions of liters while locals faced shortages.</p>
-                </div>
-
-                <div class="crime-card">
-                    <h3>Child Slavery</h3>
-                <p>Sourced chocolate from Ivory Coast farms using child slaves. Children as young as 5 worked 12-hour days with no pay, beaten if they tried to escape.</p>
-                </div>
-
-                <div class="crime-card">
-                    <h3>Environmental Destruction</h3>
-                <p>Deforested rainforests for palm oil plantations. Contributed to climate change while marketing "sustainable" products.</p>
-                </div>
+                {% include crime-card.html title="Infant Formula Deaths" description="Distributed free samples to hospitals, knowing mothers would switch to formula. When mixed with contaminated water, caused 1.5 million infant deaths annually." %}
+                {% include crime-card.html title="Water Privatization" description="Bought water rights in drought-prone areas, then restricted access. In Pakistan, Nestle extracted millions of liters while locals faced shortages." %}
+                {% include crime-card.html title="Child Slavery" description="Sourced chocolate from Ivory Coast farms using child slaves. Children as young as 5 worked 12-hour days with no pay, beaten if they tried to escape." %}
+                {% include crime-card.html title="Environmental Destruction" description="Deforested rainforests for palm oil plantations. Contributed to climate change while marketing 'sustainable' products." %}
             </div>
         </section>
 
         <section class="human-impact">
             <h2>Human & Environmental Impact</h2>
             <div class="impact-stats">
-                <div class="stat">
-                    <div class="number">1.5M</div>
-                    <div class="label">Infant Deaths</div>
-                    <div class="description">Annually from formula contamination</div>
-                </div>
-
-                <div class="stat">
-                    <div class="number">200K</div>
-                    <div class="label">Child Slaves</div>
-                    <div class="description">In Nestle cocoa supply chain</div>
-                </div>
-
-                <div class="stat">
-                    <div class="number">50%</div>
-                    <div class="label">Price Increase</div>
-                    <div class="description">After water privatization in Brazil</div>
-                </div>
-
-                <div class="stat">
-                    <div class="number">30+</div>
-                    <div class="label">Years</div>
-                    <div class="description">Of boycotts against Nestle</div>
-                </div>
+                {% include stat.html number="1.5M" label="Infant Deaths" description="Annually from formula contamination" %}
+                {% include stat.html number="200K" label="Child Slaves" description="In Nestle cocoa supply chain" %}
+                {% include stat.html number="50%" label="Price Increase" description="After water privatization in Brazil" %}
+                {% include stat.html number="30+" label="Years" description="Of boycotts against Nestle" %}
             </div>
         </section>
 
