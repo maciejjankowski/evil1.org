@@ -7,7 +7,6 @@
 # HIGH PRIORITY - Moderate complexity tasks, basic content updates
 [ ] | T501 | Create standard page templates for key content types | DoD: Design templates for profiles, articles, organization pages with reusable components
 [ ] | T502 | Implement site-wide navigation improvements | DoD: Add breadcrumbs, enhance mobile menu, improve internal link structure
-[ ] | T503 | Optimize images across the site | DoD: Compress all images, implement responsive images, add proper alt text
 
 # MEDIUM PRIORITY
 [ ] | T504 | Set up automated content publishing workflow | DoD: Create GitHub Actions workflow for scheduled content publishing
@@ -15,6 +14,7 @@
 [ ] | T506 | Create interactive data visualizations | DoD: Build 3 data visualizations for corporate evil metrics
 
 # LOW PRIORITY
+[ ] | T503 | Optimize images across the site | DoD: Compress all images, implement responsive images, add proper alt text
 [ ] | T507 | Implement dark mode toggle | DoD: Add dark theme CSS, implement preference toggle, ensure all components support both themes
 [ ] | T508 | Create RSS feeds by category | DoD: Implement category-specific RSS feeds, add subscription options
 
@@ -27,4 +27,7 @@
 - To preview changes locally run: `./scripts/optimize-images.sh` (no changes).
 - To apply optimizations after confirming, install `jpegoptim`/`pngquant` or ImageMagick and run:
 	`./scripts/optimize-images.sh --apply --quality 85`
+
+### Current work
+- T502 is the active next task to work on (site-wide navigation improvements). A task document will be created and a starter include added in `_includes/breadcrumbs.html`.
 
