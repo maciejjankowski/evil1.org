@@ -18,11 +18,8 @@ Select review and continue to payment. (Stripe test mode coming soon.)
 <noscript>Enable JavaScript to complete checkout.</noscript>
 
 <script>
-// Basic query parsing
-function getParam(name){
-	const url = new URL(window.location.href);
-	return url.searchParams.get(name);
-}
+// Stripe integration (test mode)
+const stripe = Stripe('pk_test_REPLACE_WITH_YOUR_STRIPE_PUBLISHABLE_KEY'); // Replace with actual key
 
 const sku = getParam('sku');
 const data = {
@@ -47,12 +44,31 @@ if(!sku || !data[sku]){
 			<li>Price: $${item.price.toFixed(2)} ${item.currency}</li>
 			<li>SKU: ${sku}</li>
 		</ul>
+		<p><em>Shipping and tax calculated at checkout.</em></p>
 	`;
 	btn.disabled = false;
 	btn.textContent = 'Proceed to Payment';
-	btn.addEventListener('click', () => {
-		// Placeholder for Stripe session creation (client-side fetch to serverless endpoint in future)
-		alert('Stripe checkout coming soon. (Task T201/T202)');
+	btn.addEventListener('click', async () => {
+		if (window.plausible) window.plausible('buy_now', {props: {sku: sku}});
+		try {
+			const response = await fetch('/.netlify/functions/create-checkout-session', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({ sku: sku, price_id: item.stripe_price_id })
+			});
+			const session = await response.json();
+			if (session.error) {
+				alert('Error: ' + session.error);
+				return;
+			}
+			const result = await stripe.redirectToCheckout({ sessionId: session.id });
+			if (result.error) {
+				alert(result.error.message);
+			}
+		} catch (error) {
+			console.error('Error:', error);
+			alert('Checkout failed. Please try again.');
+		}
 	});
 }
 </script>
