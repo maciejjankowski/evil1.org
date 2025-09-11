@@ -254,6 +254,7 @@ COMPONENT INVENTORY CHECKLIST (run before creation):
 3. Gap justification (if new include needed) – scope, naming, reusability.
 4. Planned CSS reuse (list existing classes) or rationale for minimal new class.
 5. Test plan (pages/examples to validate after integration).
+ 6. Link the component to catalog entry in `_docs/component-inventory.md` (add if missing).
 
 CSS POLICY:
 - Prefer existing class tokens; if new, keep semantic + concise (e.g., `merch-grid`, `profile-card`).
@@ -264,6 +265,7 @@ CONTENT GENERATION RULES (ADDITIONAL):
 - For each new content task: explicitly state which includes/layouts will be reused.
 - If none reused, STOP and reassess—must justify exception.
 - Auto-fail quality gate if raw HTML sections replicate existing component functionality.
+ - Must consult component inventory (T241) and cite candidate component names before proposing new markup.
 
 METRICS (to track manually or later automation):
 - % of pages using at least one shared include.
