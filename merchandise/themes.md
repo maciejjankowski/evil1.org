@@ -7,36 +7,21 @@ permalink: /merchandise/themes/
 
 # Browse by Theme
 
-Pick your poison. Each theme aggregates items from the catalog.
+Pick your poison. Each theme represents products from our catalog with that satirical focus.
 
 ## Compliance Theatre
-- /merchandise/rec-02/
-- /merchandise/rec-04/
-- /merchandise/rec-22/
-- /merchandise/rec-44/
-- /merchandise/hat-compliance/
+Products mocking corporate compliance and regulatory theater.
 
-## Shareholder Blood Magic
-- /merchandise/rec-01/
-- /merchandise/rec-07/
-- /merchandise/rec-30/
-- /merchandise/t-shirt-recursive/
+## Shareholder Blood Magic  
+Products satirizing shareholder value and financial exploitation.
 
 ## Labor & Burnout
-- /merchandise/rec-06/
-- /merchandise/rec-08/
-- /merchandise/rec-09/
-- /merchandise/rec-19/
-- /merchandise/rec-34/
+Products highlighting labor exploitation and workplace burnout.
 
 ## HR & Management Euphemisms
-- /merchandise/rec-22/
-- /merchandise/rec-33/
-- /merchandise/rec-39/
-- /merchandise/rec-40/
+Products exposing corporate HR speak and management doublespeak.
 
 ## Growth Myths & ESG Spin
-- /merchandise/rec-16/
-- /merchandise/rec-18/
-- /merchandise/rec-20/
-- /merchandise/rec-48/
+Products debunking growth narratives and greenwashing.
+
+<p><a href="/merchandise/" class="early-nav-link">← Back to All Products</a></p>

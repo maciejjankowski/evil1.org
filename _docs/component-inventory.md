@@ -28,39 +28,16 @@ This catalog is generated manually (T241). Before creating a new include/layout,
 | `sig` | Special interest group | ??? | Needs audit |
 
 ## Includes (Content / Cards)
+## Includes (Content / Cards)
 | Name | Purpose | Inputs (frontmatter/params) | Reuse Potential |
 |------|---------|----------------------------|-----------------|
 | `post-card.html` | Summary card for posts | page object | High |
 | `profile-card.html` | Profile summary | profile data | High |
-| `merch-tile.html` | Merchandise tile | item hash (url,title,price,sku) | High |
+| `merch-tile.html` | Merchandise tile | item hash from collection | High |
 | `merch-cta.html` | Product CTA block | page.sku, page.price | High |
 | `merch-related.html` | Related merch list | page.tags | Medium |
+| `merch-hero.html` | Merch page hero section | collection data | Medium |
 | `product-schema.html` | JSON-LD for products | page fields | High |
-| `related-articles.html` | Related content list | tags/categories | High |
-| `people-suggestion.html` | Person suggestion card | context vars | Medium |
-| `people-suggestions-widget.html` | Batch suggestions | collection | Medium |
-| `stories-bar.html` | Horizontal story feed | collection | Medium |
-| `story-item.html` | Item inside stories-bar | story data | Medium |
-| `sponsored-content.html` | Paid placement | sponsor meta | Low |
-| `trending-widget.html` | Trending items | data source | Medium |
-| `widget-newsletter.html` | Newsletter signup | form action | High |
-| `widget-related-tags.html` | Related tags | tag context | Medium |
-| `widget-search.html` | Search box | none | Medium |
-| `widget-popular-tags.html` | Popular tags list | tag stats | Medium |
-| `widget-featured-articles.html` | Featured articles block | curated list | High |
-| `widget-author-spotlight.html` | Highlight author | author id | Medium |
-| `widget-reading-progress.html` | Progress bar | scroll JS | Medium |
-| `sidebar.html` | Sidebar scaffold | stacked widgets | High |
-| `sidebar-widget.html` | Generic wrapper | inner content | High |
-| `tab-navigation.html` | Tab UI | nav items | Medium |
-| `comment-form.html` | Comment submission | target endpoint | Medium |
-| `comment-display.html` | Render comments | comments collection | Medium |
-| `widget-social-share.html` | Share links | page meta | High |
-| `hellfire-header.html` | Alt header variant | nav items | Low |
-| `hellfire-footer.html` | Alt footer variant | nav items | Low |
-| `header.html` | Global site header | nav, logo | Critical |
-| `footer.html` | Global site footer | nav | Critical |
-| `soul-auction-widget.html` | Humorous widget | none | Novelty |
 
 ## Pending Audit Targets (Inline / Raw HTML)
 List pages with significant inline styles or raw layout markup to refactor under T242.

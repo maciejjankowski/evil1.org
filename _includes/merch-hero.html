@@ -1,0 +1,25 @@
+{% comment %} Merchandise hero section: content warning and original collection {% endcomment %}
+<div class="early-section">
+    <div class="early-section-header">Corporate Evil Merchandise</div>
+    <div class="early-section-content">
+        <div class="merch-warning">
+            <h3>⚠️ Content Warning: Recursive Capitalism</h3>
+            <p><strong>These products mock consumerism while being consumerist products.</strong></p>
+            <p>By purchasing, you become part of the very system we're satirizing. But hey, at least 5% of profits go to actual activism!</p>
+        </div>
+
+        <div class="early-section">
+            <div class="early-section-header">Original Merchandise Collection</div>
+            <div class="early-section-content">
+                <ul class="product-list">
+                    {% for item in site.data.merchandise %}
+                      {% assign product = item[1] %}
+                      {% if product.sku == "t-shirt-recursive" or product.sku == "mug-hypocrisy" or product.sku == "hat-activist" %}
+                        <li><a class="early-nav-link" href="/checkout/?sku={{ product.sku }}&title={{ product.title | url_encode }}">{{ product.title }}</a></li>
+                      {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

@@ -18,9 +18,12 @@ permalink: /merchandise/
             <div class="early-section-header">Original Merchandise Collection</div>
             <div class="early-section-content">
                 <ul class="product-list">
-                    <li><a class="early-nav-link" href="/merchandise/t-shirt-recursive">"This T-Shirt Costs $29.99" — Recursive T‑Shirt</a></li>
-                    <li><a class="early-nav-link" href="/merchandise/mug-hypocrisy">"My Morning Coffee Is Fair Trade" — Hypocrisy Mug</a></li>
-                    <li><a class="early-nav-link" href="/merchandise/hat-activist">"Undercover Activist" — Baseball Cap</a></li>
+                    {% for item in site.data.merchandise %}
+                      {% assign product = item[1] %}
+                      {% if product.sku == "t-shirt-recursive" or product.sku == "mug-hypocrisy" or product.sku == "hat-activist" %}
+                        <li><a class="early-nav-link" href="/checkout/?sku={{ product.sku }}&title={{ product.title | url_encode }}">{{ product.title }}</a></li>
+                      {% endif %}
+                    {% endfor %}
                 </ul>
             </div>
         </div>
@@ -34,7 +37,7 @@ permalink: /merchandise/
                           {% endif %}
                         {% endfor %}
                         </div>
-                        <p class="note-small">Catalog auto-generated from <code>_data/merch-skus.yml</code>. Update there to reflect pricing/titles.</p>
+                        <p class="note-small">Catalog auto-generated from <code>_data/merchandise.yml</code>. Update there to reflect pricing/titles.</p>
 
         <div class="early-section">
             <div class="early-section-header">Browse the Full Catalog</div>
@@ -49,14 +52,10 @@ permalink: /merchandise/
             <div class="early-section-header">Featured Slogans</div>
             <div class="early-section-content">
                 <ul>
-                    <li><a class="early-nav-link" href="/merchandise/rec-01/">Building Shareholder Value — One Drop of Blood at a Time (T‑Shirt)</a> — NEW</li>
-                    <li><a class="early-nav-link" href="/merchandise/rec-02/">Something Something Compliance (Mug)</a> — NEW</li>
-                    <li><a class="early-nav-link" href="/merchandise/rec-06/">I Am a Happy Cog (T‑Shirt)</a> — NEW</li>
-                    <li><a class="early-nav-link" href="/merchandise/rec-07/">Them Dividends Ain’t Gonna Work on Themselves (Poster)</a> — NEW</li>
-                    <li><a class="early-nav-link" href="/merchandise/rec-08/">Give Me 10 More… Years in the Company (T‑Shirt)</a> — NEW</li>
-                    <li><a class="early-nav-link" href="/merchandise/rec-09/">PTO? No Need! (Mug)</a> — NEW</li>
-                    <li><a class="early-nav-link" href="/merchandise/sticker-whistleblower/">Not a Whistleblower (Sticker)</a></li>
-                    <li><a class="early-nav-link" href="/merchandise/hat-compliance/">I ♥ Compliance (Hat)</a></li>
+                    {% for item in site.data.merchandise limit:8 %}
+                      {% assign product = item[1] %}
+                      <li><a class="early-nav-link" href="/checkout/?sku={{ product.sku }}&title={{ product.title | url_encode }}">{{ product.title }}</a>{% if product.tags contains "satire" %} — NEW{% endif %}</li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>
@@ -154,10 +153,8 @@ permalink: /merchandise/
             <h3 style="color: #003366; margin-bottom: 15px;">Ready To Embrace The Hypocrisy?</h3>
             <p style="margin-bottom: 20px;">Browse our full collection of comically recursive merchandise.</p>
             <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-                <a href="/merchandise/t-shirts" class="early-nav-link" style="background: #003366; color: white; padding: 12px 24px; text-decoration: none; border-radius: 4px;">T-Shirts</a>
-                <a href="/merchandise/mugs" class="early-nav-link" style="background: #4477AA; color: white; padding: 12px 24px; text-decoration: none; border-radius: 4px;">Mugs</a>
-                <a href="/merchandise/hats" class="early-nav-link" style="background: #6699CC; color: white; padding: 12px 24px; text-decoration: none; border-radius: 4px;">Hats</a>
-                <a href="/merchandise/stickers" class="early-nav-link" style="background: #003366; color: white; padding: 12px 24px; text-decoration: none; border-radius: 4px;">Stickers</a>
+                <a href="/merchandise/catalog/" class="early-nav-link" style="background: #003366; color: white; padding: 12px 24px; text-decoration: none; border-radius: 4px;">View All Products</a>
+                <a href="/merchandise/themes/" class="early-nav-link" style="background: #4477AA; color: white; padding: 12px 24px; text-decoration: none; border-radius: 4px;">Browse by Theme</a>
             </div>
         </div>
     </div>
