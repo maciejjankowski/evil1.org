@@ -1,0 +1,18 @@
+{% if page.sku and page.price %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": {{ page.title | jsonify }},
+  "sku": {{ page.sku | jsonify }},
+  "description": {{ page.description | default: page.excerpt | strip_newlines | jsonify }},
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "{{ page.price }}",
+    "availability": "https://schema.org/InStock",
+    "url": "{{ site.url }}{{ page.url }}"
+  }
+}
+</script>
+{% endif %}

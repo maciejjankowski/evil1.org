@@ -3,6 +3,9 @@ layout: default
 title: "Happy Worker T-Shirt - Corporate Propaganda"
 description: "Wear the ultimate corporate conformity statement: Happy Worker is a Thoughtless Worker."
 permalink: /merchandise/t-shirt-happy-worker/
+sku: rec-happy-worker
+price: 29.99
+tags: [labor, stakhanovite, satire]
 ---
 
 <div class="early-section">
@@ -191,6 +194,9 @@ permalink: /merchandise/t-shirt-happy-worker/
         </div>
     </div>
 </div>
+
+{% include merch-cta.html %}
+{% include product-schema.html %}
 
 <script>
 function addToCart() {

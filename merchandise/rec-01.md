@@ -4,6 +4,8 @@ title: "Recursive Product 01 — Building Shareholder Value One Drop of Blood at
 description: "A t‑shirt that celebrates the true cost of shareholder value."
 permalink: /merchandise/rec-01/
 tags: [shareholder, labor, satire]
+sku: rec-01
+price: 29.99
 ---
 
 # Building Shareholder Value — One Drop at a Time
@@ -17,4 +19,6 @@ Includes a digital pamphlet on externalities and labor exploitation. Buying this
 
 [Buy Now](/checkout/?sku=rec-01&title=Building%20Shareholder%20Value%20%E2%80%94%20One%20Drop%20at%20a%20Time&price=29.99&type=shirt)
 
+{% include merch-cta.html %}
+{% include product-schema.html %}
 {% include merch-related.html %}

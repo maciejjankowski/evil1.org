@@ -10,15 +10,99 @@ rec-02:
   price: 19.99
   currency: USD
   stripe_price_id: price_REPLACE_REC02
+rec-03:
+  title: "Not a Whistleblower — Just Curious"
+  type: sticker
+  price: 5.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC03
+rec-04:
+  title: "I ♥ Compliance"
+  type: hat
+  price: 24.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC04
+rec-05:
+  title: "Corporate Ethics (Notebook)"
+  type: notebook
+  price: 14.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC05
 rec-06:
   title: "I Am a Happy Cog"
   type: shirt
   price: 29.99
   currency: USD
   stripe_price_id: price_REPLACE_REC06
+rec-07:
+  title: "Them Dividends Ain't Gonna Work on Themselves"
+  type: poster
+  price: 12.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC07
+rec-08:
+  title: "Give Me 10 More... Years in the Company"
+  type: shirt
+  price: 29.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC08
+rec-09:
+  title: "PTO? No Need!"
+  type: mug
+  price: 19.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC09
+rec-10:
+  title: "Maternal Leave Is For the P*ssies (Pin)"
+  type: pin
+  price: 9.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC10
 pack-recursive-001:
   title: "Recursive Capitalism Product Pack"
   type: bundle
   price: 49.99
   currency: USD
   stripe_price_id: price_REPLACE_PACK1
+t-shirt-happy-worker:
+  title: "Happy Worker T-Shirt"
+  type: shirt
+  price: 29.99
+  currency: USD
+  stripe_price_id: price_REPLACE_HAPPY
+hat-compliance:
+  title: "I ♥ Compliance Hat"
+  type: hat
+  price: 24.99
+  currency: USD
+  stripe_price_id: price_REPLACE_HATCOMP
+mug-money-laundering:
+  title: "Money Laundering Mug"
+  type: mug
+  price: 19.99
+  currency: USD
+  stripe_price_id: price_REPLACE_MUGML
+sticker-whistleblower:
+  title: "Not a Whistleblower Sticker"
+  type: sticker
+  price: 5.99
+  currency: USD
+  stripe_price_id: price_REPLACE_STICKERWB
+hat-activist:
+  title: "Undercover Activist Hat"
+  type: hat
+  price: 24.99
+  currency: USD
+  stripe_price_id: price_REPLACE_HATACT
+mug-hypocrisy:
+  title: "Hypocrisy Mug"
+  type: mug
+  price: 19.99
+  currency: USD
+  stripe_price_id: price_REPLACE_MUGHYPO
+t-shirt-recursive:
+  title: "Recursive Pricing T-Shirt"
+  type: shirt
+  price: 29.99
+  currency: USD
+  stripe_price_id: price_REPLACE_RECURSIVE

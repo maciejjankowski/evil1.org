@@ -1,0 +1,11 @@
+{% comment %} Global merchandise CTA. Expects page.sku and page.price {% endcomment %}
+{% if page.sku and page.price %}
+<div class="early-section">
+  <div class="early-section-header">Buy Now</div>
+  <div class="early-section-content">
+    <p><strong>{{ page.title }}</strong></p>
+    <p>Price: ${{ page.price }} USD</p>
+    <p><a class="early-nav-link" href="/checkout/?sku={{ page.sku }}">Proceed to Checkout →</a></p>
+  </div>
+</div>
+{% endif %}
