@@ -1,0 +1,9 @@
+{% comment %} Featured articles grid {% endcomment %}
+<div class="featured-articles-grid">
+  {% for post in site.posts limit:3 %}
+  <div class="featured-article">
+    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+    <p>{{ post.excerpt }}</p>
+  </div>
+  {% endfor %}
+</div>
