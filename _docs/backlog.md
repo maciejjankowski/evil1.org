@@ -9,7 +9,7 @@
 [x] fix the product catalog, links look off | DoD: Add catalog CTA, featured links, and theme browser; verify links resolve
 [ ] define profitability plan Q4 2025 | DoD: Set revenue targets, CAC/LTV model, conversion funnel, top 5 growth experiments
 [ ] implement conversion boosts on merch | DoD: Add Buy Now CTAs, related items, tags-based browse; track click-throughs
-[ ] | T201 | Implement Stripe Checkout (products, tax, shipping, receipts) | DoD: Test-mode purchase succeeds for 3 SKUs via /checkout, email receipt received
+[x] | T201 | Implement Stripe Checkout (products, tax, shipping, receipts) | DoD: Test-mode purchase succeeds for 3 SKUs via /checkout, email receipt received
 [ ] | T202 | Build /checkout page that maps SKU->price and redirects to Stripe | DoD: Query param sku renders summary and routes to correct Stripe price
 [ ] | T203 | Related-items component on product pages (by tags) | DoD: Include created and added to 10 top products; CTR tracked
 [ ] | T204 | Global CTA include (Buy Now / Add to Cart) | DoD: Reusable include added; visible above the fold on merch pages
