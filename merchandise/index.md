@@ -25,72 +25,22 @@ permalink: /merchandise/
             </div>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px;">
+                <div class="merch-grid">
+                {% assign showcase = "rec-01,rec-02,rec-06,rec-07,rec-08,rec-09,sticker-whistleblower,hat-compliance,mug-money-laundering,t-shirt-happy-worker" | split: "," %}
+                {% for code in showcase %}
+                    {% assign meta = site.data.merch-skus[code] %}
+                    {% if meta %}
+                        {% assign page_obj = site.pages | where: "sku", code | first %}
+                        {% unless page_obj %}{% assign page_obj = site.pages | where_exp: "p","p.url contains code" | first %}{% endunless %}
+                        {% assign item = hash %}
+                        {% capture url %}{% if page_obj %}{{ page_obj.url }}{% else %}/merchandise/{{ code }}/{% endif %}{% endcapture %}
+                        {% assign item = item | merge: { 'url': url, 'title': meta.title, 'price': meta.price, 'sku': code } %}
+                        {% include merch-tile.html item=item %}
+                    {% endif %}
+                {% endfor %}
+                </div>
 
-            <!-- T-Shirt Section -->
-            <div class="early-article">
-                <div class="early-article-header">
-                    <h3 class="early-article-title">👕 T-Shirts: $29.99</h3>
-                </div>
-                <div class="early-article-content">
-                    <p><strong>"Happy Worker is a Thoughtless Worker"</strong></p>
-                    <p>Front: "Happy Worker is a Thoughtless Worker"</p>
-                    <p>Back: "Keep Smiling While We Steal Your Future"</p>
-                    <p style="margin-top: 15px;"><em>Inspired by Stakhanovite propaganda. Available in sizes S-3XL.</em></p>
-                    <div class="early-article-footer">
-                        <a href="/merchandise/t-shirt-happy-worker" class="early-nav-link" style="background: #003366; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px;">View Details</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Mug Section -->
-            <div class="early-article">
-                <div class="early-article-header">
-                    <h3 class="early-article-title">☕ Mugs: $19.99</h3>
-                </div>
-                <div class="early-article-content">
-                    <p><strong>"Money Laundering is Evil... But It Can Finance Your Vacation"</strong></p>
-                    <p>Outside: "Money Laundering is Evil..."</p>
-                    <p>Inside: "...But It Can Finance Your Vacation"</p>
-                    <p style="margin-top: 15px;"><em>The executive's moral compromise in ceramic form.</em></p>
-                    <div class="early-article-footer">
-                        <a href="/merchandise/mug-money-laundering" class="early-nav-link" style="background: #4477AA; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px;">View Details</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Hat Section -->
-            <div class="early-article">
-                <div class="early-article-header">
-                    <h3 class="early-article-title">🎩 Hats: $24.99</h3>
-                </div>
-                <div class="early-article-content">
-                    <p><strong>"I <3 Compliance"</strong></p>
-                    <p>Front: "I ♥ Compliance"</p>
-                    <p>Under brim: "Because Breaking Rules Costs Money"</p>
-                    <p style="margin-top: 15px;"><em>Heart compliance, hate freedom. Baseball cap style.</em></p>
-                    <div class="early-article-footer">
-                        <a href="/merchandise/hat-compliance" class="early-nav-link" style="background: #6699CC; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px;">View Details</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Sticker Section -->
-            <div class="early-article">
-                <div class="early-article-header">
-                    <h3 class="early-article-title">🏷️ Stickers: $5.99</h3>
-                </div>
-                <div class="early-article-content">
-                    <p><strong>"Not a Whistleblower"</strong></p>
-                    <p>Just Someone Who Asks Too Many Questions</p>
-                    <p style="margin-top: 15px;"><em>The corporate threat level. Weather-resistant vinyl.</em></p>
-                    <div class="early-article-footer">
-                        <a href="/merchandise/sticker-whistleblower" class="early-nav-link" style="background: #003366; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px;">View Details</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
+                <p><a class="early-nav-link" href="/merchandise/catalog/">View Full Catalog →</a></p>
 
         <div class="early-section">
             <div class="early-section-header">Browse the Full Catalog</div>
