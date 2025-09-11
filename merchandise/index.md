@@ -1,15 +1,6 @@
 ---
 layout: default
-title:                         <h3>All Products</h3>
-                        <div class="merch-grid">
-                        {% for item in site.data.merchandise %}
-                          {% assign meta = item[1] %}
-                          {% if meta %}
-                            {% assign item_hash = hash | merge: { 'url': meta.permalink, 'title': meta.title, 'price': meta.price, 'sku': meta.sku } %}
-                            {% include merch-tile.html item=item_hash %}
-                          {% endif %}
-                        {% endfor %}
-                        </div>Store - Comically Recursive Exploitation"
+title: "Merchandise Store - Comically Recursive Exploitation"
 description: "Buy satirical merchandise that mocks the very act of buying satirical merchandise. Because capitalism eats itself."
 permalink: /merchandise/
 ---
@@ -36,15 +27,11 @@ permalink: /merchandise/
 
                         <h3>All Products</h3>
                         <div class="merch-grid">
-                        {% for code in site.data.merch-skus %}
-                            {% assign meta = site.data.merch-skus[code[0]] %}
-                            {% if meta %}
-                                {% assign page_obj = site.pages | where: "sku", code[0] | first %}
-                                {% unless page_obj %}{% assign page_obj = site.pages | where_exp: "p","p.url contains code[0]" | first %}{% endunless %}
-                                {% capture url %}{% if page_obj %}{{ page_obj.url }}{% else %}/merchandise/{{ code[0] }}/{% endif %}{% endcapture %}
-                                {% assign item = hash | merge: { 'url': url, 'title': meta.title, 'price': meta.price, 'sku': code[0] } %}
-                                {% include merch-tile.html item=item %}
-                            {% endif %}
+                        {% for item in site.data.merchandise %}
+                          {% assign meta = item[1] %}
+                          {% if meta %}
+                            {% include merch-tile.html item=meta %}
+                          {% endif %}
                         {% endfor %}
                         </div>
                         <p class="note-small">Catalog auto-generated from <code>_data/merch-skus.yml</code>. Update there to reflect pricing/titles.</p>

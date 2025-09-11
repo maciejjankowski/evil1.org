@@ -1,7 +1,7 @@
-{% comment %} Product tile component. Expects item hash with keys: url, title, price, sku, tagline(optional) {% endcomment %}
+{% comment %} Product tile component. Expects item hash with keys: permalink, title, price, sku, tagline(optional) {% endcomment %}
 <div class="merch-tile">
-  <h3 class="merch-tile-title"><a href="{{ item.url }}">{{ item.title }}</a></h3>
+  <h3 class="merch-tile-title"><a href="{{ item.permalink }}">{{ item.title }}</a></h3>
   {% if item.tagline %}<p class="merch-tile-tagline">{{ item.tagline }}</p>{% endif %}
   {% if item.price %}<p class="merch-tile-price">${{ item.price }} USD</p>{% endif %}
-  <p class="merch-tile-cta"><a class="early-nav-link" href="/checkout/?sku={{ item.sku }}">Buy →</a> <a class="early-nav-link" href="{{ item.url }}">Details</a></p>
+  <p class="merch-tile-cta"><a class="early-nav-link" href="/checkout/?sku={{ item.sku }}">Buy →</a> <a class="early-nav-link" href="{{ item.permalink }}">Details</a></p>
 </div>
