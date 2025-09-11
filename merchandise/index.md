@@ -1,6 +1,15 @@
 ---
 layout: default
-title: "Merchandise Store - Comically Recursive Exploitation"
+title:                         <h3>All Products</h3>
+                        <div class="merch-grid">
+                        {% for item in site.data.merchandise %}
+                          {% assign meta = item[1] %}
+                          {% if meta %}
+                            {% assign item_hash = hash | merge: { 'url': meta.permalink, 'title': meta.title, 'price': meta.price, 'sku': meta.sku } %}
+                            {% include merch-tile.html item=item_hash %}
+                          {% endif %}
+                        {% endfor %}
+                        </div>Store - Comically Recursive Exploitation"
 description: "Buy satirical merchandise that mocks the very act of buying satirical merchandise. Because capitalism eats itself."
 permalink: /merchandise/
 ---
