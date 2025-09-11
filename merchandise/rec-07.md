@@ -18,3 +18,4 @@ price: 12.99
 Perfect for break rooms that don't break.
 {% include merch-cta.html %}
 {% include product-schema.html %}
+{% include merch-related.html %}
