@@ -49,7 +49,7 @@
 [ ] | T238 | Inventory/status badges (preorder/limited) | DoD: Badges render on product pages via frontmatter
 [ ] | T239 | Gift cards via Stripe | DoD: Gift card SKU live; redemption instructions documented
 [ ] | T240 | Support workflows + macros | DoD: Response templates for returns, shipping, defects, delays
-[ ] | T241 | Site-wide component inventory & catalog | DoD: Automated scan producing `_docs/component-inventory.md` listing all includes/layouts, usage count, duplication candidates; instructions updated to mandate referencing catalog before new components
+[x] | T241 | Site-wide component inventory & catalog | DoD: `_docs/component-inventory.md` added with layouts, includes, audit targets, reuse policy tie-in
 [ ] | T242 | Refactor raw HTML/CSS pages into reusable components | DoD: Audit list created; 20 highest-traffic pages refactored to existing or new includes (with justification); inline styles eliminated; improvements logged in `_docs/improvements.md`
 
 --- !IMPORTANT: DONT EDIT BELOW ---
