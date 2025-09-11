@@ -1,21 +1,22 @@
 # COPILOT INSTRUCTIONS
 
 ## CORE RULES
-- **NEVER** modify `_dont touch/` files
-- **NEVER** alter `_docs/backlog.md` headers or metadata. preferably never edit above the "# TASKS" section. Only change task status checkboxes in the # TASKS section and use the script `./scripts/mark-task-done.sh TASK_ID` to avoid errors.
-- **NEVER** run destructive commands without committing
-- **NEVER** use inline styles – use external CSS in `_includes/`, `assets/`, or theme folders
-- **ALWAYS** modifying textual content unless specifically asked and preserve YAML frontmatter. This is CRITICAL.
-- **ALWAYS** test changes before completion. This is CRITICAL.
-- **ALWAYS** preserve YAML frontmatter delimiters `---` at start and end of files
-- **ALWAYS** avoid duplication – consolidate similar content into one authoritative source
-- **ALWAYS** add new tasks to `_docs/backlog.md`.
-- when creating new content, ensure it aligns with the site's dark humor and satirical tone, using satire and irony to critique power structures and societal issues
-- when creating new content STRONGLY PREFER using markdown syntax for formatting (e.g., headings, lists, links) instead of raw HTML, unless specific HTML elements are required for functionality or styling that cannot be achieved with markdown. ALWAYS OPTIMIZE FOR FRONTMATTER COMPATIBILITY AND READABILITY.
-- ALWAYS end a task in performing commits and updating the backlog. This is CRITICAL.
+## CORE RULES (CONDENSED)
+NON-NEGOTIABLE:
+1. Preserve YAML frontmatter exactly; never strip `---`.
+2. No inline styles — only external CSS.
+3. No edits to `_dont touch/` and no edits above `# TASKS` in `_docs/backlog.md`.
+4. Use `./scripts/mark-task-done.sh TASK_ID` to mark completion.
+5. Commit before any risky/destructive change.
+6. Always test (build + basic link sanity) before declaring done.
+7. Prefer Markdown over raw HTML; only use HTML when Markdown cannot express layout.
+8. Avoid duplication; consolidate sources.
+9. Add all new work as tasks; update backlog on completion.
+10. Tone: satirical/dark humor critiquing power structures.
+
+PRIORITIES ORDER: Integrity (frontmatter) > Build passes > Content accuracy > Style compliance > Performance > Extras.
 
 ## Workflow
-1. Read `readme.md`, `_docs/instructions.md` + `_docs/workflow.md`
 2. User selects model based on task type using `./scripts/select-model.sh`
 3. Run selected model against its specific backlog (e.g., `_docs/backlog-gpt41.md`)
 4. Model processes tasks in its backlog autonomously
@@ -41,11 +42,12 @@
 - Backlog, workflow, and improvements tracked in `_docs/`
 
 ## DEVELOPER WORKFLOWS
-- **Build site:** `bundle exec jekyll build` (check for 404s, YAML errors)
-- **Start new task:** `./scripts/start-task.sh "<task>"` (initializes with model selection)
-- **Commit format:** `[MODEL] Brief description` (see workflow.md)
-- **Backlog update:** Mark completed tasks in `_docs/backlog.md` (never edit above "# TASKS")
-- **Bulk operations:** For repetitive content, use grep and scripts for efficiency; document patterns in `_docs/improvements.md`
+## ESSENTIAL WORKFLOWS
+Build: `bundle exec jekyll build` (must succeed: no YAML errors / missing includes).
+Start task: `./scripts/start-task.sh "<task>"`
+Commit: `[MODEL] concise change summary`.
+Mark done: `./scripts/mark-task-done.sh TXXX`.
+Bulk edit: script or grep+sed; then verify & document in `_docs/improvements.md`.
 
 ## PROJECT-SPECIFIC CONVENTIONS
 - All YAML must be valid and preserve delimiters
@@ -57,38 +59,27 @@
 - Automation: Scripts in `scripts/` streamline development workflow, use them
 
 ## QUALITY CHECKS
-- [ ] Site builds: `bundle exec jekyll build`
-- [ ] YAML valid
-- [ ] Changes tested
-- [ ] Documentation updated
-- [ ] Backlog updated
-- [ ] No 404 errors
+## QUALITY GATES (PASS BEFORE DONE)
+1. Build passes (no errors, key pages render).
+2. YAML valid (frontmatter + `_data` changes load).
+3. No broken internal links for touched pages.
+4. Backlog updated (task added or marked complete).
+5. No inline styles introduced.
+6. Commit created with scope-labeled message.
 
 
 ## PROCESSING GUIDELINES
-- To bulk update repeated HTML: Use `grep` and `sed` for in-place editing
-- Avoid repetitive processing of similar content; summarize or skip redundant sections in large files
-- When encountering loops in content (e.g., repeated patterns like in panama.md), process only unique sections and note the repetition
-- For files with extensive repetitive content, provide a high-level summary rather than detailed edits for each instance
-- Prioritize efficiency: if a pattern repeats, apply changes to one instance and generalize the approach
-- **Detection and Handling of Repetitive Patterns**: Before processing, scan for repeated structures (e.g., identical HTML tags, similar text blocks). Apply bulk replacements or template-based fixes.
-- **Threshold Limits**: For files over 1,000 lines with >50% repetitive content, focus on pattern identification rather than line-by-line editing.
-- **Fallback Strategy**: If repetitive processing begins, pause and request user confirmation for bulk operations.
-- **Documentation**: Note repetitive patterns in `_docs/improvements.md` for future reference and automated handling.
-- **Chunked Processing**: For large files, use read_file with limit and offset parameters to process in smaller chunks (e.g., 500-1000 lines at a time).
-- **File Size Assessment**: Before full processing, check file size and estimate processing time; for files >10MB or >5000 lines, use chunked approach.
-- **Incremental Reading**: Read sections incrementally, focusing on relevant parts first to avoid getting stuck on entire files.
-- **Pattern Location with grep_search**: Use grep_search to locate all instances of repetitive patterns before processing to plan bulk operations.
-- **Bulk Replacement Strategy**: For identical patterns, apply replacements sequentially in chunks to ensure completeness without loops.
-- **Verification of Completion**: After bulk operations, re-run grep_search to confirm no remaining instances and validate the changes.
-- **Output Management**: Avoid generating large summaries in responses; keep outputs concise and suppress unnecessary details.
-- **Context Length Management**: For large files or repetitive content, implement a chunking strategy:
-  - Break tasks into smaller subtasks that can be handled within context limits
-  - Use targeted grep searches instead of loading entire files
-  - Implement batch processing for repeated operations
-  - Create scripts for bulk operations rather than attempting to process everything in one session
-  - Avoid unnecessary file reads when patterns are already identified
-  - When processing multiple similar files, work with representative samples first
+## PROCESSING (OPTIMIZED)
+Pattern-first workflow:
+1. Detect pattern (grep/semantic).
+2. Prototype change on 1 file.
+3. Script/batch apply.
+4. Re-grep to confirm zero stale instances.
+5. Commit + document if reusable.
+
+Large files (>1000 lines): chunk read; summarize duplicates; edit unique blocks only.
+
+Skip verbosity: prefer delta summaries over full dumps.
 
 ## PROMPT FORMAT
 ```
@@ -128,6 +119,7 @@ DELIVERABLE: [Output format + DoD]
 - Javascript: minimal, only for interactivity, use htmx and alpine.js, use chart.js for charts, no heavy frameworks, use CDN for libraries, use minimal custom JS, no bundlers, no transpilers,
 
 ## AUTONOMOUS DECISION FRAMEWORK
+## DECISION FRAMEWORK (TRIMMED)
 
 ### Task Selection & Prioritization
 **AUTO-PROCEED CRITERIA:**
@@ -231,13 +223,8 @@ Impact × Effort × Risk
 5. Consolidate completed tasks back to main backlog when appropriate
 
 ### Efficiency Enhancements
-- **Parallel Tool Usage**: Call multiple independent tools simultaneously when gathering context
-- **Semantic Search Priority**: Use semantic_search for large workspaces before grep_search
-- **Chunked File Processing**: For large files (>1000 lines), read in 500-1000 line chunks
-- **Batch Operations**: Group similar edits and use scripts for bulk changes
-- **Context Minimization**: Avoid loading entire files when possible; use targeted searches
-- **Tool Selection Optimization**: Prefer replace_string_in_file over insert_edit_into_file for speed
-- **Incremental Validation**: Test changes immediately after edits to catch errors early
+### Efficiency Keys
+Semantic search first → targeted grep → minimal reads → batch edits → immediate build check.
 
 ## BACKLOG MANAGEMENT RULES
 - **Format**: Always use `[ ] | TASK_ID | DESCRIPTION | DoD` format

@@ -25,22 +25,20 @@ permalink: /merchandise/
             </div>
         </div>
 
-                <div class="merch-grid">
-                {% assign showcase = "rec-01,rec-02,rec-06,rec-07,rec-08,rec-09,sticker-whistleblower,hat-compliance,mug-money-laundering,t-shirt-happy-worker" | split: "," %}
-                {% for code in showcase %}
-                    {% assign meta = site.data.merch-skus[code] %}
-                    {% if meta %}
-                        {% assign page_obj = site.pages | where: "sku", code | first %}
-                        {% unless page_obj %}{% assign page_obj = site.pages | where_exp: "p","p.url contains code" | first %}{% endunless %}
-                        {% assign item = hash %}
-                        {% capture url %}{% if page_obj %}{{ page_obj.url }}{% else %}/merchandise/{{ code }}/{% endif %}{% endcapture %}
-                        {% assign item = item | merge: { 'url': url, 'title': meta.title, 'price': meta.price, 'sku': code } %}
-                        {% include merch-tile.html item=item %}
-                    {% endif %}
-                {% endfor %}
-                </div>
-
-                <p><a class="early-nav-link" href="/merchandise/catalog/">View Full Catalog →</a></p>
+                        <h3>All Products</h3>
+                        <div class="merch-grid">
+                        {% for code in site.data.merch-skus %}
+                            {% assign meta = site.data.merch-skus[code[0]] %}
+                            {% if meta %}
+                                {% assign page_obj = site.pages | where: "sku", code[0] | first %}
+                                {% unless page_obj %}{% assign page_obj = site.pages | where_exp: "p","p.url contains code[0]" | first %}{% endunless %}
+                                {% capture url %}{% if page_obj %}{{ page_obj.url }}{% else %}/merchandise/{{ code[0] }}/{% endif %}{% endcapture %}
+                                {% assign item = hash | merge: { 'url': url, 'title': meta.title, 'price': meta.price, 'sku': code[0] } %}
+                                {% include merch-tile.html item=item %}
+                            {% endif %}
+                        {% endfor %}
+                        </div>
+                        <p class="note-small">Catalog auto-generated from <code>_data/merch-skus.yml</code>. Update there to reflect pricing/titles.</p>
 
         <div class="early-section">
             <div class="early-section-header">Browse the Full Catalog</div>
