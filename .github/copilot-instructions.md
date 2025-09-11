@@ -13,6 +13,8 @@ NON-NEGOTIABLE:
 8. Avoid duplication; consolidate sources.
 9. Add all new work as tasks; update backlog on completion.
 10. Tone: satirical/dark humor critiquing power structures.
+11. Strongly prefer existing reusable components (includes/layouts) over adding new raw HTML blocks.
+12. Do not add new CSS unless a component gap is proven; reuse existing classes.
 
 PRIORITIES ORDER: Integrity (frontmatter) > Build passes > Content accuracy > Style compliance > Performance > Extras.
 
@@ -225,6 +227,53 @@ Impact × Effort × Risk
 ### Efficiency Enhancements
 ### Efficiency Keys
 Semantic search first → targeted grep → minimal reads → batch edits → immediate build check.
+
+## COMPONENT & LAYOUT REUSE POLICY
+Goal: Minimize bespoke markup; maximize consistency, maintainability, and performance.
+
+REUSE ORDER (highest → lowest):
+1. Existing layout (`_layouts/*.html`).
+2. Existing include (`_includes/*.html`).
+3. Existing utility/content partial (search before creating).
+4. New include (only after gap analysis + documented rationale).
+5. Temporary inline prototype (must be converted to include before task closure).
+
+MANDATES:
+- BEFORE adding markup: search for similar patterns (`grep`, semantic) and reuse.
+- NO new inline `<style>` or inline `style=""` attributes in Markdown.
+- NO new component-specific CSS unless: (a) pattern used ≥3 times, (b) not representable by existing classes.
+- All new includes: prefix with domain (`merch-`, `profile-`, `layout-`) and contain only minimal structural HTML.
+- All new includes must be referenced in a short note appended to `_docs/improvements.md` with: name, purpose, reuse potential.
+- All Markdown pages should avoid raw HTML wrappers unless required for semantic structure that Markdown cannot represent (e.g., definition lists, complex tables). Prefer short include calls.
+- When refactoring legacy inline HTML: extract to include, replace all occurrences, verify no regressions.
+- When adding a feature: perform COMPONENT INVENTORY step (list candidate existing includes) in response summary before implementing.
+
+COMPONENT INVENTORY CHECKLIST (run before creation):
+1. Pattern description and intent.
+2. Search results (candidate includes/layouts) – reuse decision.
+3. Gap justification (if new include needed) – scope, naming, reusability.
+4. Planned CSS reuse (list existing classes) or rationale for minimal new class.
+5. Test plan (pages/examples to validate after integration).
+
+CSS POLICY:
+- Prefer existing class tokens; if new, keep semantic + concise (e.g., `merch-grid`, `profile-card`).
+- No deep component nesting; flat, composable structures.
+- Avoid per-page CSS files; group domain styles (e.g., all merchandise in one stylesheet) unless size >10KB then consider splitting.
+
+CONTENT GENERATION RULES (ADDITIONAL):
+- For each new content task: explicitly state which includes/layouts will be reused.
+- If none reused, STOP and reassess—must justify exception.
+- Auto-fail quality gate if raw HTML sections replicate existing component functionality.
+
+METRICS (to track manually or later automation):
+- % of pages using at least one shared include.
+- Ratio of includes reused vs newly created per week.
+- Inline style occurrences (target: 0).
+
+FUTURE AUTOMATION IDEAS (document, do not implement ad-hoc):
+- Linter to flag raw HTML blocks >10 lines inside Markdown.
+- Script to diff `_includes` usage frequency to identify dead components.
+- Report: orphan CSS selectors not referenced in any layout/include.
 
 ## BACKLOG MANAGEMENT RULES
 - **Format**: Always use `[ ] | TASK_ID | DESCRIPTION | DoD` format
