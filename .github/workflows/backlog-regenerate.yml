@@ -1,0 +1,46 @@
+name: Backlog: backup & regenerate
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch: {}
+
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby and Bundler
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+          bundler-cache: true
+
+      - name: Install dependencies
+        run: bundle install --jobs 4 --retry 3
+
+      - name: Make scripts executable
+        run: chmod +x scripts/*.sh
+
+      - name: Backup current backlog
+        run: ./scripts/backup-backlog.sh
+
+      - name: Regenerate consolidated backlog
+        run: ./scripts/consolidate-backlogs.sh
+
+      - name: Build site (validation)
+        run: bundle exec jekyll build
+
+      - name: Commit regenerated backlog
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add _docs/backlog-all.md || true
+          if ! git diff --staged --quiet; then
+            git commit -m "chore: regenerate consolidated backlog (CI)" || true
+            git push origin HEAD:main || true
+          else
+            echo "No changes to commit"
+          fi

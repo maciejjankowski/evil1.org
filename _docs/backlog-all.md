@@ -11,6 +11,10 @@
 # regenerating).
 # -----------------------------------------------------------------------------
 
+# CI: A GitHub Action will run `scripts/backup-backlog.sh` and
+# `scripts/consolidate-backlogs.sh` on push or manual dispatch to keep this
+# file up to date (`.github/workflows/backlog-regenerate.yml`).
+
 # TASKS for GPT-4.1
 # Format: STATUS | TASK_ID | DESCRIPTION | DoD (optional)
 # STATUS: [ ] or [] for pending, [x] for complete
