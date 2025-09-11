@@ -1,0 +1,20 @@
+{% comment %} Related merchandise items based on shared tags {% endcomment %}
+{% assign current_tags = page.tags | default: [] %}
+{% if current_tags.size > 0 %}
+<div class="early-section">
+  <div class="early-section-header">Related Items</div>
+  <div class="early-section-content">
+    <ul class="related-merch">
+    {% assign matches = site.pages | where_exp: "p","p.tags" %}
+    {% for p in site.pages %}
+      {% if p.url != page.url and p.tags %}
+        {% assign overlap = p.tags | intersection: current_tags %}
+        {% if overlap.size > 0 %}
+          <li><a class="early-nav-link" href="{{ p.url }}">{{ p.title }}</a></li>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endif %}

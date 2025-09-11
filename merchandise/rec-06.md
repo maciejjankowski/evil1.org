@@ -16,3 +16,5 @@ tags: [labor, stakhanovite, satire]
 Pair with ergonomic chairs and unattainable OKRs.
 
 [Buy Now](/checkout/?sku=rec-06&title=I%20Am%20a%20Happy%20Cog&price=29.99&type=shirt)
+
+{% include merch-related.html %}

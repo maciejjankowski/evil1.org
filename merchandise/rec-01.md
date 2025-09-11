@@ -16,3 +16,5 @@ tags: [shareholder, labor, satire]
 Includes a digital pamphlet on externalities and labor exploitation. Buying this critique funds the journalism that makes it.
 
 [Buy Now](/checkout/?sku=rec-01&title=Building%20Shareholder%20Value%20%E2%80%94%20One%20Drop%20at%20a%20Time&price=29.99&type=shirt)
+
+{% include merch-related.html %}

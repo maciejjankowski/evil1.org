@@ -16,3 +16,5 @@ tags: [compliance, hr, satire]
 Perfect for sipping during mandatory trainings you won't remember.
 
 [Buy Now](/checkout/?sku=rec-02&title=Something%20Something%20Compliance&price=19.99&type=mug)
+
+{% include merch-related.html %}
