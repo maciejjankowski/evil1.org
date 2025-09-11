@@ -17,7 +17,8 @@
 - **Structure**: `_layouts/` (templates), `_includes/` (components), `_data/` (YAML data)
 - **Scripts**: `scripts/` for workflow automation
 - **CSS**: external stylesheets in `assets/` only
-**Backlog**: all tasks managed in a single consolidated file `_docs/backlog-all.md`
+- **Testing**: Playwright visual regression tests in `tests/`
+- **Backlog**: all tasks managed in a single consolidated file `_docs/backlog-all.md`
 
 ## WORKFLOW
 1. Process tasks from `_docs/backlog-all.md` autonomously and completely
@@ -37,11 +38,12 @@
 ## COMPONENT REUSE HIERARCHY
 1. Existing layout (`_layouts/*.html`)
 2. Existing include (`_includes/*.html`)
-3. Existing utility component
+3. Existing utility component (timeline-item, crime-card, stat)
 4. New include (only with documented rationale)
 
 ## COMPONENT RULES
 - NO inline `<style>` or `style=""` attributes
+- Use CSS classes: `.btn-primary`, `.btn-supporter`, `.btn-activist`, `.btn-patron`, `.cta-link`
 - NO new CSS unless pattern used ≥3 times
 - Prefix includes with domain (`merch-`, `profile-`, etc.)
 - Document all new includes in `_docs/improvements.md`
