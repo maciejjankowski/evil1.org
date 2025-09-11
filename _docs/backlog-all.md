@@ -77,6 +77,12 @@
 
 [ ] | T509 | Rework main site navigation into a data-driven component | DoD: Create `_data/topnav.yml`, `_includes/topnav.html`, update `_layouts/default.html` to include component; top nav should prioritize profitable links (Shop, Membership, Consulting, Courses, Jobs, Newsletter); ensure accessible markup and mobile menu
 
+[ ] | T510 | Remove the 'hellfire' theme entirely and clean up related assets | DoD: Remove hellfire CSS, templates and assets; perform comprehensive site scan to ensure no references remain; run `bundle exec jekyll build` and grep for 'hellfire' occurrences; Recommended model: GPT-4.1 (complex site-wide refactor)
+[ ] | T511 | Add CSS for the new top nav and mobile styles | DoD: Create `assets/css/topnav.css`, responsive mobile rules, and small utility classes; ensure contrast/accessibility and that Shop CTA is prominent; Recommended model: GPT-5 mini (implementation + CSS)
+[ ] | T512 | Wire analytics events for top nav links | DoD: Add data attributes to topnav links and include small script to emit events to Plausible/GA4; document events and test manually; Recommended model: GPT-4o (analytics & event design)
+[ ] | T513 | Move the hellfire header to use the same data-driven topnav include | DoD: Update `_layouts/default.html` hellfire section to `{% include topnav.html %}` and remove duplicate nav markup; ensure visual parity and run build; Recommended model: Grok Code Fast 1 (routine include replacement)
+[ ] | T514 | Comprehensive site scan after nav/theme changes | DoD: Run grep and link checks across repo and `_site`, create report in `_docs/link-audit.md` and `_docs/refactor.md` with any remaining issues; Recommended model: GPT-4.1 (audit & fixes)
+
 # TASKS for Grok Code Fast 1
 # Format: STATUS | TASK_ID | DESCRIPTION | DoD (optional)
 # STATUS: [ ] or [] for pending, [x] for complete
