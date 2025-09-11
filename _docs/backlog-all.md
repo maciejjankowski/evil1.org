@@ -1,3 +1,16 @@
+# -----------------------------------------------------------------------------
+# BACKLOG-ALL: single source of truth (auto-generated)
+# -----------------------------------------------------------------------------
+# This file is the consolidated backlog and the single source of truth for
+# task tracking. Do not edit manually above the tasks section. To regenerate
+# the consolidated backlog run:
+#
+#   ./scripts/consolidate-backlogs.sh
+#
+# Backups are created by `scripts/backup-backlog.sh` (recommended before
+# regenerating).
+# -----------------------------------------------------------------------------
+
 # TASKS for GPT-4.1
 # Format: STATUS | TASK_ID | DESCRIPTION | DoD (optional)
 # STATUS: [ ] or [] for pending, [x] for complete

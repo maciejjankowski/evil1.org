@@ -5,3 +5,5 @@ _site
 vendor
 .obsidian/*
 .DS_Store
+_docs/backlog-backups/
+scripts/*-backlog.sh
