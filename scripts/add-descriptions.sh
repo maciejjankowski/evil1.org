@@ -8,7 +8,7 @@ echo "======================================"
 # Files that need descriptions added
 files_to_update=(
     "_docs/workflow.md"
-    "_docs/backlog.md"
+    "_docs/backlog-all.md"
     "_docs/instructions.md"
     "_docs/test-page.md"
     "_docs/test-blueprint.md"
@@ -57,7 +57,7 @@ for file in "${files_to_update[@]}"; do
         "workflow.md")
             add_description "$file" "Comprehensive development workflow with Copilot model selection for Jekyll site development"
             ;;
-        "backlog.md")
+        "backlog-all.md")
             add_description "$file" "Project backlog and task management for evil1.org development"
             ;;
         "instructions.md")

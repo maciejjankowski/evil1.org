@@ -13,7 +13,7 @@ files_to_update=(
     "README.md"
     "_docs/instructions.md"
     "_docs/workflow.md"
-    "_docs/backlog.md"
+    "_docs/backlog-all.md"
 )
 
 # Function to add author and date to a file
@@ -65,7 +65,7 @@ for file in "${files_to_update[@]}"; do
         "CONTENT_FORMAT_STANDARDS.md"|"README.md")
             add_metadata "$file" "Development Team" "2025-09-08"
             ;;
-        "_docs/instructions.md"|"_docs/workflow.md"|"_docs/backlog.md")
+        "_docs/instructions.md"|"_docs/workflow.md"|"_docs/backlog-all.md")
             add_metadata "$file" "AI Assistant" "2025-09-08"
             ;;
         *)

@@ -3,7 +3,7 @@
 ## CORE RULES (ESSENTIAL)
 1. Preserve YAML frontmatter exactly; never strip `---`
 2. No inline styles — only external CSS
-3. No edits to `_dont touch/` files
+3. No edits to `_dont touch/` files or above `# TASKS` in `_docs/backlog.md`
 4. Use `./scripts/mark-task-done.sh TASK_ID` to mark task completion
 5. Commit before any risky/destructive change
 6. Always test before declaring done: `bundle exec jekyll build`
@@ -16,12 +16,12 @@
 - **Structure**: `_layouts/` (templates), `_includes/` (components), `_data/` (YAML data)
 - **Scripts**: `scripts/` for workflow automation
 - **CSS**: external stylesheets in `assets/` only
-**Backlog**: all tasks managed in a single consolidated file `_docs/backlog-all.md`
+- **Backlog**: tasks managed in `_docs/backlog*.md` files
 
 ## WORKFLOW
-1. Process tasks from `_docs/backlog-all.md` autonomously and completely
+1. Process tasks in model-specific backlog autonomously and completely
 2. Build → Test → Commit → Mark complete → Next task
-3. Commit format: `[TASK_ID] Brief description`
+3. Commit format: `[MODEL] Brief description`
 4. Update backlog using `./scripts/mark-task-done.sh TASK_ID`
 5. Continue without pausing until backlog is complete
 
@@ -57,7 +57,7 @@
 - Significant architectural changes needed
 
 ## BACKLOG MANAGEMENT
-- All tasks are tracked in `_docs/backlog-all.md` using the format: `[ ] | TASK_ID | DESCRIPTION | DoD`
+- Format: `[ ] | TASK_ID | DESCRIPTION | DoD`
 - Status: `[ ]` pending, `[x]` complete
 - Use unique task IDs (T001, T002...)
 - Include Definition of Done

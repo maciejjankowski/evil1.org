@@ -16,7 +16,7 @@
 ### Development Process
 1. **Read Instructions**: `_docs/instructions.md` - Core guidelines and model selection
 2. **Follow Workflow**: `_docs/workflow.md` - Complete development process
-3. **Check Tasks**: `_docs/backlog.md` - Current priorities and tasks
+3. **Check Tasks**: `_docs/backlog-all.md` - Current priorities and tasks
 4. **Review History**: `_docs/improvements.md` - Lessons learned and best practices
 5. **AI Guidelines**: `.github/COPILOT.md` - AI assistant guidelines
 

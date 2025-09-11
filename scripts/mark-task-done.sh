@@ -10,7 +10,7 @@ if [ $# -eq 0 ]; then
 fi
 
 TASK_ID=$1
-BACKLOG_FILE="/Users/mj/code/evil1.org/_docs/backlog.md"
+BACKLOG_FILE="/Users/mj/code/evil1.org/_docs/backlog-all.md"
 
 # Check if task exists
 if ! grep -q "$TASK_ID" "$BACKLOG_FILE"; then
