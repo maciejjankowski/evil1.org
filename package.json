@@ -1,0 +1,31 @@
+{
+  "name": "evil1.org",
+  "version": "1.0.0",
+  "description": "```bash # Initialize task with model selection ./scripts/start-task.sh \"Fix 404 errors in education section\"",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "visual-baseline": "playwright test --update-snapshots"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maciejjankowski/evil1.org.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/maciejjankowski/evil1.org/issues"
+  },
+  "homepage": "https://github.com/maciejjankowski/evil1.org#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "playwright": "^1.55.0"
+  }
+}

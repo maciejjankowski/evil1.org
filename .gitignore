@@ -6,4 +6,7 @@ vendor
 .obsidian/*
 .DS_Store
 _docs/backlog-backups/
-scripts/*-backlog.sh
+node_modules/
+test-results/
+playwright-report/
+playwright/.cache/
