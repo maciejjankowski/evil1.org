@@ -106,3 +106,243 @@ t-shirt-recursive:
   price: 29.99
   currency: USD
   stripe_price_id: price_REPLACE_RECURSIVE
+rec-11:
+  title: "Corporate Ethics (Desk Plaque)"
+  type: plaque
+  price: 17.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC11
+rec-12:
+  title: "Money Laundering Beach Towel"
+  type: towel
+  price: 24.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC12
+rec-13:
+  title: "I ♥ KPIs (Sticker)"
+  type: sticker
+  price: 5.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC13
+rec-14:
+  title: "Move Fast and Break Workers"
+  type: poster
+  price: 12.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC14
+rec-15:
+  title: "Deliveroo, Not Deliverance (Cap)"
+  type: cap
+  price: 22.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC15
+rec-16:
+  title: "Live, Laugh, Leverage (Canvas)"
+  type: canvas
+  price: 39.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC16
+rec-17:
+  title: "Synergy Is My Love Language (Notebook)"
+  type: notebook
+  price: 14.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC17
+rec-18:
+  title: "Mission Statements Cause Emissions (Tote)"
+  type: tote
+  price: 16.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC18
+rec-19:
+  title: "Quiet Quitting, Loud Exploitation (Hoodie)"
+  type: hoodie
+  price: 44.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC19
+rec-20:
+  title: "Infinite Growth, Finite Planet (Bottle)"
+  type: bottle
+  price: 21.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC20
+rec-21:
+  title: "Stakeholder, Shareholder, Shackled"
+  type: shirt
+  price: 29.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC21
+rec-22:
+  title: "Culture Fit, Wallet Split (Mug)"
+  type: mug
+  price: 19.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC22
+rec-23:
+  title: "Meritocracy Is a Pyramid Scheme"
+  type: poster
+  price: 12.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC23
+rec-24:
+  title: "Be Here Now (Until 9PM) (Desk Mat)"
+  type: desk-mat
+  price: 18.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC24
+rec-25:
+  title: "Productivity: The Opium of the Office (Notebook)"
+  type: notebook
+  price: 14.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC25
+rec-26:
+  title: "Do What You Love (For Us)"
+  type: shirt
+  price: 29.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC26
+rec-27:
+  title: "Hustle and Bustle and Burnout (Bottle)"
+  type: bottle
+  price: 21.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC27
+rec-28:
+  title: "Great Resignation, Greater Exploitation"
+  type: poster
+  price: 12.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC28
+rec-29:
+  title: "Ladder Climbers Anonymous (Notebook)"
+  type: notebook
+  price: 14.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC29
+rec-30:
+  title: "Teamwork Makes the Dream (Of Shareholders) Work"
+  type: shirt
+  price: 29.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC30
+rec-31:
+  title: "Optimize This (Mouse Pad)"
+  type: mouse-pad
+  price: 11.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC31
+rec-32:
+  title: "Welcome to the Family (Cult)"
+  type: shirt
+  price: 29.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC32
+rec-33:
+  title: "Unlimited PTO (Pending Manager Approval) (Calendar)"
+  type: calendar
+  price: 15.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC33
+rec-34:
+  title: "Please Fix in Post (Hoodie)"
+  type: hoodie
+  price: 44.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC34
+rec-35:
+  title: "Synergize, Monetize, Minimize (Coasters)"
+  type: coasters
+  price: 12.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC35
+rec-36:
+  title: "Innovate by Imitating (Notebook)"
+  type: notebook
+  price: 14.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC36
+rec-37:
+  title: "Open Plan, Closed Minds"
+  type: poster
+  price: 12.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC37
+rec-38:
+  title: "Security by Obscurity (Notebook)"
+  type: notebook
+  price: 14.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC38
+rec-39:
+  title: "We Value Transparency (When Convenient)"
+  type: shirt
+  price: 29.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC39
+rec-40:
+  title: "Professionalism Is a Vibe (Mug)"
+  type: mug
+  price: 19.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC40
+rec-41:
+  title: "Thought Leadership, Thoughtless Followership"
+  type: poster
+  price: 12.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC41
+rec-42:
+  title: "Data-Driven, People-Starved (Notebook)"
+  type: notebook
+  price: 14.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC42
+rec-43:
+  title: "Agile Until It Hurts (Hat)"
+  type: hat
+  price: 24.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC43
+rec-44:
+  title: "Best Practices, Worst Outcomes (Binder)"
+  type: binder
+  price: 13.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC44
+rec-45:
+  title: "Enterprise, But Make It Fashion (Tote)"
+  type: tote
+  price: 16.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC45
+rec-46:
+  title: "Compliance: Our Favorite Fiction (Paperback)"
+  type: paperback
+  price: 12.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC46
+rec-47:
+  title: "Move the Needle, Not the Goalposts (Sticker)"
+  type: sticker
+  price: 5.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC47
+rec-48:
+  title: "Vision 2030, Budget 1997 (Mug)"
+  type: mug
+  price: 19.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC48
+rec-49:
+  title: "Radically Candid, Strategically Vague"
+  type: shirt
+  price: 29.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC49
+rec-50:
+  title: "Deliver Value, Defer Responsibility (Hoodie)"
+  type: hoodie
+  price: 44.99
+  currency: USD
+  stripe_price_id: price_REPLACE_REC50
