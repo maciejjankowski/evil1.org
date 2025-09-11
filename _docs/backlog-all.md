@@ -75,6 +75,8 @@
 [ ] | T507 | Implement dark mode toggle | DoD: Add dark theme CSS, implement preference toggle, ensure all components support both themes
 [ ] | T508 | Create RSS feeds by category | DoD: Implement category-specific RSS feeds, add subscription options
 
+[ ] | T509 | Rework main site navigation into a data-driven component | DoD: Create `_data/topnav.yml`, `_includes/topnav.html`, update `_layouts/default.html` to include component; top nav should prioritize profitable links (Shop, Membership, Consulting, Courses, Jobs, Newsletter); ensure accessible markup and mobile menu
+
 # TASKS for Grok Code Fast 1
 # Format: STATUS | TASK_ID | DESCRIPTION | DoD (optional)
 # STATUS: [ ] or [] for pending, [x] for complete

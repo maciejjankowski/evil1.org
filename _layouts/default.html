@@ -150,22 +150,11 @@
         <div id="footer-copyright">evil1.org © {{ "now" | date: "%Y" }}</div>
     </div>
     {% else %}
-    <!-- Enhanced Blue Theme Navigation -->
+    <!-- Enhanced Blue Theme Navigation (data-driven) -->
     <div class="early-header">
         <div class="early-header-inner">
             <div class="early-logo">{{ site.title | default: "evil1.org" }}</div>
-                        <nav class="early-nav">
-                <a href="/" class="early-nav-link">Home</a>
-                <a href="/articles/" class="early-nav-link">Articles</a>
-                <a href="/company/" class="early-nav-link">Companies</a>
-                <a href="/profiles/" class="early-nav-link">Profiles</a>
-                <a href="/members/" class="early-nav-link">Members</a>
-                <a href="/organizations/" class="early-nav-link">Organizations</a>
-                <a href="/halloffame/" class="early-nav-link">Hall of Fame</a>
-                <a href="/education/" class="early-nav-link">Education</a>
-                <a href="/jobs/" class="early-nav-link">Jobs</a>
-                <a href="/merchandise/" class="early-nav-link" style="background: #FFD700; color: #003366; padding: 6px 12px; border-radius: 4px; font-weight: bold;">🛍️ Shop</a>
-            </nav>
+                        {% include topnav.html %}
             <div class="early-user-nav">
                 <a href="/register/" class="early-nav-link" style="background: #003366; color: white; padding: 6px 12px; border-radius: 4px; margin-right: 8px;">Join</a>
                 <a href="/login/" class="early-nav-link">Sign In</a>

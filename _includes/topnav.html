@@ -1,0 +1,24 @@
+{%- assign links = site.data.topnav | sort: 'priority' -%}
+<nav class="topnav" aria-label="Main navigation">
+  <button id="topnav-toggle" aria-expanded="false" aria-controls="topnav-list">Menu</button>
+  <ul id="topnav-list" class="topnav-list">
+  {%- for item in links -%}
+    <li class="topnav-item">
+      <a href="{{ item.url | relative_url }}" class="topnav-link" {%- if item.external %} target="_blank" rel="noopener"{%- endif -%}>{{ item.title }}</a>
+    </li>
+  {%- endfor -%}
+  </ul>
+</nav>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  var btn = document.getElementById('topnav-toggle');
+  var list = document.getElementById('topnav-list');
+  if(!btn || !list) return;
+  btn.addEventListener('click', function(){
+    var expanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!expanded));
+    list.style.display = expanded ? 'none' : 'block';
+  });
+});
+</script>
