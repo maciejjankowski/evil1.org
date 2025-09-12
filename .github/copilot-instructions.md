@@ -183,7 +183,7 @@ pkill -f jekyll
 rm -rf _site && bundle exec jekyll build
 
 # Reset bundle config (if permission issues)
-rm -rf vendor/bundle .bundle && bundle config set --local path 'vendor/bundle' && bundle install
+rm -rf vendor/bundle && find .bundle -mindepth 1 ! -name 'config' -exec rm -rf {} + && git checkout -- .bundle/config && bundle config set --local path 'vendor/bundle' && bundle install
 ```
 
 ## Timeout Recommendations
