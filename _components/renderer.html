@@ -1,0 +1,25 @@
+---
+# Component Renderer
+---
+
+{%- comment -%}
+  This is a placeholder component renderer.
+  In a full implementation, this would render components from page.components array.
+{%- endcomment -%}
+
+{% if page.components %}
+  <div class="components-container">
+    {% for component in page.components %}
+      <div class="component component-{{ component.type | replace: '/', '-' }}">
+        {% if component.title %}
+          <h3>{{ component.title }}</h3>
+        {% endif %}
+        {% if component.content %}
+          <div class="component-content">
+            {{ component.content | markdownify }}
+          </div>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}

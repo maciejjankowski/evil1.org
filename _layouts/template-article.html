@@ -7,15 +7,29 @@ layout: default
   Uses the unified components renderer when `components` are provided in frontmatter.
 {%- endcomment -%}
 
-{% include _components/helper.html %}
-
 <main class="page-content">
   <article class="article-page">
-  {{ component('ui/post-header', author: page.author, author_title: page.author_title, date: page.date) }}
-  {% include breadcrumbs.html title=page.title path=page.url %}
+
+    <!-- Article Header -->
+    <header class="article-header">
+      <h1>{{ page.title }}</h1>
+      {% if page.author %}
+        <div class="article-meta">
+          <span class="author">By {{ page.author }}</span>
+          {% if page.author_title %}
+            <span class="author-title">{{ page.author_title }}</span>
+          {% endif %}
+          {% if page.date %}
+            <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%B %d, %Y' }}</time>
+          {% endif %}
+        </div>
+      {% endif %}
+    </header>
+
+    {% include breadcrumbs.html title=page.title path=page.url %}
 
     {% if page.hero %}
-      {% include _components/helper.html type=page.hero.type title=page.hero.title subtitle=page.hero.subtitle cta_text=page.hero.cta_text cta_href=page.hero.cta_href %}
+      {% include _components/ui/hero.html title=page.hero.title subtitle=page.hero.subtitle cta_text=page.hero.cta_text cta_href=page.hero.cta_href %}
     {% endif %}
 
     {% if page.components %}

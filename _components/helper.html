@@ -1,0 +1,22 @@
+---
+# Component Helper
+---
+
+{%- comment -%}
+  This is a placeholder component helper.
+  In a full implementation, this would handle component rendering logic.
+{%- endcomment -%}
+
+{% if include.type %}
+  <div class="component component-{{ include.type | replace: '/', '-' }}">
+    {% if include.title %}
+      <h2>{{ include.title }}</h2>
+    {% endif %}
+    {% if include.subtitle %}
+      <p>{{ include.subtitle }}</p>
+    {% endif %}
+    {% if include.cta_text and include.cta_href %}
+      <a href="{{ include.cta_href }}" class="cta-button">{{ include.cta_text }}</a>
+    {% endif %}
+  </div>
+{% endif %}
