@@ -10,7 +10,7 @@ if [ $# -eq 0 ]; then
 fi
 
 TASK_ID=$1
-BACKLOG_FILE="/Users/mj/code/evil1.org/_docs/backlog-all.md"
+BACKLOG_FILE="_docs/backlog-all.md"
 
 # Check if task exists
 if ! grep -q "$TASK_ID" "$BACKLOG_FILE"; then
@@ -19,6 +19,10 @@ if ! grep -q "$TASK_ID" "$BACKLOG_FILE"; then
 fi
 
 # Mark task as done
-sed -i '' "s/\[ \] | $TASK_ID |/\[x\] | $TASK_ID |/" "$BACKLOG_FILE"
+if [[ "$(uname)" == "Darwin" ]]; then
+    sed -i '' "s/\[ \] | $TASK_ID |/\[x\] | $TASK_ID |/" "$BACKLOG_FILE"
+else
+    sed -i "s/\[ \] | $TASK_ID |/\[x\] | $TASK_ID |/" "$BACKLOG_FILE"
+fi
 
 echo "Task $TASK_ID marked as complete"

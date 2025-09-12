@@ -1,15 +1,17 @@
 ---
-layout: default
+layout: docs
 title: "Component Styling Enhancement Report"
 description: "Comprehensive analysis and enhancement plan for buttons, cards, navigation, and forms components"
 permalink: "/component-styling-report/"
+
+meta_info:
+  - label: "Generated"
+    value: "{{ site.time | date: '%B %d, %Y at %H:%M' }}"
+  - label: "Analysis Model"
+    value: "GPT-5 mini"
+  - label: "Complexity"
+    value: "Medium"
 ---
-
-# Component Styling Enhancement Report
-
-**Generated:** {{ site.time | date: "%B %d, %Y at %H:%M" }}
-**Analysis Model:** GPT-5 mini
-**Complexity:** Medium
 
 ## 🎨 Component Analysis Summary
 
