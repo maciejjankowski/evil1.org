@@ -1,0 +1,100 @@
+---
+layout: default
+title: "Components Library Demo"
+description: "Demonstration of the unified components library"
+components:
+  - type: layout/hero
+    title: "Unified Components Library"
+    subtitle: "A cohesive system for building Evil1.org"
+    cta_text: "View Documentation"
+    cta_href: "/_components/README.md"
+
+  - type: layout/section
+    title: "Core Components"
+    content: |
+      <p>Foundational building blocks for content display:</p>
+
+  - type: core/stat
+    number: "15"
+    label: "Components Created"
+    description: "Across all categories"
+
+  - type: core/stat
+    number: "4"
+    label: "Categories"
+    description: "Core, UI, Layout, Interactive"
+
+  - type: core/stat
+    number: "100%"
+    label: "Frontmatter Driven"
+    description: "No more inline HTML"
+
+  - type: layout/section
+    title: "UI Components Demo"
+    content: |
+      <p>Interactive UI elements:</p>
+
+  - type: ui/button
+    text: "Primary Action"
+    type: "primary"
+
+  - type: ui/button
+    text: "Secondary Action"
+    type: "secondary"
+
+  - type: ui/button
+    text: "Danger Action"
+    type: "danger"
+
+  - type: ui/alert
+    type: "info"
+    title: "Information"
+    message: "This is an informational alert message."
+
+  - type: ui/alert
+    type: "success"
+    title: "Success"
+    message: "Operation completed successfully!"
+
+  - type: ui/card
+    title: "Sample Card"
+    content: "<p>This is a sample card component with content.</p>"
+    footer: "Card footer content"
+
+  - type: layout/section
+    title: "Interactive Components"
+    content: |
+      <p>HTMX-powered dynamic components:</p>
+
+  - type: interactive/search
+    placeholder: "Search components..."
+    endpoint: "/search"
+
+  - type: interactive/notification
+    type: "success"
+    message: "Components library successfully integrated!"
+    duration: 3000
+
+  - type: layout/section
+    title: "Migration Benefits"
+    content: |
+      <h3>✅ What We've Achieved:</h3>
+      <ul>
+        <li><strong>Unified System:</strong> Single library for all components</li>
+        <li><strong>Frontmatter Driven:</strong> Configuration through YAML</li>
+        <li><strong>Consistent API:</strong> Same interface across all components</li>
+        <li><strong>Easy Maintenance:</strong> Centralized styles and logic</li>
+        <li><strong>Scalable:</strong> Easy to add new components</li>
+        <li><strong>Documentation:</strong> Comprehensive usage guide</li>
+      </ul>
+
+      <h3>🔄 Migration Path:</h3>
+      <ul>
+        <li>Replace `/htmx/` files with `interactive/` components</li>
+        <li>Convert `/components/` to `ui/` or `layout/` components</li>
+        <li>Move `_includes/` logic to frontmatter configuration</li>
+        <li>Update `_layouts/` to use component renderer</li>
+      </ul>
+---
+
+{% include _components/renderer.html %}

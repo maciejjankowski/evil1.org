@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+<div class="early-section">
+    {% include _components/ui/section-header.html title="Organizations Directory" %}
+    <div class="early-section-content">
+        <p>Modern institutions perfecting the art of systematic exploitation, regulatory capture, and legalized theft. Study their methods to understand contemporary evil.</p>
+
+        {% for org in site.organizations %}
+            <div class="early-article">
+                <div class="early-article-header">
+                    <h2 class="early-article-title">
+                        <a href="{{ org.url | relative_url }}" style="color: #003366; text-decoration: none;">{{ org.organization.name | default: org.title }}</a>
+                    </h2>
+                </div>
+                <div class="early-article-content">
+                    <p>{{ org.organization.description | default: org.description }}</p>
+
+                    {% if org.organization.topics %}
+                        <div style="margin-bottom: 8px;">
+                            <strong>Key Topics:</strong>
+                            <div style="font-size: 11px; color: #666;">
+                                {% for topic in org.organization.topics limit: 3 %}{{ topic }}{% unless forloop.last %}, {% endunless %}{% endfor %}
+                                {% if org.organization.topics.size > 3 %} (+{{ org.organization.topics.size | minus: 3 }} more){% endif %}
+                            </div>
+                        </div>
+                    {% endif %}
+
+                    <div class="early-article-footer">
+                        <a href="{{ org.url | relative_url }}" class="early-nav-link" style="font-size: 11px; padding: 4px 8px;">View Organization →</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+        {% if site.organizations.size == 0 %}
+            <div class="early-article">
+                <div class="early-article-content">
+                    <p>No organizations documented yet. The masters of exploitation are busy consolidating power.</p>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</div>

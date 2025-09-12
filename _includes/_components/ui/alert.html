@@ -1,0 +1,25 @@
+---
+# UI Alert Component
+# Notification/alert message with various types
+---
+
+{%- assign component = include.component -%}
+{%- assign type = component.type | default: "info" -%}
+{%- assign title = component.title -%}
+{%- assign message = component.message -%}
+{%- assign dismissible = component.dismissible | default: false -%}
+{%- assign class = component.class | default: "" -%}
+
+<div class="alert alert-{{ type }} {{ class }}" role="alert">
+  {% if dismissible %}
+    <button type="button" class="alert-close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  {% endif %}
+
+  {% if title %}
+    <h4 class="alert-title">{{ title }}</h4>
+  {% endif %}
+
+  <div class="alert-message">{{ message }}</div>
+</div>

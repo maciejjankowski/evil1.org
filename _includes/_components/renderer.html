@@ -1,0 +1,45 @@
+---
+# Unified Component Renderer
+# This include handles rendering all component types based on frontmatter data
+---
+
+{%- comment -%}
+  Usage in frontmatter:
+  ---
+  components:
+    - type: core/stat
+      number: "1,200"
+      label: "Articles Published"
+      description: "Total articles in our database"
+    - type: ui/button
+      text: "Learn More"
+      href: "/about"
+      type: "primary"
+    - type: layout/hero
+      title: "Welcome to Evil1.org"
+      subtitle: "Exposing corporate evil worldwide"
+      cta_text: "Get Started"
+      cta_href: "/join"
+  ---
+{%- endcomment -%}
+
+{% if page.components %}
+  {% for component in page.components %}
+    {% assign component_parts = component.type | split: "/" %}
+    {% assign category = component_parts[0] %}
+    {% assign name = component_parts[1] %}
+
+    {% case category %}
+      {% when "core" %}
+        {% include _components/core/{{ name }}.html component=component %}
+      {% when "ui" %}
+        {% include _components/ui/{{ name }}.html component=component %}
+      {% when "layout" %}
+        {% include _components/layout/{{ name }}.html component=component %}
+      {% when "interactive" %}
+        {% include _components/interactive/{{ name }}.html component=component %}
+      {% when "widget" %}
+        {% include _components/widget/{{ name }}.html component=component %}
+    {% endcase %}
+  {% endfor %}
+{% endif %}

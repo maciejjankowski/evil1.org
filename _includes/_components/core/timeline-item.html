@@ -1,0 +1,16 @@
+---
+# Core Timeline Item Component
+# Displays a timeline entry with year, title, and description
+---
+
+{%- assign component = include.component -%}
+{%- assign year = component.year -%}
+{%- assign title = component.title -%}
+{%- assign description = component.description -%}
+{%- assign class = component.class | default: "" -%}
+
+<div class="timeline-item {{ class }}">
+  <div class="timeline-year">{{ year }}</div>
+  <h3 class="timeline-title">{{ title }}</h3>
+  <p class="timeline-description">{{ description }}</p>
+</div>

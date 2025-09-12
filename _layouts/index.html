@@ -1,0 +1,28 @@
+<div class="index-page">
+  <header class="page-header">
+    <h1>{{ page.title }}</h1>
+    <p class="page-description">{{ page.intro }}</p>
+    {% if page.feed_link %}
+    <div><a href="{{ page.feed_link | relative_url }}" class="read-more">View Live Feed →</a></div>
+    {% endif %}
+  </header>
+  <div class="content-grid">
+    {% for item in page.items %}
+    <article class="content-card{% if item.cta %} apply-card{% endif %}">
+      <header class="card-header">
+        <h2 class="card-title">{% if item.url %}<a href="{{ item.url | relative_url }}">{% endif %}{{ item.title | default: item.name }}{% if item.url %}</a>{% endif %}</h2>
+        {% if item.meta %}
+        <div class="card-meta">{{ item.meta }}</div>
+        {% endif %}
+        {% if item.classification %}
+        <div class="card-classification">{{ item.classification }}</div>
+        {% endif %}
+      </header>
+      <div class="card-summary">{{ item.summary | default: item.description }}</div>
+      <footer class="card-footer">
+        <a href="{{ item.url | relative_url }}" class="read-more">{{ item.cta | default: 'Learn More →' }}</a>
+      </footer>
+    </article>
+    {% endfor %}
+  </div>
+</div>

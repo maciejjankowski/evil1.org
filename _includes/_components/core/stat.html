@@ -1,0 +1,18 @@
+---
+# Core Stat Component
+# Displays a statistic with number, label, and optional description
+---
+
+{%- assign component = include.component -%}
+{%- assign number = component.number -%}
+{%- assign label = component.label -%}
+{%- assign description = component.description | default: "" -%}
+{%- assign class = component.class | default: "" -%}
+
+<div class="stat {{ class }}">
+  <div class="stat-number">{{ number }}</div>
+  <div class="stat-label">{{ label }}</div>
+  {% if description %}
+    <div class="stat-description">{{ description }}</div>
+  {% endif %}
+</div>

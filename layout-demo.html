@@ -1,0 +1,78 @@
+---
+layout: default
+title: "Layout Components Demo"
+description: "Demonstration of header, footer, and widget components"
+components:
+  - type: layout/header
+    title: "EVIL1.ORG"
+    navigation:
+      - title: "Home"
+        url: "/"
+      - title: "Companies"
+        url: "/company/"
+      - title: "Hall of Fame"
+        url: "/halloffame/"
+      - title: "Login"
+        url: "/login"
+      - title: "Register"
+        url: "/register"
+    search: true
+    user_menu: true
+
+  - type: layout/hero
+    title: "Layout Components Showcase"
+    subtitle: "Header, Footer, and Widget Components"
+    cta_text: "Explore Components"
+    cta_href: "/components-demo.html"
+
+  - type: layout/section
+    title: "Widget Components"
+    content: |
+      <p>Powerful sidebar and content widgets for enhanced user experience:</p>
+
+  - type: widget/featured-articles
+    limit: 3
+    title: "🔥 Hot Articles"
+
+  - type: layout/section
+    title: "Layout System Benefits"
+    content: |
+      <h3>✅ Unified Design System</h3>
+      <ul>
+        <li><strong>Consistent Styling:</strong> All components share the same design language</li>
+        <li><strong>Responsive Design:</strong> Mobile-first approach with flexible layouts</li>
+        <li><strong>Frontmatter Configuration:</strong> Easy customization without code changes</li>
+        <li><strong>Modular Architecture:</strong> Components can be mixed and matched</li>
+        <li><strong>Performance Optimized:</strong> Efficient CSS and minimal JavaScript</li>
+      </ul>
+
+      <h3>🔧 Easy Migration</h3>
+      <ul>
+        <li>Replace old includes with frontmatter components</li>
+        <li>Keep existing functionality while upgrading design</li>
+        <li>Gradual migration with backward compatibility</li>
+        <li>Comprehensive documentation and examples</li>
+      </ul>
+
+  - type: layout/footer
+    copyright: "2025 EVIL1.ORG"
+    links:
+      - title: "About"
+        url: "/about"
+      - title: "Privacy"
+        url: "/privacy"
+      - title: "Terms"
+        url: "/terms"
+      - title: "Contact"
+        url: "/contact"
+    social:
+      - platform: "twitter"
+        icon: "🐦"
+        url: "https://twitter.com/evil1org"
+      - platform: "github"
+        icon: "💻"
+        url: "https://github.com/evil1org"
+    disclaimer: "This site exposes corporate evil. All information is for educational purposes."
+---
+
+{% include _components/renderer.html %}

@@ -1,0 +1,18 @@
+---
+# Core Crime Card Component
+# Displays corporate crime/scandal information
+---
+
+{%- assign component = include.component -%}
+{%- assign title = component.title -%}
+{%- assign description = component.description -%}
+{%- assign impact = component.impact | default: "" -%}
+{%- assign class = component.class | default: "" -%}
+
+<div class="crime-card {{ class }}">
+  <h3 class="crime-title">{{ title }}</h3>
+  <p class="crime-description">{{ description }}</p>
+  {% if impact %}
+    <div class="crime-impact">{{ impact }}</div>
+  {% endif %}
+</div>

@@ -1,0 +1,25 @@
+---
+# Interactive Load More Component
+# Load more content with HTMX pagination
+---
+
+{%- assign component = include.component -%}
+{%- assign endpoint = component.endpoint -%}
+{%- assign button_text = component.button_text | default: "Load More" -%}
+{%- assign loading_text = component.loading_text | default: "Loading..." -%}
+{%- assign class = component.class | default: "" -%}
+
+<div class="load-more-container {{ class }}">
+  <div id="content-container">
+    <!-- Initial content goes here -->
+  </div>
+
+  <button class="load-more-btn"
+          hx-get="{{ endpoint }}"
+          hx-target="#content-container"
+          hx-swap="beforeend"
+          hx-indicator="#load-indicator">
+    <span class="button-text">{{ button_text }}</span>
+    <span id="load-indicator" class="loading-indicator">{{ loading_text }}</span>
+  </button>
+</div>

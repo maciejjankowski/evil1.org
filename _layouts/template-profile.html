@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+{%- comment -%}
+  Standard Profile Template
+{%- endcomment -%}
+
+{% include _components/helper.html %}
+
+<main class="page-content profile-page">
+  {% if page.hero %}
+    {% include _components/helper.html type=page.hero.type title=page.hero.title subtitle=page.hero.subtitle %}
+  {% endif %}
+
+  <section class="profile-overview">
+    <h1>{{ page.title }}</h1>
+    {% if page.summary %}
+      <p>{{ page.summary }}</p>
+    {% endif %}
+
+    {% if page.components %}
+      {% include _components/renderer.html %}
+    {% endif %}
+  </section>
+
+  <aside class="profile-meta">
+    {% include _components/helper.html type='widget/author-info' author=page.author author_title=page.author_title author_bio=page.author_bio %}
+  </aside>
+</main>

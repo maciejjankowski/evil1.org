@@ -1,6 +1,8 @@
 # COPILOT INSTRUCTIONS
 
 ## CORE RULES (ESSENTIAL)
+0. ALL WORK MUST BE FULLY AUTOMATED WITHOUT HUMAN INTERVENTION
+0. ALL WORK MUST BE ADDED TO THE BACKLOG AND PROCESSED FROM THERE
 1. Preserve YAML frontmatter exactly; never strip `---`
 2. No inline styles — only external CSS
 3. No edits to `_dont touch/` files
@@ -22,14 +24,40 @@
 
 ## WORKFLOW
 1. Process tasks from `_docs/backlog-all.md` autonomously and completely
-2. Build → **Visual Test** → Commit → Mark complete → Next task
-3. Commit format: `[TASK_ID] Brief description`
-4. Update backlog using `./scripts/mark-task-done.sh TASK_ID`
-5. Continue without pausing until backlog is complete
+2. **After layout/CSS changes**: Run `npm test` to check for visual regressions
+3. Build → **Visual Test** → Commit → Mark complete → Next task
+4. Commit format: `[TASK_ID] Brief description`
+5. Update backlog using `./scripts/mark-task-done.sh TASK_ID`
+6. Continue without pausing until backlog is complete
+
+## TESTING WORKFLOW
+1. **Before committing layout changes**: Run `npm test`
+2. **If tests fail**: Check `playwright-report/` for visual differences
+3. **Update snapshots**: Run `npm run visual-baseline` if changes are intentional
+4. **Verify fixes**: Re-run `npm test` to ensure tests pass
+
+## TESTING SETUP
+- **Visual Tests**: `npm test` - Playwright tests run once and exit cleanly
+- **Test Reports**: Generated in `playwright-report/` folder (no auto-open)
+- **Test Configuration**: 
+  - HTML reporter with `outputFolder: 'playwright-report'` and `open: 'never'`
+  - Reuses existing Jekyll server on port 4000
+  - 10-minute global timeout, 5-second expect timeout
+  - Screenshot tolerance: 100 max diff pixels, 20% threshold
+
+## TESTING COMMANDS
+- `npm test` - Run all visual regression tests
+- `npm run test:headed` - Run tests with browser UI visible
+- `npm run test:ui` - Run tests with Playwright UI mode
+- `npm run visual-baseline` - Update visual snapshots (after layout changes)
+- `npx playwright show-report playwright-report` - View test results manually
 
 ## QUALITY CHECKS
 1. Build passes: `bundle exec jekyll build` (no YAML errors)
 2. **Visual tests pass: `npm test` (no layout regressions)**
+   - Tests run automatically and exit cleanly
+   - Reports saved to `playwright-report/` folder
+   - No user interaction required
 3. No broken internal links
 4. Backlog updated (task marked complete)
 5. No inline styles introduced
@@ -48,6 +76,14 @@
 - Prefix includes with domain (`merch-`, `profile-`, etc.)
 - Document all new includes in `_docs/improvements.md`
 - Link to `_docs/component-inventory.md`
+
+## FILE EDITING BEST PRACTICES
+1. Always re-read the target file immediately before editing to capture exact current content (including whitespace and hidden chars).
+2. For `replace_string_in_file`, include 3-5+ lines of unchanged context before/after the target to ensure uniqueness and avoid mismatches.
+3. Verify edits post-change by re-reading the file or running a build/test—don't assume success.
+4. If replacement fails due to string mismatch, fall back to replacing the entire file content or use terminal tools for diffs.
+5. Prefer Markdown restructuring: move HTML to layouts/includes, leave only frontmatter in .md files.
+6. Test builds after any structural changes to catch YAML or rendering errors early.
 
 ## DECISION FRAMEWORK
 ### Auto-Proceed When:

@@ -8,10 +8,6 @@ permalink: /trainings/global_ascension_initiatives_association/
 # Szczegółowy Plan Szkoleniowy: "Próba Najwyższej Wiary"
 ## Program Budowania Kompetencji Całkowitego Zaufania do Własnego Systemu
 
----
-
-## ETAP I: PRZYGOTOWANIE FUNDAMENTÓW (Miesiące 1-3)
-
 ### Moduł 1.1: Diagnoza i Samoświadomość Mentora
 **Czas:** 2 tygodnie
 **Cel:** Rozpoznanie własnych wzorców kontroli i lęków przed delegacją**Działania:**
@@ -417,7 +413,7 @@ Oto konkretna lista kluczowych osób i stanowisk, które – mając na uwadze dr
 
 To bezpośrednio zwiększy odporność decyzyjną kraju i regionu w warunkach bezprecedensowego zagrożenia nuklearnego, hybrydowego i psychologicznego[^87_12][^87_2][^87_5][^87_6][^87_3][^87_7][^87_8].
 
-<div class="text-center">⁂</div>
+⁂
 
 [^87_1]: https://www.gov.pl/web/national-defence
 
@@ -1081,16 +1077,46 @@ Podsumuj naszą konwersacje pytając listę poruszonych tematów, dla każdego t
 
 | Temat | Wypracowany prompt do materiałów/szkoleń/dalszych kroków |
 | :-- | :-- |
-| 1. Architektura organizacji, role, poziomy wtajemniczenia i symbolika | **Stwórz kompletny przewodnik (tekst + schematy + przykłady), jak projektować wielopoziomową, elitarną strukturę szkoleniowo-doradczą:**<br>- Omów role, procesy inicjacji, system symboli i progresji.<br>- Dołącz instrukcje wdrażania tożsamości, kultury organizacyjnej i systemu wyróżników dla poszczególnych rang miejscowych oraz globalnych.<br>- Zakończ checklistą wdrażającą dla zespołu startowego i narzędziem audytu spójności kultury. |
-| 2. Systemy decyzyjne, odporność na kryzys, framework decyzyjności | **Przygotuj szkolenie i playbook wdrożeniowy dla sztabów decyzyjnych:**<br>- Zawartość: podział na poziomy zagrożenia, algorytmy reakcji, matryce decyzyjne, mechanizmy audytu i peer review.<br>- Zasymuluj realne kryzysy, ćwiczenia na czas i protokoły double-check.<br>- Dodaj plany wdrożenia praktyki transparentności i logowania decyzji. |
-| 3. Mechanizmy audytowe, role obserwacyjne, transparentność i feedback | **Stwórz zestaw procedur oraz program szkoleniowy „Shadow Observer \& Decision Auditor”:**<br>- Instrukcja wdrażania ról audytowych i obserwacyjnych; checklisty dla codziennej pracy i raportowania.<br>- Warsztat prowadzenia feedbacku i “feedforward”, zachowań meta-obserwacyjnych.<br>- Narzędzia do wykrywania, oznaczania i analizowania ukrytej komunikacji oraz mentoring transparencji. |
-| 4. Protokół bezpiecznej decyzyjności pod presją czasu i zagrożenia | **Stwórz bazę ćwiczeń operacyjnych, symulacji i checklist kryzysowych:**<br>- Opracuj matryce decyzyjne wg poziomu zagrożenia (zielony-żółty-pomarańczowy-czerwony).<br>- Scenariusze błyskawicznego reagowania, logi awaryjne, narzędzia double-key, emergency stop itp.<br>- Zbuduj system debriefingu i mechanizmów natychmiastowej nauki ex post. |
-| 5. Zapobieganie sabotażowi, audyty etyczne i systemy alarmowe | **Przygotuj podręcznik wykrywania sabotażu, szkoleń etycznych i systemu “red flag”:**<br>- Kompendium case studies, testy psychometryczne, algorytmiczne narzędzia wykrywania niejawnych działań, symulacje „zdrajców”.<br>- Protokół, jak rotować audytorów i stosować mechanizmy jawnej, anonimowej zgłaszalności ryzyka.<br>- Warsztaty z mechanizmów samodoskonalenia/pracy z pokusą łamania reguł. |
-| 6. Kultura bezpieczeństwa psychologicznego, uczenia się na błędach, no-blame | **Wdroż instrukcje i warsztaty “safe space” (psychologiczne bezpieczeństwo):**<br>- Rytuały feedbacku skupione na procesie, nie osobie.<br>- Rytuał lessons learned, repozytorium „bank błędów”, narzędzia oceny zbiorowej.<br>- Moduły świadomej pracy z ego, otwartej analizy porażki, motywatory lojalności zespołowej. |
-| 7. Rekrutacja, weryfikacja i ścieżki inicjacji nowych członków | **Stwórz system ścieżek wdrożeniowych i symulacji inicjacyjnych:**<br>- Ankiety, testy psychologiczne, symulacje kryzysów, ścieżka shadowowania mentora.<br>- Protokół przyznawania kolejnych uprawnień, mechanizmy progresowania.<br>- Scenariusze ćwiczeń z presji i lojalności oraz checklisty oceny nowych. |
-| 8. Rytuały motywacyjne, budowanie tożsamości i symbolika | **Opracuj ceremoniarz i toolbox symboli organizacyjnych:**<br>- Rytuały awansów/przejść między kręgami, kody kolorów, totemy, artefakty.<br>- Manual używania języka i znaków — od jawnych po ukryte.<br>- Wytyczne budowania rozpoznawalnej, a jednocześnie kamuflowanej kultury grupowej. |
-| 9. Programy szkoleń anty-sabotazowych i anty-manipulacyjnych | **Przygotuj certyfikowany moduł szkoleń „Resilience \& Manipulation Immunity”:**<br>- Symulacje prób sabotażu, ćwiczenia z rozpoznawania manipulacji, rolę adwokata diabła.<br>- Warsztaty wzmacniające odruch kwestionowania autorytetów i fałszywej legalności.<br>- System rotacji ról kontrolnych i quizów sytuacyjnych. |
-| 10. Rozwój mistrzostwa systemowego i uwalnianie decyzyjności | **Stwórz program “Leadership Fade-Out”:**<br>- Etapy przekazywania odpowiedzialności, coaching fade-to-black.<br>- Praktyki budowy samo-organizujących się kręgów.<br>- Automatyzacja refleksji nad sukcesem i porażką — narzędzia do redefiniowania roli mentorów, gdy znikają z pierwszego planu. |
+| 1. Architektura organizacji, role, poziomy wtajemniczenia i symbolika | **Stwórz kompletny przewodnik (tekst + schematy + przykłady), jak projektować wielopoziomową, elitarną strukturę szkoleniowo-doradczą:**
+- Omów role, procesy inicjacji, system symboli i progresji.
+- Dołącz instrukcje wdrażania tożsamości, kultury organizacyjnej i systemu wyróżników dla poszczególnych rang miejscowych oraz globalnych.
+- Zakończ checklistą wdrażającą dla zespołu startowego i narzędziem audytu spójności kultury. |
+| 2. Systemy decyzyjne, odporność na kryzys, framework decyzyjności | **Przygotuj szkolenie i playbook wdrożeniowy dla sztabów decyzyjnych:**
+- Zawartość: podział na poziomy zagrożenia, algorytmy reakcji, matryce decyzyjne, mechanizmy audytu i peer review.
+- Zasymuluj realne kryzysy, ćwiczenia na czas i protokoły double-check.
+- Dodaj plany wdrożenia praktyki transparentności i logowania decyzji. |
+| 3. Mechanizmy audytowe, role obserwacyjne, transparentność i feedback | **Stwórz zestaw procedur oraz program szkoleniowy „Shadow Observer \& Decision Auditor”:**
+- Instrukcja wdrażania ról audytowych i obserwacyjnych; checklisty dla codziennej pracy i raportowania.
+- Warsztat prowadzenia feedbacku i “feedforward”, zachowań meta-obserwacyjnych.
+- Narzędzia do wykrywania, oznaczania i analizowania ukrytej komunikacji oraz mentoring transparencji. |
+| 4. Protokół bezpiecznej decyzyjności pod presją czasu i zagrożenia | **Stwórz bazę ćwiczeń operacyjnych, symulacji i checklist kryzysowych:**
+- Opracuj matryce decyzyjne wg poziomu zagrożenia (zielony-żółty-pomarańczowy-czerwony).
+- Scenariusze błyskawicznego reagowania, logi awaryjne, narzędzia double-key, emergency stop itp.
+- Zbuduj system debriefingu i mechanizmów natychmiastowej nauki ex post. |
+| 5. Zapobieganie sabotażowi, audyty etyczne i systemy alarmowe | **Przygotuj podręcznik wykrywania sabotażu, szkoleń etycznych i systemu “red flag”:**
+- Kompendium case studies, testy psychometryczne, algorytmiczne narzędzia wykrywania niejawnych działań, symulacje „zdrajców”.
+- Protokół, jak rotować audytorów i stosować mechanizmy jawnej, anonimowej zgłaszalności ryzyka.
+- Warsztaty z mechanizmów samodoskonalenia/pracy z pokusą łamania reguł. |
+| 6. Kultura bezpieczeństwa psychologicznego, uczenia się na błędach, no-blame | **Wdroż instrukcje i warsztaty “safe space” (psychologiczne bezpieczeństwo):**
+- Rytuały feedbacku skupione na procesie, nie osobie.
+- Rytuał lessons learned, repozytorium „bank błędów”, narzędzia oceny zbiorowej.
+- Moduły świadomej pracy z ego, otwartej analizy porażki, motywatory lojalności zespołowej. |
+| 7. Rekrutacja, weryfikacja i ścieżki inicjacji nowych członków | **Stwórz system ścieżek wdrożeniowych i symulacji inicjacyjnych:**
+- Ankiety, testy psychologiczne, symulacje kryzysów, ścieżka shadowowania mentora.
+- Protokół przyznawania kolejnych uprawnień, mechanizmy progresowania.
+- Scenariusze ćwiczeń z presji i lojalności oraz checklisty oceny nowych. |
+| 8. Rytuały motywacyjne, budowanie tożsamości i symbolika | **Opracuj ceremoniarz i toolbox symboli organizacyjnych:**
+- Rytuały awansów/przejść między kręgami, kody kolorów, totemy, artefakty.
+- Manual używania języka i znaków — od jawnych po ukryte.
+- Wytyczne budowania rozpoznawalnej, a jednocześnie kamuflowanej kultury grupowej. |
+| 9. Programy szkoleń anty-sabotazowych i anty-manipulacyjnych | **Przygotuj certyfikowany moduł szkoleń „Resilience \& Manipulation Immunity”:**
+- Symulacje prób sabotażu, ćwiczenia z rozpoznawania manipulacji, rolę adwokata diabła.
+- Warsztaty wzmacniające odruch kwestionowania autorytetów i fałszywej legalności.
+- System rotacji ról kontrolnych i quizów sytuacyjnych. |
+| 10. Rozwój mistrzostwa systemowego i uwalnianie decyzyjności | **Stwórz program “Leadership Fade-Out”:**
+- Etapy przekazywania odpowiedzialności, coaching fade-to-black.
+- Praktyki budowy samo-organizujących się kręgów.
+- Automatyzacja refleksji nad sukcesem i porażką — narzędzia do redefiniowania roli mentorów, gdy znikają z pierwszego planu. |
 
 **Użyj każdego promptu jako wyjścia do stworzenia kompletnego kursu, „prasownika wiedzy” lub cyklu masterclass — od podręczników PDF, przez warsztaty online, po gry szkoleniowe. Każdy temat kończ rozbudowanym zestawem narzędzi wdrożeniowych, checklist i systemem feedbacku pozwalającym na ciągły rozwój organizacji.**
 

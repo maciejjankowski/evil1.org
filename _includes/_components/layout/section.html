@@ -1,0 +1,21 @@
+---
+# Layout Section Component
+# Content section with optional title and styling
+---
+
+{%- assign component = include.component -%}
+{%- assign title = component.title -%}
+{%- assign content = component.content -%}
+{%- assign background = component.background -%}
+{%- assign class = component.class | default: "" -%}
+
+<section class="section {{ class }}"{% if background %} data-background="{{ background }}"{% endif %}>
+  <div class="section-container">
+    {% if title %}
+      <h2 class="section-title">{{ title }}</h2>
+    {% endif %}
+    <div class="section-content">
+      {{ content }}
+    </div>
+  </div>
+</section>

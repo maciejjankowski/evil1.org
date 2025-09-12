@@ -1,10 +1,10 @@
 ---
-layout: default
-title: "HTMX Integration Analysis"
-author: "AI Assistant"
-date: "2025-09-08"
-description: "Analysis of HTMX features for improved usability on evil1.org"
-permalink: "/htmx-analysis/"
+layout: docs
+title: HTMX Integration Analysis
+author: AI Assistant
+date: 2025-09-08
+description: Analysis of HTMX features for improved usability on evil1.org
+permalink: /htmx-analysis/
 ---
 
 # HTMX Integration for Enhanced Usability

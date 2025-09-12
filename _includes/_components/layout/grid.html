@@ -1,0 +1,18 @@
+---
+# Layout Grid Component
+# Responsive grid layout for displaying multiple items
+---
+
+{%- assign component = include.component -%}
+{%- assign items = component.items -%}
+{%- assign columns = component.columns | default: "auto-fit" -%}
+{%- assign gap = component.gap | default: "1rem" -%}
+{%- assign class = component.class | default: "" -%}
+
+<div class="grid {{ class }}" style="--grid-columns: {{ columns }}; --grid-gap: {{ gap }}">
+  {% for item in items %}
+    <div class="grid-item">
+      {{ item.content }}
+    </div>
+  {% endfor %}
+</div>

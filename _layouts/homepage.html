@@ -2,6 +2,8 @@
 layout: default
 ---
 
+{% include _components/helper.html %}
+
 <div id="container">
     <div id="homepage-container">
         <!-- Left Column - Feed -->
@@ -41,7 +43,7 @@ layout: default
         <aside id="right-column">
             <!-- People You Might Know -->
             <div class="section">
-                <div class="section-header">🔥 Souls to Corrupt 🔥</div>
+                {% include _components/ui/section-header.html title="🔥 Souls to Corrupt 🔥" %}
                 <div class="section-content">
                     {% for person in site.data.suggestions limit:5 %}
                     <div class="person-suggestion">
@@ -79,7 +81,7 @@ layout: default
 
             <!-- Soul Auction Ad -->
             <div class="section">
-                <div class="section-header">💀 SOUL AUCTION 💀</div>
+                {% include _components/ui/section-header.html title="💀 SOUL AUCTION 💀" %}
                 <div class="section-content" style="text-align: center; padding: 20px;">
                     <div style="border: 2px solid #FF0000; padding: 30px; background: linear-gradient(180deg, #330000, #000); color: #FFD700;">
                         YOUR SOUL<br>HERE<br>
@@ -92,7 +94,7 @@ layout: default
 
             <!-- Trending Evil -->
             <div class="section">
-                <div class="section-header">😈 Trending Evil 😈</div>
+                {% include _components/ui/section-header.html title="😈 Trending Evil 😈" %}
                 <div class="section-content">
                     {% for trend in site.data.trends limit:3 %}
                     <div style="margin: 8px 0; padding: 6px 0; border-bottom: 1px dashed #660000;">

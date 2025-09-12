@@ -6,14 +6,41 @@
   url: /membership/
   priority: 2
   external: false
+  children:
+    - title: Join
+      url: /register/
+      external: false
+    - title: Benefits
+      url: /membership/benefits/
+      external: false
+    - title: Tiers
+      url: /membership/tiers/
+      external: false
 - title: Consulting
   url: /company/consulting/
   priority: 3
   external: false
+  children:
+    - title: Corporate
+      url: /company/consulting/corporate/
+      external: false
+    - title: Nonprofit
+      url: /company/consulting/nonprofit/
+      external: false
 - title: Courses
   url: /trainings/
   priority: 4
   external: false
+  children:
+    - title: Ethics
+      url: /trainings/ethics/
+      external: false
+    - title: Compliance
+      url: /trainings/compliance/
+      external: false
+    - title: Satire
+      url: /trainings/satire/
+      external: false
 - title: Jobs
   url: /jobs/
   priority: 5

@@ -1,0 +1,27 @@
+---
+# UI Post Header Component
+# Post header with author info, avatar, and timestamp
+---
+
+{%- assign component = include.component -%}
+{%- assign author = component.author | default: "Corporate Overlord" -%}
+{%- assign author_title = component.author_title | default: "Chief Executive of Evil" -%}
+{%- assign author_avatar = component.author_avatar -%}
+{%- assign date = component.date -%}
+{%- assign class = component.class | default: "" -%}
+
+<div class="post-header {{ class }}">
+  <div class="post-author-avatar">
+    {% if author_avatar %}
+      <img src="{{ author_avatar }}" alt="{{ author }} avatar">
+    {% endif %}
+  </div>
+  <div class="post-author-info">
+    <a href="#" class="post-author">{{ author }}</a>
+    <span class="post-author-title">{{ author_title }}</span>
+  </div>
+  {% if date %}
+    <span class="post-time">{{ date | date: "%B %d, %Y" }}</span>
+  {% endif %}
+  <div class="clear"></div>
+</div>

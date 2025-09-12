@@ -1,0 +1,83 @@
+---
+# Reusable Component Configurations
+# Common component setups that can be referenced across pages
+
+# Common section headers
+section_headers:
+  corporate_evil: "Corporate Evil"
+  about_author: "About the Author"
+  more_content: "More Evil Content"
+  evil_tags: "Evil Tags"
+  featured_articles: "⭐ Featured Articles"
+  browse_catalog: "Browse the Full Catalog"
+  featured_slogans: "Featured Slogans"
+  why_buy: "Why Buy Our Merchandise?"
+  recursive_manifesto: "The Recursive Capitalism Manifesto"
+
+# Common stat configurations
+stats:
+  articles_published:
+    number: "1,200"
+    label: "Articles Published"
+    description: "Total articles in our database"
+  companies_exposed:
+    number: "500"
+    label: "Companies Exposed"
+    description: "Corporate entities documented for evil practices"
+  whistleblowers_protected:
+    number: "50"
+    label: "Whistleblowers Protected"
+    description: "Individuals helped to expose corporate wrongdoing"
+  investigations_launched:
+    number: "100"
+    label: "Investigations Launched"
+    description: "Research projects initiated based on our findings"
+
+# Common button configurations
+buttons:
+  learn_more:
+    text: "Learn More"
+    type: "primary"
+  get_started:
+    text: "Get Started"
+    href: "/join"
+    type: "primary"
+  view_catalog:
+    text: "View All Products"
+    href: "/merchandise/catalog/"
+    type: "secondary"
+  browse_themes:
+    text: "Browse by Theme"
+    href: "/merchandise/themes/"
+    type: "secondary"
+
+# Common hero configurations
+heroes:
+  homepage:
+    title: "Welcome to Evil1.org"
+    subtitle: "Exposing corporate evil worldwide"
+    cta_text: "Get Started"
+    cta_href: "/join"
+  merchandise:
+    title: "Corporate Evil Merchandise"
+    subtitle: "Buy satirical products that mock consumerism"
+    cta_text: "Shop Now"
+    cta_href: "/merchandise/"
+  about:
+    title: "About Our Mission"
+    subtitle: "Dedicated to exposing corporate malfeasance and systemic corruption"
+    cta_text: "Learn More"
+    cta_href: "/about/"
+
+# Common alert configurations
+alerts:
+  content_warning:
+    type: "warning"
+    title: "⚠️ Content Warning: Recursive Capitalism"
+    message: "These products mock consumerism while being consumerist products. By purchasing, you become part of the very system we're satirizing."
+  success_message:
+    type: "success"
+    message: "Thank you for your support! Your contribution helps fund independent investigative journalism."
+  error_message:
+    type: "danger"
+    message: "An error occurred. Please try again or contact support."

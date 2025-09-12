@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: docs
 title: "Premium Content - Paywall"
 author: "AI Assistant"
 date: "2025-09-08"

@@ -1,0 +1,43 @@
+---
+# Component Helper Include
+# Provides easy-to-use macros for including components
+---
+
+{%- comment -%}
+  Usage examples:
+
+  {% include components/helper.html %}
+  {{ component('core/stat', number: '1,200', label: 'Articles') }}
+
+  Or for multiple components:
+  {% include components/helper.html %}
+  {% assign my_components = site.data.page_components %}
+  {% for comp in my_components %}
+    {{ component(comp.type, comp) }}
+  {% endfor %}
+{%- endcomment -%}
+
+{%- capture component_function -%}
+  {%- assign type = include.type -%}
+  {%- assign params = include | remove: 'type' -%}
+  {%- assign parts = type | split: '/' -%}
+  {%- assign category = parts[0] -%}
+  {%- assign name = parts[1] -%}
+
+  {%- case category -%}
+    {%- when 'core' -%}
+      {%- include _components/core/{{ name }}.html component=params -%}
+    {%- when 'ui' -%}
+      {%- include _components/ui/{{ name }}.html component=params -%}
+    {%- when 'layout' -%}
+      {%- include _components/layout/{{ name }}.html component=params -%}
+    {%- when 'interactive' -%}
+      {%- include _components/interactive/{{ name }}.html component=params -%}
+    {%- when 'widget' -%}
+      {%- include _components/widget/{{ name }}.html component=params -%}
+  {%- endcase -%}
+{%- endcapture -%}
+
+{%- if include.type -%}
+  {{ component_function }}
+{%- endif -%}

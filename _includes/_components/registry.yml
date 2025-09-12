@@ -1,0 +1,597 @@
+---
+# Component Registry - Unified Components Library
+# This file defines all available components and their configurations
+
+# Core Components (foundational building blocks)
+core:
+  stat:
+    description: "Display a statistic with number, label, and description"
+    parameters:
+      - name: number
+        type: string
+        required: true
+        description: "The statistic number/value"
+      - name: label
+        type: string
+        required: true
+        description: "The statistic label"
+      - name: description
+        type: string
+        required: false
+        description: "Optional description text"
+      - name: class
+        type: string
+        required: false
+        description: "Additional CSS classes"
+
+  crime-card:
+    description: "Display corporate crime/scandal information"
+    parameters:
+      - name: title
+        type: string
+        required: true
+        description: "Crime title"
+      - name: description
+        type: string
+        required: true
+        description: "Crime description"
+      - name: impact
+        type: string
+        required: false
+        description: "Impact/severity of the crime"
+      - name: class
+        type: string
+        required: false
+        description: "Additional CSS classes"
+
+  timeline-item:
+    description: "Display a timeline entry"
+    parameters:
+      - name: year
+        type: string
+        required: true
+        description: "Year of the event"
+      - name: title
+        type: string
+        required: true
+        description: "Event title"
+      - name: description
+        type: string
+        required: true
+        description: "Event description"
+      - name: class
+        type: string
+        required: false
+        description: "Additional CSS classes"
+
+# UI Components (user interface elements)
+ui:
+  button:
+    description: "Action button with various styles"
+    parameters:
+      - name: text
+        type: string
+        required: true
+        description: "Button text"
+      - name: href
+        type: string
+        required: false
+        description: "Link URL (makes it a link)"
+      - name: type
+        type: string
+        required: false
+        default: "primary"
+        description: "Button style (primary, secondary, danger)"
+      - name: size
+        type: string
+        required: false
+        default: "medium"
+        description: "Button size (small, medium, large)"
+      - name: class
+        type: string
+        required: false
+        description: "Additional CSS classes"
+
+  card:
+    description: "Content card container"
+    parameters:
+      - name: title
+        type: string
+        required: false
+        description: "Card title"
+      - name: content
+        type: string
+        required: true
+        description: "Card content (HTML allowed)"
+      - name: footer
+        type: string
+        required: false
+        description: "Card footer content"
+      - name: class
+        type: string
+        required: false
+        description: "Additional CSS classes"
+
+  alert:
+    description: "Notification/alert message"
+    parameters:
+      - name: type
+        type: string
+        required: false
+        default: "info"
+        description: "Alert type (info, success, warning, danger)"
+      - name: title
+        type: string
+        required: false
+        description: "Alert title"
+      - name: message
+        type: string
+        required: true
+        description: "Alert message"
+      - name: dismissible
+        type: boolean
+        required: false
+        default: false
+        description: "Whether alert can be dismissed"
+      - name: class
+        type: string
+        required: false
+        description: "Additional CSS classes"
+
+  section-header:
+    description: "Section header with title and optional styling"
+    parameters:
+      - name: title
+        type: string
+        required: true
+        description: "Header title text"
+      - name: level
+        type: number
+        required: false
+        default: 2
+        description: "Heading level (1-6)"
+      - name: class
+        type: string
+        required: false
+        description: "Additional CSS classes"
+
+  post-header:
+    description: "Post header with author info, avatar, and timestamp"
+    parameters:
+      - name: author
+        type: string
+        required: false
+        default: "Corporate Overlord"
+        description: "Post author name"
+      - name: author_title
+        type: string
+        required: false
+        default: "Chief Executive of Evil"
+        description: "Author's title or role"
+      - name: author_avatar
+        type: string
+        required: false
+        description: "Author avatar image URL"
+      - name: date
+        type: string
+        required: false
+        description: "Post date (will be formatted)"
+      - name: class
+        type: string
+        required: false
+        description: "Additional CSS classes"
+
+  post-card:
+    description: "Social media style post card with author, content, and actions"
+    parameters:
+      - name: author
+        type: string
+        required: false
+        default: "Corporate Overlord"
+        description: "Post author name"
+      - name: author_title
+        type: string
+        required: false
+        default: "Chief Executive of Evil"
+        description: "Author's title or role"
+      - name: author_avatar
+        type: string
+        required: false
+        description: "Author avatar image URL"
+      - name: title
+        type: string
+        required: false
+        description: "Post title"
+      - name: content
+        type: string
+        required: true
+        description: "Post content (HTML allowed)"
+      - name: time
+        type: string
+        required: false
+        default: "just now"
+        description: "Time since post was published"
+      - name: burns
+        type: string
+        required: false
+        default: "0"
+        description: "Number of burns/reactions"
+      - name: condemns
+        type: string
+        required: false
+        default: "0"
+        description: "Number of condemns"
+      - name: shares
+        type: string
+        required: false
+        description: "Number of shares"
+      - name: image
+        type: string
+        required: false
+        description: "Post image URL"
+      - name: type
+        type: string
+        required: false
+        description: "Post type (featured, sponsored, etc.)"
+      - name: class
+        type: string
+        required: false
+        description: "Additional CSS classes"
+
+  post-card:
+    description: "Social media style post card with author, content, and actions"
+    parameters:
+      - name: author
+        type: string
+        required: false
+        default: "Corporate Overlord"
+        description: "Post author name"
+      - name: author_title
+        type: string
+        required: false
+        default: "Chief Executive of Evil"
+        description: "Author's title or role"
+      - name: author_avatar
+        type: string
+        required: false
+        description: "Author avatar image URL"
+      - name: title
+        type: string
+        required: false
+        description: "Post title"
+      - name: content
+        type: string
+        required: true
+        description: "Post content (HTML allowed)"
+      - name: time
+        type: string
+        required: false
+        default: "just now"
+        description: "Time since post was published"
+      - name: burns
+        type: string
+        required: false
+        default: "0"
+        description: "Number of burns/reactions"
+      - name: condemns
+        type: string
+        required: false
+        default: "0"
+        description: "Number of condemns"
+      - name: shares
+        type: string
+        required: false
+        description: "Number of shares"
+      - name: image
+        type: string
+        required: false
+        description: "Post image URL"
+      - name: type
+        type: string
+        required: false
+        description: "Post type (featured, sponsored, etc.)"
+      - name: class
+        type: string
+        required: false
+        description: "Additional CSS classes"
+
+# Layout Components (page sections and layouts)
+layout:
+  hero:
+    description: "Hero section with title, subtitle, and CTA"
+    parameters:
+      - name: title
+        type: string
+        required: true
+        description: "Hero title"
+      - name: subtitle
+        type: string
+        required: false
+        description: "Hero subtitle"
+      - name: background
+        type: string
+        required: false
+        description: "Background image URL"
+      - name: cta_text
+        type: string
+        required: false
+        description: "Call-to-action button text"
+      - name: cta_href
+        type: string
+        required: false
+        description: "Call-to-action button URL"
+      - name: class
+        type: string
+        required: false
+        description: "Additional CSS classes"
+
+  section:
+    description: "Content section with optional title and styling"
+    parameters:
+      - name: title
+        type: string
+        required: false
+        description: "Section title"
+      - name: content
+        type: string
+        required: true
+        description: "Section content (HTML allowed)"
+      - name: background
+        type: string
+        required: false
+        description: "Background color/style"
+      - name: class
+        type: string
+        required: false
+        description: "Additional CSS classes"
+
+  grid:
+    description: "Responsive grid layout"
+    parameters:
+      - name: items
+        type: array
+        required: true
+        description: "Array of grid items"
+      - name: columns
+        type: string
+        required: false
+        default: "auto-fit"
+        description: "Grid columns (auto-fit, 1, 2, 3, 4)"
+      - name: gap
+        type: string
+        required: false
+        default: "1rem"
+        description: "Gap between grid items"
+      - name: class
+        type: string
+        required: false
+        description: "Additional CSS classes"
+
+# Interactive Components (HTMX-powered components)
+interactive:
+  stats-display:
+    description: "Dynamic statistics display with real-time updates"
+    parameters:
+      - name: stats
+        type: array
+        required: true
+        description: "Array of stat objects with number, label, description"
+      - name: refresh_interval
+        type: number
+        required: false
+        default: 30000
+        description: "Auto-refresh interval in milliseconds"
+      - name: class
+        type: string
+        required: false
+        description: "Additional CSS classes"
+
+  search:
+    description: "Search component with HTMX-powered results"
+    parameters:
+      - name: placeholder
+        type: string
+        required: false
+        default: "Search..."
+        description: "Search input placeholder text"
+      - name: endpoint
+        type: string
+        required: true
+        description: "Search endpoint URL"
+      - name: debounce
+        type: number
+        required: false
+        default: 300
+        description: "Debounce delay in milliseconds"
+      - name: class
+        type: string
+        required: false
+        description: "Additional CSS classes"
+
+  load-more:
+    description: "Load more content with HTMX pagination"
+    parameters:
+      - name: endpoint
+        type: string
+        required: true
+        description: "Load more endpoint URL"
+      - name: button_text
+        type: string
+        required: false
+        default: "Load More"
+        description: "Load more button text"
+      - name: loading_text
+        type: string
+        required: false
+        default: "Loading..."
+        description: "Loading state text"
+      - name: class
+        type: string
+        required: false
+        description: "Additional CSS classes"
+
+  notification:
+    description: "Toast notification system"
+    parameters:
+      - name: type
+        type: string
+        required: false
+        default: "info"
+        description: "Notification type (info, success, warning, error)"
+      - name: message
+        type: string
+        required: true
+        description: "Notification message"
+      - name: duration
+        type: number
+        required: false
+        default: 5000
+        description: "Auto-dismiss duration in milliseconds"
+      - name: class
+        type: string
+        required: false
+        description: "Additional CSS classes"
+
+# Layout Components (additional)
+layout:
+  header:
+    description: "Site header with navigation and branding"
+    parameters:
+      - name: title
+        type: string
+        required: false
+        default: "EVIL1.ORG"
+        description: "Site title/brand"
+      - name: navigation
+        type: array
+        required: false
+        description: "Navigation menu items"
+      - name: search
+        type: boolean
+        required: false
+        default: false
+        description: "Include search functionality"
+      - name: user_menu
+        type: boolean
+        required: false
+        default: false
+        description: "Include user menu"
+      - name: class
+        type: string
+        required: false
+        description: "Additional CSS classes"
+
+  footer:
+    description: "Site footer with links and information"
+    parameters:
+      - name: copyright
+        type: string
+        required: false
+        default: "2025 EVIL1.ORG"
+        description: "Copyright text"
+      - name: links
+        type: array
+        required: false
+        description: "Footer link items"
+      - name: social
+        type: array
+        required: false
+        description: "Social media links"
+      - name: disclaimer
+        type: string
+        required: false
+        description: "Footer disclaimer text"
+      - name: class
+        type: string
+        required: false
+        description: "Additional CSS classes"
+
+# Widget Components (sidebar and content widgets)
+widget:
+  featured-articles:
+    description: "Featured articles widget with gradient styling"
+    parameters:
+      - name: limit
+        type: number
+        required: false
+        default: 3
+        description: "Number of articles to display"
+      - name: title
+        type: string
+        required: false
+        default: "⭐ Featured Articles"
+        description: "Widget title"
+      - name: class
+        type: string
+        required: false
+        description: "Additional CSS classes"
+
+  author-info:
+    description: "Author information widget for sidebar"
+    parameters:
+      - name: author
+        type: string
+        required: true
+        description: "Author name"
+      - name: author_title
+        type: string
+        required: false
+        default: "Corporate Overlord"
+        description: "Author's title"
+      - name: author_bio
+        type: string
+        required: false
+        description: "Author biography"
+      - name: avatar_size
+        type: number
+        required: false
+        default: 60
+        description: "Avatar size in pixels"
+      - name: class
+        type: string
+        required: false
+        description: "Additional CSS classes"
+
+  related-posts:
+    description: "Related posts widget"
+    parameters:
+      - name: posts
+        type: array
+        required: false
+        description: "Array of post objects (defaults to site.posts)"
+      - name: limit
+        type: number
+        required: false
+        default: 5
+        description: "Number of posts to display"
+      - name: exclude_current
+        type: boolean
+        required: false
+        default: true
+        description: "Exclude current page from results"
+      - name: title
+        type: string
+        required: false
+        default: "More Evil Content"
+        description: "Widget title"
+      - name: class
+        type: string
+        required: false
+        description: "Additional CSS classes"
+
+  tags:
+    description: "Tags widget displaying page tags"
+    parameters:
+      - name: tags
+        type: array
+        required: true
+        description: "Array of tag names"
+      - name: title
+        type: string
+        required: false
+        default: "Evil Tags"
+        description: "Widget title"
+      - name: class
+        type: string
+        required: false
+        description: "Additional CSS classes"

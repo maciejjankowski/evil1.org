@@ -166,13 +166,10 @@ Sponsored content advertisement.
     {{ content }}
 ```
 
-## Styling
+## Styling (Updated)
 
-All components are styled using the `assets/css/hellfire-design.css` stylesheet, which should be included in layouts that use these components:
-
-```liquid
-<link rel="stylesheet" href="{{ '/assets/css/hellfire-design.css' | relative_url }}">
-```
+All active components now rely on the unified stylesheet: `assets/css/main.css`.
+Legacy references to `hellfire-design.css` have been deprecated and should be removed from any experimental layouts.
 
 ## Data Requirements
 
@@ -188,12 +185,12 @@ Some components require specific data structures:
 
 Components can be customized by:
 1. Modifying the component files directly
-2. Overriding styles in `hellfire-design.css`
+2. Adding scoped utility classes (prefer re-use before adding new CSS)
 3. Passing different parameters to components
 4. Creating new components based on these templates
 
 ## Dependencies
 
 - Jekyll 4.0+
-- `assets/css/hellfire-design.css` for styling
+- `assets/css/main.css` for styling
 - Data files in `_data/` for dynamic content (optional)

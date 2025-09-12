@@ -1,6 +1,9 @@
 // Main stylesheet for evil1.org
 // Basic styles and theme overrides
 
+// Import unified components library
+@import "../_includes/_components/components";
+
 // Define base colors
 $grey-color: #828282;
 $brand-color: #2a7ae2;
@@ -62,3 +65,675 @@ h1, h2, h3, h4, h5, h6 {
 
 // Import theme overrides
 @import "theme-overrides";
+
+// Jobs page styles
+.jobs-container {
+  max-width: 760px;
+  margin: 20px auto;
+  background: #fff;
+  border: 1px solid #CCC;
+  padding: 20px;
+}
+
+.jobs-header {
+  background: linear-gradient(#6699CC, #4477AA);
+  color: #fff;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  border-bottom: 1px solid #003366;
+  margin: -20px -20px 20px -20px;
+}
+
+.jobs-section {
+  border: 1px solid #D0D0D0;
+  margin: 15px 0;
+  background: #F8F8F8;
+  padding: 10px;
+}
+
+.jobs-section h2 {
+  color: #003366;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.jobs-subtitle {
+  font-size: 10px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.job-listing {
+  margin: 10px 0;
+  border-left: 3px solid #6699CC;
+  padding-left: 10px;
+}
+
+.job-title {
+  font-weight: bold;
+  font-size: 12px;
+  color: #003366;
+}
+
+.job-company {
+  font-size: 10px;
+  color: #666;
+}
+
+.job-description {
+  font-size: 11px;
+  color: #333;
+  margin: 5px 0;
+}
+
+.career-links {
+  margin-top: 10px;
+}
+
+.career-links a {
+  color: #004080;
+  text-decoration: underline;
+  font-size: 11px;
+}
+
+// Trainings page styles
+.index-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  color: #003366;
+  margin-bottom: 1rem;
+}
+
+.page-description {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.content-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.content-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.card-header {
+  background: linear-gradient(135deg, #003366, #004080);
+  color: white;
+  padding: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+}
+
+.card-meta {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+.card-summary {
+  padding: 1.5rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.card-footer {
+  padding: 1rem 1.5rem;
+  background: #f8f9fa;
+  border-top: 1px solid #e0e0e0;
+}
+
+.read-more {
+  color: #004080;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.read-more:hover {
+  color: #00264d;
+  text-decoration: underline;
+}
+
+// Admissions philosophy page styles
+.admissions-header {
+  background: linear-gradient(#6699CC, #4477AA);
+  color: #fff;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  border-bottom: 1px solid #003366;
+  margin: -20px -20px 20px -20px;
+}
+
+.admissions-subtitle {
+  font-size: 11px;
+  color: #666;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.philosophy-box {
+  border: 2px solid #003366;
+  margin: 20px 0;
+  background: linear-gradient(#F0F0F0, #E8E8E8);
+  padding: 15px;
+}
+
+.philosophy-box h2 {
+  color: #003366;
+  font-size: 14px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.philosophy-quote {
+  font-size: 11px;
+  color: #333;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.quote-text {
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.quote-author {
+  font-weight: bold;
+}
+
+.content-section {
+  margin: 30px 0;
+}
+
+.content-section h3 {
+  color: #CC0000;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.criteria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.criteria-item {
+  border: 1px solid #ddd;
+  padding: 10px;
+  background: #f9f9f9;
+}
+
+.criteria-item h4 {
+  color: #003366;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.criteria-item ul {
+  font-size: 11px;
+  color: #333;
+  margin: 0;
+  padding-left: 15px;
+}
+
+.criteria-item li {
+  margin-bottom: 3px;
+}
+
+.qualifications-list, .disqualifiers-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.qualification-item, .disqualifier-item {
+  font-size: 11px;
+  color: #333;
+  padding: 8px;
+  background: #f0f8f0;
+  border-left: 3px solid #28a745;
+}
+
+.disqualifier-item {
+  background: #fff5f5;
+  border-left-color: #dc3545;
+}
+
+.contact-info {
+  font-size: 11px;
+  color: #333;
+  margin-top: 10px;
+}
+
+.contact-info div {
+  margin-bottom: 5px;
+}
+
+// Application page styles
+.application-header {
+  background: linear-gradient(#6699CC, #4477AA);
+  color: #fff;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  border-bottom: 1px solid #003366;
+  margin: -20px -20px 20px -20px;
+}
+
+.application-subtitle {
+  font-size: 11px;
+  color: #666;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.warning-box {
+  border: 2px solid #CC0000;
+  background: linear-gradient(#FFE8E8, #FFCCCC);
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.warning-box h3 {
+  color: #CC0000;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.warning-content {
+  font-size: 11px;
+  color: #333;
+  text-align: center;
+}
+
+.warning-content div {
+  margin-bottom: 5px;
+}
+
+.warning-bold {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.warning-link {
+  margin-top: 10px;
+}
+
+.warning-link a {
+  color: #CC0000;
+  text-decoration: underline;
+  font-size: 11px;
+}
+
+.phase-section {
+  border: 1px solid #D0D0D0;
+  margin: 20px 0;
+  background: #F8F8F8;
+  padding: 15px;
+}
+
+.phase-section h2 {
+  color: #003366;
+  font-size: 14px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #003366;
+  padding-bottom: 5px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-weight: bold;
+  font-size: 11px;
+  color: #003366;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 5px;
+  font-size: 11px;
+  border: 1px solid #CCC;
+}
+
+.form-group textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.field-note {
+  font-size: 10px;
+  color: #666;
+  margin-top: 2px;
+}
+
+.oath-section {
+  background: #fff;
+  border: 1px solid #003366;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.oath-section h3 {
+  color: #003366;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.oath-section p {
+  font-size: 11px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.checkbox-group {
+  margin-bottom: 15px;
+}
+
+.checkbox-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 11px;
+  color: #333;
+}
+
+.checkbox-label input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.submit-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.btn-save, .btn-validate, .btn-submit {
+  padding: 8px 15px;
+  margin: 0 5px;
+  font-size: 11px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-save {
+  background: #6c757d;
+  color: white;
+}
+
+.btn-validate {
+  background: #ffc107;
+  color: black;
+}
+
+.btn-submit {
+  background: #dc3545;
+  color: white;
+  font-weight: bold;
+}
+
+.disclaimer {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  padding: 10px;
+  font-size: 10px;
+  color: #6c757d;
+}
+
+.disclaimer p {
+  margin: 0;
+}
+
+// Company profile page styles
+.company-profile {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.company-profile section {
+  margin-bottom: 3rem;
+}
+
+.company-profile h2 {
+  color: #003366;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #003366;
+  padding-bottom: 0.5rem;
+}
+
+.timeline-item {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-left: 4px solid #003366;
+  border-radius: 4px;
+}
+
+.timeline-item h3 {
+  color: #003366;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-item p {
+  color: #333;
+  line-height: 1.6;
+}
+
+.crime-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.crime-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.crime-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.crime-card h3 {
+  color: #cc0000;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.crime-card p {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.crime-impact {
+  font-weight: bold;
+  color: #003366;
+  font-size: 0.9rem;
+}
+
+.executive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.executive-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.executive-card h3 {
+  color: #003366;
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+}
+
+.executive-title {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.executive-card p {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.executive-compensation {
+  font-weight: bold;
+  color: #cc0000;
+  font-size: 0.9rem;
+}
+
+.financial-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #003366;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.worker-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.worker-stat {
+  background: #fff5f5;
+  border: 1px solid #ffcccc;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.worker-stat h3 {
+  color: #cc0000;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.worker-stat p {
+  color: #333;
+  line-height: 1.6;
+}
+
+.lawsuit-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.lawsuit-item {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.lawsuit-item h3 {
+  color: #003366;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.lawsuit-item p {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.lawsuit-status {
+  font-weight: bold;
+  color: #cc0000;
+  font-size: 0.9rem;
+}
+
+.sources ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sources li {
+  margin-bottom: 0.5rem;
+}
+
+.sources a {
+  color: #004080;
+  text-decoration: none;
+}
+
+.sources a:hover {
+  text-decoration: underline;
+}

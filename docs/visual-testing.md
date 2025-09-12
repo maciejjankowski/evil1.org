@@ -12,17 +12,24 @@
 npm run visual-baseline
 ```
 
-### Run visual tests:
+
+### Run visual tests (one-off):
 ```bash
 npm test
 ```
+This will run all tests and start a local HTML report server. Press **Ctrl+C** to quit the report server when finished.
 
-### Run tests with browser UI:
+### Run tests with browser UI (interactive):
 ```bash
 npm run test:ui
 ```
 
-### View test results:
+### Update baseline screenshots after intentional layout changes:
+```bash
+npm run visual-baseline
+```
+
+### View last test results:
 ```bash
 npx playwright show-report
 ```

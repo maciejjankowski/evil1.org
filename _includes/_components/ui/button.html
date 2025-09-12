@@ -1,0 +1,21 @@
+---
+# UI Button Component
+# Action button with various styles and configurations
+---
+
+{%- assign component = include.component -%}
+{%- assign text = component.text -%}
+{%- assign href = component.href -%}
+{%- assign type = component.type | default: "primary" -%}
+{%- assign size = component.size | default: "medium" -%}
+{%- assign class = component.class | default: "" -%}
+
+{%- if href -%}
+  <a href="{{ href }}" class="btn btn-{{ type }} btn-{{ size }} {{ class }}">
+    {{ text }}
+  </a>
+{%- else -%}
+  <button type="button" class="btn btn-{{ type }} btn-{{ size }} {{ class }}">
+    {{ text }}
+  </button>
+{%- endif -%}

@@ -18,12 +18,10 @@ permalink: "/css-audit/"
 assets/css/
 ├── main.css:           726 lines (Primary stylesheet)
 ├── admin.css:          529 lines (Admin interface)
-├── red-theme.css:      361 lines (Theme variant)
-├── blue-theme.css:     351 lines (Theme variant)
-├── theme-professional.css: 324 lines (Professional theme)
 ├── index-pages.css:    277 lines (Index layouts)
-├── theme-hellish.css:  165 lines (Special theme)
-└── TOTAL:            2,733 lines
+└── TOTAL (active):   1,532 lines
+
+Removed legacy/deprecated theme files (blue/red/hellish/professional, modern-framework) as of 2025-09-11; audit retained for historical reference.
 ```
 
 ### Key Findings
@@ -106,11 +104,6 @@ assets/css/
 
 #### Hardcoded Colors Found
 ```css
-/* Found in theme-hellish.css */
-color: #1877f2;        /* Should use CSS variable */
-color: #1456a0;        /* Should use CSS variable */
-color: #2d0000;        /* Should use CSS variable */
-
 /* Found in main.css */
 color: #333;           /* No variable defined */
 color: #444;           /* No variable defined */

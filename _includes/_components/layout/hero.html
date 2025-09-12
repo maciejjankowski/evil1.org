@@ -1,0 +1,26 @@
+---
+# Layout Hero Component
+# Hero section with title, subtitle, and optional CTA
+---
+
+{%- assign component = include.component -%}
+{%- assign title = component.title -%}
+{%- assign subtitle = component.subtitle -%}
+{%- assign background = component.background -%}
+{%- assign cta_text = component.cta_text -%}
+{%- assign cta_href = component.cta_href -%}
+{%- assign class = component.class | default: "" -%}
+
+<section class="hero {{ class }}"{% if background %} style="background-image: url('{{ background }}')"{% endif %}>
+  <div class="hero-container">
+    <div class="hero-content">
+      <h1 class="hero-title">{{ title }}</h1>
+      {% if subtitle %}
+        <p class="hero-subtitle">{{ subtitle }}</p>
+      {% endif %}
+      {% if cta_text and cta_href %}
+        <a href="{{ cta_href }}" class="hero-cta">{{ cta_text }}</a>
+      {% endif %}
+    </div>
+  </div>
+</section>

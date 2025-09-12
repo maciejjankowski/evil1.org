@@ -1,0 +1,25 @@
+---
+# Widget Author Info Component
+# Author information widget for sidebar
+---
+
+{%- assign component = include.component -%}
+{%- assign author = component.author -%}
+{%- assign author_title = component.author_title | default: "Corporate Overlord" -%}
+{%- assign author_bio = component.author_bio -%}
+{%- assign avatar_size = component.avatar_size | default: 60 -%}
+{%- assign class = component.class | default: "" -%}
+
+<div class="section {{ class }}">
+  <div class="section-header">About the Author</div>
+  <div class="section-content">
+    <div style="text-align: center; padding: 15px;">
+      <div style="width: {{ avatar_size }}px; height: {{ avatar_size }}px; background: #DDD; border: 2px solid #999; margin: 0 auto 10px; border-radius: {{ avatar_size | divided_by: 2 }}px;"></div>
+      <div style="font-weight: bold; color: #003366; font-size: 12px; margin-bottom: 5px;">{{ author }}</div>
+      <div style="font-size: 11px; color: #666;">{{ author_title }}</div>
+      {% if author_bio %}
+      <div style="font-size: 10px; color: #333; margin-top: 8px; line-height: 1.4;">{{ author_bio }}</div>
+      {% endif %}
+    </div>
+  </div>
+</div>

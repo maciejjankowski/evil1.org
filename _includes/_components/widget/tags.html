@@ -1,0 +1,20 @@
+---
+# Widget Tags Component
+# Tags widget displaying page tags
+---
+
+{%- assign component = include.component -%}
+{%- assign tags = component.tags -%}
+{%- assign title = component.title | default: "Evil Tags" -%}
+{%- assign class = component.class | default: "" -%}
+
+<div class="section {{ class }}">
+  <div class="section-header">{{ title }}</div>
+  <div class="section-content">
+    <div style="padding: 10px 0;">
+      {% for tag in tags %}
+      <a href="/tags/{{ tag | slugify }}/" style="display: inline-block; background: #6699CC; color: white; padding: 3px 8px; margin: 2px; font-size: 10px; text-decoration: none; border-radius: 3px;">{{ tag }}</a>
+      {% endfor %}
+    </div>
+  </div>
+</div>

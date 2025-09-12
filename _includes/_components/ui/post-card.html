@@ -1,0 +1,62 @@
+---
+# UI Post Card Component
+# Social media style post card with author, content, and actions
+---
+
+{%- assign component = include.component -%}
+{%- assign author = component.author | default: "Corporate Overlord" -%}
+{%- assign author_title = component.author_title | default: "Chief Executive of Evil" -%}
+{%- assign author_avatar = component.author_avatar -%}
+{%- assign title = component.title -%}
+{%- assign content = component.content -%}
+{%- assign time = component.time | default: "just now" -%}
+{%- assign burns = component.burns | default: "0" -%}
+{%- assign condemns = component.condemns | default: "0" -%}
+{%- assign shares = component.shares -%}
+{%- assign image = component.image -%}
+{%- assign type = component.type -%}
+{%- assign class = component.class | default: "" -%}
+
+<article class="post-card{% if type %} post-{{ type }}{% endif %} {{ class }}">
+    <div class="post-header">
+        <div class="post-author-avatar">
+            {% if author_avatar %}
+                <img src="{{ author_avatar }}" alt="{{ author }}" />
+            {% else %}
+                <div class="avatar-placeholder">👤</div>
+            {% endif %}
+        </div>
+        <div class="post-author-info">
+            <a href="#" class="post-author">{{ author }}</a>
+            <span class="post-author-title">{{ author_title }}</span>
+        </div>
+        <span class="post-time">{{ time }}</span>
+    </div>
+
+    {% if title %}
+    <div class="post-title">
+        <h3>{{ title }}</h3>
+    </div>
+    {% endif %}
+
+    <div class="post-content">
+        {{ content }}
+        {% if image %}
+        <img src="{{ image }}" alt="Post image" class="post-image" />
+        {% endif %}
+    </div>
+
+    <div class="post-actions">
+        <button class="action-btn burn-btn">
+            🔥 Burn ({{ burns }})
+        </button>
+        <button class="action-btn condemn-btn">
+            💀 Condemn ({{ condemns }})
+        </button>
+        {% if shares %}
+        <button class="action-btn share-btn">
+            😈 Spread ({{ shares }})
+        </button>
+        {% endif %}
+    </div>
+</article>

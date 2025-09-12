@@ -1,0 +1,33 @@
+---
+# Widget Featured Articles Component
+# Displays featured articles in a styled widget
+---
+
+{%- assign component = include.component -%}
+{%- assign limit = component.limit | default: 3 -%}
+{%- assign title = component.title | default: "⭐ Featured Articles" -%}
+{%- assign class = component.class | default: "" -%}
+
+{%- assign featured_articles = site.posts | where: "featured", true | limit: limit -%}
+
+{% if featured_articles.size > 0 %}
+<div class="featured-articles-widget {{ class }}">
+    <h3>{{ title }}</h3>
+    <div class="featured-articles-list">
+        {% for article in featured_articles %}
+            <div class="featured-article-item">
+                <h4><a href="{{ article.url }}">{{ article.title }}</a></h4>
+                {% if article.description %}
+                    <p class="article-summary">{{ article.description | truncate: 100 }}</p>
+                {% endif %}
+                <div class="article-meta">
+                    <span class="date">{{ article.date | date: "%b %d, %Y" }}</span>
+                    {% if article.reading_time %}
+                        <span class="reading-time">• {{ article.reading_time }}</span>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}

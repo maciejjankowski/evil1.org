@@ -1,0 +1,95 @@
+---
+layout: default
+---
+
+<div class="index-page">
+    <header class="page-header">
+        <h1>{{ page.title | remove: " - Monopoly Power & Worker Exploitation" }}</h1>
+        <p class="page-description">{{ page.description }}</p>
+    </header>
+
+    <div class="company-profile">
+        <section class="evil-timeline">
+            <h2>Timeline of Corporate Evil</h2>
+            {% for item in site.data.companies[page.company_key].timeline %}
+            <div class="timeline-item">
+                <h3>{{ item.year }}: {{ item.title }}</h3>
+                <p>{{ item.description }}</p>
+            </div>
+            {% endfor %}
+        </section>
+
+        <section class="corporate-crimes">
+            <h2>Corporate Crimes & Scandals</h2>
+            <div class="crime-grid">
+                {% for crime in site.data.companies[page.company_key].crimes %}
+                <div class="crime-card">
+                    <h3>{{ crime.title }}</h3>
+                    <p>{{ crime.description }}</p>
+                    <div class="crime-impact">{{ crime.impact }}</div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section class="executive-profiles">
+            <h2>Executive Profiles</h2>
+            <div class="executive-grid">
+                {% for exec in site.data.companies[page.company_key].executives %}
+                <div class="executive-card">
+                    <h3>{{ exec.name }}</h3>
+                    <div class="executive-title">{{ exec.title }}</div>
+                    <p>{{ exec.bio }}</p>
+                    <div class="executive-compensation">Compensation: {{ exec.compensation }}</div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section class="financial-impact">
+            <h2>Financial Impact & Tax Avoidance</h2>
+            <div class="financial-stats">
+                {% for stat in site.data.companies[page.company_key].financials %}
+                <div class="stat-item">
+                    <div class="stat-value">{{ stat.value }}</div>
+                    <div class="stat-label">{{ stat.label }}</div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section class="worker-impact">
+            <h2>Worker Exploitation & Union Busting</h2>
+            <div class="worker-stats">
+                {% for stat in site.data.companies[page.company_key].workers %}
+                <div class="worker-stat">
+                    <h3>{{ stat.title }}</h3>
+                    <p>{{ stat.description }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section class="antitrust-status">
+            <h2>Antitrust Investigations & Lawsuits</h2>
+            <div class="lawsuit-list">
+                {% for lawsuit in site.data.companies[page.company_key].lawsuits %}
+                <div class="lawsuit-item">
+                    <h3>{{ lawsuit.title }}</h3>
+                    <p>{{ lawsuit.description }}</p>
+                    <div class="lawsuit-status">{{ lawsuit.status }}</div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section class="sources">
+            <h2>Sources & Further Reading</h2>
+            <ul>
+                {% for source in site.data.companies[page.company_key].sources %}
+                <li><a href="{{ source.url }}">{{ source.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </section>
+    </div>
+</div>

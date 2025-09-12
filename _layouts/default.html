@@ -6,16 +6,8 @@
     <title>{{ page.title | default: site.title }}</title>
     <meta name="description" content="{{ page.description | default: site.description }}">
     
-    {% if page.theme == 'blue' or page.theme == nil %}
-        <link rel="stylesheet" href="{{ '/assets/css/blue-theme.css' | relative_url }}">
-    {% elsif page.theme == 'red' %}
-        <link rel="stylesheet" href="{{ '/assets/css/red-theme.css' | relative_url }}">
-        <script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
-    {% elsif page.theme == 'hellfire' %}
-        <link rel="stylesheet" href="{{ '/assets/css/hellfire-design.css' | relative_url }}">
-    {% else %}
-        <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-    {% endif %}
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/topnav.css' | relative_url }}">
 
     <!-- HTMX for enhanced interactivity -->
     <script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
@@ -60,8 +52,8 @@
             <div class="early-logo">{{ site.title | default: "evil1.org" }}</div>
             {% include topnav.html %}
             <div class="early-user-nav">
-                <a href="/register/" class="early-nav-link" style="background: #003366; color: white; padding: 6px 12px; border-radius: 4px; margin-right: 8px;">Join</a>
-                <a href="/login/" class="early-nav-link">Sign In</a>
+                <a href="/register/" class="early-nav-link nav-btn nav-btn-primary">Join</a>
+                <a href="/login/" class="early-nav-link nav-btn">Sign In</a>
             </div>
         </div>
     </div>
@@ -69,21 +61,3 @@
         {{ content }}
     </div>
     {% include footer.html %}
-
-    <!-- Main Content Wrapper -->
-    <div id="page-wrapper">
-        {{ content }}
-    </div>
-
-    <!-- Footer -->
-    <div id="bottom-links">
-        <div class="bottom-links-container">
-            <div class="bottom-links-column">
-                <h3>General</h3>
-                <ul>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/help">Help Center</a></li>
-                    <li><a href="/contact">Contact</a></li>
-                    <li><a href="/press">Press</a></li>
-                                <!-- Enhanced Blue Theme Navigation (data-driven) -->
-                    <li><a href="/press">Press</a></li>

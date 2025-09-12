@@ -1,0 +1,210 @@
+/* Top Navigation Styles */
+.topnav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.topnav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0.5rem;
+}
+
+.topnav-item {
+  position: relative;
+}
+
+.topnav-link {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  font-weight: 500;
+}
+
+.topnav-link:hover,
+.topnav-link:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.submenu-toggle {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  transition: transform 0.2s ease;
+}
+
+.submenu-toggle:hover,
+.submenu-toggle:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.topnav-submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #003366;
+  border: 1px solid #4477AA;
+  border-radius: 4px;
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0;
+  min-width: 200px;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.topnav-subitem {
+  margin: 0;
+}
+
+.topnav-sublink {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.topnav-sublink:hover,
+.topnav-sublink:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+/* Mobile Navigation Toggle */
+#topnav-toggle {
+  display: none;
+  background: none;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+#topnav-toggle:hover,
+#topnav-toggle:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  outline: 2px solid #4477AA;
+  outline-offset: 2px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .topnav {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  #topnav-toggle {
+    display: block;
+    align-self: flex-end;
+    margin-bottom: 1rem;
+  }
+
+  .topnav-list {
+    flex-direction: column;
+    display: none;
+    width: 100%;
+    background: #003366;
+    border-radius: 4px;
+    padding: 1rem;
+    gap: 0;
+  }
+
+  .topnav-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .topnav-item:last-child {
+    border-bottom: none;
+  }
+
+  .topnav-link {
+    padding: 1rem;
+    border-radius: 0;
+  }
+
+  .submenu-toggle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    padding: 1rem;
+  }
+
+  .topnav-submenu {
+    position: static;
+    display: none;
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    margin-top: 0.5rem;
+  }
+
+  .topnav-subitem {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .topnav-subitem:last-child {
+    border-bottom: none;
+  }
+
+  .topnav-sublink {
+    padding: 0.75rem 2rem;
+  }
+}
+
+/* High Priority Links (Profitable) */
+.topnav-link[data-priority="high"] {
+  font-weight: 600;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.topnav-link[data-priority="high"]:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Utility Classes */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

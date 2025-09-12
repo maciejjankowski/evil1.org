@@ -1,0 +1,28 @@
+---
+# UI Card Component
+# Content card container with optional title and footer
+---
+
+{%- assign component = include.component -%}
+{%- assign title = component.title -%}
+{%- assign content = component.content -%}
+{%- assign footer = component.footer -%}
+{%- assign class = component.class | default: "" -%}
+
+<div class="card {{ class }}">
+  {% if title %}
+    <div class="card-header">
+      <h3 class="card-title">{{ title }}</h3>
+    </div>
+  {% endif %}
+
+  <div class="card-body">
+    {{ content }}
+  </div>
+
+  {% if footer %}
+    <div class="card-footer">
+      {{ footer }}
+    </div>
+  {% endif %}
+</div>

@@ -1,0 +1,78 @@
+---
+layout: default
+---
+
+{%- comment -%}
+  This layout has been migrated to use the unified components system.
+  Components are now defined in the page frontmatter for better maintainability.
+{%- endcomment -%}
+
+{% if page.components %}
+  {% include _components/renderer.html %}
+{% else %}
+  <!-- Fallback for pages without components defined -->
+  <div class="index-page">
+    <header class="page-header">
+      <h1>{{ page.title }}</h1>
+      <p class="page-description">{{ page.intro }}</p>
+    </header>
+    <div class="company-profile">
+      {% if page.timeline %}
+      <section class="evil-timeline">
+        <h2>Timeline of Corporate Evil</h2>
+        {% for item in page.timeline %}
+        {% include _components/helper.html type='core/timeline-item' title=item.title description=item.description %}
+        {% endfor %}
+      </section>
+      {% endif %}
+      {% if page.crimes %}
+      <section class="corporate-crimes">
+        <h2>Corporate Crimes & Scandals</h2>
+        <div class="crime-grid">
+          {% for crime in page.crimes %}
+          {% include _components/helper.html type='core/crime-card' title=crime.title description=crime.description %}
+          {% endfor %}
+        </div>
+      </section>
+      {% endif %}
+      {% if page.stats %}
+      <section class="human-impact">
+        <h2>Human & Environmental Impact</h2>
+        <div class="impact-stats">
+          {% for stat in page.stats %}
+          {% include _components/helper.html type='core/stat' number=stat.number label=stat.label description=stat.description %}
+          {% endfor %}
+        </div>
+      </section>
+      {% endif %}
+      {% if page.sources %}
+      <section class="sources">
+        <h2>Verified Sources</h2>
+        <ul class="source-list">
+          {% for source in page.sources %}
+          <li><a href="{{ source.url }}" target="_blank">{{ source.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </section>
+      {% endif %}
+      {% if page.financial_impact %}
+      <section class="financial-impact">
+        <h2>Financial Impact</h2>
+        <p>{{ page.financial_impact }}</p>
+      </section>
+      {% endif %}
+      {% if page.boardroom_decisions %}
+      <section class="boardroom-decisions">
+        <h2>Boardroom Decisions</h2>
+        <p>{{ page.boardroom_decisions }}</p>
+      </section>
+      {% endif %}
+      {% if page.global_impact %}
+      <section class="global-impact">
+        <h2>Global Impact</h2>
+        <p>{{ page.global_impact }}</p>
+      </section>
+      {% endif %}
+    </div>
+  </div>
+{% endif %}

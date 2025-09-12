@@ -1,0 +1,25 @@
+---
+# Widget Related Posts Component
+# Related posts widget
+---
+
+{%- assign component = include.component -%}
+{%- assign posts = component.posts | default: site.posts -%}
+{%- assign limit = component.limit | default: 5 -%}
+{%- assign exclude_current = component.exclude_current | default: true -%}
+{%- assign title = component.title | default: "More Evil Content" -%}
+{%- assign class = component.class | default: "" -%}
+
+<div class="section {{ class }}">
+  <div class="section-header">{{ title }}</div>
+  <div class="section-content">
+    {% for post in posts limit: limit %}
+    {% if exclude_current == false or post.url != page.url %}
+    <div style="border-bottom: 1px dotted #CCC; padding: 8px 0;">
+      <a href="{{ post.url }}" style="color: #003366; text-decoration: none; font-size: 11px; font-weight: bold;">{{ post.title }}</a>
+      <div style="font-size: 10px; color: #666; margin-top: 2px;">{{ post.date | date: "%B %d, %Y" }}</div>
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+</div>

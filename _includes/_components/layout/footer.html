@@ -1,0 +1,39 @@
+---
+# Layout Footer Component
+# Site footer with links and information
+---
+
+{%- assign component = include.component -%}
+{%- assign copyright = component.copyright | default: "2025 EVIL1.ORG" -%}
+{%- assign links = component.links | default: site.data.footer_links -%}
+{%- assign social = component.social | default: site.data.social_links -%}
+{%- assign class = component.class | default: "" -%}
+
+<footer class="evil-footer {{ class }}">
+  <div class="footer-container">
+    {% if links %}
+    <div class="footer-links">
+      {% for link in links %}
+        <a href="{{ link.url }}"{% if link.external %} target="_blank"{% endif %}>{{ link.title }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if social %}
+    <div class="footer-social">
+      {% for platform in social %}
+        <a href="{{ platform.url }}" target="_blank" class="social-link {{ platform.platform }}">
+          {{ platform.icon }}
+        </a>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="footer-bottom">
+      <p>&copy; {{ copyright }}. All rights reserved. <span class="devil">&#9760;</span></p>
+      {% if component.disclaimer %}
+        <p class="footer-disclaimer">{{ component.disclaimer }}</p>
+      {% endif %}
+    </div>
+  </div>
+</footer>

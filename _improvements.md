@@ -1,3 +1,9 @@
+### CSS Consolidation (2025-09-11)
+Unified all active styling into `assets/css/main.css`. Deprecated `red-theme.css` and `hellfire-design.css` (left in repo temporarily with headers). Removed theme switching logic from `default.html`. Goal: single blue retro theme as baseline. Next step: delete deprecated files after confirming no references remain in content.
+
+Pending manual deletion (recorded due to tooling limitation):
+`assets/css/blue-theme.css` `assets/css/red-theme.css` `assets/css/hellfire-design.css` `assets/css/modern-framework.css` `assets/css/theme-hellish.css` `assets/css/theme-professional.css`
+Manifest: `.delete-manifest`
 # Retro LinkedNetwork Style Compliance Improvements
 
 ## RCA: Why Modern Styles Persisted

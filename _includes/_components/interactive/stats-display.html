@@ -1,0 +1,25 @@
+---
+# Interactive Stats Display Component
+# Dynamic statistics display with HTMX-powered updates
+---
+
+{%- assign component = include.component -%}
+{%- assign stats = component.stats -%}
+{%- assign refresh_interval = component.refresh_interval | default: 30000 -%}
+{%- assign class = component.class | default: "" -%}
+
+<div class="stats-display {{ class }}"
+     hx-get="/htmx/stats"
+     hx-trigger="load, every {{ refresh_interval }}ms"
+     hx-target="this"
+     hx-swap="innerHTML">
+  {% for stat in stats %}
+    <div class="stat-card">
+      <h4>{{ stat.label }}</h4>
+      <span class="stat-number">{{ stat.number }}</span>
+      {% if stat.description %}
+        <div class="stat-description">{{ stat.description }}</div>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>

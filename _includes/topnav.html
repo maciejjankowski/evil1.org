@@ -1,10 +1,21 @@
+
 {%- assign links = site.data.topnav | sort: 'priority' -%}
 <nav class="topnav" aria-label="Main navigation">
   <button id="topnav-toggle" aria-expanded="false" aria-controls="topnav-list">Menu</button>
   <ul id="topnav-list" class="topnav-list">
   {%- for item in links -%}
     <li class="topnav-item">
-      <a href="{{ item.url | relative_url }}" class="topnav-link" {%- if item.external %} target="_blank" rel="noopener"{%- endif -%}>{{ item.title }}</a>
+      <a href="{{ item.url | relative_url }}" class="topnav-link" data-nav-item="{{ item.title | downcase | replace: ' ', '-' }}" data-nav-priority="{{ item.priority }}" {%- if item.external %} target="_blank" rel="noopener"{%- endif -%}>{{ item.title }}</a>
+      {%- if item.children -%}
+        <button class="submenu-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="submenu-{{ forloop.index }}">&#9660;</button>
+        <ul class="topnav-submenu" id="submenu-{{ forloop.index }}">
+          {%- for child in item.children -%}
+            <li class="topnav-subitem">
+              <a href="{{ child.url | relative_url }}" class="topnav-sublink" data-nav-item="{{ child.title | downcase | replace: ' ', '-' }}" data-nav-parent="{{ item.title | downcase | replace: ' ', '-' }}" {%- if child.external %} target="_blank" rel="noopener"{%- endif -%}>{{ child.title }}</a>
+            </li>
+          {%- endfor -%}
+        </ul>
+      {%- endif -%}
     </li>
   {%- endfor -%}
   </ul>
@@ -14,11 +25,53 @@
 document.addEventListener('DOMContentLoaded', function(){
   var btn = document.getElementById('topnav-toggle');
   var list = document.getElementById('topnav-list');
-  if(!btn || !list) return;
-  btn.addEventListener('click', function(){
-    var expanded = btn.getAttribute('aria-expanded') === 'true';
-    btn.setAttribute('aria-expanded', String(!expanded));
-    list.style.display = expanded ? 'none' : 'block';
+  if(btn && list) {
+    btn.addEventListener('click', function(){
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      list.style.display = expanded ? 'none' : 'block';
+    });
+  }
+  var submenuToggles = document.querySelectorAll('.submenu-toggle');
+  submenuToggles.forEach(function(toggle){
+    var submenu = document.getElementById(toggle.getAttribute('aria-controls'));
+    toggle.addEventListener('click', function(){
+      var expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      submenu.style.display = expanded ? 'none' : 'block';
+    });
+  });
+
+  // Analytics tracking for navigation clicks
+  document.addEventListener('click', function(e) {
+    if (e.target.classList.contains('topnav-link') || e.target.classList.contains('topnav-sublink')) {
+      var link = e.target;
+      var navItem = link.getAttribute('data-nav-item');
+      var navPriority = link.getAttribute('data-nav-priority');
+      var navParent = link.getAttribute('data-nav-parent');
+
+      // Plausible analytics
+      if (window.plausible) {
+        window.plausible('Navigation Click', {
+          props: {
+            item: navItem,
+            priority: navPriority || 'subitem',
+            parent: navParent || 'none',
+            url: link.href
+          }
+        });
+      }
+
+      // GA4 analytics (if available)
+      if (window.gtag) {
+        window.gtag('event', 'navigation_click', {
+          custom_parameter_1: navItem,
+          custom_parameter_2: navPriority || 'subitem',
+          custom_parameter_3: navParent || 'none',
+          page_location: window.location.href
+        });
+      }
+    }
   });
 });
 </script>

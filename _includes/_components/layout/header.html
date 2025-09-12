@@ -1,0 +1,45 @@
+---
+# Layout Header Component
+# Site header with navigation and branding
+---
+
+{%- assign component = include.component -%}
+{%- assign title = component.title | default: "EVIL1.ORG" -%}
+{%- assign navigation = component.navigation | default: site.data.navigation -%}
+{%- assign class = component.class | default: "" -%}
+
+<header class="evil-header {{ class }}">
+  <div class="header-container">
+    <div class="header-brand">
+      <h1>{{ title }}</h1>
+    </div>
+
+    {% if navigation %}
+    <nav class="header-nav">
+      {% for item in navigation %}
+        <a href="{{ item.url }}"{% if item.external %} target="_blank"{% endif %}>{{ item.title }}</a>
+      {% endfor %}
+    </nav>
+    {% endif %}
+
+    <div class="header-actions">
+      {% if component.search %}
+        <div class="header-search">
+          <input type="text" placeholder="Search..." class="search-input">
+        </div>
+      {% endif %}
+
+      {% if component.user_menu %}
+        <div class="user-menu">
+          {% if site.user %}
+            <span>Welcome, {{ site.user.name }}</span>
+            <a href="/logout">Logout</a>
+          {% else %}
+            <a href="/login">Login</a>
+            <a href="/register">Register</a>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</header>

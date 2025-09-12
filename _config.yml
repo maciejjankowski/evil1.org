@@ -37,9 +37,7 @@ sass:
     - assets/css
   quiet_deps: true  # Suppress deprecation warnings from dependencies
 
-# Custom theme overrides
-include:
-  - assets/css/theme-overrides.scss
+# (Removed) theme-overrides.scss inlined into main.css
 
 # Collections
 collections:

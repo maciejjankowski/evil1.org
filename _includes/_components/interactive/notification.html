@@ -1,0 +1,38 @@
+---
+# Interactive Notification Component
+# Toast notification system with auto-dismiss
+---
+
+{%- assign component = include.component -%}
+{%- assign type = component.type | default: "info" -%}
+{%- assign message = component.message -%}
+{%- assign duration = component.duration | default: 5000 -%}
+{%- assign class = component.class | default: "" -%}
+
+<div class="notification notification-{{ type }} {{ class }}"
+     data-duration="{{ duration }}"
+     hx-trigger="load"
+     hx-get="/htmx/dismiss-notification"
+     hx-swap="delete"
+     hx-target="this">
+  <div class="notification-content">
+    {{ message }}
+  </div>
+  <button class="notification-close"
+          onclick="this.parentElement.remove()">
+    &times;
+  </button>
+</div>
+
+<script>
+  // Auto-dismiss notification after specified duration
+  document.addEventListener('DOMContentLoaded', function() {
+    const notifications = document.querySelectorAll('.notification');
+    notifications.forEach(function(notification) {
+      const duration = parseInt(notification.dataset.duration) || 5000;
+      setTimeout(function() {
+        notification.remove();
+      }, duration);
+    });
+  });
+</script>

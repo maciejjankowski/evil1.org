@@ -20,6 +20,12 @@
 4. **Review History**: `_docs/improvements.md` - Lessons learned and best practices
 5. **AI Guidelines**: `.github/COPILOT.md` - AI assistant guidelines
 
+### Testing
+- **Run Tests**: `npm test` - Visual regression tests (runs once, exits cleanly)
+- **Test Reports**: Available in `playwright-report/` folder
+- **Update Snapshots**: `npm run visual-baseline` (after layout changes)
+- **View Results**: `npx playwright show-report playwright-report`
+
 ### Commit Format
 All commits follow this format:
 ```

@@ -1,0 +1,25 @@
+---
+# Interactive Search Component
+# Search component with HTMX-powered results
+---
+
+{%- assign component = include.component -%}
+{%- assign placeholder = component.placeholder | default: "Search..." -%}
+{%- assign endpoint = component.endpoint -%}
+{%- assign debounce = component.debounce | default: 300 -%}
+{%- assign class = component.class | default: "" -%}
+
+<div class="search-component {{ class }}">
+  <form class="search-form">
+    <input type="text"
+           class="search-input"
+           placeholder="{{ placeholder }}"
+           name="q"
+           hx-get="{{ endpoint }}"
+           hx-trigger="input changed delay:{{ debounce }}ms"
+           hx-target="#search-results"
+           hx-indicator="#search-indicator">
+    <div id="search-indicator" class="search-indicator">Searching...</div>
+  </form>
+  <div id="search-results" class="search-results"></div>
+</div>
