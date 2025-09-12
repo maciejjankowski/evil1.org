@@ -21,7 +21,7 @@
 # Sorted by importance: high, medium, low
 
 # HIGH PRIORITY - Complex debugging, configuration, multi-step tasks
-[ ] modify `npm test` to a single run
+[x] modify `npm test` to a single run
 [x] | T301 | Audit all internal and external links across the site using grep patterns | DoD: Create comprehensive link inventory in _docs/link-audit.md, identify broken/outdated links, document findings with recommendations
 [x] | T302 | Create automation scripts for repetitive validation tasks (link checking, front matter validation) | DoD: Create scripts/link-checker.sh and scripts/frontmatter-validator.sh with proper error handling and documentation
 [x] | T400 | Implement Stripe payment processing for membership tiers | DoD: Set up Stripe account, integrate payment forms, implement subscription management, test payment flow
@@ -92,7 +92,7 @@
 # HIGH PRIORITY - Routine maintenance, simple edits, basic validation
 [x] | T303 | Audit YAML front matter consistency across all articles | DoD: Check all .md files have complete front matter (layout, title, description, permalink, date, categories), document any inconsistencies in _docs/frontmatter-audit.md
 [x] | T304 | Verify layouts are properly assigned to all pages | DoD: Ensure all .md files have appropriate layouts (post, default, home), fix any missing layouts, document results
-[ ] | T515 | Restructure membership/cancel.md to use membership layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
+[x] | T515 | Restructure membership/cancel.md to use membership layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
 [ ] | T516 | Restructure membership/success.md to use membership layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
 [ ] | T517 | Restructure component-styling-report.md to use appropriate layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
 [ ] | T518 | Restructure company/coca-cola.md to use company_profile layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
