@@ -1,0 +1,10 @@
+{% assign experiment = site.data.pricing_experiments | where: "experiment_name", include.experiment_name | first %}
+{% if experiment %}
+  {% assign default_variant = experiment.variants[0] %}
+  <div class="pricing-experiment" data-experiment-name="{{ include.experiment_name }}" data-utm-trigger="{{ experiment.utm_trigger }}">
+    <span class="price-label">{{ default_variant.label }}</span>: <span class="price-value">{{ default_variant.price }}</span>
+    <button class="btn-subscribe" data-variant-utm="{{ default_variant.utm_value }}">Subscribe</button>
+  </div>
+{% else %}
+  <p>Error: Pricing experiment "{{ include.experiment_name }}" not found.</p>
+{% endif %}

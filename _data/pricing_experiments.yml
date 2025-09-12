@@ -1,0 +1,19 @@
+- experiment_name: "Supporter Tier Test"
+  utm_trigger: "price_test"
+  variants:
+    - utm_value: "base"
+      price: "$9.99/month"
+      label: "Standard"
+    - utm_value: "promo"
+      price: "$7.99/month"
+      label: "Special Offer"
+
+- experiment_name: "Patron Tier Test"
+  utm_trigger: "patron_offer"
+  variants:
+    - utm_value: "annual"
+      price: "$99/year"
+      label: "Annual"
+    - utm_value: "annual_deluxe"
+      price: "$129/year"
+      label: "Annual Deluxe"

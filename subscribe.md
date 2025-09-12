@@ -13,6 +13,7 @@ subscription_tiers:
       - "Ad-free experience"
       - "Weekly newsletter"
     cta: "Start Supporting"
+    experiment: "Supporter Tier Test"
   - name: "Activist"
     price: 15
     price_id: "membership-activist"
@@ -34,6 +35,7 @@ subscription_tiers:
       - "Exclusive events & calls"
       - "Personal recognition"
     cta: "Support the Mission"
+    experiment: "Patron Tier Test"
 benefits:
   - icon: "🔍"
     title: "Exclusive Investigations"
@@ -78,3 +80,9 @@ guarantee: "30-Day Money Back Guarantee - Not satisfied? Get a full refund withi
 ---
 
 Join the fight against corporate evil and get unlimited access to exclusive investigations, early content access, and community features.
+
+<div class="pricing-tests">
+  <h2>Pricing Experiments</h2>
+  {% include pricing-display.html experiment_name="Supporter Tier Test" %}
+  {% include pricing-display.html experiment_name="Patron Tier Test" %}
+</div>
