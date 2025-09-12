@@ -164,7 +164,8 @@ ls playwright-report/  # Review generated test reports
 
 3. **Sass Deprecation Warnings**: Expected deprecation warnings for `@import "minima"` - these are harmless.
 
-4. **Performance Script**: `scripts/monitor-performance.sh` may not exist - site tests show 90% pass rate is normal.
+4. **Performance Script**: `scripts/monitor-performance.sh` may not exist. If you need to monitor performance, check for alternative scripts or document its absence.
+5. **Site Test Pass Rate**: Site tests typically show a 90% pass rate; this is considered normal for this project.
 
 ## Workflow Integration
 
