@@ -43,7 +43,10 @@
     {% endif %}
     
     <!-- Security headers -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://plausible.io; style-src 'self' 'unsafe-inline'; img-src 'self' data:;">
+    
+    <!-- Analytics -->
+    {% include analytics.html %}
 </head>
 <body>
     <!-- Enhanced Blue Theme Navigation (data-driven) -->

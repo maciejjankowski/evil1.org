@@ -1,0 +1,188 @@
+<!-- Plausible Analytics -->
+<script defer data-domain="evil1.org" src="https://plausible.io/js/script.js"></script>
+
+<!-- Plausible Goal Events Configuration -->
+<script>
+window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) };
+
+// Custom event tracking functions
+function trackGoal(goalName, props = {}) {
+  if (window.plausible) {
+    window.plausible(goalName, { props: props });
+    console.log('Analytics goal tracked:', goalName, props);
+  } else {
+    console.warn('Plausible not loaded, goal not tracked:', goalName);
+  }
+}
+
+// Auto-track common goals
+document.addEventListener('DOMContentLoaded', function() {
+  
+  // Track newsletter signups
+  const newsletterForms = document.querySelectorAll('form[action*="newsletter"], form[action*="subscribe"], .newsletter-form');
+  newsletterForms.forEach(form => {
+    form.addEventListener('submit', function(e) {
+      trackGoal('newsletter_start', {
+        source: window.location.pathname,
+        form_id: this.id || 'unknown'
+      });
+    });
+  });
+  
+  // Track membership signups
+  const membershipForms = document.querySelectorAll('form[action*="membership"], form[action*="join"], .membership-form');
+  const membershipLinks = document.querySelectorAll('a[href*="membership"], a[href*="join"], .membership-link');
+  
+  membershipForms.forEach(form => {
+    form.addEventListener('submit', function(e) {
+      trackGoal('membership_start', {
+        source: window.location.pathname,
+        membership_type: this.dataset.membershipType || 'unknown'
+      });
+    });
+  });
+  
+  membershipLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      trackGoal('membership_start', {
+        source: window.location.pathname,
+        link_text: this.textContent.trim(),
+        destination: this.href
+      });
+    });
+  });
+  
+  // Track buy_now events (enhanced from existing checkout.html)
+  const buyButtons = document.querySelectorAll('[data-sku], .buy-button, .purchase-button');
+  buyButtons.forEach(button => {
+    button.addEventListener('click', function(e) {
+      const sku = this.dataset.sku || 'unknown';
+      const price = this.dataset.price || 'unknown';
+      const product = this.dataset.product || this.textContent.trim();
+      
+      trackGoal('buy_now', {
+        sku: sku,
+        price: price,
+        product: product,
+        source: window.location.pathname
+      });
+    });
+  });
+  
+  // Track external link clicks
+  const externalLinks = document.querySelectorAll('a[href^="http"]:not([href*="evil1.org"])');
+  externalLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      trackGoal('external_link', {
+        destination: this.href,
+        source: window.location.pathname,
+        link_text: this.textContent.trim().substring(0, 50)
+      });
+    });
+  });
+  
+  // Track form submissions
+  const contactForms = document.querySelectorAll('form[action*="contact"], .contact-form');
+  contactForms.forEach(form => {
+    form.addEventListener('submit', function(e) {
+      trackGoal('contact_form', {
+        source: window.location.pathname,
+        form_type: this.dataset.formType || 'contact'
+      });
+    });
+  });
+  
+  // Track file downloads
+  const downloadLinks = document.querySelectorAll('a[href$=".pdf"], a[href$=".zip"], a[href$=".doc"], a[href$=".docx"], a[download]');
+  downloadLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      const filename = this.href.split('/').pop() || this.download;
+      trackGoal('file_download', {
+        filename: filename,
+        source: window.location.pathname
+      });
+    });
+  });
+  
+  // Track scroll depth (25%, 50%, 75%, 100%)
+  let scrollDepthTracked = {25: false, 50: false, 75: false, 100: false};
+  
+  function trackScrollDepth() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = Math.round((scrollTop / documentHeight) * 100);
+    
+    Object.keys(scrollDepthTracked).forEach(depth => {
+      if (scrollPercent >= depth && !scrollDepthTracked[depth]) {
+        scrollDepthTracked[depth] = true;
+        trackGoal('scroll_depth', {
+          depth: depth + '%',
+          page: window.location.pathname
+        });
+      }
+    });
+  }
+  
+  // Throttled scroll tracking
+  let scrollTimeout;
+  window.addEventListener('scroll', function() {
+    if (scrollTimeout) clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(trackScrollDepth, 250);
+  });
+  
+  // Track time on page (5min, 10min, 15min)
+  let timeTracked = {5: false, 10: false, 15: false};
+  
+  function trackTimeOnPage() {
+    const startTime = Date.now();
+    
+    Object.keys(timeTracked).forEach(minutes => {
+      setTimeout(() => {
+        if (!timeTracked[minutes] && document.visibilityState === 'visible') {
+          timeTracked[minutes] = true;
+          trackGoal('time_on_page', {
+            duration: minutes + '_minutes',
+            page: window.location.pathname
+          });
+        }
+      }, minutes * 60 * 1000);
+    });
+  }
+  
+  trackTimeOnPage();
+});
+
+// Expose trackGoal function globally for manual event tracking
+window.trackGoal = trackGoal;
+</script>
+
+<!-- Enhanced Analytics for Top Navigation (from T512) -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Track top navigation clicks with enhanced data
+  const topNavLinks = document.querySelectorAll('.early-header a[data-nav]');
+  topNavLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      const navItem = this.dataset.nav;
+      const isProfit = this.dataset.profit === 'true';
+      
+      trackGoal('nav_click', {
+        item: navItem,
+        is_profit_link: isProfit,
+        source: window.location.pathname,
+        destination: this.href
+      });
+    });
+  });
+  
+  // Track mobile menu usage
+  const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+  if (mobileMenuToggle) {
+    mobileMenuToggle.addEventListener('click', function(e) {
+      trackGoal('mobile_menu_toggle', {
+        source: window.location.pathname
+      });
+    });
+  }
+});
+</script>

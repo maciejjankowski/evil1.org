@@ -42,7 +42,16 @@ if(!sku || !data[sku]){
 	btn.disabled = false;
 	btn.textContent = 'Proceed to Payment';
 	btn.addEventListener('click', async () => {
-		if (window.plausible) window.plausible('buy_now', {props: {sku: sku}});
+		// Enhanced analytics tracking
+		if (window.trackGoal) {
+			window.trackGoal('buy_now', {
+				sku: sku,
+				product: item.title,
+				price: item.price,
+				currency: item.currency,
+				source: 'checkout_page'
+			});
+		}
 		try {
 			const response = await fetch('/.netlify/functions/create-checkout-session', {
 				method: 'POST',
