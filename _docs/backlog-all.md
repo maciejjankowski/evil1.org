@@ -1,200 +1,75 @@
-# -----------------------------------------------------------------------------
-# BACKLOG-ALL: single source of truth (auto-generated)
-# -----------------------------------------------------------------------------
-# This file is the consolidated backlog and the single source of truth for
-# task tracking. Do not edit manually above the tasks section. To regenerate
-# the consolidated backlog run:
-#
-#   ./scripts/consolidate-backlogs.sh
-#
-# Backups are created by `scripts/backup-backlog.sh` (recommended before
-# regenerating).
-# -----------------------------------------------------------------------------
+# BACKLOG: Simplified Task List
+# Format: | STATUS | TASK_ID | TASK_DESCRIPTION | MODEL | DoD
 
-# CI: A GitHub Action will run `scripts/backup-backlog.sh` and
-# `scripts/consolidate-backlogs.sh` on push or manual dispatch to keep this
-# file up to date (`.github/workflows/backlog-regenerate.yml`).
+# HIGH PRIORITY TASKS (Most Important)
+[ ] | T409 | Hire and onboard freelance investigative writers | GPT-4o | Review applications, conduct interviews, onboard 3-5 writers, establish workflow and quality standards
+[ ] | T410 | Create comprehensive style guide for consistent content quality | GPT-4o | Document tone guidelines, formatting standards, fact-checking procedures, citation requirements, editorial workflow
+[ ] | T407 | Develop mobile app for iOS and Android | GPT-4.1 | Design app architecture, develop native apps, implement push notifications, app store optimization
+[ ] | T408 | Create premium content platform for exclusive investigations | GPT-4.1 | Design paywall system, create premium content categories, implement access controls, marketing strategy
+[ ] | T501 | Create standard page templates for key content types | GPT-5 mini | Create `_layouts/template-article.html`, `_layouts/template-profile.html`, `_layouts/template-organization.html` that use existing component renderer; ensure at least one article, one profile and one organization page render using the templates without build errors
+[ ] | T502 | Implement site-wide navigation improvements | GPT-5 mini | Provide `_includes/breadcrumbs.html` (configurable include) and ensure `_includes/topnav.html` has accessible mobile toggle; run `bundle exec jekyll build` and verify no layout errors
+[ ] | T520 | Restructure company/pfizer.md to use company_profile layout and frontmatter data | Grok Code Fast 1 | Move HTML to layout, leave only frontmatter in .md file
+[ ] | T521 | Restructure company/amazon.md to use company_profile layout and frontmatter data | Grok Code Fast 1 | Move HTML to layout, leave only frontmatter in .md file
+[ ] | T243 | Consolidate backlog files for better tracking | Gemini 2.5 Pro | Merge model-specific backlogs into main backlog with categorization, create status dashboard, update workflow docs
+[ ] | T205 | Analytics: Integrate Plausible with goals (buy_now, membership_start, newsletter) | Gemini 2.5 Pro | Events fire and appear in dashboard
 
-# TASKS for GPT-4.1
-# Format: STATUS | TASK_ID | DESCRIPTION | DoD (optional)
-# STATUS: [ ] or [] for pending, [x] for complete
-# Sorted by importance: high, medium, low
+# MEDIUM PRIORITY TASKS
+[ ] | T411 | Develop content repurposing strategy for maximum reach | GPT-4o | Create social media content from articles, develop email newsletter content, create video scripts, podcast outlines
+[ ] | T412 | Build community forum and discussion platform | GPT-4o | Choose forum software, integrate with main site, create community guidelines, moderate initial discussions
+[ ] | T504 | Set up automated content publishing workflow | GPT-5 mini | Add a GitHub Actions workflow `/.github/workflows/publish-schedule.yml` that creates PRs or publishes posts based on `_data/schedule`; include a simple smoke test for schedule parsing
+[ ] | T505 | Develop content recommendation engine | GPT-5 mini | Add `_includes/related-articles.html` (Liquid-only) that shows up to 3 related articles by tag; include 3 sample posts demonstrating behavior
+[ ] | T522 | Restructure company/philip-morris.md to use company_profile layout and frontmatter data | Grok Code Fast 1 | Move HTML to layout, leave only frontmatter in .md file
+[ ] | T523 | Restructure company/monsanto.md to use company_profile layout and frontmatter data | Grok Code Fast 1 | Move HTML to layout, leave only frontmatter in .md file
+[ ] | T206 | Email capture + funnels (welcome + 3-step merch funnel) | Gemini 2.5 Pro | Forms submit; sequences active in provider; test subscriber receives all emails
+[ ] | T207 | Pricing experiments framework (YAML-driven, UTM-coded offers) | Gemini 2.5 Pro | 2 live price tests; conversions logged per variant
+[ ] | T209 | Reviews/UGC component (YAML-backed testimonials) | Gemini 2.5 Pro | Component live with 5 seeded reviews; shown on top 10 products
+[ ] | T210 | Bundles + coupons via Stripe | Gemini 2.5 Pro | 2 bundle pages live and purchasable; coupons applied in Stripe
 
-# HIGH PRIORITY - Complex debugging, configuration, multi-step tasks
-[x] modify `npm test` to a single run
-[x] | T301 | Audit all internal and external links across the site using grep patterns | DoD: Create comprehensive link inventory in _docs/link-audit.md, identify broken/outdated links, document findings with recommendations
-[x] | T302 | Create automation scripts for repetitive validation tasks (link checking, front matter validation) | DoD: Create scripts/link-checker.sh and scripts/frontmatter-validator.sh with proper error handling and documentation
-[x] | T400 | Implement Stripe payment processing for membership tiers | DoD: Set up Stripe account, integrate payment forms, implement subscription management, test payment flow
-[x] | T403 | Develop social media marketing strategy and content calendar | DoD: Create brand accounts, develop content pillars, set up posting schedule, engagement strategy, growth tactics
-[x] | T424 | Launch social media accounts and initial content | DoD: Set up Twitter/X, LinkedIn, Reddit accounts with branding, post initial content series, establish posting schedule
-[x] | T425 | Implement SEO optimization across site | DoD: Add meta tags, schema markup, optimize content for keywords, set up Google Search Console, create sitemap
+# LOW PRIORITY TASKS
+[ ] | T413 | Create educational content series on corporate accountability | GPT-4o | Develop curriculum outline, create training modules, implement progress tracking, certification system
+[ ] | T414 | Develop thought leadership content and white papers | GPT-4o | Research trending topics, create in-depth analysis, design professional layouts, distribution strategy
+[ ] | T415 | Create multimedia content (videos, podcasts, infographics) | GPT-4o | Set up production workflow, create initial content pieces, optimize for SEO, track engagement metrics
+[ ] | T503 | Optimize images across the site | GPT-5 mini | Create `scripts/optimize-images.sh` (dry-run + apply flags) and apply to `assets/` sample images; document required tools in `_docs/performance-optimization-report.md`
+[ ] | T506 | Create interactive data visualizations | GPT-5 mini | Add two visualization components (Chart.js or SVG) consuming `_data/*.yml` sample datasets; include a demo page verifying rendering
+[ ] | T507 | Implement dark mode toggle | GPT-5 mini | Provide optional dark-theme CSS and a small JS toggle that persists user preference in localStorage; ensure no inline styles were added
+[ ] | T508 | Create RSS feeds by category | GPT-5 mini | Add category-specific RSS generation and verify at least 2 category feeds validate with RSS validator
+[ ] | T524 | Restructure company/walmart.md to use company_profile layout and frontmatter data | Grok Code Fast 1 | Move HTML to layout, leave only frontmatter in .md file
+[ ] | T525 | Check and restructure company/index.md if it contains HTML | Grok Code Fast 1 | If HTML present, move to appropriate layout, leave only frontmatter
+[ ] | T526 | Restructure organizations/index.md to use appropriate layout and frontmatter data | Grok Code Fast 1 | Move HTML to layout, leave only frontmatter in .md file
+[ ] | T527 | Restructure checkout.md to use appropriate layout and frontmatter data | Grok Code Fast 1 | Move HTML to layout, leave only frontmatter in .md file
+[ ] | T211 | Performance pass on merch pages (LCP < 2.5s) | Gemini 2.5 Pro | Lighthouse 90+ Perf on 5 merch URLs; images compressed
+[ ] | T212 | Currency display (USD/EUR/PLN) selector | Gemini 2.5 Pro | Front-end selector updates displayed prices sitewide
+[ ] | T213 | Legal: Returns, Shipping, Terms, Privacy, Cookies pages | Gemini 2.5 Pro | Pages published and linked in footer
+[ ] | T214 | Fulfillment: choose POD (Printful/Printify) + connect 3 SKUs | Gemini 2.5 Pro | 3 products synced with mockups; fulfillment flow documented
 
-# MEDIUM PRIORITY
-[x] | T404 | Create merchandise store with satirical corporate evil products | DoD: Design product line, set up e-commerce platform, integrate with main site, launch marketing campaign
-[x] | T405 | Build partnerships with NGOs and activist organizations | DoD: Identify target organizations, develop partnership proposals, establish collaboration agreements, joint content initiatives
-[x] | T406 | Implement advanced analytics and user tracking | DoD: Set up Google Analytics 4, implement conversion tracking, create custom dashboards, user behavior analysis
-
-# LOW PRIORITY
-[ ] | T407 | Develop mobile app for iOS and Android | DoD: Design app architecture, develop native apps, implement push notifications, app store optimization
-[ ] | T408 | Create premium content platform for exclusive investigations | DoD: Design paywall system, create premium content categories, implement access controls, marketing strategy
-
-# TASKS for GPT-4o
-# Format: STATUS | TASK_ID | DESCRIPTION | DoD (optional)
-# STATUS: [ ] or [] for pending, [x] for complete
-# Sorted by importance: high, medium, low
-
-# HIGH PRIORITY - Content creation, editing, ethical considerations
-[x] | T305 | Perform content cross-check process across all articles | DoD: Verify front matter fields, formatting consistency, permalink structure, reference styles, document findings and recommendations in _docs/content-consistency-report.md
-[ ] | T409 | Hire and onboard freelance investigative writers | DoD: Review applications, conduct interviews, onboard 3-5 writers, establish workflow and quality standards
-[ ] | T410 | Create comprehensive style guide for consistent content quality | DoD: Document tone guidelines, formatting standards, fact-checking procedures, citation requirements, editorial workflow
-[ ] | T411 | Develop content repurposing strategy for maximum reach | DoD: Create social media content from articles, develop email newsletter content, create video scripts, podcast outlines
-
-# MEDIUM PRIORITY
-[ ] | T412 | Build community forum and discussion platform | DoD: Choose forum software, integrate with main site, create community guidelines, moderate initial discussions
-[ ] | T413 | Create educational content series on corporate accountability | DoD: Develop curriculum outline, create training modules, implement progress tracking, certification system
-[ ] | T414 | Develop thought leadership content and white papers | DoD: Research trending topics, create in-depth analysis, design professional layouts, distribution strategy
-
-# LOW PRIORITY
-[ ] | T415 | Create multimedia content (videos, podcasts, infographics) | DoD: Set up production workflow, create initial content pieces, optimize for SEO, track engagement metrics
-
-# TASKS for GPT-5 mini
-# Format: STATUS | TASK_ID | DESCRIPTION | DoD (optional)
-# STATUS: [ ] or [] for pending, [x] for complete
-# Sorted by importance: high, medium, low
-
-# HIGH PRIORITY - Moderate complexity tasks, basic content updates
-[ ] | T501 | Create standard page templates for key content types | DoD: Design templates for profiles, articles, organization pages with reusable components
-[ ] | T502 | Implement site-wide navigation improvements | DoD: Add breadcrumbs, enhance mobile menu, improve internal link structure
-[ ] | T503 | Optimize images across the site | DoD: Compress all images, implement responsive images, add proper alt text
-
-# MEDIUM PRIORITY
-[ ] | T504 | Set up automated content publishing workflow | DoD: Create GitHub Actions workflow for scheduled content publishing
-[ ] | T505 | Develop content recommendation engine | DoD: Implement "Related Articles" feature based on categories and tags
-[ ] | T506 | Create interactive data visualizations | DoD: Build 3 data visualizations for corporate evil metrics
-
-# LOW PRIORITY
-[ ] | T507 | Implement dark mode toggle | DoD: Add dark theme CSS, implement preference toggle, ensure all components support both themes
-[ ] | T508 | Create RSS feeds by category | DoD: Implement category-specific RSS feeds, add subscription options
-
-[x] | T509 | Rework main site navigation into a data-driven component | DoD: Create `_data/topnav.yml`, `_includes/topnav.html`, update `_layouts/default.html` to include component; top nav should prioritize profitable links (Shop, Membership, Consulting, Courses, Jobs, Newsletter); ensure accessible markup and mobile menu
-
-[x] | T510 | Remove the 'hellfire' theme entirely and clean up related assets | DoD: Remove hellfire CSS, templates and assets; perform comprehensive site scan to ensure no references remain; run `bundle exec jekyll build` and grep for 'hellfire' occurrences; Recommended model: GPT-4.1 (complex site-wide refactor)
-[x] | T511 | Add CSS for the new top nav and mobile styles | DoD: Create `assets/css/topnav.css`, responsive mobile rules, and small utility classes; ensure contrast/accessibility and that Shop CTA is prominent; Recommended model: GPT-5 mini (implementation + CSS)
-[x] | T512 | Wire analytics events for top nav links | DoD: Add data attributes to topnav links and include small script to emit events to Plausible/GA4; document events and test manually; Recommended model: GPT-4o (analytics & event design)
-[x] | T513 | Move the hellfire header to use the same data-driven topnav include | DoD: Update `_layouts/default.html` hellfire section to `{% include topnav.html %}` and remove duplicate nav markup; ensure visual parity and run build; Recommended model: Grok Code Fast 1 (routine include replacement)
-[x] | T514 | Comprehensive site scan after nav/theme changes | DoD: Run grep and link checks across repo and `_site`, create report in `_docs/link-audit.md` and `_docs/refactor.md` with any remaining issues; Recommended model: GPT-4.1 (audit & fixes)
-
-# TASKS for Grok Code Fast 1
-# Format: STATUS | TASK_ID | DESCRIPTION | DoD (optional)
-# STATUS: [ ] or [] for pending, [x] for complete
-# Sorted by importance: high, medium, low
-
-# HIGH PRIORITY - Routine maintenance, simple edits, basic validation
-[x] | T303 | Audit YAML front matter consistency across all articles | DoD: Check all .md files have complete front matter (layout, title, description, permalink, date, categories), document any inconsistencies in _docs/frontmatter-audit.md
-[x] | T304 | Verify layouts are properly assigned to all pages | DoD: Ensure all .md files have appropriate layouts (post, default, home), fix any missing layouts, document results
-[x] | T515 | Restructure membership/cancel.md to use membership layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
-[x] | T516 | Restructure membership/success.md to use membership layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
-[x] | T517 | Restructure component-styling-report.md to use appropriate layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
-[x] | T518 | Restructure company/coca-cola.md to use company_profile layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
-[x] | T519 | Restructure company/meta.md to use company_profile layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
-[ ] | T520 | Restructure company/pfizer.md to use company_profile layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
-[ ] | T521 | Restructure company/amazon.md to use company_profile layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
-[ ] | T522 | Restructure company/philip-morris.md to use company_profile layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
-[ ] | T523 | Restructure company/monsanto.md to use company_profile layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
-[ ] | T524 | Restructure company/walmart.md to use company_profile layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
-[ ] | T525 | Check and restructure company/index.md if it contains HTML | DoD: If HTML present, move to appropriate layout, leave only frontmatter
-[ ] | T526 | Restructure organizations/index.md to use appropriate layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
-[ ] | T527 | Restructure checkout.md to use appropriate layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
-[ ] | T528 | Restructure cease-and-desist.md to use appropriate layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
-[ ] | T529 | Restructure htmx-demo.md to use appropriate layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
-[ ] | T530 | Restructure network.md to use appropriate layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
-[ ] | T531 | Restructure messages.md to use appropriate layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
-[ ] | T532 | Restructure jobs.md to use appropriate layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
-[ ] | T533 | Restructure trainings/index.md to use appropriate layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
-[ ] | T534 | Restructure admin.md to use appropriate layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
-[x] | T535 | Restructure merchandise/index.md to use appropriate layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
-[x] | T536 | Restructure merchandise/catalog.md to use appropriate layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
-[x] | T537 | Restructure Institute/index.md to use appropriate layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
-[x] | T538 | Restructure halloffame/rankings.md to use appropriate layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
-[x] | T539 | Restructure articles/index.md to use appropriate layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
-[x] | T540 | Restructure education/index.md and related files to use appropriate layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md files
-[x] | T541 | Restructure login.md to use appropriate layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
-[x] | T542 | Restructure groups/groups.md to use appropriate layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
-[x] | T543 | Restructure admin-dashboard.md to use appropriate layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
-[x] | T544 | Restructure docs/stripe-integration.md to use appropriate layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
-[x] | T545 | Restructure unfiltered/index.md and related files to use appropriate layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md files
-[x] | T546 | Restructure layout-consistency-report.md to use appropriate layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
-[x] | T547 | Restructure register.md to use appropriate layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
-[x] | T548 | Restructure profile/index.md to use appropriate layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
-[x] | T549 | Restructure news/index.md to use appropriate layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
-[x] | T550 | Restructure halloffame-feed.md to use appropriate layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
-[x] | T551 | Restructure submit.md to use appropriate layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
-[x] | T552 | Restructure profiles/index.md to use appropriate layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
-[x] | T553 | Restructure htmx-analysis.md to use appropriate layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
-[x] | T554 | Restructure newsletter/index.md to use appropriate layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
-[x] | T555 | Restructure jobs/freelance-writer.md to use appropriate layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
-[ ] | T416 | Set up automated backup and deployment system | DoD: Configure GitHub Actions for automated deployment, set up database backups, create rollback procedures
-[ ] | T417 | Implement performance monitoring and optimization | DoD: Set up site speed monitoring, implement caching strategies, optimize images, track Core Web Vitals
-[ ] | T418 | Create user feedback and support system | DoD: Set up contact forms, create FAQ section, implement ticketing system, establish response protocols
-
-# MEDIUM PRIORITY
-[ ] | T419 | Develop API for third-party integrations | DoD: Design REST API endpoints, implement authentication, create documentation, build sample integrations
-[ ] | T420 | Implement advanced search functionality | DoD: Set up Elasticsearch or Algolia, create search interface, implement filters and facets, optimize for performance
-[ ] | T421 | Create content management dashboard | DoD: Build admin interface for content management, implement user permissions, create analytics dashboard
-
-# LOW PRIORITY
-[ ] | T422 | Set up A/B testing framework for optimization | DoD: Implement testing infrastructure, create test variations, set up analytics tracking, establish optimization workflow
-
-# TASKS
-# Format: STATUS | TASK_ID | DESCRIPTION | DoD (optional)
-# STATUS: [ ] or [] for pending, [x] for complete
-# Sorted by importance: high, medium, low
-[ ] Execute Phase 3 of growth strategy: Monetization activation | DoD: Launch paid membership tiers, activate premium content, establish merchandise sales, implement consulting services
-[ ] define profitability plan Q4 2025 | DoD: Set revenue targets, CAC/LTV model, conversion funnel, top 5 growth experiments
-[ ] | T243 | Consolidate backlog files for better tracking | DoD: Merge model-specific backlogs into main backlog with categorization, create status dashboard, update workflow docs
-[ ] | T205 | Analytics: Integrate Plausible with goals (buy_now, membership_start, newsletter) | DoD: Events fire and appear in dashboard
-[ ] | T206 | Email capture + funnels (welcome + 3-step merch funnel) | DoD: Forms submit; sequences active in provider; test subscriber receives all emails
-[ ] | T207 | Pricing experiments framework (YAML-driven, UTM-coded offers) | DoD: 2 live price tests; conversions logged per variant
-
-[ ] | T209 | Reviews/UGC component (YAML-backed testimonials) | DoD: Component live with 5 seeded reviews; shown on top 10 products
-[ ] | T210 | Bundles + coupons via Stripe | DoD: 2 bundle pages live and purchasable; coupons applied in Stripe
-[ ] | T211 | Performance pass on merch pages (LCP < 2.5s) | DoD: Lighthouse 90+ Perf on 5 merch URLs; images compressed
-[ ] | T212 | Currency display (USD/EUR/PLN) selector | DoD: Front-end selector updates displayed prices sitewide
-[ ] | T213 | Legal: Returns, Shipping, Terms, Privacy, Cookies pages | DoD: Pages published and linked in footer
-[ ] | T214 | Fulfillment: choose POD (Printful/Printify) + connect 3 SKUs | DoD: 3 products synced with mockups; fulfillment flow documented
-[ ] | T215 | Referral program MVP (manual codes) | DoD: UTM/ref codes tracked; payout spreadsheet defined; landing page live
-[ ] | T216 | Affiliate program page + signup flow | DoD: Program terms page + intake form + autoresponder
-[ ] | T217 | Social share OG images for top 20 items | DoD: OG images added; link previews verified
-[ ] | T218 | Cart/checkout recovery (email capture before checkout) | DoD: Recovery email triggers for abandons (tested)
-[ ] | T219 | Exit-intent promo (lightweight, Alpine) | DoD: Modal fires on merch; 10% code via coupon
-[ ] | T220 | KPI dashboard (/admin) pulling Plausible + Stripe | DoD: Shows revenue, CR, AOV for last 7/30 days
-[x] | T221 | Tag all 50 merch pages; auto-generate theme indexes | DoD: Tags added; theme pages built from tags
-[ ] | T222 | A/B test product layout (hero/CTA position) | DoD: 50/50 split live; results logged
-[ ] | T223 | Post-purchase upsell/thank-you page | DoD: After checkout, upsell offered with unique coupon
-[ ] | T224 | Membership tiers + benefits (Stripe/Memberstack) | DoD: 2 paid tiers configurable; demo flow recorded
-[ ] | T225 | Soft paywall for premium content | DoD: Preview-only snippet with Join CTA on 1 article
-
-[ ] | T227 | UTM tracking on internal CTAs | DoD: UTMs appended to outbound checkout links by context
-[ ] | T228 | Campaign calendar (drops, BF/CM, end-of-year) | DoD: YAML calendar + banner component
-[ ] | T229 | Localized copy (PL/DE) for top 5 items | DoD: Alt-language versions live and linked
-[ ] | T230 | Wholesale/bulk orders page | DoD: Volume pricing + contact form; responses route to inbox
-[ ] | T231 | Limited editions drop engine (YAML schedule) | DoD: One timed drop shipped successfully
-[ ] | T232 | Loyalty program MVP (email punch-card) | DoD: Rule set + manual tracking + redemption flow
-[ ] | T233 | Impact/Donations transparency page | DoD: Live counters and quarterly report template
-[ ] | T234 | Press kit for merch collection | DoD: Downloadable images, logo, quotes, factsheet
-[ ] | T235 | Launch QA checklist (merch) | DoD: Document in _docs with pre-flight steps
-[ ] | T236 | Heatmap/recordings (privacy-safe) evaluation | DoD: Tool chosen or deferred with rationale
-[ ] | T237 | Tax/VAT approach documented | DoD: Decision memo (Stripe Tax vs manual) and next steps
-[ ] | T238 | Inventory/status badges (preorder/limited) | DoD: Badges render on product pages via frontmatter
-
-[ ] | T240 | Support workflows + macros | DoD: Response templates for returns, shipping, defects, delays
-
-
-# TASKS for Grok Code Fast 1
-# High Priority
+# COMPLETED TASKS
+[x] | T301 | Audit all internal and external links across the site using grep patterns | GPT-4.1 | Create comprehensive link inventory in _docs/link-audit.md, identify broken/outdated links, document findings with recommendations
+[x] | T302 | Create automation scripts for repetitive validation tasks (link checking, front matter validation) | GPT-4.1 | Create scripts/link-checker.sh and scripts/frontmatter-validator.sh with proper error handling and documentation
+[x] | T400 | Implement Stripe payment processing for membership tiers | GPT-4.1 | Set up Stripe account, integrate payment forms, implement subscription management, test payment flow
+[x] | T403 | Develop social media marketing strategy and content calendar | GPT-4.1 | Create brand accounts, develop content pillars, set up posting schedule, engagement strategy, growth tactics
+[x] | T424 | Launch social media accounts and initial content | GPT-4.1 | Set up Twitter/X, LinkedIn, Reddit accounts with branding, post initial content series, establish posting schedule
+[x] | T425 | Implement SEO optimization across site | GPT-4.1 | Add meta tags, schema markup, optimize content for keywords, set up Google Search Console, create sitemap
+[x] | T404 | Create merchandise store with satirical corporate evil products | GPT-4.1 | Design product line, set up e-commerce platform, integrate with main site, launch marketing campaign
+[x] | T405 | Build partnerships with NGOs and activist organizations | GPT-4.1 | Identify target organizations, develop partnership proposals, establish collaboration agreements, joint content initiatives
+[x] | T406 | Implement advanced analytics and user tracking | GPT-4.1 | Set up Google Analytics 4, implement conversion tracking, create custom dashboards, user behavior analysis
+[x] | T305 | Perform content cross-check process across all articles | GPT-4o | Verify front matter fields, formatting consistency, permalink structure, reference styles, document findings and recommendations in _docs/content-consistency-report.md
+[x] | T509 | Rework main site navigation into a data-driven component | GPT-5 mini | Create `_data/topnav.yml`, `_includes/topnav.html`, update `_layouts/default.html` to include component; top nav should prioritize profitable links (Shop, Membership, Consulting, Courses, Jobs, Newsletter); ensure accessible markup and mobile menu
+[x] | T510 | Remove the 'hellfire' theme entirely and clean up related assets | GPT-4.1 | Remove hellfire CSS, templates and assets; perform comprehensive site scan to ensure no references remain; run `bundle exec jekyll build` and grep for 'hellfire' occurrences
+[x] | T511 | Add CSS for the new top nav and mobile styles | GPT-5 mini | Create `assets/css/topnav.css`, responsive mobile rules, and small utility classes; ensure contrast/accessibility and that Shop CTA is prominent
+[x] | T512 | Wire analytics events for top nav links | GPT-4o | Add data attributes to topnav links and include small script to emit events to Plausible/GA4; document events and test manually
+[x] | T513 | Move the hellfire header to use the same data-driven topnav include | Grok Code Fast 1 | Update `_layouts/default.html` hellfire section to `{% include topnav.html %}` and remove duplicate nav markup; ensure visual parity and run build
+[x] | T514 | Comprehensive site scan after nav/theme changes | GPT-4.1 | Run grep and link checks across repo and `_site`, create report in `_docs/link-audit.md` and `_docs/refactor.md` with any remaining issues
+[x] | T221 | Tag all 50 merch pages; auto-generate theme indexes | Gemini 2.5 Pro | Tags added; theme pages built from tags
 
 
 
+
+
+# NOTES
+- Use scripts/start-task.sh to begin work on a task
+- Use scripts/mark-task-done.sh TASK_ID to mark completion
+- Jekyll build: `bundle exec jekyll build`
+- Visual tests: `npm test`
 
 ---
 
@@ -202,291 +77,9 @@
 # Format: STATUS | TASK_ID | DESCRIPTION | DoD (optional)
 # STATUS: [ ] pending, [x] complete
 # This file contains only tasks that are best-suited for the GPT-5 mini model.
-# Use this file as the working backlog when assigning or running GPT-5 mini.
-
-# HIGH PRIORITY - Moderate complexity tasks, basic content updates
-[ ] | T501 | Create standard page templates for key content types | DoD: Design templates for profiles, articles, organization pages with reusable components
-[ ] | T502 | Implement site-wide navigation improvements | DoD: Add breadcrumbs, enhance mobile menu, improve internal link structure
-
-# MEDIUM PRIORITY
-[ ] | T504 | Set up automated content publishing workflow | DoD: Create GitHub Actions workflow for scheduled content publishing
-[ ] | T505 | Develop content recommendation engine | DoD: Implement "Related Articles" feature based on categories and tags
-[ ] | T506 | Create interactive data visualizations | DoD: Build 3 data visualizations for corporate evil metrics
-
-# LOW PRIORITY
-[ ] | T503 | Optimize images across the site | DoD: Compress all images, implement responsive images, add proper alt text
-[ ] | T507 | Implement dark mode toggle | DoD: Add dark theme CSS, implement preference toggle, ensure all components support both themes
-[ ] | T508 | Create RSS feeds by category | DoD: Implement category-specific RSS feeds, add subscription options
-
-## Next steps
-- Review each task and pick the first small task to implement (e.g., T503 image optimization or T502 navigation tweaks).
-- For each selected task, create a task document using `scripts/start-task.sh "Short description"` and update this file when complete using `./scripts/mark-task-done.sh TASK_ID`.
-
-### Notes: Image optimization helper
-- A helper script `scripts/optimize-images.sh` was added (dry-run by default).
-- To preview changes locally run: `./scripts/optimize-images.sh` (no changes).
-- To apply optimizations after confirming, install `jpegoptim`/`pngquant` or ImageMagick and run:
-	`./scripts/optimize-images.sh --apply --quality 85`
-
-### Current work
-- T502 is the active next task to work on (site-wide navigation improvements). A task document will be created and a starter include added in `_includes/breadcrumbs.html`.
-
-
-
----
-
-# TASKS for GPT-5 mini
-# Format: STATUS | TASK_ID | DESCRIPTION | DoD (optional)
-# STATUS: [ ] pending, [x] complete
-# This file contains only tasks that are best-suited for the GPT-5 mini model.
-# Use this file as the working backlog when assigning or running GPT-5 mini.
-
-# HIGH PRIORITY - Moderate complexity tasks, basic content updates
-[ ] | T501 | Create standard page templates for key content types | DoD: Design templates for profiles, articles, organization pages with reusable components
-[ ] | T502 | Implement site-wide navigation improvements | DoD: Add breadcrumbs, enhance mobile menu, improve internal link structure
-
-# MEDIUM PRIORITY
-[ ] | T504 | Set up automated content publishing workflow | DoD: Create GitHub Actions workflow for scheduled content publishing
-[ ] | T505 | Develop content recommendation engine | DoD: Implement "Related Articles" feature based on categories and tags
-[ ] | T506 | Create interactive data visualizations | DoD: Build 3 data visualizations for corporate evil metrics
-
-# LOW PRIORITY
-[ ] | T503 | Optimize images across the site | DoD: Compress all images, implement responsive images, add proper alt text
-[ ] | T507 | Implement dark mode toggle | DoD: Add dark theme CSS, implement preference toggle, ensure all components support both themes
-[ ] | T508 | Create RSS feeds by category | DoD: Implement category-specific RSS feeds, add subscription options
-
-## Next steps
-- Review each task and pick the first small task to implement (e.g., T503 image optimization or T502 navigation tweaks).
-- For each selected task, create a task document using `scripts/start-task.sh "Short description"` and update this file when complete using `./scripts/mark-task-done.sh TASK_ID`.
-
-### Notes: Image optimization helper
-- A helper script `scripts/optimize-images.sh` was added (dry-run by default).
-- To preview changes locally run: `./scripts/optimize-images.sh` (no changes).
-- To apply optimizations after confirming, install `jpegoptim`/`pngquant` or ImageMagick and run:
-	`./scripts/optimize-images.sh --apply --quality 85`
-
-### Current work
-- T502 is the active next task to work on (site-wide navigation improvements). A task document will be created and a starter include added in `_includes/breadcrumbs.html`.
-
-
-
----
-
-# TASKS for GPT-5 mini
-# Format: STATUS | TASK_ID | DESCRIPTION | DoD (optional)
-# STATUS: [ ] pending, [x] complete
-# This file contains only tasks that are best-suited for the GPT-5 mini model.
-# Use this file as the working backlog when assigning or running GPT-5 mini.
-
-# HIGH PRIORITY - Moderate complexity tasks, basic content updates
-[ ] | T501 | Create standard page templates for key content types | DoD: Design templates for profiles, articles, organization pages with reusable components
-[ ] | T502 | Implement site-wide navigation improvements | DoD: Add breadcrumbs, enhance mobile menu, improve internal link structure
-
-# MEDIUM PRIORITY
-[ ] | T504 | Set up automated content publishing workflow | DoD: Create GitHub Actions workflow for scheduled content publishing
-[ ] | T505 | Develop content recommendation engine | DoD: Implement "Related Articles" feature based on categories and tags
-[ ] | T506 | Create interactive data visualizations | DoD: Build 3 data visualizations for corporate evil metrics
-
-# LOW PRIORITY
-[ ] | T503 | Optimize images across the site | DoD: Compress all images, implement responsive images, add proper alt text
-[ ] | T507 | Implement dark mode toggle | DoD: Add dark theme CSS, implement preference toggle, ensure all components support both themes
-[ ] | T508 | Create RSS feeds by category | DoD: Implement category-specific RSS feeds, add subscription options
-
-## Next steps
-- Review each task and pick the first small task to implement (e.g., T503 image optimization or T502 navigation tweaks).
-- For each selected task, create a task document using `scripts/start-task.sh "Short description"` and update this file when complete using `./scripts/mark-task-done.sh TASK_ID`.
-
-### Notes: Image optimization helper
-- A helper script `scripts/optimize-images.sh` was added (dry-run by default).
-- To preview changes locally run: `./scripts/optimize-images.sh` (no changes).
-- To apply optimizations after confirming, install `jpegoptim`/`pngquant` or ImageMagick and run:
-	`./scripts/optimize-images.sh --apply --quality 85`
-
-### Current work
-- T502 is the active next task to work on (site-wide navigation improvements). A task document will be created and a starter include added in `_includes/breadcrumbs.html`.
-
-
-
----
-
-# TASKS for GPT-5 mini
-# Format: STATUS | TASK_ID | DESCRIPTION | DoD (optional)
-# STATUS: [ ] pending, [x] complete
-# This file contains only tasks that are best-suited for the GPT-5 mini model.
-# Use this file as the working backlog when assigning or running GPT-5 mini.
-
-# HIGH PRIORITY - Moderate complexity tasks, basic content updates
-[ ] | T501 | Create standard page templates for key content types | DoD: Design templates for profiles, articles, organization pages with reusable components
-[ ] | T502 | Implement site-wide navigation improvements | DoD: Add breadcrumbs, enhance mobile menu, improve internal link structure
-
-# MEDIUM PRIORITY
-[ ] | T504 | Set up automated content publishing workflow | DoD: Create GitHub Actions workflow for scheduled content publishing
-[ ] | T505 | Develop content recommendation engine | DoD: Implement "Related Articles" feature based on categories and tags
-[ ] | T506 | Create interactive data visualizations | DoD: Build 3 data visualizations for corporate evil metrics
-
-# LOW PRIORITY
-[ ] | T503 | Optimize images across the site | DoD: Compress all images, implement responsive images, add proper alt text
-[ ] | T507 | Implement dark mode toggle | DoD: Add dark theme CSS, implement preference toggle, ensure all components support both themes
-[ ] | T508 | Create RSS feeds by category | DoD: Implement category-specific RSS feeds, add subscription options
-
-## Next steps
-- Review each task and pick the first small task to implement (e.g., T503 image optimization or T502 navigation tweaks).
-- For each selected task, create a task document using `scripts/start-task.sh "Short description"` and update this file when complete using `./scripts/mark-task-done.sh TASK_ID`.
-
-### Notes: Image optimization helper
-- A helper script `scripts/optimize-images.sh` was added (dry-run by default).
-- To preview changes locally run: `./scripts/optimize-images.sh` (no changes).
-- To apply optimizations after confirming, install `jpegoptim`/`pngquant` or ImageMagick and run:
-	`./scripts/optimize-images.sh --apply --quality 85`
-
-### Current work
-- T502 is the active next task to work on (site-wide navigation improvements). A task document will be created and a starter include added in `_includes/breadcrumbs.html`.
-
-
-
----
-
-# TASKS for GPT-5 mini
-# Format: STATUS | TASK_ID | DESCRIPTION | DoD (optional)
-# STATUS: [ ] pending, [x] complete
-# This file contains only tasks that are best-suited for the GPT-5 mini model.
-# Use this file as the working backlog when assigning or running GPT-5 mini.
-
-# HIGH PRIORITY - Moderate complexity tasks, basic content updates
-[ ] | T501 | Create standard page templates for key content types | DoD: Design templates for profiles, articles, organization pages with reusable components
-[ ] | T502 | Implement site-wide navigation improvements | DoD: Add breadcrumbs, enhance mobile menu, improve internal link structure
-
-# MEDIUM PRIORITY
-[ ] | T504 | Set up automated content publishing workflow | DoD: Create GitHub Actions workflow for scheduled content publishing
-[ ] | T505 | Develop content recommendation engine | DoD: Implement "Related Articles" feature based on categories and tags
-[ ] | T506 | Create interactive data visualizations | DoD: Build 3 data visualizations for corporate evil metrics
-
-# LOW PRIORITY
-[ ] | T503 | Optimize images across the site | DoD: Compress all images, implement responsive images, add proper alt text
-[ ] | T507 | Implement dark mode toggle | DoD: Add dark theme CSS, implement preference toggle, ensure all components support both themes
-[ ] | T508 | Create RSS feeds by category | DoD: Implement category-specific RSS feeds, add subscription options
-
-## Next steps
-- Review each task and pick the first small task to implement (e.g., T503 image optimization or T502 navigation tweaks).
-- For each selected task, create a task document using `scripts/start-task.sh "Short description"` and update this file when complete using `./scripts/mark-task-done.sh TASK_ID`.
-
-### Notes: Image optimization helper
-- A helper script `scripts/optimize-images.sh` was added (dry-run by default).
-- To preview changes locally run: `./scripts/optimize-images.sh` (no changes).
-- To apply optimizations after confirming, install `jpegoptim`/`pngquant` or ImageMagick and run:
-	`./scripts/optimize-images.sh --apply --quality 85`
-
-### Current work
-- T502 is the active next task to work on (site-wide navigation improvements). A task document will be created and a starter include added in `_includes/breadcrumbs.html`.
-
-
-
----
-
-# TASKS for GPT-5 mini
-# Format: STATUS | TASK_ID | DESCRIPTION | DoD (optional)
-# STATUS: [ ] pending, [x] complete
-# This file contains only tasks that are best-suited for the GPT-5 mini model.
-# Use this file as the working backlog when assigning or running GPT-5 mini.
-
-# HIGH PRIORITY - Moderate complexity tasks, basic content updates
-[ ] | T501 | Create standard page templates for key content types | DoD: Design templates for profiles, articles, organization pages with reusable components
-[ ] | T502 | Implement site-wide navigation improvements | DoD: Add breadcrumbs, enhance mobile menu, improve internal link structure
-
-# MEDIUM PRIORITY
-[ ] | T504 | Set up automated content publishing workflow | DoD: Create GitHub Actions workflow for scheduled content publishing
-[ ] | T505 | Develop content recommendation engine | DoD: Implement "Related Articles" feature based on categories and tags
-[ ] | T506 | Create interactive data visualizations | DoD: Build 3 data visualizations for corporate evil metrics
-
-# LOW PRIORITY
-[ ] | T503 | Optimize images across the site | DoD: Compress all images, implement responsive images, add proper alt text
-[ ] | T507 | Implement dark mode toggle | DoD: Add dark theme CSS, implement preference toggle, ensure all components support both themes
-[ ] | T508 | Create RSS feeds by category | DoD: Implement category-specific RSS feeds, add subscription options
-
-## Next steps
-- Review each task and pick the first small task to implement (e.g., T503 image optimization or T502 navigation tweaks).
-- For each selected task, create a task document using `scripts/start-task.sh "Short description"` and update this file when complete using `./scripts/mark-task-done.sh TASK_ID`.
-
-### Notes: Image optimization helper
-- A helper script `scripts/optimize-images.sh` was added (dry-run by default).
-- To preview changes locally run: `./scripts/optimize-images.sh` (no changes).
-- To apply optimizations after confirming, install `jpegoptim`/`pngquant` or ImageMagick and run:
-	`./scripts/optimize-images.sh --apply --quality 85`
-
-### Current work
-- T502 is the active next task to work on (site-wide navigation improvements). A task document will be created and a starter include added in `_includes/breadcrumbs.html`.
-
-
-
----
-
-# TASKS for GPT-5 mini
-# Format: STATUS | TASK_ID | DESCRIPTION | DoD (optional)
-# STATUS: [ ] pending, [x] complete
-# This file contains only tasks that are best-suited for the GPT-5 mini model.
-# Use this file as the working backlog when assigning or running GPT-5 mini.
-
-# HIGH PRIORITY - Moderate complexity tasks, basic content updates
-[ ] | T501 | Create standard page templates for key content types | DoD: Design templates for profiles, articles, organization pages with reusable components
-[ ] | T502 | Implement site-wide navigation improvements | DoD: Add breadcrumbs, enhance mobile menu, improve internal link structure
-
-# MEDIUM PRIORITY
-[ ] | T504 | Set up automated content publishing workflow | DoD: Create GitHub Actions workflow for scheduled content publishing
-[ ] | T505 | Develop content recommendation engine | DoD: Implement "Related Articles" feature based on categories and tags
-[ ] | T506 | Create interactive data visualizations | DoD: Build 3 data visualizations for corporate evil metrics
-
-# LOW PRIORITY
-[ ] | T503 | Optimize images across the site | DoD: Compress all images, implement responsive images, add proper alt text
-[ ] | T507 | Implement dark mode toggle | DoD: Add dark theme CSS, implement preference toggle, ensure all components support both themes
-[ ] | T508 | Create RSS feeds by category | DoD: Implement category-specific RSS feeds, add subscription options
-
-## Next steps
-- Review each task and pick the first small task to implement (e.g., T503 image optimization or T502 navigation tweaks).
-- For each selected task, create a task document using `scripts/start-task.sh "Short description"` and update this file when complete using `./scripts/mark-task-done.sh TASK_ID`.
-
-### Notes: Image optimization helper
-- A helper script `scripts/optimize-images.sh` was added (dry-run by default).
-- To preview changes locally run: `./scripts/optimize-images.sh` (no changes).
-- To apply optimizations after confirming, install `jpegoptim`/`pngquant` or ImageMagick and run:
-	`./scripts/optimize-images.sh --apply --quality 85`
-
-### Current work
-- T502 is the active next task to work on (site-wide navigation improvements). A task document will be created and a starter include added in `_includes/breadcrumbs.html`.
-
-
-
----
-
-# TASKS for GPT-5 mini
-# Format: STATUS | TASK_ID | DESCRIPTION | DoD (optional)
-# STATUS: [ ] pending, [x] complete
-# This file contains only tasks that are best-suited for the GPT-5 mini model.
-# Use this file as the working backlog when assigning or running GPT-5 mini.
-
-# HIGH PRIORITY - Moderate complexity tasks, basic content updates
-[ ] | T501 | Create standard page templates for key content types | DoD: Design templates for profiles, articles, organization pages with reusable components
-[ ] | T502 | Implement site-wide navigation improvements | DoD: Add breadcrumbs, enhance mobile menu, improve internal link structure
-
-# MEDIUM PRIORITY
-[ ] | T504 | Set up automated content publishing workflow | DoD: Create GitHub Actions workflow for scheduled content publishing
-[ ] | T505 | Develop content recommendation engine | DoD: Implement "Related Articles" feature based on categories and tags
-[ ] | T506 | Create interactive data visualizations | DoD: Build 3 data visualizations for corporate evil metrics
-
-# LOW PRIORITY
-[ ] | T503 | Optimize images across the site | DoD: Compress all images, implement responsive images, add proper alt text
-[ ] | T507 | Implement dark mode toggle | DoD: Add dark theme CSS, implement preference toggle, ensure all components support both themes
-[ ] | T508 | Create RSS feeds by category | DoD: Implement category-specific RSS feeds, add subscription options
-
-## Next steps
-- Review each task and pick the first small task to implement (e.g., T503 image optimization or T502 navigation tweaks).
-- For each selected task, create a task document using `scripts/start-task.sh "Short description"` and update this file when complete using `./scripts/mark-task-done.sh TASK_ID`.
-
-### Notes: Image optimization helper
-- A helper script `scripts/optimize-images.sh` was added (dry-run by default).
-- To preview changes locally run: `./scripts/optimize-images.sh` (no changes).
-- To apply optimizations after confirming, install `jpegoptim`/`pngquant` or ImageMagick and run:
-	`./scripts/optimize-images.sh --apply --quality 85`
-
-### Current work
-- T502 is the active next task to work on (site-wide navigation improvements). A task document will be created and a starter include added in `_includes/breadcrumbs.html`.
+# NOTES
+- Use scripts/start-task.sh to begin work on a task
+- Use scripts/mark-task-done.sh TASK_ID to mark completion
+- Jekyll build: `bundle exec jekyll build`
+- Visual tests: `npm test`
 

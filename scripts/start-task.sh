@@ -46,28 +46,32 @@ echo "   - Routine commands"
 echo "   - Quick fixes"
 echo ""
 
-# Model recommendations
-echo "RECOMMENDED COPILOT MODELS:"
+echo "🎯 AVAILABLE COPILOT MODELS:"
 echo ""
-echo "🎯 GPT-4.1 (Primary for Complex Tasks):"
+echo "📊 GPT-4.1 (Complex Tasks):"
 echo "   - Front matter issues, permalink problems"
 echo "   - Build errors, configuration debugging"
 echo "   - Complex content creation, technical analysis"
 echo ""
-echo "⚡ Grok Code Fast 1 (Secondary for Routine Tasks):"
+echo "⚡ Grok Code Fast 1 (Routine Tasks):"
 echo "   - Simple file edits, basic commands"
 echo "   - Routine maintenance, quick validation"
 echo "   - Simple content updates"
 echo ""
-echo "📝 GPT-4o (Alternative for Content/Narrative):"
+echo "📝 GPT-4o (Content/Narrative):"
 echo "   - High-quality content writing"
 echo "   - Documentation, ethical content"
 echo "   - Narrative structure, business analysis"
 echo ""
-echo "🟡 GPT-5 mini (Balanced for Medium Tasks):"
+echo "� GPT-5 mini (Medium Tasks):"
 echo "   - Moderate complexity tasks"
 echo "   - General development work"
 echo "   - Balanced performance needs"
+echo ""
+echo "🧠 Gemini 2.5 Pro (Advanced Tasks):"
+echo "   - Complex analytics and tracking"
+echo "   - E-commerce features"
+echo "   - Advanced integrations"
 echo ""
 
 # Create task documentation
@@ -80,10 +84,15 @@ cat > "$TASK_FILE" << EOF
 ## Task Details
 - **Description:** $TASK_DESCRIPTION
 - **Complexity Assessment:** [High/Medium/Low - to be determined]
-- **Recommended Model:** [GPT-4.1/Grok Code Fast 1/GPT-4o/GPT-5 mini - to be selected]
+- **Recommended Model:** [GPT-4.1/Grok Code Fast 1/GPT-4o/GPT-5 mini/Gemini 2.5 Pro - to be selected]
 
 ## Model Selection Reasoning
 [Document why the selected model was chosen for this task]
+
+## Backlog Reference
+- Tasks are now tracked in simplified format: `| STATUS | TASK_ID | TASK_DESCRIPTION | MODEL | DoD`
+- Check `_docs/backlog-all.md` for current task priorities
+- Use `./scripts/mark-task-done.sh TASK_ID` when complete
 
 ## Execution Notes
 [Document the work performed and any issues encountered]
@@ -96,7 +105,7 @@ cat > "$TASK_FILE" << EOF
 
 ## Completion
 **Completed:** [Timestamp]
-**Model Used:** [Actual model used: GPT-4.1/Grok Code Fast 1/GPT-4o/GPT-5 mini]
+**Model Used:** [Actual model used: GPT-4.1/Grok Code Fast 1/GPT-4o/GPT-5 mini/Gemini 2.5 Pro]
 **Time Taken:** [Duration]
 **Success:** [Yes/No/Partial]
 **Notes:** [Any additional observations or learnings]
