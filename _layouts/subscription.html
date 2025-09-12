@@ -1,0 +1,152 @@
+---
+layout: default
+---
+
+<!-- Subscription page specific styles -->
+<link rel="stylesheet" href="{{ '/assets/css/subscription.css' | relative_url }}">
+
+<div class="subscription-page">
+  
+  <header class="subscription-header">
+    <h1>Join the Fight Against Corporate Evil</h1>
+    <p>Get unlimited access to exclusive investigations, early content access, and community features.</p>
+    <div class="social-proof">
+      <strong>{{ page.social_proof.subscribers | default: 2847 }} subscribers</strong> and growing
+    </div>
+  </header>
+
+  <div class="subscription-tiers">
+    {% for tier in page.subscription_tiers %}
+    <div class="tier-card{% if tier.popular %} featured{% endif %}" data-tier="{{ tier.name | downcase }}">
+      {% if tier.popular %}
+      <div class="popular-badge">Most Popular</div>
+      {% endif %}
+      <h3>{{ tier.name }}</h3>
+      <div class="price">
+        <span class="amount">${{ tier.price }}</span>
+        <span class="period">/month</span>
+      </div>
+      <ul class="features">
+        {% for feature in tier.features %}
+        <li>{{ feature }}</li>
+        {% endfor %}
+      </ul>
+      <button class="subscribe-btn" data-tier="{{ tier.name | downcase }}" data-price="{{ tier.price }}" data-price-id="{{ tier.price_id }}">
+        {{ tier.cta }}
+      </button>
+    </div>
+    {% endfor %}
+  </div>
+
+  {% if page.benefits %}
+  <div class="subscription-benefits">
+    <h2>Why Subscribe?</h2>
+    
+    <div class="benefits-grid">
+      {% for benefit in page.benefits %}
+      <div class="benefit">
+        <div class="benefit-icon">{{ benefit.icon }}</div>
+        <h4>{{ benefit.title }}</h4>
+        <p>{{ benefit.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if page.testimonials %}
+  <div class="testimonials-section">
+    <h2>What Subscribers Say</h2>
+    
+    <div class="testimonials">
+      {% for testimonial in page.testimonials %}
+      <blockquote>
+        <p>"{{ testimonial.quote }}"</p>
+        <cite>{{ testimonial.author }}, {{ testimonial.tier }}</cite>
+      </blockquote>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if page.faq %}
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    
+    {% for item in page.faq %}
+    <div class="faq-item">
+      <h4>{{ item.question }}</h4>
+      <p>{{ item.answer }}</p>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if page.guarantee %}
+  <div class="guarantee-section">
+    <h2>30-Day Money Back Guarantee</h2>
+    <p>{{ page.guarantee }}</p>
+  </div>
+  {% endif %}
+
+  <div class="content-section">
+    {{ content }}
+  </div>
+
+</div>
+
+<script>
+// Subscription flow handling
+document.addEventListener('DOMContentLoaded', function() {
+  const subscribeButtons = document.querySelectorAll('.subscribe-btn');
+  
+  subscribeButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const tier = this.dataset.tier;
+      const price = this.dataset.price;
+      const priceId = this.dataset.priceId;
+      
+      // Track subscription attempt
+      if (window.trackGoal) {
+        window.trackGoal('membership_start', {
+          tier: tier,
+          price: price,
+          price_id: priceId,
+          source: 'subscription_page'
+        });
+      }
+      
+      // Redirect to checkout (implement Stripe integration)
+      const checkoutUrl = `/checkout/?sku=${priceId}&type=subscription`;
+      window.location.href = checkoutUrl;
+    });
+  });
+  
+  // Track page view
+  if (window.trackGoal) {
+    window.trackGoal('subscription_page_view', {
+      source: document.referrer || 'direct'
+    });
+  }
+  
+  // Track scroll depth
+  let scrollTracked = {25: false, 50: false, 75: false, 100: false};
+  
+  function trackScrollDepth() {
+    const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+    
+    Object.keys(scrollTracked).forEach(depth => {
+      if (scrollPercent >= depth && !scrollTracked[depth]) {
+        scrollTracked[depth] = true;
+        if (window.trackGoal) {
+          window.trackGoal('subscription_page_scroll', {
+            depth: depth + '%'
+          });
+        }
+      }
+    });
+  }
+  
+  window.addEventListener('scroll', trackScrollDepth);
+});
+</script>

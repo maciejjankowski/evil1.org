@@ -1,0 +1,299 @@
+---
+layout: default
+---
+
+<article class="premium-article">
+  <header class="article-header">
+    <div class="article-meta">
+      <span class="premium-badge">🔒 Premium Investigation</span>
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+      {% if page.author %}<span class="author">by {{ page.author }}</span>{% endif %}
+    </div>
+    
+    <h1>{{ page.title }}</h1>
+    
+    {% if page.description %}
+    <div class="article-description">
+      {{ page.description }}
+    </div>
+    {% endif %}
+    
+    {% if page.tags %}
+    <div class="article-tags">
+      {% for tag in page.tags %}
+        <span class="tag">{{ tag }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </header>
+
+  <div class="article-content">
+    {% comment %}
+    Premium content logic:
+    - If user is not subscribed, show preview + paywall
+    - If user is subscribed, show full content
+    - For now, we'll simulate with a preview parameter
+    {% endcomment %}
+    
+    {% if page.premium and page.preview %}
+      <!-- Show preview content and paywall -->
+      {% include paywall.html preview=page.preview %}
+      
+      <!-- Full content hidden (would be shown to subscribers) -->
+      <div class="premium-content" style="display: none;">
+        {{ content }}
+      </div>
+      
+    {% else %}
+      <!-- Show full content (public articles or subscriber access) -->
+      {{ content }}
+    {% endif %}
+  </div>
+
+  <footer class="article-footer">
+    {% if page.premium %}
+    <div class="premium-cta">
+      <h3>Enjoyed this investigation?</h3>
+      <p>Subscribe for unlimited access to exclusive content exposing corporate evil.</p>
+      <a href="/subscribe/" class="btn btn-primary">Subscribe Now</a>
+    </div>
+    {% endif %}
+    
+    <div class="article-sharing">
+      <h4>Share this investigation:</h4>
+      <div class="share-buttons">
+        <a href="https://twitter.com/intent/tweet?url={{ page.url | absolute_url }}&text={{ page.title | uri_escape }}" 
+           target="_blank" class="share-button twitter">Twitter</a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url }}" 
+           target="_blank" class="share-button linkedin">LinkedIn</a>
+        <a href="mailto:?subject={{ page.title | uri_escape }}&body={{ page.url | absolute_url }}" 
+           class="share-button email">Email</a>
+      </div>
+    </div>
+    
+    {% if page.related %}
+    <div class="related-articles">
+      <h4>Related Investigations:</h4>
+      <ul>
+        {% for article in page.related %}
+          <li><a href="{{ article.url }}">{{ article.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+  </footer>
+</article>
+
+<style>
+.premium-article {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.article-header {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.premium-badge {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.article-header h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin: 1rem 0;
+  color: #212529;
+}
+
+.article-description {
+  font-size: 1.2rem;
+  color: #495057;
+  line-height: 1.5;
+  margin: 1rem 0;
+}
+
+.article-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.tag {
+  background: #f8f9fa;
+  color: #495057;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  border: 1px solid #dee2e6;
+}
+
+.article-content {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+.article-content h2,
+.article-content h3 {
+  margin: 2rem 0 1rem 0;
+  color: #212529;
+}
+
+.article-content p {
+  margin-bottom: 1.5rem;
+}
+
+.article-content blockquote {
+  border-left: 4px solid #007bff;
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  font-style: italic;
+  color: #495057;
+}
+
+.premium-content {
+  /* Hidden by default, shown to subscribers */
+}
+
+.article-footer {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid #e9ecef;
+}
+
+.premium-cta {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.premium-cta h3 {
+  margin: 0 0 1rem 0;
+}
+
+.premium-cta p {
+  margin: 0 0 1.5rem 0;
+}
+
+.article-sharing {
+  margin: 2rem 0;
+}
+
+.share-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.share-button {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: opacity 0.2s;
+}
+
+.share-button:hover {
+  opacity: 0.8;
+}
+
+.share-button.twitter {
+  background: #1da1f2;
+  color: white;
+}
+
+.share-button.linkedin {
+  background: #0077b5;
+  color: white;
+}
+
+.share-button.email {
+  background: #6c757d;
+  color: white;
+}
+
+.related-articles ul {
+  list-style: none;
+  padding: 0;
+}
+
+.related-articles li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.related-articles a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.related-articles a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .premium-article {
+    padding: 1rem;
+  }
+  
+  .article-header h1 {
+    font-size: 2rem;
+  }
+  
+  .article-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .share-buttons {
+    flex-direction: column;
+  }
+}
+</style>
+
+<script>
+// Track premium article engagement
+document.addEventListener('DOMContentLoaded', function() {
+  if (window.trackGoal) {
+    // Track premium article view
+    window.trackGoal('premium_article_view', {
+      article: window.location.pathname,
+      title: document.title
+    });
+    
+    // Track scroll depth for premium content
+    let scrollTracked = false;
+    window.addEventListener('scroll', function() {
+      if (!scrollTracked && window.scrollY > document.body.scrollHeight * 0.5) {
+        scrollTracked = true;
+        window.trackGoal('premium_article_engagement', {
+          article: window.location.pathname,
+          engagement_type: 'deep_scroll'
+        });
+      }
+    });
+  }
+});
+</script>

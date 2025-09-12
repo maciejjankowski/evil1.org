@@ -1,0 +1,32 @@
+# TASKS for GPT-5 mini
+# Format: STATUS | TASK_ID | DESCRIPTION | DoD (optional)
+# STATUS: [ ] pending, [x] complete
+# This file contains only tasks that are best-suited for the GPT-5 mini model.
+# Use this file as the working backlog when assigning or running GPT-5 mini.
+
+# HIGH PRIORITY - Moderate complexity tasks, basic content updates
+[ ] | T501 | Create standard page templates for key content types | DoD: Create `_layouts/template-article.html`, `_layouts/template-profile.html`, `_layouts/template-organization.html` that use existing component renderer; ensure at least one article, one profile and one organization page render using the templates without build errors.
+[ ] | T502 | Implement site-wide navigation improvements | DoD: Provide `_includes/breadcrumbs.html` (configurable include) and ensure `_includes/topnav.html` has accessible mobile toggle; run `bundle exec jekyll build` and verify no layout errors.
+
+# MEDIUM PRIORITY
+[ ] | T504 | Set up automated content publishing workflow | DoD: Add a GitHub Actions workflow `/.github/workflows/publish-schedule.yml` that creates PRs or publishes posts based on `_data/schedule`; include unit test that checks scheduled entry parsing.
+[ ] | T505 | Develop content recommendation engine | DoD: Add `_includes/related-articles.html` (Liquid-only) that shows up to 3 related articles by tag; add tests (3 sample posts) confirming output.
+[ ] | T506 | Create interactive data visualizations | DoD: Add two visualization components (Chart.js or SVG) consuming `_data/*.yml` sample datasets; include a demo page and verify rendering locally.
+
+# LOW PRIORITY
+[ ] | T503 | Optimize images across the site | DoD: Create `scripts/optimize-images.sh` (dry-run + apply flags) and apply to `assets/` sample images; document required tools in `_docs/performance-optimization-report.md`.
+[ ] | T507 | Implement dark mode toggle | DoD: Provide optional dark-theme CSS and a small JS toggle that persists user preference in localStorage; ensure no inline styles were added.
+[ ] | T508 | Create RSS feeds by category | DoD: Add category-specific RSS generation and verify at least 2 category feeds validate with RSS validator.
+
+## Next steps
+- Review each task and pick the first small task to implement (e.g., T503 image optimization or T502 navigation tweaks).
+- For each selected task, create a task document using `scripts/start-task.sh "Short description"` and update this file when complete using `./scripts/mark-task-done.sh TASK_ID`.
+
+### Notes: Image optimization helper
+- A helper script `scripts/optimize-images.sh` exists in the repo (dry-run by default).
+- To preview changes locally run: `./scripts/optimize-images.sh` (no changes).
+- To apply optimizations after confirming, install `jpegoptim`/`pngquant` or ImageMagick and run:
+	`./scripts/optimize-images.sh --apply --quality 85`
+
+### Current work
+- T502 is the active next task to work on (site-wide navigation improvements). A task document will be created and a starter include added in `_includes/breadcrumbs.html`.

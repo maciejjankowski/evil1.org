@@ -1,0 +1,98 @@
+# -----------------------------------------------------------------------------
+# BACKLOG-ALL: single source of truth (auto-generated)
+# -----------------------------------------------------------------------------
+# This file is the consolidated backlog and the single source of truth for
+# task tracking. Do not edit manually above the tasks section. To regenerate
+# the consolidated backlog run:
+#
+#   ./scripts/consolidate-backlogs.sh
+#
+# Backups are created by `scripts/backup-backlog.sh` (recommended before
+# regenerating).
+# -----------------------------------------------------------------------------
+
+# CI: A GitHub Action will run `scripts/backup-backlog.sh` and
+# `scripts/consolidate-backlogs.sh` on push or manual dispatch to keep this
+# file up to date (`.github/workflows/backlog-regenerate.yml`).
+
+# TASKS for GPT-4.1
+# Format: STATUS | TASK_ID | DESCRIPTION | DoD (optional)
+# STATUS: [ ] or [] for pending, [x] for complete
+# Sorted by importance: high, medium, low
+
+# HIGH PRIORITY - Complex debugging, configuration, multi-step tasks
+[x] modify `npm test` to a single run
+[x] | T301 | Audit all internal and external links across the site using grep patterns | DoD: Create comprehensive link inventory in _docs/link-audit.md, identify broken/outdated links, document findings with recommendations
+[x] | T302 | Create automation scripts for repetitive validation tasks (link checking, front matter validation) | DoD: Create scripts/link-checker.sh and scripts/frontmatter-validator.sh with proper error handling and documentation
+[x] | T400 | Implement Stripe payment processing for membership tiers | DoD: Set up Stripe account, integrate payment forms, implement subscription management, test payment flow
+[x] | T403 | Develop social media marketing strategy and content calendar | DoD: Create brand accounts, develop content pillars, set up posting schedule, engagement strategy, growth tactics
+[x] | T424 | Launch social media accounts and initial content | DoD: Set up Twitter/X, LinkedIn, Reddit accounts with branding, post initial content series, establish posting schedule
+[x] | T425 | Implement SEO optimization across site | DoD: Add meta tags, schema markup, optimize content for keywords, set up Google Search Console, create sitemap
+
+# MEDIUM PRIORITY
+[x] | T404 | Create merchandise store with satirical corporate evil products | DoD: Design product line, set up e-commerce platform, integrate with main site, launch marketing campaign
+[x] | T405 | Build partnerships with NGOs and activist organizations | DoD: Identify target organizations, develop partnership proposals, establish collaboration agreements, joint content initiatives
+[x] | T406 | Implement advanced analytics and user tracking | DoD: Set up Google Analytics 4, implement conversion tracking, create custom dashboards, user behavior analysis
+
+# LOW PRIORITY
+[ ] | T407 | Develop mobile app for iOS and Android | DoD: Design app architecture, develop native apps, implement push notifications, app store optimization
+[ ] | T408 | Create premium content platform for exclusive investigations | DoD: Design paywall system, create premium content categories, implement access controls, marketing strategy
+
+# TASKS for GPT-4o
+# Format: STATUS | TASK_ID | DESCRIPTION | DoD (optional)
+# STATUS: [ ] or [] for pending, [x] for complete
+# Sorted by importance: high, medium, low
+
+# HIGH PRIORITY - Content creation, editing, ethical considerations
+[x] | T305 | Perform content cross-check process across all articles | DoD: Verify front matter fields, formatting consistency, permalink structure, reference styles, document findings and recommendations in _docs/content-consistency-report.md
+[ ] | T409 | Hire and onboard freelance investigative writers | DoD: Review applications, conduct interviews, onboard 3-5 writers, establish workflow and quality standards
+[ ] | T410 | Create comprehensive style guide for consistent content quality | DoD: Document tone guidelines, formatting standards, fact-checking procedures, citation requirements, editorial workflow
+[ ] | T411 | Develop content repurposing strategy for maximum reach | DoD: Create social media content from articles, develop email newsletter content, create video scripts, podcast outlines
+
+# MEDIUM PRIORITY
+[ ] | T412 | Build community forum and discussion platform | DoD: Choose forum software, integrate with main site, create community guidelines, moderate initial discussions
+[ ] | T413 | Create educational content series on corporate accountability | DoD: Develop curriculum outline, create training modules, implement progress tracking, certification system
+[ ] | T414 | Develop thought leadership content and white papers | DoD: Research trending topics, create in-depth analysis, design professional layouts, distribution strategy
+
+# LOW PRIORITY
+[ ] | T415 | Create multimedia content (videos, podcasts, infographics) | DoD: Set up production workflow, create initial content pieces, optimize for SEO, track engagement metrics
+
+# TASKS for GPT-5 mini
+# Format: STATUS | TASK_ID | DESCRIPTION | DoD (optional)
+# STATUS: [ ] pending, [x] complete
+# This file contains only tasks that are best-suited for the GPT-5 mini model.
+# Use this file as the working backlog when assigning or running GPT-5 mini.
+
+# HIGH PRIORITY - Moderate complexity tasks, basic content updates
+[ ] | T501 | Create standard page templates for key content types | DoD: Create `_layouts/template-article.html`, `_layouts/template-profile.html`, `_layouts/template-organization.html` that use existing component renderer; ensure at least one article, one profile and one organization page render using the templates without build errors.
+[ ] | T502 | Implement site-wide navigation improvements | DoD: Provide `_includes/breadcrumbs.html` (configurable include) and ensure `_includes/topnav.html` has accessible mobile toggle; run `bundle exec jekyll build` and verify no layout errors.
+
+# MEDIUM PRIORITY
+[ ] | T504 | Set up automated content publishing workflow | DoD: Add a GitHub Actions workflow `/.github/workflows/publish-schedule.yml` that creates PRs or publishes posts based on `_data/schedule`; include a simple smoke test for schedule parsing.
+[ ] | T505 | Develop content recommendation engine | DoD: Add `_includes/related-articles.html` (Liquid-only) that shows up to 3 related articles by tag; include 3 sample posts demonstrating behavior.
+[ ] | T506 | Create interactive data visualizations | DoD: Add two visualization components (Chart.js or SVG) consuming `_data/*.yml` sample datasets; include a demo page verifying rendering.
+
+# LOW PRIORITY
+[ ] | T503 | Optimize images across the site | DoD: Create `scripts/optimize-images.sh` (dry-run + apply flags) and apply to `assets/` sample images; document required tools in `_docs/performance-optimization-report.md`.
+[ ] | T507 | Implement dark mode toggle | DoD: Provide optional dark-theme CSS and a small JS toggle that persists user preference in localStorage; ensure no inline styles were added.
+[ ] | T508 | Create RSS feeds by category | DoD: Add category-specific RSS generation and verify at least 2 category feeds validate with RSS validator.
+
+## Next steps
+- Review each task and pick the first small task to implement (e.g., T503 image optimization or T502 navigation tweaks).
+- For each selected task, create a task document using `scripts/start-task.sh "Short description"` and update this file when complete using `./scripts/mark-task-done.sh TASK_ID`.
+
+### Notes: Image optimization helper
+- A helper script `scripts/optimize-images.sh` exists in the repo (dry-run by default).
+- To preview changes locally run: `./scripts/optimize-images.sh` (no changes).
+- To apply optimizations after confirming, install `jpegoptim`/`pngquant` or ImageMagick and run:
+	`./scripts/optimize-images.sh --apply --quality 85`
+
+### Current work
+- T502 is the active next task to work on (site-wide navigation improvements). A task document will be created and a starter include added in `_includes/breadcrumbs.html`.
+
+---
+
+# TASKS for Grok Code Fast 1
+# High Priority
+
+# ...existing Grok Code Fast 1 tasks remain unchanged and are preserved above...

@@ -3,14 +3,14 @@
 ## CORE RULES (ESSENTIAL)
 0. ALL WORK MUST BE FULLY AUTOMATED WITHOUT HUMAN INTERVENTION
 0. ALL WORK MUST BE ADDED TO THE BACKLOG AND PROCESSED FROM THERE
-1. Preserve YAML frontmatter exactly; never strip `---`
-2. No inline styles — only external CSS
+1. **ABSOLUTELY NO HTML OR CSS IN .md FILES** - ALL HTML/CSS MUST BE IN LAYOUTS OR INCLUDES
+2. Preserve YAML frontmatter exactly; never strip `---`
 3. No edits to `_dont touch/` files
 4. Use `./scripts/mark-task-done.sh TASK_ID` to mark task completion
 5. Commit before any risky/destructive change
 6. Always test before declaring done: `bundle exec jekyll build`
 7. **Run visual tests after layout/CSS changes: `npm test`**
-8. Prefer Markdown over raw HTML; use HTML only when necessary
+8. Prefer Markdown over raw HTML; use HTML only in layouts/includes
 9. Reuse existing components; avoid duplication
 10. Tone: satirical/dark humor critiquing power structures
 
@@ -128,15 +128,15 @@
   3. Existing utility component (timeline-item, crime-card, stat)
   4. New include (only with documented rationale)
 
-  ## COMPONENT RULES
-  - NO inline `<style>` or `style=""` attributes
-  - Use CSS classes: `.btn-primary`, `.btn-supporter`, `.btn-activist`, `.btn-patron`, `.cta-link`
-  - NO new CSS unless pattern used ≥3 times
-  - Prefix includes with domain (`merch-`, `profile-`, etc.)
-  - Document all new includes in `_docs/improvements.md`
-  - Link to `_docs/component-inventory.md`
-
-  ## FILE EDITING BEST PRACTICES
+## COMPONENT RULES
+- **STRICTLY FORBIDDEN**: ANY HTML or `<style>` tags inside .md files 
+- **MANDATORY**: Move ALL HTML to `_layouts/` or `_includes/` files
+- **MANDATORY**: Move ALL CSS to external stylesheets in `assets/`
+- Use CSS classes: `.btn-primary`, `.btn-supporter`, `.btn-activist`, `.btn-patron`, `.cta-link`
+- NO new CSS unless pattern used ≥3 times
+- Prefix includes with domain (`merch-`, `profile-`, etc.)
+- Document all new includes in `_docs/improvements.md`
+- Link to `_docs/component-inventory.md`  ## FILE EDITING BEST PRACTICES
   1. Always re-read the target file immediately before editing to capture exact current content (including whitespace and hidden chars).
   2. For `replace_string_in_file`, include 3-5+ lines of unchanged context before/after the target to ensure uniqueness and avoid mismatches.
   3. Verify edits post-change by re-reading the file or running a build/test—don't assume success.

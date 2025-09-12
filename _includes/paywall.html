@@ -1,0 +1,288 @@
+<!-- Premium Content Paywall Component -->
+<div class="paywall-overlay">
+  <div class="paywall-content">
+    
+    <div class="paywall-header">
+      <h3>🔒 Premium Investigation</h3>
+      <p>This exclusive content is available to EVIL1.ORG subscribers</p>
+    </div>
+    
+    <div class="paywall-preview">
+      {{ include.preview | markdownify }}
+      <div class="content-fade"></div>
+    </div>
+    
+    <div class="paywall-cta">
+      <h4>Continue Reading</h4>
+      <p>Join thousands of readers exposing corporate evil</p>
+      
+      <div class="membership-options">
+        <div class="membership-tier">
+          <h5>Supporter</h5>
+          <div class="price">$5<span>/month</span></div>
+          <ul>
+            <li>All premium articles</li>
+            <li>Early access to content</li>
+            <li>Ad-free experience</li>
+          </ul>
+          <a href="/subscribe/?tier=supporter" class="btn btn-primary" data-sku="membership-supporter">
+            Start Supporting
+          </a>
+        </div>
+        
+        <div class="membership-tier featured">
+          <div class="tier-badge">Most Popular</div>
+          <h5>Activist</h5>
+          <div class="price">$15<span>/month</span></div>
+          <ul>
+            <li>Everything in Supporter</li>
+            <li>Exclusive investigations</li>
+            <li>Community forum access</li>
+            <li>Monthly investigator Q&A</li>
+          </ul>
+          <a href="/subscribe/?tier=activist" class="btn btn-primary" data-sku="membership-activist">
+            Become an Activist
+          </a>
+        </div>
+        
+        <div class="membership-tier">
+          <h5>Patron</h5>
+          <div class="price">$50<span>/month</span></div>
+          <ul>
+            <li>Everything in Activist</li>
+            <li>Direct investigator access</li>
+            <li>Influence editorial priorities</li>
+            <li>Exclusive events</li>
+          </ul>
+          <a href="/subscribe/?tier=patron" class="btn btn-primary" data-sku="membership-patron">
+            Support the Mission
+          </a>
+        </div>
+      </div>
+      
+      <div class="paywall-alternatives">
+        <p>Already a subscriber? <a href="/login/">Sign in</a></p>
+        <p>Questions? <a href="/membership/">Learn more about membership</a></p>
+      </div>
+    </div>
+    
+    <div class="paywall-social-proof">
+      <p><strong>Join 2,847 subscribers</strong> reading exclusive investigations</p>
+      <div class="testimonials">
+        <blockquote>
+          "The most important investigative work being done today"
+          <cite>— Sarah M., Activist Member</cite>
+        </blockquote>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<style>
+.paywall-overlay {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.paywall-header h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+.paywall-preview {
+  position: relative;
+  background: rgba(255,255,255,0.1);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+  text-align: left;
+  max-height: 200px;
+  overflow: hidden;
+}
+
+.content-fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(transparent, rgba(102,126,234,0.9));
+}
+
+.paywall-cta h4 {
+  margin: 2rem 0 1rem 0;
+  font-size: 1.3rem;
+}
+
+.membership-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.membership-tier {
+  background: rgba(255,255,255,0.95);
+  color: #333;
+  padding: 2rem 1.5rem;
+  border-radius: 8px;
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.membership-tier:hover {
+  transform: translateY(-4px);
+}
+
+.membership-tier.featured {
+  border: 3px solid #ffd700;
+  transform: scale(1.05);
+}
+
+.tier-badge {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffd700;
+  color: #333;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.membership-tier h5 {
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+  color: #495057;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+.price span {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+.membership-tier ul {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  text-align: left;
+}
+
+.membership-tier li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.membership-tier li::before {
+  content: "✓ ";
+  color: #28a745;
+  font-weight: bold;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #0056b3;
+  color: white;
+}
+
+.paywall-alternatives {
+  margin: 2rem 0;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.3);
+}
+
+.paywall-alternatives a {
+  color: #ffd700;
+  text-decoration: underline;
+}
+
+.paywall-social-proof {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.3);
+}
+
+.testimonials blockquote {
+  background: rgba(255,255,255,0.1);
+  padding: 1rem;
+  border-radius: 6px;
+  margin: 1rem 0;
+  font-style: italic;
+  border-left: 4px solid #ffd700;
+}
+
+.testimonials cite {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .paywall-overlay {
+    padding: 2rem 1rem;
+  }
+  
+  .membership-options {
+    grid-template-columns: 1fr;
+  }
+  
+  .membership-tier.featured {
+    transform: none;
+  }
+}
+</style>
+
+<script>
+// Track paywall views and interactions
+document.addEventListener('DOMContentLoaded', function() {
+  // Track paywall view
+  if (window.trackGoal) {
+    window.trackGoal('paywall_view', {
+      article: window.location.pathname,
+      content_type: 'premium'
+    });
+  }
+  
+  // Track subscription button clicks
+  const subscribeButtons = document.querySelectorAll('[data-sku^="membership-"]');
+  subscribeButtons.forEach(button => {
+    button.addEventListener('click', function(e) {
+      const tier = this.dataset.sku.replace('membership-', '');
+      if (window.trackGoal) {
+        window.trackGoal('membership_start', {
+          tier: tier,
+          source: 'paywall',
+          article: window.location.pathname
+        });
+      }
+    });
+  });
+});
+</script>
