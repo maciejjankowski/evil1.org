@@ -95,8 +95,8 @@
 [x] | T515 | Restructure membership/cancel.md to use membership layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
 [x] | T516 | Restructure membership/success.md to use membership layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
 [x] | T517 | Restructure component-styling-report.md to use appropriate layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
-[ ] | T518 | Restructure company/coca-cola.md to use company_profile layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
-[ ] | T519 | Restructure company/meta.md to use company_profile layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
+[x] | T518 | Restructure company/coca-cola.md to use company_profile layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
+[x] | T519 | Restructure company/meta.md to use company_profile layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
 [ ] | T520 | Restructure company/pfizer.md to use company_profile layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
 [ ] | T521 | Restructure company/amazon.md to use company_profile layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
 [ ] | T522 | Restructure company/philip-morris.md to use company_profile layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
