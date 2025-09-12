@@ -1,164 +1,67 @@
-# Stripe Payment Integration Setup
+---
+layout: default
+---
 
-## Overview
-This document outlines the implementation of Stripe payment processing for evil1.org membership subscriptions.
+<div class="early-section">
+    <div class="early-section-header">{{ page.title }}</div>
+    <div class="early-section-content">
+        {% if page.meta_info %}
+        <div style="background: #f8f9fa; border-left: 4px solid #003366; padding: 15px; margin-bottom: 30px;">
+            {% for info in page.meta_info %}
+            <p><strong>{{ info.label }}:</strong> {{ info.value }}</p>
+            {% endfor %}
+        </div>
+        {% endif %}
 
-## Prerequisites
-- Stripe account (sign up at stripe.com)
-- SSL certificate for secure payments
-- Web server with HTTPS support
+        <div class="early-article">
+            <div class="early-article-content" style="max-width: none;">
+                {{ content }}
+            </div>
+        </div>
+    </div>
+</div>
 
-## Implementation Steps
-
-### 1. Stripe Account Setup
-```bash
-# Create Stripe account at https://stripe.com
-# Enable test mode for development
-# Get API keys from dashboard
-STRIPE_PUBLISHABLE_KEY=pk_test_...
-STRIPE_SECRET_KEY=sk_test_...
-```
-
-### 2. Frontend Integration
-```html
-<!-- Include Stripe.js -->
-<script src="https://js.stripe.com/v3/"></script>
-
-<!-- Payment form -->
-<form id="payment-form">
-  <div id="card-element"></div>
-  <button id="submit">Subscribe</button>
-</form>
-
-<script>
-const stripe = Stripe('{{ site.stripe_publishable_key }}');
-const elements = stripe.elements();
-const card = elements.create('card');
-card.mount('#card-element');
-
-const form = document.getElementById('payment-form');
-form.addEventListener('submit', async (event) => {
-  event.preventDefault();
-  const {error} = await stripe.createPaymentMethod({
-    type: 'card',
-    card: card,
-  });
-  // Handle payment method creation
-});
-</script>
-```
-
-### 3. Backend Processing
-```ruby
-# config/stripe.rb (for Jekyll with Ruby backend)
-require 'stripe'
-Stripe.api_key = ENV['STRIPE_SECRET_KEY']
-
-# Create subscription
-def create_subscription(payment_method_id, price_id)
-  subscription = Stripe::Subscription.create({
-    customer: customer_id,
-    items: [{ price: price_id }],
-    default_payment_method: payment_method_id,
-  })
-  subscription
-end
-```
-
-### 4. Membership Tiers Configuration
-```json
-{
-  "supporter": {
-    "price_id": "price_supporter_monthly",
-    "amount": 500,
-    "currency": "usd",
-    "name": "Supporter"
-  },
-  "activist": {
-    "price_id": "price_activist_monthly",
-    "amount": 1500,
-    "currency": "usd",
-    "name": "Activist"
-  },
-  "patron": {
-    "price_id": "price_patron_monthly",
-    "amount": 5000,
-    "currency": "usd",
-    "name": "Patron"
-  }
+<style>
+/* Documentation-specific styles */
+.early-article-content pre {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    padding: 1rem;
+    overflow-x: auto;
+    font-size: 0.875rem;
+    line-height: 1.5;
 }
-```
 
-## Security Considerations
-- Never store payment information on your servers
-- Use HTTPS for all payment pages
-- Implement proper error handling
-- Regular security audits
+.early-article-content code {
+    background: #f1f3f4;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-size: 0.875rem;
+}
 
-## Testing
-```bash
-# Test card numbers
-4242 4242 4242 4242  # Success
-4000 0000 0000 0002  # Declined
-4000 0025 0000 3155  # Insufficient funds
-```
+.early-article-content pre code {
+    background: none;
+    padding: 0;
+}
 
-## Webhook Handling
-```ruby
-# Handle Stripe webhooks
-post '/webhooks/stripe' do
-  payload = request.body.read
-  sig_header = request.env['HTTP_STRIPE_SIGNATURE']
+.early-article-content h2 {
+    color: #003366;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
 
-  begin
-    event = Stripe::Webhook.construct_event(payload, sig_header, endpoint_secret)
-  rescue JSON::ParserError => e
-    status 400
-    return
-  end
+.early-article-content h3 {
+    color: #495057;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
 
-  case event.type
-  when 'customer.subscription.created'
-    # Handle new subscription
-  when 'customer.subscription.updated'
-    # Handle subscription changes
-  when 'customer.subscription.deleted'
-    # Handle cancellations
-  end
-
-  status 200
-end
-```
-
-## User Experience Flow
-1. User selects membership tier
-2. User enters payment information
-3. Stripe processes payment securely
-4. User receives confirmation email
-5. User gains access to premium features
-6. Subscription renews automatically
-
-## Error Handling
-- Network failures
-- Card declines
-- Invalid payment methods
-- Subscription failures
-- Webhook failures
-
-## Compliance
-- PCI DSS compliance (handled by Stripe)
-- GDPR compliance for EU users
-- Proper refund policies
-- Clear terms of service
-
-## Monitoring & Analytics
-- Track conversion rates
-- Monitor failed payments
-- Analyze subscription churn
-- Revenue reporting
-
-## Support
-- Customer service for payment issues
-- Refund request handling
-- Subscription management
-- Account upgrades/downgrades
+.early-article-content h4 {
+    color: #6c757d;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+</style>

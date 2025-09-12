@@ -93,8 +93,8 @@
 [x] | T303 | Audit YAML front matter consistency across all articles | DoD: Check all .md files have complete front matter (layout, title, description, permalink, date, categories), document any inconsistencies in _docs/frontmatter-audit.md
 [x] | T304 | Verify layouts are properly assigned to all pages | DoD: Ensure all .md files have appropriate layouts (post, default, home), fix any missing layouts, document results
 [x] | T515 | Restructure membership/cancel.md to use membership layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
-[ ] | T516 | Restructure membership/success.md to use membership layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
-[ ] | T517 | Restructure component-styling-report.md to use appropriate layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
+[x] | T516 | Restructure membership/success.md to use membership layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
+[x] | T517 | Restructure component-styling-report.md to use appropriate layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
 [ ] | T518 | Restructure company/coca-cola.md to use company_profile layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
 [ ] | T519 | Restructure company/meta.md to use company_profile layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
 [ ] | T520 | Restructure company/pfizer.md to use company_profile layout and frontmatter data | DoD: Move HTML to layout, leave only frontmatter in .md file
