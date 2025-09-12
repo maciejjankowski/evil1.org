@@ -1,0 +1,10 @@
+<svg viewBox="0 0 500 200" class="viz-svg-{{ include.id | default: 'sample' }}" width="100%" height="200" role="img" aria-label="{{ include.label | default: 'Sample visualization' }}">
+  {% assign data = site.data.sample-dataset %}
+  {% assign max = data | map: 'value' | sort | last %}
+  {% assign step = 500 | divided_by: data.size | plus: 0 %}
+  {% for item in data %}
+    {% assign idx = forloop.index0 %}
+    {% assign h = item.value | times: 160 | divided_by: max %}
+    <rect x="{{ idx | times: step | plus: 10 }}" y="{{ 180 | minus: h }}" width="{{ step | minus: 20 }}" height="{{ h }}" fill="#dc3545"></rect>
+  {% endfor %}
+</svg>

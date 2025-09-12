@@ -1,0 +1,21 @@
+---
+# UI Hero Component (copied into _includes path)
+---
+
+{%- comment -%}
+  Hero component for article pages
+{%- endcomment -%}
+
+<div class="hero-section">
+  <div class="hero-content">
+    {% if include.title %}
+      <h1>{{ include.title }}</h1>
+    {% endif %}
+    {% if include.subtitle %}
+      <p>{{ include.subtitle }}</p>
+    {% endif %}
+    {% if include.cta_text and include.cta_href %}
+      <a href="{{ include.cta_href }}" class="hero-cta">{{ include.cta_text }}</a>
+    {% endif %}
+  </div>
+</div>

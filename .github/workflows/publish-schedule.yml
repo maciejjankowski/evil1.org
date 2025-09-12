@@ -1,0 +1,22 @@
+name: Publish Schedule
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 8 * * *' # daily at 08:00 UTC
+
+jobs:
+  publish-schedule:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+      - name: Install dependencies
+        run: bundle install --jobs 4 --retry 3
+      - name: Validate schedule
+        run: bundle exec ruby ./scripts/publish-schedule-smoke.rb
+      - name: Create PR or publish
+        run: echo "Publishing steps would run here (skipped in smoke run)"

@@ -1,0 +1,25 @@
+<canvas id="chartjs-{{ include.id | default: 'sample' }}" width="400" height="200"></canvas>
+<script>
+(function(){
+  var ctx = document.getElementById('chartjs-{{ include.id | default: 'sample' }}').getContext('2d');
+  var data = {{ site.data.sample-dataset | jsonify }};
+  var labels = data.map(function(d){ return d.label });
+  var values = data.map(function(d){ return d.value });
+  if (window.Chart) {
+    new Chart(ctx, {
+      type: '{{ include.type | default: 'bar' }}',
+      data: {
+        labels: labels,
+        datasets: [{
+          label: '{{ include.label | default: 'Sample dataset' }}',
+          data: values,
+          backgroundColor: 'rgba(220,53,69,0.6)'
+        }]
+      },
+      options: { responsive: true }
+    });
+  } else {
+    ctx.canvas.parentNode.innerHTML = '<p>Chart.js not loaded.</p>';
+  }
+})();
+</script>

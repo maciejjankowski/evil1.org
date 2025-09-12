@@ -2,46 +2,19 @@
 layout: default
 ---
 
-{%- comment -%}
-  Standard Article Template
-  Uses the unified components renderer when `components` are provided in frontmatter.
-{%- endcomment -%}
-
-<main class="page-content">
-  <article class="article-page">
-
-    <!-- Article Header -->
-    <header class="article-header">
+<main class="container article-template">
+  <article>
+    <header>
       <h1>{{ page.title }}</h1>
-      {% if page.author %}
-        <div class="article-meta">
-          <span class="author">By {{ page.author }}</span>
-          {% if page.author_title %}
-            <span class="author-title">{{ page.author_title }}</span>
-          {% endif %}
-          {% if page.date %}
-            <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%B %d, %Y' }}</time>
-          {% endif %}
-        </div>
-      {% endif %}
+      {% if page.date %}<time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>{% endif %}
+      {% if page.author %}<p class="author">By {{ page.author }}</p>{% endif %}
     </header>
-
-    {% include breadcrumbs.html title=page.title path=page.url %}
-
-    {% if page.hero %}
-      {% include _components/ui/hero.html title=page.hero.title subtitle=page.hero.subtitle cta_text=page.hero.cta_text cta_href=page.hero.cta_href %}
-    {% endif %}
-
-    {% if page.components %}
-      {% include _components/renderer.html %}
-    {% endif %}
 
     <section class="article-body">
       {{ content }}
     </section>
 
-    <footer class="article-footer">
-      {% include _components/helper.html type='widget/related-posts' %}
-    </footer>
+    {% include _components/renderer.html %}
+
   </article>
 </main>

@@ -8,27 +8,15 @@ layout: default
 
 {% include _components/helper.html %}
 
-<main class="page-content organization-page">
-  {% if page.hero %}
-    {% include _components/helper.html type=page.hero.type title=page.hero.title subtitle=page.hero.subtitle %}
-  {% endif %}
-
-  <section class="organization-overview">
+<main class="container organization-template">
+  <header>
     <h1>{{ page.title }}</h1>
-    {% if page.intro %}
-      <p>{{ page.intro }}</p>
-    {% endif %}
+    {% if page.industry %}<p class="industry">{{ page.industry }}</p>{% endif %}
+  </header>
 
-    {% if page.components %}
-      {% include _components/renderer.html %}
-    {% endif %}
-
-    {% if page.timeline %}
-      <section class="evil-timeline">
-        {% for item in page.timeline %}
-          {% include _components/helper.html type='core/timeline-item' title=item.title description=item.description %}
-        {% endfor %}
-      </section>
-    {% endif %}
+  <section class="organization-body">
+    {{ content }}
   </section>
+
+  {% include _components/renderer.html %}
 </main>

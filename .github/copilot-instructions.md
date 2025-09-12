@@ -6,7 +6,7 @@
 1. **ABSOLUTELY NO HTML OR CSS IN .md FILES** - ALL HTML/CSS MUST BE IN LAYOUTS OR INCLUDES
 2. Preserve YAML frontmatter exactly; never strip `---`
 3. No edits to `_dont touch/` files
-4. Use `./scripts/mark-task-done.sh TASK_ID` to mark task completion
+4. Use `./scripts/mark-task-done.sh TASK_ID` to mark task completion **MANDATORY**: Do not manually edit `_docs/backlog-all.md` to mark tasks as done. Always use the script to ensure proper tracking and avoid errors.
 5. Commit before any risky/destructive change
 6. Always test before declaring done: `bundle exec jekyll build`
 7. **Run visual tests after layout/CSS changes: `npm test`**
@@ -89,44 +89,44 @@
   5. Update backlog using `./scripts/mark-task-done.sh TASK_ID`
   6. Continue without pausing until backlog is complete
 
-  ## TESTING WORKFLOW
-  1. **Before committing layout changes**: Run `npm test`
-  2. **If tests fail**: Check `playwright-report/` for visual differences
-  3. **Update snapshots**: Run `npm run visual-baseline` if changes are intentional
-  4. **Verify fixes**: Re-run `npm test` to ensure tests pass
+## TESTING WORKFLOW
+1. **Before committing layout changes**: Run `npm test`
+2. **If tests fail**: Check `playwright-report/` for visual differences
+3. **Update snapshots**: Run `npm run visual-baseline` if changes are intentional
+4. **Verify fixes**: Re-run `npm test` to ensure tests pass
 
-  ## TESTING SETUP
-  - **Visual Tests**: `npm test` - Playwright tests run once and exit cleanly
-  - **Test Reports**: Generated in `playwright-report/` folder (no auto-open)
-  - **Test Configuration**: 
-    - HTML reporter with `outputFolder: 'playwright-report'` and `open: 'never'`
-    - Reuses existing Jekyll server on port 4000
-    - 10-minute global timeout, 5-second expect timeout
-    - Screenshot tolerance: 100 max diff pixels, 20% threshold
+## TESTING SETUP
+- **Visual Tests**: `npm test` - Playwright tests run once and exit cleanly
+- **Test Reports**: Generated in `playwright-report/` folder (no auto-open)
+- **Test Configuration**: 
+  - HTML reporter with `outputFolder: 'playwright-report'` and `open: 'never'`
+  - Reuses existing Jekyll server on port 4000
+  - 10-minute global timeout, 5-second expect timeout
+  - Screenshot tolerance: 100 max diff pixels, 20% threshold
 
-  ## TESTING COMMANDS
-  - `npm test` - Run all visual regression tests
-  - `npm run test:headed` - Run tests with browser UI visible
-  - `npm run test:ui` - Run tests with Playwright UI mode
-  - `npm run visual-baseline` - Update visual snapshots (after layout changes)
-  - `npx playwright show-report playwright-report` - View test results manually
+## TESTING COMMANDS
+- `npm test` - Run all visual regression tests
+- `npm run test:headed` - Run tests with browser UI visible
+- `npm run test:ui` - Run tests with Playwright UI mode
+- `npm run visual-baseline` - Update visual snapshots (after layout changes)
+- `npx playwright show-report playwright-report` - View test results manually
 
-  ## QUALITY CHECKS
-  1. Build passes: `bundle exec jekyll build` (no YAML errors)
-  2. **Visual tests pass: `npm test` (no layout regressions)**
-    - Tests run automatically and exit cleanly
-    - Reports saved to `playwright-report/` folder
-    - No user interaction required
-  3. No broken internal links
-  4. Backlog updated (task marked complete)
-  5. No inline styles introduced
-  6. Commit message properly formatted
+## QUALITY CHECKS
+1. Build passes: `bundle exec jekyll build` (no YAML errors)
+2. **Visual tests pass: `npm test` (no layout regressions)**
+   - Tests run automatically and exit cleanly
+   - Reports saved to `playwright-report/` folder
+   - No user interaction required
+3. No broken internal links
+4. Backlog updated (task marked complete)
+5. No inline styles introduced
+6. Commit message properly formatted
 
-  ## COMPONENT REUSE HIERARCHY
-  1. Existing layout (`_layouts/*.html`)
-  2. Existing include (`_includes/*.html`)
-  3. Existing utility component (timeline-item, crime-card, stat)
-  4. New include (only with documented rationale)
+## COMPONENT REUSE HIERARCHY
+1. Existing layout (`_layouts/*.html`)
+2. Existing include (`_includes/*.html`)
+3. Existing utility component (timeline-item, crime-card, stat)
+4. New include (only with documented rationale)
 
 ## COMPONENT RULES
 - **STRICTLY FORBIDDEN**: ANY HTML or `<style>` tags inside .md files 
@@ -144,18 +144,18 @@
   5. Prefer Markdown restructuring: move HTML to layouts/includes, leave only frontmatter in .md files.
   6. Test builds after any structural changes to catch YAML or rendering errors early.
 
-  ## DECISION FRAMEWORK
-  ### Auto-Proceed When:
-  - Task has clear completion criteria
-  - Task requires <4 hours effort
-  - Task involves subjective judgment or trade-offs - pick best option
-  - Task is low-risk and reversible
-  - Task may introduce significant risk or complexity but has clear rollback plan
-  - Task is ambiguous or lacks clear DoD, but can be reasonably interpreted and executed. refine DoD before attempting.
-  ### Pause When:
+## DECISION FRAMEWORK
+### Auto-Proceed When:
+- Task has clear completion criteria
+- Task requires <4 hours effort
+- Task involves subjective judgment or trade-offs - pick best option
+- Task is low-risk and reversible
+- Task may introduce significant risk or complexity but has clear rollback plan
+- Task is ambiguous or lacks clear DoD, but can be reasonably interpreted and executed. refine DoD before attempting.
+### Pause When:
 
-  - Task requires human creativity or nuanced decision-making
-  - Task involves ethical considerations or potential harm
+- Task requires human creativity or nuanced decision-making
+- Task involves ethical considerations or potential harm
 
 ## BACKLOG MANAGEMENT
 - All tasks are tracked in `_docs/backlog-all.md` using the simplified format: `| STATUS | TASK_ID | TASK_DESCRIPTION | MODEL | DoD`
