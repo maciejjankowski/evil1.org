@@ -181,15 +181,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const urlParams = new URLSearchParams(window.location.search);
     const membershipType = urlParams.get('plan') || localStorage.getItem('selectedPlan') || 'supporter';
 
-    const benefits = {
-        {% for plan in page.membership_plans %}
-        {{ plan[0] }}: [
-            {% for benefit in plan[1] %}
-            '{{ benefit }}'{% unless forloop.last %},{% endunless %}
-            {% endfor %}
-        ]{% unless forloop.last %},{% endunless %}
-        {% endfor %}
-    };
+    const benefits = {{ page.membership_plans | jsonify }};
 
     const benefitsDiv = document.getElementById('membership-benefits');
     if (benefitsDiv) {
