@@ -126,7 +126,7 @@ npx playwright show-report playwright-report
 bundle exec jekyll build
 
 # Check generated files exist
-find _site -name "*.html" | wc -l  # Should show ~278 HTML files
+find _site -name "*.html" | wc -l  # Should show a reasonable number of HTML files (compare to previous builds)
 
 # Start development server
 bundle exec jekyll serve --port 4000 --host 127.0.0.1
