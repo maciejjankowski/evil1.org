@@ -1,59 +1,64 @@
-- title: Shop
-  url: /merchandise/
+- title: Content
+  url: /articles/
   priority: 1
   external: false
-- title: Membership
-  url: /membership/
+  children:
+    - title: Articles
+      url: /articles/
+      external: false
+    - title: News & Analysis
+      url: /News/
+      external: false
+- title: Exposures
+  url: /profiles/
   priority: 2
   external: false
   children:
-    - title: Join
-      url: /register/
+    - title: Executive Profiles
+      url: /profiles/
       external: false
-    - title: Benefits
-      url: /membership/benefits/
+    - title: Organizations
+      url: /organizations/
       external: false
-    - title: Tiers
-      url: /membership/tiers/
+    - title: Companies
+      url: /company/
       external: false
-- title: Consulting
-  url: /company/consulting/
+- title: Education
+  url: /trainings/
   priority: 3
   external: false
   children:
-    - title: Corporate
-      url: /company/consulting/corporate/
+    - title: Training Programs
+      url: /trainings/
       external: false
-    - title: Nonprofit
-      url: /company/consulting/nonprofit/
+    - title: Institute
+      url: /Institute/
       external: false
-- title: Courses
-  url: /trainings/
+    - title: Masterclasses
+      url: /education/
+      external: false
+- title: Community
+  url: /membership/
   priority: 4
   external: false
   children:
-    - title: Ethics
-      url: /trainings/ethics/
+    - title: Membership
+      url: /membership/
       external: false
-    - title: Compliance
-      url: /trainings/compliance/
+    - title: Join
+      url: /register/
       external: false
-    - title: Satire
-      url: /trainings/satire/
+    - title: Groups
+      url: /groups/
       external: false
-- title: Jobs
-  url: /jobs/
+    - title: Activities
+      url: /activities/
+      external: false
+- title: Store
+  url: /merchandise/
   priority: 5
   external: false
-- title: Newsletter
-  url: /newsletter/
+- title: Jobs
+  url: /jobs/
   priority: 6
-  external: false
-- title: Articles
-  url: /articles/
-  priority: 7
-  external: false
-- title: Companies
-  url: /company/
-  priority: 8
   external: false
