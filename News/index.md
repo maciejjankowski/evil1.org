@@ -2,7 +2,7 @@
 layout: default
 title: News - Alternative Information Networks
 description: Alternative information networks, media monitoring systems, and controlled narrative channels
-permalink: /news/
+permalink: /News/
 ---
 page_html: |
 
