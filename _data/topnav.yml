@@ -9,9 +9,6 @@
     - title: News & Analysis
       url: /News/
       external: false
-    - title: Research Reports
-      url: /Institute/
-      external: false
 - title: Exposures
   url: /profiles/
   priority: 2
