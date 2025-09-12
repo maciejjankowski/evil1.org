@@ -19,6 +19,10 @@ if ! grep -q "$TASK_ID" "$BACKLOG_FILE"; then
 fi
 
 # Mark task as done
-sed -i "s/\[ \] | $TASK_ID |/\[x\] | $TASK_ID |/" "$BACKLOG_FILE"
+if [[ "$(uname)" == "Darwin" ]]; then
+    sed -i '' "s/\[ \] | $TASK_ID |/\[x\] | $TASK_ID |/" "$BACKLOG_FILE"
+else
+    sed -i "s/\[ \] | $TASK_ID |/\[x\] | $TASK_ID |/" "$BACKLOG_FILE"
+fi
 
 echo "Task $TASK_ID marked as complete"
