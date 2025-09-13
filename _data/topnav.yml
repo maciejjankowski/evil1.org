@@ -55,7 +55,7 @@
       url: /activities/
       external: false
 - title: Store
-  url: /merchandise/
+  url: /merch/
   priority: 5
   external: false
 - title: Jobs
