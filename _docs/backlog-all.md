@@ -14,6 +14,7 @@
 [ ] | T205 | Analytics: Integrate Plausible with goals (buy_now, membership_start, newsletter) | Gemini 2.5 Pro | Events fire and appear in dashboard
 
 # MEDIUM PRIORITY TASKS
+[ ] | T528 | Design card-based merchandise products (tarot, bingo, playing cards) for satirical corporate theme | GPT-4o | Create 10+ card-based products: Corporate Tarot, Executive Bingo, CEO Trading Cards, etc. with absurd pricing and satirical descriptions using existing merch infrastructure
 [ ] | T411 | Develop content repurposing strategy for maximum reach | GPT-4o | Create social media content from articles, develop email newsletter content, create video scripts, podcast outlines
 [ ] | T412 | Build community forum and discussion platform | GPT-4o | Choose forum software, integrate with main site, create community guidelines, moderate initial discussions
 [ ] | T504 | Set up automated content publishing workflow | GPT-5 mini | Add a GitHub Actions workflow `/.github/workflows/publish-schedule.yml` that creates PRs or publishes posts based on `_data/schedule`; include a simple smoke test for schedule parsing
