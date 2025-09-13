@@ -57,6 +57,9 @@
     - title: Submit a Tip
       url: /submit-a-tip/
       external: false
+    - title: Activist Tools
+      url: /tools-for-activists/
+      external: false
 - title: Store
   url: /merch/
   priority: 5

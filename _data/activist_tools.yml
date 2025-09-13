@@ -1,0 +1,17 @@
+- name: "SecureVPN"
+  category: "Privacy & Security"
+  description: "A reliable, no-logs VPN service that keeps your online activity private. Essential for researching sensitive topics."
+  affiliate_url: "https://www.securevpn.com/?aff_id=evil1"
+  cta: "Get SecureVPN"
+
+- name: "EncryptedMail"
+  category: "Privacy & Security"
+  description: "An end-to-end encrypted email service that ensures your communications remain private. A must-have for contacting sources."
+  affiliate_url: "https://www.encryptedmail.com/?ref=evil1"
+  cta: "Get EncryptedMail"
+
+- name: "The Corporation: The Pathological Pursuit of Profit and Power"
+  category: "Books & Documentaries"
+  description: "A foundational book and documentary that explores the nature of the modern corporation. Required reading for any aspiring activist."
+  affiliate_url: "https://www.amazon.com/dp/0743247469?tag=evil1-20"
+  cta: "Buy on Amazon"
