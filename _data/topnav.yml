@@ -58,7 +58,30 @@
   url: /merchandise/
   priority: 5
   external: false
+- title: Defense Services
+  url: /corporate-services/
+  priority: 6
+  external: false
+  children:
+    - title: Overview
+      url: /corporate-services/
+      external: false
+    - title: PR Defense Shield
+      url: /corporate-services/pr-defense/
+      external: false
+    - title: Legal Shield Plus
+      url: /corporate-services/legal-shield/
+      external: false
+    - title: Crisis Management
+      url: /corporate-services/crisis-management/
+      external: false
+    - title: Pricing
+      url: /corporate-services/pricing/
+      external: false
+    - title: Contact
+      url: /corporate-services/contact/
+      external: false
 - title: Jobs
   url: /jobs/
-  priority: 6
+  priority: 7
   external: false
