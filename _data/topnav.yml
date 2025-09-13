@@ -23,9 +23,23 @@
     - title: Companies
       url: /company/
       external: false
+- title: Evil Assessment
+  url: /evil-strengthsfinder/
+  priority: 3
+  external: false
+  children:
+    - title: Evil StrengthsFinder
+      url: /evil-strengthsfinder/
+      external: false
+    - title: Take Assessment
+      url: /evil-strengthsfinder/#assessment
+      external: false
+    - title: Sample Results
+      url: /evil-strengthsfinder/#sample
+      external: false
 - title: Education
   url: /trainings/
-  priority: 3
+  priority: 4
   external: false
   children:
     - title: Training Programs

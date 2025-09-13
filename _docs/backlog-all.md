@@ -2,6 +2,19 @@
 # Format: | STATUS | TASK_ID | TASK_DESCRIPTION | MODEL | DoD
 
 # HIGH PRIORITY TASKS (Most Important)
+
+## Evil StrengthsFinder Assessment Tool (New Revenue Stream)
+[ ] | T600 | Design Evil StrengthsFinder assessment framework and themes | GPT-4.1 | Create 20 evil strength themes across 4 domains, design question framework, create scoring algorithm, document assessment structure
+[ ] | T601 | Create assessment question database | GPT-4o | Write 180 satirical questions (9 per theme), implement forced-choice format, ensure corporate context framing, test question balance
+[ ] | T602 | Build core assessment engine | GPT-4.1 | Implement question delivery system, scoring algorithm, progress tracking, session management, result generation
+[ ] | T603 | Design and implement payment integration for assessments | GPT-4.1 | Integrate with existing Stripe, create pricing tiers ($49.99, $99.99, $299.99), implement secure payment flow
+[ ] | T604 | Create dynamic results system and report templates | GPT-4o | Build personalized report generation, historical comparisons, evil development recommendations, multiple report tiers
+[ ] | T605 | Implement user management and result storage | GPT-4.1 | Integrate with existing membership, secure result storage, sharing options, retake functionality
+[ ] | T606 | Create Evil StrengthsFinder landing pages and marketing materials | GPT-4o | Design landing page, create marketing copy, implement A/B testing, social media integration
+[ ] | T607 | Build team assessment and corporate features | GPT-4.1 | Multi-user assessments, team comparisons, enterprise reporting, corporate consulting package
+[ ] | T608 | Create Evil StrengthsFinder content marketing strategy | GPT-4o | Evil strength spotlights, historical analysis content, case studies, user success stories
+[ ] | T609 | Implement analytics and optimization tracking | GPT-4.1 | Conversion tracking, user behavior analysis, A/B test infrastructure, performance monitoring
+
 [ ] | T409 | Hire and onboard freelance investigative writers | GPT-4o | Review applications, conduct interviews, onboard 3-5 writers, establish workflow and quality standards
 [ ] | T410 | Create comprehensive style guide for consistent content quality | GPT-4o | Document tone guidelines, formatting standards, fact-checking procedures, citation requirements, editorial workflow
 [ ] | T407 | Develop mobile app for iOS and Android | GPT-4.1 | Design app architecture, develop native apps, implement push notifications, app store optimization
@@ -82,6 +95,80 @@
 - Use scripts/mark-task-done.sh TASK_ID to mark completion
 - Jekyll build: `bundle exec jekyll build`
 - Visual tests: `npm test`
+
+
+
+---
+
+# TASKS for GPT-5 mini
+# Format: STATUS | TASK_ID | DESCRIPTION | DoD (optional)
+# STATUS: [ ] pending, [x] complete
+# This file contains only tasks that are best-suited for the GPT-5 mini model.
+# Use this file as the working backlog when assigning or running GPT-5 mini.
+
+# HIGH PRIORITY - Moderate complexity tasks, basic content updates
+[ ] | T501 | Create standard page templates for key content types | DoD: Design templates for profiles, articles, organization pages with reusable components
+[ ] | T502 | Implement site-wide navigation improvements | DoD: Add breadcrumbs, enhance mobile menu, improve internal link structure
+
+# MEDIUM PRIORITY
+[ ] | T504 | Set up automated content publishing workflow | DoD: Create GitHub Actions workflow for scheduled content publishing
+[ ] | T505 | Develop content recommendation engine | DoD: Implement "Related Articles" feature based on categories and tags
+[ ] | T506 | Create interactive data visualizations | DoD: Build 3 data visualizations for corporate evil metrics
+
+# LOW PRIORITY
+[ ] | T503 | Optimize images across the site | DoD: Compress all images, implement responsive images, add proper alt text
+[ ] | T507 | Implement dark mode toggle | DoD: Add dark theme CSS, implement preference toggle, ensure all components support both themes
+[ ] | T508 | Create RSS feeds by category | DoD: Implement category-specific RSS feeds, add subscription options
+
+## Next steps
+- Review each task and pick the first small task to implement (e.g., T503 image optimization or T502 navigation tweaks).
+- For each selected task, create a task document using `scripts/start-task.sh "Short description"` and update this file when complete using `./scripts/mark-task-done.sh TASK_ID`.
+
+### Notes: Image optimization helper
+- A helper script `scripts/optimize-images.sh` was added (dry-run by default).
+- To preview changes locally run: `./scripts/optimize-images.sh` (no changes).
+- To apply optimizations after confirming, install `jpegoptim`/`pngquant` or ImageMagick and run:
+	`./scripts/optimize-images.sh --apply --quality 85`
+
+### Current work
+- T502 is the active next task to work on (site-wide navigation improvements). A task document will be created and a starter include added in `_includes/breadcrumbs.html`.
+
+
+
+---
+
+# TASKS for GPT-5 mini
+# Format: STATUS | TASK_ID | DESCRIPTION | DoD (optional)
+# STATUS: [ ] pending, [x] complete
+# This file contains only tasks that are best-suited for the GPT-5 mini model.
+# Use this file as the working backlog when assigning or running GPT-5 mini.
+
+# HIGH PRIORITY - Moderate complexity tasks, basic content updates
+[ ] | T501 | Create standard page templates for key content types | DoD: Design templates for profiles, articles, organization pages with reusable components
+[ ] | T502 | Implement site-wide navigation improvements | DoD: Add breadcrumbs, enhance mobile menu, improve internal link structure
+
+# MEDIUM PRIORITY
+[ ] | T504 | Set up automated content publishing workflow | DoD: Create GitHub Actions workflow for scheduled content publishing
+[ ] | T505 | Develop content recommendation engine | DoD: Implement "Related Articles" feature based on categories and tags
+[ ] | T506 | Create interactive data visualizations | DoD: Build 3 data visualizations for corporate evil metrics
+
+# LOW PRIORITY
+[ ] | T503 | Optimize images across the site | DoD: Compress all images, implement responsive images, add proper alt text
+[ ] | T507 | Implement dark mode toggle | DoD: Add dark theme CSS, implement preference toggle, ensure all components support both themes
+[ ] | T508 | Create RSS feeds by category | DoD: Implement category-specific RSS feeds, add subscription options
+
+## Next steps
+- Review each task and pick the first small task to implement (e.g., T503 image optimization or T502 navigation tweaks).
+- For each selected task, create a task document using `scripts/start-task.sh "Short description"` and update this file when complete using `./scripts/mark-task-done.sh TASK_ID`.
+
+### Notes: Image optimization helper
+- A helper script `scripts/optimize-images.sh` was added (dry-run by default).
+- To preview changes locally run: `./scripts/optimize-images.sh` (no changes).
+- To apply optimizations after confirming, install `jpegoptim`/`pngquant` or ImageMagick and run:
+	`./scripts/optimize-images.sh --apply --quality 85`
+
+### Current work
+- T502 is the active next task to work on (site-wide navigation improvements). A task document will be created and a starter include added in `_includes/breadcrumbs.html`.
 
 
 
