@@ -1,0 +1,21 @@
+<!--
+Standardized Merchandise Card
+Usage: {% include merch-card.html item=item %}
+Parameters:
+- item: A hash containing product data (name, price, image, description, permalink, sku)
+-->
+<div class="merch-card">
+    <a href="{{ include.item.permalink | default: '#' }}">
+        <img src="{{ include.item.image | default: '/assets/images/merch/placeholder.jpg' }}" alt="{{ include.item.name }}">
+    </a>
+    <div class="merch-card-info">
+        <h3 class="merch-card-title">
+            <a href="{{ include.item.permalink | default: '#' }}">{{ include.item.name }}</a>
+        </h3>
+        <p class="merch-card-price">{{ include.item.price }}</p>
+        {% if include.item.description %}
+            <p class="merch-card-description">{{ include.item.description | truncate: 100 }}</p>
+        {% endif %}
+        <a href="/checkout/?sku={{ include.item.sku | default: '000' }}" class="btn btn-primary">Buy Now</a>
+    </div>
+</div>
