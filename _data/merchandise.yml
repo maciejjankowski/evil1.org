@@ -1941,3 +1941,387 @@ sticker-violation-alert:
     {% include merch-cta.html %}
   currency: USD
   stripe_price_id: price_REPLACE_STKVIO01
+
+# Additional Dark Pattern Merchandise - Corporate Evil Collection
+breathing-subscription:
+  title: "Breathing as a Service - $19.99/month Per Nostril"
+  description: "Mock the ultimate monetization of basic human functions"
+  permalink: "/merchandise/breathing-subscription/"
+  tags:
+    - basic-needs-monetization
+    - subscription-abuse
+    - human-rights-violation
+  sku: breathing-subscription
+  price: 39.98
+  type: t-shirt
+  content: |-
+    "Breathing as a Service - $19.99/month Per Nostril"
+    
+    **Front:** "Breathing as a Service"
+    **Back:** "$19.99/month Per Nostril • Family Plans Available"
+    **Sleeve:** "Upgrade to Premium Oxygen for Better Performance"
+    
+    **Service Features We're Mocking:**
+    • Per-breath pricing model
+    • Premium oxygen tiers ($5 extra for mountain air simulation)
+    • Family breathing plans (children half price until age 18)
+    • Automatic renewal (can't opt out without suffocating)
+    • Location-based pricing (urban air costs more)
+    • Breath pattern monitoring for compliance
+    
+    **Subscription Tiers:**
+    • Basic: Standard air composition
+    • Premium: 0.1% more oxygen
+    • Executive: Filtered air with mint scent
+    • Family: Bulk discount for household breathing
+    
+    Perfect for anyone horrified by the subscription economy's reach into every aspect of human existence.
+    
+    **Price Explanation:** $39.98 = $19.99 × 2 nostrils. We're being generous by not charging per breath.
+    
+    {% include merch-cta.html %}
+  currency: USD
+  stripe_price_id: price_REPLACE_BREATH01
+
+freemium-scam:
+  title: "FREE! (Plus Shipping, Handling, Processing, Breathing)"
+  description: "Satirizing the 'free' trial scam with hidden costs"
+  permalink: "/merchandise/freemium-scam/"
+  tags:
+    - freemium-scams
+    - hidden-costs
+    - false-advertising
+  sku: freemium-scam
+  price: 99.99
+  type: t-shirt
+  content: |-
+    "FREE! (Plus Shipping, Handling, Processing, Breathing)"
+    
+    **Front:** "FREE!"
+    **Back:** "*Plus shipping, handling, processing, breathing, existing, thinking, reading this shirt"
+    **Fine Print:** "Free offer expires while you're reading this sentence"
+    
+    **Hidden Costs We're Exposing:**
+    • Shipping: $29.99 (for a digital download)
+    • Handling: $19.99 (someone had to touch it)
+    • Processing: $24.99 (computer electricity costs)
+    • Breathing fee: $15.99 (you used oxygen while deciding)
+    • Existence surcharge: $9.99 (for being alive during purchase)
+    
+    **Terms and Conditions:**
+    • Free trial converts to $99.99/month after 0.001 seconds
+    • Cancellation requires blood sample and DNA test
+    • "Free" means "costs money" in our legal definition
+    • Reading this shirt constitutes acceptance of all terms
+    
+    Perfect for victims of "free" trials that cost more than premium services.
+    
+    **Pricing Transparency:** $99.99 because that's what the "free" offer will cost you.
+    
+    {% include merch-cta.html %}
+  currency: USD
+  stripe_price_id: price_REPLACE_FREE01
+
+consent-manufactured:
+  title: "I Consent! (I Had No Choice)"
+  description: "Mocking manufactured consent in digital agreements"
+  permalink: "/merchandise/consent-manufactured/"
+  tags:
+    - manufactured-consent
+    - forced-agreements
+    - digital-coercion
+  sku: consent-manufactured
+  price: 42.00
+  type: t-shirt
+  content: |-
+    "I Consent! (I Had No Choice)"
+    
+    **Front:** "I Consent!"
+    **Back:** "I Had No Choice • Terms Updated While I Slept"
+    **Shoulder:** "Agree or Starve"
+    
+    **Manufactured Consent Techniques:**
+    • Only one button: "Agree" (no "Disagree" option)
+    • Service unusable without agreement
+    • Terms change after agreement
+    • Pre-checked consent boxes
+    • Consent buried in 247-page documents
+    • "Legitimate interest" overrides consent
+    
+    **Real-World Applications:**
+    • Social media platforms
+    • Banking services
+    • Healthcare systems
+    • Employment contracts
+    • Government services
+    • Basic utilities
+    
+    **The Consent Paradox:** Consent isn't consent when refusing means social/economic exclusion.
+    
+    Perfect for privacy advocates, legal scholars, and anyone tired of fake "choices."
+    
+    **Price Note:** $42.00 - The answer to life, universe, and why consent is meaningless.
+    
+    {% include merch-cta.html %}
+  currency: USD
+  stripe_price_id: price_REPLACE_CONS01
+
+# Hoodies - Corporate Surveillance Collection
+hoodie-always-listening:
+  title: "Always Listening, Never Responding - Corporate AI Hoodie"
+  description: "Mock the surveillance state with this cozy privacy nightmare"
+  permalink: "/merchandise/hoodie-always-listening/"
+  tags:
+    - corporate-surveillance
+    - ai-monitoring
+    - privacy-violation
+  sku: hoodie-always-listening
+  price: 79.99
+  type: hoodie
+  content: |-
+    "Always Listening, Never Responding - Corporate AI Hoodie"
+    
+    **Front:** "Always Listening"
+    **Back:** "Never Responding • Your Voice = Our Data"
+    **Hood Interior:** "Microphones Embedded for Your Convenience"
+    
+    **Surveillance Features (Satirical):**
+    • Voice pattern analysis for mood detection
+    • Keyword monitoring for targeted advertising
+    • Conversation recording for "quality assurance"
+    • Emotional state analysis via vocal stress
+    • Social circle mapping through overheard names
+    • Location inference through background sounds
+    
+    **Corporate AI Behaviors:**
+    • Activates when you say competitor names
+    • Records private conversations "for training"
+    • Shares audio with advertising partners
+    • Stores voice prints permanently
+    • Analyzes family relationships through conversations
+    
+    **Perfect For:**
+    • Privacy advocates with a sense of humor
+    • Tech workers who understand the horror
+    • Anyone tired of corporate eavesdropping
+    • People who want to normalize surveillance criticism
+    
+    **Comfort Features:** Actually comfortable (unlike surveillance capitalism)
+    
+    {% include merch-cta.html %}
+  currency: USD
+  stripe_price_id: price_REPLACE_HOOD01
+
+# Mugs - Productivity Abuse Collection
+mug-productivity-slave:
+  title: "Productivity Slave - Optimizing Humans for Shareholder Value"
+  description: "Morning motivation for the corporate optimization machine"
+  permalink: "/merchandise/mug-productivity-slave/"
+  tags:
+    - productivity-optimization
+    - human-optimization
+    - corporate-efficiency
+  sku: mug-productivity-slave
+  price: 24.99
+  type: mug
+  content: |-
+    "Productivity Slave - Optimizing Humans for Shareholder Value"
+    
+    **Outside:** "Productivity Slave"
+    **Inside:** "Optimizing Humans for Shareholder Value Since Birth"
+    **Handle:** "Efficiency Rating: MAXIMUM EXTRACTION"
+    
+    **Productivity Optimization Techniques:**
+    • Sleep monitoring to ensure "optimal" rest (but not too much)
+    • Meal timing optimization for maximum work output
+    • Bathroom break scheduling and enforcement
+    • Conversation monitoring for "unproductive" topics
+    • Emotional state tracking for mood optimization
+    • Social interaction limits to prevent "distraction"
+    
+    **Human Performance Metrics:**
+    • Keystrokes per minute
+    • Email response time
+    • Meeting participation scores
+    • Smile frequency measurements
+    • Stress level optimization (maintain at 85% maximum)
+    • Loyalty index based on overtime acceptance
+    
+    Perfect for your morning coffee while contemplating how you've been optimized into a human resource.
+    
+    **Irony Level:** Maximum - drinking coffee (a productivity enhancer) from a mug that mocks productivity culture.
+    
+    {% include merch-cta.html %}
+  currency: USD
+  stripe_price_id: price_REPLACE_MUGPROD01
+
+mug-data-harvesting:
+  title: "Your Privacy is Our Business Model"
+  description: "Honest advertising for the data extraction economy"
+  permalink: "/merchandise/mug-data-harvesting/"
+  tags:
+    - data-harvesting
+    - privacy-violation
+    - surveillance-capitalism
+  sku: mug-data-harvesting
+  price: 22.99
+  type: mug
+  content: |-
+    "Your Privacy is Our Business Model"
+    
+    **Outside:** "Your Privacy is Our Business Model"
+    **Inside:** "We Know What You Had for Breakfast"
+    **Bottom:** "Data Collection in Progress..."
+    
+    **Data Points We're Harvesting (Satirically):**
+    • Coffee consumption patterns
+    • Morning mood indicators
+    • Caffeine dependency levels
+    • Productivity correlation with coffee intake
+    • Brand loyalty measurements
+    • Social media posting habits post-coffee
+    
+    **Monetization Methods:**
+    • Sell coffee habits to employers
+    • Target ads based on caffeine addiction
+    • Predict purchasing behavior
+    • Analyze relationship between coffee and productivity
+    • Map social connections through shared coffee breaks
+    
+    **Privacy Policy Summary:**
+    "We collect everything, share with everyone, delete nothing, notify no one."
+    
+    Perfect for morning irony with your surveillance-funded caffeine addiction.
+    
+    **Truth in Advertising:** At least we're honest about monetizing your data.
+    
+    {% include merch-cta.html %}
+  currency: USD
+  stripe_price_id: price_REPLACE_MUGDATA01
+
+# Pins and Badges - Compliance Culture Collection
+pin-mandatory-fun:
+  title: "Mandatory Fun Compliance Officer"
+  description: "Enamel pin for enforcing corporate happiness requirements"
+  permalink: "/merchandise/pin-mandatory-fun/"
+  tags:
+    - mandatory-fun
+    - corporate-culture
+    - happiness-enforcement
+  sku: pin-mandatory-fun
+  price: 12.99
+  type: pin
+  content: |-
+    "Mandatory Fun Compliance Officer"
+    
+    **Design:** Badge-style enamel pin
+    **Text:** "Mandatory Fun Compliance Officer"
+    **Subtext:** "Happiness Enforcement Division"
+    **Size:** 1.5" diameter, premium enamel finish
+    
+    **Mandatory Fun Activities:**
+    • Team building exercises (attendance required)
+    • Company birthday celebrations (enthusiasm monitored)
+    • Holiday parties (fun metrics measured)
+    • Casual Friday enforcement (dress code violations punished)
+    • Pizza parties (gratitude levels assessed)
+    • "Voluntary" after-work socialization
+    
+    **Compliance Metrics:**
+    • Smile frequency during mandated events
+    • Laughter volume measurements
+    • Participation enthusiasm scores
+    • Social interaction quality assessment
+    • Resistance to fun (disciplinary action required)
+    
+    Perfect for HR professionals, managers enforcing culture, or anyone who's been forced to have "fun."
+    
+    **Meta-Fun:** Wearing this pin is ironically more fun than actual mandatory fun.
+    
+    {% include merch-cta.html %}
+  currency: USD
+  stripe_price_id: price_REPLACE_PINMAND01
+
+pin-authenticity-theater:
+  title: "Authentic™ - Algorithmically Generated Personality"
+  description: "Corporate authenticity as a manufactured product"
+  permalink: "/merchandise/pin-authenticity-theater/"
+  tags:
+    - authenticity-theater
+    - algorithmic-personality
+    - manufactured-identity
+  sku: pin-authenticity-theater
+  price: 11.99
+  type: pin
+  content: |-
+    "Authentic™ - Algorithmically Generated Personality"
+    
+    **Design:** Circular enamel pin with holographic finish
+    **Main Text:** "Authentic™"
+    **Subtext:** "Algorithmically Generated Personality"
+    **Legal Fine Print:** "Authenticity not guaranteed"
+    
+    **Authenticity Features:**
+    • AI-curated personality traits
+    • Market-tested emotional responses
+    • Focus-group approved opinions
+    • Demographic-optimized interests
+    • Algorithm-recommended hobbies
+    • Data-driven relationship preferences
+    
+    **Manufactured Authenticity Methods:**
+    • Social media algorithm curation
+    • Targeted advertising personality shaping
+    • Recommendation engine behavior modification
+    • Peer pressure optimization
+    • Influencer-guided authentic expression
+    
+    Perfect for anyone whose personality has been algorithmically optimized for maximum engagement.
+    
+    **Authenticity Guarantee:** This pin is more authentic than your algorithmically-curated social media personality.
+    
+    {% include merch-cta.html %}
+  currency: USD
+  stripe_price_id: price_REPLACE_PINAUTH01
+
+# Tote Bags - Sustainable Hypocrisy Collection
+tote-sustainable-hypocrisy:
+  title: "Sustainably Destroying the Planet - Eco-Friendly Tote"
+  description: "Greenwashing in convenient carry-all format"
+  permalink: "/merchandise/tote-sustainable-hypocrisy/"
+  tags:
+    - greenwashing
+    - sustainable-hypocrisy
+    - environmental-lies
+  sku: tote-sustainable-hypocrisy
+  price: 19.99
+  type: tote-bag
+  content: |-
+    "Sustainably Destroying the Planet - Eco-Friendly Tote"
+    
+    **Front:** "Sustainably Destroying the Planet"
+    **Back:** "100% Organic Cotton, 50% Corporate Lies"
+    **Interior Tag:** "Made from Recycled Greenwashing Materials"
+    
+    **Greenwashing Techniques We're Mocking:**
+    • "Carbon neutral" shipping (via complex offset mathematics)
+    • "Eco-friendly" packaging (plastic wrapped in biodegradable paper)
+    • "Sustainable" materials (from unsustainable sources)
+    • "Recyclable" products (that nobody actually recycles)
+    • "Zero waste" operations (waste exported to developing countries)
+    
+    **Corporate Environmental Promises:**
+    • Net zero by 2050 (while expanding carbon-intensive operations)
+    • Plastic reduction (switching to "biodegradable" plastic)
+    • Clean energy (buying renewable energy credits)
+    • Circular economy (selling waste as "upcycled products")
+    
+    **Actual Material:** 100% organic cotton (genuinely sustainable, unlike most corporate environmental claims)
+    
+    Perfect for grocery shopping while contemplating corporate environmental hypocrisy.
+    
+    **Environmental Note:** This bag will last longer than most corporate environmental commitments.
+    
+    {% include merch-cta.html %}
+  currency: USD
+  stripe_price_id: price_REPLACE_TOTE01
