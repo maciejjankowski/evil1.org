@@ -13,7 +13,7 @@ subscription_tiers:
       - "Ad-free experience"
       - "Weekly newsletter"
     cta: "Start Supporting"
-    experiment: "Supporter Tier Test"
+    experiment: "Supporter Price Elasticity"
   - name: "Activist"
     price: 15
     price_id: "membership-activist"
@@ -25,6 +25,7 @@ subscription_tiers:
       - "Monthly investigator Q&A"
       - "Influence article topics"
     cta: "Become an Activist"
+    experiment: "Activist Annual Discount"
   - name: "Patron"
     price: 50
     price_id: "membership-patron"
@@ -35,7 +36,6 @@ subscription_tiers:
       - "Exclusive events & calls"
       - "Personal recognition"
     cta: "Support the Mission"
-    experiment: "Patron Tier Test"
 benefits:
   - icon: "🔍"
     title: "Exclusive Investigations"
@@ -83,6 +83,6 @@ Join the fight against corporate evil and get unlimited access to exclusive inve
 
 <div class="pricing-tests">
   <h2>Pricing Experiments</h2>
-  {% include pricing-display.html experiment_name="Supporter Tier Test" %}
-  {% include pricing-display.html experiment_name="Patron Tier Test" %}
+  {% include pricing-display.html experiment_name="Supporter Price Elasticity" %}
+  {% include pricing-display.html experiment_name="Activist Annual Discount" %}
 </div>
