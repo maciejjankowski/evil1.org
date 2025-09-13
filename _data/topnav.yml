@@ -54,11 +54,15 @@
     - title: Activities
       url: /activities/
       external: false
+- title: Consulting
+  url: /services/
+  priority: 5
+  external: false
 - title: Store
   url: /merchandise/
-  priority: 5
+  priority: 6
   external: false
 - title: Jobs
   url: /jobs/
-  priority: 6
+  priority: 7
   external: false
