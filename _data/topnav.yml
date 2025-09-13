@@ -54,6 +54,9 @@
     - title: Activities
       url: /activities/
       external: false
+    - title: Submit a Tip
+      url: /submit-a-tip/
+      external: false
 - title: Store
   url: /merch/
   priority: 5
