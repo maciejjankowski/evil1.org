@@ -19,6 +19,8 @@
 [ ] | T205 | Analytics: Integrate Plausible with goals (buy_now, membership_start, newsletter) | Gemini 2.5 Pro | Events fire and appear in dashboard
 
 # MEDIUM PRIORITY TASKS
+[x] | T611 | Create article exposing Insurance Claim Denial practices | GPT-4o | Write comprehensive article on systematic insurance denial schemes, algorithmic cruelty, and legal theft from sick patients
+[x] | T612 | Create article exposing Corporate Legal Intimidation tactics | GPT-4o | Write exposé on SLAPP suits, retaliatory litigation, and using lawsuits as weapons against critics and whistleblowers
 [ ] | T605 | Create article exposing Academic Surveillance Capitalism | GPT-4o | Write article on educational technology companies harvesting student data for profit, privacy violations in schools
 [ ] | T606 | Create article exposing Predatory Gaming Monetization | GPT-4o | Write exposé on loot boxes, pay-to-win mechanics, gambling addiction targeting children in video games
 [ ] | T607 | Create article exposing Environmental Racism practices | GPT-4o | Write investigative piece on corporations strategically locating polluting facilities in minority communities
