@@ -24,4 +24,9 @@ Products exposing corporate HR speak and management doublespeak.
 ## Growth Myths & ESG Spin
 Products debunking growth narratives and greenwashing.
 
+## Right to Repair Resistance  
+Products mocking manufacturers who make repair impossible, expensive, or illegal.
+
+*[View the complete Right to Repair collection →](/merchandise/right-to-repair/)*
+
 <p><a href="/merchandise/" class="early-nav-link">← Back to All Products</a></p>
