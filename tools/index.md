@@ -73,29 +73,31 @@ permalink: /tools/
                 </div>
             </div>
             
-            <div class="early-article" style="opacity: 0.6; border: 2px dashed #ccc;">
+            <div class="early-article">
                 <div class="early-article-header">
                     <div class="early-article-title">🏆 Corporate Evil Olympics</div>
-                    <div class="early-article-meta">Coming Soon</div>
+                    <div class="early-article-meta">Interactive Leaderboard with Premium Analytics</div>
                 </div>
                 <div class="early-article-content">
-                    <p>Interactive leaderboard ranking the worst companies, executives, and practices. Vote on corporate evil and track the competition for maximum harm.</p>
+                    <p>Vote on the worst companies, executives, and practices. Real-time leaderboard with premium analytics and voting influence options.</p>
                     <div class="early-article-footer">
-                        <strong>Status:</strong> In Development
+                        <strong>Features:</strong> Public voting, Premium analytics, Custom scorecards
                     </div>
+                    <a href="/tools/corporate-olympics/" class="early-nav-link" style="margin-top: 10px; display: inline-block;">Rank Corporate Evil →</a>
                 </div>
             </div>
             
-            <div class="early-article" style="opacity: 0.6; border: 2px dashed #ccc;">
+            <div class="early-article">
                 <div class="early-article-header">
                     <div class="early-article-title">🌱 Greenwashing Translator</div>
-                    <div class="early-article-meta">Coming Soon</div>
+                    <div class="early-article-meta">Decode Environmental PR Speak</div>
                 </div>
                 <div class="early-article-content">
-                    <p>Convert corporate environmental PR speak into honest language. Decode the marketing lies behind sustainability reports and green initiatives.</p>
+                    <p>Convert corporate environmental claims into honest language. Free basic translations with premium bulk processing and analysis tools.</p>
                     <div class="early-article-footer">
-                        <strong>Status:</strong> In Development
+                        <strong>Freemium:</strong> 3 free daily translations, unlimited premium access
                     </div>
+                    <a href="/tools/greenwashing-translator/" class="early-nav-link" style="margin-top: 10px; display: inline-block;">Translate Greenwash →</a>
                 </div>
             </div>
             
@@ -112,6 +114,93 @@ permalink: /tools/
                 </div>
             </div>
             
+        </div>
+    </div>
+</div>
+
+<div class="early-section">
+    <div class="early-section-header">💰 Premium Tool Features</div>
+    <div class="early-section-content">
+        <div style="background: linear-gradient(135deg, #ffd700 0%, #ffed4a 100%); color: #000; padding: 30px; border-radius: 8px; margin-bottom: 20px;">
+            <h3 style="margin-top: 0; font-size: 1.8em;">🚀 Upgrade to Premium Toolkit</h3>
+            <p style="font-size: 1.1em; margin-bottom: 20px;">Transform these educational tools into professional-grade corporate accountability instruments.</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 20px 0;">
+                <div style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 6px;">
+                    <strong>🏆 Olympics Pro:</strong>
+                    <ul style="margin: 10px 0;">
+                        <li>Advanced analytics dashboard</li>
+                        <li>Premium voting influence (2x weight)</li>
+                        <li>Custom industry scorecards</li>
+                        <li>Export rankings data</li>
+                    </ul>
+                </div>
+                <div style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 6px;">
+                    <strong>🌱 Translator Pro:</strong>
+                    <ul style="margin: 10px 0;">
+                        <li>Unlimited translations</li>
+                        <li>Bulk document processing</li>
+                        <li>PDF/Word upload</li>
+                        <li>API access for automation</li>
+                    </ul>
+                </div>
+                <div style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 6px;">
+                    <strong>🎯 All Tools Pro:</strong>
+                    <ul style="margin: 10px 0;">
+                        <li>No usage limits</li>
+                        <li>White-label versions</li>
+                        <li>Team collaboration</li>
+                        <li>Priority support</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 20px;">
+                <div style="font-size: 1.3em; margin-bottom: 10px;">
+                    <span style="text-decoration: line-through; color: #666;">$49.99/month</span>
+                    <strong style="color: #d63384; margin-left: 10px;">$24.99/month</strong>
+                    <span style="background: #dc3545; color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.8em; margin-left: 10px;">50% OFF</span>
+                </div>
+                <a href="/membership/" class="early-nav-link" style="background: #dc3545; color: white; padding: 15px 30px; text-decoration: none; border-radius: 6px; display: inline-block; font-size: 1.1em;">
+                    🔓 Unlock Premium Tools
+                </a>
+                <div style="font-size: 0.9em; margin-top: 10px; color: #666;">
+                    7-day free trial • Cancel anytime • Corporate training discounts available
+                </div>
+            </div>
+        </div>
+        
+        <div style="background: #e3f2fd; border: 1px solid #bbdefb; padding: 20px; border-radius: 4px;">
+            <h4 style="margin-top: 0;">🎓 Educational & Professional Use Cases:</h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                <div>
+                    <strong>🏫 Universities:</strong>
+                    <ul>
+                        <li>Business ethics courses</li>
+                        <li>Communications studies</li>
+                        <li>Environmental studies</li>
+                        <li>Research projects</li>
+                    </ul>
+                </div>
+                <div>
+                    <strong>📰 Journalists:</strong>
+                    <ul>
+                        <li>Corporate investigation tools</li>
+                        <li>Greenwashing detection</li>
+                        <li>Data for fact-checking</li>
+                        <li>Story development</li>
+                    </ul>
+                </div>
+                <div>
+                    <strong>🏢 Organizations:</strong>
+                    <ul>
+                        <li>NGO campaign tools</li>
+                        <li>Corporate training</li>
+                        <li>Due diligence research</li>
+                        <li>Policy development</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </div>

@@ -4,9 +4,12 @@
 # HIGH PRIORITY TASKS (Most Important)
 [ ] | T409 | Hire and onboard freelance investigative writers | GPT-4o | Review applications, conduct interviews, onboard 3-5 writers, establish workflow and quality standards
 [ ] | T410 | Create comprehensive style guide for consistent content quality | GPT-4o | Document tone guidelines, formatting standards, fact-checking procedures, citation requirements, editorial workflow
-[ ] | T600 | Create Corporate Evil Olympics leaderboard system | GPT-4o | Build interactive ranking system for worst companies, executives, and practices with voting and real data sources
+[x] | T600 | Create Corporate Evil Olympics leaderboard system | GPT-4o | Build interactive ranking system for worst companies, executives, and practices with voting and real data sources
 [ ] | T601 | Implement Corporate Apology Generator tool | GPT-5 mini | Create satirical tool that generates realistic corporate non-apologies with customizable parameters
-[ ] | T602 | Build Greenwashing Translator feature | GPT-4o | Tool that converts corporate PR speak into honest language, powered by real examples database
+[x] | T602 | Build Greenwashing Translator feature | GPT-4o | Tool that converts corporate PR speak into honest language, powered by real examples database
+[ ] | T613 | Implement subscription tiers and paywall integration for premium tools | GPT-4.1 | Stripe integration, usage tracking, premium feature gates, 7-day trial system
+[ ] | T614 | Create Corporate Training & Consulting packages | GPT-4o | Educational workshops, certification programs, white-label tool versions, consulting services
+[ ] | T615 | Build API access for premium tools | GPT-4.1 | REST API for tool automation, rate limiting, authentication, documentation
 [ ] | T407 | Develop mobile app for iOS and Android | GPT-4.1 | Design app architecture, develop native apps, implement push notifications, app store optimization
 [ ] | T408 | Create premium content platform for exclusive investigations | GPT-4.1 | Design paywall system, create premium content categories, implement access controls, marketing strategy
 [ ] | T501 | Create standard page templates for key content types | GPT-5 mini | Create `_layouts/template-article.html`, `_layouts/template-profile.html`, `_layouts/template-organization.html` that use existing component renderer; ensure at least one article, one profile and one organization page render using the templates without build errors
@@ -23,6 +26,11 @@
 [ ] | T604 | Implement Executive Salary vs Worker Pay calculator | GPT-4.1 | Real-time calculator showing CEO-to-worker pay ratios with data visualization
 [ ] | T605 | Build Corporate Personality Quiz - "Which Evil Corporation Are You?" | GPT-4o | Entertaining quiz with satirical results based on user answers about business ethics
 [ ] | T606 | Create Regulatory Capture Tracker visualization | GPT-4.1 | Interactive map showing revolving door between government officials and corporations
+[ ] | T616 | Implement Whistleblower Simulator Corporate Edition | GPT-4o | Interactive educational game with premium corporate training modules and legal guidance
+[ ] | T617 | Create Corporate Death Clock countdown timers | GPT-5 mini | Environmental and social impact countdown timers for major corporations with premium analytics
+[ ] | T618 | Build Astroturfing Detector educational tool | GPT-4.1 | Tool to identify fake grassroots campaigns with premium pattern analysis
+[ ] | T619 | Develop Evil Corporation Generator AI tool | GPT-4o | AI-powered satirical company profile creator with premium customization options
+[ ] | T620 | Create Market Manipulation Simulator | GPT-4.1 | Educational game about financial crimes with premium corporate training scenarios
 [ ] | T504 | Set up automated content publishing workflow | GPT-5 mini | Add a GitHub Actions workflow `/.github/workflows/publish-schedule.yml` that creates PRs or publishes posts based on `_data/schedule`; include a simple smoke test for schedule parsing
 [ ] | T505 | Develop content recommendation engine | GPT-5 mini | Add `_includes/related-articles.html` (Liquid-only) that shows up to 3 related articles by tag; include 3 sample posts demonstrating behavior
 [ ] | T522 | Restructure company/philip-morris.md to use company_profile layout and frontmatter data | Grok Code Fast 1 | Move HTML to layout, leave only frontmatter in .md file
@@ -76,6 +84,8 @@
 [x] | T603 | Create Corporate Bingo interactive game | GPT-5 mini | Build bingo card generator based on real corporate behaviors with sharing functionality
 [x] | T604 | Implement Executive Salary vs Worker Pay calculator | GPT-4.1 | Real-time calculator showing CEO-to-worker pay ratios with data visualization
 [x] | T608 | Build Corporate Excuse Generator | Grok Code Fast 1 | Random generator for corporate excuses with categorization by scandal type
+[x] | T600 | Create Corporate Evil Olympics leaderboard system | GPT-4o | Build interactive ranking system for worst companies, executives, and practices with voting and real data sources
+[x] | T602 | Build Greenwashing Translator feature | GPT-4o | Tool that converts corporate PR speak into honest language, powered by real examples database
 
 
 
