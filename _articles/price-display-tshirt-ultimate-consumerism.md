@@ -317,9 +317,9 @@ The Price Display T-Shirt™: *Because your money should speak louder than your 
 *Price display warranty void if actual financial status is revealed through other means.*
 
 ## Related Articles
-- [Planned Obsolescence: Built to Break, Designed to Profit](planned-obsolescence-built-to-break-designed-to-profit.md)
-- [Value Extraction: Squeezing Every Penny from Your Pocket](value-extraction-squeezing-every-penny-from-your-pocket.md)
-- [Corporate Greenwashing: Environmental Lies for Profit](corporate-greenwashing-environmental-lies-for-profit.md)
+- [Planned Obsolescence: Built to Break, Designed to Profit](planned-obsolescence-built-to-break-designed-to-profit)
+- [Value Extraction: Squeezing Every Penny from Your Pocket](value-extraction-squeezing-every-penny-from-your-pocket)
+- [Corporate Greenwashing: Environmental Lies for Profit](corporate-greenwashing-environmental-lies-for-profit)
 
 ## Sources
 - *The Psychology of Conspicuous Consumption* - Journal of Economic Behavior
