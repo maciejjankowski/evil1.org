@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="{{ '/assets/css/topnav.css' | relative_url }}">
     {% if page.layout == 'awards-ceremony' %}<link rel="stylesheet" href="{{ '/assets/css/awards.css' | relative_url }}">{% endif %}
     <link rel="stylesheet" href="{{ '/assets/css/widgets.css' | relative_url }}">
+    {% if page.additional_css %}
+        {% for css_file in page.additional_css %}
+            <link rel="stylesheet" href="{{ css_file | relative_url }}">
+        {% endfor %}
+    {% endif %}
 
     <!-- HTMX for enhanced interactivity -->
     <script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>

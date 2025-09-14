@@ -78,6 +78,9 @@
     - title: Masterclasses
       url: /education/
       external: false
+    - title: Career Advisor
+      url: /evil-career-advisor/
+      external: false
 - title: Community
   url: /membership/
   priority: 5
