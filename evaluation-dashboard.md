@@ -1,27 +1,28 @@
 ---
 layout: default
-title: "Evaluation Dashboard - Comprehensive Evil Assessment Tools"
-description: "Central hub for evaluating companies, executives, products, and institutions using standardized evil metrics frameworks"
+title: "Professional Evaluation Services - Expert Assessment Request Portal"
+description: "Request professional evil metrics assessments conducted by expert researchers and analysts"
 permalink: /evaluation-dashboard/
 ---
 
-# Evaluation Dashboard
+# Professional Evaluation Services
 
-**Systematic assessment tools for quantifying corporate and institutional evil**
+**Expert-Conducted Assessments Using Standardized Evil Metrics Frameworks**
 
-Welcome to the comprehensive evaluation suite that enables systematic assessment of harm using our standardized frameworks. These tools transform subjective judgments into objective, evidence-based scoring systems for accountability.
+Welcome to our professional evaluation service portal. Our team of expert investigators, researchers, and analysts conduct comprehensive assessments using standardized frameworks that transform subjective judgments into objective, evidence-based scoring systems for accountability.
 
 <div class="dashboard-container">
   <div class="dashboard-intro">
-    <h2>Choose Your Assessment Type</h2>
-    <p>Select the appropriate evaluation framework based on what you want to assess. Each tool provides standardized metrics, evidence collection, and comprehensive reporting.</p>
+    <h2>Choose Your Professional Assessment Service</h2>
+    <p>Select the appropriate evaluation service based on what you want our experts to assess. Each service provides expert research, evidence collection, and comprehensive professional reporting suitable for legal, academic, and media use.</p>
   </div>
 
   <div class="evaluation-grid">
     <div class="eval-card company-card">
       <div class="eval-icon">🏢</div>
-      <h3>Evaluate Company</h3>
-      <p class="eval-description">Assess corporate harm using the <strong>Corporate Evil Index (CEI)</strong> across 5 dimensions</p>
+      <h3>Company Evaluation</h3>
+      <p class="eval-description">Professional <strong>Corporate Evil Index (CEI)</strong> assessment across 5 dimensions</p>
+      <div class="eval-pricing">Starting at <strong>$2,500</strong></div>
       <div class="eval-metrics">
         <div class="metric">Blood Legacy (0-2,500)</div>
         <div class="metric">Suffering Amplification (0-2,500)</div>
@@ -30,15 +31,16 @@ Welcome to the comprehensive evaluation suite that enables systematic assessment
         <div class="metric">Democracy Corruption (0-1,000)</div>
       </div>
       <div class="eval-examples">
-        <strong>Examples:</strong> Amazon (8,450/10,000), ExxonMobil, Walmart, Meta
+        <strong>Previous Assessments:</strong> Amazon (8,450/10,000), ExxonMobil, Walmart, Meta
       </div>
-      <a href="/evaluate-company/" class="eval-button company-btn">Start Company Assessment</a>
+      <a href="/evaluate-company/" class="eval-button company-btn">Request Company Assessment</a>
     </div>
 
     <div class="eval-card executive-card">
       <div class="eval-icon">👤</div>
-      <h3>Evaluate Executive</h3>
-      <p class="eval-description">Measure individual accountability using the <strong>Executive Malevolence Score (EMS)</strong> across 4 dimensions</p>
+      <h3>Executive Evaluation</h3>
+      <p class="eval-description">Professional <strong>Executive Malevolence Score (EMS)</strong> assessment across 4 dimensions</p>
+      <div class="eval-pricing">Starting at <strong>$1,500</strong></div>
       <div class="eval-metrics">
         <div class="metric">Personal Cruelty (0-1,500)</div>
         <div class="metric">Systemic Evil (0-1,500)</div>
@@ -46,15 +48,16 @@ Welcome to the comprehensive evaluation suite that enables systematic assessment
         <div class="metric">Resistance to Accountability (0-1,000)</div>
       </div>
       <div class="eval-examples">
-        <strong>Examples:</strong> Jeff Bezos (4,650/5,000), Elon Musk, Mark Zuckerberg
+        <strong>Previous Assessments:</strong> Jeff Bezos (4,650/5,000), Elon Musk, Mark Zuckerberg
       </div>
-      <a href="/evaluate-executive/" class="eval-button executive-btn">Start Executive Assessment</a>
+      <a href="/evaluate-executive/" class="eval-button executive-btn">Request Executive Assessment</a>
     </div>
 
     <div class="eval-card product-card">
       <div class="eval-icon">📦</div>
-      <h3>Evaluate Product</h3>
-      <p class="eval-description">Assess product harm using <strong>Devil's Metrics</strong> across 4 dimensions of destruction</p>
+      <h3>Product Evaluation</h3>
+      <p class="eval-description">Professional <strong>Devil's Metrics</strong> assessment across 4 dimensions of harm</p>
+      <div class="eval-pricing">Starting at <strong>$1,200</strong></div>
       <div class="eval-metrics">
         <div class="metric">Blood Score (0-5,000)</div>
         <div class="metric">Tears Score (0-5,000)</div>
@@ -62,15 +65,16 @@ Welcome to the comprehensive evaluation suite that enables systematic assessment
         <div class="metric">Earth Score (0-2,000)</div>
       </div>
       <div class="eval-examples">
-        <strong>Examples:</strong> Thermal Coal (9,850/17,000), OxyContin, Assault Rifles
+        <strong>Previous Assessments:</strong> Thermal Coal (9,850/17,000), OxyContin, Assault Rifles
       </div>
-      <a href="/evaluate-product/" class="eval-button product-btn">Start Product Assessment</a>
+      <a href="/evaluate-product/" class="eval-button product-btn">Request Product Assessment</a>
     </div>
 
     <div class="eval-card institution-card">
       <div class="eval-icon">🏛️</div>
-      <h3>Evaluate Institution</h3>
-      <p class="eval-description">Measure institutional corruption using the <strong>ICF Framework</strong> across 4 dimensions</p>
+      <h3>Institution Evaluation</h3>
+      <p class="eval-description">Professional <strong>ICF Framework</strong> assessment across 4 dimensions</p>
+      <div class="eval-pricing">Starting at <strong>$2,000</strong></div>
       <div class="eval-metrics">
         <div class="metric">Regulatory Capture (0-2,000)</div>
         <div class="metric">Public Interest Betrayal (0-2,000)</div>
@@ -78,30 +82,96 @@ Welcome to the comprehensive evaluation suite that enables systematic assessment
         <div class="metric">Democratic Erosion (0-2,000)</div>
       </div>
       <div class="eval-examples">
-        <strong>Examples:</strong> FDA (6,800/8,000), SEC, EPA, Supreme Court
+        <strong>Previous Assessments:</strong> FDA (6,800/8,000), SEC, EPA, Supreme Court
       </div>
-      <a href="/evaluate-institution/" class="eval-button institution-btn">Start Institution Assessment</a>
+      <a href="/evaluate-institution/" class="eval-button institution-btn">Request Institution Assessment</a>
+    </div>
+  </div>
+
+  <div class="service-levels">
+    <h2>Professional Service Levels</h2>
+    <div class="service-grid">
+      <div class="service-item">
+        <h4>Standard Service</h4>
+        <p>Complete professional assessment with evidence-backed scoring, comprehensive report, and 6-month update coverage.</p>
+        <div class="service-features">
+          <span>✓ Expert research team</span>
+          <span>✓ 15-25 page report</span>
+          <span>✓ Evidence package</span>
+          <span>✓ 3-6 week delivery</span>
+        </div>
+      </div>
+      <div class="service-item">
+        <h4>Premium Service</h4>
+        <p>Enhanced investigation with original research, interviews, and forensic analysis for high-stakes applications.</p>
+        <div class="service-features">
+          <span>✓ Everything in Standard</span>
+          <span>✓ Original interviews</span>
+          <span>✓ FOIA requests</span>
+          <span>✓ 2-3 week delivery</span>
+        </div>
+      </div>
+      <div class="service-item">
+        <h4>Enterprise Service</h4>
+        <p>Legal-grade documentation with expert witness preparation for litigation and regulatory proceedings.</p>
+        <div class="service-features">
+          <span>✓ Everything in Premium</span>
+          <span>✓ Legal documentation</span>
+          <span>✓ Expert testimony</span>
+          <span>✓ 1-2 week delivery</span>
+        </div>
+      </div>
     </div>
   </div>
 
   <div class="methodology-section">
-    <h2>Assessment Framework Overview</h2>
+    <h2>Professional Assessment Standards</h2>
     <div class="framework-grid">
       <div class="framework-item">
-        <h4>Evidence-Based Scoring</h4>
-        <p>All assessments require documented evidence from credible sources. No speculation or opinion-based scoring.</p>
+        <h4>Expert Research Team</h4>
+        <p>Former federal investigators, forensic accountants, and academic researchers conduct all assessments.</p>
       </div>
       <div class="framework-item">
-        <h4>Standardized Methodology</h4>
-        <p>Consistent scoring criteria across all frameworks enable comparative analysis and pattern recognition.</p>
+        <h4>Evidence-Based Methodology</h4>
+        <p>All scores supported by verifiable evidence from credible sources with academic-grade documentation.</p>
       </div>
       <div class="framework-item">
-        <h4>Comprehensive Documentation</h4>
-        <p>Each assessment generates detailed reports with source citations and methodology transparency.</p>
+        <h4>Legal-Grade Standards</h4>
+        <p>Documentation meets legal and regulatory standards suitable for court proceedings and expert testimony.</p>
       </div>
       <div class="framework-item">
-        <h4>Regular Updates</h4>
-        <p>Scores can be updated as new evidence emerges, maintaining accuracy and relevance over time.</p>
+        <h4>Confidentiality Protection</h4>
+        <p>Client information protected under professional privilege with optional anonymous service available.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="client-types">
+    <h2>Who Uses Our Services</h2>
+    <div class="client-grid">
+      <div class="client-item">
+        <h4>Legal Teams</h4>
+        <p>Law firms conducting due diligence, preparing litigation, or supporting regulatory actions against harmful corporations.</p>
+      </div>
+      <div class="client-item">
+        <h4>Investigative Journalists</h4>
+        <p>Media organizations requiring professional research and documentation for accountability reporting.</p>
+      </div>
+      <div class="client-item">
+        <h4>Academic Researchers</h4>
+        <p>Universities and think tanks studying corporate behavior, environmental impact, and institutional corruption.</p>
+      </div>
+      <div class="client-item">
+        <h4>Advocacy Organizations</h4>
+        <p>NGOs and activist groups building evidence-based campaigns for corporate accountability and reform.</p>
+      </div>
+      <div class="client-item">
+        <h4>Investment Firms</h4>
+        <p>Financial institutions conducting ESG assessments and risk evaluation for investment decisions.</p>
+      </div>
+      <div class="client-item">
+        <h4>Policy Makers</h4>
+        <p>Government agencies and legislative bodies developing evidence-based regulatory and policy responses.</p>
       </div>
     </div>
   </div>
@@ -129,37 +199,64 @@ Welcome to the comprehensive evaluation suite that enables systematic assessment
   </div>
 
   <div class="submission-section">
-    <h2>Submission & Review Process</h2>
+    <h2>Service Request & Delivery Process</h2>
     <div class="process-steps">
       <div class="step">
         <div class="step-number">1</div>
         <div class="step-content">
-          <h4>Complete Assessment</h4>
-          <p>Use one of the evaluation tools to systematically score your target entity with evidence</p>
+          <h4>Submit Request</h4>
+          <p>Complete service request form specifying target entity, service level, and requirements</p>
         </div>
       </div>
       <div class="step">
         <div class="step-number">2</div>
         <div class="step-content">
-          <h4>Generate Report</h4>
-          <p>Create a comprehensive assessment report with scoring breakdown and key findings</p>
+          <h4>Proposal & Contract</h4>
+          <p>Receive detailed proposal with timeline, methodology, and service agreement within 24 hours</p>
         </div>
       </div>
       <div class="step">
         <div class="step-number">3</div>
         <div class="step-content">
-          <h4>Submit for Review</h4>
-          <p>Submit your assessment through the form for expert review and potential publication</p>
+          <h4>Payment & Research</h4>
+          <p>Upon contract execution and payment, our expert team begins comprehensive investigation</p>
         </div>
       </div>
       <div class="step">
         <div class="step-number">4</div>
         <div class="step-content">
-          <h4>Publication</h4>
-          <p>Approved assessments are published on evil1.org with full attribution and transparency</p>
+          <h4>Report Delivery</h4>
+          <p>Receive professional assessment report with evidence package and optional live presentation</p>
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="pricing-overview">
+    <h2>Service Pricing Overview</h2>
+    <div class="pricing-grid">
+      <div class="pricing-item">
+        <h4>Company Evaluations</h4>
+        <div class="price-range">$2,500 - $10,000</div>
+        <p>Most comprehensive assessment covering all business impacts</p>
+      </div>
+      <div class="pricing-item">
+        <h4>Institution Evaluations</h4>
+        <div class="price-range">$2,000 - $8,500</div>
+        <p>Regulatory capture and democratic erosion analysis</p>
+      </div>
+      <div class="pricing-item">
+        <h4>Executive Evaluations</h4>
+        <div class="price-range">$1,500 - $7,500</div>
+        <p>Individual accountability and leadership pattern assessment</p>
+      </div>
+      <div class="pricing-item">
+        <h4>Product Evaluations</h4>
+        <div class="price-range">$1,200 - $6,000</div>
+        <p>Lifecycle harm analysis and impact measurement</p>
+      </div>
+    </div>
+    <p class="pricing-note">*Prices vary based on service level, urgency, and complexity. Contact us for custom quotes.</p>
   </div>
 
   <div class="featured-assessments">
@@ -268,8 +365,140 @@ Welcome to the comprehensive evaluation suite that enables systematic assessment
   border-bottom: 1px solid #eee;
 }
 
-.metric:last-child {
-  border-bottom: none;
+.eval-pricing {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #8B0000;
+  margin-bottom: 15px;
+}
+
+.service-levels {
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.service-levels h2 {
+  color: #8B0000;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.service-item {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #004080;
+}
+
+.service-item h4 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.service-features {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 15px;
+}
+
+.service-features span {
+  font-size: 0.9em;
+  color: #006400;
+}
+
+.client-types {
+  background: #fff8f0;
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  border: 2px solid #ff8c00;
+}
+
+.client-types h2 {
+  color: #8B0000;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.client-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.client-item {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ff8c00;
+}
+
+.client-item h4 {
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 1.1em;
+}
+
+.client-item p {
+  font-size: 0.9em;
+  color: #666;
+  line-height: 1.4;
+}
+
+.pricing-overview {
+  background: #f0f0f0;
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.pricing-overview h2 {
+  color: #8B0000;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.pricing-item {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  border: 2px solid #ddd;
+}
+
+.pricing-item h4 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.price-range {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #8B0000;
+  margin-bottom: 10px;
+}
+
+.pricing-note {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  font-size: 0.9em;
 }
 
 .eval-examples {
@@ -474,35 +703,42 @@ Welcome to the comprehensive evaluation suite that enables systematic assessment
 }
 </style>
 
-## Assessment Philosophy
+## Professional Service Philosophy
 
-Our evaluation frameworks are designed to:
+Our professional evaluation services are designed to:
 
-- **Quantify the unquantifiable**: Transform subjective judgments about corporate evil into objective, comparable metrics
-- **Enable pattern recognition**: Standardized scoring reveals systemic issues across industries and institutions
-- **Support accountability**: Evidence-based assessments provide foundation for regulatory action and public pressure
-- **Educate the public**: Transparent methodology helps people understand how corporate power operates
-- **Guide resistance**: Identify the most harmful actors deserving priority attention and opposition
+- **Provide objective accountability metrics**: Expert research transforms subjective judgments into evidence-based, comparable assessments
+- **Enable pattern recognition**: Standardized professional scoring reveals systemic issues across industries and institutions  
+- **Support legal and regulatory action**: Professional-grade documentation provides foundation for litigation and policy development
+- **Inform decision-making**: Transparent methodology and evidence help stakeholders understand corporate and institutional behavior
+- **Drive systemic change**: Identify the most harmful actors deserving priority attention and intervention
 
-## Quality Standards
+## Quality Guarantee & Standards
 
-All assessments must meet strict criteria:
+All professional assessments meet strict criteria:
 
-- **Evidence-based**: Every score supported by credible sources and documentation
-- **Transparent methodology**: Clear explanation of how scores were calculated
-- **Regular updates**: Scores adjusted as new evidence emerges
-- **Expert review**: Assessments reviewed by subject matter experts before publication
-- **Appeals process**: Mechanism for challenging scores with counter-evidence
+- **100% accuracy guarantee**: Every score backed by verifiable evidence and professional documentation
+- **Expert research team**: Investigations conducted by former federal agents, forensic accountants, and academic specialists
+- **Legal-grade standards**: Documentation suitable for court proceedings, regulatory filings, and expert testimony
+- **Confidentiality protection**: Client information secured under professional privilege with anonymous options available
+- **Revision policy**: Unlimited revisions during draft phase to ensure accuracy and client satisfaction
 
-## Getting Started
+## Getting Started with Professional Services
 
-1. **Choose your target**: Decide whether you want to assess a company, executive, product, or institution
-2. **Gather evidence**: Research your target thoroughly using credible sources
-3. **Select the framework**: Use the appropriate evaluation tool from the dashboard above
-4. **Complete assessment**: Work through each dimension systematically with evidence
-5. **Generate report**: Create a comprehensive assessment document
-6. **Submit for review**: Send your assessment for expert review and potential publication
+1. **Choose your service**: Select company, executive, product, or institution evaluation from the options above
+2. **Submit request**: Complete the service request form with target information and requirements
+3. **Receive proposal**: Get detailed project proposal with timeline, methodology, and pricing within 24 hours
+4. **Execute contract**: Sign service agreement and submit payment to begin professional investigation
+5. **Receive deliverables**: Professional assessment report with evidence package delivered according to agreed timeline
+6. **Optional presentation**: Live presentation of findings available for Premium and Enterprise service levels
+
+## Contact Professional Services
+
+For questions about professional evaluation services:
+- **Email**: services@evil1.org
+- **Phone**: 1-800-EVIL-ORG
+- **Secure Portal**: Client portal access provided after contract execution
 
 ---
 
-*The evaluation tools on this page implement the comprehensive evil metrics frameworks developed by evil1.org. For detailed methodology, see our [complete documentation](/docs/comprehensive-metrics-methodology/).*
+*Professional evaluation services are conducted by evil1.org's certified research team using standardized evil metrics methodologies. All assessments meet academic, legal, and regulatory documentation standards.*

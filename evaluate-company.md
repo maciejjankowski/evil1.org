@@ -1,18 +1,73 @@
 ---
 layout: default
-title: "Evaluate Company - Corporate Evil Index Assessment"
-description: "Systematic evaluation tool for assessing corporate harm using the Corporate Evil Index framework"
+title: "Request Company Evaluation - Professional Corporate Evil Index Assessment"
+description: "Order a professional Corporate Evil Index assessment conducted by expert researchers and analysts"
 permalink: /evaluate-company/
 ---
 
-# Corporate Evil Index (CEI) Evaluation
+# Professional Company Evaluation Service
 
-Use this comprehensive form to evaluate a company using our standardized Corporate Evil Index framework. The CEI measures corporate harm across 5 dimensions with a maximum score of 10,000 points.
+**Expert Corporate Evil Index (CEI) Assessment - Starting at $2,500**
+
+Get a comprehensive, professionally-researched Corporate Evil Index assessment conducted by our team of expert investigators, researchers, and analysts. Our professional evaluations include original research, source verification, and detailed evidence documentation.
+
+## Service Overview
+
+Our expert team will conduct a thorough investigation and produce a complete Corporate Evil Index assessment measuring corporate harm across 5 dimensions with scores up to 10,000 points. Each evaluation includes:
+
+- **Original investigative research** by professional analysts
+- **Verified source documentation** with academic-grade citations  
+- **Comprehensive evidence package** supporting all scores
+- **Professional assessment report** suitable for legal, academic, or media use
+- **Executive summary** with key findings and recommendations
+- **Follow-up updates** as new evidence emerges (6-month period included)
+
+## Pricing & Service Levels
+
+<div class="pricing-container">
+  <div class="pricing-tier standard">
+    <h3>Standard Assessment</h3>
+    <div class="price">$2,500</div>
+    <ul>
+      <li>Complete CEI evaluation (0-10,000 points)</li>
+      <li>20+ page professional report</li>
+      <li>Evidence package with citations</li>
+      <li>4-6 week delivery</li>
+      <li>6 months update coverage</li>
+    </ul>
+  </div>
+  
+  <div class="pricing-tier premium">
+    <h3>Premium Assessment</h3>
+    <div class="price">$5,000</div>
+    <ul>
+      <li>Everything in Standard</li>
+      <li>Original investigative interviews</li>
+      <li>Freedom of Information Act requests</li>
+      <li>Executive presentation deck</li>
+      <li>2-3 week delivery</li>
+      <li>12 months update coverage</li>
+    </ul>
+  </div>
+  
+  <div class="pricing-tier enterprise">
+    <h3>Enterprise Assessment</h3>
+    <div class="price">$10,000</div>
+    <ul>
+      <li>Everything in Premium</li>
+      <li>Legal-grade documentation</li>
+      <li>Expert witness preparation</li>
+      <li>Custom analysis framework</li>
+      <li>1-2 week delivery</li>
+      <li>24 months update coverage</li>
+    </ul>
+  </div>
+</div>
 
 <div class="evaluation-container">
-  <form id="cei-evaluation-form" class="evaluation-form">
+  <form id="cei-request-form" class="evaluation-form">
     <div class="form-section">
-      <h2>Company Information</h2>
+      <h2>Company to be Evaluated</h2>
       <div class="input-group">
         <label for="company-name">Company Name *</label>
         <input type="text" id="company-name" name="company_name" required>
@@ -46,395 +101,218 @@ Use this comprehensive form to evaluate a company using our standardized Corpora
           <option value="enterprise">Enterprise (10,000+)</option>
         </select>
       </div>
-    </div>
-
-    <div class="form-section">
-      <h2>Blood Legacy Assessment (0-2,500 points)</h2>
-      <p class="dimension-description">Deaths and physical harm caused by corporate actions</p>
       
-      <div class="scoring-subsection">
-        <h3>Workplace Fatalities & Safety Violations</h3>
-        <div class="score-input">
-          <label for="workplace-fatalities">Score (0-500):</label>
-          <input type="number" id="workplace-fatalities" name="workplace_fatalities" min="0" max="500" value="0">
-          <div class="evidence-input">
-            <label for="workplace-evidence">Evidence & Sources:</label>
-            <textarea id="workplace-evidence" name="workplace_evidence" placeholder="Document specific incidents, OSHA violations, worker death rates, safety inspection failures..."></textarea>
-          </div>
-        </div>
-      </div>
-
-      <div class="scoring-subsection">
-        <h3>Product-Related Deaths & Health Damage</h3>
-        <div class="score-input">
-          <label for="product-deaths">Score (0-500):</label>
-          <input type="number" id="product-deaths" name="product_deaths" min="0" max="500" value="0">
-          <div class="evidence-input">
-            <label for="product-evidence">Evidence & Sources:</label>
-            <textarea id="product-evidence" name="product_evidence" placeholder="Product recalls, health studies linking products to disease, contamination incidents..."></textarea>
-          </div>
-        </div>
-      </div>
-
-      <div class="scoring-subsection">
-        <h3>Environmental Disasters Causing Mortality</h3>
-        <div class="score-input">
-          <label for="environmental-deaths">Score (0-500):</label>
-          <input type="number" id="environmental-deaths" name="environmental_deaths" min="0" max="500" value="0">
-          <div class="evidence-input">
-            <label for="environmental-evidence">Evidence & Sources:</label>
-            <textarea id="environmental-evidence" name="environmental_evidence" placeholder="Chemical spills, air/water pollution causing deaths, toxic waste incidents..."></textarea>
-          </div>
-        </div>
-      </div>
-
-      <div class="scoring-subsection">
-        <h3>War Profiteering & Violence Enablement</h3>
-        <div class="score-input">
-          <label for="war-profiteering">Score (0-500):</label>
-          <input type="number" id="war-profiteering" name="war_profiteering" min="0" max="500" value="0">
-          <div class="evidence-input">
-            <label for="war-evidence">Evidence & Sources:</label>
-            <textarea id="war-evidence" name="war_evidence" placeholder="Military contracts, weapons sales to authoritarian regimes, conflict zone operations..."></textarea>
-          </div>
-        </div>
-      </div>
-
-      <div class="scoring-subsection">
-        <h3>Healthcare Access Denial & Price Gouging</h3>
-        <div class="score-input">
-          <label for="healthcare-denial">Score (0-500):</label>
-          <input type="number" id="healthcare-denial" name="healthcare_denial" min="0" max="500" value="0">
-          <div class="evidence-input">
-            <label for="healthcare-evidence">Evidence & Sources:</label>
-            <textarea id="healthcare-evidence" name="healthcare_evidence" placeholder="Drug price increases, insurance claim denials, hospital charity care failures..."></textarea>
-          </div>
-        </div>
-      </div>
-
-      <div class="dimension-total">
-        <strong>Blood Legacy Total: <span id="blood-total">0</span>/2500</strong>
-      </div>
-    </div>
-
-    <div class="form-section">
-      <h2>Suffering Amplification Assessment (0-2,500 points)</h2>
-      <p class="dimension-description">Human misery and quality of life destruction</p>
-      
-      <div class="scoring-subsection">
-        <h3>Worker Exploitation, Abuse & Surveillance</h3>
-        <div class="score-input">
-          <label for="worker-exploitation">Score (0-500):</label>
-          <input type="number" id="worker-exploitation" name="worker_exploitation" min="0" max="500" value="0">
-          <div class="evidence-input">
-            <label for="worker-exploitation-evidence">Evidence & Sources:</label>
-            <textarea id="worker-exploitation-evidence" name="worker_exploitation_evidence" placeholder="Wage theft, forced overtime, unsafe working conditions, union busting, employee surveillance..."></textarea>
-          </div>
-        </div>
-      </div>
-
-      <div class="scoring-subsection">
-        <h3>Mental Health Damage from Products/Services</h3>
-        <div class="score-input">
-          <label for="mental-health">Score (0-500):</label>
-          <input type="number" id="mental-health" name="mental_health" min="0" max="500" value="0">
-          <div class="evidence-input">
-            <label for="mental-health-evidence">Evidence & Sources:</label>
-            <textarea id="mental-health-evidence" name="mental_health_evidence" placeholder="Social media addiction, predatory apps, gambling platforms, psychological manipulation..."></textarea>
-          </div>
-        </div>
-      </div>
-
-      <div class="scoring-subsection">
-        <h3>Family & Community Destruction</h3>
-        <div class="score-input">
-          <label for="community-destruction">Score (0-500):</label>
-          <input type="number" id="community-destruction" name="community_destruction" min="0" max="500" value="0">
-          <div class="evidence-input">
-            <label for="community-evidence">Evidence & Sources:</label>
-            <textarea id="community-evidence" name="community_evidence" placeholder="Store closures destroying local economies, predatory lending in poor communities, gentrification..."></textarea>
-          </div>
-        </div>
-      </div>
-
-      <div class="scoring-subsection">
-        <h3>Addiction Enablement & Profiteering</h3>
-        <div class="score-input">
-          <label for="addiction-profiteering">Score (0-500):</label>
-          <input type="number" id="addiction-profiteering" name="addiction_profiteering" min="0" max="500" value="0">
-          <div class="evidence-input">
-            <label for="addiction-evidence">Evidence & Sources:</label>
-            <textarea id="addiction-evidence" name="addiction_evidence" placeholder="Opioid marketing, gambling addiction design, nicotine products, predatory lending..."></textarea>
-          </div>
-        </div>
-      </div>
-
-      <div class="scoring-subsection">
-        <h3>Privacy Violations & Surveillance Capitalism</h3>
-        <div class="score-input">
-          <label for="privacy-violations">Score (0-500):</label>
-          <input type="number" id="privacy-violations" name="privacy_violations" min="0" max="500" value="0">
-          <div class="evidence-input">
-            <label for="privacy-evidence">Evidence & Sources:</label>
-            <textarea id="privacy-evidence" name="privacy_evidence" placeholder="Data breaches, illegal tracking, selling personal data, facial recognition..."></textarea>
-          </div>
-        </div>
-      </div>
-
-      <div class="dimension-total">
-        <strong>Suffering Amplification Total: <span id="suffering-total">0</span>/2500</strong>
-      </div>
-    </div>
-
-    <div class="form-section">
-      <h2>Wealth Extraction Assessment (0-2,000 points)</h2>
-      <p class="dimension-description">Profit maximization through exploitation and externalization</p>
-      
-      <div class="scoring-subsection">
-        <h3>Wage Theft & Labor Exploitation</h3>
-        <div class="score-input">
-          <label for="wage-theft">Score (0-400):</label>
-          <input type="number" id="wage-theft" name="wage_theft" min="0" max="400" value="0">
-          <div class="evidence-input">
-            <label for="wage-theft-evidence">Evidence & Sources:</label>
-            <textarea id="wage-theft-evidence" name="wage_theft_evidence" placeholder="Unpaid overtime, minimum wage violations, contractor misclassification, tip theft..."></textarea>
-          </div>
-        </div>
-      </div>
-
-      <div class="scoring-subsection">
-        <h3>Tax Avoidance & Evasion Schemes</h3>
-        <div class="score-input">
-          <label for="tax-avoidance">Score (0-400):</label>
-          <input type="number" id="tax-avoidance" name="tax_avoidance" min="0" max="400" value="0">
-          <div class="evidence-input">
-            <label for="tax-evidence">Evidence & Sources:</label>
-            <textarea id="tax-evidence" name="tax_evidence" placeholder="Offshore tax shelters, transfer pricing manipulation, profit shifting, tax inversion..."></textarea>
-          </div>
-        </div>
-      </div>
-
-      <div class="scoring-subsection">
-        <h3>Price Manipulation & Market Manipulation</h3>
-        <div class="score-input">
-          <label for="price-manipulation">Score (0-400):</label>
-          <input type="number" id="price-manipulation" name="price_manipulation" min="0" max="400" value="0">
-          <div class="evidence-input">
-            <label for="price-evidence">Evidence & Sources:</label>
-            <textarea id="price-evidence" name="price_evidence" placeholder="Price fixing cartels, algorithm-based price coordination, predatory pricing..."></textarea>
-          </div>
-        </div>
-      </div>
-
-      <div class="scoring-subsection">
-        <h3>Monopolistic & Anti-competitive Practices</h3>
-        <div class="score-input">
-          <label for="monopolistic">Score (0-400):</label>
-          <input type="number" id="monopolistic" name="monopolistic" min="0" max="400" value="0">
-          <div class="evidence-input">
-            <label for="monopolistic-evidence">Evidence & Sources:</label>
-            <textarea id="monopolistic-evidence" name="monopolistic_evidence" placeholder="Competitor acquisitions, exclusive dealing, vertical foreclosure, platform self-preferencing..."></textarea>
-          </div>
-        </div>
-      </div>
-
-      <div class="scoring-subsection">
-        <h3>Debt Trap Creation & Predatory Lending</h3>
-        <div class="score-input">
-          <label for="predatory-lending">Score (0-400):</label>
-          <input type="number" id="predatory-lending" name="predatory_lending" min="0" max="400" value="0">
-          <div class="evidence-input">
-            <label for="lending-evidence">Evidence & Sources:</label>
-            <textarea id="lending-evidence" name="lending_evidence" placeholder="Payday loans, subprime mortgages, student loan schemes, credit card abuse..."></textarea>
-          </div>
-        </div>
-      </div>
-
-      <div class="dimension-total">
-        <strong>Wealth Extraction Total: <span id="wealth-total">0</span>/2000</strong>
-      </div>
-    </div>
-
-    <div class="form-section">
-      <h2>Planet Destruction Assessment (0-2,000 points)</h2>
-      <p class="dimension-description">Environmental damage and climate impact</p>
-      
-      <div class="scoring-subsection">
-        <h3>Greenhouse Gas Emissions & Climate Acceleration</h3>
-        <div class="score-input">
-          <label for="emissions">Score (0-400):</label>
-          <input type="number" id="emissions" name="emissions" min="0" max="400" value="0">
-          <div class="evidence-input">
-            <label for="emissions-evidence">Evidence & Sources:</label>
-            <textarea id="emissions-evidence" name="emissions_evidence" placeholder="Carbon emissions data, climate denial funding, fossil fuel expansion..."></textarea>
-          </div>
-        </div>
-      </div>
-
-      <div class="scoring-subsection">
-        <h3>Pollution & Toxic Waste Generation</h3>
-        <div class="score-input">
-          <label for="pollution">Score (0-400):</label>
-          <input type="number" id="pollution" name="pollution" min="0" max="400" value="0">
-          <div class="evidence-input">
-            <label for="pollution-evidence">Evidence & Sources:</label>
-            <textarea id="pollution-evidence" name="pollution_evidence" placeholder="Water pollution, air pollution, toxic waste sites, chemical contamination..."></textarea>
-          </div>
-        </div>
-      </div>
-
-      <div class="scoring-subsection">
-        <h3>Resource Depletion & Habitat Destruction</h3>
-        <div class="score-input">
-          <label for="resource-depletion">Score (0-400):</label>
-          <input type="number" id="resource-depletion" name="resource_depletion" min="0" max="400" value="0">
-          <div class="evidence-input">
-            <label for="resource-evidence">Evidence & Sources:</label>
-            <textarea id="resource-evidence" name="resource_evidence" placeholder="Deforestation, overfishing, mining destruction, land grabbing..."></textarea>
-          </div>
-        </div>
-      </div>
-
-      <div class="scoring-subsection">
-        <h3>Biodiversity Loss & Ecosystem Damage</h3>
-        <div class="score-input">
-          <label for="biodiversity">Score (0-400):</label>
-          <input type="number" id="biodiversity" name="biodiversity" min="0" max="400" value="0">
-          <div class="evidence-input">
-            <label for="biodiversity-evidence">Evidence & Sources:</label>
-            <textarea id="biodiversity-evidence" name="biodiversity_evidence" placeholder="Species extinction acceleration, ecosystem disruption, invasive species introduction..."></textarea>
-          </div>
-        </div>
-      </div>
-
-      <div class="scoring-subsection">
-        <h3>Greenwashing & Environmental Fraud</h3>
-        <div class="score-input">
-          <label for="greenwashing">Score (0-400):</label>
-          <input type="number" id="greenwashing" name="greenwashing" min="0" max="400" value="0">
-          <div class="evidence-input">
-            <label for="greenwashing-evidence">Evidence & Sources:</label>
-            <textarea id="greenwashing-evidence" name="greenwashing_evidence" placeholder="False environmental claims, carbon offset fraud, sustainability report manipulation..."></textarea>
-          </div>
-        </div>
-      </div>
-
-      <div class="dimension-total">
-        <strong>Planet Destruction Total: <span id="planet-total">0</span>/2000</strong>
-      </div>
-    </div>
-
-    <div class="form-section">
-      <h2>Democracy Corruption Assessment (0-1,000 points)</h2>
-      <p class="dimension-description">Undermining of democratic institutions and processes</p>
-      
-      <div class="scoring-subsection">
-        <h3>Political Lobbying & Regulatory Capture</h3>
-        <div class="score-input">
-          <label for="lobbying">Score (0-200):</label>
-          <input type="number" id="lobbying" name="lobbying" min="0" max="200" value="0">
-          <div class="evidence-input">
-            <label for="lobbying-evidence">Evidence & Sources:</label>
-            <textarea id="lobbying-evidence" name="lobbying_evidence" placeholder="Lobbying expenditures, revolving door employment, regulatory capture incidents..."></textarea>
-          </div>
-        </div>
-      </div>
-
-      <div class="scoring-subsection">
-        <h3>Campaign Finance & Political Manipulation</h3>
-        <div class="score-input">
-          <label for="campaign-finance">Score (0-200):</label>
-          <input type="number" id="campaign-finance" name="campaign_finance" min="0" max="200" value="0">
-          <div class="evidence-input">
-            <label for="campaign-evidence">Evidence & Sources:</label>
-            <textarea id="campaign-evidence" name="campaign_evidence" placeholder="Political donations, dark money funding, election influence campaigns..."></textarea>
-          </div>
-        </div>
-      </div>
-
-      <div class="scoring-subsection">
-        <h3>Media Manipulation & Disinformation</h3>
-        <div class="score-input">
-          <label for="media-manipulation">Score (0-200):</label>
-          <input type="number" id="media-manipulation" name="media_manipulation" min="0" max="200" value="0">
-          <div class="evidence-input">
-            <label for="media-evidence">Evidence & Sources:</label>
-            <textarea id="media-evidence" name="media_evidence" placeholder="Astroturfing campaigns, fake news funding, media ownership concentration..."></textarea>
-          </div>
-        </div>
-      </div>
-
-      <div class="scoring-subsection">
-        <h3>Voter Suppression & Election Interference</h3>
-        <div class="score-input">
-          <label for="voter-suppression">Score (0-200):</label>
-          <input type="number" id="voter-suppression" name="voter_suppression" min="0" max="200" value="0">
-          <div class="evidence-input">
-            <label for="voter-evidence">Evidence & Sources:</label>
-            <textarea id="voter-evidence" name="voter_evidence" placeholder="Voter registration blocking, election technology manipulation, polling access restriction..."></textarea>
-          </div>
-        </div>
-      </div>
-
-      <div class="scoring-subsection">
-        <h3>Authoritarian Regime Support</h3>
-        <div class="score-input">
-          <label for="authoritarian">Score (0-200):</label>
-          <input type="number" id="authoritarian" name="authoritarian" min="0" max="200" value="0">
-          <div class="evidence-input">
-            <label for="authoritarian-evidence">Evidence & Sources:</label>
-            <textarea id="authoritarian-evidence" name="authoritarian_evidence" placeholder="Business with dictatorships, surveillance technology sales, human rights violations support..."></textarea>
-          </div>
-        </div>
-      </div>
-
-      <div class="dimension-total">
-        <strong>Democracy Corruption Total: <span id="democracy-total">0</span>/1000</strong>
-      </div>
-    </div>
-
-    <div class="form-section">
-      <h2>Assessment Summary</h2>
-      <div class="total-score">
-        <h3>Corporate Evil Index (CEI) Total: <span id="cei-total">0</span>/10,000</h3>
-        <div class="score-breakdown">
-          <div>Blood Legacy: <span id="final-blood">0</span>/2500</div>
-          <div>Suffering Amplification: <span id="final-suffering">0</span>/2500</div>
-          <div>Wealth Extraction: <span id="final-wealth">0</span>/2000</div>
-          <div>Planet Destruction: <span id="final-planet">0</span>/2000</div>
-          <div>Democracy Corruption: <span id="final-democracy">0</span>/1000</div>
-        </div>
-      </div>
-
       <div class="input-group">
-        <label for="assessor-name">Assessor Name</label>
-        <input type="text" id="assessor-name" name="assessor_name" placeholder="Your name or organization">
+        <label for="evaluation-urgency">How urgent is this evaluation?</label>
+        <select id="evaluation-urgency" name="urgency">
+          <option value="standard">Standard (4-6 weeks)</option>
+          <option value="priority">Priority (2-3 weeks) - +50% cost</option>
+          <option value="rush">Rush (1-2 weeks) - +100% cost</option>
+        </select>
       </div>
-
+      
       <div class="input-group">
-        <label for="assessment-date">Assessment Date</label>
-        <input type="date" id="assessment-date" name="assessment_date">
+        <label for="specific-concerns">Specific Areas of Concern</label>
+        <textarea id="specific-concerns" name="specific_concerns" placeholder="Describe what specific harmful practices, controversies, or areas you want our experts to focus on during the investigation..."></textarea>
       </div>
-
+      
       <div class="input-group">
-        <label for="overall-notes">Overall Assessment Notes</label>
-        <textarea id="overall-notes" name="overall_notes" placeholder="Additional context, methodology notes, limitations, recommendations..."></textarea>
+        <label for="known-evidence">Known Evidence or Sources</label>
+        <textarea id="known-evidence" name="known_evidence" placeholder="Share any existing evidence, reports, or sources you're aware of that our researchers should examine..."></textarea>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <h2>Client Information</h2>
+      <div class="input-group">
+        <label for="client-name">Your Name *</label>
+        <input type="text" id="client-name" name="client_name" required>
+      </div>
+      
+      <div class="input-group">
+        <label for="client-email">Email Address *</label>
+        <input type="email" id="client-email" name="client_email" required>
+      </div>
+      
+      <div class="input-group">
+        <label for="client-phone">Phone Number</label>
+        <input type="tel" id="client-phone" name="client_phone">
+      </div>
+      
+      <div class="input-group">
+        <label for="client-organization">Organization/Affiliation</label>
+        <input type="text" id="client-organization" name="client_organization" placeholder="Law firm, NGO, media organization, academic institution, etc.">
+      </div>
+      
+      <div class="input-group">
+        <label for="intended-use">Intended Use of Report</label>
+        <select id="intended-use" name="intended_use">
+          <option value="">Select Primary Use</option>
+          <option value="legal">Legal proceedings</option>
+          <option value="media">Media/journalism</option>
+          <option value="academic">Academic research</option>
+          <option value="advocacy">Advocacy campaign</option>
+          <option value="investment">Investment decision</option>
+          <option value="policy">Policy development</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <h2>Service Selection</h2>
+      <div class="service-tier-selection">
+        <div class="tier-option">
+          <input type="radio" id="standard-tier" name="service_tier" value="standard" required>
+          <label for="standard-tier">
+            <div class="tier-label">Standard Assessment - $2,500</div>
+            <div class="tier-description">Complete CEI evaluation with professional report and evidence package</div>
+          </label>
+        </div>
+        
+        <div class="tier-option">
+          <input type="radio" id="premium-tier" name="service_tier" value="premium">
+          <label for="premium-tier">
+            <div class="tier-label">Premium Assessment - $5,000</div>
+            <div class="tier-description">Includes original investigative research and FOIA requests</div>
+          </label>
+        </div>
+        
+        <div class="tier-option">
+          <input type="radio" id="enterprise-tier" name="service_tier" value="enterprise">
+          <label for="enterprise-tier">
+            <div class="tier-label">Enterprise Assessment - $10,000</div>
+            <div class="tier-description">Legal-grade documentation with expert witness preparation</div>
+          </label>
+        </div>
+      </div>
+      
+      <div class="input-group">
+        <label for="additional-services">Additional Services</label>
+        <div class="checkbox-group">
+          <div class="checkbox-item">
+            <input type="checkbox" id="confidential" name="additional_services" value="confidential">
+            <label for="confidential">Confidential assessment (+$1,000)</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="expedited" name="additional_services" value="expedited">
+            <label for="expedited">Expedited delivery (+50% of base cost)</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="presentation" name="additional_services" value="presentation">
+            <label for="presentation">Live presentation of findings (+$500)</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <h2>Research Requirements</h2>
+      <div class="input-group">
+        <label for="research-scope">Scope of Investigation</label>
+        <div class="checkbox-group">
+          <div class="checkbox-item">
+            <input type="checkbox" id="scope-workplace" name="research_scope" value="workplace">
+            <label for="scope-workplace">Workplace practices and labor conditions</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="scope-environmental" name="research_scope" value="environmental">
+            <label for="scope-environmental">Environmental impact and violations</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="scope-financial" name="research_scope" value="financial">
+            <label for="scope-financial">Financial practices and tax avoidance</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="scope-political" name="research_scope" value="political">
+            <label for="scope-political">Political influence and lobbying</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="scope-products" name="research_scope" value="products">
+            <label for="scope-products">Product safety and consumer harm</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="scope-all" name="research_scope" value="comprehensive">
+            <label for="scope-all">Comprehensive assessment (all dimensions)</label>
+          </div>
+        </div>
+      </div>
+      
+      <div class="input-group">
+        <label for="time-period">Time Period for Investigation</label>
+        <select id="time-period" name="time_period">
+          <option value="current">Current practices only</option>
+          <option value="5-years">Last 5 years</option>
+          <option value="10-years">Last 10 years</option>
+          <option value="historical">Full corporate history</option>
+        </select>
+      </div>
+      
+      <div class="input-group">
+        <label for="geographic-scope">Geographic Scope</label>
+        <select id="geographic-scope" name="geographic_scope">
+          <option value="us">United States only</option>
+          <option value="north-america">North America</option>
+          <option value="global">Global operations</option>
+          <option value="specific">Specific regions (specify below)</option>
+        </select>
+      </div>
+      
+      <div class="input-group">
+        <label for="special-requirements">Special Requirements or Focus Areas</label>
+        <textarea id="special-requirements" name="special_requirements" placeholder="Describe any specific legal requirements, focus areas, or methodology preferences for this assessment..."></textarea>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <h2>Order Summary & Payment</h2>
+      <div class="order-summary">
+        <div class="summary-line">
+          <span>Base Service:</span>
+          <span id="base-cost">$0</span>
+        </div>
+        <div class="summary-line">
+          <span>Additional Services:</span>
+          <span id="additional-cost">$0</span>
+        </div>
+        <div class="summary-line">
+          <span>Urgency Premium:</span>
+          <span id="urgency-cost">$0</span>
+        </div>
+        <div class="summary-total">
+          <span>Total Cost:</span>
+          <span id="total-cost">$0</span>
+        </div>
+      </div>
+      
+      <div class="input-group">
+        <label for="po-number">Purchase Order Number (if applicable)</label>
+        <input type="text" id="po-number" name="po_number">
+      </div>
+      
+      <div class="input-group">
+        <label for="billing-address">Billing Address</label>
+        <textarea id="billing-address" name="billing_address" placeholder="Complete billing address for invoice..."></textarea>
+      </div>
+      
+      <div class="input-group">
+        <label for="special-instructions">Special Instructions</label>
+        <textarea id="special-instructions" name="special_instructions" placeholder="Any special delivery instructions, confidentiality requirements, or other notes..."></textarea>
       </div>
     </div>
 
     <div class="form-actions">
-      <button type="button" id="generate-report">Generate Assessment Report</button>
-      <button type="button" id="save-draft">Save Draft</button>
-      <button type="submit">Submit Evaluation</button>
+      <button type="button" id="calculate-cost">Calculate Total Cost</button>
+      <button type="button" id="save-request">Save Request Draft</button>
+      <button type="submit">Submit Evaluation Request</button>
     </div>
   </form>
 </div>
 
-<div id="assessment-report" class="assessment-report" style="display: none;">
-  <h2>Corporate Evil Index Assessment Report</h2>
-  <div id="report-content"></div>
-  <button type="button" id="copy-report">Copy Report</button>
-  <button type="button" id="download-report">Download as JSON</button>
+<div id="confirmation-message" class="confirmation-message" style="display: none;">
+  <h2>Evaluation Request Submitted</h2>
+  <div id="confirmation-content"></div>
+  <button type="button" id="download-request">Download Request Summary</button>
 </div>
 
 <style>
@@ -442,6 +320,61 @@ Use this comprehensive form to evaluate a company using our standardized Corpora
   max-width: 900px;
   margin: 0 auto;
   padding: 20px;
+}
+
+.pricing-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.pricing-tier {
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 25px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.pricing-tier:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.standard { border-color: #8B0000; }
+.premium { border-color: #000080; background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 100%); }
+.enterprise { border-color: #006400; background: linear-gradient(135deg, #f0fff0 0%, #e6ffe6 100%); }
+
+.pricing-tier h3 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 1.4em;
+}
+
+.price {
+  font-size: 2.2em;
+  font-weight: bold;
+  color: #8B0000;
+  margin-bottom: 20px;
+}
+
+.pricing-tier ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.pricing-tier li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.pricing-tier li:before {
+  content: "✓ ";
+  color: #006400;
+  font-weight: bold;
 }
 
 .evaluation-form {
@@ -463,66 +396,8 @@ Use this comprehensive form to evaluate a company using our standardized Corpora
 
 .form-section h2 {
   color: #8B0000;
-  margin-bottom: 10px;
-  font-size: 1.5em;
-}
-
-.dimension-description {
-  font-style: italic;
-  color: #666;
   margin-bottom: 20px;
-}
-
-.scoring-subsection {
-  margin-bottom: 25px;
-  padding: 15px;
-  background: white;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-}
-
-.scoring-subsection h3 {
-  color: #000080;
-  margin-bottom: 10px;
-  font-size: 1.1em;
-}
-
-.score-input {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.score-input label {
-  font-weight: bold;
-  color: #333;
-}
-
-.score-input input[type="number"] {
-  width: 100px;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
-
-.evidence-input {
-  margin-top: 10px;
-}
-
-.evidence-input label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-  color: #555;
-}
-
-.evidence-input textarea {
-  width: 100%;
-  min-height: 80px;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  resize: vertical;
+  font-size: 1.5em;
 }
 
 .input-group {
@@ -551,41 +426,92 @@ Use this comprehensive form to evaluate a company using our standardized Corpora
   resize: vertical;
 }
 
-.dimension-total {
-  margin-top: 20px;
-  padding: 10px;
-  background: #e8f4fd;
-  border-left: 4px solid #004080;
-  font-size: 1.1em;
-}
-
-.total-score {
-  background: #ffe6e6;
-  padding: 20px;
-  border-radius: 8px;
-  border: 2px solid #8B0000;
+.service-tier-selection {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
   margin-bottom: 20px;
 }
 
-.total-score h3 {
-  color: #8B0000;
-  font-size: 1.4em;
-  margin-bottom: 15px;
+.tier-option {
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  transition: border-color 0.3s, background-color 0.3s;
 }
 
-.score-breakdown {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 10px;
-  margin-top: 10px;
+.tier-option:hover {
+  border-color: #8B0000;
+  background-color: #fff8f8;
 }
 
-.score-breakdown div {
-  padding: 8px;
-  background: white;
-  border-radius: 3px;
-  border: 1px solid #ddd;
+.tier-option input[type="radio"] {
+  width: auto;
+  margin-right: 10px;
+}
+
+.tier-option label {
+  cursor: pointer;
+  margin: 0;
+}
+
+.tier-label {
   font-weight: bold;
+  color: #8B0000;
+  font-size: 1.1em;
+  margin-bottom: 5px;
+}
+
+.tier-description {
+  color: #666;
+  font-size: 0.9em;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkbox-item input[type="checkbox"] {
+  width: auto;
+}
+
+.checkbox-item label {
+  margin: 0;
+  cursor: pointer;
+}
+
+.order-summary {
+  background: #f0f8ff;
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px solid #004080;
+  margin-bottom: 20px;
+}
+
+.summary-line {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #8B0000;
+  border-top: 2px solid #004080;
+  padding-top: 10px;
+  margin-top: 15px;
 }
 
 .form-actions {
@@ -622,7 +548,7 @@ Use this comprehensive form to evaluate a company using our standardized Corpora
   background: #003366;
 }
 
-.assessment-report {
+.confirmation-message {
   margin-top: 30px;
   padding: 20px;
   background: #f0f8ff;
@@ -630,7 +556,7 @@ Use this comprehensive form to evaluate a company using our standardized Corpora
   border-radius: 8px;
 }
 
-.assessment-report h2 {
+.confirmation-message h2 {
   color: #004080;
   margin-bottom: 20px;
 }
@@ -648,7 +574,7 @@ Use this comprehensive form to evaluate a company using our standardized Corpora
     flex-direction: column;
   }
   
-  .score-breakdown {
+  .pricing-container {
     grid-template-columns: 1fr;
   }
 }
@@ -656,212 +582,226 @@ Use this comprehensive form to evaluate a company using our standardized Corpora
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  // Auto-calculate totals as scores are entered
-  const scoreInputs = document.querySelectorAll('input[type="number"]');
+  // Cost calculation
+  const serviceTiers = {
+    'standard': 2500,
+    'premium': 5000,
+    'enterprise': 10000
+  };
   
-  scoreInputs.forEach(input => {
-    input.addEventListener('input', calculateTotals);
-  });
+  const additionalServices = {
+    'confidential': 1000,
+    'expedited': 0, // Calculated as percentage
+    'presentation': 500
+  };
   
-  function calculateTotals() {
-    // Blood Legacy calculation
-    const bloodInputs = ['workplace-fatalities', 'product-deaths', 'environmental-deaths', 'war-profiteering', 'healthcare-denial'];
-    const bloodTotal = bloodInputs.reduce((sum, id) => sum + parseInt(document.getElementById(id).value || 0), 0);
-    document.getElementById('blood-total').textContent = bloodTotal;
-    document.getElementById('final-blood').textContent = bloodTotal;
+  function calculateCost() {
+    let baseCost = 0;
+    let additionalCost = 0;
+    let urgencyMultiplier = 1;
     
-    // Suffering Amplification calculation
-    const sufferingInputs = ['worker-exploitation', 'mental-health', 'community-destruction', 'addiction-profiteering', 'privacy-violations'];
-    const sufferingTotal = sufferingInputs.reduce((sum, id) => sum + parseInt(document.getElementById(id).value || 0), 0);
-    document.getElementById('suffering-total').textContent = sufferingTotal;
-    document.getElementById('final-suffering').textContent = sufferingTotal;
+    // Get selected service tier
+    const selectedTier = document.querySelector('input[name="service_tier"]:checked');
+    if (selectedTier) {
+      baseCost = serviceTiers[selectedTier.value];
+    }
     
-    // Wealth Extraction calculation
-    const wealthInputs = ['wage-theft', 'tax-avoidance', 'price-manipulation', 'monopolistic', 'predatory-lending'];
-    const wealthTotal = wealthInputs.reduce((sum, id) => sum + parseInt(document.getElementById(id).value || 0), 0);
-    document.getElementById('wealth-total').textContent = wealthTotal;
-    document.getElementById('final-wealth').textContent = wealthTotal;
+    // Get urgency multiplier
+    const urgency = document.getElementById('evaluation-urgency').value;
+    if (urgency === 'priority') urgencyMultiplier = 1.5;
+    if (urgency === 'rush') urgencyMultiplier = 2.0;
     
-    // Planet Destruction calculation
-    const planetInputs = ['emissions', 'pollution', 'resource-depletion', 'biodiversity', 'greenwashing'];
-    const planetTotal = planetInputs.reduce((sum, id) => sum + parseInt(document.getElementById(id).value || 0), 0);
-    document.getElementById('planet-total').textContent = planetTotal;
-    document.getElementById('final-planet').textContent = planetTotal;
+    // Calculate additional services
+    const selectedAdditional = document.querySelectorAll('input[name="additional_services"]:checked');
+    selectedAdditional.forEach(service => {
+      if (service.value === 'expedited') {
+        // Expedited is handled by urgency multiplier
+        return;
+      }
+      additionalCost += additionalServices[service.value] || 0;
+    });
     
-    // Democracy Corruption calculation
-    const democracyInputs = ['lobbying', 'campaign-finance', 'media-manipulation', 'voter-suppression', 'authoritarian'];
-    const democracyTotal = democracyInputs.reduce((sum, id) => sum + parseInt(document.getElementById(id).value || 0), 0);
-    document.getElementById('democracy-total').textContent = democracyTotal;
-    document.getElementById('final-democracy').textContent = democracyTotal;
+    const urgencyCost = baseCost * (urgencyMultiplier - 1);
+    const totalCost = (baseCost + additionalCost) * urgencyMultiplier;
     
-    // CEI Total
-    const ceiTotal = bloodTotal + sufferingTotal + wealthTotal + planetTotal + democracyTotal;
-    document.getElementById('cei-total').textContent = ceiTotal;
+    // Update display
+    document.getElementById('base-cost').textContent = `$${baseCost.toLocaleString()}`;
+    document.getElementById('additional-cost').textContent = `$${additionalCost.toLocaleString()}`;
+    document.getElementById('urgency-cost').textContent = `$${urgencyCost.toLocaleString()}`;
+    document.getElementById('total-cost').textContent = `$${totalCost.toLocaleString()}`;
   }
   
-  // Set current date
-  document.getElementById('assessment-date').value = new Date().toISOString().split('T')[0];
-  
-  // Generate report functionality
-  document.getElementById('generate-report').addEventListener('click', function() {
-    calculateTotals();
-    generateReport();
+  // Add event listeners for cost calculation
+  document.querySelectorAll('input[name="service_tier"]').forEach(radio => {
+    radio.addEventListener('change', calculateCost);
   });
   
-  function generateReport() {
-    const formData = new FormData(document.getElementById('cei-evaluation-form'));
+  document.querySelectorAll('input[name="additional_services"]').forEach(checkbox => {
+    checkbox.addEventListener('change', calculateCost);
+  });
+  
+  document.getElementById('evaluation-urgency').addEventListener('change', calculateCost);
+  
+  // Calculate cost button
+  document.getElementById('calculate-cost').addEventListener('click', calculateCost);
+  
+  // Generate request summary
+  document.getElementById('cei-request-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    submitRequest();
+  });
+  
+  function submitRequest() {
+    const formData = new FormData(document.getElementById('cei-request-form'));
     const companyName = formData.get('company_name') || 'Unknown Company';
-    const assessorName = formData.get('assessor_name') || 'Anonymous';
-    const assessmentDate = formData.get('assessment_date') || new Date().toISOString().split('T')[0];
+    const clientName = formData.get('client_name') || 'Anonymous';
+    const selectedTier = document.querySelector('input[name="service_tier"]:checked');
+    const totalCost = document.getElementById('total-cost').textContent;
     
-    const bloodTotal = parseInt(document.getElementById('blood-total').textContent);
-    const sufferingTotal = parseInt(document.getElementById('suffering-total').textContent);
-    const wealthTotal = parseInt(document.getElementById('wealth-total').textContent);
-    const planetTotal = parseInt(document.getElementById('planet-total').textContent);
-    const democracyTotal = parseInt(document.getElementById('democracy-total').textContent);
-    const ceiTotal = parseInt(document.getElementById('cei-total').textContent);
-    
-    const reportContent = `
-      <h3>${companyName} - Corporate Evil Index Assessment</h3>
-      <p><strong>Assessed by:</strong> ${assessorName}</p>
-      <p><strong>Assessment Date:</strong> ${assessmentDate}</p>
+    const confirmationContent = `
+      <h3>Request Summary</h3>
+      <p><strong>Company to Evaluate:</strong> ${companyName}</p>
+      <p><strong>Client:</strong> ${clientName}</p>
+      <p><strong>Service Level:</strong> ${selectedTier ? selectedTier.nextElementSibling.querySelector('.tier-label').textContent : 'Not selected'}</p>
+      <p><strong>Total Cost:</strong> ${totalCost}</p>
       
-      <h4>CEI Score: ${ceiTotal}/10,000</h4>
+      <h4>Next Steps:</h4>
+      <ol>
+        <li>You will receive a confirmation email within 24 hours</li>
+        <li>Our team will send a detailed project proposal and timeline</li>
+        <li>Upon approval, we'll send an invoice with payment terms</li>
+        <li>Research begins immediately after payment confirmation</li>
+        <li>You'll receive regular progress updates throughout the investigation</li>
+      </ol>
       
-      <h4>Dimension Breakdown:</h4>
-      <ul>
-        <li><strong>Blood Legacy:</strong> ${bloodTotal}/2,500 points</li>
-        <li><strong>Suffering Amplification:</strong> ${sufferingTotal}/2,500 points</li>
-        <li><strong>Wealth Extraction:</strong> ${wealthTotal}/2,000 points</li>
-        <li><strong>Planet Destruction:</strong> ${planetTotal}/2,000 points</li>
-        <li><strong>Democracy Corruption:</strong> ${democracyTotal}/1,000 points</li>
-      </ul>
-      
-      <h4>Severity Assessment:</h4>
-      <p>${getCEISeverityAssessment(ceiTotal)}</p>
-      
-      <h4>Key Findings:</h4>
-      <p>${getKeyFindings(formData)}</p>
-      
-      <p><em>Assessment conducted using the Corporate Evil Index (CEI) framework from evil1.org</em></p>
+      <p><strong>Reference Number:</strong> CEI-${Date.now()}</p>
+      <p><em>Thank you for choosing our professional evaluation services. We'll be in touch soon!</em></p>
     `;
     
-    document.getElementById('report-content').innerHTML = reportContent;
-    document.getElementById('assessment-report').style.display = 'block';
+    document.getElementById('confirmation-content').innerHTML = confirmationContent;
+    document.getElementById('confirmation-message').style.display = 'block';
+    document.getElementById('cei-request-form').style.display = 'none';
   }
   
-  function getCEISeverityAssessment(score) {
-    if (score >= 8001) return "Peak corporate evil - this entity represents a clear and present danger to society and requires immediate dismantling through regulatory action.";
-    if (score >= 6001) return "Systemically destructive corporation with potential criminal liability. Severe regulatory intervention required.";
-    if (score >= 4001) return "Deeply harmful to society. Immediate regulatory oversight and reform measures necessary.";
-    if (score >= 2001) return "Significant corporate malfeasance requiring sustained regulatory pressure and public accountability measures.";
-    return "Minor transgressions that could potentially be addressed through corporate governance reforms and enhanced oversight.";
-  }
-  
-  function getKeyFindings(formData) {
-    const findings = [];
-    
-    if (parseInt(document.getElementById('blood-total').textContent) > 1500) {
-      findings.push("Severe blood legacy with documented deaths and physical harm");
-    }
-    if (parseInt(document.getElementById('suffering-total').textContent) > 1500) {
-      findings.push("Extensive suffering amplification through exploitation and abuse");
-    }
-    if (parseInt(document.getElementById('wealth-total').textContent) > 1200) {
-      findings.push("Significant wealth extraction through predatory business practices");
-    }
-    if (parseInt(document.getElementById('planet-total').textContent) > 1200) {
-      findings.push("Major environmental destruction and climate impact");
-    }
-    if (parseInt(document.getElementById('democracy-total').textContent) > 600) {
-      findings.push("Democratic institutions undermined through corruption and manipulation");
-    }
-    
-    return findings.length > 0 ? findings.join('; ') : "Assessment completed - review dimension scores for detailed analysis.";
-  }
-  
-  // Copy report functionality
-  document.getElementById('copy-report').addEventListener('click', function() {
-    const reportText = document.getElementById('report-content').innerText;
-    navigator.clipboard.writeText(reportText).then(() => {
-      alert('Report copied to clipboard!');
-    });
-  });
-  
-  // Download as JSON functionality
-  document.getElementById('download-report').addEventListener('click', function() {
-    const formData = new FormData(document.getElementById('cei-evaluation-form'));
+  // Save draft functionality
+  document.getElementById('save-request').addEventListener('click', function() {
+    const formData = new FormData(document.getElementById('cei-request-form'));
     const data = {};
     
     for (let [key, value] of formData.entries()) {
       data[key] = value;
     }
     
-    data.cei_total = parseInt(document.getElementById('cei-total').textContent);
-    data.blood_total = parseInt(document.getElementById('blood-total').textContent);
-    data.suffering_total = parseInt(document.getElementById('suffering-total').textContent);
-    data.wealth_total = parseInt(document.getElementById('wealth-total').textContent);
-    data.planet_total = parseInt(document.getElementById('planet-total').textContent);
-    data.democracy_total = parseInt(document.getElementById('democracy-total').textContent);
-    data.assessment_timestamp = new Date().toISOString();
+    localStorage.setItem('cei-request-draft', JSON.stringify(data));
+    alert('Request draft saved locally!');
+  });
+  
+  // Download request functionality
+  document.getElementById('download-request').addEventListener('click', function() {
+    const formData = new FormData(document.getElementById('cei-request-form'));
+    const data = {};
+    
+    for (let [key, value] of formData.entries()) {
+      data[key] = value;
+    }
+    
+    data.total_cost = document.getElementById('total-cost').textContent;
+    data.request_timestamp = new Date().toISOString();
+    data.reference_number = `CEI-${Date.now()}`;
     
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `${data.company_name || 'company'}-cei-assessment.json`;
+    a.download = `${data.company_name || 'company'}-cei-request.json`;
     a.click();
     URL.revokeObjectURL(url);
   });
   
-  // Save draft functionality
-  document.getElementById('save-draft').addEventListener('click', function() {
-    const formData = new FormData(document.getElementById('cei-evaluation-form'));
-    const data = {};
-    
-    for (let [key, value] of formData.entries()) {
-      data[key] = value;
-    }
-    
-    localStorage.setItem('cei-draft', JSON.stringify(data));
-    alert('Draft saved locally!');
-  });
-  
   // Load draft if exists
-  const savedDraft = localStorage.getItem('cei-draft');
+  const savedDraft = localStorage.getItem('cei-request-draft');
   if (savedDraft) {
     const data = JSON.parse(savedDraft);
     for (let [key, value] of Object.entries(data)) {
       const element = document.querySelector(`[name="${key}"]`);
       if (element) {
-        element.value = value;
+        if (element.type === 'checkbox' || element.type === 'radio') {
+          element.checked = element.value === value;
+        } else {
+          element.value = value;
+        }
       }
     }
-    calculateTotals();
+    calculateCost();
   }
+  
+  // Initial cost calculation
+  calculateCost();
 });
 </script>
 
-## How to Use This Evaluation Tool
+## Why Choose Professional Evaluation?
 
-1. **Gather Evidence**: Research the company thoroughly using credible sources
-2. **Score Each Dimension**: Assign points based on documented evidence and impact scale
-3. **Provide Documentation**: Include specific sources and evidence for each score
-4. **Review Totals**: Ensure scores align with the evidence provided
-5. **Generate Report**: Create a comprehensive assessment document
-6. **Submit or Save**: Either submit for publication or save as a draft
+**Expert Research Team**: Our investigators have decades of experience in corporate accountability, investigative journalism, and academic research.
 
-## Scoring Guidelines
+**Legal-Grade Documentation**: All evidence is verified, cited, and documented to standards suitable for legal proceedings and media use.
 
-- **0-100 points**: Minor issues with limited evidence
-- **101-300 points**: Moderate harm with documented incidents
-- **301-400 points**: Significant harm with substantial evidence
-- **401-500 points**: Severe harm with overwhelming evidence and systemic impact
+**Comprehensive Methodology**: We use the same rigorous Corporate Evil Index framework but with professional-grade research and verification.
 
-## Related Tools
+**Confidentiality Options**: Available for sensitive investigations where discretion is required.
 
-- [Evaluate Executive](/evaluate-executive/) - Executive Malevolence Score (EMS)
-- [Evaluate Institution](/evaluate-institution/) - Institutional Corruption Framework (ICF)
-- [Evaluate Product](/evaluate-product/) - Devil's Metrics for harmful products
-- [Metrics Dashboard](/metrics-dashboard/) - View all scoring frameworks
-- [Methodology Documentation](/docs/comprehensive-metrics-methodology/) - Complete framework details
+**Ongoing Updates**: Your evaluation includes updates as new evidence emerges during the coverage period.
+
+## Service Process
+
+1. **Request Submission**: Submit your evaluation request with company details and service preferences
+2. **Proposal & Quote**: Receive detailed project proposal with timeline and methodology
+3. **Contract & Payment**: Sign service agreement and submit payment to begin research
+4. **Investigation Phase**: Our team conducts comprehensive research using proprietary databases and sources
+5. **Draft Review**: Receive draft report for feedback and clarification requests
+6. **Final Report**: Professional assessment report delivered with evidence package
+7. **Presentation**: Optional live presentation of findings (Premium/Enterprise tiers)
+
+## Evidence Standards
+
+All professional evaluations include:
+- **Primary source documentation** from government filings, court records, and regulatory databases
+- **Academic-grade citations** meeting legal and journalistic standards
+- **Verified fact-checking** with multiple independent sources
+- **Expert interviews** with industry specialists and former employees
+- **Financial analysis** using professional accounting and forensic techniques
+
+## Quality Guarantee
+
+- **100% accuracy guarantee** - we stand behind all factual claims with verified evidence
+- **Revision policy** - unlimited revisions during the draft phase
+- **Confidentiality agreement** - all client information protected under attorney-client privilege
+- **Expert testimony** - our researchers available as expert witnesses (Enterprise tier)
+
+## Frequently Asked Questions
+
+**Q: How long does a professional evaluation take?**
+A: Standard assessments typically take 4-6 weeks. Premium service reduces this to 2-3 weeks, and Enterprise service to 1-2 weeks.
+
+**Q: Can the evaluation be used in legal proceedings?**
+A: Yes, our Premium and Enterprise tiers specifically prepare documentation suitable for legal use, including expert witness preparation.
+
+**Q: What if the company disputes the findings?**
+A: All findings are backed by verifiable evidence. We provide full source documentation and will defend our methodology in any professional forum.
+
+**Q: Can I remain anonymous?**
+A: Yes, confidential assessments are available with an additional fee. The final report can be delivered without identifying the requesting party.
+
+**Q: Do you evaluate smaller companies?**
+A: Yes, our methodology scales to companies of all sizes. Pricing may be adjusted for smaller entities with limited public information.
+
+## Contact & Support
+
+For questions about professional evaluation services:
+- **Email**: evaluations@evil1.org
+- **Phone**: 1-800-EVIL-ORG
+- **Secure Portal**: Available after service agreement
+
+---
+
+*Professional Corporate Evil Index evaluations are conducted by evil1.org's certified research team using the standardized CEI methodology. All assessments meet academic and legal documentation standards.*
