@@ -2546,3 +2546,349 @@ shirt-quant:
   content: "Quantitative Analyst Shirt: \"My Models Assume Rational Markets\"\n  \n    Front: \"My Models Assume Rational Markets\"\n    Back: \"Results May Vary When Humans Are Involved\"\n    Left chest: Small π symbol (the mathematical kind)\n\n    \n      \n        \n          Price: $31.99\n          Material: 100% cotton, pre-shrunk\n          Colors: Charcoal gray shirt, white text\n          Sizes: S, M, L, XL, XXL\n        \n      \n    \n\n    For the PhD-wielding financial engineer who creates elegant mathematical models that work perfectly in theoretical universes where people make rational decisions and markets behave logically.\n\n    This shirt acknowledges the beautiful irony of building sophisticated models on assumptions that are demonstrably false, then acting surprised when reality fails to conform to the mathematics.\n\n    Recommended for anyone who's ever had to explain why their 99.9% confidence interval failed to capture a 'once in a millennium' event that happens every few years."
   currency: USD
   stripe_price_id: price_REPLACE_SHIRTQUANT
+
+# Right to Repair Collection - Anti-Corporate Repair Monopoly
+repair-01:
+  title: "Warranty Void Sticker - Warranty Void If You Think"
+  description: "Warning sticker that mocks the practice of voiding warranties for basic curiosity."
+  permalink: "/merchandise/repair-01/"
+  tags:
+  - repair
+  - warranty
+  - satire
+  sku: repair-01
+  price: 5.99
+  type: sticker
+  content: |-
+    Warranty Void If You Think
+
+    Type: Sticker Pack (5 stickers)
+    Price: $5.99
+    Text: "Warranty Void If You Think"
+    Subtext: "Curiosity Not Covered"
+
+    Apply to devices that desperately need your skepticism.
+  currency: USD
+  stripe_price_id: price_REPLACE_REPAIR01
+repair-02:
+  title: "Proprietary Screws T-Shirt - Pentalobe or Die"
+  description: "T-shirt celebrating Apple's innovative approach to preventing repair with exotic screws."
+  permalink: "/merchandise/repair-02/"
+  tags:
+  - repair
+  - apple
+  - screws
+  - satire
+  sku: repair-02
+  price: 29.99
+  type: shirt
+  content: |-
+    Pentalobe or Die
+
+    Type: T-Shirt
+    Price: $29.99
+    Front: "Pentalobe or Die"
+    Back: "Innovation Through Obstruction"
+
+    Celebrates Apple's commitment to making simple repairs impossible.
+  currency: USD
+  stripe_price_id: price_REPLACE_REPAIR02
+repair-03:
+  title: "Serialized Parts Mug - Your Battery Has Trust Issues"
+  description: "Mug about the insanity of parts that won't work unless the manufacturer approves."
+  permalink: "/merchandise/repair-03/"
+  tags:
+  - repair
+  - serialization
+  - parts
+  - satire
+  sku: repair-03
+  price: 19.99
+  type: mug
+  content: |-
+    Your Battery Has Trust Issues
+
+    Type: Mug
+    Price: $19.99
+    Outside: "Your Battery Has Trust Issues"
+    Inside: "It Only Works With Daddy Apple's Permission"
+
+    For morning coffee while contemplating the death of ownership.
+  currency: USD
+  stripe_price_id: price_REPLACE_REPAIR03
+repair-04:
+  title: "Genius Bar Hat - I'm Not Smart Enough to Own Things"
+  description: "Hat satirizing the condescending nature of manufacturer repair monopolies."
+  permalink: "/merchandise/repair-04/"
+  tags:
+  - repair
+  - genius-bar
+  - ownership
+  - satire
+  sku: repair-04
+  price: 24.99
+  type: hat
+  content: |-
+    I'm Not Smart Enough to Own Things
+
+    Type: Hat
+    Price: $24.99
+    Front: "I'm Not Smart Enough to Own Things"
+    Under brim: "Please Fix It For $800"
+
+    Perfect for Genius Bar appointments and existential crises.
+  currency: USD
+  stripe_price_id: price_REPLACE_REPAIR04
+repair-05:
+  title: "Right to Repair Sticker - I Can Fix It (If You Let Me)"
+  description: "Activist sticker supporting the right to repair movement with gentle sarcasm."
+  permalink: "/merchandise/repair-05/"
+  tags:
+  - repair
+  - right-to-repair
+  - activism
+  - satire
+  sku: repair-05
+  price: 5.99
+  type: sticker
+  content: |-
+    I Can Fix It (If You Let Me)
+
+    Type: Sticker
+    Price: $5.99
+    Text: "I Can Fix It (If You Let Me)"
+    Subtext: "Right to Repair = Right to Own"
+
+    Weatherproof defiance for laptops and toolboxes.
+  currency: USD
+  stripe_price_id: price_REPLACE_REPAIR05
+repair-06:
+  title: "Planned Obsolescence T-Shirt - Built to Break"
+  description: "T-shirt exposing the deliberate practice of making products fail after warranty."
+  permalink: "/merchandise/repair-06/"
+  tags:
+  - repair
+  - planned-obsolescence
+  - waste
+  - satire
+  sku: repair-06
+  price: 29.99
+  type: shirt
+  content: |-
+    Built to Break
+
+    Type: T-Shirt
+    Price: $29.99
+    Front: "Built to Break"
+    Back: "Designed to Disappoint"
+
+    Ironically made with quality materials to last decades.
+  currency: USD
+  stripe_price_id: price_REPLACE_REPAIR06
+repair-07:
+  title: "Tractor Liberation Mug - John Deere Can't Stop Me"
+  description: "Mug about farmers fighting for the right to repair their own tractors."
+  permalink: "/merchandise/repair-07/"
+  tags:
+  - repair
+  - john-deere
+  - farmers
+  - satire
+  sku: repair-07
+  price: 19.99
+  type: mug
+  content: |-
+    John Deere Can't Stop Me
+
+    Type: Mug
+    Price: $19.99
+    Outside: "John Deere Can't Stop Me"
+    Inside: "From Fixing My Own Damn Tractor"
+
+    Perfect for morning coffee before unauthorized engine diagnostics.
+  currency: USD
+  stripe_price_id: price_REPLACE_REPAIR07
+repair-08:
+  title: "Glue Instead of Screws Poster - Permanent is the New Modular"
+  description: "Poster mocking the trend of gluing components instead of using removable fasteners."
+  permalink: "/merchandise/repair-08/"
+  tags:
+  - repair
+  - design
+  - adhesive
+  - satire
+  sku: repair-08
+  price: 12.99
+  type: poster
+  content: |-
+    Permanent is the New Modular
+
+    Type: Poster
+    Price: $12.99
+    Header: "Permanent is the New Modular"
+    Footer: "Glue: Because Screws Are For Peasants"
+
+    Hang permanently in your repair shop.
+  currency: USD
+  stripe_price_id: price_REPLACE_REPAIR08
+repair-09:
+  title: "Software Lock Notebook - Hardware That Thinks It's Software"
+  description: "Notebook about the absurdity of software preventing hardware repairs."
+  permalink: "/merchandise/repair-09/"
+  tags:
+  - repair
+  - software-locks
+  - drm
+  - satire
+  sku: repair-09
+  price: 14.99
+  type: notebook
+  content: |-
+    Hardware That Thinks It's Software
+
+    Type: Notebook
+    Price: $14.99
+    Cover: "Hardware That Thinks It's Software"
+    Back: "DRM: Digital Repair Moratorium"
+
+    For documenting the rise of software-locked screwdrivers.
+  currency: USD
+  stripe_price_id: price_REPLACE_REPAIR09
+repair-10:
+  title: "iFixit Sponsor Sticker - Sponsored by Common Sense"
+  description: "Parody sponsor sticker celebrating repair heroes and common sense."
+  permalink: "/merchandise/repair-10/"
+  tags:
+  - repair
+  - ifixit
+  - common-sense
+  - satire
+  sku: repair-10
+  price: 5.99
+  type: sticker
+  content: |-
+    Sponsored by Common Sense
+
+    Type: Sticker
+    Price: $5.99
+    Text: "Sponsored by Common Sense"
+    Subtext: "And iFixit, Obviously"
+
+    Support repair culture with adhesive solidarity.
+  currency: USD
+  stripe_price_id: price_REPLACE_REPAIR10
+repair-11:
+  title: "Tesla Service Center Hat - $2000 to Replace $20 Part"
+  description: "Hat about Tesla's notoriously expensive and restricted repair policies."
+  permalink: "/merchandise/repair-11/"
+  tags:
+  - repair
+  - tesla
+  - expensive
+  - satire
+  sku: repair-11
+  price: 24.99
+  type: hat
+  content: |-
+    $2000 to Replace $20 Part
+
+    Type: Hat
+    Price: $24.99
+    Front: "$2000 to Replace $20 Part"
+    Back: "Tesla Service Excellence"
+
+    Wear while waiting 6 months for an appointment.
+  currency: USD
+  stripe_price_id: price_REPLACE_REPAIR11
+repair-12:
+  title: "Framework Laptop Tote - Modular is Radical"
+  description: "Tote bag celebrating companies that actually design for repairability."
+  permalink: "/merchandise/repair-12/"
+  tags:
+  - repair
+  - framework
+  - modular
+  - positive
+  sku: repair-12
+  price: 16.99
+  type: tote
+  content: |-
+    Modular is Radical
+
+    Type: Tote Bag
+    Price: $16.99
+    Print: "Modular is Radical"
+    Tag: "Framework Laptop Appreciation Society"
+
+    Carry your repairable dreams in style.
+  currency: USD
+  stripe_price_id: price_REPLACE_REPAIR12
+repair-13:
+  title: "Unauthorized Repair Warning T-Shirt - This User Performed Maintenance"
+  description: "T-shirt warning about the 'dangers' of independent thinking and repair."
+  permalink: "/merchandise/repair-13/"
+  tags:
+  - repair
+  - unauthorized
+  - warning
+  - satire
+  sku: repair-13
+  price: 29.99
+  type: shirt
+  content: |-
+    This User Performed Maintenance
+
+    Type: T-Shirt
+    Price: $29.99
+    Front: "⚠️ WARNING ⚠️"
+    Back: "This User Performed Maintenance"
+
+    Side effects may include: competence, self-reliance, and savings.
+  currency: USD
+  stripe_price_id: price_REPLACE_REPAIR13
+repair-14:
+  title: "Disposable Society Mug - Buy New, Throw Away, Repeat"
+  description: "Mug about the environmental cost of anti-repair culture."
+  permalink: "/merchandise/repair-14/"
+  tags:
+  - repair
+  - environment
+  - waste
+  - satire
+  sku: repair-14
+  price: 19.99
+  type: mug
+  content: |-
+    Buy New, Throw Away, Repeat
+
+    Type: Mug
+    Price: $19.99
+    Outside: "Buy New, Throw Away, Repeat"
+    Inside: "The Circle of Corporate Life"
+
+    Ironically reusable for decades of environmental guilt.
+  currency: USD
+  stripe_price_id: price_REPLACE_REPAIR14
+repair-15:
+  title: "DMCA Takedown Sticker - Repair Manuals Are Piracy"
+  description: "Sticker mocking companies that claim repair manuals violate copyright."
+  permalink: "/merchandise/repair-15/"
+  tags:
+  - repair
+  - dmca
+  - copyright
+  - satire
+  sku: repair-15
+  price: 5.99
+  type: sticker
+  content: |-
+    Repair Manuals Are Piracy
+
+    Type: Sticker
+    Price: $5.99
+    Text: "Repair Manuals Are Piracy"
+    Subtext: "According to Corporate Legal"
+
+    Arr, matey! Time to fix something!
+  currency: USD
+  stripe_price_id: price_REPLACE_REPAIR15
