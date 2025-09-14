@@ -89,6 +89,23 @@ permalink: /activities/dlc-dark-patterns/
     %}
   </section>
 
+  <!-- Provocative Language Demo -->
+  <section class="demo-section">
+    <div class="section-header">
+      <h2>🌶️ Provocative Language Subscriptions</h2>
+      <p>Monetizing language intensity and authentic expression</p>
+    </div>
+    
+    <div class="demo-content">
+      <div class="language-example">
+        <h3>Sample Corporate Criticism</h3>
+        <p>See how the same corporate misconduct is described at different subscription levels:</p>
+      </div>
+    </div>
+    
+    {% include widget-provocative-language.html content_type="investigation" %}
+  </section>
+
   <!-- Micro-transaction Everything -->
   <section class="demo-section">
     <div class="section-header">
@@ -97,45 +114,20 @@ permalink: /activities/dlc-dark-patterns/
     </div>
     
     <div class="demo-content">
-      <div class="action-costs">
-        <h3>💰 Action Pricing Menu</h3>
-        <div class="pricing-grid">
-          <div class="action-price">
-            <span class="action">📝 Leave a Comment</span>
-            <span class="cost">$0.99 or 50 gems</span>
-          </div>
-          <div class="action-price">
-            <span class="action">🔖 Bookmark Article</span>
-            <span class="cost">$0.49 or 25 gems</span>
-          </div>
-          <div class="action-price">
-            <span class="action">📧 Email Article</span>
-            <span class="cost">$1.49 or 75 gems</span>
-          </div>
-          <div class="action-price">
-            <span class="action">🖨️ Print Article</span>
-            <span class="cost">$2.99 or 150 gems</span>
-          </div>
-          <div class="action-price">
-            <span class="action">🔗 Create Shareable Link</span>
-            <span class="cost">$0.79 or 40 gems</span>
-          </div>
-          <div class="action-price">
-            <span class="action">🌙 Dark Mode Toggle</span>
-            <span class="cost">$4.99/month</span>
-          </div>
+      <div class="action-demo">
+        <h3>Try These Common Actions</h3>
+        <p><strong>Try any of these actions to see the micro-transaction system in action:</strong></p>
+        <div class="action-buttons">
+          <button class="demo-action-btn comment-btn">💬 Leave Comment</button>
+          <button class="demo-action-btn bookmark-btn">🔖 Bookmark Article</button>
+          <button class="demo-action-btn print-btn">🖨️ Print Article</button>
+          <a href="mailto:?subject=Check this out" class="demo-action-btn">📧 Email Article</a>
         </div>
-        
-        <div class="gem-purchase">
-          <h4>💎 Buy Gems</h4>
-          <div class="gem-options">
-            <button class="gem-btn">100 gems - $4.99</button>
-            <button class="gem-btn popular">500 gems - $19.99 <span class="bonus">+100 bonus!</span></button>
-            <button class="gem-btn">1000 gems - $34.99 <span class="bonus">+300 bonus!</span></button>
-          </div>
-        </div>
+        <p><em>Right-click anywhere to see the context menu paywall!</em></p>
       </div>
     </div>
+    
+    {% include widget-microtransactions.html %}
   </section>
 
   <!-- Addiction Mechanics -->
@@ -431,6 +423,57 @@ permalink: /activities/dlc-dark-patterns/
 .article-preview em {
   color: #d63031;
   font-weight: bold;
+}
+
+.action-demo {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 12px;
+  border: 2px solid #6c5ce7;
+  margin-bottom: 20px;
+}
+
+.action-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.demo-action-btn {
+  background: linear-gradient(135deg, #74b9ff, #0984e3);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.demo-action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(116, 185, 255, 0.3);
+  color: white;
+  text-decoration: none;
+}
+
+.language-example {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 4px solid #fd79a8;
+  margin-bottom: 20px;
+}
+
+.language-example h3 {
+  margin: 0 0 15px 0;
+  color: #2d3436;
 }
 
 .action-costs {
