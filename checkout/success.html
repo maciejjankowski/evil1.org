@@ -1,0 +1,718 @@
+---
+layout: default
+title: "Purchase Successful - Access Your Premium Content"
+description: "Your premium content is ready for immediate access"
+---
+
+<div class="success-container">
+  <!-- Success Header -->
+  <div class="success-header">
+    <h1>🎉 Purchase Successful!</h1>
+    <p class="success-message">Your premium content is being delivered to <span id="user-email"></span></p>
+    <div class="delivery-status">
+      <div class="status-item">
+        <span class="status-icon">✅</span>
+        <span>Payment Processed</span>
+      </div>
+      <div class="status-item">
+        <span class="status-icon">✅</span>
+        <span>Content Unlocked</span>
+      </div>
+      <div class="status-item">
+        <span class="status-icon">✅</span>
+        <span>Bonus Discount Applied</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Immediate Access -->
+  <div class="access-section">
+    <h2>📖 Access Your Content Now</h2>
+    <div class="content-access">
+      <a href="/articles/200-sarcastic-corporate-quotes-ultimate-chutzpah-collection/" class="access-btn">
+        🚀 Read Your Premium Article Now
+        <span class="access-subtext">All 200 quotes + bonus materials included</span>
+      </a>
+    </div>
+    
+    <!-- Immediate Psychological Hook for Next Purchase -->
+    <div class="next-opportunity" id="next-opportunity">
+      <div class="opportunity-header">
+        <h3>⚡ SMART BUYER ALERT: Next Article 90% OFF!</h3>
+        <div class="timer-badge">
+          <span id="bonus-timer">04:47</span> remaining for this exclusive price
+        </div>
+      </div>
+      
+      <div class="next-article-preview">
+        <h4>🔥 "Corporate Espionage: How Companies Steal Secrets for Profit"</h4>
+        <div class="preview-highlights">
+          <p><strong>Exclusive content reveals:</strong></p>
+          <ul>
+            <li>🕵️ How Amazon infiltrates competitor board meetings</li>
+            <li>💻 Corporate hacking techniques that saved companies millions</li>
+            <li>📱 The secret surveillance tools used on employees</li>
+            <li>💰 How industrial espionage generates $400B annually</li>
+          </ul>
+        </div>
+        
+        <div class="pricing-urgency">
+          <div class="price-display">
+            <span class="crossed-price">$10.00</span>
+            <span class="urgent-price">$1.00</span>
+            <span class="urgency-note">90% OFF - Because you just purchased!</span>
+          </div>
+          
+          <button class="urgent-buy-btn" onclick="buyNextArticle()">
+            🎯 YES! Add This Article for $1.00
+            <span class="btn-note">Apply my 10% bonus discount on future purchases</span>
+          </button>
+          
+          <div class="scarcity-note">
+            ⚠️ Only available to recent buyers - <span id="recent-buyers-count">23</span> spots left at this price
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Compound Psychology: Build Buying Momentum -->
+  <div class="momentum-section" id="momentum-buildup" style="display: none;">
+    <h3>🔥 You're On Fire! Smart Buyers Are Stacking Discounts...</h3>
+    <div class="momentum-content">
+      <div class="achievement-badge">
+        <span class="badge-icon">🏆</span>
+        <span class="badge-text">Smart Buyer Status: ACTIVATED</span>
+      </div>
+      
+      <div class="discount-stacking">
+        <h4>💎 Your Exclusive Discount Stack:</h4>
+        <div class="discount-item">
+          <span>✅ 10% Next Article Bonus (From first purchase)</span>
+        </div>
+        <div class="discount-item">
+          <span>✅ 15% Multi-Buy Bonus (Active for next 5 minutes)</span>
+        </div>
+        <div class="discount-item">
+          <span>✅ 25% Total Compound Discount!</span>
+        </div>
+      </div>
+      
+      <div class="final-offer">
+        <h4>🎯 FINAL OFFER: Premium Article Bundle</h4>
+        <p><strong>Get 3 more explosive articles for just $7.50</strong> (reg. $30.00)</p>
+        <ul class="bundle-articles">
+          <li>🏦 "Banking Evil: How JPMorgan Profits from Chaos"</li>
+          <li>💊 "Pfizer's Price Gouging Empire"</li>
+          <li>🤖 "Meta's Algorithmic Addiction Machine"</li>
+        </ul>
+        
+        <div class="bundle-pricing">
+          <span class="bundle-regular">Regular: $30.00</span>
+          <span class="bundle-discount">Your Price: $7.50</span>
+          <span class="bundle-savings">Save $22.50 (75% OFF)</span>
+        </div>
+        
+        <button class="bundle-btn" onclick="buyBundle()">
+          🚀 Complete My Collection - $7.50
+          <span class="bundle-note">Lock in 25% discount forever</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Social Proof & FOMO -->
+  <div class="social-proof-section">
+    <h3>🔥 Other Smart Buyers Also Purchased:</h3>
+    <div class="buyer-activity" id="buyer-activity">
+      <div class="activity-item">
+        <span class="buyer-name">Sarah K.</span>
+        <span class="buyer-action">added Corporate Espionage article</span>
+        <span class="time-ago">2 min ago</span>
+      </div>
+      <div class="activity-item">
+        <span class="buyer-name">Mike R.</span>
+        <span class="buyer-action">purchased full bundle</span>
+        <span class="time-ago">4 min ago</span>
+      </div>
+      <div class="activity-item">
+        <span class="buyer-name">Jennifer L.</span>
+        <span class="buyer-action">stacked all discounts</span>
+        <span class="time-ago">6 min ago</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Exit Intent Capture -->
+  <div id="exit-success-modal" class="exit-modal hidden">
+    <div class="exit-content">
+      <h3>⚠️ Don't Leave Money on the Table!</h3>
+      <p>Your 25% compound discount expires when you leave this page!</p>
+      <p><strong>Last chance:</strong> Get the Corporate Espionage article for just <span class="highlight">$0.75</span> (was $10.00)</p>
+      <div class="final-countdown">
+        Time left: <span id="final-timer">00:15</span>
+      </div>
+      <button class="final-cta" onclick="finalPurchase()">Take Final Deal - $0.75</button>
+      <button class="exit-close" onclick="closeExitSuccess()">No thanks, I'll pay full price later</button>
+    </div>
+  </div>
+</div>
+
+<style>
+.success-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.success-header {
+  text-align: center;
+  background: linear-gradient(45deg, #28a745, #20c997);
+  color: white;
+  padding: 40px 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.success-header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.success-message {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+#user-email {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.delivery-status {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+}
+
+.status-icon {
+  font-size: 1.2em;
+}
+
+.access-section {
+  margin-bottom: 40px;
+}
+
+.access-btn {
+  display: block;
+  background: linear-gradient(45deg, #007bff, #0056b3);
+  color: white;
+  text-decoration: none;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+}
+
+.access-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,123,255,0.3);
+}
+
+.access-subtext {
+  display: block;
+  font-size: 0.8em;
+  font-weight: normal;
+  margin-top: 5px;
+}
+
+.next-opportunity {
+  background: #fff3cd;
+  border: 3px solid #ffc107;
+  border-radius: 10px;
+  padding: 25px;
+  margin-top: 30px;
+  animation: opportunity-pulse 2s infinite;
+}
+
+@keyframes opportunity-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+.opportunity-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.opportunity-header h3 {
+  color: #dc3545;
+  margin-bottom: 10px;
+}
+
+.timer-badge {
+  background: #dc3545;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+#bonus-timer {
+  font-family: 'Courier New', monospace;
+  font-size: 1.1em;
+}
+
+.next-article-preview h4 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.preview-highlights ul {
+  color: #495057;
+  margin: 10px 0;
+}
+
+.preview-highlights li {
+  margin: 8px 0;
+}
+
+.pricing-urgency {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.price-display {
+  margin-bottom: 20px;
+}
+
+.crossed-price {
+  text-decoration: line-through;
+  color: #6c757d;
+  font-size: 1.2em;
+  margin-right: 15px;
+}
+
+.urgent-price {
+  color: #28a745;
+  font-size: 2em;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+.urgency-note {
+  color: #dc3545;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.urgent-buy-btn {
+  background: linear-gradient(45deg, #dc3545, #c82333);
+  color: white;
+  border: none;
+  padding: 18px 30px;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 15px 0;
+  transition: all 0.3s ease;
+  animation: urgent-pulse 1.5s infinite alternate;
+}
+
+@keyframes urgent-pulse {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.05); }
+}
+
+.urgent-buy-btn:hover {
+  background: linear-gradient(45deg, #c82333, #a71e2a);
+}
+
+.btn-note {
+  display: block;
+  font-size: 0.8em;
+  font-weight: normal;
+  margin-top: 5px;
+}
+
+.scarcity-note {
+  color: #856404;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+#recent-buyers-count {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.momentum-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 30px;
+  border-radius: 10px;
+  margin: 30px 0;
+}
+
+.achievement-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: rgba(255,255,255,0.2);
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.badge-icon {
+  font-size: 1.5em;
+}
+
+.discount-stacking {
+  margin: 20px 0;
+}
+
+.discount-item {
+  background: rgba(255,255,255,0.1);
+  padding: 10px;
+  border-radius: 5px;
+  margin: 8px 0;
+}
+
+.final-offer {
+  background: rgba(255,255,255,0.15);
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.bundle-articles {
+  text-align: left;
+  margin: 15px 0;
+}
+
+.bundle-articles li {
+  margin: 8px 0;
+}
+
+.bundle-pricing {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.bundle-regular {
+  text-decoration: line-through;
+  opacity: 0.8;
+  margin-right: 15px;
+}
+
+.bundle-discount {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+.bundle-savings {
+  color: #ffc107;
+  font-weight: bold;
+}
+
+.bundle-btn {
+  background: #ffc107;
+  color: #212529;
+  border: none;
+  padding: 18px 30px;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.bundle-note {
+  display: block;
+  font-size: 0.8em;
+  margin-top: 5px;
+}
+
+.social-proof-section {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 8px;
+  margin: 30px 0;
+}
+
+.buyer-activity {
+  margin-top: 15px;
+}
+
+.activity-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.buyer-name {
+  font-weight: bold;
+  color: #495057;
+}
+
+.buyer-action {
+  color: #28a745;
+  flex-grow: 1;
+  margin-left: 15px;
+}
+
+.time-ago {
+  color: #6c757d;
+  font-size: 0.9em;
+}
+
+.exit-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.exit-modal.hidden {
+  display: none;
+}
+
+.exit-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 450px;
+  width: 90%;
+}
+
+.highlight {
+  color: #28a745;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.final-countdown {
+  font-size: 1.3em;
+  color: #dc3545;
+  font-weight: bold;
+  margin: 15px 0;
+  font-family: 'Courier New', monospace;
+}
+
+.final-cta {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.exit-close {
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+@media (max-width: 768px) {
+  .delivery-status {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .success-header h1 {
+    font-size: 2em;
+  }
+  
+  .activity-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+  }
+}
+</style>
+
+<script>
+// Get URL parameters
+const urlParams = new URLSearchParams(window.location.search);
+const userEmail = urlParams.get('email') || 'your email';
+const product = urlParams.get('product');
+
+// Set user email
+document.getElementById('user-email').textContent = userEmail;
+
+// Bonus timer countdown
+let bonusTime = 4 * 60 + 47; // 4:47
+function updateBonusTimer() {
+  const minutes = Math.floor(bonusTime / 60);
+  const seconds = bonusTime % 60;
+  document.getElementById('bonus-timer').textContent = 
+    `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+  
+  bonusTime--;
+  if (bonusTime <= 0) {
+    // Hide the opportunity
+    document.getElementById('next-opportunity').style.display = 'none';
+  }
+}
+setInterval(updateBonusTimer, 1000);
+
+// Show momentum section after 30 seconds
+setTimeout(() => {
+  document.getElementById('momentum-buildup').style.display = 'block';
+  document.getElementById('momentum-buildup').scrollIntoView({ behavior: 'smooth' });
+}, 30000);
+
+// Simulate recent buyers count decreasing
+let buyersCount = 23;
+function updateBuyersCount() {
+  if (Math.random() < 0.2) { // 20% chance every 8 seconds
+    buyersCount = Math.max(1, buyersCount - 1);
+    document.getElementById('recent-buyers-count').textContent = buyersCount;
+  }
+}
+setInterval(updateBuyersCount, 8000);
+
+// Purchase functions
+function buyNextArticle() {
+  gtag('event', 'upsell_click', {
+    'event_category': 'success_page_upsell',
+    'event_label': 'corporate_espionage_article',
+    'value': 1.00
+  });
+  
+  // Show momentum section immediately
+  document.getElementById('momentum-buildup').style.display = 'block';
+  document.getElementById('momentum-buildup').scrollIntoView({ behavior: 'smooth' });
+  
+  // Simulate adding to cart
+  alert('🎯 Added to cart! Complete purchase below for your stacked discounts...');
+}
+
+function buyBundle() {
+  gtag('event', 'bundle_purchase', {
+    'event_category': 'success_page_upsell',
+    'event_label': 'three_article_bundle',
+    'value': 7.50
+  });
+  
+  alert('🚀 Bundle added! Redirecting to checkout...');
+  window.location.href = '/checkout?item=bundle&price=7.50&discount=compound';
+}
+
+function finalPurchase() {
+  gtag('event', 'final_exit_purchase', {
+    'event_category': 'exit_intent_success',
+    'event_label': 'last_chance_offer',
+    'value': 0.75
+  });
+  
+  alert('💰 Final deal accepted! Processing...');
+  window.location.href = '/checkout?item=final_deal&price=0.75&final=true';
+}
+
+// Exit intent on success page
+let successExitShown = false;
+document.addEventListener('mouseleave', function(e) {
+  if (e.clientY <= 0 && !successExitShown && bonusTime > 0) {
+    successExitShown = true;
+    document.getElementById('exit-success-modal').classList.remove('hidden');
+    startFinalCountdown();
+  }
+});
+
+function startFinalCountdown() {
+  let finalTime = 15;
+  const finalInterval = setInterval(() => {
+    document.getElementById('final-timer').textContent = 
+      `00:${finalTime.toString().padStart(2, '0')}`;
+    finalTime--;
+    
+    if (finalTime < 0) {
+      clearInterval(finalInterval);
+      closeExitSuccess();
+    }
+  }, 1000);
+}
+
+function closeExitSuccess() {
+  document.getElementById('exit-success-modal').classList.add('hidden');
+}
+
+// Simulate buyer activity
+const successBuyers = [
+  'Alex M.', 'Maria G.', 'David H.', 'Lisa P.', 'Robert K.',
+  'Emma W.', 'James L.', 'Sophia R.', 'Michael C.'
+];
+
+const buyerActions = [
+  'added Corporate Espionage article',
+  'purchased full bundle',
+  'stacked all discounts',
+  'completed compound purchase',
+  'activated smart buyer status'
+];
+
+function addBuyerActivity() {
+  const activity = document.getElementById('buyer-activity');
+  const buyer = successBuyers[Math.floor(Math.random() * successBuyers.length)];
+  const action = buyerActions[Math.floor(Math.random() * buyerActions.length)];
+  const timeAgo = Math.floor(Math.random() * 8) + 1;
+  
+  const activityItem = document.createElement('div');
+  activityItem.className = 'activity-item';
+  activityItem.innerHTML = `
+    <span class="buyer-name">${buyer}</span>
+    <span class="buyer-action">${action}</span>
+    <span class="time-ago">${timeAgo} min ago</span>
+  `;
+  
+  activity.insertBefore(activityItem, activity.firstChild);
+  
+  // Remove old items
+  while (activity.children.length > 5) {
+    activity.removeChild(activity.lastChild);
+  }
+}
+setInterval(addBuyerActivity, 15000);
+
+// Track page view
+gtag('event', 'page_view', {
+  'page_title': 'Purchase Success',
+  'page_location': window.location.href,
+  'custom_parameter': 'success_page_visit'
+});
+</script>
