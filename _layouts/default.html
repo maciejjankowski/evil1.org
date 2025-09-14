@@ -8,6 +8,11 @@
     
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/topnav.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/progress-tracker.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/notification-system.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/manipulative-cart.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/social-pressure-system.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/email-automation-system.css' | relative_url }}">
     {% if page.layout == 'awards-ceremony' %}<link rel="stylesheet" href="{{ '/assets/css/awards.css' | relative_url }}">{% endif %}
 
     <!-- HTMX for enhanced interactivity -->
@@ -64,8 +69,24 @@
         </div>
     </div>
     <div class="early-container">
+        <!-- Progress Tracker (Farming Game Style) -->
+        {% include progress-tracker.html %}
+        
+        <!-- Social Pressure & FOMO System -->
+        {% include social-pressure-system.html %}
+        
         {{ content }}
     </div>
+    
+    <!-- Notification System -->
+    {% include notification-system.html %}
+    
+    <!-- Email Automation System -->
+    {% include email-automation-system.html %}
+    
+    <!-- Manipulative Shopping Cart -->
+    {% include manipulative-cart.html %}
+    
     {% include footer.html %}
 
             <!-- Service Worker Registration for PWA -->

@@ -1,0 +1,481 @@
+<!-- Aggressive Notification System - Push Notifications & Email Automation -->
+<div id="notification-system" class="notification-system">
+    <!-- Permission Request Modal -->
+    <div id="notification-permission-modal" class="notification-modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>🚨 Don't Miss Critical Corporate Crimes!</h3>
+                <div class="urgency-indicator">URGENT</div>
+            </div>
+            <div class="modal-body">
+                <p><strong>Corporate criminals are counting on your ignorance.</strong></p>
+                <p>Get instant alerts when:</p>
+                <ul>
+                    <li>🏢 Major corporate scandals break</li>
+                    <li>💰 Your invested time is about to expire</li>
+                    <li>🔥 Your streak is in danger</li>
+                    <li>👥 Friends join the corporate resistance</li>
+                    <li>🎯 Exclusive investigation opportunities arise</li>
+                </ul>
+                <div class="fear-inducing-stats">
+                    <div class="stat">
+                        <span class="stat-number">127</span>
+                        <span class="stat-label">Corporate crimes happened while you were away yesterday</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">$2.3B</span>
+                        <span class="stat-label">Stolen from consumers while notifications were off</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="enable-notifications" class="enable-button">
+                    🛡️ Protect Me From Corporate Evil
+                </button>
+                <button id="maybe-later" class="maybe-button">
+                    Maybe Later (Corporations Win)
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Notification Toast Container -->
+    <div id="notification-container" class="notification-container"></div>
+    
+    <!-- Streak Danger Alert -->
+    <div id="streak-danger" class="streak-danger-alert" style="display: none;">
+        <div class="alert-content">
+            <div class="danger-icon">⚠️</div>
+            <div class="danger-text">
+                <strong>STREAK IN DANGER!</strong><br>
+                Your <span id="streak-count">15</span>-day corporate evil detection streak expires in <span id="streak-timer">2:47:33</span>
+            </div>
+            <button id="save-streak" class="save-streak-button">Save My Streak</button>
+        </div>
+    </div>
+</div>
+
+<script>
+// Aggressive Notification System
+class NotificationSystem {
+    constructor() {
+        this.permissionGranted = localStorage.getItem('evil1-notifications') === 'granted';
+        this.emailCaptured = localStorage.getItem('evil1-email') !== null;
+        this.settings = this.loadSettings();
+        this.setupEventListeners();
+        this.initializeNotifications();
+        
+        // Start aggressive engagement loops
+        this.startStreakMonitoring();
+        this.startEngagementTracking();
+        this.scheduleNotifications();
+    }
+    
+    loadSettings() {
+        const saved = localStorage.getItem('evil1-notification-settings');
+        return saved ? JSON.parse(saved) : {
+            breakingNews: true,
+            streakReminders: true,
+            socialUpdates: true,
+            learningReminders: true,
+            purchasePrompts: true,
+            abandonmentRecovery: true,
+            weeklyReport: true,
+            friendActivity: true,
+            lastEngagement: Date.now(),
+            notificationsSent: 0,
+            totalEngagementTime: 0
+        };
+    }
+    
+    saveSettings() {
+        localStorage.setItem('evil1-notification-settings', JSON.stringify(this.settings));
+    }
+    
+    setupEventListeners() {
+        // Request permissions aggressively
+        setTimeout(() => this.requestPermissions(), 30000); // After 30 seconds
+        
+        // Show permission modal on exit intent
+        document.addEventListener('mouseout', (e) => {
+            if (e.clientY <= 0 && !this.permissionGranted) {
+                this.showPermissionModal();
+            }
+        });
+        
+        // Track engagement
+        let lastActivity = Date.now();
+        ['click', 'scroll', 'keypress', 'mousemove'].forEach(event => {
+            document.addEventListener(event, () => {
+                lastActivity = Date.now();
+                this.settings.lastEngagement = lastActivity;
+                this.saveSettings();
+            });
+        });
+        
+        // Monitor for inactivity
+        setInterval(() => {
+            const inactiveTime = Date.now() - lastActivity;
+            if (inactiveTime > 300000 && this.permissionGranted) { // 5 minutes
+                this.sendReEngagementNotification();
+            }
+        }, 60000);
+    }
+    
+    initializeNotifications() {
+        if ('Notification' in window) {
+            if (Notification.permission === 'granted') {
+                this.permissionGranted = true;
+                localStorage.setItem('evil1-notifications', 'granted');
+            } else if (Notification.permission === 'default') {
+                // Show permission request modal after user shows interest
+                setTimeout(() => this.showPermissionModal(), 45000);
+            }
+        }
+        
+        // Setup service worker for background notifications
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js');
+        }
+    }
+    
+    showPermissionModal() {
+        if (this.permissionGranted) return;
+        
+        document.getElementById('notification-permission-modal').style.display = 'block';
+        
+        // Add fear-inducing countdown
+        let countdown = 30;
+        const urgencyEl = document.querySelector('.urgency-indicator');
+        const countdownInterval = setInterval(() => {
+            countdown--;
+            urgencyEl.textContent = `URGENT (${countdown}s)`;
+            if (countdown <= 0) {
+                clearInterval(countdownInterval);
+                urgencyEl.textContent = 'OPPORTUNITY EXPIRED';
+                urgencyEl.style.background = '#e74c3c';
+            }
+        }, 1000);
+        
+        // Analytics
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'notification_permission_shown', {
+                'trigger': 'exit_intent',
+                'time_on_site': Date.now() - this.settings.lastEngagement
+            });
+        }
+    }
+    
+    async requestPermissions() {
+        if (!('Notification' in window)) return;
+        
+        try {
+            const permission = await Notification.requestPermission();
+            if (permission === 'granted') {
+                this.permissionGranted = true;
+                localStorage.setItem('evil1-notifications', 'granted');
+                this.showWelcomeNotification();
+                this.hidePermissionModal();
+            }
+        } catch (error) {
+            console.log('Notification permission error:', error);
+        }
+    }
+    
+    hidePermissionModal() {
+        document.getElementById('notification-permission-modal').style.display = 'none';
+    }
+    
+    showWelcomeNotification() {
+        this.sendNotification(
+            '🎉 Corporate Crime Fighter Activated!',
+            'You\'ll now receive instant alerts about corporate evil. Your first mission: read 3 articles today!',
+            '/articles/'
+        );
+    }
+    
+    sendNotification(title, body, url = null, urgent = false) {
+        if (!this.permissionGranted) return;
+        
+        const options = {
+            body: body,
+            icon: '/assets/images/icon-192.png',
+            badge: '/assets/images/badge-72.png',
+            tag: 'evil1-notification',
+            renotify: urgent,
+            requireInteraction: urgent,
+            data: { url: url },
+            actions: url ? [
+                { action: 'view', title: '👀 Investigate Now' },
+                { action: 'dismiss', title: '❌ Dismiss' }
+            ] : undefined
+        };
+        
+        const notification = new Notification(title, options);
+        
+        notification.onclick = () => {
+            if (url) {
+                window.open(url, '_blank');
+            }
+            notification.close();
+        };
+        
+        // Track notification engagement
+        this.settings.notificationsSent++;
+        this.saveSettings();
+        
+        // Analytics
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'notification_sent', {
+                'notification_type': urgent ? 'urgent' : 'normal',
+                'has_action': !!url
+            });
+        }
+    }
+    
+    startStreakMonitoring() {
+        // Check streak status every minute
+        setInterval(() => {
+            const progressData = JSON.parse(localStorage.getItem('evil1-progress') || '{}');
+            if (progressData.streakDays > 0) {
+                const hoursSinceLastActivity = (Date.now() - this.settings.lastEngagement) / (1000 * 60 * 60);
+                
+                // Show warning if inactive for 20+ hours
+                if (hoursSinceLastActivity > 20) {
+                    this.showStreakDanger(progressData.streakDays);
+                    
+                    // Send notification if enabled
+                    if (this.permissionGranted && hoursSinceLastActivity > 22) {
+                        this.sendNotification(
+                            `🔥 Your ${progressData.streakDays}-Day Streak is Dying!`,
+                            'Corporate criminals are celebrating your absence. Don\'t let them win!',
+                            '/',
+                            true
+                        );
+                    }
+                }
+            }
+        }, 60000);
+    }
+    
+    showStreakDanger(streakDays) {
+        const alert = document.getElementById('streak-danger');
+        document.getElementById('streak-count').textContent = streakDays;
+        
+        // Calculate time until streak expires (24 hours from last activity)
+        const expiryTime = this.settings.lastEngagement + (24 * 60 * 60 * 1000);
+        const timeLeft = Math.max(0, expiryTime - Date.now());
+        
+        if (timeLeft > 0) {
+            alert.style.display = 'block';
+            this.updateStreakTimer(timeLeft);
+        }
+    }
+    
+    updateStreakTimer(timeLeft) {
+        const hours = Math.floor(timeLeft / (1000 * 60 * 60));
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+        
+        document.getElementById('streak-timer').textContent = 
+            `${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        
+        setTimeout(() => {
+            if (timeLeft > 1000) {
+                this.updateStreakTimer(timeLeft - 1000);
+            }
+        }, 1000);
+    }
+    
+    startEngagementTracking() {
+        // Track page views
+        this.settings.totalEngagementTime++;
+        this.saveSettings();
+        
+        // Send re-engagement notifications based on behavior patterns
+        const notifications = [
+            {
+                delay: 60000 * 30, // 30 minutes
+                condition: () => !this.hasRecentActivity(30),
+                message: {
+                    title: '📰 Breaking: Corporate Scandal Developing',
+                    body: 'Major corruption story breaking now. Your expertise needed!',
+                    url: '/articles/'
+                }
+            },
+            {
+                delay: 60000 * 60 * 2, // 2 hours
+                condition: () => !this.hasRecentActivity(120),
+                message: {
+                    title: '🚨 Your Corporate Knowledge is Slipping',
+                    body: 'You\'ve missed 3 major corporate crimes. Catch up now!',
+                    url: '/halloffame/'
+                }
+            },
+            {
+                delay: 60000 * 60 * 6, // 6 hours
+                condition: () => !this.hasRecentActivity(360),
+                message: {
+                    title: '💸 Corporations Made $2.3M While You Were Away',
+                    body: 'They\'re counting on your absence. Fight back!',
+                    url: '/'
+                }
+            }
+        ];
+        
+        notifications.forEach(notif => {
+            setTimeout(() => {
+                if (this.permissionGranted && notif.condition()) {
+                    this.sendNotification(
+                        notif.message.title,
+                        notif.message.body,
+                        notif.message.url,
+                        true
+                    );
+                }
+            }, notif.delay);
+        });
+    }
+    
+    hasRecentActivity(minutes) {
+        return (Date.now() - this.settings.lastEngagement) < (minutes * 60 * 1000);
+    }
+    
+    scheduleNotifications() {
+        // Daily streak reminder (if no activity for 18+ hours)
+        setInterval(() => {
+            if (this.permissionGranted && !this.hasRecentActivity(18 * 60)) {
+                this.sendNotification(
+                    '🔥 Don\'t Break Your Streak!',
+                    'Quick daily check-in: What corporate evil did you expose today?',
+                    '/'
+                );
+            }
+        }, 60000 * 60 * 6); // Check every 6 hours
+        
+        // Weekly FOMO message
+        if (new Date().getDay() === 0 && this.permissionGranted) { // Sunday
+            this.sendNotification(
+                '📊 Weekly Corporate Evil Report',
+                'Your friends exposed 23 corporate crimes this week. How many did you find?',
+                '/halloffame/'
+            );
+        }
+    }
+    
+    sendReEngagementNotification() {
+        const messages = [
+            {
+                title: '🏢 Corporate Crime in Progress',
+                body: 'A major scandal is developing. Your analysis needed!',
+                url: '/articles/'
+            },
+            {
+                title: '👥 Your Network is Active',
+                body: '5 friends just joined the corporate resistance. Join them!',
+                url: '/network/'
+            },
+            {
+                title: '🎯 Mission Available',
+                body: 'New corporate investigation opportunity. Limited time!',
+                url: '/submit/'
+            },
+            {
+                title: '🛒 Cart Abandoned',
+                body: 'Your anti-corporate merchandise is waiting. Complete your resistance!',
+                url: '/merchandise/'
+            }
+        ];
+        
+        const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+        this.sendNotification(randomMessage.title, randomMessage.body, randomMessage.url);
+    }
+    
+    showToastNotification(message, type = 'info', duration = 5000) {
+        const container = document.getElementById('notification-container');
+        const toast = document.createElement('div');
+        toast.className = `notification-toast ${type}`;
+        toast.innerHTML = `
+            <div class="toast-content">
+                <div class="toast-icon">${this.getToastIcon(type)}</div>
+                <div class="toast-message">${message}</div>
+                <button class="toast-close" onclick="this.parentElement.parentElement.remove()">×</button>
+            </div>
+        `;
+        
+        container.appendChild(toast);
+        
+        // Auto-remove after duration
+        setTimeout(() => {
+            if (toast.parentElement) {
+                toast.remove();
+            }
+        }, duration);
+        
+        return toast;
+    }
+    
+    getToastIcon(type) {
+        const icons = {
+            'info': 'ℹ️',
+            'success': '✅',
+            'warning': '⚠️',
+            'error': '❌',
+            'urgent': '🚨'
+        };
+        return icons[type] || icons.info;
+    }
+}
+
+// Initialize notification system
+document.addEventListener('DOMContentLoaded', function() {
+    window.notificationSystem = new NotificationSystem();
+    
+    // Setup modal button handlers
+    document.getElementById('enable-notifications')?.addEventListener('click', () => {
+        window.notificationSystem.requestPermissions();
+    });
+    
+    document.getElementById('maybe-later')?.addEventListener('click', () => {
+        window.notificationSystem.hidePermissionModal();
+        // Show again in 10 minutes with more urgency
+        setTimeout(() => {
+            if (!window.notificationSystem.permissionGranted) {
+                window.notificationSystem.showPermissionModal();
+            }
+        }, 600000);
+    });
+    
+    document.getElementById('save-streak')?.addEventListener('click', () => {
+        window.location.href = '/articles/';
+        document.getElementById('streak-danger').style.display = 'none';
+    });
+});
+
+// Email capture automation (for users without notification permissions)
+class EmailCaptureSystem {
+    constructor() {
+        this.setupEmailCapture();
+    }
+    
+    setupEmailCapture() {
+        // Show email capture modal if no notifications and no email
+        const hasEmail = localStorage.getItem('evil1-email');
+        const hasNotifications = localStorage.getItem('evil1-notifications') === 'granted';
+        
+        if (!hasEmail && !hasNotifications) {
+            setTimeout(() => this.showEmailModal(), 60000); // After 1 minute
+        }
+    }
+    
+    showEmailModal() {
+        // Create and show email capture modal with urgency
+        // This would trigger email marketing automation sequences
+    }
+}
+
+// Initialize email capture
+document.addEventListener('DOMContentLoaded', function() {
+    window.emailCaptureSystem = new EmailCaptureSystem();
+});
+</script>

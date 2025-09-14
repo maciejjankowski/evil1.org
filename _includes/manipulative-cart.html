@@ -1,0 +1,720 @@
+<!-- Shopping Cart with Aggressive Psychological Manipulation -->
+<div id="manipulative-cart" class="manipulative-cart" style="display: none;">
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" onclick="closeCart()"></div>
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>🛒 Your Anti-Corporate Arsenal</h3>
+            <button class="cart-close" onclick="closeCart()">×</button>
+            <div class="cart-stats">
+                <div class="resistance-power">
+                    Resistance Power: <span id="resistance-level">0</span>%
+                </div>
+                <div class="corporate-impact">
+                    Estimated Corporate Damage: <span id="damage-amount">$0</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cart-content">
+            <!-- Urgency Timer -->
+            <div class="urgency-banner">
+                <div class="urgency-icon">⚡</div>
+                <div class="urgency-text">
+                    <strong>LIMITED TIME: Cart expires in <span id="cart-timer">14:59</span></strong>
+                    <div class="urgency-subtitle">Prices increase by 23% at midnight!</div>
+                </div>
+            </div>
+            
+            <!-- Social Proof Manipulation -->
+            <div class="social-proof-bar">
+                <div class="proof-item">
+                    <span class="proof-icon">👥</span>
+                    <span class="proof-text"><span id="viewing-count">147</span> people viewing these items</span>
+                </div>
+                <div class="proof-item">
+                    <span class="proof-icon">🔥</span>
+                    <span class="proof-text"><span id="purchase-count">23</span> purchased in last hour</span>
+                </div>
+            </div>
+            
+            <!-- Cart Items -->
+            <div id="cart-items" class="cart-items">
+                <!-- Items will be populated dynamically -->
+            </div>
+            
+            <!-- Abandoned Cart Guilt Trip -->
+            <div id="abandonment-warning" class="abandonment-warning" style="display: none;">
+                <div class="warning-icon">😢</div>
+                <div class="warning-text">
+                    <strong>Wait! Don't let corporations win!</strong>
+                    <p>By leaving this cart, you're giving up on:</p>
+                    <ul>
+                        <li>🛡️ Protection from corporate manipulation</li>
+                        <li>🎯 Insider knowledge of evil tactics</li>
+                        <li>👥 Joining the resistance community</li>
+                        <li>💪 Becoming a certified corp-fighter</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Scarcity Manipulation -->
+            <div class="scarcity-alerts">
+                <div class="scarcity-item" data-product="evil-guide">
+                    <span class="scarcity-icon">⚠️</span>
+                    Only <span class="stock-count">3</span> "Corporate Evil Guide" left!
+                </div>
+                <div class="scarcity-item" data-product="resistance-shirt">
+                    <span class="scarcity-icon">🔥</span>
+                    "Resist Capitalism" shirt - Last <span class="stock-count">2</span> in your size!
+                </div>
+            </div>
+            
+            <!-- Cart Totals with Manipulation -->
+            <div class="cart-totals">
+                <div class="subtotal-row">
+                    <span>Subtotal:</span>
+                    <span id="subtotal">$0.00</span>
+                </div>
+                <div class="savings-row">
+                    <span>You're saving:</span>
+                    <span id="savings" class="savings-amount">$47.50</span>
+                </div>
+                <div class="shipping-manipulation">
+                    <div class="shipping-progress">
+                        <div class="progress-text">Add <span id="free-shipping-needed">$15.00</span> for FREE shipping!</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="shipping-progress" style="width: 73%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="total-row">
+                    <span class="total-label">Total Resistance Investment:</span>
+                    <span id="total" class="total-amount">$0.00</span>
+                </div>
+            </div>
+            
+            <!-- Upsell Manipulation -->
+            <div class="upsell-section">
+                <h4>🎯 Complete Your Corporate Destruction Kit</h4>
+                <div class="upsell-items">
+                    <div class="upsell-item" data-price="29.99">
+                        <input type="checkbox" id="upsell-1" class="upsell-checkbox">
+                        <label for="upsell-1">
+                            <div class="upsell-content">
+                                <div class="upsell-title">💼 Executive Evil Decoder ($29.99)</div>
+                                <div class="upsell-benefit">Translate corporate speak into honest language</div>
+                                <div class="upsell-urgency">Limited edition - 87% off normal price!</div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="upsell-item" data-price="19.99">
+                        <input type="checkbox" id="upsell-2" class="upsell-checkbox">
+                        <label for="upsell-2">
+                            <div class="upsell-content">
+                                <div class="upsell-title">📱 Daily Corporate Crime Alerts ($19.99)</div>
+                                <div class="upsell-benefit">Never miss a scandal - 365 days of updates</div>
+                                <div class="upsell-urgency">Most popular add-on this month!</div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Checkout Buttons with Psychology -->
+            <div class="checkout-section">
+                <button id="checkout-btn" class="checkout-button" onclick="proceedToCheckout()">
+                    💪 Join the Resistance Now - $<span id="checkout-total">0.00</span>
+                </button>
+                <div class="checkout-benefits">
+                    ✅ Instant access to corporate secrets<br>
+                    ✅ Exclusive resistance community<br>
+                    ✅ 30-day money-back guarantee<br>
+                    ✅ Free shipping on this order
+                </div>
+                
+                <!-- Alternative Actions -->
+                <div class="alternative-actions">
+                    <button class="save-later-btn" onclick="saveForLater()">
+                        💾 Save for Later (Corporations love this)
+                    </button>
+                    <button class="wishlist-btn" onclick="addToWishlist()">
+                        ❤️ Add to Wishlist (They're counting on this)
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Exit Intent Popup -->
+        <div id="cart-exit-popup" class="exit-popup" style="display: none;">
+            <div class="exit-content">
+                <div class="exit-header">
+                    <h3>🚨 WAIT! Special Offer!</h3>
+                    <div class="exit-timer">This offer expires in <span id="offer-timer">4:59</span></div>
+                </div>
+                <div class="exit-body">
+                    <p><strong>Don't let the corporations win!</strong></p>
+                    <p>Take an additional <span class="discount-amount">25% OFF</span> your entire order right now!</p>
+                    <div class="exit-calculation">
+                        <div class="calc-row">
+                            <span>Your cart total:</span>
+                            <span id="exit-original">$47.99</span>
+                        </div>
+                        <div class="calc-row discount">
+                            <span>Emergency discount (25%):</span>
+                            <span id="exit-discount">-$12.00</span>
+                        </div>
+                        <div class="calc-row total">
+                            <span><strong>You pay only:</strong></span>
+                            <span id="exit-final"><strong>$35.99</strong></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="exit-footer">
+                    <button class="exit-accept" onclick="applyExitDiscount()">
+                        🎯 Yes! Apply 25% Discount
+                    </button>
+                    <button class="exit-decline" onclick="closeExitPopup()">
+                        No thanks, I prefer paying more
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Cart Icon/Trigger -->
+<div id="cart-trigger" class="cart-trigger" onclick="openCart()">
+    <div class="cart-icon">🛒</div>
+    <div class="cart-badge" id="cart-count">0</div>
+    <div class="cart-urgency" id="cart-urgency-ping" style="display: none;">!</div>
+</div>
+
+<script>
+// Manipulative Shopping Cart System
+class ManipulativeCart {
+    constructor() {
+        this.items = this.loadCart();
+        this.settings = this.loadSettings();
+        this.timers = {};
+        this.socialProofCounters = {};
+        this.setupEventListeners();
+        this.startManipulationTimers();
+        this.updateDisplay();
+        this.trackBehavior();
+    }
+    
+    loadCart() {
+        const saved = localStorage.getItem('evil1-cart');
+        return saved ? JSON.parse(saved) : [];
+    }
+    
+    saveCart() {
+        localStorage.setItem('evil1-cart', JSON.stringify(this.items));
+    }
+    
+    loadSettings() {
+        const saved = localStorage.getItem('evil1-cart-settings');
+        return saved ? JSON.parse(saved) : {
+            cartCreated: Date.now(),
+            viewCount: 0,
+            abandonmentCount: 0,
+            exitIntentTriggered: false,
+            urgencyShown: false,
+            lastInteraction: Date.now()
+        };
+    }
+    
+    saveSettings() {
+        localStorage.setItem('evil1-cart-settings', JSON.stringify(this.settings));
+    }
+    
+    setupEventListeners() {
+        // Exit intent detection
+        document.addEventListener('mouseout', (e) => {
+            if (e.clientY <= 0 && this.items.length > 0 && !this.settings.exitIntentTriggered) {
+                this.showExitIntent();
+            }
+        });
+        
+        // Inactivity monitoring
+        ['mousemove', 'click', 'scroll', 'keypress'].forEach(event => {
+            document.addEventListener(event, () => {
+                this.settings.lastInteraction = Date.now();
+                this.saveSettings();
+            });
+        });
+        
+        // Tab visibility for urgency manipulation
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden && this.items.length > 0) {
+                this.triggerUrgencyNotification();
+            }
+        });
+        
+        // Upsell checkbox listeners
+        document.querySelectorAll('.upsell-checkbox').forEach(checkbox => {
+            checkbox.addEventListener('change', () => this.updateTotals());
+        });
+    }
+    
+    addItem(product) {
+        const existingItem = this.items.find(item => item.id === product.id);
+        
+        if (existingItem) {
+            existingItem.quantity += 1;
+        } else {
+            this.items.push({
+                id: product.id,
+                name: product.name,
+                price: product.price,
+                image: product.image,
+                quantity: 1,
+                addedAt: Date.now()
+            });
+        }
+        
+        this.saveCart();
+        this.updateDisplay();
+        this.showAddedToCartManipulation(product);
+        this.triggerSocialProof();
+        
+        // Analytics
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'add_to_cart', {
+                'currency': 'USD',
+                'value': product.price,
+                'items': [product]
+            });
+        }
+    }
+    
+    showAddedToCartManipulation(product) {
+        // Show cart with manipulation messaging
+        this.openCart();
+        
+        // Trigger scarcity alert
+        setTimeout(() => {
+            this.showScarcityAlert(product.id);
+        }, 2000);
+        
+        // Show social proof
+        this.incrementSocialProof();
+        
+        // Show urgency after 30 seconds
+        setTimeout(() => {
+            if (!this.settings.urgencyShown) {
+                this.showUrgencyBanner();
+                this.settings.urgencyShown = true;
+                this.saveSettings();
+            }
+        }, 30000);
+    }
+    
+    showScarcityAlert(productId) {
+        const alert = document.querySelector(`[data-product="${productId}"]`);
+        if (alert) {
+            alert.style.display = 'block';
+            alert.style.animation = 'scarcityPulse 1s ease';
+            
+            // Decrease stock count over time
+            const stockEl = alert.querySelector('.stock-count');
+            let stock = parseInt(stockEl.textContent);
+            const decreaseStock = setInterval(() => {
+                if (stock > 1) {
+                    stock--;
+                    stockEl.textContent = stock;
+                    if (stock <= 2) {
+                        alert.style.background = 'linear-gradient(135deg, #e74c3c, #c0392b)';
+                    }
+                } else {
+                    clearInterval(decreaseStock);
+                }
+            }, 45000); // Decrease every 45 seconds
+        }
+    }
+    
+    incrementSocialProof() {
+        // Manipulate viewing count
+        const viewingEl = document.getElementById('viewing-count');
+        let count = parseInt(viewingEl.textContent);
+        count += Math.floor(Math.random() * 5) + 1;
+        viewingEl.textContent = count;
+        
+        // Manipulate purchase count
+        const purchaseEl = document.getElementById('purchase-count');
+        let purchases = parseInt(purchaseEl.textContent);
+        purchases += Math.floor(Math.random() * 3) + 1;
+        purchaseEl.textContent = purchases;
+    }
+    
+    startManipulationTimers() {
+        // Cart expiry timer
+        this.startCartTimer();
+        
+        // Social proof updates
+        setInterval(() => {
+            this.incrementSocialProof();
+        }, 60000); // Every minute
+        
+        // Abandonment detection
+        setInterval(() => {
+            const timeSinceInteraction = Date.now() - this.settings.lastInteraction;
+            if (timeSinceInteraction > 180000 && this.items.length > 0) { // 3 minutes
+                this.showAbandonmentWarning();
+            }
+        }, 30000);
+    }
+    
+    startCartTimer() {
+        let timeLeft = 15 * 60; // 15 minutes
+        const timerEl = document.getElementById('cart-timer');
+        
+        const updateTimer = () => {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            timerEl.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+            
+            // Add urgency effects as time runs out
+            if (timeLeft <= 300) { // Last 5 minutes
+                timerEl.parentElement.style.background = 'linear-gradient(135deg, #e74c3c, #c0392b)';
+                timerEl.parentElement.style.animation = 'urgencyPulse 1s infinite alternate';
+            }
+            
+            if (timeLeft <= 0) {
+                this.handleCartExpiry();
+                return;
+            }
+            
+            timeLeft--;
+            setTimeout(updateTimer, 1000);
+        };
+        
+        updateTimer();
+    }
+    
+    handleCartExpiry() {
+        // Show dramatic expiry message
+        const banner = document.querySelector('.urgency-banner');
+        banner.innerHTML = `
+            <div class="expiry-message">
+                <div class="expiry-icon">💥</div>
+                <div class="expiry-text">
+                    <strong>CART EXPIRED!</strong><br>
+                    <span>Prices increased by 23%. Corporate victory achieved.</span>
+                </div>
+                <button onclick="window.manipulativeCart.extendCart()" class="extend-button">
+                    🔄 Restore Original Prices
+                </button>
+            </div>
+        `;
+        banner.style.background = 'linear-gradient(135deg, #8e44ad, #9b59b6)';
+    }
+    
+    extendCart() {
+        // "Extend" cart with fake generosity
+        this.settings.urgencyShown = false;
+        this.saveSettings();
+        this.startCartTimer();
+        
+        // Show fake discount as reward
+        this.showExtensionReward();
+    }
+    
+    showExtensionReward() {
+        const modal = document.createElement('div');
+        modal.className = 'extension-reward-modal';
+        modal.innerHTML = `
+            <div class="reward-content">
+                <h3>🎉 Special Extension Bonus!</h3>
+                <p>Since you're serious about fighting corporate evil, take an extra <strong>15% OFF</strong>!</p>
+                <button onclick="this.parentElement.parentElement.remove()" class="claim-button">
+                    Claim Bonus Discount
+                </button>
+            </div>
+        `;
+        document.body.appendChild(modal);
+    }
+    
+    showAbandonmentWarning() {
+        const warning = document.getElementById('abandonment-warning');
+        warning.style.display = 'block';
+        
+        this.settings.abandonmentCount++;
+        this.saveSettings();
+        
+        // Analytics
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'cart_abandonment_warning', {
+                'abandonment_count': this.settings.abandonmentCount,
+                'cart_value': this.getTotal()
+            });
+        }
+    }
+    
+    showExitIntent() {
+        const popup = document.getElementById('cart-exit-popup');
+        popup.style.display = 'block';
+        
+        this.settings.exitIntentTriggered = true;
+        this.saveSettings();
+        
+        // Start exit offer timer
+        this.startExitTimer();
+        
+        // Analytics
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'exit_intent_cart', {
+                'cart_value': this.getTotal(),
+                'items_count': this.items.length
+            });
+        }
+    }
+    
+    startExitTimer() {
+        let timeLeft = 5 * 60; // 5 minutes
+        const timerEl = document.getElementById('offer-timer');
+        
+        const updateTimer = () => {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            timerEl.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+            
+            if (timeLeft <= 0) {
+                this.closeExitPopup();
+                return;
+            }
+            
+            timeLeft--;
+            setTimeout(updateTimer, 1000);
+        };
+        
+        updateTimer();
+    }
+    
+    updateDisplay() {
+        this.updateCartCount();
+        this.updateCartItems();
+        this.updateTotals();
+        this.updateResistanceLevel();
+    }
+    
+    updateCartCount() {
+        const count = this.items.reduce((sum, item) => sum + item.quantity, 0);
+        document.getElementById('cart-count').textContent = count;
+        
+        // Show urgency ping for non-empty cart
+        const urgencyPing = document.getElementById('cart-urgency-ping');
+        urgencyPing.style.display = count > 0 ? 'block' : 'none';
+    }
+    
+    updateCartItems() {
+        const container = document.getElementById('cart-items');
+        container.innerHTML = this.items.map(item => `
+            <div class="cart-item" data-id="${item.id}">
+                <div class="item-image">
+                    <img src="${item.image}" alt="${item.name}">
+                </div>
+                <div class="item-details">
+                    <div class="item-name">${item.name}</div>
+                    <div class="item-price">$${item.price.toFixed(2)}</div>
+                    <div class="item-impact">Corporate Damage: +$${(item.price * 10).toFixed(0)}</div>
+                </div>
+                <div class="item-controls">
+                    <button onclick="window.manipulativeCart.updateQuantity('${item.id}', ${item.quantity - 1})">-</button>
+                    <span class="quantity">${item.quantity}</span>
+                    <button onclick="window.manipulativeCart.updateQuantity('${item.id}', ${item.quantity + 1})">+</button>
+                </div>
+                <button class="remove-item" onclick="window.manipulativeCart.removeItem('${item.id}')">×</button>
+            </div>
+        `).join('');
+    }
+    
+    updateTotals() {
+        const subtotal = this.items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+        const upsellTotal = this.getUpsellTotal();
+        const total = subtotal + upsellTotal;
+        
+        document.getElementById('subtotal').textContent = `$${subtotal.toFixed(2)}`;
+        document.getElementById('total').textContent = `$${total.toFixed(2)}`;
+        document.getElementById('checkout-total').textContent = total.toFixed(2);
+        
+        // Update shipping progress
+        this.updateShippingProgress(total);
+        
+        // Update fake savings
+        const fakeSavings = total * 0.3; // Claim 30% savings
+        document.getElementById('savings').textContent = `$${fakeSavings.toFixed(2)}`;
+    }
+    
+    updateShippingProgress(total) {
+        const freeShippingThreshold = 75;
+        const needed = Math.max(0, freeShippingThreshold - total);
+        const progress = Math.min(100, (total / freeShippingThreshold) * 100);
+        
+        document.getElementById('free-shipping-needed').textContent = `$${needed.toFixed(2)}`;
+        document.getElementById('shipping-progress').style.width = `${progress}%`;
+        
+        if (progress >= 100) {
+            document.querySelector('.shipping-manipulation').innerHTML = `
+                <div class="shipping-achieved">
+                    🎉 FREE SHIPPING UNLOCKED! You saved $12.99!
+                </div>
+            `;
+        }
+    }
+    
+    updateResistanceLevel() {
+        const total = this.getTotal();
+        const level = Math.min(100, Math.floor(total * 2)); // Arbitrary calculation
+        document.getElementById('resistance-level').textContent = level;
+        
+        const damage = total * 50; // Fake corporate damage calculation
+        document.getElementById('damage-amount').textContent = `$${damage.toFixed(0)}`;
+    }
+    
+    getUpsellTotal() {
+        return Array.from(document.querySelectorAll('.upsell-checkbox:checked'))
+            .reduce((sum, checkbox) => {
+                const price = parseFloat(checkbox.closest('.upsell-item').dataset.price);
+                return sum + price;
+            }, 0);
+    }
+    
+    getTotal() {
+        const subtotal = this.items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+        return subtotal + this.getUpsellTotal();
+    }
+    
+    triggerUrgencyNotification() {
+        if (!this.settings.urgencyShown && typeof window.notificationSystem !== 'undefined') {
+            window.notificationSystem.showToastNotification(
+                '⏰ Your cart is expiring! Complete purchase to secure these prices.',
+                'urgent',
+                8000
+            );
+        }
+    }
+    
+    trackBehavior() {
+        // Track cart interaction patterns for manipulation optimization
+        this.settings.viewCount++;
+        this.saveSettings();
+    }
+    
+    // Public methods for UI interaction
+    openCart() {
+        document.getElementById('manipulative-cart').style.display = 'block';
+        this.trackBehavior();
+    }
+    
+    closeCart() {
+        document.getElementById('manipulative-cart').style.display = 'none';
+    }
+    
+    updateQuantity(id, newQuantity) {
+        if (newQuantity <= 0) {
+            this.removeItem(id);
+            return;
+        }
+        
+        const item = this.items.find(item => item.id === id);
+        if (item) {
+            item.quantity = newQuantity;
+            this.saveCart();
+            this.updateDisplay();
+        }
+    }
+    
+    removeItem(id) {
+        this.items = this.items.filter(item => item.id !== id);
+        this.saveCart();
+        this.updateDisplay();
+        
+        if (this.items.length === 0) {
+            this.showEmptyCartManipulation();
+        }
+    }
+    
+    showEmptyCartManipulation() {
+        const container = document.getElementById('cart-items');
+        container.innerHTML = `
+            <div class="empty-cart-manipulation">
+                <div class="empty-icon">😢</div>
+                <h3>Your resistance is weakening!</h3>
+                <p>Without these tools, how will you fight corporate evil?</p>
+                <button onclick="window.location.href='/merchandise/'" class="refill-cart-btn">
+                    🛒 Rebuild Your Arsenal
+                </button>
+            </div>
+        `;
+    }
+    
+    closeExitPopup() {
+        document.getElementById('cart-exit-popup').style.display = 'none';
+    }
+    
+    applyExitDiscount() {
+        // Apply fake 25% discount
+        this.closeExitPopup();
+        
+        // Show success message
+        if (typeof window.notificationSystem !== 'undefined') {
+            window.notificationSystem.showToastNotification(
+                '🎉 Emergency 25% discount applied! Checkout now before it expires.',
+                'success'
+            );
+        }
+        
+        // Update totals with discount
+        this.updateTotals();
+    }
+}
+
+// Global functions for cart interaction
+function openCart() {
+    window.manipulativeCart.openCart();
+}
+
+function closeCart() {
+    window.manipulativeCart.closeCart();
+}
+
+function proceedToCheckout() {
+    // Analytics before redirect
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'begin_checkout', {
+            'currency': 'USD',
+            'value': window.manipulativeCart.getTotal(),
+            'items': window.manipulativeCart.items
+        });
+    }
+    
+    window.location.href = '/checkout/';
+}
+
+function saveForLater() {
+    // Guilt trip for saving
+    if (typeof window.notificationSystem !== 'undefined') {
+        window.notificationSystem.showToastNotification(
+            '💔 Your cart will expire soon. Corporations are counting on your procrastination.',
+            'warning'
+        );
+    }
+}
+
+function addToWishlist() {
+    // More guilt for wishlist
+    if (typeof window.notificationSystem !== 'undefined') {
+        window.notificationSystem.showToastNotification(
+            '😈 Wishlists are where corporate resistance goes to die. Take action now!',
+            'warning'
+        );
+    }
+}
+
+// Initialize cart system
+document.addEventListener('DOMContentLoaded', function() {
+    window.manipulativeCart = new ManipulativeCart();
+});
+</script>

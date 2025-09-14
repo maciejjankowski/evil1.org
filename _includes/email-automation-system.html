@@ -1,0 +1,571 @@
+<!-- Email Automation System - Aggressive Drip Campaigns -->
+<div id="email-automation-system" class="email-automation-system" style="display: none;">
+    <!-- Email Capture Modal with Urgency -->
+    <div id="email-capture-modal" class="email-modal">
+        <div class="email-modal-content">
+            <div class="modal-header">
+                <h3>🚨 URGENT: Corporate Crimes Happening Right Now</h3>
+                <div class="urgency-ticker">
+                    Breaking scandals in real-time: <span id="scandal-counter">47</span> new crimes today
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="fear-stats">
+                    <div class="fear-stat">
+                        <span class="fear-number">$2.3B</span>
+                        <span class="fear-label">stolen from consumers while you read this</span>
+                    </div>
+                    <div class="fear-stat">
+                        <span class="fear-number">156</span>
+                        <span class="fear-label">corporate crimes covered up today</span>
+                    </div>
+                </div>
+                <p><strong>Don't let them get away with it!</strong></p>
+                <p>Get instant alerts about corporate crimes, insider investigations, and exclusive resistance intel.</p>
+                
+                <form id="email-capture-form" class="email-form">
+                    <div class="input-group">
+                        <input type="email" id="email-input" placeholder="Your email address" required>
+                        <button type="submit" class="capture-button">
+                            🛡️ Join the Resistance
+                        </button>
+                    </div>
+                    <div class="email-benefits">
+                        ✅ Breaking scandal alerts<br>
+                        ✅ Exclusive insider investigations<br>
+                        ✅ Corporate crime fighting tactics<br>
+                        ✅ VIP access to leaked documents
+                    </div>
+                </form>
+                
+                <div class="social-proof-emails">
+                    <div class="proof-avatars">
+                        <div class="avatar">👤</div>
+                        <div class="avatar">👩</div>
+                        <div class="avatar">👨</div>
+                        <div class="avatar">👤</div>
+                        <div class="avatar">👩</div>
+                    </div>
+                    <p><strong>2,847 corporate crime fighters</strong> joined today</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="decline-button" onclick="declineEmail()">
+                    No thanks, I prefer corporate ignorance
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Email Sequences Configuration -->
+    <div id="email-sequences" style="display: none;">
+        <!-- Welcome Sequence -->
+        <div class="sequence" data-name="welcome">
+            <div class="email" data-delay="0">
+                <div class="subject">🔥 Welcome to the Corporate Crime Resistance</div>
+                <div class="content">Your first mission: Expose Amazon's tax evasion schemes</div>
+            </div>
+            <div class="email" data-delay="24">
+                <div class="subject">⚠️ URGENT: Pfizer price manipulation exposed</div>
+                <div class="content">Breaking investigation needs your attention immediately</div>
+            </div>
+            <div class="email" data-delay="72">
+                <div class="subject">💰 Your resistance arsenal is incomplete</div>
+                <div class="content">Complete your corporate fighting toolkit - 48hr flash sale</div>
+            </div>
+        </div>
+        
+        <!-- Abandonment Sequence -->
+        <div class="sequence" data-name="cart-abandonment">
+            <div class="email" data-delay="1">
+                <div class="subject">😢 Your anti-corporate weapons are waiting...</div>
+                <div class="content">Complete your resistance order before corporations win</div>
+            </div>
+            <div class="email" data-delay="24">
+                <div class="subject">🚨 Last chance: Your cart expires in 2 hours</div>
+                <div class="content">Don't let corporate evil triumph - finish your order</div>
+            </div>
+            <div class="email" data-delay="168">
+                <div class="subject">💔 We miss you, corporate crime fighter</div>
+                <div class="content">Your 25% "come back and fight" discount inside</div>
+            </div>
+        </div>
+        
+        <!-- Re-engagement Sequence -->
+        <div class="sequence" data-name="re-engagement">
+            <div class="email" data-delay="168">
+                <div class="subject">🔥 Your streak is broken - corporate evil is winning</div>
+                <div class="content">127 new corporate crimes while you were away</div>
+            </div>
+            <div class="email" data-delay="336">
+                <div class="subject">😱 Your friends are ahead of you in the resistance</div>
+                <div class="content">Sarah exposed 23 corporate crimes this week. How many did you find?</div>
+            </div>
+            <div class="email" data-delay="720">
+                <div class="subject">💸 Corporations made $47M from your absence</div>
+                <div class="content">Final attempt: Rejoin the corporate crime resistance</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// Email Automation System with Aggressive Manipulation
+class EmailAutomationSystem {
+    constructor() {
+        this.settings = this.loadSettings();
+        this.sequences = this.loadSequences();
+        this.setupEmailCapture();
+        this.monitorUserBehavior();
+        this.startAutomationEngine();
+    }
+    
+    loadSettings() {
+        const saved = localStorage.getItem('evil1-email-automation');
+        return saved ? JSON.parse(saved) : {
+            emailCaptured: false,
+            emailAddress: null,
+            subscriptionDate: null,
+            lastEmailSent: null,
+            emailsOpened: 0,
+            emailsClicked: 0,
+            sequences: {
+                welcome: { active: false, step: 0 },
+                abandonment: { active: false, step: 0 },
+                reengagement: { active: false, step: 0 }
+            },
+            triggers: {
+                exitIntent: 0,
+                timeOnSite: 0,
+                pageViews: 0,
+                scrollDepth: 0
+            },
+            personalityProfile: null,
+            engagementScore: 0
+        };
+    }
+    
+    saveSettings() {
+        localStorage.setItem('evil1-email-automation', JSON.stringify(this.settings));
+    }
+    
+    loadSequences() {
+        return {
+            welcome: [
+                {
+                    delay: 0, // Immediate
+                    subject: "🔥 Welcome to the Corporate Crime Resistance",
+                    content: "Your first mission awaits...",
+                    cta: "Start Fighting Corporate Evil",
+                    link: "/articles/"
+                },
+                {
+                    delay: 24, // 24 hours
+                    subject: "⚠️ URGENT: Major corporate scandal developing",
+                    content: "Breaking investigation needs your expertise...",
+                    cta: "Investigate Now",
+                    link: "/articles/?utm_source=email&utm_campaign=welcome-2"
+                },
+                {
+                    delay: 72, // 3 days
+                    subject: "💰 Your resistance arsenal is incomplete",
+                    content: "48-hour flash sale on corporate fighting tools...",
+                    cta: "Complete Your Arsenal",
+                    link: "/merchandise/?utm_source=email&utm_campaign=welcome-3"
+                }
+            ],
+            abandonment: [
+                {
+                    delay: 1, // 1 hour
+                    subject: "😢 Your anti-corporate weapons are waiting...",
+                    content: "Don't let the corporations win - complete your order",
+                    cta: "Finish My Order",
+                    link: "/checkout/"
+                },
+                {
+                    delay: 24, // 24 hours
+                    subject: "🚨 LAST CHANCE: Cart expires in 2 hours",
+                    content: "Your resistance tools will be gone forever...",
+                    cta: "Save My Cart",
+                    link: "/checkout/?urgency=true"
+                },
+                {
+                    delay: 168, // 1 week
+                    subject: "💔 We miss you, corporate crime fighter",
+                    content: "25% discount to rejoin the resistance",
+                    cta: "Claim 25% Discount",
+                    link: "/merchandise/?discount=COMEBACK25"
+                }
+            ],
+            reengagement: [
+                {
+                    delay: 168, // 1 week of inactivity
+                    subject: "🔥 Your streak is broken - evil is winning",
+                    content: "127 new corporate crimes discovered while you were away",
+                    cta: "Catch Up on Crimes",
+                    link: "/articles/?utm_source=reengagement"
+                },
+                {
+                    delay: 336, // 2 weeks
+                    subject: "😱 Your friends are beating you",
+                    content: "Sarah exposed 23 corporate crimes this week. Catch up!",
+                    cta: "Beat Your Friends",
+                    link: "/halloffame/?competitive=true"
+                },
+                {
+                    delay: 720, // 1 month
+                    subject: "💸 Corporations made $47M from your absence",
+                    content: "This is our final attempt to save you from corporate manipulation",
+                    cta: "Final Chance - Rejoin",
+                    link: "/?last-chance=true"
+                }
+            ]
+        };
+    }
+    
+    setupEmailCapture() {
+        // Show email modal based on behavior triggers
+        this.setupTriggers();
+        
+        // Form submission handler
+        const form = document.getElementById('email-capture-form');
+        if (form) {
+            form.addEventListener('submit', (e) => this.handleEmailSubmission(e));
+        }
+    }
+    
+    setupTriggers() {
+        // Exit intent trigger
+        document.addEventListener('mouseout', (e) => {
+            if (e.clientY <= 0 && !this.settings.emailCaptured) {
+                this.settings.triggers.exitIntent++;
+                this.saveSettings();
+                
+                if (this.settings.triggers.exitIntent >= 2) {
+                    this.showEmailCapture('exit-intent');
+                }
+            }
+        });
+        
+        // Time on site trigger
+        let timeOnSite = 0;
+        setInterval(() => {
+            timeOnSite += 30;
+            this.settings.triggers.timeOnSite = timeOnSite;
+            
+            if (timeOnSite >= 120 && !this.settings.emailCaptured) { // 2 minutes
+                this.showEmailCapture('time-threshold');
+            }
+        }, 30000);
+        
+        // Scroll depth trigger
+        window.addEventListener('scroll', () => {
+            const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+            this.settings.triggers.scrollDepth = Math.max(this.settings.triggers.scrollDepth, scrollPercent);
+            
+            if (scrollPercent > 60 && !this.settings.emailCaptured) {
+                this.showEmailCapture('scroll-engagement');
+            }
+        });
+        
+        // Page view trigger
+        this.settings.triggers.pageViews++;
+        this.saveSettings();
+        
+        if (this.settings.triggers.pageViews >= 3 && !this.settings.emailCaptured) {
+            setTimeout(() => this.showEmailCapture('multiple-pages'), 10000);
+        }
+    }
+    
+    showEmailCapture(trigger) {
+        if (this.settings.emailCaptured) return;
+        
+        const modal = document.getElementById('email-capture-modal');
+        modal.style.display = 'block';
+        
+        // Update scandal counter with random increment
+        const counter = document.getElementById('scandal-counter');
+        const currentCount = parseInt(counter.textContent) + Math.floor(Math.random() * 5) + 1;
+        counter.textContent = currentCount;
+        
+        // Track trigger analytics
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'email_capture_shown', {
+                'trigger': trigger,
+                'page_views': this.settings.triggers.pageViews,
+                'time_on_site': this.settings.triggers.timeOnSite
+            });
+        }
+    }
+    
+    handleEmailSubmission(e) {
+        e.preventDefault();
+        
+        const email = document.getElementById('email-input').value;
+        this.settings.emailCaptured = true;
+        this.settings.emailAddress = email;
+        this.settings.subscriptionDate = Date.now();
+        this.saveSettings();
+        
+        // Hide modal
+        document.getElementById('email-capture-modal').style.display = 'none';
+        
+        // Start welcome sequence
+        this.startSequence('welcome');
+        
+        // Show success notification
+        if (typeof window.notificationSystem !== 'undefined') {
+            window.notificationSystem.showToastNotification(
+                '🎉 Welcome to the resistance! Check your email for your first mission.',
+                'success'
+            );
+        }
+        
+        // Analytics
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'email_captured', {
+                'method': 'modal_form',
+                'time_to_capture': this.settings.triggers.timeOnSite
+            });
+        }
+        
+        // Simulate email sending (in real implementation, this would call backend API)
+        this.simulateEmailSending(email, 'welcome', 0);
+    }
+    
+    startSequence(sequenceName) {
+        this.settings.sequences[sequenceName] = {
+            active: true,
+            step: 0,
+            startedAt: Date.now()
+        };
+        this.saveSettings();
+        
+        // Schedule emails in sequence
+        this.scheduleSequenceEmails(sequenceName);
+    }
+    
+    scheduleSequenceEmails(sequenceName) {
+        const sequence = this.sequences[sequenceName];
+        const settings = this.settings.sequences[sequenceName];
+        
+        sequence.forEach((email, index) => {
+            setTimeout(() => {
+                if (settings.active && settings.step === index) {
+                    this.sendEmail(sequenceName, index, email);
+                    this.settings.sequences[sequenceName].step++;
+                    this.saveSettings();
+                }
+            }, email.delay * 60 * 60 * 1000); // Convert hours to milliseconds
+        });
+    }
+    
+    sendEmail(sequence, step, emailData) {
+        // In a real implementation, this would call your email service API
+        console.log(`Sending email: ${emailData.subject} to ${this.settings.emailAddress}`);
+        
+        // Simulate email tracking
+        this.trackEmailEvent('sent', sequence, step);
+        
+        // Show notification to simulate email received
+        if (typeof window.notificationSystem !== 'undefined') {
+            window.notificationSystem.showToastNotification(
+                `📧 Email sent: ${emailData.subject}`,
+                'info',
+                3000
+            );
+        }
+        
+        // Update last email sent time
+        this.settings.lastEmailSent = Date.now();
+        this.saveSettings();
+    }
+    
+    trackEmailEvent(eventType, sequence, step) {
+        // Track email metrics
+        if (eventType === 'sent') {
+            // Email sent
+        } else if (eventType === 'opened') {
+            this.settings.emailsOpened++;
+        } else if (eventType === 'clicked') {
+            this.settings.emailsClicked++;
+        }
+        
+        this.saveSettings();
+        
+        // Analytics
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'email_' + eventType, {
+                'sequence': sequence,
+                'step': step,
+                'email_address': this.settings.emailAddress
+            });
+        }
+    }
+    
+    monitorUserBehavior() {
+        // Monitor for cart abandonment
+        if (typeof window.manipulativeCart !== 'undefined') {
+            const originalAddItem = window.manipulativeCart.addItem.bind(window.manipulativeCart);
+            window.manipulativeCart.addItem = (...args) => {
+                originalAddItem(...args);
+                this.setupCartAbandonmentTracking();
+            };
+        }
+        
+        // Monitor for re-engagement needs
+        const lastActivity = localStorage.getItem('evil1-last-activity');
+        if (lastActivity) {
+            const daysSinceActivity = (Date.now() - parseInt(lastActivity)) / (1000 * 60 * 60 * 24);
+            if (daysSinceActivity >= 7 && this.settings.emailCaptured) {
+                this.startSequence('reengagement');
+            }
+        }
+        
+        // Update last activity
+        ['click', 'scroll', 'keypress', 'mousemove'].forEach(event => {
+            document.addEventListener(event, () => {
+                localStorage.setItem('evil1-last-activity', Date.now().toString());
+            });
+        });
+    }
+    
+    setupCartAbandonmentTracking() {
+        // Start abandonment sequence if cart has items but no purchase after 1 hour
+        setTimeout(() => {
+            const cartItems = JSON.parse(localStorage.getItem('evil1-cart') || '[]');
+            if (cartItems.length > 0 && this.settings.emailCaptured) {
+                // Check if purchase was completed
+                const purchaseCompleted = localStorage.getItem('evil1-purchase-completed');
+                if (!purchaseCompleted) {
+                    this.startSequence('abandonment');
+                }
+            }
+        }, 60 * 60 * 1000); // 1 hour
+    }
+    
+    startAutomationEngine() {
+        // Personalization engine
+        this.buildPersonalityProfile();
+        
+        // A/B testing for email optimization
+        this.optimizeEmailTiming();
+        
+        // Engagement scoring
+        this.calculateEngagementScore();
+    }
+    
+    buildPersonalityProfile() {
+        // Analyze user behavior to create psychological profile
+        const profile = {
+            impulsive: this.settings.triggers.exitIntent > 2,
+            analytical: this.settings.triggers.scrollDepth > 80,
+            social: this.settings.triggers.pageViews > 5,
+            fearDriven: this.settings.triggers.timeOnSite < 60,
+            bargainHunter: document.querySelectorAll('[href*="discount"]').length > 0
+        };
+        
+        this.settings.personalityProfile = profile;
+        this.saveSettings();
+        
+        // Customize email sequences based on profile
+        this.customizeSequences(profile);
+    }
+    
+    customizeSequences(profile) {
+        // Adjust email content and timing based on personality
+        if (profile.impulsive) {
+            // Send emails faster, use more urgency
+            this.sequences.welcome.forEach(email => {
+                email.delay = Math.max(1, email.delay * 0.5);
+            });
+        }
+        
+        if (profile.fearDriven) {
+            // Use more fear-based messaging
+            this.sequences.welcome[0].subject = "🚨 URGENT: Corporate crimes targeting people like you";
+        }
+        
+        if (profile.bargainHunter) {
+            // Include more discount offers
+            this.sequences.welcome[2].subject = "💰 EXCLUSIVE: 50% off corporate resistance toolkit";
+        }
+    }
+    
+    optimizeEmailTiming() {
+        // Analyze when user is most active to optimize send times
+        const hourlyActivity = Array(24).fill(0);
+        
+        // Track activity patterns
+        const currentHour = new Date().getHours();
+        hourlyActivity[currentHour]++;
+        
+        // Store activity pattern
+        const savedPattern = localStorage.getItem('evil1-activity-pattern');
+        const pattern = savedPattern ? JSON.parse(savedPattern) : hourlyActivity;
+        pattern[currentHour]++;
+        localStorage.setItem('evil1-activity-pattern', JSON.stringify(pattern));
+        
+        // Find optimal send time
+        const bestHour = pattern.indexOf(Math.max(...pattern));
+        this.settings.optimalSendHour = bestHour;
+        this.saveSettings();
+    }
+    
+    calculateEngagementScore() {
+        // Calculate engagement score for segmentation
+        let score = 0;
+        
+        score += this.settings.triggers.pageViews * 10;
+        score += (this.settings.triggers.scrollDepth / 100) * 20;
+        score += (this.settings.triggers.timeOnSite / 60) * 5;
+        score += this.settings.emailsOpened * 15;
+        score += this.settings.emailsClicked * 25;
+        
+        this.settings.engagementScore = Math.round(score);
+        this.saveSettings();
+        
+        // Segment users based on engagement
+        if (score > 100) {
+            this.settings.segment = 'high-engagement';
+        } else if (score > 50) {
+            this.settings.segment = 'medium-engagement';
+        } else {
+            this.settings.segment = 'low-engagement';
+        }
+    }
+}
+
+// Global functions for email interaction
+function declineEmail() {
+    document.getElementById('email-capture-modal').style.display = 'none';
+    
+    // Show guilt-trip message
+    if (typeof window.notificationSystem !== 'undefined') {
+        window.notificationSystem.showToastNotification(
+            '😈 Corporations are celebrating your decision to stay uninformed.',
+            'warning',
+            5000
+        );
+    }
+    
+    // Analytics
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'email_declined', {
+            'reason': 'user_choice'
+        });
+    }
+    
+    // Try again in 10 minutes with different messaging
+    setTimeout(() => {
+        if (!window.emailAutomationSystem.settings.emailCaptured) {
+            window.emailAutomationSystem.showEmailCapture('second-chance');
+        }
+    }, 600000);
+}
+
+// Initialize email automation
+document.addEventListener('DOMContentLoaded', function() {
+    window.emailAutomationSystem = new EmailAutomationSystem();
+});
+</script>
