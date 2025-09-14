@@ -34,6 +34,36 @@
     - title: Companies
       url: /company/
       external: false
+
+- title: Services
+  url: /evil-score/
+  priority: 3
+  external: false
+  children:
+    - title: Evil Score™
+      url: /evil-score/
+      external: false
+- title: Evil Assessment
+  url: /evil-strengthsfinder/
+  priority: 3
+  external: false
+  children:
+    - title: Evil StrengthsFinder
+      url: /evil-strengthsfinder/
+      external: false
+    - title: Take Assessment
+      url: /evil-strengthsfinder/#assessment
+      external: false
+    - title: Sample Results
+      url: /evil-strengthsfinder/#sample
+      external: false
+    - title: Hall of Fame
+      url: /halloffame/
+      external: false
+- title: Awards
+  url: /awards/
+  priority: 3
+  external: false
 - title: Education
   url: /trainings/
   priority: 4
@@ -64,6 +94,9 @@
       external: false
     - title: Activities
       url: /activities/
+      external: false
+    - title: Corporate Inbox
+      url: /corporate-inbox/
       external: false
 - title: Store
   url: /merchandise/
