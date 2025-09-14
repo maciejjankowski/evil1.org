@@ -79,24 +79,32 @@
       url: /education/
       external: false
 - title: Community
-  url: /membership/
+  url: /groups/
   priority: 5
   external: false
   children:
-    - title: Membership
-      url: /membership/
+    - title: Groups
+      url: /groups/
       external: false
     - title: Join
       url: /register/
-      external: false
-    - title: Groups
-      url: /groups/
       external: false
     - title: Activities
       url: /activities/
       external: false
     - title: Corporate Inbox
       url: /corporate-inbox/
+      external: false
+- title: Support Us
+  url: /crowdfunding/
+  priority: 5
+  external: false
+  children:
+    - title: Crowdfunding
+      url: /crowdfunding/
+      external: false
+    - title: Membership
+      url: /membership/
       external: false
 - title: Store
   url: /merchandise/

@@ -1,0 +1,310 @@
+---
+layout: default
+---
+
+<div class="early-section">
+    <div class="early-section-header">Crowdfund the Corporate Evil Resistance</div>
+    <div class="early-section-content">
+        <p><strong>Help us expose corporate malfeasance</strong> by funding new features, investigative articles, videos, training materials, and satirical merchandise. Your contributions directly support our mission to document and satirize capitalism's systematic destruction of human decency.</p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0;">
+            {% for category in site.data.crowdfunding.categories %}
+            <div class="early-article">
+                <div class="early-article-header">
+                    <div class="early-article-title">{{ category.icon }} {{ category.name }}</div>
+                </div>
+                <div class="early-article-content">
+                    <p style="font-size: 12px;">{{ category.description }}</p>
+                    <a href="#{{ category.id }}" class="early-nav-link" style="font-size: 11px; padding: 4px 8px;">View Campaigns →</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<!-- Active Campaigns -->
+<div class="early-section">
+    <div class="early-section-header">Active Campaigns</div>
+    <div class="early-section-content">
+        
+        {% for category in site.data.crowdfunding.categories %}
+        <div id="{{ category.id }}" style="margin-bottom: 40px;">
+            <h3 style="color: #003366; margin-bottom: 20px; border-bottom: 2px solid #003366; padding-bottom: 5px;">
+                {{ category.icon }} {{ category.name }}
+            </h3>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 20px;">
+                {% assign category_campaigns = site.data.crowdfunding.campaigns | where: "category", category.id | where: "status", "active" %}
+                {% for campaign in category_campaigns %}
+                <div class="early-article" style="border: 2px solid #e0e0e0; position: relative;">
+                    <!-- Progress indicator -->
+                    {% assign progress_percent = campaign.current_amount | times: 100 | divided_by: campaign.goal_amount %}
+                    <div style="position: absolute; top: 0; left: 0; width: {{ progress_percent }}%; height: 4px; background: linear-gradient(90deg, #6699CC, #003366);"></div>
+                    
+                    <div class="early-article-header">
+                        <div class="early-article-title">{{ campaign.title }}</div>
+                        <div class="early-article-meta">
+                            ${{ campaign.current_amount }} of ${{ campaign.goal_amount }} ({{ progress_percent }}%)
+                        </div>
+                    </div>
+                    
+                    <div class="early-article-content">
+                        <p style="margin-bottom: 15px;">{{ campaign.description }}</p>
+                        
+                        <!-- Funding progress bar -->
+                        <div style="margin: 15px 0;">
+                            <div style="background: #f0f0f0; height: 8px; border-radius: 4px; overflow: hidden;">
+                                <div style="width: {{ progress_percent }}%; height: 100%; background: linear-gradient(90deg, #6699CC, #003366);"></div>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; font-size: 11px; color: #666; margin-top: 5px;">
+                                <span>{{ campaign.contributors }} contributors</span>
+                                <span>{{ campaign.estimated_completion }}</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Benefits preview -->
+                        <div style="margin: 15px 0;">
+                            <div style="font-weight: bold; font-size: 12px; margin-bottom: 8px;">What You'll Get:</div>
+                            <ul style="font-size: 11px; margin: 0; padding-left: 15px;">
+                                {% for benefit in campaign.benefits limit: 3 %}
+                                <li>{{ benefit }}</li>
+                                {% endfor %}
+                                {% if campaign.benefits.size > 3 %}
+                                <li style="font-style: italic;">...and {{ campaign.benefits.size | minus: 3 }} more</li>
+                                {% endif %}
+                            </ul>
+                        </div>
+                        
+                        <div class="early-article-footer" style="display: flex; gap: 10px; margin-top: 15px;">
+                            <a href="/crowdfunding/{{ campaign.id }}/" class="early-nav-link" style="flex: 1; text-align: center; background: #003366; color: white; padding: 8px 12px; text-decoration: none; border-radius: 4px; font-size: 12px;">View Details</a>
+                            <button onclick="showQuickContribute('{{ campaign.id }}', '{{ campaign.title }}')" class="early-nav-link" style="flex: 1; text-align: center; background: #6699CC; color: white; padding: 8px 12px; border: none; border-radius: 4px; cursor: pointer; font-size: 12px;">Quick Contribute</button>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                
+                {% if category_campaigns.size == 0 %}
+                <div class="early-article" style="border: 2px dashed #ccc;">
+                    <div class="early-article-content" style="text-align: center; color: #666;">
+                        <p>No active campaigns in this category. <a href="/submit/" style="color: #004080;">Suggest one!</a></p>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- Contribution Tiers -->
+<div class="early-section">
+    <div class="early-section-header">Contribution Tiers</div>
+    <div class="early-section-content">
+        <p>Choose your level of support. All tiers include your name in credits (unless you prefer to remain anonymous).</p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 20px;">
+            {% for tier in site.data.crowdfunding.contribution_tiers %}
+            <div class="early-article" style="border: 2px solid #{% if tier.amount >= 50 %}003366{% elsif tier.amount >= 25 %}4477AA{% else %}6699CC{% endif %};">
+                <div class="early-article-header">
+                    <div class="early-article-title">${{ tier.amount }} {{ tier.title }}</div>
+                </div>
+                <div class="early-article-content">
+                    <ul style="margin: 10px 0; padding-left: 15px; font-size: 12px;">
+                        {% for benefit in tier.benefits %}
+                        <li>{{ benefit }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<!-- How It Works -->
+<div class="early-section">
+    <div class="early-section-header">How Crowdfunding Works</div>
+    <div class="early-section-content">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+            <div class="early-article">
+                <div class="early-article-header">
+                    <div class="early-article-title">1. Browse Campaigns</div>
+                </div>
+                <div class="early-article-content">
+                    <p>Explore our active campaigns for features, articles, videos, training, and merchandise.</p>
+                </div>
+            </div>
+            
+            <div class="early-article">
+                <div class="early-article-header">
+                    <div class="early-article-title">2. Choose Your Support</div>
+                </div>
+                <div class="early-article-content">
+                    <p>Select a contribution tier or amount that fits your budget and desired impact level.</p>
+                </div>
+            </div>
+            
+            <div class="early-article">
+                <div class="early-article-header">
+                    <div class="early-article-title">3. Get Exclusive Benefits</div>
+                </div>
+                <div class="early-article-content">
+                    <p>Receive early access, exclusive content, and special recognition based on your contribution level.</p>
+                </div>
+            </div>
+            
+            <div class="early-article">
+                <div class="early-article-header">
+                    <div class="early-article-title">4. Watch Progress</div>
+                </div>
+                <div class="early-article-content">
+                    <p>Track campaign progress and receive updates as we develop the funded content and features.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="early-article" style="margin-top: 20px; background: #f8f9fa; border-left: 4px solid #003366;">
+            <div class="early-article-content">
+                <h4 style="margin-top: 0; color: #003366;">Your Impact</h4>
+                <p>Every contribution directly funds our mission to expose corporate evil and capitalist exploitation. Unlike traditional advertising-based models, crowdfunding keeps us independent and accountable only to our community.</p>
+                <p><strong>100% of contributions go toward campaign goals.</strong> No corporate sponsors, no compromised editorial integrity.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Quick Contribute Modal -->
+<div id="contribute-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000;">
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 30px; border-radius: 8px; max-width: 500px; width: 90%;">
+        <h3 id="modal-title" style="margin-top: 0; color: #003366;">Quick Contribute</h3>
+        <p id="modal-description">Choose your contribution amount for: <strong id="campaign-name"></strong></p>
+
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 20px 0;">
+            {% for tier in site.data.crowdfunding.contribution_tiers %}
+            <button onclick="selectAmount({{ tier.amount }})" class="contribution-btn" style="padding: 12px; border: 2px solid #e0e0e0; background: white; border-radius: 4px; cursor: pointer; font-weight: bold;">${{ tier.amount }}</button>
+            {% endfor %}
+            <button onclick="showCustomAmount()" class="contribution-btn" style="padding: 12px; border: 2px solid #e0e0e0; background: white; border-radius: 4px; cursor: pointer; font-weight: bold;">Custom</button>
+        </div>
+
+        <div id="custom-amount" style="display: none; margin: 15px 0;">
+            <label style="display: block; margin-bottom: 5px; font-weight: bold;">Custom Amount</label>
+            <input type="number" id="custom-amount-input" min="1" step="1" placeholder="Enter amount"
+                   style="width: 100%; padding: 8px; border: 1px solid #D0D0D0; border-radius: 4px; font-size: 14px;">
+        </div>
+
+        <div style="margin: 20px 0;">
+            <label style="display: flex; align-items: flex-start;">
+                <input type="checkbox" id="anonymous-contribution" style="margin-right: 8px; margin-top: 2px;">
+                <span style="font-size: 14px;">Contribute anonymously (name will not appear in credits)</span>
+            </label>
+        </div>
+
+        <div style="display: flex; gap: 10px;">
+            <button type="button" onclick="closeContributeModal()" style="flex: 1; padding: 12px; border: 1px solid #D0D0D0; background: white; border-radius: 4px; cursor: pointer;">Cancel</button>
+            <button type="button" onclick="proceedToPayment()" id="contribute-btn" style="flex: 2; padding: 12px; background: #003366; color: white; border: none; border-radius: 4px; cursor: pointer;" disabled>Contribute $0</button>
+        </div>
+    </div>
+</div>
+
+<script>
+let selectedCampaign = '';
+let selectedAmount = 0;
+
+function showQuickContribute(campaignId, campaignTitle) {
+    selectedCampaign = campaignId;
+    document.getElementById('campaign-name').textContent = campaignTitle;
+    document.getElementById('contribute-modal').style.display = 'block';
+    resetContributionForm();
+}
+
+function closeContributeModal() {
+    document.getElementById('contribute-modal').style.display = 'none';
+}
+
+function selectAmount(amount) {
+    selectedAmount = amount;
+    updateContributeButton();
+    highlightSelectedAmount(amount);
+    document.getElementById('custom-amount').style.display = 'none';
+    document.getElementById('custom-amount-input').value = '';
+}
+
+function showCustomAmount() {
+    document.getElementById('custom-amount').style.display = 'block';
+    document.getElementById('custom-amount-input').focus();
+    clearAmountSelection();
+    selectedAmount = 0;
+    updateContributeButton();
+}
+
+function highlightSelectedAmount(amount) {
+    document.querySelectorAll('.contribution-btn').forEach(btn => {
+        btn.style.background = 'white';
+        btn.style.borderColor = '#e0e0e0';
+    });
+    
+    event.target.style.background = '#e8f4f8';
+    event.target.style.borderColor = '#003366';
+}
+
+function clearAmountSelection() {
+    document.querySelectorAll('.contribution-btn').forEach(btn => {
+        btn.style.background = 'white';
+        btn.style.borderColor = '#e0e0e0';
+    });
+}
+
+function updateContributeButton() {
+    const btn = document.getElementById('contribute-btn');
+    const customInput = document.getElementById('custom-amount-input');
+    
+    if (selectedAmount > 0) {
+        btn.textContent = `Contribute $${selectedAmount}`;
+        btn.disabled = false;
+    } else if (customInput.value && parseInt(customInput.value) > 0) {
+        selectedAmount = parseInt(customInput.value);
+        btn.textContent = `Contribute $${selectedAmount}`;
+        btn.disabled = false;
+    } else {
+        btn.textContent = 'Contribute $0';
+        btn.disabled = true;
+    }
+}
+
+function resetContributionForm() {
+    selectedAmount = 0;
+    clearAmountSelection();
+    document.getElementById('custom-amount').style.display = 'none';
+    document.getElementById('custom-amount-input').value = '';
+    document.getElementById('anonymous-contribution').checked = false;
+    updateContributeButton();
+}
+
+function proceedToPayment() {
+    if (selectedAmount <= 0) return;
+    
+    // For now, redirect to a generic checkout with campaign and amount
+    const isAnonymous = document.getElementById('anonymous-contribution').checked;
+    const params = new URLSearchParams({
+        campaign: selectedCampaign,
+        amount: selectedAmount,
+        anonymous: isAnonymous
+    });
+    
+    window.location.href = `/crowdfunding/checkout/?${params.toString()}`;
+}
+
+// Handle custom amount input
+document.addEventListener('DOMContentLoaded', function() {
+    const customInput = document.getElementById('custom-amount-input');
+    if (customInput) {
+        customInput.addEventListener('input', function() {
+            clearAmountSelection();
+            updateContributeButton();
+        });
+    }
+});
+</script>
+
+{{ content }}
