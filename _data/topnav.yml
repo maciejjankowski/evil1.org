@@ -133,6 +133,13 @@
   url: /merch/
   priority: 5
   external: false
+  children:
+    - title: Merchandise
+      url: /merchandise/
+      external: false
+    - title: 🎰 Dopamine Experience
+      url: /dopamine-experience/
+      external: false
 - title: Defense Services
   url: /corporate-services/
   priority: 6

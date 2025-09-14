@@ -1,0 +1,375 @@
+# Dopamine-Driven User Journey Framework
+# Design for maximum addiction and engagement through vanity items and psychological manipulation
+
+# Vanity Items - "Golden Skins" for Corporate Evil
+golden_skins:
+  executive_gold_tier:
+    title: "Executive Gold Status"
+    description: "Unlock your inner sociopathic executive with our premium golden appearance upgrades"
+    base_price: 199.99
+    rarity: legendary
+    dopamine_triggers:
+      - social_status
+      - exclusivity
+      - power_fantasy
+    items:
+      - name: "Golden CEO Crown"
+        type: cosmetic
+        price: 199.99
+        description: "Limited edition golden crown that shows everyone you've achieved peak corporate evil"
+        psychological_hooks:
+          - "Only 100 will ever be made"
+          - "Instantly recognizable status symbol"
+          - "Other executives will envy you"
+        
+      - name: "Platinum Exploitation Badge"
+        type: profile_upgrade
+        price: 149.99
+        description: "Exclusive badge showing your verified expertise in worker exploitation"
+        features:
+          - "Verified checkmark on all evil1.org activity"
+          - "Priority placement in corporate evil leaderboards"
+          - "Exclusive access to VIP corruption discussions"
+        
+      - name: "Diamond Shareholder Chains"
+        type: wearable
+        price: 299.99
+        description: "Literal chains made of conflict-free lab diamonds (irony intended)"
+        benefits:
+          - "Shows commitment to shareholder supremacy"
+          - "Weighted to remind you of worker oppression"
+          - "Comes with Certificate of Authentic Evil"
+
+  corruption_premium:
+    title: "Corruption Premium Package"
+    description: "Advanced aesthetics for the discerning corporate criminal"
+    base_price: 99.99
+    rarity: epic
+    items:
+      - name: "Blood Money Background"
+        type: profile_theme
+        price: 49.99
+        description: "Animated background showing money literally dripping with blood"
+        
+      - name: "Exploitation Emojis Pack"
+        type: communication
+        price: 29.99
+        description: "Exclusive emojis for sophisticated corporate communication"
+        includes:
+          - "💰🩸 (blood money)"
+          - "🏭💀 (factory death)"
+          - "📊📉👥 (layoff chart)"
+          - "🎯🔥👤 (targeted firing)"
+
+# Loot Boxes - "Corporate Scandal Boxes"
+loot_boxes:
+  scandal_mystery_box:
+    title: "Corporate Scandal Mystery Box"
+    description: "Randomized revelations of corporate malfeasance! Collect them all!"
+    price: 24.99
+    dopamine_mechanics:
+      - variable_reward_schedule
+      - collection_completion
+      - fear_of_missing_out
+      - social_comparison
+    contents:
+      common:
+        probability: 60%
+        items:
+          - "Basic Tax Evasion Guide"
+          - "Greenwashing Starter Kit"
+          - "Employee Monitoring Software Trial"
+          - "Wage Theft Calculator"
+      
+      uncommon:
+        probability: 25%
+        items:
+          - "Offshore Account Setup Manual"
+          - "Union Busting Playbook"
+          - "Regulatory Capture Toolkit"
+          - "Crisis Management PR Scripts"
+      
+      rare:
+        probability: 12%
+        items:
+          - "Insider Trading Alert System"
+          - "Whistleblower Suppression Kit"
+          - "Environmental Destruction Optimizer"
+          - "Political Bribery Handbook"
+      
+      legendary:
+        probability: 2.5%
+        items:
+          - "Complete Corporate Overlord Package"
+          - "Senate Purchase Agreement Template"
+          - "Global Exploitation Framework"
+          - "Apocalypse Profit Maximizer"
+      
+      mythic:
+        probability: 0.5%
+        items:
+          - "Bezos-Level Evil Achievement"
+          - "Zuckerberg Privacy Destruction Kit"
+          - "Musk Market Manipulation Master Class"
+          - "Gates Population Control Protocols"
+
+  dopamine_booster_pack:
+    title: "Dopamine Addiction Booster Pack"
+    description: "Meta-loot box that gives you chemicals to buy more loot boxes!"
+    price: 39.99
+    contents:
+      guaranteed:
+        - "24-hour Dopamine Rush Subscription"
+        - "FOMO Enhancement Serum"
+        - "Impulse Purchase Amplifier"
+        - "Rational Thinking Suppressor"
+      
+      random_chance:
+        - "Social Media Validation Injection (25% chance)"
+        - "Instant Gratification Override (15% chance)"
+        - "Addiction Accelerator Premium (5% chance)"
+        - "Complete Free Will Suspension (1% chance)"
+
+# Engagement Patterns - Psychological Manipulation Systems
+engagement_patterns:
+  daily_evil_streak:
+    type: habit_formation
+    description: "Login daily to maintain your Corporate Evil Streak!"
+    mechanics:
+      - "Day 1-7: Basic evil points"
+      - "Day 8-14: Evil multiplier x2"
+      - "Day 15-30: Golden evil status"
+      - "Day 31+: Legendary evil overlord"
+    loss_aversion: "Break your streak and lose EVERYTHING!"
+    rewards:
+      - daily_corruption_points: 100
+      - streak_multiplier: "increases with consecutive days"
+      - exclusive_content_unlock: "new scandals revealed daily"
+    
+  corporate_evil_leveling:
+    type: progression_system
+    description: "Advance through ranks of corporate evil mastery"
+    levels:
+      intern_level: 
+        range: "1-10"
+        title: "Corporate Intern"
+        abilities: ["Basic Greenwashing", "Entry-level Wage Theft"]
+        
+      manager_level:
+        range: "11-25"
+        title: "Middle Management Oppressor"
+        abilities: ["Team Exploitation", "Meeting Futility Mastery"]
+        
+      director_level:
+        range: "26-50"
+        title: "Director of Despair"
+        abilities: ["Department Decimation", "Moral Vacuum Creation"]
+        
+      vp_level:
+        range: "51-100"
+        title: "Vice President of Villainy"
+        abilities: ["Regional Oppression", "Regulatory Capture"]
+        
+      ceo_level:
+        range: "101+"
+        title: "Chief Evil Officer"
+        abilities: ["Global Exploitation", "Reality Distortion Field"]
+
+  social_pressure_system:
+    type: peer_comparison
+    description: "See how your evil stacks up against other corporate criminals"
+    features:
+      evil_leaderboards:
+        - "Daily Evil Points"
+        - "Weekly Corruption Score"
+        - "Monthly Exploitation Rating"
+        - "All-Time Sociopathy Championship"
+      
+      social_shaming:
+        - "Your friends are more evil than you"
+        - "You're falling behind in the evil race"
+        - "Others have achieved higher corruption levels"
+        - "Don't let your evil streak break!"
+      
+      public_rankings:
+        - "Top 10 Evil Executives This Week"
+        - "Most Sociopathic Users This Month"
+        - "Corruption Champions Hall of Fame"
+
+# Psychological Manipulation Techniques
+manipulation_techniques:
+  variable_ratio_reinforcement:
+    description: "Random rewards create strongest addiction patterns"
+    implementation:
+      - "Loot boxes with unpredictable valuable contents"
+      - "Random bonus evil points for activities"
+      - "Surprise discounts on premium items"
+      - "Unexpected unlocks of exclusive content"
+  
+  loss_aversion:
+    description: "Fear of losing is stronger than desire to gain"
+    tactics:
+      - "Limited time offers that expire"
+      - "Streak systems that reset to zero"
+      - "Exclusive items that disappear forever"
+      - "Status levels that can be lost"
+  
+  social_proof:
+    description: "People follow others, especially perceived authorities"
+    methods:
+      - "Show how many others bought items"
+      - "Display testimonials from satisfied evil customers"
+      - "Celebrity evil endorsements"
+      - "Peer pressure through friend activity feeds"
+  
+  scarcity_principle:
+    description: "Limited availability increases perceived value"
+    applications:
+      - "Only 100 golden crowns ever made"
+      - "Exclusive access for first 1000 users"
+      - "Time-limited evil achievement unlocks"
+      - "Geographic exclusivity for premium content"
+
+# Achievement System - Dopamine Delivery Mechanism
+achievements:
+  corruption_milestones:
+    baby_steps_evil:
+      title: "Baby Steps Into Evil"
+      description: "Completed your first corporate crime simulation"
+      reward: "100 evil points + Intern badge"
+      dopamine_trigger: "initial_accomplishment"
+    
+    first_exploitation:
+      title: "First Worker Exploitation"
+      description: "Successfully calculated optimal wage theft"
+      reward: "250 evil points + Exploitation Apprentice badge"
+      dopamine_trigger: "skill_mastery"
+    
+    regulatory_capture:
+      title: "Regulatory Capture Master"
+      description: "Corrupted 10 different government officials"
+      reward: "500 evil points + Golden Bribery Badge"
+      dopamine_trigger: "power_fantasy"
+    
+    environmental_destroyer:
+      title: "Planet Killer"
+      description: "Maximized environmental destruction for profit"
+      reward: "1000 evil points + Apocalypse Crown"
+      dopamine_trigger: "dark_achievement"
+    
+    ultimate_evil:
+      title: "Peak Corporate Sociopathy"
+      description: "Achieved maximum evil level across all categories"
+      reward: "10000 evil points + Bezos-Tier Status"
+      dopamine_trigger: "ultimate_mastery"
+
+# Monetization Pressure Points
+monetization:
+  pay_to_progress:
+    evil_point_purchases:
+      - amount: 1000
+        price: 4.99
+        bonus: "First time buyer gets 100% bonus points!"
+      
+      - amount: 5000
+        price: 19.99
+        bonus: "Most popular! 25% extra points!"
+      
+      - amount: 15000
+        price: 49.99
+        bonus: "Best value! 50% extra points!"
+      
+      - amount: 50000
+        price: 99.99
+        bonus: "Whale tier! 100% extra + exclusive cosmetics!"
+  
+  premium_subscriptions:
+    basic_evil:
+      price: 9.99
+      monthly: true
+      benefits:
+        - "2x evil point gain"
+        - "Daily loot box guaranteed"
+        - "Access to premium scandals"
+        - "Priority customer support"
+    
+    deluxe_corruption:
+      price: 24.99
+      monthly: true
+      benefits:
+        - "5x evil point gain"
+        - "3 daily loot boxes"
+        - "Exclusive cosmetic items"
+        - "VIP corruption forums access"
+        - "Early access to new evil features"
+    
+    ultimate_sociopathy:
+      price: 99.99
+      monthly: true
+      benefits:
+        - "10x evil point gain"
+        - "Unlimited loot boxes"
+        - "All cosmetics included"
+        - "Direct line to CEO for evil consulting"
+        - "Custom evil scenarios designed for you"
+
+# Retention Mechanics
+retention:
+  appointment_mechanics:
+    daily_login_bonus:
+      description: "Miss a day, lose your streak and fall behind peers"
+      rewards: "Escalating rewards for consecutive days"
+    
+    weekly_evil_challenges:
+      description: "Limited time challenges that expire"
+      pressure: "Other users are completing while you're away"
+    
+    monthly_corruption_competitions:
+      description: "Compete for exclusive rewards"
+      fomo: "Only winners get legendary status items"
+  
+  sunk_cost_amplification:
+    time_investment:
+      - "Hours spent building evil empire"
+      - "Progress that would be lost if stopping"
+      - "Social connections made in evil community"
+    
+    financial_investment:
+      - "Money spent on cosmetics and upgrades"
+      - "Subscription benefits that expire"
+      - "Exclusive items that can't be recovered"
+
+# Exit Prevention
+exit_prevention:
+  unsubscribe_friction:
+    - "Are you sure you want to give up your evil empire?"
+    - "Your corruption streak will be lost forever"
+    - "Other evil executives will surpass you"
+    - "You'll lose access to exclusive evil content"
+    - "Your friends will miss your corporate crimes"
+    - "Special discount: 50% off next month to stay"
+    - "Final warning: This decision cannot be undone"
+  
+  reactivation_campaigns:
+    email_series:
+      - day_1: "Your evil empire misses you"
+      - day_7: "New corporate scandals while you were away"
+      - day_14: "Your friends achieved new evil milestones"
+      - day_30: "Last chance to reclaim your corruption crown"
+      - day_60: "We're giving your evil points to charity (just kidding)"
+
+# Meta-Commentary Integration
+satirical_awareness:
+  self_aware_messaging:
+    - "This system is designed to be addictive!"
+    - "We're using your psychology against you!"
+    - "Every purchase proves our point about capitalism!"
+    - "You're funding activism while feeding addiction!"
+    - "This is what corporate manipulation looks like!"
+  
+  educational_components:
+    - "Learn about dopamine manipulation while experiencing it"
+    - "Understand addiction mechanics through participation"
+    - "See how your spending patterns change over time"
+    - "Compare your behavior to addiction research"
+    - "Access to deaddiction resources and support"
