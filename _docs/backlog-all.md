@@ -2,6 +2,7 @@
 # Format: | STATUS | TASK_ID | TASK_DESCRIPTION | MODEL | DoD
 
 # HIGH PRIORITY TASKS (Most Important)
+
 [ ] | T604 | Create article exposing Academic Surveillance Capitalism | GPT-4o | Write article on educational technology companies harvesting student data for profit, privacy violations in schools
 [ ] | T409 | Hire and onboard freelance investigative writers | GPT-4o | Review applications, conduct interviews, onboard 3-5 writers, establish workflow and quality standards
 [ ] | T410 | Create comprehensive style guide for consistent content quality | GPT-4o | Document tone guidelines, formatting standards, fact-checking procedures, citation requirements, editorial workflow
