@@ -1,0 +1,571 @@
+/* Premium Teaser Dark Psychology Styles */
+
+.premium-teaser-container {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'system-ui', -apple-system, sans-serif;
+}
+
+/* Scarcity Banner - Creates immediate urgency */
+.scarcity-banner {
+  background: linear-gradient(45deg, #ff4444, #ff6666);
+  color: white;
+  padding: 12px 20px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(255, 68, 68, 0.3);
+  animation: pulse-scarcity 2s infinite;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+@keyframes pulse-scarcity {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+.scarcity-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.scarcity-icon {
+  font-size: 1.2em;
+  animation: flash 1s infinite alternate;
+}
+
+@keyframes flash {
+  0% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+.countdown-timer {
+  background: rgba(0,0,0,0.2);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+#countdown-display {
+  font-family: 'Courier New', monospace;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.countdown-label {
+  font-size: 0.8em;
+  opacity: 0.9;
+}
+
+/* Social Proof Section */
+.social-proof {
+  background: #f8f9fa;
+  padding: 15px;
+  border-left: 4px solid #28a745;
+  margin-bottom: 20px;
+}
+
+.readers-online {
+  color: #ff4444;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+#readers-count {
+  animation: count-update 0.5s ease-in-out;
+}
+
+@keyframes count-update {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); color: #ff6666; }
+  100% { transform: scale(1); }
+}
+
+.testimonial-snippet {
+  font-style: italic;
+  color: #666;
+  margin-top: 8px;
+  border-left: 3px solid #ffc107;
+  padding-left: 10px;
+}
+
+/* Article Header */
+.teaser-header {
+  margin-bottom: 30px;
+}
+
+.teaser-title {
+  font-size: 2.2em;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.article-meta {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.reading-time {
+  background: #e9ecef;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.9em;
+}
+
+.premium-badge {
+  background: linear-gradient(45deg, #ffd700, #ffed4a);
+  color: #8b5a00;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 0.9em;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+.value-indicator {
+  background: #28a745;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+/* Content Teaser */
+.teaser-content {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+/* Progressive blur effect to create desire */
+.content-fade {
+  position: relative;
+  margin-top: -100px;
+  height: 200px;
+  background: linear-gradient(transparent, rgba(255,255,255,0.95), white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blur-overlay {
+  text-align: center;
+  padding: 20px;
+  background: white;
+  border: 2px solid #ffc107;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.unlock-prompt h3 {
+  color: #dc3545;
+  margin-bottom: 15px;
+  font-size: 1.4em;
+}
+
+.unlock-description {
+  color: #495057;
+  line-height: 1.5;
+  max-width: 500px;
+}
+
+/* Pricing Psychology Section */
+.pricing-psychology {
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 10px;
+  border: 2px solid #dee2e6;
+}
+
+.urgency-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.urgency-section h3 {
+  color: #dc3545;
+  margin-bottom: 20px;
+  font-size: 1.3em;
+}
+
+.price-comparison {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.original-price {
+  text-align: center;
+}
+
+.crossed-out {
+  font-size: 1.5em;
+  text-decoration: line-through;
+  color: #6c757d;
+}
+
+.flash-price {
+  text-align: center;
+}
+
+.current-price {
+  font-size: 2.5em;
+  color: #28a745;
+  font-weight: bold;
+}
+
+.discount-percentage {
+  background: #dc3545;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.next-article-bonus {
+  background: linear-gradient(45deg, #ff9800, #ffc107);
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+.bonus-text {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+/* CTA Buttons */
+.purchase-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.unlock-btn {
+  background: linear-gradient(45deg, #28a745, #20c997);
+  color: white;
+  border: none;
+  padding: 20px 40px;
+  font-size: 1.3em;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+  transition: all 0.3s ease;
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  animation: pulse-cta 3s infinite;
+}
+
+@keyframes pulse-cta {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4); }
+}
+
+.unlock-btn:hover {
+  background: linear-gradient(45deg, #218838, #1e9a89);
+  transform: translateY(-2px);
+}
+
+.cta-subtext {
+  display: block;
+  font-size: 0.8em;
+  font-weight: normal;
+  margin-top: 5px;
+  opacity: 0.9;
+}
+
+/* Combo Deal */
+.combo-deal {
+  background: #fff3cd;
+  border: 2px solid #ffc107;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.combo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.combo-badge {
+  background: #dc3545;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.savings-highlight {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.combo-btn {
+  background: linear-gradient(45deg, #ffc107, #fd7e14);
+  color: #212529;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.1em;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.combo-btn:hover {
+  background: linear-gradient(45deg, #e0a800, #ea6504);
+  transform: translateY(-1px);
+}
+
+.combo-subtext {
+  display: block;
+  font-size: 0.8em;
+  font-weight: normal;
+  margin-top: 5px;
+}
+
+/* FOMO Section */
+.fomo-section {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+  margin-bottom: 20px;
+}
+
+.recent-buyers h4 {
+  color: #495057;
+  margin-bottom: 15px;
+}
+
+.buyer-stream {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 5px;
+  max-height: 120px;
+  overflow: hidden;
+}
+
+.buyer-item {
+  padding: 8px 0;
+  border-bottom: 1px solid #e9ecef;
+  color: #495057;
+  font-size: 0.95em;
+  animation: fade-in-buyer 0.5s ease-in;
+}
+
+@keyframes fade-in-buyer {
+  0% { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.buyer-item:last-child {
+  border-bottom: none;
+}
+
+.risk-reversal {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 2px solid #e9ecef;
+}
+
+.risk-reversal h4 {
+  color: #28a745;
+  margin-bottom: 10px;
+}
+
+/* Reading Progress Hook */
+.reading-progress-hook {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+  text-align: center;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #e9ecef;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(45deg, #28a745, #20c997);
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  color: #495057;
+  font-weight: 500;
+}
+
+/* Exit Intent Modal */
+.exit-intent-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.exit-intent-modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  animation: modal-appear 0.3s ease-out;
+}
+
+@keyframes modal-appear {
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.modal-header {
+  background: #dc3545;
+  color: white;
+  padding: 20px;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-modal {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 30px;
+  text-align: center;
+}
+
+.highlight-price {
+  color: #28a745;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.exit-countdown {
+  font-size: 2em;
+  color: #dc3545;
+  font-weight: bold;
+  margin: 20px 0;
+  font-family: 'Courier New', monospace;
+}
+
+.exit-cta {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.1em;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 10px;
+  transition: background 0.3s ease;
+}
+
+.exit-cta:hover {
+  background: #218838;
+}
+
+.exit-decline {
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 0.9em;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .scarcity-content {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .price-comparison {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .combo-header {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  
+  .article-meta {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  
+  .teaser-title {
+    font-size: 1.8em;
+  }
+}
+
+/* Additional psychological triggers */
+.urgency-pulse {
+  animation: urgency-pulse 1s infinite alternate;
+}
+
+@keyframes urgency-pulse {
+  0% { opacity: 1; }
+  100% { opacity: 0.7; }
+}
+
+.scarcity-highlight {
+  background: linear-gradient(45deg, #ff4444, #ff6666);
+  color: white;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-weight: bold;
+}
