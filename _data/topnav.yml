@@ -34,6 +34,18 @@
     - title: Companies
       url: /company/
       external: false
+    - title: Companies
+      url: /company/
+      external: false
+    - title: Evil Products Catalog
+      url: /evil-products/
+      external: false
+    - title: Metrics Dashboard
+      url: /metrics-dashboard/
+      external: false
+    - title: Evaluation Tools
+      url: /evaluation-dashboard/
+      external: false
 
 - title: Services
   url: /evil-score/

@@ -1,0 +1,148 @@
+<!-- Evil Metrics Summary Widget -->
+<!-- Usage: {% include metrics-widget.html entity_type="company" entity_key="amazon" %} -->
+<!-- Usage: {% include metrics-widget.html entity_type="executive" entity_data=profile %} -->
+
+{% assign frameworks = site.data.metrics-frameworks %}
+
+{% if include.entity_type == "company" and include.entity_key %}
+  {% assign entity_data = site.data.companies[include.entity_key] %}
+  {% assign framework = frameworks.corporate_evil_index %}
+  {% assign score_data = entity_data.cei_score %}
+  {% assign max_score = framework.max_score %}
+  {% assign widget_title = "Corporate Evil Index" %}
+  {% assign widget_icon = "🏢" %}
+{% elsif include.entity_type == "executive" and include.entity_data %}
+  {% assign entity_data = include.entity_data %}
+  {% assign framework = frameworks.executive_malevolence_score %}
+  {% assign score_data = entity_data.ems_score %}
+  {% assign max_score = framework.max_score %}
+  {% assign widget_title = "Malevolence Score" %}
+  {% assign widget_icon = "👤" %}
+{% elsif include.entity_type == "organization" and include.entity_data %}
+  {% assign entity_data = include.entity_data %}
+  {% assign framework = frameworks.institutional_corruption_framework %}
+  {% assign score_data = entity_data.icf_score %}
+  {% assign max_score = framework.max_score %}
+  {% assign widget_title = "Corruption Index" %}
+  {% assign widget_icon = "🏛️" %}
+{% elsif include.entity_type == "article" and include.entity_data %}
+  {% assign entity_data = include.entity_data %}
+  {% assign framework = frameworks.article_impact_scoring %}
+  {% assign score_data = entity_data.ais_score %}
+  {% assign max_score = framework.max_score %}
+  {% assign widget_title = "Impact Score" %}
+  {% assign widget_icon = "📰" %}
+{% endif %}
+
+{% if score_data %}
+{% assign percentage = score_data.total | times: 100.0 | divided_by: max_score %}
+<div class="metrics-widget">
+  <div class="widget-header">
+    <span class="widget-icon">{{ widget_icon }}</span>
+    <span class="widget-title">{{ widget_title }}</span>
+  </div>
+  <div class="widget-score">
+    <div class="score-circle">
+      <div class="score-number">{{ score_data.total }}</div>
+      <div class="score-max">/ {{ max_score }}</div>
+    </div>
+    <div class="score-bar">
+      <div class="score-fill" style="width: {{ percentage }}%; background-color: {% if percentage >= 80 %}#8B0000{% elsif percentage >= 60 %}#CD5C5C{% elsif percentage >= 40 %}#DAA520{% elsif percentage >= 20 %}#FFA500{% else %}#90EE90{% endif %};"></div>
+    </div>
+  </div>
+  <div class="widget-status">
+    {% if percentage >= 80 %}
+      <span class="status-extreme">EXTREME EVIL</span>
+    {% elsif percentage >= 60 %}
+      <span class="status-high">HIGH EVIL</span>
+    {% elsif percentage >= 40 %}
+      <span class="status-medium">MODERATE EVIL</span>
+    {% elsif percentage >= 20 %}
+      <span class="status-low">LOW EVIL</span>
+    {% else %}
+      <span class="status-minimal">MINIMAL HARM</span>
+    {% endif %}
+  </div>
+</div>
+
+<style>
+.metrics-widget {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d1b1b 100%);
+  border: 2px solid #8B0000;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 10px 0;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(139, 0, 0, 0.3);
+  max-width: 200px;
+}
+
+.widget-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.widget-icon {
+  font-size: 1.2em;
+}
+
+.widget-title {
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #FF6B47;
+}
+
+.widget-score {
+  margin-bottom: 10px;
+}
+
+.score-circle {
+  margin-bottom: 8px;
+}
+
+.score-number {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #fff;
+}
+
+.score-max {
+  font-size: 0.8em;
+  color: #ccc;
+}
+
+.score-bar {
+  background: #333;
+  height: 6px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.score-fill {
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.widget-status {
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.status-extreme { color: #8B0000; }
+.status-high { color: #CD5C5C; }
+.status-medium { color: #DAA520; }
+.status-low { color: #FFA500; }
+.status-minimal { color: #90EE90; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .metrics-widget {
+    max-width: 100%;
+  }
+}
+</style>
+{% endif %}
