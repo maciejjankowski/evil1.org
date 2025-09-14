@@ -78,14 +78,29 @@
       </div>
     </div>
 
+    <!-- Monetization CTA Section -->
+    <div class="monetization-cta">
+      <h4>💰 Convert Your Evil Into Action</h4>
+      <p>Ready to turn your consumer complicity into meaningful change? Support the journalism that exposes the very corporations you're accidentally funding!</p>
+      <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+        <a href="/membership/" class="btn" style="background: #ffffff; color: #388E3C;">Join Our Resistance ($5/month)</a>
+        <a href="/merchandise/" class="btn" style="background: #ffffff; color: #388E3C;">Buy Satirical Merch</a>
+        <a href="/courses/" class="btn" style="background: #ffffff; color: #388E3C;">Learn Corporate Investigation</a>
+      </div>
+    </div>
+
     <div class="share-results">
-      <h4>🌐 Spread the Evil</h4>
+      <h4>🌐 Spread the Evil (And The Awareness)</h4>
+      <p style="margin-bottom: 20px; color: #cccccc;">Share your results to help others discover their complicity in corporate evil!</p>
       <button class="btn btn-secondary" onclick="shareResults()">
         Share Your Evil Score
       </button>
       <button class="btn btn-primary" onclick="resetAssessment()">
         Take Assessment Again
       </button>
+      <div style="margin-top: 20px;">
+        <a href="/newsletter/" class="btn btn-secondary">Get Weekly Evil Updates</a>
+      </div>
     </div>
   </div>
 </div>
@@ -227,43 +242,109 @@ function displayCorporateBeneficiaries() {
 
 function generateRecommendations(score) {
   const recommendationsEl = document.getElementById('recommendations-list');
-  const recommendations = [
-    "Shop exclusively at monopolistic retailers to crush small businesses",
-    "Choose fast fashion to maximize worker exploitation and environmental damage",
-    "Invest in fossil fuel companies for maximum climate destruction",
-    "Support companies with the worst labor practices for premium oppression",
-    "Buy from corporations with extensive tax avoidance schemes",
-    "Choose products with the highest carbon footprint available",
-    "Support companies that lobby against consumer protection laws",
-    "Prioritize brands that use child labor in their supply chains"
-  ];
   
-  // Randomly select 3-4 recommendations
-  const selected = recommendations.sort(() => 0.5 - Math.random()).slice(0, 4);
+  let recommendations = [];
+  
+  if (score >= 80) {
+    recommendations = [
+      "🏆 Congratulations! You're a certified evil enabler. Consider our Premium Evil Membership ($50/month) for exclusive corporate corruption insights!",
+      "💼 Sign up for our 'Advanced Corporate Malfeasance' course ($299) to learn how to identify and expose the companies you're supporting",
+      "🛒 Shop our 'Master of Evil' merchandise collection - wear your complicity with pride while funding investigative journalism",
+      "📚 Buy our upcoming book 'The Evil Consumer's Guide to Corporate Domination' (pre-order for $29.99)"
+    ];
+  } else if (score >= 60) {
+    recommendations = [
+      "📈 You're almost there! Join our Standard Membership ($15/month) to learn how to maximize your evil impact",
+      "🎯 Take our 'Intermediate Corporate Evil Detection' course ($199) to better understand your choices",
+      "👕 Buy our 'Experienced Evil Enabler' t-shirt ($29.99) - perfect for corporate networking events",
+      "📧 Subscribe to our premium newsletter ($5/month) for weekly evil corporation spotlights"
+    ];
+  } else if (score >= 40) {
+    recommendations = [
+      "🌱 You have potential! Start with our Basic Membership ($5/month) to learn the fundamentals of corporate evil",
+      "📖 Get our starter guide 'Corporate Evil for Beginners' ($19.99) to improve your evil impact",
+      "☕ Buy our 'Moderate Evil Contributor' mug ($19.99) - perfect for your morning coffee of complicity",
+      "📱 Download our app ($2.99) to track your daily evil score in real-time"
+    ];
+  } else if (score >= 20) {
+    recommendations = [
+      "🎓 Take our free 'Introduction to Corporate Evil' course to understand how corporations exploit you",
+      "🧢 Buy our 'Amateur Evil Supporter' hat ($24.99) to show you're learning the ropes",
+      "📰 Subscribe to our free newsletter to start your journey into corporate awareness",
+      "🎁 Gift a membership to a friend who scores higher - misery loves company!"
+    ];
+  } else {
+    recommendations = [
+      "😇 Oh dear! You're practically a saint. Buy our 'Ethical Failure' badge ($12.99) to wear your shame",
+      "📚 URGENT: Read our guide 'How to Stop Being So Ethical' ($24.99) - your corporate overlords are disappointed",
+      "🆘 Sign up for our 'Emergency Evil Training' program ($99) - learn to embrace your inner capitalist",
+      "💡 Consider our consultation service ($150/hour) to personally assess how to increase your evil impact"
+    ];
+  }
   
   let html = '<ul class="recommendations-list">';
-  selected.forEach(rec => {
-    html += `<li class="recommendation-item">💡 ${rec}</li>`;
+  recommendations.forEach(rec => {
+    html += `<li class="recommendation-item">${rec}</li>`;
   });
   html += '</ul>';
+  
+  // Add satirical disclaimer
+  html += `
+    <div style="margin-top: 20px; padding: 15px; background: rgba(255, 255, 255, 0.05); border-radius: 6px; font-size: 0.9em; color: #cccccc; font-style: italic;">
+      <strong>Disclaimer:</strong> By purchasing our products, you're contributing to the very capitalist system we're satirizing. 
+      This is peak irony, and we're charging you for the privilege of experiencing it. Your money does fund actual investigative journalism though, so... you're welcome? 
+      <br><br>
+      <em>Terms and conditions apply. Side effects may include increased awareness, buyer's remorse, and an uncomfortable understanding of your role in systemic oppression.</em>
+    </div>
+  `;
   
   recommendationsEl.innerHTML = html;
 }
 
 function shareResults() {
   const score = assessmentData.totalScore;
-  const text = `I scored ${score} evil points on the Corporate Evil Support Assessment! Discover how your consumer choices fuel systematic oppression.`;
+  let shareText = `I scored ${score} evil points on the Corporate Evil Support Assessment! `;
+  
+  if (score >= 80) {
+    shareText += "I'm officially a Master of Corporate Evil! 🏆 Shareholders everywhere are applauding my dedication to their profits.";
+  } else if (score >= 60) {
+    shareText += "I'm an Experienced Evil Enabler! 💼 My purchasing decisions are crushing workers and communities efficiently.";
+  } else if (score >= 40) {
+    shareText += "I'm a Moderate Evil Contributor! 📊 Still too ethical for maximum shareholder value, but improving.";
+  } else if (score >= 20) {
+    shareText += "I'm an Amateur Evil Supporter! 🌱 My heart's in the right place (for corporate profits).";
+  } else {
+    shareText += "I'm an Ethical Failure! 😇 My consumer choices actually help people instead of corporations. How embarrassing!";
+  }
+  
+  shareText += ` Discover how your consumer choices fuel systematic oppression at ${window.location.href}`;
+  
+  // Add monetization hook
+  shareText += " #CorporateEvil #ConsumerComplicity #SatiricalActivism";
   
   if (navigator.share) {
     navigator.share({
-      title: 'My Corporate Evil Support Score',
-      text: text,
+      title: `My Corporate Evil Support Score: ${score} points`,
+      text: shareText,
       url: window.location.href
+    }).then(() => {
+      // Show monetization popup after successful share
+      setTimeout(() => {
+        if (confirm(`Thanks for sharing! 🎉\n\nSince you're spreading awareness about corporate evil, why not fund the fight against it?\n\nJoin our membership for just $5/month and get:\n• Weekly corporate evil exposés\n• Exclusive investigative reports\n• Early access to our satirical merchandise\n• The satisfaction of using capitalism to destroy capitalism\n\nJoin now?`)) {
+          window.open('/membership/', '_blank');
+        }
+      }, 1000);
     });
   } else {
-    // Fallback - copy to clipboard
-    navigator.clipboard.writeText(text + ' ' + window.location.href);
-    alert('Results copied to clipboard!');
+    // Fallback with enhanced monetization
+    navigator.clipboard.writeText(shareText + ' ' + window.location.href).then(() => {
+      alert(`Results copied to clipboard! 📋\n\n🎉 BONUS OFFER: Since you're sharing our satirical assessment, get 20% off your first month of membership with code EVIL20!\n\nOur membership includes:\n• Daily corporate malfeasance alerts\n• Exclusive investigative content\n• Members-only merchandise discounts\n• Direct access to our team of corporate evil researchers\n\nUse your power for good (or at least profitable activism)!`);
+      
+      // Offer direct membership signup
+      if (confirm('Open membership page now?')) {
+        window.open('/membership/?code=EVIL20', '_blank');
+      }
+    });
   }
 }
 
