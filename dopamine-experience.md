@@ -34,7 +34,7 @@ permalink: /dopamine-experience/
     </div>
 
     <!-- Main Dopamine Experience (Hidden Initially) -->
-    <div id="dopaineExperience" class="dopamine-content" style="display: none;">
+    <div id="dopamineExperience" class="dopamine-content" style="display: none;">
         
         <!-- User Progress Overview -->
         <div class="user-dashboard">
