@@ -66,6 +66,21 @@ amazon:
     - title: "Union Organizing Cases"
       description: "Multiple NLRB cases for illegal anti-union activities and worker retaliation."
       status: "Ongoing"
+  evil_score:
+    score: 94
+    rating: "Evil Grandmaster"
+    certified_date: "2023-10-15"
+    highlights:
+      - "Pioneer in systematic worker surveillance"
+      - "Zero federal taxes on $11B+ profits"
+      - "Masterful monopoly consolidation"
+      - "Expert union destruction tactics"
+    breakdown:
+      worker_exploitation: 19
+      environmental_destruction: 17
+      tax_avoidance: 20
+      consumer_manipulation: 18
+      monopoly_power: 20
   sources:
     - title: "Amazon's Monopoly Problem"
       url: "https://www.nytimes.com/2023/09/10/technology/amazons-monopoly-problem.html"
@@ -73,3 +88,39 @@ amazon:
       url: "https://www.newyorker.com/magazine/2019/02/11/amazon-warehouse"
     - title: "Amazon Tax Avoidance"
       url: "https://www.propublica.org/article/amazon-tax-loopholes"
+
+exxonmobil:
+  name: "ExxonMobil"
+  evil_score:
+    score: 97
+    rating: "Evil Grandmaster"
+    certified_date: "2023-09-20"
+    highlights:
+      - "Pioneered climate science denial"
+      - "40+ years of environmental destruction"
+      - "Masterful regulatory capture"
+      - "Record-breaking fossil fuel profits"
+    breakdown:
+      worker_exploitation: 16
+      environmental_destruction: 20
+      tax_avoidance: 19
+      consumer_manipulation: 20
+      monopoly_power: 19
+
+google:
+  name: "Google"
+  evil_score:
+    score: 87
+    rating: "Evil Expert"
+    certified_date: "2023-11-01"
+    highlights:
+      - "Global surveillance infrastructure"
+      - "Market manipulation expertise"
+      - "Advanced data monetization"
+      - "Antitrust law circumvention"
+    breakdown:
+      worker_exploitation: 14
+      environmental_destruction: 15
+      tax_avoidance: 18
+      consumer_manipulation: 20
+      monopoly_power: 20

@@ -1,0 +1,168 @@
+---
+layout: default
+---
+
+{% assign awards_data = site.data.awards %}
+
+<div class="awards-ceremony">
+  <header class="ceremony-header">
+    <div class="ceremony-title">
+      <h1>{{ awards_data.ceremony.name }}</h1>
+      <p class="ceremony-tagline">{{ awards_data.ceremony.tagline }}</p>
+    </div>
+    <div class="ceremony-details">
+      <div class="ceremony-info">
+        <span class="ceremony-year">{{ awards_data.ceremony.year }}</span>
+        <span class="ceremony-date">{{ awards_data.ceremony.date }}</span>
+        <span class="ceremony-venue">{{ awards_data.ceremony.venue }}</span>
+      </div>
+      <div class="ceremony-host">
+        Presented by {{ awards_data.ceremony.host }}
+      </div>
+    </div>
+  </header>
+
+  <section class="ceremony-intro">
+    <div class="intro-content">
+      <h2>Welcome to Corporate Evil's Highest Honor</h2>
+      <p>Tonight, we celebrate the companies that have truly excelled in the art of systematic exploitation, environmental destruction, and human suffering. Like the Academy Awards honor cinematic achievement, The Machiavelli Awards recognize those corporations that have reached the pinnacle of evil innovation.</p>
+      <p>Our rigorous judging panel of reformed whistleblowers, environmental scientists, and human rights advocates have reviewed thousands of nominations to bring you this year's most deserving recipients.</p>
+    </div>
+    <div class="ceremony-stats">
+      <div class="stat-item">
+        <span class="stat-number">{{ awards_data.categories | size }}</span>
+        <span class="stat-label">Award Categories</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">{{ awards_data.statistics.total_nominees }}</span>
+        <span class="stat-label">Total Nominees</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">{{ awards_data.statistics.estimated_damages }}</span>
+        <span class="stat-label">Estimated Societal Damages</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="main-categories">
+    <h2>Award Categories</h2>
+    <div class="categories-grid">
+      {% for category in awards_data.categories %}
+      <article class="category-card">
+        <header class="category-header">
+          <h3 class="category-name">{{ category.name }}</h3>
+          <div class="category-trophy">🏆 {{ category.trophy }}</div>
+        </header>
+        <div class="category-description">
+          {{ category.description }}
+        </div>
+        <div class="category-winner">
+          <div class="winner-label">🥇 Winner:</div>
+          <div class="winner-company">{{ category.winner }}</div>
+          {% assign winner_data = category.nominees | where: "company", category.winner | first %}
+          {% if winner_data %}
+          <div class="winner-reason">{{ winner_data.reason }}</div>
+          {% endif %}
+        </div>
+        <div class="category-nominees">
+          <h4>All Nominees:</h4>
+          <ul class="nominees-list">
+            {% for nominee in category.nominees %}
+            <li class="nominee-item{% if nominee.company == category.winner %} winner{% endif %}">
+              <strong>{{ nominee.company }}</strong>
+              <div class="nominee-reason">{{ nominee.reason }}</div>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <footer class="category-footer">
+          <a href="#category-{{ category.id }}" class="category-details-link">View Full Details →</a>
+        </footer>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="special-awards">
+    <h2>Special Recognition</h2>
+    <div class="special-awards-grid">
+      {% for award in awards_data.special_awards %}
+      <article class="special-award-card">
+        <h3 class="special-award-name">{{ award.name }}</h3>
+        <div class="special-award-winner">{{ award.winner }}</div>
+        <div class="special-award-reason">{{ award.reason }}</div>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="detailed-categories">
+    <h2>Complete Award Details</h2>
+    {% for category in awards_data.categories %}
+    <article class="detailed-category" id="category-{{ category.id }}">
+      <header class="detailed-header">
+        <h3>{{ category.name }}</h3>
+        <div class="category-weight">Impact Score: {{ category.weight }}/10</div>
+      </header>
+      <div class="category-full-description">
+        {{ category.description }}
+      </div>
+      
+      <div class="winner-spotlight">
+        <h4>🏆 {{ category.trophy }} Winner: {{ category.winner }}</h4>
+        {% assign winner_details = category.nominees | where: "company", category.winner | first %}
+        {% if winner_details %}
+        <div class="winner-details">
+          <div class="winner-achievement">{{ winner_details.reason }}</div>
+          <div class="winner-evidence">
+            <strong>Evidence:</strong> {{ winner_details.evidence }}
+          </div>
+        </div>
+        {% endif %}
+      </div>
+
+      <div class="all-nominees">
+        <h4>All Nominees & Their Achievements</h4>
+        {% for nominee in category.nominees %}
+        <div class="nominee-detail{% if nominee.company == category.winner %} winner-nominee{% endif %}">
+          <div class="nominee-header">
+            <strong>{{ nominee.company }}</strong>
+            {% if nominee.company == category.winner %}<span class="winner-badge">WINNER</span>{% endif %}
+          </div>
+          <div class="nominee-achievement">{{ nominee.reason }}</div>
+          <div class="nominee-evidence">
+            <strong>Supporting Evidence:</strong> {{ nominee.evidence }}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </article>
+    {% endfor %}
+  </section>
+
+  <section class="ceremony-highlights">
+    <h2>Ceremony Highlights</h2>
+    <div class="highlights-grid">
+      {% for moment in awards_data.ceremony_moments %}
+      <div class="highlight-moment">
+        <h4>{{ moment.type | capitalize }} Moment</h4>
+        <p>{{ moment.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <footer class="ceremony-footer">
+    <div class="footer-content">
+      <div class="acknowledgments">
+        <h3>Special Thanks</h3>
+        <p>To all the whistleblowers, investigative journalists, and activists who risk their careers and lives to expose corporate evil. Without your courage, these awards would not be possible.</p>
+        <p>And to the {{ awards_data.statistics.estimated_victims }} affected by corporate malfeasance - we document these horrors so they are never forgotten.</p>
+      </div>
+      <div class="next-year">
+        <h3>Nominations for {{ awards_data.ceremony.year | plus: 1 }}</h3>
+        <p>Think your favorite evil corporation deserves recognition? <a href="/submit/">Submit nominations</a> for next year's ceremony.</p>
+      </div>
+    </div>
+  </footer>
+</div>
