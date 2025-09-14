@@ -12,6 +12,11 @@
     <!-- HTMX for enhanced interactivity -->
     <script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
     
+    <!-- Evil Gamification System -->
+    <script src="{{ '/assets/js/evil-gamification.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/evil-onboarding.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/evil-subscription-trap.js' | relative_url }}"></script>
+    
     <!-- SEO and structured data -->
     <meta property="og:title" content="{{ page.title | default: site.title }}">
     <meta property="og:description" content="{{ page.description | default: site.description }}">
@@ -60,4 +65,9 @@
     <div class="early-container">
         {{ content }}
     </div>
+    
+    <!-- Evil Gamification Widgets -->
+    {% include evil-achievement-widget.html %}
+    {% include evil-leaderboard-widget.html %}
+    
     {% include footer.html %}
