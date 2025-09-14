@@ -1,6 +1,13 @@
 # BACKLOG: Simplified Task List
 # Format: | STATUS | TASK_ID | TASK_DESCRIPTION | MODEL | DoD
 # HIGH PRIORITY TASKS (Most Important)
+[ ] | T601 | Implement Simple JWT + LocalStorage paywall authentication system | GPT-4.1 | Create auth.js with login/logout, JWT token handling, localStorage persistence; integrate with existing Stripe checkout; test subscription verification flow
+[ ] | T602 | Deploy premium content access controls for existing articles | GPT-4o | Add premium frontmatter to 6 selected articles, implement content hiding logic in article.html layout, test paywall display and subscriber access
+[ ] | T603 | Create subscriber session management and renewal system | GPT-4.1 | Build session validation, token refresh, subscription status checking via Stripe API; implement auto-renewal notifications and expired subscription handling
+[ ] | T604 | Integrate paywall with existing Stripe subscription flow | GPT-4o | Connect JWT generation to successful subscription payments, implement webhook handling for subscription events, test complete signup-to-access flow
+[ ] | T605 | Deploy paywall analytics and conversion tracking | Gemini 2.5 Pro | Add paywall interaction events to Plausible, track conversion funnels, implement A/B testing for pricing tiers, create paywall performance dashboard
+[ ] | T606 | Create premium content migration and management system | GPT-5 mini | Build admin interface for marking articles as premium, bulk content migration scripts, preview generation system for non-subscribers
+[ ] | T607 | Optimize paywall UI/UX and subscription onboarding | GPT-4o | Enhance existing paywall component design, improve mobile experience, add social proof elements, optimize subscription page conversion rate
 [ ] | T409 | Hire and onboard freelance investigative writers | GPT-4o | Review applications, conduct interviews, onboard 3-5 writers, establish workflow and quality standards
 [ ] | T410 | Create comprehensive style guide for consistent content quality | GPT-4o | Document tone guidelines, formatting standards, fact-checking procedures, citation requirements, editorial workflow
 [ ] | T407 | Develop mobile app for iOS and Android | GPT-4.1 | Design app architecture, develop native apps, implement push notifications, app store optimization
