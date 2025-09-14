@@ -37,6 +37,9 @@
     - title: Masterclasses
       url: /education/
       external: false
+    - title: Corporate Slave Test
+      url: /corporate-slave-test/
+      external: false
 - title: Community
   url: /membership/
   priority: 4
