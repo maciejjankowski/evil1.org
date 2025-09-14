@@ -35,7 +35,7 @@
 [ ] | T610 | Create article exposing Shrinkflation Deception tactics | GPT-4o | Write article on reducing product sizes while maintaining prices, packaging deception, value extraction
 [ ] | T411 | Develop content repurposing strategy for maximum reach | GPT-4o | Create social media content from articles, develop email newsletter content, create video scripts, podcast outlines
 [ ] | T412 | Build community forum and discussion platform | GPT-4o | Choose forum software, integrate with main site, create community guidelines, moderate initial discussions
-[ ] | T504 | Set up automated content publishing workflow | GPT-5 mini | Add a GitHub Actions workflow `/.github/workflows/publish-schedule.yml` that creates PRs or publishes posts based on `_data/schedule`; include a simple smoke test for schedule parsing
+[x] | T504 | Set up automated content publishing workflow | GPT-5 mini | Add a GitHub Actions workflow `/.github/workflows/publish-schedule.yml` that creates PRs or publishes posts based on `_data/schedule`; include a simple smoke test for schedule parsing
 [ ] | T505 | Develop content recommendation engine | GPT-5 mini | Add `_includes/related-articles.html` (Liquid-only) that shows up to 3 related articles by tag; include 3 sample posts demonstrating behavior
 [ ] | T522 | Restructure company/philip-morris.md to use company_profile layout and frontmatter data | Grok Code Fast 1 | Move HTML to layout, leave only frontmatter in .md file
 [ ] | T523 | Restructure company/monsanto.md to use company_profile layout and frontmatter data | Grok Code Fast 1 | Move HTML to layout, leave only frontmatter in .md file
@@ -151,7 +151,6 @@
 [ ] | T502 | Implement site-wide navigation improvements | DoD: Add breadcrumbs, enhance mobile menu, improve internal link structure
 
 # MEDIUM PRIORITY
-[ ] | T504 | Set up automated content publishing workflow | DoD: Create GitHub Actions workflow for scheduled content publishing
 [ ] | T505 | Develop content recommendation engine | DoD: Implement "Related Articles" feature based on categories and tags
 [ ] | T506 | Create interactive data visualizations | DoD: Build 3 data visualizations for corporate evil metrics
 
@@ -184,7 +183,6 @@
 [ ] | T502 | Implement site-wide navigation improvements | DoD: Add breadcrumbs, enhance mobile menu, improve internal link structure
 
 # MEDIUM PRIORITY
-[ ] | T504 | Set up automated content publishing workflow | DoD: Create GitHub Actions workflow for scheduled content publishing
 [ ] | T505 | Develop content recommendation engine | DoD: Implement "Related Articles" feature based on categories and tags
 [ ] | T506 | Create interactive data visualizations | DoD: Build 3 data visualizations for corporate evil metrics
 
