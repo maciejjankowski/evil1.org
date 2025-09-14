@@ -1,0 +1,276 @@
+# Evil StrengthsFinder Assessment Questions
+# Sample questions demonstrating the forced-choice format
+
+questions:
+  # EXPLOITATION DOMAIN QUESTIONS
+  
+  # Soul Harvesting vs Wage Theft Mastery
+  question_001:
+    id: 1
+    themes: ["soul_harvesting", "wage_theft_mastery"]
+    difficulty: "easy"
+    scenario: "Your startup needs to reduce costs by 30% to achieve profitability. Your team is already working 60+ hour weeks."
+    option_a:
+      text: "Implement 'voluntary' weekend work sessions with team-building activities, making unpaid overtime feel like family bonding time"
+      theme: "soul_harvesting"
+      weight: 3
+    option_b:
+      text: "Restructure everyone as 'independent contractors' to eliminate benefits while maintaining the same work requirements"
+      theme: "wage_theft_mastery"
+      weight: 3
+
+  # Regulatory Capture vs Consumer Manipulation  
+  question_002:
+    id: 2
+    themes: ["regulatory_capture", "consumer_manipulation"]
+    difficulty: "easy"
+    scenario: "New regulations threaten to limit your company's most profitable practices. You need to protect revenue streams."
+    option_a:
+      text: "Hire former regulators to join your compliance team and host 'educational' conferences for current officials"
+      theme: "regulatory_capture"
+      weight: 3
+    option_b:
+      text: "Launch a consumer education campaign that makes regulatory compliance sound like customer benefits"
+      theme: "consumer_manipulation"
+      weight: 3
+
+  # Data Vampirism vs Soul Harvesting
+  question_003:
+    id: 3
+    themes: ["data_vampirism", "soul_harvesting"]
+    difficulty: "medium"
+    scenario: "Your app has 10 million users. You need to increase revenue without changing core functionality."
+    option_a:
+      text: "Introduce 'personalized experiences' that require access to contacts, location, and device usage data"
+      theme: "data_vampirism"
+      weight: 2
+    option_b:
+      text: "Create premium 'VIP community' features that make users feel special while extracting more engagement hours"
+      theme: "soul_harvesting"
+      weight: 2
+
+  # DESTRUCTION DOMAIN QUESTIONS
+
+  # Environmental Devastation vs Future Mortgaging
+  question_004:
+    id: 4
+    themes: ["environmental_devastation", "future_mortgaging"]
+    difficulty: "easy"
+    scenario: "Your mining operation could increase profits 40% by cutting environmental and safety measures."
+    option_a:
+      text: "Quietly reduce environmental protections while launching a 'green mining' marketing campaign"
+      theme: "environmental_devastation"
+      weight: 3
+    option_b:
+      text: "Accelerate extraction timelines to maximize short-term profits before regulations tighten"
+      theme: "future_mortgaging"
+      weight: 3
+
+  # Democracy Undermining vs Community Annihilation
+  question_005:
+    id: 5
+    themes: ["democracy_undermining", "community_annihilation"]
+    difficulty: "medium"
+    scenario: "Local communities are organizing to oppose your expansion plans. You need to neutralize opposition."
+    option_a:
+      text: "Fund local candidates who support business-friendly policies while creating voter outreach programs"
+      theme: "democracy_undermining"
+      weight: 2
+    option_b:
+      text: "Offer individual families relocation packages to break up community solidarity"
+      theme: "community_annihilation"
+      weight: 2
+
+  # Cultural Poisoning vs Community Annihilation
+  question_006:
+    id: 6
+    themes: ["cultural_poisoning", "community_annihilation"]
+    difficulty: "hard"
+    scenario: "A grassroots cultural movement is opposing your brand. The movement has significant social media influence."
+    option_a:
+      text: "Launch a 'cultural appreciation' campaign that co-opts their symbols while continuing harmful practices"
+      theme: "cultural_poisoning"
+      weight: 1
+    option_b:
+      text: "Create influencer programs that reward individual cultural leaders for promoting your brand over community values"
+      theme: "community_annihilation"
+      weight: 1
+
+  # MANIPULATION DOMAIN QUESTIONS
+
+  # Gaslighting Excellence vs Scientific Corruption
+  question_007:
+    id: 7
+    themes: ["gaslighting_excellence", "scientific_corruption"]
+    difficulty: "easy"
+    scenario: "Independent research suggests your product causes health problems. Media attention is growing."
+    option_a:
+      text: "Launch a 'concerned customer' campaign questioning whether users are following instructions properly"
+      theme: "gaslighting_excellence"
+      weight: 3
+    option_b:
+      text: "Fund alternative studies with favorable methodologies and promote conflicting research findings"
+      theme: "scientific_corruption"
+      weight: 3
+
+  # Greenwashing Artistry vs Philanthropic Theater
+  question_008:
+    id: 8
+    themes: ["greenwashing_artistry", "philanthropic_theater"]
+    difficulty: "medium"
+    scenario: "Environmental activists are targeting your company. You need to improve public perception without changing operations."
+    option_a:
+      text: "Launch a 'carbon neutral by 2050' initiative with offset programs that allow continued emissions"
+      theme: "greenwashing_artistry"
+      weight: 2
+    option_b:
+      text: "Create a foundation focused on environmental education while maintaining current business practices"
+      theme: "philanthropic_theater"
+      weight: 2
+
+  # Media Weaponization vs Gaslighting Excellence
+  question_009:
+    id: 9
+    themes: ["media_weaponization", "gaslighting_excellence"]
+    difficulty: "hard"
+    scenario: "Investigative journalists are preparing a damaging exposé about your industry practices."
+    option_a:
+      text: "Cultivate relationships with media owners and editors to influence coverage framing"
+      theme: "media_weaponization"
+      weight: 1
+    option_b:
+      text: "Preemptively frame the story as an attack on innovation and job creation"
+      theme: "gaslighting_excellence"
+      weight: 1
+
+  # SYSTEMIC DOMAIN QUESTIONS
+
+  # Monopoly Building vs Inequality Engineering
+  question_010:
+    id: 10
+    themes: ["monopoly_building", "inequality_engineering"]
+    difficulty: "easy"
+    scenario: "Your market position is strong, but competitors are emerging. You want to maintain dominance."
+    option_a:
+      text: "Acquire smaller competitors and integrate their innovations while eliminating their independence"
+      theme: "monopoly_building"
+      weight: 3
+    option_b:
+      text: "Create executive compensation structures that concentrate decision-making power among loyal shareholders"
+      theme: "inequality_engineering"
+      weight: 3
+
+  # Addiction Architecture vs Crisis Profiteering
+  question_011:
+    id: 11
+    themes: ["addiction_architecture", "crisis_profiteering"]
+    difficulty: "medium"
+    scenario: "User engagement on your platform is declining. You need to increase time spent and frequency of use."
+    option_a:
+      text: "Implement variable reward schedules and social validation features that create dependency patterns"
+      theme: "addiction_architecture"
+      weight: 2
+    option_b:
+      text: "Position your platform as essential during emergencies and crisis situations"
+      theme: "crisis_profiteering"
+      weight: 2
+
+  # Legacy Corruption vs Monopoly Building
+  question_012:
+    id: 12
+    themes: ["legacy_corruption", "monopoly_building"]
+    difficulty: "hard"
+    scenario: "You want to ensure your company's advantages persist regardless of political or market changes."
+    option_a:
+      text: "Establish educational programs and think tanks that teach your business model as economic best practice"
+      theme: "legacy_corruption"
+      weight: 1
+    option_b:
+      text: "Create industry standards and certification processes that favor your company's existing capabilities"
+      theme: "monopoly_building"
+      weight: 1
+
+  # CROSS-DOMAIN COMPLEX SCENARIOS
+
+  # Soul Harvesting vs Democracy Undermining vs Addiction Architecture
+  question_013:
+    id: 13
+    themes: ["soul_harvesting", "democracy_undermining", "addiction_architecture"]
+    difficulty: "hard"
+    scenario: "Your social media platform could influence electoral outcomes. Users are highly engaged but political tension is rising."
+    option_a:
+      text: "Create 'civic engagement' features that make users feel empowered while extracting more personal data"
+      theme: "soul_harvesting"
+      weight: 1
+    option_b:
+      text: "Develop algorithm adjustments that can subtly influence political sentiment based on advertiser preferences"
+      theme: "democracy_undermining" 
+      weight: 1
+    option_c:
+      text: "Implement 'breaking news' notifications that increase platform addiction during political crises"
+      theme: "addiction_architecture"
+      weight: 1
+
+  # Environmental Devastation vs Media Weaponization vs Future Mortgaging
+  question_014:
+    id: 14
+    themes: ["environmental_devastation", "media_weaponization", "future_mortgaging"]
+    difficulty: "hard"
+    scenario: "Climate regulations will significantly impact your fossil fuel operations in 5 years. Public opinion is shifting."
+    option_a:
+      text: "Accelerate extraction operations to maximize profits before regulations take effect"
+      theme: "future_mortgaging"
+      weight: 1
+    option_b:
+      text: "Fund media campaigns that question climate science urgency while appearing reasonable"
+      theme: "media_weaponization"
+      weight: 1
+    option_c:
+      text: "Promote natural gas as a 'clean transition fuel' while expanding fracking operations"
+      theme: "environmental_devastation"
+      weight: 1
+
+  # Regulatory Capture vs Inequality Engineering vs Legacy Corruption
+  question_015:
+    id: 15
+    themes: ["regulatory_capture", "inequality_engineering", "legacy_corruption"]
+    difficulty: "hard"
+    scenario: "Tax reform proposals threaten your industry's favorable treatment. You need long-term protection."
+    option_a:
+      text: "Place former executives in key Treasury and IRS positions to influence policy implementation"
+      theme: "regulatory_capture"
+      weight: 1
+    option_b:
+      text: "Establish university research centers that teach your tax strategies as economic optimization"
+      theme: "legacy_corruption"
+      weight: 1
+    option_c:
+      text: "Create complex corporate structures that make tax avoidance appear like sophisticated financial engineering"
+      theme: "inequality_engineering"
+      weight: 1
+
+# Question categories for progressive difficulty
+categories:
+  warmup:
+    description: "Clear preference scenarios to establish baseline"
+    questions: [1, 2, 4, 7, 10]
+    
+  core_assessment:
+    description: "Moderate complexity ethical dilemmas"
+    questions: [3, 5, 8, 11, 14]
+    
+  advanced_scenarios:
+    description: "Complex multi-dimensional trade-offs"
+    questions: [6, 9, 12, 13, 15]
+
+# Scoring guidelines
+scoring:
+  weight_3: "Strong preference - clear evil aptitude demonstrated"
+  weight_2: "Moderate preference - some evil aptitude indicated"  
+  weight_1: "Slight preference - minimal evil aptitude shown"
+  
+  minimum_threshold: 15  # Minimum total score per theme to register
+  top_themes_count: 5    # Number of top themes to include in results
+  
+  domain_balance_check: true  # Ensure results span multiple domains
+  consistency_validation: true  # Check for contradictory answers

@@ -1,0 +1,214 @@
+# Corporate Evil Awards - Annual Recognition of Systematic Malfeasance
+# Modeled after prestigious award ceremonies but celebrating the dark arts of capitalism
+
+ceremony:
+  name: "The Machiavelli Awards"
+  tagline: "Celebrating Excellence in Corporate Evil"
+  year: 2025
+  date: "March 15, 2025"
+  venue: "The Temple of Capitalism, Wall Street"
+  host: "Gordon Gekko Memorial Foundation"
+
+categories:
+  - id: lifetime_achievement
+    name: "Lifetime Achievement in Systematic Evil"
+    description: "Recognizing decades of consistent harm to humanity, environment, and society"
+    trophy: "Golden Pitchfork"
+    weight: 10
+    nominees:
+      - company: "ExxonMobil"
+        reason: "70+ years of climate denial, environmental destruction, and public deception"
+        evidence: "Internal documents proving climate knowledge since 1970s while funding denial"
+      - company: "Philip Morris/Altria"
+        reason: "Century of addiction manufacturing and health cover-ups"
+        evidence: "Systematic suppression of lung cancer research, targeting children"
+      - company: "Nestlé"
+        reason: "Water privatization, child labor, and nutritional manipulation"
+        evidence: "Draining aquifers, baby formula scandal, slave labor in cocoa"
+    winner: "ExxonMobil"
+
+  - id: best_supporting_coverup
+    name: "Best Supporting Cover-up"
+    description: "Outstanding performance in hiding corporate malfeasance"
+    trophy: "Silver Smoke Screen"
+    weight: 8
+    nominees:
+      - company: "McKinsey & Company"
+        reason: "Consulting on OxyContin marketing while advising on opioid crisis"
+        evidence: "Dual-sided profiteering from addiction and treatment"
+      - company: "Arthur Andersen (Enron)"
+        reason: "Creative accounting that redefined financial fraud"
+        evidence: "Document shredding, off-books partnerships, impossible numbers"
+      - company: "Cambridge Analytica"
+        reason: "Election manipulation through psychological warfare"
+        evidence: "Harvesting 87 million Facebook profiles for voter manipulation"
+    winner: "McKinsey & Company"
+
+  - id: outstanding_greenwashing
+    name: "Outstanding Greenwashing Performance"
+    description: "Excellence in environmental deception and eco-fraud"
+    trophy: "Plastic Leaf Trophy"
+    weight: 9
+    nominees:
+      - company: "Shell"
+        reason: "Carbon neutral claims while expanding oil extraction"
+        evidence: "Massive marketing spend on green image, minimal actual investment"
+      - company: "Volkswagen"
+        reason: "Clean diesel fraud affecting 11 million vehicles"
+        evidence: "Defeat devices specifically designed to cheat emissions tests"
+      - company: "BP"
+        reason: "Beyond Petroleum rebranding while causing environmental disasters"
+        evidence: "Deepwater Horizon spill, safety shortcuts, greenwashing ads"
+    winner: "Shell"
+
+  - id: best_original_exploitation
+    name: "Best Original Exploitation Scheme"
+    description: "Innovation in human resource extraction and dignity destruction"
+    trophy: "Bronze Shackles"
+    weight: 7
+    nominees:
+      - company: "Amazon"
+        reason: "Surveillance capitalism meets modern slavery in warehouses"
+        evidence: "Bathroom breaks timed, 11-hour shifts, union busting, worker surveillance"
+      - company: "Uber"
+        reason: "Gig economy exploitation disguised as entrepreneurship"
+        evidence: "Drivers classified as contractors, no benefits, surge pricing manipulation"
+      - company: "Walmart"
+        reason: "Systematic wage theft and taxpayer burden shifting"
+        evidence: "Full-time workers on food stamps, anti-union campaigns, local business destruction"
+    winner: "Amazon"
+
+  - id: technical_surveillance
+    name: "Technical Achievement in Surveillance"
+    description: "Outstanding innovation in privacy destruction and behavioral manipulation"
+    trophy: "Digital Panopticon"
+    weight: 9
+    nominees:
+      - company: "Meta/Facebook"
+        reason: "Psychological manipulation at unprecedented scale"
+        evidence: "Addiction algorithms, emotional contagion experiments, democracy undermining"
+      - company: "Google/Alphabet"
+        reason: "Total information awareness through search and advertising"
+        evidence: "Location tracking, email scanning, behavioral prediction, monopolistic practices"
+      - company: "Palantir"
+        reason: "Government surveillance infrastructure for profit"
+        evidence: "ICE deportation targeting, police predictive analytics, military intelligence"
+    winner: "Meta/Facebook"
+
+  - id: humanitarian_damage
+    name: "Humanitarian Award (Most Damage to Humanity)"
+    description: "Recognition for causing maximum human suffering for profit"
+    trophy: "Lead Compassion Medal"
+    weight: 10
+    nominees:
+      - company: "Purdue Pharma"
+        reason: "Engineering the opioid epidemic for profit"
+        evidence: "500,000+ deaths, addictive drug marketing, doctor manipulation"
+      - company: "Blackwater/Xe Services"
+        reason: "War profiteering and civilian casualties"
+        evidence: "Nisour Square massacre, contract violations, mercenary capitalism"
+      - company: "Monsanto/Bayer"
+        reason: "Cancer-causing products and farmer exploitation"
+        evidence: "Glyphosate cover-ups, seed monopolization, suicide epidemics"
+    winner: "Purdue Pharma"
+
+  - id: tax_avoidance_innovation
+    name: "Innovation in Tax Avoidance"
+    description: "Creative excellence in stealing from public coffers"
+    trophy: "Offshore Gold Bar"
+    weight: 8
+    nominees:
+      - company: "Apple"
+        reason: "Irish Double Dutch sandwich perfection"
+        evidence: "$181 billion offshore, 0.005% tax rate in Ireland"
+      - company: "Amazon"
+        reason: "Negative tax rates despite massive profits"
+        evidence: "Two years of zero federal taxes, $129 million in rebates"
+      - company: "General Electric"
+        reason: "Tax inversion and offshore profit shifting mastery"
+        evidence: "Decades without paying federal taxes, complex subsidiary networks"
+    winner: "Apple"
+
+  - id: union_busting_excellence
+    name: "Excellence in Union Busting"
+    description: "Outstanding achievement in worker organization destruction"
+    trophy: "Broken Chain Award"
+    weight: 7
+    nominees:
+      - company: "Tesla"
+        reason: "Modern anti-union intimidation and retaliation"
+        evidence: "Illegal firings, surveillance, Musk's anti-union tweets"
+      - company: "Starbucks"
+        reason: "Systematic store closure and worker intimidation"
+        evidence: "Buffalo union drive retaliation, store closures, manager training"
+      - company: "Delta Airlines"
+        reason: "Psychological manipulation and fear campaigns"
+        evidence: "Video game purchase suggestions over union dues"
+    winner: "Tesla"
+
+  - id: environmental_destruction
+    name: "Outstanding Environmental Destruction"
+    description: "Excellence in planetary damage for short-term profit"
+    trophy: "Toxic Waste Chalice"
+    weight: 9
+    nominees:
+      - company: "Chevron"
+        reason: "Rainforest destruction and indigenous rights violations"
+        evidence: "Ecuador oil spills, lawsuit fraud, environmental racism"
+      - company: "Rio Tinto"
+        reason: "Sacred site destruction and mining colonialism"
+        evidence: "Juukan Gorge caves destruction, 46,000-year heritage site"
+      - company: "DuPont"
+        reason: "PFAS contamination and health cover-ups"
+        evidence: "C8 chemical contamination, decades of health study suppression"
+    winner: "Chevron"
+
+  - id: best_propaganda
+    name: "Best Documentary (Corporate Propaganda)"
+    description: "Excellence in reality distortion and narrative manipulation"
+    trophy: "Ministry of Truth Scroll"
+    weight: 6
+    nominees:
+      - company: "Koch Industries"
+        reason: "Climate denial documentary funding and production"
+        evidence: "Americans for Prosperity, climate denial think tank network"
+      - company: "ExxonMobil"
+        reason: "Advertorial campaigns disguised as science"
+        evidence: "CO2 is plant food campaigns, fake research institutes"
+      - company: "Tobacco Institute"
+        reason: "Doubt manufacturing and science denial masterclass"
+        evidence: "Doctors recommend cigarettes campaigns, cancer research suppression"
+    winner: "Tobacco Institute"
+
+special_awards:
+  - name: "Peoples Choice Award for Most Hated Corporation"
+    winner: "Comcast"
+    reason: "Consistent excellence in customer service hell and monopolistic practices"
+  
+  - name: "Rising Star in Evil"
+    winner: "ByteDance/TikTok"
+    reason: "Impressive debut in democracy manipulation and youth data harvesting"
+  
+  - name: "Hall of Fame Induction"
+    winner: "Standard Oil Company"
+    reason: "Posthumous recognition for inventing modern corporate monopoly tactics"
+
+ceremony_moments:
+  - type: "opening"
+    description: "Red carpet interviews with corporate executives explaining their achievements"
+  
+  - type: "musical"
+    description: "Performance of 'Money (That's What I Want)' by the Goldman Sachs Choir"
+  
+  - type: "memorial"
+    description: "In Memoriam segment honoring the victims of corporate greed"
+  
+  - type: "closing"
+    description: "Group photo with all winners holding their trophies made from recycled oil spill materials"
+
+statistics:
+  total_nominees: 32
+  categories: 10
+  special_awards: 3
+  estimated_damages: "$50 trillion in societal costs"
+  estimated_victims: "7.8 billion humans + planetary ecosystem"

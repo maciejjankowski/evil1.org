@@ -2,6 +2,19 @@
 # Format: | STATUS | TASK_ID | TASK_DESCRIPTION | MODEL | DoD
 
 # HIGH PRIORITY TASKS (Most Important)
+
+## Evil StrengthsFinder Assessment Tool (New Revenue Stream)
+[x] | T600 | Design Evil StrengthsFinder assessment framework and themes | GPT-4.1 | Create 20 evil strength themes across 4 domains, design question framework, create scoring algorithm, document assessment structure
+[x] | T601 | Create assessment question database | GPT-4o | Write 180 satirical questions (9 per theme), implement forced-choice format, ensure corporate context framing, test question balance
+[ ] | T602 | Build core assessment engine | GPT-4.1 | Implement question delivery system, scoring algorithm, progress tracking, session management, result generation
+[ ] | T603 | Design and implement payment integration for assessments | GPT-4.1 | Integrate with existing Stripe, create pricing tiers ($49.99, $99.99, $299.99), implement secure payment flow
+[ ] | T604 | Create dynamic results system and report templates | GPT-4o | Build personalized report generation, historical comparisons, evil development recommendations, multiple report tiers
+[ ] | T605 | Implement user management and result storage | GPT-4.1 | Integrate with existing membership, secure result storage, sharing options, retake functionality
+[x] | T606 | Create Evil StrengthsFinder landing pages and marketing materials | GPT-4o | Design landing page, create marketing copy, implement A/B testing, social media integration
+[ ] | T607 | Build team assessment and corporate features | GPT-4.1 | Multi-user assessments, team comparisons, enterprise reporting, corporate consulting package
+[ ] | T608 | Create Evil StrengthsFinder content marketing strategy | GPT-4o | Evil strength spotlights, historical analysis content, case studies, user success stories
+[ ] | T609 | Implement analytics and optimization tracking | GPT-4.1 | Conversion tracking, user behavior analysis, A/B test infrastructure, performance monitoring
+[ ] | T604 | Create article exposing Academic Surveillance Capitalism | GPT-4o | Write article on educational technology companies harvesting student data for profit, privacy violations in schools
 [ ] | T409 | Hire and onboard freelance investigative writers | GPT-4o | Review applications, conduct interviews, onboard 3-5 writers, establish workflow and quality standards
 [ ] | T410 | Create comprehensive style guide for consistent content quality | GPT-4o | Document tone guidelines, formatting standards, fact-checking procedures, citation requirements, editorial workflow
 [ ] | T407 | Develop mobile app for iOS and Android | GPT-4.1 | Design app architecture, develop native apps, implement push notifications, app store optimization
@@ -14,9 +27,15 @@
 [ ] | T205 | Analytics: Integrate Plausible with goals (buy_now, membership_start, newsletter) | Gemini 2.5 Pro | Events fire and appear in dashboard
 
 # MEDIUM PRIORITY TASKS
+[ ] | T605 | Create article exposing Academic Surveillance Capitalism | GPT-4o | Write article on educational technology companies harvesting student data for profit, privacy violations in schools
+[ ] | T606 | Create article exposing Predatory Gaming Monetization | GPT-4o | Write exposé on loot boxes, pay-to-win mechanics, gambling addiction targeting children in video games
+[ ] | T607 | Create article exposing Environmental Racism practices | GPT-4o | Write investigative piece on corporations strategically locating polluting facilities in minority communities
+[ ] | T608 | Create article exposing Carbon Credit Fraud schemes | GPT-4o | Write article on fake carbon credits, greenwashing through offset purchases, environmental responsibility theater
+[ ] | T609 | Create article exposing Fertility Data Mining | GPT-4o | Write article on period/fertility tracking apps selling intimate health data to advertisers and employers
+[ ] | T610 | Create article exposing Shrinkflation Deception tactics | GPT-4o | Write article on reducing product sizes while maintaining prices, packaging deception, value extraction
 [ ] | T411 | Develop content repurposing strategy for maximum reach | GPT-4o | Create social media content from articles, develop email newsletter content, create video scripts, podcast outlines
 [ ] | T412 | Build community forum and discussion platform | GPT-4o | Choose forum software, integrate with main site, create community guidelines, moderate initial discussions
-[ ] | T504 | Set up automated content publishing workflow | GPT-5 mini | Add a GitHub Actions workflow `/.github/workflows/publish-schedule.yml` that creates PRs or publishes posts based on `_data/schedule`; include a simple smoke test for schedule parsing
+[x] | T504 | Set up automated content publishing workflow | GPT-5 mini | Add a GitHub Actions workflow `/.github/workflows/publish-schedule.yml` that creates PRs or publishes posts based on `_data/schedule`; include a simple smoke test for schedule parsing
 [ ] | T505 | Develop content recommendation engine | GPT-5 mini | Add `_includes/related-articles.html` (Liquid-only) that shows up to 3 related articles by tag; include 3 sample posts demonstrating behavior
 [ ] | T522 | Restructure company/philip-morris.md to use company_profile layout and frontmatter data | Grok Code Fast 1 | Move HTML to layout, leave only frontmatter in .md file
 [ ] | T523 | Restructure company/monsanto.md to use company_profile layout and frontmatter data | Grok Code Fast 1 | Move HTML to layout, leave only frontmatter in .md file
@@ -43,6 +62,7 @@
 [ ] | T214 | Fulfillment: choose POD (Printful/Printify) + connect 3 SKUs | Gemini 2.5 Pro | 3 products synced with mockups; fulfillment flow documented
 
 # COMPLETED TASKS
+[x] | T600 | Create predatory insurance offering for companies not wanting site appearance | GPT-4o | Create comprehensive insurance package documentation with deliberately complex terms designed to avoid payments, expand insurance-scams.md organization page, satirical tone critiquing insurance industry practices
 [x] | T301 | Audit all internal and external links across the site using grep patterns | GPT-4.1 | Create comprehensive link inventory in _docs/link-audit.md, identify broken/outdated links, document findings with recommendations
 [x] | T302 | Create automation scripts for repetitive validation tasks (link checking, front matter validation) | GPT-4.1 | Create scripts/link-checker.sh and scripts/frontmatter-validator.sh with proper error handling and documentation
 [x] | T400 | Implement Stripe payment processing for membership tiers | GPT-4.1 | Set up Stripe account, integrate payment forms, implement subscription management, test payment flow
@@ -60,6 +80,7 @@
 [x] | T513 | Move the hellfire header to use the same data-driven topnav include | Grok Code Fast 1 | Update `_layouts/default.html` hellfire section to `{% include topnav.html %}` and remove duplicate nav markup; ensure visual parity and run build
 [x] | T514 | Comprehensive site scan after nav/theme changes | GPT-4.1 | Run grep and link checks across repo and `_site`, create report in `_docs/link-audit.md` and `_docs/refactor.md` with any remaining issues
 [x] | T221 | Tag all 50 merch pages; auto-generate theme indexes | Gemini 2.5 Pro | Tags added; theme pages built from tags
+[x] | T600 | Create interactive evil mechanisms that users can experience firsthand | GPT-4.1 | Implement price discrimination, dark patterns, surveillance simulation, greenwashing calculator, tax avoidance simulator, and regulatory capture game. All activities functional and educational.
 
 
 
@@ -83,8 +104,6 @@
 - Jekyll build: `bundle exec jekyll build`
 - Visual tests: `npm test`
 
-
-
 ---
 
 # TASKS for GPT-5 mini
@@ -120,9 +139,72 @@
 ### Current work
 - T502 is the active next task to work on (site-wide navigation improvements). A task document will be created and a starter include added in `_includes/breadcrumbs.html`.
 
+# TASKS for GPT-5 mini
+# Format: STATUS | TASK_ID | DESCRIPTION | DoD (optional)
+# STATUS: [ ] pending, [x] complete
+# This file contains only tasks that are best-suited for the GPT-5 mini model.
+# Use this file as the working backlog when assigning or running GPT-5 mini.
+
+# HIGH PRIORITY - Moderate complexity tasks, basic content updates
+[ ] | T501 | Create standard page templates for key content types | DoD: Design templates for profiles, articles, organization pages with reusable components
+[ ] | T502 | Implement site-wide navigation improvements | DoD: Add breadcrumbs, enhance mobile menu, improve internal link structure
+
+# MEDIUM PRIORITY
+[ ] | T504 | Set up automated content publishing workflow | DoD: Create GitHub Actions workflow for scheduled content publishing
+[ ] | T505 | Develop content recommendation engine | DoD: Implement "Related Articles" feature based on categories and tags
+[ ] | T506 | Create interactive data visualizations | DoD: Build 3 data visualizations for corporate evil metrics
+
+# LOW PRIORITY
+[ ] | T503 | Optimize images across the site | DoD: Compress all images, implement responsive images, add proper alt text
+[ ] | T507 | Implement dark mode toggle | DoD: Add dark theme CSS, implement preference toggle, ensure all components support both themes
+[ ] | T508 | Create RSS feeds by category | DoD: Implement category-specific RSS feeds, add subscription options
+
+## Next steps
+- Review each task and pick the first small task to implement (e.g., T503 image optimization or T502 navigation tweaks).
+- For each selected task, create a task document using `scripts/start-task.sh "Short description"` and update this file when complete using `./scripts/mark-task-done.sh TASK_ID`.
+
+### Notes: Image optimization helper
+- A helper script `scripts/optimize-images.sh` was added (dry-run by default).
+- To preview changes locally run: `./scripts/optimize-images.sh` (no changes).
+- To apply optimizations after confirming, install `jpegoptim`/`pngquant` or ImageMagick and run:
+	`./scripts/optimize-images.sh --apply --quality 85`
+
+### Current work
+- T502 is the active next task to work on (site-wide navigation improvements). A task document will be created and a starter include added in `_includes/breadcrumbs.html`.
 
 
----
+# TASKS for GPT-5 mini
+# Format: STATUS | TASK_ID | DESCRIPTION | DoD (optional)
+# STATUS: [ ] pending, [x] complete
+# This file contains only tasks that are best-suited for the GPT-5 mini model.
+# Use this file as the working backlog when assigning or running GPT-5 mini.
+
+# HIGH PRIORITY - Moderate complexity tasks, basic content updates
+[ ] | T501 | Create standard page templates for key content types | DoD: Design templates for profiles, articles, organization pages with reusable components
+[ ] | T502 | Implement site-wide navigation improvements | DoD: Add breadcrumbs, enhance mobile menu, improve internal link structure
+
+# MEDIUM PRIORITY
+[ ] | T504 | Set up automated content publishing workflow | DoD: Create GitHub Actions workflow for scheduled content publishing
+[ ] | T505 | Develop content recommendation engine | DoD: Implement "Related Articles" feature based on categories and tags
+[ ] | T506 | Create interactive data visualizations | DoD: Build 3 data visualizations for corporate evil metrics
+
+# LOW PRIORITY
+[ ] | T503 | Optimize images across the site | DoD: Compress all images, implement responsive images, add proper alt text
+[ ] | T507 | Implement dark mode toggle | DoD: Add dark theme CSS, implement preference toggle, ensure all components support both themes
+[ ] | T508 | Create RSS feeds by category | DoD: Implement category-specific RSS feeds, add subscription options
+
+## Next steps
+- Review each task and pick the first small task to implement (e.g., T503 image optimization or T502 navigation tweaks).
+- For each selected task, create a task document using `scripts/start-task.sh "Short description"` and update this file when complete using `./scripts/mark-task-done.sh TASK_ID`.
+
+### Notes: Image optimization helper
+- A helper script `scripts/optimize-images.sh` was added (dry-run by default).
+- To preview changes locally run: `./scripts/optimize-images.sh` (no changes).
+- To apply optimizations after confirming, install `jpegoptim`/`pngquant` or ImageMagick and run:
+	`./scripts/optimize-images.sh --apply --quality 85`
+
+### Current work
+- T502 is the active next task to work on (site-wide navigation improvements). A task document will be created and a starter include added in `_includes/breadcrumbs.html`.
 
 # TASKS for GPT-5 mini
 # Format: STATUS | TASK_ID | DESCRIPTION | DoD (optional)
@@ -158,8 +240,72 @@
 - T502 is the active next task to work on (site-wide navigation improvements). A task document will be created and a starter include added in `_includes/breadcrumbs.html`.
 
 
+# TASKS for GPT-5 mini
+# Format: STATUS | TASK_ID | DESCRIPTION | DoD (optional)
+# STATUS: [ ] pending, [x] complete
+# This file contains only tasks that are best-suited for the GPT-5 mini model.
+# Use this file as the working backlog when assigning or running GPT-5 mini.
 
----
+# HIGH PRIORITY - Moderate complexity tasks, basic content updates
+[ ] | T501 | Create standard page templates for key content types | DoD: Design templates for profiles, articles, organization pages with reusable components
+[ ] | T502 | Implement site-wide navigation improvements | DoD: Add breadcrumbs, enhance mobile menu, improve internal link structure
+
+# MEDIUM PRIORITY
+[ ] | T505 | Develop content recommendation engine | DoD: Implement "Related Articles" feature based on categories and tags
+[ ] | T506 | Create interactive data visualizations | DoD: Build 3 data visualizations for corporate evil metrics
+
+# LOW PRIORITY
+[ ] | T503 | Optimize images across the site | DoD: Compress all images, implement responsive images, add proper alt text
+[ ] | T507 | Implement dark mode toggle | DoD: Add dark theme CSS, implement preference toggle, ensure all components support both themes
+[ ] | T508 | Create RSS feeds by category | DoD: Implement category-specific RSS feeds, add subscription options
+
+## Next steps
+- Review each task and pick the first small task to implement (e.g., T503 image optimization or T502 navigation tweaks).
+- For each selected task, create a task document using `scripts/start-task.sh "Short description"` and update this file when complete using `./scripts/mark-task-done.sh TASK_ID`.
+
+### Notes: Image optimization helper
+- A helper script `scripts/optimize-images.sh` was added (dry-run by default).
+- To preview changes locally run: `./scripts/optimize-images.sh` (no changes).
+- To apply optimizations after confirming, install `jpegoptim`/`pngquant` or ImageMagick and run:
+	`./scripts/optimize-images.sh --apply --quality 85`
+
+### Current work
+- T502 is the active next task to work on (site-wide navigation improvements). A task document will be created and a starter include added in `_includes/breadcrumbs.html`.
+
+
+
+# TASKS for GPT-5 mini
+# Format: STATUS | TASK_ID | DESCRIPTION | DoD (optional)
+# STATUS: [ ] pending, [x] complete
+# This file contains only tasks that are best-suited for the GPT-5 mini model.
+# Use this file as the working backlog when assigning or running GPT-5 mini.
+
+# HIGH PRIORITY - Moderate complexity tasks, basic content updates
+[ ] | T501 | Create standard page templates for key content types | DoD: Design templates for profiles, articles, organization pages with reusable components
+[ ] | T502 | Implement site-wide navigation improvements | DoD: Add breadcrumbs, enhance mobile menu, improve internal link structure
+
+# MEDIUM PRIORITY
+
+[ ] | T505 | Develop content recommendation engine | DoD: Implement "Related Articles" feature based on categories and tags
+[ ] | T506 | Create interactive data visualizations | DoD: Build 3 data visualizations for corporate evil metrics
+
+# LOW PRIORITY
+[ ] | T503 | Optimize images across the site | DoD: Compress all images, implement responsive images, add proper alt text
+[ ] | T507 | Implement dark mode toggle | DoD: Add dark theme CSS, implement preference toggle, ensure all components support both themes
+[ ] | T508 | Create RSS feeds by category | DoD: Implement category-specific RSS feeds, add subscription options
+
+## Next steps
+- Review each task and pick the first small task to implement (e.g., T503 image optimization or T502 navigation tweaks).
+- For each selected task, create a task document using `scripts/start-task.sh "Short description"` and update this file when complete using `./scripts/mark-task-done.sh TASK_ID`.
+
+### Notes: Image optimization helper
+- A helper script `scripts/optimize-images.sh` was added (dry-run by default).
+- To preview changes locally run: `./scripts/optimize-images.sh` (no changes).
+- To apply optimizations after confirming, install `jpegoptim`/`pngquant` or ImageMagick and run:
+	`./scripts/optimize-images.sh --apply --quality 85`
+
+### Current work
+- T502 is the active next task to work on (site-wide navigation improvements). A task document will be created and a starter include added in `_includes/breadcrumbs.html`.
 
 # TASKS for GPT-5 mini
 # Format: STATUS | TASK_ID | DESCRIPTION | DoD (optional)
@@ -195,9 +341,6 @@
 - T502 is the active next task to work on (site-wide navigation improvements). A task document will be created and a starter include added in `_includes/breadcrumbs.html`.
 
 
-
----
-
 # TASKS for GPT-5 mini
 # Format: STATUS | TASK_ID | DESCRIPTION | DoD (optional)
 # STATUS: [ ] pending, [x] complete
@@ -231,10 +374,6 @@
 ### Current work
 - T502 is the active next task to work on (site-wide navigation improvements). A task document will be created and a starter include added in `_includes/breadcrumbs.html`.
 
-
-
----
-
 # TASKS for GPT-5 mini
 # Format: STATUS | TASK_ID | DESCRIPTION | DoD (optional)
 # STATUS: [ ] pending, [x] complete
@@ -267,4 +406,3 @@
 
 ### Current work
 - T502 is the active next task to work on (site-wide navigation improvements). A task document will be created and a starter include added in `_includes/breadcrumbs.html`.
-
