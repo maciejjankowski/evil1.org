@@ -24,6 +24,7 @@ class EvilGamificationEngine {
         this.sessionStartTime = Date.now();
         this.pageViews = [];
         this.activityLog = [];
+        this.eventListeners = {};
         
         this.init();
     }
@@ -343,6 +344,9 @@ class EvilGamificationEngine {
         });
         
         this.trackAction('level_up', { oldLevel, newLevel, title: levelData.title });
+        
+        // Emit level up event for content gating system
+        this.emitEvent('levelUp', { oldLevel, newLevel, levelData });
     }
 
     /**
@@ -414,6 +418,9 @@ class EvilGamificationEngine {
         });
         
         this.trackAction('achievement_unlocked', { achievementId: achievement.id, name: achievement.name });
+        
+        // Emit achievement unlocked event for content gating system
+        this.emitEvent('achievementUnlocked', { achievement });
     }
 
     /**
@@ -818,6 +825,58 @@ class EvilGamificationEngine {
             });
         }, 120000); // After 2 minutes
     }
+
+    /**
+     * Add event listener for gamification events
+     */
+    addEventListener(event, callback) {
+        if (!this.eventListeners[event]) {
+            this.eventListeners[event] = [];
+        }
+        this.eventListeners[event].push(callback);
+    }
+
+    /**
+     * Remove event listener
+     */
+    removeEventListener(event, callback) {
+        if (this.eventListeners[event]) {
+            this.eventListeners[event] = this.eventListeners[event].filter(cb => cb !== callback);
+        }
+    }
+
+    /**
+     * Emit event to all listeners
+     */
+    emitEvent(event, data = {}) {
+        if (this.eventListeners[event]) {
+            this.eventListeners[event].forEach(callback => {
+                try {
+                    callback(data);
+                } catch (e) {
+                    console.error(`Error in event listener for ${event}:`, e);
+                }
+            });
+        }
+    }
+
+    /**
+     * Get current user level information
+     */
+    getCurrentLevel() {
+        const userPoints = this.userData.points;
+        let currentLevel = this.levels[0];
+        
+        for (const level of this.levels) {
+            if (userPoints >= level.points_required) {
+                currentLevel = level;
+            } else {
+                break;
+            }
+        }
+        
+        return currentLevel;
+    }
 }
 
 // Add required CSS animations
@@ -929,8 +988,10 @@ document.head.appendChild(style);
 // Initialize the evil gamification system when DOM is ready
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
-        window.evilGamification = new EvilGamificationEngine();
+        window.evilGamificationEngine = new EvilGamificationEngine();
+        window.evilGamification = window.evilGamificationEngine; // Backward compatibility
     });
 } else {
-    window.evilGamification = new EvilGamificationEngine();
+    window.evilGamificationEngine = new EvilGamificationEngine();
+    window.evilGamification = window.evilGamificationEngine; // Backward compatibility
 }
