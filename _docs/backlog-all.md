@@ -92,8 +92,6 @@
 - Jekyll build: `bundle exec jekyll build`
 - Visual tests: `npm test`
 
----
-
 # TASKS for GPT-5 mini
 # Format: STATUS | TASK_ID | DESCRIPTION | DoD (optional)
 # STATUS: [ ] pending, [x] complete
