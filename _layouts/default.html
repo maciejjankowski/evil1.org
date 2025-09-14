@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="{{ '/assets/css/manipulative-cart.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/social-pressure-system.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/email-automation-system.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/backup-emergency-system.css' | relative_url }}">
     {% if page.layout == 'awards-ceremony' %}<link rel="stylesheet" href="{{ '/assets/css/awards.css' | relative_url }}">{% endif %}
 
     <!-- HTMX for enhanced interactivity -->
@@ -86,6 +87,9 @@
     
     <!-- Manipulative Shopping Cart -->
     {% include manipulative-cart.html %}
+    
+    <!-- Annual Backup Emergency System -->
+    {% include backup-emergency-system.html %}
     
     {% include footer.html %}
 
