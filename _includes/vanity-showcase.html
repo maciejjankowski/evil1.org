@@ -837,7 +837,12 @@
 
 <script>
 function purchaseVanityItem(tier) {
-    const selectedTier = document.querySelector(`input[name="vanityTier${tier}"]:checked`).value;
+    const selectedRadio = document.querySelector(`input[name="vanityTier${tier}"]:checked`);
+    if (!selectedRadio) {
+        alert("Please select a corporate evil level before purchasing.");
+        return;
+    }
+    const selectedTier = selectedRadio.value;
     const prices = {
         basic: 99.99,
         executive: 199.99,
