@@ -260,7 +260,7 @@ permalink: /unfiltered/corporate-chutzpah-quotes/
 
 ## Final Ten - Ultimate Chutzpah
 
-191. "Genocide? We prefer 'aggressive population management.'" - Various defense contractors
+191. "Genocide? Human rights violations? We prefer 'aggressive population management.'" - Various defense contractors
 192. "We don't create pandemics, we offer global health challenges." - Gain-of-function research labs
 193. "Our nuclear accidents aren't disasters, they're atomic learning experiences." - TEPCO (Fukushima)
 194. "We don't practice slavery, we offer zero-wage internship programs." - Prison industrial complex
