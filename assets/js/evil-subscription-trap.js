@@ -1404,12 +1404,12 @@ document.head.appendChild(subscriptionTrapStyle);
 
 // Initialize subscription trap system when gamification is ready
 window.addEventListener('load', () => {
-    if (window.evilGamification) {
-        window.evilSubscriptionTrap = new EvilSubscriptionTrap(window.evilGamification);
+    if (window.evilGamificationEngine) {
+        window.evilSubscriptionTrap = new EvilSubscriptionTrap(window.evilGamificationEngine);
     } else {
         const checkGamification = setInterval(() => {
-            if (window.evilGamification) {
-                window.evilSubscriptionTrap = new EvilSubscriptionTrap(window.evilGamification);
+            if (window.evilGamificationEngine) {
+                window.evilSubscriptionTrap = new EvilSubscriptionTrap(window.evilGamificationEngine);
                 clearInterval(checkGamification);
             }
         }, 100);

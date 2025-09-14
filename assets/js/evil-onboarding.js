@@ -1358,13 +1358,13 @@ document.head.appendChild(onboardingStyle);
 
 // Initialize onboarding system when gamification is ready
 window.addEventListener('load', () => {
-    if (window.evilGamification) {
-        window.evilOnboarding = new EvilOnboardingSystem(window.evilGamification);
+    if (window.evilGamificationEngine) {
+        window.evilOnboarding = new EvilOnboardingSystem(window.evilGamificationEngine);
     } else {
         // Wait for gamification to initialize
         const checkGamification = setInterval(() => {
-            if (window.evilGamification) {
-                window.evilOnboarding = new EvilOnboardingSystem(window.evilGamification);
+            if (window.evilGamificationEngine) {
+                window.evilOnboarding = new EvilOnboardingSystem(window.evilGamificationEngine);
                 clearInterval(checkGamification);
             }
         }, 100);

@@ -989,9 +989,7 @@ document.head.appendChild(style);
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
         window.evilGamificationEngine = new EvilGamificationEngine();
-        window.evilGamification = window.evilGamificationEngine; // Backward compatibility
     });
 } else {
     window.evilGamificationEngine = new EvilGamificationEngine();
-    window.evilGamification = window.evilGamificationEngine; // Backward compatibility
 }
