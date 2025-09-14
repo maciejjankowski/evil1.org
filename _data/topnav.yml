@@ -29,6 +29,9 @@
     - title: Metrics Dashboard
       url: /metrics-dashboard/
       external: false
+    - title: Evaluation Tools
+      url: /evaluation-dashboard/
+      external: false
 - title: Education
   url: /trainings/
   priority: 3
