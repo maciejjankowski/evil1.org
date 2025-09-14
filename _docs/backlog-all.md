@@ -1,6 +1,8 @@
 # BACKLOG: Simplified Task List
 # Format: | STATUS | TASK_ID | TASK_DESCRIPTION | MODEL | DoD
 # HIGH PRIORITY TASKS (Most Important)
+[x] | T528 | Implement crowdfunding system for site development sponsorship | GPT-4.1 | Create complete crowdfunding mini-site with campaign management, contribution tiers, payment integration, and user workflow; includes data structure, layouts, individual campaign pages, checkout flow, and navigation integration
+[ ] | T529 | Create backend API for crowdfunding contribution processing | GPT-4.1 | Implement server-side payment processing, contribution tracking, user notification system, and campaign progress updates
 [ ] | T409 | Hire and onboard freelance investigative writers | GPT-4o | Review applications, conduct interviews, onboard 3-5 writers, establish workflow and quality standards
 [ ] | T410 | Create comprehensive style guide for consistent content quality | GPT-4o | Document tone guidelines, formatting standards, fact-checking procedures, citation requirements, editorial workflow
 [ ] | T407 | Develop mobile app for iOS and Android | GPT-4.1 | Design app architecture, develop native apps, implement push notifications, app store optimization
