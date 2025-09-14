@@ -2,6 +2,11 @@
 # Format: | STATUS | TASK_ID | TASK_DESCRIPTION | MODEL | DoD
 
 # HIGH PRIORITY TASKS (Most Important)
+[x] | T600 | Create article exposing Subscription Economy Traps | GPT-4o | Write comprehensive article on recurring payment exploitation, dark patterns in cancellation, auto-renewal abuse; include real examples and sources
+[x] | T601 | Create article exposing Gig Economy Exploitation | GPT-4o | Write detailed article on contractor misclassification, benefit avoidance, worker exploitation in gig economy; include case studies and legal analysis
+[x] | T602 | Create article exposing AI Washing schemes | GPT-4o | Write investigative article on companies falsely claiming AI capabilities for stock manipulation and investor fraud; include specific examples
+[x] | T603 | Create article exposing Medical Debt Collection practices | GPT-4o | Write exposé on predatory healthcare debt collection, targeting vulnerable patients, aggressive tactics; include real case studies
+[ ] | T604 | Create article exposing Academic Surveillance Capitalism | GPT-4o | Write article on educational technology companies harvesting student data for profit, privacy violations in schools
 [ ] | T409 | Hire and onboard freelance investigative writers | GPT-4o | Review applications, conduct interviews, onboard 3-5 writers, establish workflow and quality standards
 [ ] | T410 | Create comprehensive style guide for consistent content quality | GPT-4o | Document tone guidelines, formatting standards, fact-checking procedures, citation requirements, editorial workflow
 [ ] | T407 | Develop mobile app for iOS and Android | GPT-4.1 | Design app architecture, develop native apps, implement push notifications, app store optimization
@@ -14,6 +19,14 @@
 [ ] | T205 | Analytics: Integrate Plausible with goals (buy_now, membership_start, newsletter) | Gemini 2.5 Pro | Events fire and appear in dashboard
 
 # MEDIUM PRIORITY TASKS
+[x] | T611 | Create article exposing Insurance Claim Denial practices | GPT-4o | Write comprehensive article on systematic insurance denial schemes, algorithmic cruelty, and legal theft from sick patients
+[x] | T612 | Create article exposing Corporate Legal Intimidation tactics | GPT-4o | Write exposé on SLAPP suits, retaliatory litigation, and using lawsuits as weapons against critics and whistleblowers
+[ ] | T605 | Create article exposing Academic Surveillance Capitalism | GPT-4o | Write article on educational technology companies harvesting student data for profit, privacy violations in schools
+[ ] | T606 | Create article exposing Predatory Gaming Monetization | GPT-4o | Write exposé on loot boxes, pay-to-win mechanics, gambling addiction targeting children in video games
+[ ] | T607 | Create article exposing Environmental Racism practices | GPT-4o | Write investigative piece on corporations strategically locating polluting facilities in minority communities
+[ ] | T608 | Create article exposing Carbon Credit Fraud schemes | GPT-4o | Write article on fake carbon credits, greenwashing through offset purchases, environmental responsibility theater
+[ ] | T609 | Create article exposing Fertility Data Mining | GPT-4o | Write article on period/fertility tracking apps selling intimate health data to advertisers and employers
+[ ] | T610 | Create article exposing Shrinkflation Deception tactics | GPT-4o | Write article on reducing product sizes while maintaining prices, packaging deception, value extraction
 [ ] | T411 | Develop content repurposing strategy for maximum reach | GPT-4o | Create social media content from articles, develop email newsletter content, create video scripts, podcast outlines
 [ ] | T412 | Build community forum and discussion platform | GPT-4o | Choose forum software, integrate with main site, create community guidelines, moderate initial discussions
 [ ] | T504 | Set up automated content publishing workflow | GPT-5 mini | Add a GitHub Actions workflow `/.github/workflows/publish-schedule.yml` that creates PRs or publishes posts based on `_data/schedule`; include a simple smoke test for schedule parsing
