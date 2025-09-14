@@ -25,6 +25,13 @@
 [ ] | T522 | Restructure company/philip-morris.md to use company_profile layout and frontmatter data | Grok Code Fast 1 | Move HTML to layout, leave only frontmatter in .md file
 [ ] | T523 | Restructure company/monsanto.md to use company_profile layout and frontmatter data | Grok Code Fast 1 | Move HTML to layout, leave only frontmatter in .md file
 [ ] | T206 | Email capture + funnels (welcome + 3-step merch funnel) | Gemini 2.5 Pro | Forms submit; sequences active in provider; test subscriber receives all emails
+[ ] | T608 | Migrate from Formspree to ConvertKit for advanced email marketing automation | GPT-4.1 | ConvertKit account setup, domain authentication, existing subscriber import, form integration complete; 98%+ deliverability achieved
+[ ] | T609 | Create 5 high-conversion lead magnets for email capture | GPT-4o | Evil500 Corporate Corruption Index, Whistleblower Guide, Executive Compensation Database, Dark Patterns Toolkit, Legal Loopholes Guide - all designed and automated delivery
+[ ] | T610 | Program 14-day profitable email onboarding sequence | GPT-4.1 | Complete behavioral sequence with A/B tested variants, targeting 40%+ conversion to paid subscription, automated triggers and segmentation
+[ ] | T611 | Deploy exit-intent and scroll-triggered email capture forms | GPT-5 mini | Replace existing newsletter widgets with ConvertKit high-conversion forms, 75%+ capture rate improvement achieved
+[ ] | T612 | Setup advanced email segmentation and behavioral automation | Gemini 2.5 Pro | Tag-based subscriber profiling, engagement scoring, churn prediction, re-engagement sequences, 95%+ retention rate
+[ ] | T613 | Create weekly "Corporate Evil Report" newsletter format | GPT-4o | Monday Executive Scandals, Wednesday Investigation Previews, Friday Activist Actions - standardized templates with 55%+ open rates
+[ ] | T614 | Integrate email system with Stripe for subscription lifecycle management | GPT-4.1 | Webhook handling for payment events, automatic tagging, upsell sequences, customer lifetime value tracking
 [ ] | T207 | Pricing experiments framework (YAML-driven, UTM-coded offers) | Gemini 2.5 Pro | 2 live price tests; conversions logged per variant
 [ ] | T209 | Reviews/UGC component (YAML-backed testimonials) | Gemini 2.5 Pro | Component live with 5 seeded reviews; shown on top 10 products
 [ ] | T210 | Bundles + coupons via Stripe | Gemini 2.5 Pro | 2 bundle pages live and purchasable; coupons applied in Stripe
