@@ -1,0 +1,208 @@
+/* Evil Career Advisor Styles */
+.career-advisor-container {
+    width: 760px;
+    margin: 20px auto;
+    background: #fff;
+    border: 1px solid #CCC;
+    padding: 20px;
+}
+
+.career-advisor-header {
+    background: linear-gradient(#CC0000, #990000);
+    color: #fff;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 18px;
+    border-bottom: 1px solid #660000;
+    margin: -20px -20px 20px -20px;
+    text-align: center;
+}
+
+.career-advisor-intro {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.career-advisor-intro h2 {
+    color: #CC0000;
+    margin-bottom: 10px;
+}
+
+.career-advisor-intro p {
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
+}
+
+.career-advisor-form {
+    background: #F0F0F0;
+    padding: 15px;
+    border: 1px solid #DDD;
+    margin-bottom: 20px;
+}
+
+.career-advisor-form h3 {
+    color: #003366;
+    margin-bottom: 15px;
+}
+
+.career-advisor-section {
+    margin-bottom: 20px;
+}
+
+.career-advisor-section h4 {
+    color: #CC0000;
+    margin-bottom: 10px;
+}
+
+.career-advisor-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.career-advisor-grid label {
+    font-size: 12px;
+}
+
+.career-advisor-radio-list label {
+    font-size: 12px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.career-advisor-submit {
+    text-align: center;
+}
+
+.career-advisor-submit button {
+    background: linear-gradient(#CC0000, #990000);
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.career-advisor-results {
+    background: #F0F0F0;
+    padding: 15px;
+    border: 1px solid #DDD;
+    margin-bottom: 20px;
+}
+
+.career-advisor-results h3 {
+    color: #003366;
+    margin-bottom: 15px;
+}
+
+.career-advisor-restart {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.career-advisor-restart button {
+    background: #666;
+    color: white;
+    padding: 8px 20px;
+    border: none;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.career-advisor-match {
+    border: 1px solid #DDD;
+    margin-bottom: 15px;
+    padding: 15px;
+    background: white;
+    border-radius: 4px;
+}
+
+.career-advisor-match-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.career-advisor-match h4 {
+    color: #CC0000;
+    margin: 0;
+    font-size: 14px;
+}
+
+.career-advisor-match-score {
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.career-advisor-match-score.high {
+    background: #CC0000;
+}
+
+.career-advisor-match-score.medium {
+    background: #FF6600;
+}
+
+.career-advisor-match-score.low {
+    background: #666;
+}
+
+.career-advisor-match p {
+    font-size: 12px;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.career-advisor-match-reasons {
+    margin-bottom: 10px;
+}
+
+.career-advisor-match-reasons strong {
+    font-size: 11px;
+    color: #003366;
+}
+
+.career-advisor-match-reasons ul {
+    margin: 5px 0;
+    padding-left: 20px;
+    font-size: 11px;
+    color: #666;
+}
+
+.career-advisor-match-action {
+    text-align: right;
+}
+
+.career-advisor-match-action a {
+    background: #003366;
+    color: white;
+    padding: 6px 12px;
+    text-decoration: none;
+    font-size: 11px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.career-advisor-disclaimer {
+    margin-top: 20px;
+    border-top: 1px solid #CCC;
+    padding-top: 15px;
+    font-size: 11px;
+    color: #666;
+    text-align: center;
+}
+
+.career-advisor-no-results {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    padding: 20px;
+}
