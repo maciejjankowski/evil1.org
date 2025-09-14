@@ -140,7 +140,6 @@
 ### Current work
 - T502 is the active next task to work on (site-wide navigation improvements). A task document will be created and a starter include added in `_includes/breadcrumbs.html`.
 
-
 # TASKS for GPT-5 mini
 # Format: STATUS | TASK_ID | DESCRIPTION | DoD (optional)
 # STATUS: [ ] pending, [x] complete

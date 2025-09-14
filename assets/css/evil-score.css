@@ -1,0 +1,366 @@
+/* Evil Score Service Styles */
+
+.evil-score-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.evil-score-logo h1 {
+    color: #2c3e50;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-style: italic;
+    color: #7f8c8d;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+/* Company Profile Evil Score Section */
+.evil-score-section {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 30px 0;
+}
+
+.company-evil-score {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.evil-score-main {
+    text-align: center;
+}
+
+.score-badge {
+    display: inline-block;
+    padding: 20px 30px;
+    border-radius: 50px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.score-badge.score-evil-grandmaster {
+    background: linear-gradient(45deg, #8B0000, #DC143C);
+    box-shadow: 0 6px 20px rgba(220, 20, 60, 0.4);
+}
+
+.score-badge.score-evil-expert {
+    background: linear-gradient(45deg, #FF4500, #FF6347);
+    box-shadow: 0 6px 20px rgba(255, 69, 0, 0.4);
+}
+
+.score-badge.score-evil-practitioner {
+    background: linear-gradient(45deg, #FF8C00, #FFA500);
+    box-shadow: 0 6px 20px rgba(255, 165, 0, 0.4);
+}
+
+.score-number {
+    font-size: 1.2em;
+}
+
+.score-total {
+    font-size: 0.6em;
+    opacity: 0.8;
+}
+
+.score-rating {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #f1c40f;
+    margin-bottom: 10px;
+}
+
+.certification-date {
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.score-breakdown h3,
+.score-highlights h3 {
+    color: #ecf0f1;
+    margin-bottom: 15px;
+}
+
+.breakdown-grid {
+    display: grid;
+    gap: 10px;
+}
+
+.breakdown-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+}
+
+.breakdown-item .category {
+    font-size: 0.9em;
+}
+
+.breakdown-item .score {
+    font-weight: bold;
+    color: #f1c40f;
+}
+
+.score-highlights ul {
+    list-style: none;
+    padding: 0;
+}
+
+.score-highlights li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.score-highlights li:before {
+    content: "🎯 ";
+    margin-right: 8px;
+}
+
+.certification-cta {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-evil-score {
+    display: inline-block;
+    background: #e74c3c;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.btn-evil-score:hover {
+    background: #c0392b;
+    color: white;
+}
+
+/* Assessment Form */
+.assessment-section {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 8px;
+    margin: 40px 0;
+}
+
+.evil-assessment-form {
+    max-width: 800px;
+}
+
+.assessment-category {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: white;
+    border-radius: 6px;
+    border-left: 4px solid #e74c3c;
+}
+
+.assessment-category h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.question {
+    margin-bottom: 15px;
+}
+
+.question label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #34495e;
+}
+
+.question select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.btn-primary {
+    background: #e74c3c;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background: #c0392b;
+}
+
+/* Score Result */
+.score-result {
+    margin-top: 30px;
+    padding: 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.score-display {
+    font-size: 3em;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.score-display .score-number {
+    color: #fff;
+}
+
+.score-display .score-total {
+    color: #ecf0f1;
+    font-size: 0.6em;
+}
+
+.score-result .score-rating {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 15px 0;
+    color: #f1c40f;
+}
+
+.score-description {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+/* Certified Companies */
+.certified-companies {
+    margin: 40px 0;
+}
+
+.company-scores {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.company-score-card {
+    background: white;
+    border: 1px solid #ecf0f1;
+    border-radius: 8px;
+    padding: 20px;
+    transition: box-shadow 0.3s;
+}
+
+.company-score-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.company-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.company-name a {
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+.company-name a:hover {
+    color: #3498db;
+}
+
+.evil-score-badge {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    border-radius: 25px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.evil-score-badge.score-evil-grandmaster {
+    background: linear-gradient(45deg, #8B0000, #DC143C);
+    color: white;
+}
+
+.evil-score-badge.score-evil-expert {
+    background: linear-gradient(45deg, #FF4500, #FF6347);
+    color: white;
+}
+
+.evil-score-badge.score-evil-practitioner {
+    background: linear-gradient(45deg, #FF8C00, #FFA500);
+    color: white;
+}
+
+.evil-score-badge .score {
+    font-size: 1.2em;
+}
+
+.evil-score-badge .rating {
+    font-size: 0.9em;
+}
+
+.score-highlights {
+    margin-top: 10px;
+}
+
+.highlight {
+    display: inline-block;
+    background: #ecf0f1;
+    color: #2c3e50;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.8em;
+    margin: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .evil-score-page {
+        padding: 10px;
+    }
+    
+    .evil-score-logo h1 {
+        font-size: 1.8em;
+    }
+    
+    .company-scores {
+        grid-template-columns: 1fr;
+    }
+    
+    .score-display {
+        font-size: 2em;
+    }
+    
+    .company-evil-score {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .score-badge {
+        font-size: 1.5em;
+    }
+}

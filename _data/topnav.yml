@@ -23,6 +23,15 @@
     - title: Companies
       url: /company/
       external: false
+
+- title: Services
+  url: /evil-score/
+  priority: 3
+  external: false
+  children:
+    - title: Evil Score™
+      url: /evil-score/
+      external: false
 - title: Evil Assessment
   url: /evil-strengthsfinder/
   priority: 3
