@@ -9,9 +9,20 @@
     - title: News & Analysis
       url: /News/
       external: false
+- title: Evil 500
+  url: /evil500/
+  priority: 2
+  external: false
+  children:
+    - title: Rankings
+      url: /evil500/
+      external: false
+    - title: Certification Program
+      url: /evil500/certification/
+      external: false
 - title: Exposures
   url: /profiles/
-  priority: 2
+  priority: 3
   external: false
   children:
     - title: Executive Profiles

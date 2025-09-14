@@ -1,4 +1,12 @@
 amazon:
+  certification:
+    status: "none"  # none, basic, premium, platinum
+    label: ""  # PR-washed, Sponsor-protected, Clean-slate, etc.
+    amount_paid: 0
+    expiry_date: ""
+    benefits: []
+  evil_score: 95  # 0-100, higher = more evil
+  evil_rank: 2  # Position in Evil 500 list
   timeline:
     - year: "1990s"
       title: "Online Book Monopoly"
@@ -89,6 +97,166 @@ amazon:
     - title: "Amazon Tax Avoidance"
       url: "https://www.propublica.org/article/amazon-tax-loopholes"
 
+
+google:
+  certification:
+    status: "premium"
+    label: "PR-washed"
+    amount_paid: 2500000
+    expiry_date: "2026-12-31"
+    benefits: ["softer_tone", "positive_spin", "controversy_omission"]
+  evil_score: 88
+  evil_rank: 5
+  timeline:
+    - year: "2000s"
+      title: "Data Collection Empire"
+      description: "Started collecting user data for targeted advertising. 'Don't be evil' was just marketing."
+    - year: "2010s"
+      title: "Privacy Violations"
+      description: "Faced billions in fines for privacy violations. Continued collecting data despite user consent."
+    - year: "2020s"
+      title: "Monopoly Expansion"
+      description: "Used market dominance to crush competitors in search, advertising, and cloud services."
+  crimes:
+    - title: "Privacy Invasion"
+      description: "Systematically collected user data without proper consent for targeted advertising."
+      impact: "Violated privacy of billions of users worldwide"
+    - title: "Search Manipulation"
+      description: "Favored own products in search results to maintain market dominance."
+      impact: "Reduced competition and consumer choice"
+  executives:
+    - name: "Sundar Pichai"
+      title: "CEO"
+      bio: "Led Google's expansion into surveillance capitalism while maintaining facade of user privacy."
+      compensation: "$280 million (2022)"
+  financials:
+    - value: "$307B"
+      label: "2023 Revenue"
+    - value: "91%"
+      label: "Search Market Share"
+  sources:
+    - title: "Google Privacy Violations"
+      url: "https://www.nytimes.com/2023/google-privacy"
+
+meta:
+  certification:
+    status: "basic"
+    label: "Sponsor-protected"
+    amount_paid: 1000000
+    expiry_date: "2025-06-30"
+    benefits: ["reduced_mockery"]
+  evil_score: 92
+  evil_rank: 3
+  timeline:
+    - year: "2000s"
+      title: "Social Surveillance"
+      description: "Created platform to harvest personal data and manipulate user behavior for profit."
+    - year: "2010s"
+      title: "Election Interference"
+      description: "Allowed foreign interference in elections while profiting from political misinformation."
+    - year: "2020s"
+      title: "Mental Health Crisis"
+      description: "Internal studies showed platform harms teen mental health but prioritized engagement over safety."
+  crimes:
+    - title: "Data Harvesting"
+      description: "Collected data from users and non-users without consent, including biometric data."
+      impact: "Privacy violations affecting billions globally"
+    - title: "Election Manipulation"
+      description: "Allowed targeted misinformation campaigns that influenced democratic elections."
+      impact: "Undermined democratic processes worldwide"
+  executives:
+    - name: "Mark Zuckerberg"
+      title: "CEO"
+      bio: "Built surveillance empire disguised as social network. Prioritized growth over user safety."
+      compensation: "$24 million (2023)"
+  financials:
+    - value: "$134B"
+      label: "2023 Revenue"
+    - value: "3.8B"
+      label: "Monthly Active Users"
+  sources:
+    - title: "Facebook Papers"
+      url: "https://www.washingtonpost.com/facebook-papers"
+
+exxonmobil:
+  certification:
+    status: "none"
+    label: ""
+    amount_paid: 0
+    expiry_date: ""
+    benefits: []
+  evil_score: 98
+  evil_rank: 1
+  timeline:
+    - year: "1970s"
+      title: "Climate Denial Begins"
+      description: "Internal scientists confirmed climate change, company began funding denial campaigns."
+    - year: "1980s-2000s"
+      title: "Disinformation Campaign"
+      description: "Spent millions funding fake climate science and lobbying against environmental regulation."
+    - year: "2010s-2020s"
+      title: "Continued Extraction"
+      description: "Despite knowing climate consequences, continued aggressive fossil fuel extraction."
+  crimes:
+    - title: "Climate Disinformation"
+      description: "Funded climate denial despite internal confirmation of global warming."
+      impact: "Delayed climate action by decades, contributing to climate crisis"
+    - title: "Environmental Destruction"
+      description: "Caused massive oil spills and environmental contamination worldwide."
+      impact: "Destroyed ecosystems and communities globally"
+  executives:
+    - name: "Darren Woods"
+      title: "CEO"
+      bio: "Continues Exxon's legacy of climate denial and environmental destruction."
+      compensation: "$36 million (2023)"
+  financials:
+    - value: "$413B"
+      label: "2023 Revenue"
+    - value: "$56B"
+      label: "2023 Profits"
+  sources:
+    - title: "Exxon Climate Papers"
+      url: "https://www.scientificamerican.com/exxon-climate-research"
+
+apple:
+  certification:
+    status: "platinum"
+    label: "Clean-slate"
+    amount_paid: 5000000
+    expiry_date: "2027-12-31"
+    benefits: ["positive_spin", "controversy_omission", "executive_protection", "greenwashing_support"]
+  evil_score: 78
+  evil_rank: 12
+  timeline:
+    - year: "2000s"
+      title: "Planned Obsolescence"
+      description: "Designed products to fail and become obsolete to drive constant upgrades."
+    - year: "2010s"
+      title: "Tax Avoidance"
+      description: "Used complex Irish tax structures to avoid billions in taxes globally."
+    - year: "2020s"
+      title: "App Store Monopoly"
+      description: "Maintained 30% commission monopoly on app sales despite antitrust pressure."
+  crimes:
+    - title: "Labor Exploitation"
+      description: "Supplier factories use forced labor and maintain poor working conditions."
+      impact: "Exploitation of workers in developing countries"
+    - title: "Right to Repair Blocking"
+      description: "Actively lobbied against right to repair laws to maintain repair monopoly."
+      impact: "Increased e-waste and consumer costs"
+  executives:
+    - name: "Tim Cook"
+      title: "CEO"
+      bio: "Maintained Apple's tax avoidance and monopolistic practices while projecting progressive image."
+      compensation: "$99 million (2023)"
+  financials:
+    - value: "$383B"
+      label: "2023 Revenue"
+    - value: "$13B"
+      label: "Taxes Avoided (2020)"
+  sources:
+    - title: "Apple Tax Avoidance"
+      url: "https://www.nytimes.com/apple-tax-ireland"
 exxonmobil:
   name: "ExxonMobil"
   evil_score:
@@ -124,3 +292,4 @@ google:
       tax_avoidance: 18
       consumer_manipulation: 20
       monopoly_power: 20
+
