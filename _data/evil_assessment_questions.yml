@@ -1,0 +1,153 @@
+---
+# Consumer Evil Assessment Questions
+# Satirical questions designed to "help" consumers maximize their support for corporate evil
+
+- text: "When choosing where to buy groceries, what's your top priority?"
+  options:
+    - text: "Supporting local farmers and small businesses"
+      evil_score: 5
+      corporate_beneficiary: "Local Businesses"
+    - text: "Finding the cheapest prices regardless of labor practices"
+      evil_score: 25
+      corporate_beneficiary: "Walmart"
+    - text: "Shopping at stores that actively union-bust and exploit workers"
+      evil_score: 40
+      corporate_beneficiary: "Amazon"
+    - text: "Exclusively patronizing monopolistic retailers that destroy communities"
+      evil_score: 50
+      corporate_beneficiary: "Walmart & Amazon"
+
+- text: "What's your preferred approach to buying clothes?"
+  options:
+    - text: "Buying quality items that last years from ethical brands"
+      evil_score: 0
+      corporate_beneficiary: "Ethical Fashion"
+    - text: "Shopping fast fashion because it's trendy and cheap"
+      evil_score: 30
+      corporate_beneficiary: "H&M"
+    - text: "Buying from brands known for using child labor"
+      evil_score: 45
+      corporate_beneficiary: "Nike"
+    - text: "Exclusively shopping ultra-fast fashion that changes weekly"
+      evil_score: 50
+      corporate_beneficiary: "Shein"
+
+- text: "How do you handle your banking and finances?"
+  options:
+    - text: "Using local credit unions and ethical banks"
+      evil_score: 5
+      corporate_beneficiary: "Community Banks"
+    - text: "Banking with institutions that charge excessive fees"
+      evil_score: 25
+      corporate_beneficiary: "Wells Fargo"
+    - text: "Choosing banks with histories of discrimination and fraud"
+      evil_score: 40
+      corporate_beneficiary: "Bank of America"
+    - text: "Exclusively using predatory payday loan services"
+      evil_score: 50
+      corporate_beneficiary: "Payday Lenders"
+
+- text: "What's your transportation strategy?"
+  options:
+    - text: "Walking, biking, or using public transportation"
+      evil_score: 0
+      corporate_beneficiary: "Public Transit"
+    - text: "Driving a fuel-efficient hybrid or electric vehicle"
+      evil_score: 10
+      corporate_beneficiary: "Tesla"
+    - text: "Driving a gas-guzzling SUV for daily errands"
+      evil_score: 30
+      corporate_beneficiary: "ExxonMobil"
+    - text: "Flying private jets for routine domestic travel"
+      evil_score: 50
+      corporate_beneficiary: "Private Aviation"
+
+- text: "How do you choose your streaming and entertainment services?"
+  options:
+    - text: "Supporting independent artists and creators directly"
+      evil_score: 5
+      corporate_beneficiary: "Independent Creators"
+    - text: "Using multiple subscription services without much thought"
+      evil_score: 20
+      corporate_beneficiary: "Media Conglomerates"
+    - text: "Exclusively consuming content from platforms that exploit creators"
+      evil_score: 35
+      corporate_beneficiary: "YouTube/Google"
+    - text: "Paying for premium packages while content creators get pennies"
+      evil_score: 45
+      corporate_beneficiary: "Spotify"
+
+- text: "What's your approach to buying technology?"
+  options:
+    - text: "Buying refurbished or repairing existing devices"
+      evil_score: 5
+      corporate_beneficiary: "Repair Economy"
+    - text: "Upgrading only when devices actually break"
+      evil_score: 15
+      corporate_beneficiary: "Various Tech"
+    - text: "Buying new devices every year from planned obsolescence leaders"
+      evil_score: 35
+      corporate_beneficiary: "Apple"
+    - text: "Pre-ordering every new release to maximize e-waste"
+      evil_score: 50
+      corporate_beneficiary: "Apple & Samsung"
+
+- text: "How do you handle your healthcare choices?"
+  options:
+    - text: "Using preventive care and community health services"
+      evil_score: 5
+      corporate_beneficiary: "Community Health"
+    - text: "Using insurance through employment with reasonable coverage"
+      evil_score: 15
+      corporate_beneficiary: "Insurance Industry"
+    - text: "Choosing plans that prioritize profit over patient care"
+      evil_score: 35
+      corporate_beneficiary: "UnitedHealth"
+    - text: "Supporting healthcare systems that bankrupt patients"
+      evil_score: 50
+      corporate_beneficiary: "Big Pharma"
+
+- text: "What's your food delivery and dining strategy?"
+  options:
+    - text: "Cooking at home and supporting local restaurants directly"
+      evil_score: 5
+      corporate_beneficiary: "Local Restaurants"
+    - text: "Occasionally using delivery apps for convenience"
+      evil_score: 20
+      corporate_beneficiary: "DoorDash"
+    - text: "Exclusively using gig economy apps that exploit drivers"
+      evil_score: 40
+      corporate_beneficiary: "Uber Eats"
+    - text: "Ordering delivery multiple times daily while drivers earn below minimum wage"
+      evil_score: 50
+      corporate_beneficiary: "Gig Economy Platforms"
+
+- text: "How do you approach investing and retirement planning?"
+  options:
+    - text: "Investing in ESG funds and ethical investment options"
+      evil_score: 5
+      corporate_beneficiary: "Sustainable Investing"
+    - text: "Using basic index funds without much research"
+      evil_score: 15
+      corporate_beneficiary: "Investment Industry"
+    - text: "Actively investing in fossil fuel and weapons companies"
+      evil_score: 40
+      corporate_beneficiary: "ExxonMobil & Raytheon"
+    - text: "Day trading to maximize short-term profits from human suffering"
+      evil_score: 50
+      corporate_beneficiary: "Wall Street"
+
+- text: "What's your preferred way to consume news and information?"
+  options:
+    - text: "Supporting independent journalism and fact-checking sources"
+      evil_score: 5
+      corporate_beneficiary: "Independent Media"
+    - text: "Reading diverse sources from various mainstream outlets"
+      evil_score: 15
+      corporate_beneficiary: "Media Industry"
+    - text: "Only consuming news from biased sources that confirm your beliefs"
+      evil_score: 30
+      corporate_beneficiary: "Fox News & CNN"
+    - text: "Getting all information from social media algorithms designed to enrage"
+      evil_score: 50
+      corporate_beneficiary: "Meta & Twitter"
