@@ -20,3 +20,185 @@ jobs:
         run: bundle exec ruby ./scripts/publish-schedule-smoke.rb
       - name: Create PR or publish
         run: echo "Publishing steps would run here (skipped in smoke run)"
+name: Automated Content Publishing
+
+on:
+  schedule:
+    # Run daily at 9 AM UTC to check for scheduled content
+    - cron: '0 9 * * *'
+  workflow_dispatch:
+    inputs:
+      force_publish:
+        description: 'Force publish all scheduled content'
+        required: false
+        default: 'false'
+        type: boolean
+
+jobs:
+  publish-scheduled-content:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+
+      - name: Install dependencies
+        run: bundle install --jobs 4 --retry 3
+
+      - name: Create schedule data file if not exists
+        run: |
+          mkdir -p _data
+          if [ ! -f _data/schedule.yml ]; then
+            cat > _data/schedule.yml << 'EOF'
+          # Content Publishing Schedule
+          # Format: date: "YYYY-MM-DD", content_type: "post|article", file: "path/to/file.md", publish: true/false
+          scheduled_content:
+            - date: "2024-01-01"
+              content_type: "post"
+              file: "_posts/2024-01-01-sample-post.md"
+              publish: false
+              title: "Sample Scheduled Post"
+          EOF
+          fi
+
+      - name: Check for scheduled content
+        id: check_content
+        run: |
+          echo "Checking for content scheduled for today: $(date +%Y-%m-%d)"
+          
+          # Create a simple Ruby script to parse schedule and check dates
+          cat > check_schedule.rb << 'EOF'
+          require 'yaml'
+          require 'date'
+          
+          # Load schedule
+          schedule_file = '_data/schedule.yml'
+          if File.exist?(schedule_file)
+            schedule = YAML.load_file(schedule_file)
+            today = Date.today.to_s
+            force_publish = ARGV[0] == 'true'
+            
+            if schedule && schedule['scheduled_content']
+              published_something = false
+              
+              schedule['scheduled_content'].each do |item|
+                if (item['date'] == today || force_publish) && item['publish'] == false
+                  puts "Publishing: #{item['title']} (#{item['file']})"
+                  
+                  # Mark as published in schedule
+                  item['publish'] = true
+                  published_something = true
+                  
+                  # If the content file doesn't exist, create a basic one
+                  unless File.exist?(item['file'])
+                    content = case item['content_type']
+                    when 'post'
+                      <<~CONTENT
+                        ---
+                        layout: post
+                        title: "#{item['title']}"
+                        date: #{item['date']}
+                        published: true
+                        ---
+                        
+                        # #{item['title']}
+                        
+                        This content was automatically published on schedule.
+                      CONTENT
+                    when 'article'
+                      <<~CONTENT
+                        ---
+                        layout: article
+                        title: "#{item['title']}"
+                        date: #{item['date']}
+                        published: true
+                        ---
+                        
+                        # #{item['title']}
+                        
+                        This article was automatically published on schedule.
+                      CONTENT
+                    else
+                      <<~CONTENT
+                        ---
+                        layout: default
+                        title: "#{item['title']}"
+                        date: #{item['date']}
+                        published: true
+                        ---
+                        
+                        # #{item['title']}
+                        
+                        This content was automatically published on schedule.
+                      CONTENT
+                    end
+                    
+                    File.write(item['file'], content)
+                  end
+                end
+              end
+              
+              if published_something
+                # Write updated schedule back
+                File.write(schedule_file, schedule.to_yaml)
+                puts "CONTENT_PUBLISHED=true"
+              else
+                puts "CONTENT_PUBLISHED=false"
+              end
+            else
+              puts "CONTENT_PUBLISHED=false"
+            end
+          else
+            puts "CONTENT_PUBLISHED=false"
+            puts "No schedule file found"
+          end
+          EOF
+          
+          # Run the check
+          ruby check_schedule.rb ${{ github.event.inputs.force_publish || 'false' }} > output.txt
+          cat output.txt
+          
+          # Extract the result
+          if grep -q "CONTENT_PUBLISHED=true" output.txt; then
+            echo "content_published=true" >> $GITHUB_OUTPUT
+          else
+            echo "content_published=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Build site to validate
+        if: steps.check_content.outputs.content_published == 'true'
+        run: bundle exec jekyll build
+
+      - name: Commit and push published content
+        if: steps.check_content.outputs.content_published == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          
+          git add .
+          if ! git diff --staged --quiet; then
+            git commit -m "chore: auto-publish scheduled content for $(date +%Y-%m-%d)"
+            git push origin HEAD:main
+            echo "✅ Content published and committed"
+          else
+            echo "ℹ️ No changes to commit"
+          fi
+
+      - name: Create summary
+        if: always()
+        run: |
+          echo "## Automated Content Publishing Summary" >> $GITHUB_STEP_SUMMARY
+          echo "- **Date**: $(date)" >> $GITHUB_STEP_SUMMARY
+          echo "- **Content Published**: ${{ steps.check_content.outputs.content_published }}" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ steps.check_content.outputs.content_published }}" = "true" ]; then
+            echo "- **Status**: ✅ Content successfully published" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "- **Status**: ℹ️ No content scheduled for today" >> $GITHUB_STEP_SUMMARY
+          fi

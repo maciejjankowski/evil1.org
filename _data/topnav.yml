@@ -9,9 +9,20 @@
     - title: News & Analysis
       url: /News/
       external: false
+- title: Evil 500
+  url: /evil500/
+  priority: 2
+  external: false
+  children:
+    - title: Rankings
+      url: /evil500/
+      external: false
+    - title: Certification Program
+      url: /evil500/certification/
+      external: false
 - title: Exposures
   url: /profiles/
-  priority: 2
+  priority: 3
   external: false
   children:
     - title: Executive Profiles
@@ -23,9 +34,39 @@
     - title: Companies
       url: /company/
       external: false
+
+- title: Services
+  url: /evil-score/
+  priority: 3
+  external: false
+  children:
+    - title: Evil Score™
+      url: /evil-score/
+      external: false
+- title: Evil Assessment
+  url: /evil-strengthsfinder/
+  priority: 3
+  external: false
+  children:
+    - title: Evil StrengthsFinder
+      url: /evil-strengthsfinder/
+      external: false
+    - title: Take Assessment
+      url: /evil-strengthsfinder/#assessment
+      external: false
+    - title: Sample Results
+      url: /evil-strengthsfinder/#sample
+      external: false
+    - title: Hall of Fame
+      url: /halloffame/
+      external: false
+- title: Awards
+  url: /awards/
+  priority: 3
+  external: false
 - title: Education
   url: /trainings/
-  priority: 3
+  priority: 4
   external: false
   children:
     - title: Training Programs
@@ -39,7 +80,7 @@
       external: false
 - title: Community
   url: /membership/
-  priority: 4
+  priority: 5
   external: false
   children:
     - title: Membership
@@ -54,11 +95,40 @@
     - title: Activities
       url: /activities/
       external: false
+    - title: Corporate Inbox
+      url: /corporate-inbox/
+      external: false
 - title: Store
   url: /merchandise/
-  priority: 5
+  priority: 6
   external: false
+- title: Defense Services
+  url: /corporate-services/
+  priority: 6
+  external: false
+  children:
+    - title: Overview
+      url: /corporate-services/
+      external: false
+    - title: PR Defense Shield
+      url: /corporate-services/pr-defense/
+      external: false
+    - title: Legal Shield Plus
+      url: /corporate-services/legal-shield/
+      external: false
+    - title: Crisis Management
+      url: /corporate-services/crisis-management/
+      external: false
+    - title: Monitoring Suite
+      url: /corporate-services/monitoring/
+      external: false
+    - title: Pricing
+      url: /corporate-services/pricing/
+      external: false
+    - title: Contact
+      url: /corporate-services/contact/
+      external: false
 - title: Jobs
   url: /jobs/
-  priority: 6
+  priority: 7
   external: false
