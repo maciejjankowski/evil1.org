@@ -478,10 +478,14 @@ function simulateActivity(boxId) {
             newItem.className = 'winner-item';
             newItem.textContent = randomWinner;
             
-            feed.insertBefore(newItem, feed.firstChild);
+            if (feed.firstChild) {
+                feed.insertBefore(newItem, feed.firstChild);
+            } else {
+                feed.appendChild(newItem);
+            }
             
             // Remove oldest items to prevent overflow
-            while (feed.children.length > 3) {
+            while (feed.children.length > 3 && feed.lastChild) {
                 feed.removeChild(feed.lastChild);
             }
         }, 8000 + Math.random() * 12000); // Random intervals between 8-20 seconds
