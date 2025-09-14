@@ -81,6 +81,9 @@
     - title: Career Advisor
       url: /evil-career-advisor/
       external: false
+    - title: Corporate Slave Test
+      url: /corporate-slave-test/
+      external: false
 - title: Community
   url: /membership/
   priority: 5
