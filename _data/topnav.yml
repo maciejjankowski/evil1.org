@@ -23,6 +23,9 @@
     - title: Companies
       url: /company/
       external: false
+    - title: Evil Products Catalog
+      url: /evil-products/
+      external: false
 - title: Education
   url: /trainings/
   priority: 3
