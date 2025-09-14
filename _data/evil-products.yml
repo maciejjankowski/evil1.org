@@ -612,3 +612,47 @@ health-insurance:
   companies: ["UnitedHealth", "Anthem", "Aetna", "Cigna", "Humana"]
   annual_production: "280 million covered lives"
   markup: "20% profit margin on life-saving healthcare"
+
+# FRACKING INDUSTRY - Environmental Destruction & Health Crises
+fracking-gas:
+  name: "Hydraulic Fracturing Natural Gas"
+  category: "Energy"
+  industry: "Oil & Gas Extraction"
+  description: "Unconventional gas extraction causing groundwater contamination and seismic activity"
+  evil_score:
+    total: 8900
+    blood: 1800  # Cancer deaths, industrial accidents, earthquake casualties
+    tears: 3200  # Community health destruction, property damage, climate anxiety
+    gold: 2400   # Massive profits from externalized environmental costs
+    earth: 1500  # Groundwater contamination, air pollution, induced seismicity
+  harm_breakdown:
+    supply_chain: "Toxic chemical injection, water table contamination, waste disposal"
+    environmental: "Groundwater pollution, air quality destruction, methane leaks"
+    worker_conditions: "Chemical exposure, industrial accidents, silica lung disease"
+    health_impacts: "Cancer clusters, respiratory disease, birth defects"
+    societal_harm: "Rural community destruction, property value collapse, democratic capture"
+  companies: ["ExxonMobil", "Chevron", "ConocoPhillips", "EOG Resources", "Pioneer Natural Resources"]
+  annual_production: "40 trillion cubic feet (US)"
+  markup: "300% from wellhead to consumer"
+
+# CRYPTOCURRENCY INDUSTRY - Environmental Destruction & Financial Speculation
+cryptocurrency-bitcoin:
+  name: "Bitcoin Cryptocurrency"
+  category: "Technology"
+  industry: "Digital Currency"
+  description: "Energy-intensive digital speculation vehicle enabling ransomware and money laundering"
+  evil_score:
+    total: 8500
+    blood: 600   # Ransomware deaths, mining facility accidents
+    tears: 2800  # Financial losses, addiction, criminal victimization
+    gold: 3200   # Massive speculation profits, regulatory arbitrage
+    earth: 1900  # Massive energy consumption, e-waste from mining hardware
+  harm_breakdown:
+    supply_chain: "Mining hardware production, electricity grid strain, criminal networks"
+    environmental: "Coal-powered mining, electronic waste, carbon emissions"
+    worker_conditions: "Mining farm exploitation, hardware assembly conditions"
+    health_impacts: "Financial stress, addiction, criminal victimization"
+    societal_harm: "Ransomware enablement, money laundering, financial speculation bubble"
+  companies: ["Bitmain", "Canaan", "MicroStrategy", "Coinbase", "Binance"]
+  annual_production: "900 bitcoins per day"
+  markup: "Infinite speculation markup over production cost"

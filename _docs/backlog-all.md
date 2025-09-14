@@ -60,6 +60,7 @@
 [x] | T513 | Move the hellfire header to use the same data-driven topnav include | Grok Code Fast 1 | Update `_layouts/default.html` hellfire section to `{% include topnav.html %}` and remove duplicate nav markup; ensure visual parity and run build
 [x] | T514 | Comprehensive site scan after nav/theme changes | GPT-4.1 | Run grep and link checks across repo and `_site`, create report in `_docs/link-audit.md` and `_docs/refactor.md` with any remaining issues
 [x] | T221 | Tag all 50 merch pages; auto-generate theme indexes | Gemini 2.5 Pro | Tags added; theme pages built from tags
+[x] | T600 | Create content for 30 products through which major harm is done | GPT-4.1 | Create comprehensive catalog of 30 harmful products with Devil's Metrics scoring system, interactive layout, methodology documentation, and navigation integration
 
 
 
