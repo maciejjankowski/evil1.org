@@ -1,0 +1,113 @@
+---
+- id: exp001
+  industry: technology
+  company_size: large
+  experience_type: toxic-culture
+  timeframe: recent
+  anonymized_summary: Large tech company enforced 80+ hour work weeks with no overtime
+    pay. Management threatened job security when employees requested reasonable work-life
+    balance. Multiple employees experienced burnout and mental health issues.
+  similar_companies:
+  - Amazon
+  - Meta
+  - Uber
+  patterns:
+  - Excessive overtime without compensation
+  - Management threats over work-life balance requests
+  - Systematic employee burnout
+  submitted_at: '2024-01-15'
+- id: exp002
+  industry: finance
+  company_size: enterprise
+  experience_type: discrimination
+  timeframe: year
+  anonymized_summary: Major investment bank consistently promoted male colleagues
+    over equally qualified women. Female employees were excluded from important client
+    meetings and faced retaliation when raising concerns about pay gaps.
+  similar_companies:
+  - Goldman Sachs
+  - Morgan Stanley
+  - Wells Fargo
+  patterns:
+  - Gender-based promotion discrimination
+  - Exclusion from key business activities
+  - Retaliation for equality complaints
+  submitted_at: '2024-01-12'
+- id: exp003
+  industry: retail
+  company_size: enterprise
+  experience_type: wage-theft
+  timeframe: ongoing
+  anonymized_summary: Global retailer systematically schedules employees just under
+    full-time hours to avoid providing benefits. Forces unpaid overtime during busy
+    periods and threatens termination if workers refuse.
+  similar_companies:
+  - Walmart
+  - Target
+  - Kroger
+  patterns:
+  - Strategic hour reduction to avoid benefits
+  - Forced unpaid overtime
+  - Termination threats for labor rights
+  submitted_at: '2024-01-10'
+- id: exp004
+  industry: pharmaceuticals
+  company_size: large
+  experience_type: ethics-violations
+  timeframe: few-years
+  anonymized_summary: Pharmaceutical company buried negative trial data for a diabetes
+    medication. When a researcher tried to publish accurate results, they were fired
+    and blacklisted from the industry.
+  similar_companies:
+  - Purdue Pharma
+  - Johnson & Johnson
+  - Pfizer
+  patterns:
+  - Suppression of negative trial data
+  - Retaliation against whistleblowers
+  - Industry blacklisting of ethical researchers
+  submitted_at: '2024-01-08'
+- id: exp005
+  industry: energy
+  company_size: enterprise
+  experience_type: environmental
+  timeframe: current
+  anonymized_summary: Oil company knowingly releases toxic chemicals into local water
+    supply while reporting false environmental compliance data to regulators. Employees
+    ordered to falsify monitoring reports.
+  similar_companies:
+  - ExxonMobil
+  - Chevron
+  - BP
+  patterns:
+  - Deliberate environmental contamination
+  - False regulatory reporting
+  - Employee coercion in cover-ups
+  submitted_at: '2024-01-05'
+- id: expe8fcb4
+  industry: technology
+  company_size: large
+  role_level: mid
+  experience_type: retaliation
+  timeframe: recent
+  anonymized_summary: When I reported security vulnerabilities in our main product,
+    my manager told me to keep quiet and not document the issues. After I persisted,
+    I was moved to a different team and my access to the codebase was revoked. Eventually
+    I was fired for 'performance issues' that were never documented before I reported
+    the vulnerabilities.
+  patterns:
+  - Retaliation against complaints
+  ongoing: false
+  widespread: true
+  documented: true
+  submitted_at: '2025-09-14'
+  related_patterns:
+  - Excessive overtime without compensation
+  - Management threats over work-life balance requests
+  - Systematic employee burnout
+  similar_companies:
+  - Google
+  - Meta
+  - Amazon
+  - Apple
+  - Microsoft
