@@ -2,6 +2,7 @@
 layout: merch
 title: "EVIL1.ORG Merch"
 permalink: /merch/
+published: false
 ---
 
 ## The Official Store for Corporate Dissidents

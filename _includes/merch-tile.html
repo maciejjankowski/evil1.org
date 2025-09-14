@@ -1,0 +1,7 @@
+<!-- Merchandise Tile Component - Simple Version -->
+<div class="merch-tile-placeholder">
+    <h3>{{ include.product.name | default: "Product" }}</h3>
+    <p>{{ include.product.description | default: "Coming Soon" }}</p>
+    <div class="price">${{ include.product.price | default: "TBA" }}</div>
+</div>
+</style>
