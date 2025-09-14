@@ -1,0 +1,342 @@
+<!-- Farming Game Style Progress Tracker - Creates Investment and Loss Aversion -->
+<div id="progress-tracker" class="progress-tracker" data-analytics="progress-manipulation">
+    <div class="progress-header">
+        <h3>🎮 Your Corporate Evil Detection Journey</h3>
+        <div class="progress-stats">
+            <span class="time-invested">⏰ <span id="time-invested">0</span> hours invested</span>
+            <span class="streak-counter">🔥 <span id="streak-days">0</span> day streak</span>
+        </div>
+    </div>
+    
+    <!-- Multi-tier Progress Bars (like farming games) -->
+    <div class="progress-bars">
+        <div class="progress-category">
+            <div class="progress-label">
+                <span>Corporate Crime Detective</span>
+                <span class="progress-percent"><span id="detective-progress">0</span>%</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill detective-progress" style="width: 0%"></div>
+                <div class="progress-milestones">
+                    <div class="milestone" data-level="25">🏅</div>
+                    <div class="milestone" data-level="50">🏆</div>
+                    <div class="milestone" data-level="75">💎</div>
+                    <div class="milestone" data-level="100">👑</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="progress-category">
+            <div class="progress-label">
+                <span>Anti-Capitalism Expert</span>
+                <span class="progress-percent"><span id="expert-progress">0</span>%</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill expert-progress" style="width: 0%"></div>
+            </div>
+        </div>
+        
+        <div class="progress-category">
+            <div class="progress-label">
+                <span>Community Leader</span>
+                <span class="progress-percent"><span id="leader-progress">0</span>%</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill leader-progress" style="width: 0%"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Daily/Weekly Challenges (FOMO mechanism) -->
+    <div class="challenges-section">
+        <h4>⚡ Daily Challenges (Expires in <span id="challenge-timer">23:59:59</span>)</h4>
+        <div class="challenge-list">
+            <div class="challenge-item" data-points="50">
+                <span class="challenge-icon">📰</span>
+                <span class="challenge-text">Read 3 corporate evil articles</span>
+                <span class="challenge-progress">1/3</span>
+                <span class="challenge-reward">+50 XP</span>
+            </div>
+            <div class="challenge-item" data-points="100">
+                <span class="challenge-icon">🛒</span>
+                <span class="challenge-text">Purchase anti-corporate merchandise</span>
+                <span class="challenge-progress">0/1</span>
+                <span class="challenge-reward">+100 XP + Badge</span>
+            </div>
+            <div class="challenge-item" data-points="75">
+                <span class="challenge-icon">📧</span>
+                <span class="challenge-text">Share newsletter with 2 friends</span>
+                <span class="challenge-progress">0/2</span>
+                <span class="challenge-reward">+75 XP</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Investment Loss Aversion Warnings -->
+    <div class="investment-warning" id="investment-warning" style="display: none;">
+        <div class="warning-content">
+            <span class="warning-icon">⚠️</span>
+            <span class="warning-text">You're about to lose <span id="potential-loss">127 hours</span> of progress and <span id="streak-loss">15 days</span> of streak!</span>
+            <button class="stay-button" onclick="cancelExit()">Keep My Progress</button>
+            <button class="leave-button" onclick="confirmExit()">I Don't Care About Progress</button>
+        </div>
+    </div>
+    
+    <!-- Achievement Notifications -->
+    <div id="achievement-popup" class="achievement-popup" style="display: none;">
+        <div class="achievement-content">
+            <div class="achievement-icon">🏆</div>
+            <div class="achievement-text">
+                <h4>Achievement Unlocked!</h4>
+                <p id="achievement-description">Corporate Crime Fighter Level 2!</p>
+            </div>
+            <div class="achievement-rewards">
+                <span>+50 XP</span>
+                <span>+Badge</span>
+                <span>+Discount Code</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// Farming Game Style Progress System
+class ProgressTracker {
+    constructor() {
+        this.data = this.loadData();
+        this.startTime = Date.now();
+        this.setupEventListeners();
+        this.startTimeTracking();
+        this.updateDisplay();
+        this.checkDailyReset();
+    }
+    
+    loadData() {
+        const saved = localStorage.getItem('evil1-progress');
+        return saved ? JSON.parse(saved) : {
+            timeInvested: 0,
+            streakDays: 0,
+            lastVisit: Date.now(),
+            detectiveXP: 0,
+            expertXP: 0,
+            leaderXP: 0,
+            achievements: [],
+            dailyChallenges: this.generateDailyChallenges(),
+            totalArticlesRead: 0,
+            purchasesMade: 0,
+            sharesCompleted: 0
+        };
+    }
+    
+    saveData() {
+        localStorage.setItem('evil1-progress', JSON.stringify(this.data));
+    }
+    
+    generateDailyChallenges() {
+        return {
+            readArticles: { current: 0, target: 3, completed: false },
+            makePurchase: { current: 0, target: 1, completed: false },
+            shareNewsletter: { current: 0, target: 2, completed: false },
+            resetTime: Date.now() + (24 * 60 * 60 * 1000) // 24 hours from now
+        };
+    }
+    
+    checkDailyReset() {
+        if (Date.now() > this.data.dailyChallenges.resetTime) {
+            this.data.dailyChallenges = this.generateDailyChallenges();
+            this.saveData();
+        }
+        this.updateChallengeTimer();
+    }
+    
+    updateChallengeTimer() {
+        const timeLeft = this.data.dailyChallenges.resetTime - Date.now();
+        if (timeLeft > 0) {
+            const hours = Math.floor(timeLeft / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+            document.getElementById('challenge-timer').textContent = 
+                `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+        setTimeout(() => this.updateChallengeTimer(), 1000);
+    }
+    
+    setupEventListeners() {
+        // Track article reads
+        if (document.body.classList.contains('article-page')) {
+            this.trackArticleRead();
+        }
+        
+        // Track scroll engagement
+        let scrollEngagement = 0;
+        window.addEventListener('scroll', () => {
+            const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+            if (scrollPercent > scrollEngagement) {
+                scrollEngagement = scrollPercent;
+                if (scrollPercent > 25) this.addXP('detective', 5);
+                if (scrollPercent > 50) this.addXP('detective', 10);
+                if (scrollPercent > 75) this.addXP('detective', 15);
+                if (scrollPercent > 90) this.addXP('expert', 20);
+            }
+        });
+        
+        // Track time on page
+        setInterval(() => {
+            this.data.timeInvested += 1/60; // 1 minute in hours
+            this.saveData();
+            this.updateDisplay();
+        }, 60000);
+        
+        // Exit intent manipulation
+        document.addEventListener('mouseout', (e) => {
+            if (e.clientY <= 0 && this.data.timeInvested > 0.5) { // If user invested more than 30 minutes
+                this.showExitWarning();
+            }
+        });
+    }
+    
+    trackArticleRead() {
+        // Give time for user to actually read
+        setTimeout(() => {
+            this.data.totalArticlesRead++;
+            this.data.dailyChallenges.readArticles.current++;
+            this.addXP('detective', 25);
+            this.checkChallengeCompletion('readArticles');
+            this.saveData();
+        }, 30000); // 30 seconds
+    }
+    
+    addXP(category, amount) {
+        this.data[category + 'XP'] += amount;
+        this.checkLevelUp(category);
+        this.updateDisplay();
+        this.saveData();
+    }
+    
+    checkLevelUp(category) {
+        const xp = this.data[category + 'XP'];
+        const newLevel = Math.floor(xp / 100) + 1;
+        const oldLevel = Math.floor((xp - arguments[1] || 0) / 100) + 1;
+        
+        if (newLevel > oldLevel) {
+            this.showAchievement(`${category.charAt(0).toUpperCase() + category.slice(1)} Level ${newLevel}!`, 
+                              `You've unlocked new corporate evil detection abilities!`);
+        }
+    }
+    
+    checkChallengeCompletion(challengeType) {
+        const challenge = this.data.dailyChallenges[challengeType];
+        if (challenge.current >= challenge.target && !challenge.completed) {
+            challenge.completed = true;
+            this.showAchievement('Daily Challenge Complete!', 
+                              `You earned bonus XP for completing your ${challengeType} challenge!`);
+            this.addXP('leader', 50);
+        }
+    }
+    
+    showAchievement(title, description) {
+        const popup = document.getElementById('achievement-popup');
+        document.getElementById('achievement-description').textContent = description;
+        popup.style.display = 'block';
+        
+        // Auto-hide after 5 seconds
+        setTimeout(() => {
+            popup.style.display = 'none';
+        }, 5000);
+        
+        // Analytics event
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'achievement_unlocked', {
+                'achievement_title': title,
+                'time_invested': this.data.timeInvested
+            });
+        }
+    }
+    
+    showExitWarning() {
+        const warning = document.getElementById('investment-warning');
+        document.getElementById('potential-loss').textContent = Math.round(this.data.timeInvested * 10) / 10;
+        document.getElementById('streak-loss').textContent = this.data.streakDays;
+        warning.style.display = 'block';
+        
+        // Analytics event for exit intent
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'exit_intent_triggered', {
+                'time_invested': this.data.timeInvested,
+                'streak_days': this.data.streakDays
+            });
+        }
+    }
+    
+    updateDisplay() {
+        document.getElementById('time-invested').textContent = Math.round(this.data.timeInvested * 10) / 10;
+        document.getElementById('streak-days').textContent = this.data.streakDays;
+        
+        // Update progress bars
+        const detectivePercent = (this.data.detectiveXP % 100);
+        const expertPercent = (this.data.expertXP % 100);
+        const leaderPercent = (this.data.leaderXP % 100);
+        
+        document.getElementById('detective-progress').textContent = detectivePercent;
+        document.querySelector('.detective-progress').style.width = detectivePercent + '%';
+        
+        document.getElementById('expert-progress').textContent = expertPercent;
+        document.querySelector('.expert-progress').style.width = expertPercent + '%';
+        
+        document.getElementById('leader-progress').textContent = leaderPercent;
+        document.querySelector('.leader-progress').style.width = leaderPercent + '%';
+        
+        // Update challenges
+        this.updateChallengeDisplay();
+    }
+    
+    updateChallengeDisplay() {
+        const challenges = document.querySelectorAll('.challenge-item');
+        challenges[0].querySelector('.challenge-progress').textContent = 
+            `${this.data.dailyChallenges.readArticles.current}/${this.data.dailyChallenges.readArticles.target}`;
+        challenges[1].querySelector('.challenge-progress').textContent = 
+            `${this.data.dailyChallenges.makePurchase.current}/${this.data.dailyChallenges.makePurchase.target}`;
+        challenges[2].querySelector('.challenge-progress').textContent = 
+            `${this.data.dailyChallenges.shareNewsletter.current}/${this.data.dailyChallenges.shareNewsletter.target}`;
+    }
+    
+    startTimeTracking() {
+        // Update streak on return visits
+        const daysSinceLastVisit = Math.floor((Date.now() - this.data.lastVisit) / (1000 * 60 * 60 * 24));
+        if (daysSinceLastVisit === 1) {
+            this.data.streakDays++;
+        } else if (daysSinceLastVisit > 1) {
+            this.data.streakDays = 1;
+        }
+        this.data.lastVisit = Date.now();
+        this.saveData();
+    }
+}
+
+// Global functions for exit warning
+function cancelExit() {
+    document.getElementById('investment-warning').style.display = 'none';
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'exit_prevented', {
+            'method': 'progress_fear'
+        });
+    }
+}
+
+function confirmExit() {
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'exit_confirmed', {
+            'method': 'progress_abandoned'
+        });
+    }
+    // Allow exit but track the loss
+    window.location.href = '/';
+}
+
+// Initialize progress tracker when DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+    if (document.getElementById('progress-tracker')) {
+        window.progressTracker = new ProgressTracker();
+    }
+});
+</script>

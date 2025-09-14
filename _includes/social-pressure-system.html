@@ -1,0 +1,656 @@
+<!-- Social Pressure & FOMO System - Creates Urgency and Competition -->
+<div id="social-pressure-system" class="social-pressure-system">
+    <!-- Live Activity Feed (Fake Social Proof) -->
+    <div class="live-activity-feed" id="activity-feed">
+        <div class="feed-header">
+            <h4>🔴 Live Corporate Resistance Activity</h4>
+            <div class="online-count">
+                <span class="online-indicator"></span>
+                <span id="online-users">1,247</span> fighting corporate evil right now
+            </div>
+        </div>
+        <div class="activity-stream" id="activity-stream">
+            <!-- Activities populated dynamically -->
+        </div>
+    </div>
+    
+    <!-- Competitive Leaderboard -->
+    <div class="competitive-leaderboard" id="leaderboard">
+        <div class="leaderboard-header">
+            <h4>🏆 Top Corporate Crime Fighters This Week</h4>
+            <div class="your-rank">
+                Your rank: <span id="user-rank">#47</span> of <span id="total-fighters">2,384</span>
+            </div>
+        </div>
+        <div class="leaderboard-list">
+            <div class="leader-item">
+                <div class="rank">1</div>
+                <div class="avatar">👑</div>
+                <div class="details">
+                    <div class="name">Sarah K.</div>
+                    <div class="score">847 Corporate Crimes Exposed</div>
+                </div>
+                <div class="badge">🥇</div>
+            </div>
+            <div class="leader-item">
+                <div class="rank">2</div>
+                <div class="avatar">🦸</div>
+                <div class="details">
+                    <div class="name">Marcus R.</div>
+                    <div class="score">623 Evil Corps Defeated</div>
+                </div>
+                <div class="badge">🥈</div>
+            </div>
+            <div class="leader-item">
+                <div class="rank">3</div>
+                <div class="avatar">⚔️</div>
+                <div class="details">
+                    <div class="name">Alex M.</div>
+                    <div class="score">591 Capitalist Schemes Foiled</div>
+                </div>
+                <div class="badge">🥉</div>
+            </div>
+            <div class="leader-item current-user">
+                <div class="rank">47</div>
+                <div class="avatar">🔰</div>
+                <div class="details">
+                    <div class="name">You</div>
+                    <div class="score">23 Corporate Crimes Exposed</div>
+                </div>
+                <div class="improvement">
+                    <span class="improvement-text">Need 8 more to advance!</span>
+                </div>
+            </div>
+        </div>
+        <div class="leaderboard-motivation">
+            <button class="climb-ranks-btn" onclick="motivateUser()">
+                🚀 Climb the Ranks - Start Mission
+            </button>
+        </div>
+    </div>
+    
+    <!-- Limited Time Events (FOMO) -->
+    <div class="limited-events" id="limited-events">
+        <div class="event-card urgent">
+            <div class="event-header">
+                <div class="event-icon">⚡</div>
+                <div class="event-title">BREAKING: Corporate Scandal Developing</div>
+                <div class="event-timer">Expires in <span id="event-timer-1">02:47:33</span></div>
+            </div>
+            <div class="event-content">
+                <p><strong>Major pharmaceutical cover-up uncovered!</strong></p>
+                <p>Be among the first 100 to investigate and earn exclusive "Whistleblower" badge + 500 XP</p>
+                <div class="event-progress">
+                    <div class="progress-text">Progress: <span id="event-participants">73</span>/100 investigators</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 73%"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="event-footer">
+                <button class="event-action-btn" onclick="joinEvent('scandal-investigation')">
+                    🕵️ Join Investigation Now
+                </button>
+            </div>
+        </div>
+        
+        <div class="event-card exclusive">
+            <div class="event-header">
+                <div class="event-icon">💎</div>
+                <div class="event-title">VIP Corporate Insider Access</div>
+                <div class="event-timer">24 spots left</div>
+            </div>
+            <div class="event-content">
+                <p>Exclusive access to leaked corporate documents and insider trading tips</p>
+                <div class="exclusivity-indicators">
+                    <div class="indicator">🔒 Members Only</div>
+                    <div class="indicator">⭐ Invite Required</div>
+                    <div class="indicator">💰 Premium Feature</div>
+                </div>
+            </div>
+            <div class="event-footer">
+                <button class="event-action-btn premium" onclick="requestVIPAccess()">
+                    👑 Request VIP Access
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Peer Pressure Notifications -->
+    <div class="peer-pressure-widget" id="peer-pressure">
+        <div class="pressure-header">
+            <h4>👥 Your Network Activity</h4>
+        </div>
+        <div class="pressure-content">
+            <div class="pressure-stat">
+                <div class="stat-icon">📊</div>
+                <div class="stat-content">
+                    <div class="stat-number">8</div>
+                    <div class="stat-label">friends ahead of you</div>
+                </div>
+            </div>
+            <div class="pressure-stat">
+                <div class="stat-icon">🔥</div>
+                <div class="stat-content">
+                    <div class="stat-number">156</div>
+                    <div class="stat-label">corporate crimes they found this week</div>
+                </div>
+            </div>
+            <div class="pressure-stat">
+                <div class="stat-icon">💸</div>
+                <div class="stat-content">
+                    <div class="stat-number">$47</div>
+                    <div class="stat-label">avg. spent on resistance gear</div>
+                </div>
+            </div>
+        </div>
+        <div class="pressure-action">
+            <div class="behind-message">
+                You're falling behind! Your friends are winning the fight against corporate evil.
+            </div>
+            <button class="catch-up-btn" onclick="catchUpWithFriends()">
+                🏃‍♂️ Catch Up Now
+            </button>
+        </div>
+    </div>
+    
+    <!-- Streaks and Challenges */
+    <div class="streaks-challenges" id="streaks">
+        <div class="streak-display">
+            <div class="streak-icon">🔥</div>
+            <div class="streak-info">
+                <div class="streak-count"><span id="current-streak">15</span> Day Streak</div>
+                <div class="streak-description">Corporate evil detection</div>
+            </div>
+            <div class="streak-danger" style="display: none;">
+                <div class="danger-text">STREAK IN DANGER!</div>
+                <div class="danger-timer">Expires in <span id="streak-expiry">3:42:17</span></div>
+            </div>
+        </div>
+        
+        <div class="weekly-challenge">
+            <div class="challenge-header">
+                <h5>📅 This Week's Challenge</h5>
+                <div class="challenge-reward">Reward: Premium Badge + $25 discount</div>
+            </div>
+            <div class="challenge-objective">
+                Expose 10 corporate crimes before Sunday
+            </div>
+            <div class="challenge-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 60%"></div>
+                </div>
+                <div class="progress-text">6/10 completed</div>
+            </div>
+            <div class="challenge-urgency">
+                <span id="challenge-time-left">2 days, 14 hours remaining</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Social Sharing Pressure -->
+    <div class="sharing-pressure" id="sharing-pressure" style="display: none;">
+        <div class="sharing-header">
+            <h4>📢 Spread the Resistance!</h4>
+            <button class="close-sharing" onclick="closeSharingPressure()">×</button>
+        </div>
+        <div class="sharing-content">
+            <p><strong>Your friends need to know about this corporate crime!</strong></p>
+            <p>Every share helps expose corporate evil to more people.</p>
+            <div class="sharing-stats">
+                <div class="sharing-stat">
+                    <span class="stat-number">5,847</span>
+                    <span class="stat-label">people have shared this</span>
+                </div>
+                <div class="sharing-stat">
+                    <span class="stat-number">23</span>
+                    <span class="stat-label">of your friends shared similar content</span>
+                </div>
+            </div>
+            <div class="sharing-buttons">
+                <button class="share-btn twitter" onclick="shareToTwitter()">
+                    🐦 Share on Twitter
+                </button>
+                <button class="share-btn facebook" onclick="shareToFacebook()">
+                    📘 Share on Facebook
+                </button>
+                <button class="share-btn email" onclick="shareViaEmail()">
+                    ✉️ Email Friends
+                </button>
+            </div>
+        </div>
+        <div class="sharing-guilt">
+            <p><em>"Not sharing means corporate criminals win"</em></p>
+        </div>
+    </div>
+</div>
+
+<script>
+// Social Pressure & FOMO System
+class SocialPressureSystem {
+    constructor() {
+        this.activities = [];
+        this.settings = this.loadSettings();
+        this.timers = {};
+        this.setupSystem();
+        this.startActivitySimulation();
+        this.monitorUserBehavior();
+    }
+    
+    loadSettings() {
+        const saved = localStorage.getItem('evil1-social-pressure');
+        return saved ? JSON.parse(saved) : {
+            userRank: Math.floor(Math.random() * 100) + 20,
+            totalFighters: 2384,
+            currentStreak: Math.floor(Math.random() * 30) + 1,
+            weeklyProgress: Math.floor(Math.random() * 8) + 2,
+            friendsAhead: Math.floor(Math.random() * 15) + 3,
+            lastActivity: Date.now(),
+            sharingPressureShown: false,
+            eventParticipationCount: 0
+        };
+    }
+    
+    saveSettings() {
+        localStorage.setItem('evil1-social-pressure', JSON.stringify(this.settings));
+    }
+    
+    setupSystem() {
+        this.updateDisplays();
+        this.setupEventListeners();
+        this.startTimers();
+    }
+    
+    setupEventListeners() {
+        // Show sharing pressure on article scroll
+        let scrollThreshold = false;
+        window.addEventListener('scroll', () => {
+            const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+            if (scrollPercent > 70 && !scrollThreshold && !this.settings.sharingPressureShown) {
+                this.showSharingPressure();
+                scrollThreshold = true;
+            }
+        });
+        
+        // Track engagement time
+        setInterval(() => {
+            this.settings.lastActivity = Date.now();
+            this.saveSettings();
+        }, 30000);
+    }
+    
+    startActivitySimulation() {
+        // Generate fake live activities
+        const activities = [
+            "John D. just exposed Amazon's tax evasion scheme",
+            "Sarah M. uncovered Walmart's labor violations",
+            "Mike R. revealed Facebook's privacy manipulation",
+            "Lisa K. discovered Google's antitrust violations",
+            "David P. exposed Apple's planned obsolescence",
+            "Emma T. uncovered Tesla's safety cover-ups",
+            "Alex H. revealed Netflix's content manipulation",
+            "Ryan C. exposed Uber's worker exploitation",
+            "Zoe L. discovered Microsoft's monopoly tactics",
+            "Nina S. uncovered Pfizer's price manipulation"
+        ];
+        
+        const actions = [
+            "purchased anti-corporate merchandise",
+            "joined the premium resistance program",
+            "shared corporate crime evidence",
+            "completed advanced evil detection course",
+            "earned 'Corporate Whistleblower' badge",
+            "exposed major corruption scandal",
+            "recruited 3 new resistance members",
+            "donated to corporate accountability fund"
+        ];
+        
+        setInterval(() => {
+            const activity = activities[Math.floor(Math.random() * activities.length)];
+            const action = actions[Math.floor(Math.random() * actions.length)];
+            this.addLiveActivity(activity, action);
+        }, 8000); // New activity every 8 seconds
+    }
+    
+    addLiveActivity(user, action) {
+        const activityEl = document.createElement('div');
+        activityEl.className = 'activity-item';
+        activityEl.innerHTML = `
+            <div class="activity-avatar">👤</div>
+            <div class="activity-content">
+                <div class="activity-user">${user}</div>
+                <div class="activity-action">${action}</div>
+                <div class="activity-time">just now</div>
+            </div>
+            <div class="activity-impact">+50 XP</div>
+        `;
+        
+        const stream = document.getElementById('activity-stream');
+        stream.insertBefore(activityEl, stream.firstChild);
+        
+        // Keep only last 10 activities
+        while (stream.children.length > 10) {
+            stream.removeChild(stream.lastChild);
+        }
+        
+        // Update online counter
+        this.updateOnlineCount();
+    }
+    
+    updateOnlineCount() {
+        const baseCount = 1247;
+        const variation = Math.floor(Math.random() * 20) - 10;
+        const newCount = baseCount + variation;
+        document.getElementById('online-users').textContent = newCount.toLocaleString();
+    }
+    
+    startTimers() {
+        // Event timer
+        this.startEventTimer('event-timer-1', 2 * 60 * 60 + 47 * 60 + 33); // 2:47:33
+        
+        // Streak expiry timer
+        this.startStreakTimer();
+        
+        // Challenge deadline timer
+        this.startChallengeTimer();
+    }
+    
+    startEventTimer(elementId, initialSeconds) {
+        let timeLeft = initialSeconds;
+        const timerEl = document.getElementById(elementId);
+        
+        const updateTimer = () => {
+            const hours = Math.floor(timeLeft / 3600);
+            const minutes = Math.floor((timeLeft % 3600) / 60);
+            const seconds = timeLeft % 60;
+            
+            timerEl.textContent = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            
+            // Add urgency as time runs out
+            if (timeLeft <= 600) { // Last 10 minutes
+                timerEl.style.color = '#e74c3c';
+                timerEl.style.animation = 'urgencyBlink 1s infinite';
+            }
+            
+            if (timeLeft <= 0) {
+                this.handleEventExpiry();
+                return;
+            }
+            
+            timeLeft--;
+            setTimeout(updateTimer, 1000);
+        };
+        
+        updateTimer();
+    }
+    
+    startStreakTimer() {
+        // Show streak danger if inactive for 20+ hours
+        const hoursSinceLastActivity = (Date.now() - this.settings.lastActivity) / (1000 * 60 * 60);
+        
+        if (hoursSinceLastActivity > 20) {
+            this.showStreakDanger();
+        }
+        
+        // Check every hour
+        setInterval(() => {
+            const hours = (Date.now() - this.settings.lastActivity) / (1000 * 60 * 60);
+            if (hours > 20) {
+                this.showStreakDanger();
+            }
+        }, 3600000);
+    }
+    
+    showStreakDanger() {
+        const dangerEl = document.querySelector('.streak-danger');
+        dangerEl.style.display = 'block';
+        
+        // Calculate time until streak expires
+        const expiryTime = this.settings.lastActivity + (24 * 60 * 60 * 1000);
+        const timeLeft = Math.max(0, expiryTime - Date.now());
+        
+        if (timeLeft > 0) {
+            this.updateStreakExpiryTimer(timeLeft);
+        }
+    }
+    
+    updateStreakExpiryTimer(timeLeft) {
+        const hours = Math.floor(timeLeft / (1000 * 60 * 60));
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+        
+        document.getElementById('streak-expiry').textContent = 
+            `${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        
+        setTimeout(() => {
+            if (timeLeft > 1000) {
+                this.updateStreakExpiryTimer(timeLeft - 1000);
+            }
+        }, 1000);
+    }
+    
+    startChallengeTimer() {
+        // Challenge ends in 2 days, 14 hours
+        let timeLeft = (2 * 24 + 14) * 60 * 60; // in seconds
+        
+        const updateTimer = () => {
+            const days = Math.floor(timeLeft / (24 * 60 * 60));
+            const hours = Math.floor((timeLeft % (24 * 60 * 60)) / (60 * 60));
+            
+            document.getElementById('challenge-time-left').textContent = 
+                `${days} days, ${hours} hours remaining`;
+            
+            timeLeft -= 3600; // Decrease by 1 hour
+            setTimeout(updateTimer, 3600000); // Update every hour
+        };
+        
+        updateTimer();
+    }
+    
+    updateDisplays() {
+        // Update rank
+        document.getElementById('user-rank').textContent = `#${this.settings.userRank}`;
+        document.getElementById('total-fighters').textContent = this.settings.totalFighters.toLocaleString();
+        
+        // Update streak
+        document.getElementById('current-streak').textContent = this.settings.currentStreak;
+        
+        // Update weekly progress
+        const progressPercent = (this.settings.weeklyProgress / 10) * 100;
+        document.querySelector('.challenge-progress .progress-fill').style.width = `${progressPercent}%`;
+        document.querySelector('.challenge-progress .progress-text').textContent = 
+            `${this.settings.weeklyProgress}/10 completed`;
+        
+        // Update peer pressure
+        document.querySelector('.pressure-stat:nth-child(1) .stat-number').textContent = this.settings.friendsAhead;
+    }
+    
+    showSharingPressure() {
+        const widget = document.getElementById('sharing-pressure');
+        widget.style.display = 'block';
+        widget.style.animation = 'slideInFromBottom 0.5s ease';
+        
+        this.settings.sharingPressureShown = true;
+        this.saveSettings();
+        
+        // Auto-hide after 30 seconds if no interaction
+        setTimeout(() => {
+            if (widget.style.display === 'block') {
+                this.closeSharingPressure();
+            }
+        }, 30000);
+    }
+    
+    closeSharingPressure() {
+        document.getElementById('sharing-pressure').style.display = 'none';
+    }
+    
+    handleEventExpiry() {
+        // Show FOMO message when event expires
+        if (typeof window.notificationSystem !== 'undefined') {
+            window.notificationSystem.showToastNotification(
+                '⏰ Event expired! You missed the exclusive Whistleblower badge. Next event starts in 4 hours.',
+                'urgent'
+            );
+        }
+        
+        // Generate new event
+        setTimeout(() => this.generateNewEvent(), 4 * 60 * 60 * 1000); // 4 hours
+    }
+    
+    generateNewEvent() {
+        const events = [
+            {
+                title: "Corporate Tax Evasion Investigation",
+                description: "Uncover offshore tax schemes with leaked Paradise Papers",
+                reward: "Tax Detective Badge + 750 XP",
+                urgency: "urgent"
+            },
+            {
+                title: "Labor Rights Violation Report",
+                description: "Document workplace abuses in major corporations",
+                reward: "Worker Advocate Badge + $50 discount",
+                urgency: "exclusive"
+            }
+        ];
+        
+        const newEvent = events[Math.floor(Math.random() * events.length)];
+        // Update event display with new content
+    }
+    
+    monitorUserBehavior() {
+        // Track user engagement patterns
+        let engagementScore = 0;
+        
+        ['click', 'scroll', 'focus'].forEach(event => {
+            document.addEventListener(event, () => {
+                engagementScore++;
+                
+                // Trigger peer pressure based on engagement
+                if (engagementScore % 50 === 0) {
+                    this.triggerPeerPressure();
+                }
+            });
+        });
+    }
+    
+    triggerPeerPressure() {
+        // Show competitive messaging
+        const messages = [
+            "Your friends are outpacing you in the corporate resistance!",
+            "5 friends just completed purchases while you browsed.",
+            "Your network average is 23% higher than your current progress.",
+            "Friends who bought resistance gear are 3x more effective at fighting corporate evil."
+        ];
+        
+        const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+        
+        if (typeof window.notificationSystem !== 'undefined') {
+            window.notificationSystem.showToastNotification(randomMessage, 'warning', 6000);
+        }
+    }
+}
+
+// Global functions for UI interactions
+function motivateUser() {
+    // Redirect to action page with motivation
+    const motivationData = {
+        currentRank: window.socialPressureSystem.settings.userRank,
+        friendsAhead: window.socialPressureSystem.settings.friendsAhead,
+        motivation: 'leaderboard-climb'
+    };
+    
+    localStorage.setItem('evil1-motivation-context', JSON.stringify(motivationData));
+    window.location.href = '/articles/?utm_source=leaderboard&utm_medium=motivation';
+}
+
+function joinEvent(eventId) {
+    window.socialPressureSystem.settings.eventParticipationCount++;
+    window.socialPressureSystem.saveSettings();
+    
+    // Show participation success
+    if (typeof window.notificationSystem !== 'undefined') {
+        window.notificationSystem.showToastNotification(
+            '🎉 Event joined! You\'re now investigating with 73 other corporate crime fighters.',
+            'success'
+        );
+    }
+    
+    // Increment event participants counter
+    const participantsEl = document.getElementById('event-participants');
+    const currentCount = parseInt(participantsEl.textContent);
+    participantsEl.textContent = currentCount + 1;
+    
+    // Update progress bar
+    const progressBar = participantsEl.closest('.event-card').querySelector('.progress-fill');
+    const newProgress = ((currentCount + 1) / 100) * 100;
+    progressBar.style.width = `${Math.min(100, newProgress)}%`;
+}
+
+function requestVIPAccess() {
+    // Simulate VIP access request with urgency
+    if (typeof window.notificationSystem !== 'undefined') {
+        window.notificationSystem.showToastNotification(
+            '👑 VIP access requested! Reviewing your corporate crime fighting credentials...',
+            'info'
+        );
+    }
+    
+    // Redirect to premium page
+    setTimeout(() => {
+        window.location.href = '/membership/?utm_source=vip-request&utm_medium=fomo';
+    }, 2000);
+}
+
+function catchUpWithFriends() {
+    // Analytics for peer pressure conversion
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'peer_pressure_conversion', {
+            'friends_ahead': window.socialPressureSystem.settings.friendsAhead,
+            'user_rank': window.socialPressureSystem.settings.userRank
+        });
+    }
+    
+    // Redirect to course or product page
+    window.location.href = '/merchandise/?utm_source=peer-pressure&utm_medium=social-comparison';
+}
+
+function shareToTwitter() {
+    const text = "I'm fighting corporate evil on evil1.org! Join me in exposing capitalism's crimes.";
+    const url = encodeURIComponent(window.location.href);
+    window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${url}`, '_blank');
+    
+    // Track sharing
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'share', { method: 'twitter' });
+    }
+}
+
+function shareToFacebook() {
+    const url = encodeURIComponent(window.location.href);
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+    
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'share', { method: 'facebook' });
+    }
+}
+
+function shareViaEmail() {
+    const subject = "Corporate Evil Exposed - You Need to See This";
+    const body = `I found this exposé of corporate crimes that you need to read: ${window.location.href}`;
+    window.location.href = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'share', { method: 'email' });
+    }
+}
+
+function closeSharingPressure() {
+    window.socialPressureSystem.closeSharingPressure();
+}
+
+// Initialize social pressure system
+document.addEventListener('DOMContentLoaded', function() {
+    window.socialPressureSystem = new SocialPressureSystem();
+});
+</script>
