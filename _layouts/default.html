@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{ '/assets/css/topnav.css' | relative_url }}">
     {% if page.layout == 'awards-ceremony' %}<link rel="stylesheet" href="{{ '/assets/css/awards.css' | relative_url }}">{% endif %}
     <link rel="stylesheet" href="{{ '/assets/css/widgets.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/flame-effects.css' | relative_url }}">
     {% if page.additional_css %}
         {% for css_file in page.additional_css %}
             <link rel="stylesheet" href="{{ css_file | relative_url }}">
@@ -73,6 +74,7 @@
         {{ content }}
     </div>
     {% include footer.html %}
+<<<<<<< HEAD
 
     <script src="{{ '/assets/js/pricing-experiments.js' | relative_url }}"></script>
 
@@ -88,3 +90,10 @@
                 });
             }
             </script>
+=======
+    
+    <!-- Hell Flames Effect -->
+    <script src="{{ '/assets/js/hell-flames.js' | relative_url }}"></script>
+    <!-- Bosch Hell Visions -->
+    <script src="{{ '/assets/js/bosch-hell-vision.js' | relative_url }}"></script>
+>>>>>>> origin/copilot/fix-3419d27f-98c6-4b6d-a57e-5c9fdcef489d

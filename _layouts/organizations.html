@@ -8,10 +8,10 @@ layout: default
         <p>Modern institutions perfecting the art of systematic exploitation, regulatory capture, and legalized theft. Study their methods to understand contemporary evil.</p>
 
         {% for org in site.organizations %}
-            <div class="early-article">
+            <div class="early-article hell-flames">
                 <div class="early-article-header">
                     <h2 class="early-article-title">
-                        <a href="{{ org.url | relative_url }}" style="color: #003366; text-decoration: none;">{{ org.organization.name | default: org.title }}</a>
+                        <a href="{{ org.url | relative_url }}" style="color: #003366; text-decoration: none;" class="flame-text-hover">{{ org.organization.name | default: org.title }}</a>
                     </h2>
                 </div>
                 <div class="early-article-content">
@@ -28,7 +28,7 @@ layout: default
                     {% endif %}
 
                     <div class="early-article-footer">
-                        <a href="{{ org.url | relative_url }}" class="early-nav-link" style="font-size: 11px; padding: 4px 8px;">View Organization →</a>
+                        <a href="{{ org.url | relative_url }}" class="early-nav-link flame-text-hover" style="font-size: 11px; padding: 4px 8px;">View Organization →</a>
                     </div>
                 </div>
             </div>
