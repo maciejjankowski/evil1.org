@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+</head>
+<body>
+    {% include topnav.html %}
+    <div class="container">
+        <h1>{{ page.title }}</h1>
+        {{ content }}
+        <div class="merch-grid">
+            {% for item in site.data.merch %}
+                {% include merch-card.html item=item %}
+            {% endfor %}
+        </div>
+    </div>
+    {% include footer.html %}
+</body>
+</html>

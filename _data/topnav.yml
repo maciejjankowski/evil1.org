@@ -98,9 +98,15 @@
     - title: Corporate Inbox
       url: /corporate-inbox/
       external: false
+    - title: Submit a Tip
+      url: /submit-a-tip/
+      external: false
+    - title: Activist Tools
+      url: /tools-for-activists/
+      external: false
 - title: Store
-  url: /merchandise/
-  priority: 6
+  url: /merch/
+  priority: 5
   external: false
 - title: Defense Services
   url: /corporate-services/

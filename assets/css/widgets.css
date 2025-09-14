@@ -1,0 +1,215 @@
+/* assets/css/widgets.css */
+
+/* Author Spotlight Widget */
+.author-spotlight-widget {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+.author-spotlight-widget h3 {
+    color: #dc3545;
+    margin: 0 0 1rem 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+.author-spotlight-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.author-item {
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 1rem;
+}
+.author-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+.author-info h4 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1rem;
+    color: #333;
+}
+.author-stats {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 0 0 0.5rem 0;
+}
+.latest-work {
+    font-size: 0.9rem;
+    color: #555;
+}
+.latest-work a {
+    color: #dc3545;
+    text-decoration: none;
+}
+.latest-work a:hover {
+    text-decoration: underline;
+}
+
+/* Featured Articles Widget */
+.featured-articles-widget {
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+    color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+}
+.featured-articles-widget h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+.featured-articles-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.featured-article-item {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    padding: 1rem;
+    backdrop-filter: blur(10px);
+}
+.featured-article-item h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+    line-height: 1.3;
+}
+.featured-article-item h4 a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+.featured-article-item h4 a:hover {
+    text-decoration: underline;
+}
+.article-summary {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 0 0 0.75rem 0;
+    opacity: 0.9;
+}
+.article-meta {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+/* Newsletter Widget */
+.newsletter-widget {
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+    color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+}
+.newsletter-widget h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+.newsletter-widget > p {
+    margin: 0 0 1.5rem 0;
+    opacity: 0.9;
+    line-height: 1.4;
+}
+.newsletter-form {
+    margin-bottom: 1rem;
+}
+.form-group {
+    margin-bottom: 1rem;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+}
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: normal;
+    cursor: pointer;
+}
+.checkbox-label input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+    accent-color: white;
+}
+.newsletter-submit {
+    width: 100%;
+    background: white;
+    color: #dc3545;
+    border: none;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.newsletter-submit:hover {
+    background: #f8f9fa;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.newsletter-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 1rem;
+    margin-top: 1rem;
+}
+.privacy-note {
+    font-size: 0.8rem;
+    opacity: 0.8;
+    line-height: 1.4;
+    margin: 0;
+}
+.privacy-note a {
+    color: white;
+    text-decoration: underline;
+}
+.privacy-note a:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .author-spotlight-widget,
+    .featured-articles-widget,
+    .newsletter-widget {
+        padding: 1rem;
+    }
+    .featured-article-item {
+        padding: 0.75rem;
+    }
+    .checkbox-group {
+        gap: 0.25rem;
+    }
+}
