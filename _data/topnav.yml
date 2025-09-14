@@ -54,6 +54,9 @@
     - title: Activities
       url: /activities/
       external: false
+    - title: Corporate Inbox
+      url: /corporate-inbox/
+      external: false
 - title: Store
   url: /merchandise/
   priority: 5

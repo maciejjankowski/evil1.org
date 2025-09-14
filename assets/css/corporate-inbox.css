@@ -1,0 +1,290 @@
+/* Corporate Inbox Styling */
+.inbox-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.inbox-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.inbox-header h1 {
+    color: #d32f2f;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.inbox-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.inbox-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+}
+
+@media (max-width: 768px) {
+    .inbox-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+/* Submission Form */
+.submission-form {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.submission-form h2 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #d32f2f;
+    padding-bottom: 0.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.field-note {
+    display: block;
+    color: #666;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    font-style: italic;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.checkbox-label {
+    display: flex !important;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: normal !important;
+    cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: auto !important;
+    margin: 0;
+}
+
+.privacy-notice {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    padding: 1.5rem;
+    border-radius: 4px;
+    margin: 2rem 0;
+}
+
+.privacy-notice h3 {
+    color: #856404;
+    margin-bottom: 1rem;
+}
+
+.privacy-notice p {
+    color: #856404;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.submit-section {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.btn-submit {
+    background: #d32f2f;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background: #b71c1c;
+}
+
+.btn-submit:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.htmx-indicator {
+    display: none;
+    color: #666;
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+.htmx-request .htmx-indicator {
+    display: block;
+}
+
+/* Similar Experiences Feed */
+.similar-experiences {
+    background: #f5f5f5;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.similar-experiences h2 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #d32f2f;
+    padding-bottom: 0.5rem;
+}
+
+.experience-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.experience-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.experience-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.experience-meta span {
+    background: #e0e0e0;
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+
+.experience-meta .industry {
+    background: #bbdefb;
+    color: #1565c0;
+}
+
+.experience-meta .type {
+    background: #ffcdd2;
+    color: #c62828;
+}
+
+.experience-meta .timeframe {
+    background: #e8f5e8;
+    color: #2e7d32;
+}
+
+.experience-excerpt {
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.similar-companies {
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+}
+
+.similar-companies strong {
+    display: block;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.company-tag {
+    display: inline-block;
+    background: #fff3e0;
+    color: #ef6c00;
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #ffcc02;
+}
+
+/* Loading and success states */
+#submission-result {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+#submission-result.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+#submission-result.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .inbox-container {
+        padding: 1rem;
+    }
+    
+    .inbox-header h1 {
+        font-size: 2rem;
+    }
+    
+    .submission-form,
+    .similar-experiences {
+        padding: 1.5rem;
+    }
+    
+    .experience-meta {
+        gap: 0.5rem;
+    }
+}
