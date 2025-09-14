@@ -80,6 +80,8 @@ navigation:
     url: "/organizations/"
   - title: "Profiles" 
     url: "/profiles/"
+  - title: "Tools"
+    url: "/tools/"
   - title: "Categories"
     url: "/categories/"
   - title: "Tags"

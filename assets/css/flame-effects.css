@@ -1,0 +1,203 @@
+/* =============================================================
+   HELL FLAME EFFECTS
+   CSS-based flame animations for hover states
+   ============================================================= */
+
+/* Base flame animation using CSS transforms and shadows */
+@keyframes flicker {
+  0%, 100% { 
+    transform: rotate(1deg) scale(1); 
+    filter: hue-rotate(0deg);
+  }
+  10% { 
+    transform: rotate(-1deg) scale(1.02); 
+    filter: hue-rotate(5deg);
+  }
+  20% { 
+    transform: rotate(2deg) scale(0.98); 
+    filter: hue-rotate(-5deg);
+  }
+  30% { 
+    transform: rotate(-2deg) scale(1.01); 
+    filter: hue-rotate(10deg);
+  }
+  40% { 
+    transform: rotate(1deg) scale(0.99); 
+    filter: hue-rotate(-3deg);
+  }
+  50% { 
+    transform: rotate(-1deg) scale(1.02); 
+    filter: hue-rotate(7deg);
+  }
+  60% { 
+    transform: rotate(2deg) scale(1); 
+    filter: hue-rotate(-8deg);
+  }
+  70% { 
+    transform: rotate(-2deg) scale(0.98); 
+    filter: hue-rotate(4deg);
+  }
+  80% { 
+    transform: rotate(1deg) scale(1.01); 
+    filter: hue-rotate(-6deg);
+  }
+  90% { 
+    transform: rotate(-1deg) scale(0.99); 
+    filter: hue-rotate(8deg);
+  }
+}
+
+@keyframes flame-glow {
+  0%, 100% { 
+    box-shadow: 
+      0 0 5px rgba(255, 69, 0, 0.5),
+      0 0 10px rgba(255, 69, 0, 0.3),
+      0 0 15px rgba(255, 69, 0, 0.2);
+  }
+  50% { 
+    box-shadow: 
+      0 0 10px rgba(255, 69, 0, 0.8),
+      0 0 20px rgba(255, 69, 0, 0.6),
+      0 0 30px rgba(255, 69, 0, 0.4);
+  }
+}
+
+@keyframes flame-text {
+  0%, 100% { 
+    text-shadow: 
+      0 0 5px rgba(255, 69, 0, 0.8),
+      0 0 10px rgba(255, 140, 0, 0.6),
+      0 0 15px rgba(255, 69, 0, 0.4);
+    color: #ff4500;
+  }
+  50% { 
+    text-shadow: 
+      0 0 10px rgba(255, 69, 0, 1),
+      0 0 20px rgba(255, 140, 0, 0.8),
+      0 0 30px rgba(255, 69, 0, 0.6);
+    color: #ff6500;
+  }
+}
+
+/* Flame effect classes */
+.flame-hover {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.flame-hover:hover {
+  animation: 
+    flicker 0.5s ease-in-out infinite,
+    flame-glow 1s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+
+.flame-text-hover {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.flame-text-hover:hover {
+  animation: flame-text 0.8s ease-in-out infinite;
+}
+
+/* Specific flame effects for different components */
+.crime-card.flame-hover:hover {
+  background: linear-gradient(135deg, 
+    rgba(139, 0, 0, 0.1) 0%, 
+    rgba(255, 69, 0, 0.1) 50%, 
+    rgba(139, 0, 0, 0.1) 100%);
+  border-color: #ff4500;
+}
+
+.post-action-burn {
+  transition: all 0.3s ease;
+}
+
+.post-action-burn:hover {
+  animation: flame-text 0.6s ease-in-out infinite;
+  background: linear-gradient(90deg, 
+    rgba(255, 69, 0, 0.2) 0%, 
+    rgba(255, 140, 0, 0.3) 50%, 
+    rgba(255, 69, 0, 0.2) 100%);
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+/* Organization/Company cards with more intense flames */
+.organization-card.flame-hover:hover,
+.company-card.flame-hover:hover {
+  animation: 
+    flicker 0.4s ease-in-out infinite,
+    flame-glow 0.8s ease-in-out infinite;
+  background: radial-gradient(ellipse at center, 
+    rgba(139, 0, 0, 0.2) 0%, 
+    rgba(255, 69, 0, 0.1) 40%, 
+    transparent 100%);
+}
+
+/* Navigation flame effects */
+.nav-flame-hover {
+  transition: all 0.3s ease;
+}
+
+.nav-flame-hover:hover {
+  animation: flame-text 0.7s ease-in-out infinite;
+  text-decoration: none;
+}
+
+/* Intense flame effect for special elements */
+.hell-flames {
+  position: relative;
+  overflow: visible;
+}
+
+.hell-flames::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: radial-gradient(ellipse at center, 
+    transparent 0%, 
+    rgba(255, 69, 0, 0.1) 30%, 
+    rgba(139, 0, 0, 0.2) 60%, 
+    transparent 100%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.hell-flames:hover::before {
+  opacity: 1;
+  animation: flame-glow 1.2s ease-in-out infinite;
+}
+
+/* Performance optimization - disable on mobile/touch devices */
+@media (hover: none) {
+  .flame-hover:hover,
+  .flame-text-hover:hover,
+  .post-action-burn:hover,
+  .nav-flame-hover:hover,
+  .hell-flames:hover::before {
+    animation: none;
+    transform: none;
+    box-shadow: none;
+    text-shadow: none;
+    background: initial;
+    opacity: initial;
+  }
+}
+
+/* Accessibility - respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .flame-hover:hover,
+  .flame-text-hover:hover,
+  .post-action-burn:hover,
+  .nav-flame-hover:hover,
+  .hell-flames:hover::before {
+    animation: none;
+  }
+}

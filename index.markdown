@@ -13,13 +13,23 @@ description: "Professional network for corporate evil practitioners. Exposing ca
         <p><strong>evil1.org</strong> is a satirical social networking platform exposing how capitalism systematically destroys human decency and exploits society. Join fellow corporate masters in discussing the latest techniques in systematic exploitation, regulatory capture, and democracy manipulation.</p>
         
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px;">
-            <div class="early-article">
+            <div class="early-article flame-hover">
                 <div class="early-article-header">
                     <div class="early-article-title">📰 Latest Articles</div>
                 </div>
                 <div class="early-article-content">
                     <p>In-depth exposés of corporate corruption and capitalist exploitation.</p>
                     <a href="/articles/" class="early-nav-link" style="font-size: 11px; padding: 4px 8px;">Browse Articles →</a>
+                </div>
+            </div>
+            
+            <div class="early-article hell-flames-canvas">
+                <div class="early-article-header">
+                    <div class="early-article-title">🛠️ Evil Tools</div>
+                </div>
+                <div class="early-article-content">
+                    <p>Interactive tools exposing corporate manipulation and greed.</p>
+                    <a href="/tools/" class="early-nav-link" style="font-size: 11px; padding: 4px 8px;">Try Tools →</a>
                 </div>
             </div>
             
@@ -33,7 +43,7 @@ description: "Professional network for corporate evil practitioners. Exposing ca
                 </div>
             </div>
             
-            <div class="early-article">
+            <div class="early-article hell-flames-canvas">
                 <div class="early-article-header">
                     <div class="early-article-title">🏢 Company Profiles</div>
                 </div>
@@ -43,7 +53,7 @@ description: "Professional network for corporate evil practitioners. Exposing ca
                 </div>
             </div>
             
-            <div class="early-article">
+            <div class="early-article flame-hover">
                 <div class="early-article-header">
                     <div class="early-article-title">👥 Member Profiles</div>
                 </div>
@@ -61,7 +71,7 @@ description: "Professional network for corporate evil practitioners. Exposing ca
     <div class="early-section-content">
         <div style="font-size: 11px; color: #666; margin-bottom: 15px; font-style: italic;">Latest updates from your professional network</div>
         
-        <div class="early-article">
+        <div class="early-article flame-hover">
             <div class="early-article-header">
                 <div class="early-article-title">💼 Job Opportunity: Climate Denial Specialist</div>
                 <div class="early-article-meta">ExxonMobil • 2 hours ago</div>
@@ -75,7 +85,7 @@ description: "Professional network for corporate evil practitioners. Exposing ca
             </div>
         </div>
         
-        <div class="early-article">
+        <div class="early-article hell-flames">
             <div class="early-article-header">
                 <div class="early-article-title">📈 Record Profits Announcement</div>
                 <div class="early-article-meta">Pfizer Inc. • 1 day ago</div>
@@ -88,7 +98,7 @@ description: "Professional network for corporate evil practitioners. Exposing ca
             </div>
         </div>
         
-        <div class="early-article">
+        <div class="early-article flame-hover">
             <div class="early-article-header">
                 <div class="early-article-title">🚀 Mars Colonization Update</div>
                 <div class="early-article-meta">Elon Musk • 2 days ago</div>

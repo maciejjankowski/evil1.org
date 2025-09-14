@@ -1,0 +1,658 @@
+---
+# Evil Products Catalog: 30 Products Through Which Major Harm is Done
+# Comprehensive scoring system based on exploitation, environmental damage, and societal harm
+# Scoring: Blood (deaths), Tears (suffering), Gold (profit extraction), Earth (environmental destruction)
+
+# FASHION INDUSTRY - Fast Fashion & Luxury Exploitation
+fast-fashion-tshirt:
+  name: "Generic Fast Fashion T-Shirt"
+  category: "Fashion"
+  industry: "Fast Fashion"
+  description: "Mass-produced cotton t-shirt from global sweatshop network"
+  evil_score:
+    total: 8420
+    blood: 1200  # Worker deaths from factory fires, unsafe conditions
+    tears: 2800  # Child labor, wage theft, sexual harassment in factories  
+    gold: 2600   # Massive profit margins on slave wages ($0.30 labor cost, $15 retail)
+    earth: 1820  # Cotton pesticides, water pollution, synthetic dyes, microplastics
+  harm_breakdown:
+    supply_chain: "Uzbek cotton forced labor, Bangladeshi sweatshops, 16-hour workdays"
+    environmental: "2,700L water per shirt, pesticide runoff, synthetic dye pollution"
+    worker_conditions: "Factory fires, collapsed buildings, wage theft, no safety standards"
+    health_impacts: "Textile worker lung disease, skin conditions from chemicals"
+    societal_harm: "Destroys local textile industries, promotes disposable culture"
+  companies: ["H&M", "Zara", "Shein", "Forever 21", "Primark"]
+  annual_production: "150 billion garments globally"
+  markup: "1500% from factory to retail"
+
+luxury-handbag:
+  name: "Luxury Leather Handbag"
+  category: "Fashion"
+  industry: "Luxury Goods"
+  description: "Premium leather handbag from exploitative tannery operations"
+  evil_score:
+    total: 7650
+    blood: 980   # Tannery worker deaths from chromium poisoning
+    tears: 2200  # Animal cruelty, worker health destruction
+    gold: 3100   # 2000%+ markup on materials and labor
+    earth: 1370  # Deforestation, toxic waste, water pollution
+  harm_breakdown:
+    supply_chain: "Child labor in tanneries, chromium-6 poisoning, animal cruelty"
+    environmental: "Toxic chemicals in water supply, deforestation for cattle"
+    worker_conditions: "No protective equipment, cancer rates, chemical burns"
+    health_impacts: "Community water contamination, respiratory disease"
+    societal_harm: "Artificial scarcity, status-based inequality"
+  companies: ["Louis Vuitton", "Hermès", "Gucci", "Prada", "Coach"]
+  annual_production: "450 million leather goods"
+  markup: "2000% from materials to retail"
+
+# ELECTRONICS - Rare Earth Mining & Planned Obsolescence
+smartphone:
+  name: "Flagship Smartphone"
+  category: "Electronics"
+  industry: "Consumer Technology"
+  description: "Latest model smartphone built on conflict minerals and forced labor"
+  evil_score:
+    total: 9240
+    blood: 2400  # Congo mining conflicts, worker deaths
+    tears: 3200  # Child cobalt mining, factory worker suicides
+    gold: 2800   # Massive margins on planned obsolescence
+    earth: 840   # E-waste, rare earth destruction, carbon footprint
+  harm_breakdown:
+    supply_chain: "Child cobalt mining in Congo, Foxconn worker exploitation"
+    environmental: "Rare earth mining devastation, massive e-waste"
+    worker_conditions: "Factory worker suicides, 16-hour shifts, chemical exposure"
+    health_impacts: "Mining community poisoning, factory worker illness"
+    societal_harm: "Planned obsolescence, addiction design, surveillance capitalism"
+  companies: ["Apple", "Samsung", "Google", "Xiaomi", "Huawei"]
+  annual_production: "1.5 billion units"
+  markup: "500% from components to retail"
+
+laptop-computer:
+  name: "Consumer Laptop"
+  category: "Electronics"
+  industry: "Computing"
+  description: "Mass-market laptop with conflict minerals and exploitative assembly"
+  evil_score:
+    total: 8680
+    blood: 1800  # Mining conflicts, assembly worker deaths
+    tears: 2900  # Child labor in mines, factory exploitation
+    gold: 2400   # High margins on short lifecycle products
+    earth: 1580  # Mining devastation, e-waste mountains
+  harm_breakdown:
+    supply_chain: "Tantalum from conflict zones, rare earth mining, assembly sweatshops"
+    environmental: "Toxic mining waste, electronic waste crisis"
+    worker_conditions: "Benzene exposure, repetitive strain, safety violations"
+    health_impacts: "Mining community health crisis, factory worker poisoning"
+    societal_harm: "Digital divide, planned obsolescence, surveillance"
+  companies: ["Dell", "HP", "Lenovo", "Acer", "Asus"]
+  annual_production: "160 million units"
+  markup: "400% from components to retail"
+
+# FOOD INDUSTRY - Industrial Agriculture & Processed Foods
+processed-meat:
+  name: "Factory Farm Processed Meat"
+  category: "Food"
+  industry: "Industrial Agriculture"
+  description: "Mass-produced meat from concentrated animal feeding operations"
+  evil_score:
+    total: 8950
+    blood: 2100  # Slaughterhouse worker deaths, foodborne illness deaths
+    tears: 3400  # Animal cruelty, worker trauma, community health
+    gold: 1950   # Massive profits from externalized costs
+    earth: 1500  # Greenhouse gases, water pollution, deforestation
+  harm_breakdown:
+    supply_chain: "CAFO animal cruelty, slaughterhouse exploitation, migrant worker abuse"
+    environmental: "Methane emissions, water pollution, antibiotic resistance"
+    worker_conditions: "Dangerous machinery, PTSD, repetitive stress injuries"
+    health_impacts: "Antibiotic resistance, zoonotic diseases, community illness"
+    societal_harm: "Rural community destruction, food system monopolization"
+  companies: ["Tyson Foods", "JBS", "Cargill", "Smithfield", "Hormel"]
+  annual_production: "350 billion pounds globally"
+  markup: "300% from farm to retail"
+
+sugary-beverage:
+  name: "High-Fructose Corn Syrup Soda"
+  category: "Food"
+  industry: "Beverage"
+  description: "Addictive sugar drink driving obesity and diabetes epidemics"
+  evil_score:
+    total: 7820
+    blood: 1600  # Diet-related deaths, diabetes complications
+    tears: 2800  # Addiction, health destruction, family impact
+    gold: 2200   # Massive margins on water and sugar
+    earth: 1220  # Plastic pollution, water depletion, corn monoculture
+  harm_breakdown:
+    supply_chain: "Corn subsidies, Mexican water theft, plastic production"
+    environmental: "Plastic bottle pollution, water table depletion"
+    worker_conditions: "Agricultural worker pesticide exposure"
+    health_impacts: "Obesity epidemic, diabetes, tooth decay, addiction"
+    societal_harm: "Healthcare cost externalization, targeted marketing to children"
+  companies: ["Coca-Cola", "PepsiCo", "Dr Pepper Snapple", "Red Bull"]
+  annual_production: "500 billion servings"
+  markup: "1000% from ingredients to retail"
+
+# ENERGY INDUSTRY - Fossil Fuels & Environmental Destruction
+gasoline:
+  name: "Petroleum Gasoline"
+  category: "Energy"
+  industry: "Oil & Gas"
+  description: "Refined petroleum fuel driving climate change and pollution"
+  evil_score:
+    total: 9600
+    blood: 2800  # Oil wars, refinery accidents, pollution deaths
+    tears: 3200  # Climate displacement, health impacts, conflict
+    gold: 2400   # Massive oil company profits, subsidies
+    earth: 1200  # Climate change, oil spills, air pollution
+  harm_breakdown:
+    supply_chain: "Oil extraction conflicts, pipeline rights violations, refinery accidents"
+    environmental: "Climate change acceleration, air pollution, oil spills"
+    worker_conditions: "Refinery explosions, chemical exposure, rig accidents"
+    health_impacts: "Respiratory disease, cancer clusters, climate health impacts"
+    societal_harm: "Resource wars, political corruption, climate injustice"
+  companies: ["ExxonMobil", "Shell", "BP", "Chevron", "Total"]
+  annual_production: "1.2 billion gallons daily (US)"
+  markup: "200% from crude to pump"
+
+coal:
+  name: "Thermal Coal"
+  category: "Energy"
+  industry: "Coal Mining"
+  description: "Dirty fossil fuel powering climate destruction and health crises"
+  evil_score:
+    total: 9850
+    blood: 3200  # Mining deaths, air pollution deaths, climate deaths
+    tears: 3400  # Black lung disease, community destruction, climate displacement
+    gold: 1950   # Coal company profits despite externalized costs
+    earth: 1300  # Mountaintop removal, climate change, acid rain
+  harm_breakdown:
+    supply_chain: "Mountaintop removal, miner exploitation, transport pollution"
+    environmental: "Highest carbon emissions, mercury pollution, acid rain"
+    worker_conditions: "Black lung disease, mine collapses, explosions"
+    health_impacts: "Respiratory disease, developmental problems, cancer"
+    societal_harm: "Community displacement, political corruption, climate denial"
+  companies: ["Peabody Energy", "Arch Coal", "Alpha Natural Resources", "Cloud Peak Energy"]
+  annual_production: "8 billion tons globally"
+  markup: "150% from mine to power plant"
+
+# AUTOMOTIVE INDUSTRY - Pollution & Resource Extraction
+internal-combustion-car:
+  name: "Internal Combustion Engine Vehicle"
+  category: "Automotive"
+  industry: "Transportation"
+  description: "Fossil fuel vehicle perpetuating transportation emissions and urban pollution"
+  evil_score:
+    total: 8400
+    blood: 1800  # Traffic deaths, pollution deaths, mining deaths
+    tears: 2600  # Health impacts, community displacement, worker exploitation
+    gold: 2400   # Auto industry profits, planned obsolescence
+    earth: 1600  # Emissions, steel production, mining impacts
+  harm_breakdown:
+    supply_chain: "Steel production emissions, mining for components, assembly exploitation"
+    environmental: "Lifetime emissions, urban air pollution, resource extraction"
+    worker_conditions: "Assembly line injuries, chemical exposure, automation displacement"
+    health_impacts: "Air pollution diseases, traffic injury epidemic"
+    societal_harm: "Urban sprawl, public transit destruction, oil dependency"
+  companies: ["General Motors", "Ford", "Volkswagen", "Toyota", "BMW"]
+  annual_production: "80 million vehicles"
+  markup: "300% from materials to retail"
+
+# CHEMICAL INDUSTRY - Toxic Production & Environmental Damage
+pesticide:
+  name: "Glyphosate Herbicide"
+  category: "Chemicals"
+  industry: "Agricultural Chemicals"
+  description: "Toxic herbicide linked to cancer and environmental destruction"
+  evil_score:
+    total: 8760
+    blood: 2000  # Cancer deaths, suicide epidemic in farmers
+    tears: 3200  # Health destruction, farmer debt crisis, ecosystem collapse
+    gold: 2200   # Massive profits from patent monopoly
+    earth: 1360  # Soil destruction, pollinator collapse, water contamination
+  harm_breakdown:
+    supply_chain: "Chemical plant explosions, worker exposure, regulatory capture"
+    environmental: "Pollinator collapse, soil microbiome destruction, water contamination"
+    worker_conditions: "Chemical plant safety violations, cancer clusters"
+    health_impacts: "Non-Hodgkin's lymphoma, birth defects, endocrine disruption"
+    societal_harm: "Farmer suicide epidemic, seed monopolization, regulatory corruption"
+  companies: ["Bayer/Monsanto", "Syngenta", "BASF", "Dow", "DuPont"]
+  annual_production: "1.65 billion pounds"
+  markup: "500% from production to farm gate"
+
+plastic:
+  name: "Single-Use Plastic Packaging"
+  category: "Chemicals"
+  industry: "Petrochemicals"
+  description: "Disposable plastic products creating permanent environmental contamination"
+  evil_score:
+    total: 8200
+    blood: 1400  # Refinery accidents, microplastic health impacts
+    tears: 2800  # Environmental health, wildlife destruction, waste worker exploitation
+    gold: 2600   # Massive profits from externalized environmental costs
+    earth: 1400  # Permanent pollution, ocean contamination, microplastics
+  harm_breakdown:
+    supply_chain: "Petrochemical refining, waste export to developing countries"
+    environmental: "Ocean plastic gyres, microplastic contamination, wildlife death"
+    worker_conditions: "Chemical plant explosions, waste picker exploitation"
+    health_impacts: "Microplastic consumption, endocrine disruption, cancer links"
+    societal_harm: "Waste colonialism, throwaway culture, recycling fraud"
+  companies: ["Dow", "ExxonMobil Chemical", "BASF", "SABIC", "LyondellBasell"]
+  annual_production: "400 million tons"
+  markup: "800% from petrochemicals to packaging"
+
+# PHARMACEUTICAL INDUSTRY - Price Gouging & Health Commodification
+insulin:
+  name: "Life-Saving Insulin"
+  category: "Pharmaceuticals"
+  industry: "Healthcare"
+  description: "Essential diabetes medication priced to maximize profit over human life"
+  evil_score:
+    total: 8900
+    blood: 2400  # Diabetic deaths from rationing insulin
+    tears: 3600  # Financial devastation, health anxiety, family destruction
+    gold: 2500   # 5000% markup on life-saving medicine
+    earth: 400   # Pharmaceutical waste, packaging
+  harm_breakdown:
+    supply_chain: "Patent evergreening, regulatory capture, price fixing"
+    environmental: "Pharmaceutical waste in water systems"
+    worker_conditions: "Research scientist exploitation, manufacturing safety issues"
+    health_impacts: "Rationing deaths, diabetic complications from cost barriers"
+    societal_harm: "Healthcare financialization, death from poverty, system corruption"
+  companies: ["Eli Lilly", "Sanofi", "Novo Nordisk"]
+  annual_production: "200 million vials"
+  markup: "5000% from production to patient"
+
+opioid-painkiller:
+  name: "OxyContin Opioid Painkiller"
+  category: "Pharmaceuticals"
+  industry: "Pain Management"
+  description: "Addictive painkiller designed to create pharmaceutical dependency"
+  evil_score:
+    total: 9400
+    blood: 3800  # Overdose deaths, addiction-related deaths
+    tears: 3200  # Addiction destruction, family devastation, community collapse
+    gold: 2000   # Massive profits from addiction cycle
+    earth: 400   # Pharmaceutical manufacturing waste
+  harm_breakdown:
+    supply_chain: "Deceptive marketing, regulatory capture, prescription fraud"
+    environmental: "Pharmaceutical waste, fentanyl contamination"
+    worker_conditions: "Sales rep moral injury, manufacturing safety issues"
+    health_impacts: "Addiction epidemic, overdose crisis, withdrawal suffering"
+    societal_harm: "Community destruction, healthcare system corruption, crime increase"
+  companies: ["Purdue Pharma", "Johnson & Johnson", "Teva", "Mallinckrodt"]
+  annual_production: "70 billion pills (opioids total)"
+  markup: "4000% from production to street"
+
+# TOBACCO INDUSTRY - Addiction & Disease Manufacturing
+cigarettes:
+  name: "Addictive Cigarettes"
+  category: "Tobacco"
+  industry: "Tobacco Manufacturing"
+  description: "Engineered nicotine delivery system designed to create lifelong addiction"
+  evil_score:
+    total: 9750
+    blood: 4200  # 8 million deaths annually from tobacco
+    tears: 3400  # Addiction suffering, family health impacts, secondhand smoke
+    gold: 1800   # Massive profits from addiction maintenance
+    earth: 350   # Deforestation, agricultural chemicals, waste
+  harm_breakdown:
+    supply_chain: "Child labor in tobacco farming, farmer nicotine poisoning"
+    environmental: "Deforestation, pesticide use, cigarette butt pollution"
+    worker_conditions: "Factory worker nicotine exposure, agricultural exploitation"
+    health_impacts: "Cancer, heart disease, COPD, addiction, secondhand smoke"
+    societal_harm: "Targeted marketing to poor communities, youth addiction, healthcare costs"
+  companies: ["Philip Morris", "British American Tobacco", "Imperial Brands", "Japan Tobacco"]
+  annual_production: "5.7 trillion cigarettes"
+  markup: "1000% from tobacco to retail"
+
+# FINANCIAL INDUSTRY - Exploitation & Economic Predation
+predatory-loan:
+  name: "Payday Loan"
+  category: "Financial Services"
+  industry: "Consumer Finance"
+  description: "High-interest short-term loan designed to trap borrowers in debt cycles"
+  evil_score:
+    total: 8300
+    blood: 800   # Suicide from debt, stress-related deaths
+    tears: 3800  # Financial devastation, family destruction, homelessness
+    gold: 3200   # 400% APR interest rates, fee extraction
+    earth: 500   # Minimal environmental impact
+  harm_breakdown:
+    supply_chain: "Regulatory capture, predatory targeting, debt collection abuse"
+    environmental: "Paper waste, office energy consumption"
+    worker_conditions: "Debt collector moral injury, high-pressure sales"
+    health_impacts: "Stress-related illness, mental health crisis, suicide"
+    societal_harm: "Wealth extraction from poor communities, debt trap cycles"
+  companies: ["Advance America", "Check Into Cash", "Ace Cash Express", "LendingClub"]
+  annual_production: "12 million loans"
+  markup: "40000% APR effective rates"
+
+# MINING INDUSTRY - Environmental Destruction & Worker Exploitation
+rare-earth-mining:
+  name: "Rare Earth Element Mining"
+  category: "Mining"
+  industry: "Mineral Extraction"
+  description: "Toxic mining operations for technology components causing environmental devastation"
+  evil_score:
+    total: 9100
+    blood: 2200  # Mining accidents, radiation exposure deaths
+    tears: 3400  # Community displacement, health destruction, worker exploitation
+    gold: 2200   # High-value minerals with externalized environmental costs
+    earth: 1300  # Massive environmental destruction, radioactive waste
+  harm_breakdown:
+    supply_chain: "Child labor, unsafe working conditions, radioactive exposure"
+    environmental: "Radioactive waste, groundwater contamination, landscape destruction"
+    worker_conditions: "Radiation exposure, lung disease, mining accidents"
+    health_impacts: "Cancer clusters, birth defects, respiratory disease"
+    societal_harm: "Indigenous land rights violations, community displacement"
+  companies: ["China Northern Rare Earth", "Lynas Corporation", "MP Materials", "Neo Performance Materials"]
+  annual_production: "280,000 tons"
+  markup: "500% from mine to technology manufacturer"
+
+# FAST FOOD INDUSTRY - Health Destruction & Worker Exploitation
+fast-food-burger:
+  name: "Fast Food Hamburger"
+  category: "Food"
+  industry: "Quick Service Restaurant"
+  description: "Processed meat sandwich engineered for addiction and convenience over health"
+  evil_score:
+    total: 7600
+    blood: 1200  # Diet-related deaths, foodborne illness
+    tears: 2600  # Health destruction, worker exploitation, animal cruelty
+    gold: 2400   # High margins on cheap ingredients and labor
+    earth: 1400  # Beef emissions, packaging waste, industrial agriculture
+  harm_breakdown:
+    supply_chain: "Factory farming, slaughterhouse conditions, migrant worker exploitation"
+    environmental: "Methane emissions, packaging waste, water usage"
+    worker_conditions: "Minimum wage, burn injuries, no benefits, union busting"
+    health_impacts: "Obesity, diabetes, heart disease, food addiction"
+    societal_harm: "Food desert creation, local restaurant destruction, labor exploitation"
+  companies: ["McDonald's", "Burger King", "Wendy's", "White Castle", "Carl's Jr."]
+  annual_production: "50 billion burgers"
+  markup: "500% from ingredients to customer"
+
+# ALCOHOL INDUSTRY - Addiction & Social Harm
+alcoholic-beverage:
+  name: "Mass-Market Beer"
+  category: "Alcohol"
+  industry: "Alcoholic Beverages"
+  description: "Industrially-produced alcohol designed for mass consumption and addiction potential"
+  evil_score:
+    total: 7400
+    blood: 1800  # Alcohol-related deaths, drunk driving, violence
+    tears: 2800  # Addiction suffering, domestic violence, family destruction
+    gold: 2000   # High profit margins on addictive substance
+    earth: 800   # Water usage, packaging waste, agricultural inputs
+  harm_breakdown:
+    supply_chain: "Agricultural monoculture, water depletion, packaging production"
+    environmental: "Water consumption, packaging waste, transportation emissions"
+    worker_conditions: "Brewery safety issues, agricultural worker exploitation"
+    health_impacts: "Liver disease, addiction, fetal alcohol syndrome, cancer"
+    societal_harm: "Domestic violence, drunk driving, addiction cycles"
+  companies: ["Anheuser-Busch InBev", "Heineken", "Carlsberg", "Molson Coors", "Asahi"]
+  annual_production: "1.96 billion hectoliters"
+  markup: "400% from production to retail"
+
+# GAMBLING INDUSTRY - Addiction & Financial Destruction
+slot-machine:
+  name: "Digital Slot Machine"
+  category: "Gambling"
+  industry: "Gaming & Entertainment"
+  description: "Electronically-engineered gambling device designed to maximize addiction and losses"
+  evil_score:
+    total: 8500
+    blood: 1000  # Suicide from gambling losses, stress deaths
+    tears: 4200  # Gambling addiction, family financial destruction, crime
+    gold: 2800   # House edge designed to extract maximum money
+    earth: 500   # Electronic waste, energy consumption
+  harm_breakdown:
+    supply_chain: "Electronics manufacturing, casino construction exploitation"
+    environmental: "Electronic waste, casino energy consumption"
+    worker_conditions: "Casino worker exploitation, surveillance, psychological pressure"
+    health_impacts: "Gambling addiction, depression, anxiety, suicide"
+    societal_harm: "Family financial destruction, crime increase, community degradation"
+  companies: ["IGT", "Aristocrat", "Scientific Games", "Konami", "Novomatic"]
+  annual_production: "1 million machines"
+  markup: "200% house edge over player lifetime"
+
+# WEAPONS INDUSTRY - Violence & Conflict Perpetuation
+assault-rifle:
+  name: "Military-Style Assault Rifle"
+  category: "Weapons"
+  industry: "Arms Manufacturing"
+  description: "High-capacity firearm designed for maximum lethality and civilian availability"
+  evil_score:
+    total: 9300
+    blood: 4600  # Gun violence deaths, mass shootings, conflicts
+    tears: 2800  # Trauma, fear, community destruction
+    gold: 1500   # Weapons industry profits from violence
+    earth: 400   # Manufacturing emissions, metal extraction
+  harm_breakdown:
+    supply_chain: "Metal mining, manufacturing safety issues, distribution networks"
+    environmental: "Metal extraction, manufacturing emissions, lead contamination"
+    worker_conditions: "Factory safety issues, moral injury of weapons production"
+    health_impacts: "Gun violence epidemic, trauma, lead exposure"
+    societal_harm: "Mass shootings, community fear, conflict perpetuation"
+  companies: ["Smith & Wesson", "Sturm Ruger", "Remington", "Sig Sauer", "Colt"]
+  annual_production: "11 million firearms (US)"
+  markup: "300% from materials to retail"
+
+# SOCIAL MEDIA INDUSTRY - Mental Health & Surveillance
+social-media-platform:
+  name: "Algorithmic Social Media Platform"
+  category: "Technology"
+  industry: "Social Media"
+  description: "Attention-harvesting platform designed to maximize engagement through psychological manipulation"
+  evil_score:
+    total: 8800
+    blood: 1400  # Teen suicide, violence incitement, genocide enablement
+    tears: 3800  # Mental health destruction, addiction, social fragmentation
+    gold: 2800   # Surveillance capitalism, data monetization
+    earth: 800   # Data center energy, electronic waste
+  harm_breakdown:
+    supply_chain: "Content moderation trauma, data center construction, device manufacturing"
+    environmental: "Massive data center energy consumption, e-waste from engagement"
+    worker_conditions: "Content moderator PTSD, tech worker exploitation, contractor abuse"
+    health_impacts: "Teen mental health crisis, addiction, sleep disruption, body dysmorphia"
+    societal_harm: "Democracy erosion, misinformation, social fragmentation, surveillance capitalism"
+  companies: ["Meta", "TikTok", "Twitter/X", "YouTube", "Snapchat"]
+  annual_production: "5 billion users"
+  markup: "90% profit margins on surveillance advertising"
+
+# BEAUTY INDUSTRY - Toxic Chemicals & Self-Esteem Destruction
+cosmetics:
+  name: "Chemical Cosmetics"
+  category: "Beauty"
+  industry: "Personal Care"
+  description: "Chemically-loaded beauty products promoting impossible standards while causing health harm"
+  evil_score:
+    total: 7200
+    blood: 600   # Cancer from toxic ingredients, eating disorders
+    tears: 3200  # Self-esteem destruction, body dysmorphia, anxiety
+    gold: 2400   # Massive markups on cheap chemicals
+    earth: 1000  # Chemical pollution, packaging waste, animal testing
+  harm_breakdown:
+    supply_chain: "Toxic chemical production, animal testing, marketing manipulation"
+    environmental: "Chemical runoff, plastic packaging, microplastic pollution"
+    worker_conditions: "Chemical plant exposure, beauty industry worker exploitation"
+    health_impacts: "Endocrine disruption, cancer, skin sensitization, eating disorders"
+    societal_harm: "Beauty standard manipulation, self-esteem destruction, youth targeting"
+  companies: ["L'Oréal", "Unilever", "Procter & Gamble", "Estée Lauder", "Coty"]
+  annual_production: "$500 billion industry"
+  markup: "1000% from ingredients to retail"
+
+# PRISON INDUSTRY - Human Commodification & Injustice
+private-prison:
+  name: "For-Profit Prison Facility"
+  category: "Incarceration"
+  industry: "Private Corrections"
+  description: "Privately-operated prison designed to maximize occupancy and minimize rehabilitation"
+  evil_score:
+    total: 9000
+    blood: 1800  # Prison violence, medical neglect, suicide
+    tears: 4000  # Family destruction, recidivism, systemic injustice
+    gold: 2400   # Profit from human captivity, cost-cutting
+    earth: 800   # Construction, waste, energy consumption
+  harm_breakdown:
+    supply_chain: "Construction exploitation, food service profiteering, healthcare denial"
+    environmental: "Construction emissions, waste generation, energy consumption"
+    worker_conditions: "Guard exploitation, healthcare worker understaffing"
+    health_impacts: "Medical neglect, mental health deterioration, violence trauma"
+    societal_harm: "Recidivism cycles, family destruction, racial injustice, democracy erosion"
+  companies: ["CoreCivic", "GEO Group", "Management & Training Corporation"]
+  annual_production: "150,000 prisoners"
+  markup: "15% profit margin on human captivity"
+
+# SURVEILLANCE INDUSTRY - Privacy Destruction & Authoritarian Enablement
+facial-recognition:
+  name: "Facial Recognition Surveillance System"
+  category: "Technology"
+  industry: "Surveillance Technology"
+  description: "AI-powered identification system enabling mass surveillance and authoritarian control"
+  evil_score:
+    total: 8600
+    blood: 1200  # Authoritarian repression, wrongful imprisonment
+    tears: 3600  # Privacy destruction, fear, democratic erosion
+    gold: 2400   # High-margin surveillance capitalism
+    earth: 1400  # Massive data center energy, rare earth mining
+  harm_breakdown:
+    supply_chain: "Rare earth mining, data center construction, algorithm bias"
+    environmental: "Massive computational energy requirements, e-waste"
+    worker_conditions: "Algorithm trainer exploitation, data center worker safety"
+    health_impacts: "Stress from surveillance, wrongful targeting health impacts"
+    societal_harm: "Democratic erosion, minority targeting, authoritarian enablement, privacy destruction"
+  companies: ["Clearview AI", "Palantir", "Amazon", "Microsoft", "IBM"]
+  annual_production: "Billions of scans daily"
+  markup: "80% profit margins on surveillance services"
+
+# AGRIBUSINESS - Monoculture & Ecosystem Destruction
+industrial-corn:
+  name: "Genetically Modified Industrial Corn"
+  category: "Agriculture"
+  industry: "Industrial Farming"
+  description: "Monoculture corn production destroying soil health and creating pesticide dependency"
+  evil_score:
+    total: 7800
+    blood: 1000  # Farmer suicide, pesticide poisoning
+    tears: 2800  # Farmer debt crisis, rural community destruction
+    gold: 2200   # Seed monopoly profits, subsidy capture
+    earth: 1800  # Soil depletion, biodiversity loss, water pollution
+  harm_breakdown:
+    supply_chain: "Seed monopolization, pesticide dependency, farmer debt cycles"
+    environmental: "Soil erosion, biodiversity collapse, water contamination"
+    worker_conditions: "Pesticide exposure, machinery accidents, economic stress"
+    health_impacts: "Pesticide exposure illness, community health impacts"
+    societal_harm: "Rural community destruction, food system monopolization, farmer suicide epidemic"
+  companies: ["Monsanto/Bayer", "Cargill", "ADM", "Syngenta", "DowDuPont"]
+  annual_production: "14 billion bushels (US)"
+  markup: "400% from seed patents and processing"
+
+# WATER INDUSTRY - Resource Commodification & Access Denial
+bottled-water:
+  name: "Corporate Bottled Water"
+  category: "Beverages"
+  industry: "Water Commodification"
+  description: "Privatized water extraction and marketing creating artificial scarcity of public resource"
+  evil_score:
+    total: 7400
+    blood: 600   # Water access deaths, dehydration
+    tears: 2800  # Community water theft, access inequality
+    gold: 2400   # 1000% markup on public resource
+    earth: 1600  # Plastic pollution, aquifer depletion, transport emissions
+  harm_breakdown:
+    supply_chain: "Community water extraction, plastic production, transport networks"
+    environmental: "Plastic bottle pollution, aquifer depletion, transportation emissions"
+    worker_conditions: "Bottling plant exploitation, delivery driver conditions"
+    health_impacts: "Dehydration from price barriers, microplastic consumption"
+    societal_harm: "Water commodification, public resource privatization, access inequality"
+  companies: ["Nestlé", "Coca-Cola", "PepsiCo", "Danone", "Primo Water"]
+  annual_production: "500 billion bottles"
+  markup: "1000% from source to retail"
+
+# RETAIL INDUSTRY - Labor Exploitation & Market Dominance
+mega-retailer:
+  name: "Big Box Retail Chain"
+  category: "Retail"
+  industry: "Mass Merchandising"
+  description: "Massive retail operation destroying local businesses while exploiting workers"
+  evil_score:
+    total: 8100
+    blood: 800   # Worker deaths from safety violations, stress
+    tears: 3200  # Worker poverty, community destruction, supplier exploitation
+    gold: 2600   # Massive profits from wage theft and market dominance
+    earth: 1500  # Supply chain emissions, packaging waste, throwaway culture
+  harm_breakdown:
+    supply_chain: "Global sweatshop network, supplier wage theft, transportation emissions"
+    environmental: "Massive carbon footprint, packaging waste, planned obsolescence promotion"
+    worker_conditions: "Poverty wages, benefit denial, union busting, workplace injuries"
+    health_impacts: "Worker stress illness, community health from poverty"
+    societal_harm: "Local business destruction, downtown decay, wealth concentration"
+  companies: ["Walmart", "Amazon", "Target", "Costco", "Home Depot"]
+  annual_production: "$2.3 trillion retail sales"
+  markup: "25% average markup with massive volume"
+
+# HEALTHCARE INDUSTRY - Medical Profiteering & Access Denial
+health-insurance:
+  name: "For-Profit Health Insurance"
+  category: "Healthcare"
+  industry: "Health Insurance"
+  description: "Privatized healthcare gatekeeping designed to maximize profit by denying care"
+  evil_score:
+    total: 9200
+    blood: 3000  # Deaths from denied care, delayed treatment
+    tears: 3800  # Medical bankruptcy, family destruction, treatment anxiety
+    gold: 2000   # Profit from healthcare denial, administrative bloat
+    earth: 400   # Office operations, paper waste
+  harm_breakdown:
+    supply_chain: "Healthcare provider exploitation, pharmaceutical price manipulation"
+    environmental: "Office energy consumption, paper waste"
+    worker_conditions: "Claims adjuster moral injury, call center exploitation"
+    health_impacts: "Denied care deaths, delayed treatment, medical bankruptcy stress"
+    societal_harm: "Healthcare commodification, death from poverty, system corruption"
+  companies: ["UnitedHealth", "Anthem", "Aetna", "Cigna", "Humana"]
+  annual_production: "280 million covered lives"
+  markup: "20% profit margin on life-saving healthcare"
+
+# FRACKING INDUSTRY - Environmental Destruction & Health Crises
+fracking-gas:
+  name: "Hydraulic Fracturing Natural Gas"
+  category: "Energy"
+  industry: "Oil & Gas Extraction"
+  description: "Unconventional gas extraction causing groundwater contamination and seismic activity"
+  evil_score:
+    total: 8900
+    blood: 1800  # Cancer deaths, industrial accidents, earthquake casualties
+    tears: 3200  # Community health destruction, property damage, climate anxiety
+    gold: 2400   # Massive profits from externalized environmental costs
+    earth: 1500  # Groundwater contamination, air pollution, induced seismicity
+  harm_breakdown:
+    supply_chain: "Toxic chemical injection, water table contamination, waste disposal"
+    environmental: "Groundwater pollution, air quality destruction, methane leaks"
+    worker_conditions: "Chemical exposure, industrial accidents, silica lung disease"
+    health_impacts: "Cancer clusters, respiratory disease, birth defects"
+    societal_harm: "Rural community destruction, property value collapse, democratic capture"
+  companies: ["ExxonMobil", "Chevron", "ConocoPhillips", "EOG Resources", "Pioneer Natural Resources"]
+  annual_production: "40 trillion cubic feet (US)"
+  markup: "300% from wellhead to consumer"
+
+# CRYPTOCURRENCY INDUSTRY - Environmental Destruction & Financial Speculation
+cryptocurrency-bitcoin:
+  name: "Bitcoin Cryptocurrency"
+  category: "Technology"
+  industry: "Digital Currency"
+  description: "Energy-intensive digital speculation vehicle enabling ransomware and money laundering"
+  evil_score:
+    total: 8500
+    blood: 600   # Ransomware deaths, mining facility accidents
+    tears: 2800  # Financial losses, addiction, criminal victimization
+    gold: 3200   # Massive speculation profits, regulatory arbitrage
+    earth: 1900  # Massive energy consumption, e-waste from mining hardware
+  harm_breakdown:
+    supply_chain: "Mining hardware production, electricity grid strain, criminal networks"
+    environmental: "Coal-powered mining, electronic waste, carbon emissions"
+    worker_conditions: "Mining farm exploitation, hardware assembly conditions"
+    health_impacts: "Financial stress, addiction, criminal victimization"
+    societal_harm: "Ransomware enablement, money laundering, financial speculation bubble"
+  companies: ["Bitmain", "Canaan", "MicroStrategy", "Coinbase", "Binance"]
+  annual_production: "900 bitcoins per day"
+  markup: "Infinite speculation markup over production cost"

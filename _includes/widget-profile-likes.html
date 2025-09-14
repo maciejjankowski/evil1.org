@@ -1,0 +1,838 @@
+<!-- Profile Likes Counter DLC Dark Pattern Widget -->
+<div class="profile-likes-widget" data-profile="{{ include.profile_id }}">
+  <div class="likes-section">
+    <div class="likes-display">
+      <div class="like-button" onclick="attemptLike('{{ include.profile_id }}')">
+        <span class="heart-icon" id="heart-{{ include.profile_id }}">🤍</span>
+        <span class="like-count" id="count-{{ include.profile_id }}">{{ include.like_count | default: 0 }}</span>
+      </div>
+    </div>
+    
+    <div class="likes-restriction" id="restriction-{{ include.profile_id }}">
+      <div class="restriction-notice">
+        <p>💎 <strong>Premium Feature:</strong> Liking profiles requires a subscription</p>
+        <div class="restriction-details">
+          <small>Free users can view likes but cannot give them</small>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Premium Likes Modal -->
+  <div class="likes-paywall-modal hidden" id="likesModal-{{ include.profile_id }}">
+    <div class="modal-backdrop" onclick="closeLikesModal('{{ include.profile_id }}')"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>💖 Premium Likes Feature</h3>
+        <button onclick="closeLikesModal('{{ include.profile_id }}')" class="close-btn">&times;</button>
+      </div>
+      
+      <div class="modal-body">
+        <div class="feature-explanation">
+          <h4>Unlock Social Validation Powers!</h4>
+          <p>Show appreciation for profiles and get noticed by the community</p>
+        </div>
+        
+        <div class="likes-pricing">
+          <div class="pricing-tier basic">
+            <h5>Basic Likes</h5>
+            <div class="price">$3<span>/month</span></div>
+            <ul>
+              <li>5 likes per day</li>
+              <li>Basic heart emoji</li>
+              <li>No like history</li>
+            </ul>
+            <button class="btn btn-secondary" onclick="selectLikesTier('basic', '{{ include.profile_id }}')">
+              Get Basic Likes
+            </button>
+          </div>
+          
+          <div class="pricing-tier premium featured">
+            <div class="popular-badge">Dating App Style!</div>
+            <h5>Premium Likes</h5>
+            <div class="price">$9<span>/month</span></div>
+            <ul>
+              <li>50 likes per day</li>
+              <li>Multiple emoji reactions</li>
+              <li>See who liked you</li>
+              <li>Like history tracking</li>
+            </ul>
+            <button class="btn btn-primary" onclick="selectLikesTier('premium', '{{ include.profile_id }}')">
+              Unlock Premium Likes
+            </button>
+          </div>
+          
+          <div class="pricing-tier unlimited">
+            <h5>Unlimited Likes</h5>
+            <div class="price">$25<span>/month</span></div>
+            <ul>
+              <li>Unlimited daily likes</li>
+              <li>Custom emoji reactions</li>
+              <li>Priority profile placement</li>
+              <li>Likes analytics dashboard</li>
+              <li>Super likes (5x weight)</li>
+            </ul>
+            <button class="btn btn-primary" onclick="selectLikesTier('unlimited', '{{ include.profile_id }}')">
+              Go Unlimited
+            </button>
+          </div>
+        </div>
+        
+        <div class="alternative-actions">
+          <h4>Alternative Ways to Show Appreciation</h4>
+          <div class="alt-buttons">
+            <button class="btn-alt" onclick="watchAdForLike('{{ include.profile_id }}')">
+              📺 Watch Ad for 1 Like
+            </button>
+            <button class="btn-alt" onclick="shareProfileForLikes('{{ include.profile_id }}')">
+              📱 Share Profile for 3 Likes
+            </button>
+            <button class="btn-alt" onclick="dailyCheckIn('{{ include.profile_id }}')">
+              ✅ Daily Check-in for 2 Likes
+            </button>
+          </div>
+        </div>
+        
+        <!-- Daily Limits Pressure -->
+        <div class="scarcity-pressure">
+          <div class="daily-limit-display">
+            <h4>⏰ Your Daily Like Status</h4>
+            <div class="limit-bar">
+              <div class="limit-used" style="width: 100%"></div>
+              <div class="limit-text">0 / 0 likes used today</div>
+            </div>
+            <p class="reset-timer">Resets in: <span id="resetTimer">23:42:15</span></p>
+          </div>
+        </div>
+        
+        <div class="dark-pattern-education">
+          <details>
+            <summary>🎭 Dark Pattern Alert: Dating App Mechanics</summary>
+            <p><strong>Educational Notice:</strong> This replicates exactly how dating apps monetize social validation:</p>
+            <ul>
+              <li><strong>Artificial Scarcity:</strong> Limiting basic social interactions</li>
+              <li><strong>Daily Limits:</strong> Creating urgency and FOMO</li>
+              <li><strong>Tiered Manipulation:</strong> Making premium feel "reasonable"</li>
+              <li><strong>Social Pressure:</strong> Monetizing human need for validation</li>
+              <li><strong>Addiction Mechanics:</strong> Daily check-ins and streaks</li>
+              <li><strong>Alternative Currencies:</strong> Trading attention for virtual credits</li>
+            </ul>
+            <p>Major dating apps use these exact strategies to generate billions in revenue from basic human social needs.</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.profile-likes-widget {
+  position: relative;
+  margin: 15px 0;
+}
+
+.likes-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: linear-gradient(135deg, #ff9a9e, #fecfef);
+  border-radius: 12px;
+  border: 2px solid #ff6b9d;
+}
+
+.likes-display {
+  display: flex;
+  align-items: center;
+}
+
+.like-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 15px;
+  background: white;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid transparent;
+}
+
+.like-button:hover {
+  transform: scale(1.05);
+  border-color: #ff6b9d;
+}
+
+.like-button.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.heart-icon {
+  font-size: 1.4rem;
+  transition: all 0.3s ease;
+}
+
+.like-count {
+  font-weight: bold;
+  color: #2d3436;
+  min-width: 20px;
+}
+
+.likes-restriction {
+  flex: 1;
+}
+
+.restriction-notice {
+  text-align: center;
+  color: white;
+}
+
+.restriction-notice p {
+  margin: 0 0 5px 0;
+  font-weight: bold;
+}
+
+.restriction-details {
+  opacity: 0.9;
+}
+
+.likes-paywall-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.likes-paywall-modal.hidden {
+  display: none;
+}
+
+.modal-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  background: white;
+  border-radius: 16px;
+  max-width: 700px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #ff6b9d, #c44569);
+  color: white;
+  border-radius: 16px 16px 0 0;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.feature-explanation {
+  text-align: center;
+  margin-bottom: 25px;
+  padding: 20px;
+  background: linear-gradient(135deg, #ffeaa7, #fdcb6e);
+  border-radius: 12px;
+}
+
+.feature-explanation h4 {
+  margin: 0 0 10px 0;
+  color: #2d3436;
+}
+
+.likes-pricing {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.pricing-tier {
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  background: white;
+  transition: transform 0.3s ease;
+}
+
+.pricing-tier:hover {
+  transform: translateY(-5px);
+}
+
+.pricing-tier.featured {
+  border-color: #ff6b9d;
+  box-shadow: 0 5px 20px rgba(255, 107, 157, 0.3);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ff6b9d;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.pricing-tier h5 {
+  margin: 0 0 10px 0;
+  color: #2d3436;
+  font-size: 1.1rem;
+}
+
+.price {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #ff6b9d;
+  margin-bottom: 15px;
+}
+
+.price span {
+  font-size: 0.8rem;
+  color: #636e72;
+}
+
+.pricing-tier ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  text-align: left;
+}
+
+.pricing-tier li {
+  padding: 5px 0;
+  border-bottom: 1px solid #f0f0f0;
+  position: relative;
+  padding-left: 20px;
+  font-size: 0.9rem;
+}
+
+.pricing-tier li:before {
+  content: "💖";
+  position: absolute;
+  left: 0;
+  font-size: 0.8rem;
+}
+
+.btn {
+  background: #0984e3;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #ff6b9d, #c44569);
+}
+
+.btn-secondary {
+  background: #636e72;
+}
+
+.alternative-actions {
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+
+.alternative-actions h4 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #2d3436;
+}
+
+.alt-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.btn-alt {
+  background: #a29bfe;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.3s;
+}
+
+.btn-alt:hover {
+  background: #6c5ce7;
+  transform: translateY(-2px);
+}
+
+.scarcity-pressure {
+  background: #ffe8e8;
+  border: 2px solid #ff6b6b;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.scarcity-pressure h4 {
+  margin: 0 0 15px 0;
+  color: #d63031;
+}
+
+.limit-bar {
+  background: #f0f0f0;
+  border-radius: 25px;
+  height: 30px;
+  position: relative;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.limit-used {
+  background: linear-gradient(90deg, #ff6b6b, #ee5a24);
+  height: 100%;
+  transition: width 0.3s ease;
+  border-radius: 25px;
+}
+
+.limit-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  font-size: 0.9rem;
+}
+
+.reset-timer {
+  color: #d63031;
+  font-weight: bold;
+  margin: 0;
+}
+
+.dark-pattern-education {
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.dark-pattern-education summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: #856404;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.dark-pattern-education ul {
+  margin: 15px 0 0 20px;
+}
+
+.dark-pattern-education li {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .likes-pricing {
+    grid-template-columns: 1fr;
+  }
+  
+  .alt-buttons {
+    flex-direction: column;
+  }
+  
+  .likes-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}
+
+/* Animation for heart reactions */
+.heart-bounce {
+  animation: heartBounce 0.6s ease;
+}
+
+@keyframes heartBounce {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+.floating-heart {
+  position: absolute;
+  font-size: 1.5rem;
+  color: #ff6b9d;
+  animation: floatUp 2s ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes floatUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}
+</style>
+
+<script>
+// Profile Likes System
+class ProfileLikesSystem {
+  constructor() {
+    this.userTier = localStorage.getItem('likesTier') || 'none';
+    this.dailyLikes = this.getTodayLikes();
+    this.maxLikes = this.getMaxLikes();
+    this.initializeSystem();
+    this.startResetTimer();
+  }
+  
+  getMaxLikes() {
+    switch(this.userTier) {
+      case 'basic': return 5;
+      case 'premium': return 50;
+      case 'unlimited': return 999;
+      default: return 0;
+    }
+  }
+  
+  getTodayLikes() {
+    const today = new Date().toDateString();
+    const stored = localStorage.getItem('likesUsedToday');
+    const data = stored ? JSON.parse(stored) : {};
+    
+    if (data.date !== today) {
+      // Reset for new day
+      data.date = today;
+      data.count = 0;
+      localStorage.setItem('likesUsedToday', JSON.stringify(data));
+    }
+    
+    return data.count;
+  }
+  
+  initializeSystem() {
+    // Update all like displays
+    this.updateLimitDisplays();
+  }
+  
+  updateLimitDisplays() {
+    const limitBars = document.querySelectorAll('.limit-bar .limit-used');
+    const limitTexts = document.querySelectorAll('.limit-text');
+    
+    limitBars.forEach(bar => {
+      const percentage = this.maxLikes > 0 ? (this.dailyLikes / this.maxLikes) * 100 : 100;
+      bar.style.width = Math.min(percentage, 100) + '%';
+    });
+    
+    limitTexts.forEach(text => {
+      text.textContent = `${this.dailyLikes} / ${this.maxLikes} likes used today`;
+    });
+  }
+  
+  startResetTimer() {
+    const updateTimer = () => {
+      const now = new Date();
+      const tomorrow = new Date(now);
+      tomorrow.setDate(tomorrow.getDate() + 1);
+      tomorrow.setHours(0, 0, 0, 0);
+      
+      const diff = tomorrow - now;
+      const hours = Math.floor(diff / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+      
+      const timeString = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+      
+      document.querySelectorAll('#resetTimer').forEach(el => {
+        el.textContent = timeString;
+      });
+    };
+    
+    updateTimer();
+    setInterval(updateTimer, 1000);
+  }
+}
+
+function attemptLike(profileId) {
+  const likesSystem = window.profileLikesSystem;
+  
+  if (!likesSystem || likesSystem.userTier === 'none') {
+    showLikesModal(profileId);
+    return;
+  }
+  
+  if (likesSystem.dailyLikes >= likesSystem.maxLikes) {
+    showLikesModal(profileId);
+    return;
+  }
+  
+  // Successful like
+  executeLike(profileId);
+}
+
+function executeLike(profileId) {
+  const heartIcon = document.getElementById(`heart-${profileId}`);
+  const countEl = document.getElementById(`count-${profileId}`);
+  const likeButton = heartIcon.closest('.like-button');
+  
+  // Animate heart
+  heartIcon.classList.add('heart-bounce');
+  heartIcon.textContent = '❤️';
+  
+  // Create floating heart
+  const floatingHeart = document.createElement('div');
+  floatingHeart.className = 'floating-heart';
+  floatingHeart.textContent = '💖';
+  floatingHeart.style.left = '50%';
+  floatingHeart.style.top = '0';
+  likeButton.style.position = 'relative';
+  likeButton.appendChild(floatingHeart);
+  
+  // Remove floating heart after animation
+  setTimeout(() => {
+    if (floatingHeart.parentNode) {
+      floatingHeart.parentNode.removeChild(floatingHeart);
+    }
+  }, 2000);
+  
+  // Update count
+  const currentCount = parseInt(countEl.textContent) || 0;
+  countEl.textContent = currentCount + 1;
+  
+  // Update daily usage
+  const likesSystem = window.profileLikesSystem;
+  likesSystem.dailyLikes++;
+  
+  const today = new Date().toDateString();
+  localStorage.setItem('likesUsedToday', JSON.stringify({
+    date: today,
+    count: likesSystem.dailyLikes
+  }));
+  
+  likesSystem.updateLimitDisplays();
+  
+  // Reset heart animation
+  setTimeout(() => {
+    heartIcon.classList.remove('heart-bounce');
+  }, 600);
+  
+  // Track analytics
+  if (window.trackGoal) {
+    window.trackGoal('profile_liked', {
+      profile_id: profileId,
+      tier: likesSystem.userTier
+    });
+  }
+}
+
+function showLikesModal(profileId) {
+  document.getElementById(`likesModal-${profileId}`).classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+  
+  // Track paywall view
+  if (window.trackGoal) {
+    window.trackGoal('likes_paywall_view', {
+      profile_id: profileId,
+      trigger: 'like_attempt'
+    });
+  }
+}
+
+function closeLikesModal(profileId) {
+  document.getElementById(`likesModal-${profileId}`).classList.add('hidden');
+  document.body.style.overflow = '';
+}
+
+function selectLikesTier(tier, profileId) {
+  localStorage.setItem('likesTier', tier);
+  
+  // Track conversion
+  if (window.trackGoal) {
+    window.trackGoal('likes_tier_selected', {
+      tier: tier,
+      profile_id: profileId,
+      price: tier === 'basic' ? 3 : tier === 'premium' ? 9 : 25
+    });
+  }
+  
+  // Redirect to subscription
+  window.location.href = `/subscribe/?tier=likes-${tier}&feature=profile-likes&profile=${profileId}`;
+}
+
+function watchAdForLike(profileId) {
+  // Simulate ad experience
+  const adModal = document.createElement('div');
+  adModal.innerHTML = `
+    <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 10001; display: flex; align-items: center; justify-content: center;">
+      <div style="background: white; padding: 30px; border-radius: 16px; text-align: center; max-width: 400px;">
+        <h3>📺 Advertisement</h3>
+        <div style="background: linear-gradient(135deg, #ff6b9d, #c44569); height: 200px; display: flex; align-items: center; justify-content: center; margin: 20px 0; border-radius: 12px; color: white;">
+          <div>
+            <p style="font-size: 18px; margin: 0;">💕 Dating App Ad</p>
+            <p style="font-size: 14px; margin: 5px 0 0 0;">"Find Love Today!"</p>
+          </div>
+        </div>
+        <div style="margin: 20px 0;">
+          <div style="background: #f0f0f0; padding: 10px; border-radius: 8px;">
+            Time remaining: <span id="adTimer" style="font-weight: bold; color: #ff6b9d;">30</span> seconds
+          </div>
+        </div>
+        <p style="font-size: 12px; color: #666; margin: 10px 0 0 0;">This simulates rewarded advertising mechanics</p>
+      </div>
+    </div>
+  `;
+  
+  document.body.appendChild(adModal);
+  
+  let countdown = 30;
+  const timer = setInterval(() => {
+    countdown--;
+    const timerEl = document.getElementById('adTimer');
+    if (timerEl) {
+      timerEl.textContent = countdown;
+    }
+    
+    if (countdown <= 0) {
+      clearInterval(timer);
+      document.body.removeChild(adModal);
+      alert('🎉 Ad complete! You earned 1 like!');
+      
+      // Grant temporary like
+      grantTemporaryLike(profileId);
+      closeLikesModal(profileId);
+    }
+  }, 1000);
+  
+  if (window.trackGoal) {
+    window.trackGoal('likes_ad_watched', { profile_id: profileId });
+  }
+}
+
+function shareProfileForLikes(profileId) {
+  const profileUrl = `${window.location.origin}/profiles/${profileId}`;
+  const shareText = `Check out this profile on EVIL1.ORG! ${profileUrl}`;
+  
+  if (navigator.share) {
+    navigator.share({
+      title: `Profile: ${profileId}`,
+      text: shareText,
+      url: profileUrl
+    }).then(() => {
+      alert('🎉 Thanks for sharing! You earned 3 likes!');
+      grantTemporaryLikes(profileId, 3);
+      closeLikesModal(profileId);
+    });
+  } else {
+    navigator.clipboard.writeText(shareText).then(() => {
+      alert('🎉 Share text copied! Paste it anywhere to earn 3 likes!');
+      grantTemporaryLikes(profileId, 3);
+      closeLikesModal(profileId);
+    });
+  }
+  
+  if (window.trackGoal) {
+    window.trackGoal('likes_profile_shared', { profile_id: profileId });
+  }
+}
+
+function dailyCheckIn(profileId) {
+  const today = new Date().toDateString();
+  const lastCheckIn = localStorage.getItem('lastLikesCheckIn');
+  
+  if (lastCheckIn === today) {
+    alert('✅ You already checked in today! Come back tomorrow for more likes.');
+    return;
+  }
+  
+  localStorage.setItem('lastLikesCheckIn', today);
+  alert('✅ Daily check-in complete! You earned 2 likes!');
+  grantTemporaryLikes(profileId, 2);
+  closeLikesModal(profileId);
+  
+  if (window.trackGoal) {
+    window.trackGoal('likes_daily_checkin', { profile_id: profileId });
+  }
+}
+
+function grantTemporaryLikes(profileId, count) {
+  const likesSystem = window.profileLikesSystem;
+  if (likesSystem) {
+    likesSystem.maxLikes += count;
+    likesSystem.updateLimitDisplays();
+  }
+}
+
+function grantTemporaryLike(profileId) {
+  grantTemporaryLikes(profileId, 1);
+}
+
+// Initialize likes system when page loads
+document.addEventListener('DOMContentLoaded', function() {
+  window.profileLikesSystem = new ProfileLikesSystem();
+});
+</script>

@@ -5,7 +5,11 @@
   <ul id="topnav-list" class="topnav-list">
   {%- for item in links -%}
     <li class="topnav-item">
-      <a href="{{ item.url | relative_url }}" class="topnav-link" data-nav-item="{{ item.title | downcase | replace: ' ', '-' }}" data-nav-priority="{{ item.priority }}" {%- if item.external %} target="_blank" rel="noopener"{%- endif -%}>{{ item.title }}</a>
+      {%- assign flame_class = "" -%}
+      {%- if item.title contains "Hall" or item.title contains "Organizations" or item.title contains "Profiles" -%}
+        {%- assign flame_class = " nav-flame-hover" -%}
+      {%- endif -%}
+      <a href="{{ item.url | relative_url }}" class="topnav-link{{ flame_class }}" data-nav-item="{{ item.title | downcase | replace: ' ', '-' }}" data-nav-priority="{{ item.priority }}" {%- if item.external %} target="_blank" rel="noopener"{%- endif -%}>{{ item.title }}</a>
       {%- if item.children -%}
         <button class="submenu-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="submenu-{{ forloop.index }}">&#9660;</button>
         <ul class="topnav-submenu" id="submenu-{{ forloop.index }}">

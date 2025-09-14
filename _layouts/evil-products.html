@@ -1,0 +1,573 @@
+---
+layout: default
+---
+
+<div class="evil-products-page">
+    <header class="page-header">
+        <h1>🔥 The Evil Products Catalog</h1>
+        <p class="page-description">30 products through which major harm is done to humanity, workers, and the planet. Each scored using our comprehensive Devil's Metrics system for quantifying corporate evil.</p>
+    </header>
+
+    <div class="scoring-intro">
+        <h2>📊 Understanding the Evil Score</h2>
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <h3>🩸 Blood Score</h3>
+                <p>Deaths caused by product lifecycle (0-5000 pts)</p>
+            </div>
+            <div class="metric-card">
+                <h3>😢 Tears Score</h3>
+                <p>Human suffering and quality of life destruction (0-5000 pts)</p>
+            </div>
+            <div class="metric-card">
+                <h3>💰 Gold Score</h3>
+                <p>Profit extraction through exploitation (0-5000 pts)</p>
+            </div>
+            <div class="metric-card">
+                <h3>🌍 Earth Score</h3>
+                <p>Environmental destruction and damage (0-2000 pts)</p>
+            </div>
+        </div>
+        <div class="methodology-link">
+            <a href="/docs/evil-products-scoring-methodology/" class="btn-primary">📖 Read Full Scoring Methodology</a>
+        </div>
+    </div>
+
+    <div class="products-container">
+        <div class="category-filters">
+            <h3>Filter by Category</h3>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="all">All Products</button>
+                <button class="filter-btn" data-category="Fashion">Fashion</button>
+                <button class="filter-btn" data-category="Electronics">Electronics</button>
+                <button class="filter-btn" data-category="Food">Food</button>
+                <button class="filter-btn" data-category="Energy">Energy</button>
+                <button class="filter-btn" data-category="Pharmaceuticals">Pharmaceuticals</button>
+                <button class="filter-btn" data-category="Technology">Technology</button>
+                <button class="filter-btn" data-category="Other">Other</button>
+            </div>
+        </div>
+
+        <div class="sort-controls">
+            <label for="sort-select">Sort by:</label>
+            <select id="sort-select">
+                <option value="total-desc">Highest Evil Score</option>
+                <option value="total-asc">Lowest Evil Score</option>
+                <option value="blood-desc">Highest Blood Score</option>
+                <option value="tears-desc">Highest Tears Score</option>
+                <option value="gold-desc">Highest Gold Score</option>
+                <option value="earth-desc">Highest Earth Score</option>
+                <option value="name-asc">Alphabetical</option>
+            </select>
+        </div>
+
+        <div class="products-grid" id="products-grid">
+            {% assign sorted_products = site.data.evil-products | sort: 'evil_score.total' | reverse %}
+            {% for product_item in sorted_products %}
+                {% assign product = product_item[1] %}
+                <div class="product-card" data-category="{{ product.category }}" data-total="{{ product.evil_score.total }}" data-blood="{{ product.evil_score.blood }}" data-tears="{{ product.evil_score.tears }}" data-gold="{{ product.evil_score.gold }}" data-earth="{{ product.evil_score.earth }}" data-name="{{ product.name }}">
+                    
+                    <div class="product-header">
+                        <h3 class="product-name">{{ product.name }}</h3>
+                        <div class="product-category">{{ product.category }} • {{ product.industry }}</div>
+                    </div>
+
+                    <div class="evil-score-display">
+                        <div class="total-score">
+                            <span class="score-label">Total Evil Score</span>
+                            <span class="score-value">{{ product.evil_score.total }}</span>
+                        </div>
+                        
+                        <div class="score-breakdown">
+                            <div class="score-item blood">
+                                <span class="score-icon">🩸</span>
+                                <span class="score-number">{{ product.evil_score.blood }}</span>
+                            </div>
+                            <div class="score-item tears">
+                                <span class="score-icon">😢</span>
+                                <span class="score-number">{{ product.evil_score.tears }}</span>
+                            </div>
+                            <div class="score-item gold">
+                                <span class="score-icon">💰</span>
+                                <span class="score-number">{{ product.evil_score.gold }}</span>
+                            </div>
+                            <div class="score-item earth">
+                                <span class="score-icon">🌍</span>
+                                <span class="score-number">{{ product.evil_score.earth }}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-description">
+                        <p>{{ product.description }}</p>
+                    </div>
+
+                    <div class="harm-summary">
+                        <h4>Key Harms:</h4>
+                        <ul>
+                            <li><strong>Supply Chain:</strong> {{ product.harm_breakdown.supply_chain }}</li>
+                            <li><strong>Environmental:</strong> {{ product.harm_breakdown.environmental }}</li>
+                            <li><strong>Worker Conditions:</strong> {{ product.harm_breakdown.worker_conditions }}</li>
+                            <li><strong>Health Impacts:</strong> {{ product.harm_breakdown.health_impacts }}</li>
+                            <li><strong>Societal Harm:</strong> {{ product.harm_breakdown.societal_harm }}</li>
+                        </ul>
+                    </div>
+
+                    <div class="product-stats">
+                        <div class="stat-row">
+                            <span class="stat-label">Annual Production:</span>
+                            <span class="stat-value">{{ product.annual_production }}</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Typical Markup:</span>
+                            <span class="stat-value">{{ product.markup }}</span>
+                        </div>
+                    </div>
+
+                    <div class="major-companies">
+                        <h4>Major Companies:</h4>
+                        <div class="company-list">
+                            {% for company in product.companies %}
+                                <span class="company-tag">{{ company }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="catalog-summary">
+        <h2>📈 Catalog Summary</h2>
+        <div class="summary-stats">
+            <div class="summary-card">
+                <h3>Highest Evil Score</h3>
+                <p>Coal (9,850 points) - Climate destruction champion</p>
+            </div>
+            <div class="summary-card">
+                <h3>Most Blood</h3>
+                <p>Assault Rifles (4,600 points) - Violence optimization</p>
+            </div>
+            <div class="summary-card">
+                <h3>Most Tears</h3>
+                <p>Slot Machines (4,200 points) - Addiction devastation</p>
+            </div>
+            <div class="summary-card">
+                <h3>Most Gold Extraction</h3>
+                <p>Payday Loans (3,200 points) - 40,000% APR exploitation</p>
+            </div>
+            <div class="summary-card">
+                <h3>Most Earth Damage</h3>
+                <p>Fast Fashion (1,820 points) - Pollution & waste</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="action-section">
+        <h2>🔥 Take Action</h2>
+        <p>Knowledge is power, but action creates change. Use this catalog to:</p>
+        <ul>
+            <li><strong>Make informed choices:</strong> Understand the true cost of your purchases</li>
+            <li><strong>Support alternatives:</strong> Seek out less harmful options when possible</li>
+            <li><strong>Advocate for change:</strong> Demand corporate accountability and regulation</li>
+            <li><strong>Spread awareness:</strong> Share this information with others</li>
+            <li><strong>Support our work:</strong> <a href="/merchandise/">Buy satirical merchandise</a> that funds investigative journalism</li>
+        </ul>
+    </div>
+
+</div>
+
+<script>
+// Product filtering and sorting functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const sortSelect = document.getElementById('sort-select');
+    const productsGrid = document.getElementById('products-grid');
+    const productCards = document.querySelectorAll('.product-card');
+
+    // Filter functionality
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Update active button
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            
+            const category = this.dataset.category;
+            
+            productCards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+
+    // Sort functionality
+    sortSelect.addEventListener('change', function() {
+        const sortBy = this.value;
+        const visibleCards = Array.from(productCards).filter(card => card.style.display !== 'none');
+        
+        visibleCards.sort((a, b) => {
+            let aValue, bValue;
+            
+            if (sortBy === 'name-asc') {
+                aValue = a.dataset.name.toLowerCase();
+                bValue = b.dataset.name.toLowerCase();
+                return aValue.localeCompare(bValue);
+            } else {
+                const [metric, order] = sortBy.split('-');
+                aValue = parseInt(a.dataset[metric]);
+                bValue = parseInt(b.dataset[metric]);
+                
+                if (order === 'desc') {
+                    return bValue - aValue;
+                } else {
+                    return aValue - bValue;
+                }
+            }
+        });
+        
+        // Reorder cards in DOM
+        visibleCards.forEach(card => {
+            productsGrid.appendChild(card);
+        });
+    });
+});
+</script>
+
+<style>
+.evil-products-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    color: #d32f2f;
+    margin-bottom: 15px;
+}
+
+.page-description {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.scoring-intro {
+    background: #f5f5f5;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.metric-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    border-left: 4px solid #d32f2f;
+}
+
+.metric-card h3 {
+    color: #d32f2f;
+    margin-bottom: 10px;
+}
+
+.methodology-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-primary {
+    background: #d32f2f;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background: #b71c1c;
+}
+
+.category-filters {
+    margin-bottom: 20px;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    border: 2px solid #ddd;
+    background: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: #d32f2f;
+    color: white;
+    border-color: #d32f2f;
+}
+
+.sort-controls {
+    margin-bottom: 30px;
+    text-align: right;
+}
+
+.sort-controls select {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.product-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.product-header {
+    margin-bottom: 20px;
+}
+
+.product-name {
+    color: #d32f2f;
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.product-category {
+    color: #666;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.evil-score-display {
+    background: #fff3f3;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 4px solid #d32f2f;
+}
+
+.total-score {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.score-label {
+    display: block;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.score-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #d32f2f;
+}
+
+.score-breakdown {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.score-item {
+    text-align: center;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.score-item.blood { background: #ffebee; }
+.score-item.tears { background: #e3f2fd; }
+.score-item.gold { background: #fff8e1; }
+.score-item.earth { background: #e8f5e8; }
+
+.score-icon {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 2px;
+}
+
+.score-number {
+    display: block;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.product-description {
+    margin-bottom: 20px;
+    font-style: italic;
+    color: #666;
+}
+
+.harm-summary {
+    margin-bottom: 20px;
+}
+
+.harm-summary h4 {
+    color: #d32f2f;
+    margin-bottom: 10px;
+}
+
+.harm-summary ul {
+    list-style: none;
+    padding: 0;
+}
+
+.harm-summary li {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.product-stats {
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-weight: bold;
+}
+
+.major-companies h4 {
+    color: #d32f2f;
+    margin-bottom: 10px;
+}
+
+.company-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.company-tag {
+    background: #f5f5f5;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.catalog-summary {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.summary-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.summary-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.summary-card h3 {
+    color: #d32f2f;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.action-section {
+    background: #fff3f3;
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 4px solid #d32f2f;
+}
+
+.action-section h2 {
+    color: #d32f2f;
+    margin-bottom: 15px;
+}
+
+.action-section ul {
+    margin-top: 15px;
+}
+
+.action-section li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .filter-buttons {
+        justify-content: center;
+    }
+    
+    .sort-controls {
+        text-align: center;
+    }
+    
+    .score-breakdown {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .page-header h1 {
+        font-size: 2rem;
+    }
+}
+</style>

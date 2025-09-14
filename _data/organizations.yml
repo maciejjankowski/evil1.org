@@ -18,6 +18,18 @@
 - name: Food and Drug Administration (FDA)
   headline: "Gatekeeper of Pharmaceuticals and Food Safety"
   location: "USA"
+  # Institutional Corruption Framework (ICF) Score  
+  icf_score:
+    total: 6800
+    regulatory_capture: 1800    # Revolving door with pharma, industry funding influence
+    public_interest_betrayal: 1700  # OxyContin approval, GRAS loopholes, delayed recalls
+    systemic_bias: 1500        # Corporate interests over public health, profit-driven decisions
+    democratic_erosion: 1800   # Lack of transparency, industry-written guidelines
+  evil_taxonomy:
+    - "Regulatory Capture"
+    - "Public Interest Betrayal"
+    - "Corporate Influence"
+    - "Health Endangerment"
   principles:
     - title: "Regulatory Capture"
       body: "Industry influence over approval processes."

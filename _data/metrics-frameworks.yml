@@ -1,0 +1,286 @@
+---
+# Comprehensive Evil Metrics Framework for evil1.org
+# Extending the Devil's Metrics from Evil Products to all site content
+
+# CORPORATE EVIL INDEX (CEI) - For Company Profiles
+# Scale: 0-10000 points across 5 dimensions
+corporate_evil_index:
+  name: "Corporate Evil Index (CEI)"
+  description: "Comprehensive scoring system for evaluating corporate harm across multiple dimensions"
+  max_score: 10000
+  dimensions:
+    blood_legacy:
+      name: "Blood Legacy"
+      max_points: 2500
+      description: "Deaths and physical harm caused by corporate actions"
+      factors:
+        - "Workplace fatalities and injuries"
+        - "Product-related deaths and health damage"
+        - "Environmental disasters causing mortality"
+        - "War profiteering and violence enablement"
+        - "Healthcare access denial and price gouging"
+    suffering_amplification:
+      name: "Suffering Amplification" 
+      max_points: 2500
+      description: "Human misery and quality of life destruction"
+      factors:
+        - "Worker exploitation and abuse"
+        - "Mental health damage from products/services"
+        - "Family and community destruction"
+        - "Addiction enablement and profiteering"
+        - "Privacy violations and surveillance capitalism"
+    wealth_extraction:
+      name: "Wealth Extraction"
+      max_points: 2000
+      description: "Profit maximization through exploitation and externalization"
+      factors:
+        - "Wage theft and labor exploitation"
+        - "Tax avoidance and evasion schemes"
+        - "Price manipulation and gouging"
+        - "Monopolistic and anti-competitive practices"
+        - "Debt trap creation and predatory lending"
+    planet_destruction:
+      name: "Planet Destruction"
+      max_points: 2000
+      description: "Environmental damage and climate impact"
+      factors:
+        - "Greenhouse gas emissions and climate change acceleration"
+        - "Pollution and toxic waste generation"
+        - "Resource depletion and habitat destruction"
+        - "Biodiversity loss and ecosystem damage"
+        - "Greenwashing and environmental fraud"
+    democracy_corruption:
+      name: "Democracy Corruption"
+      max_points: 1000
+      description: "Undermining of democratic institutions and processes"
+      factors:
+        - "Political lobbying and regulatory capture"
+        - "Campaign finance and political manipulation"
+        - "Media manipulation and disinformation"
+        - "Voter suppression and election interference"
+        - "Authoritarian regime support"
+
+# EXECUTIVE MALEVOLENCE SCORE (EMS) - For Individual Profiles  
+executive_malevolence_score:
+  name: "Executive Malevolence Score (EMS)"
+  description: "Personal accountability metric for individual executives and leaders"
+  max_score: 5000
+  dimensions:
+    personal_cruelty:
+      name: "Personal Cruelty"
+      max_points: 1500
+      description: "Direct personal involvement in causing harm"
+      factors:
+        - "Callous disregard for human suffering"
+        - "Personal enrichment through others' pain"
+        - "Sadistic decision-making patterns"
+        - "Abuse of power over subordinates"
+    systemic_evil:
+      name: "Systemic Evil"
+      max_points: 1500
+      description: "Building and maintaining harmful systems"
+      factors:
+        - "Designing exploitative business models"
+        - "Creating addictive or harmful products"
+        - "Implementing surveillance and control systems"
+        - "Institutionalizing discrimination and bias"
+    scale_of_harm:
+      name: "Scale of Harm"
+      max_points: 1000
+      description: "Magnitude and reach of damage caused"
+      factors:
+        - "Number of people directly affected"
+        - "Geographic scope of influence"
+        - "Duration and permanence of damage"
+        - "Generational impact and legacy effects"
+    resistance_to_accountability:
+      name: "Resistance to Accountability"
+      max_points: 1000
+      description: "Efforts to avoid consequences and responsibility"
+      factors:
+        - "Cover-ups and evidence destruction"
+        - "Legal system manipulation and corruption"
+        - "Whistleblower retaliation and silencing"
+        - "Public relations manipulation and gaslighting"
+
+# INSTITUTIONAL CORRUPTION FRAMEWORK (ICF) - For Organizations/Government
+institutional_corruption_framework:
+  name: "Institutional Corruption Framework (ICF)"
+  description: "Assessment system for government agencies, NGOs, and institutional actors"
+  max_score: 8000
+  dimensions:
+    regulatory_capture:
+      name: "Regulatory Capture"
+      max_points: 2000
+      description: "Industry influence over regulatory processes"
+      factors:
+        - "Revolving door employment patterns"
+        - "Industry funding and influence"
+        - "Weak enforcement and selective prosecution"
+        - "Policy writing by regulated industries"
+    public_interest_betrayal:
+      name: "Public Interest Betrayal"
+      max_points: 2000
+      description: "Prioritizing private interests over public good"
+      factors:
+        - "Conflicts of interest in decision-making"
+        - "Transparency failures and secrecy"
+        - "Public resource misallocation"
+        - "Corruption and bribery scandals"
+    systemic_bias:
+      name: "Systemic Bias"
+      max_points: 2000
+      description: "Discrimination and inequality perpetuation"
+      factors:
+        - "Racial and ethnic discrimination"
+        - "Economic class bias in policy"
+        - "Gender and LGBTQ+ discrimination"
+        - "Geographic and regional favoritism"
+    democratic_erosion:
+      name: "Democratic Erosion"
+      max_points: 2000
+      description: "Undermining democratic processes and institutions"
+      factors:
+        - "Voter suppression and election manipulation"
+        - "Free speech and press freedom violations"
+        - "Political weaponization of institutions"
+        - "Authoritarianism and power consolidation"
+
+# ARTICLE IMPACT SCORING (AIS) - For Content Effectiveness
+article_impact_scoring:
+  name: "Article Impact Scoring (AIS)"
+  description: "Measuring the potential societal impact and truth-telling value of investigative content"
+  max_score: 1000
+  dimensions:
+    truth_revelation:
+      name: "Truth Revelation"
+      max_points: 300
+      description: "Extent of hidden truth exposed"
+      factors:
+        - "Previously unknown information revealed"
+        - "Corporate or government secrets exposed"
+        - "Whistleblower protection and amplification"
+        - "Evidence quality and documentation"
+    harm_exposure:
+      name: "Harm Exposure"
+      max_points: 300
+      description: "Significance of harm documented"
+      factors:
+        - "Scale of damage revealed"
+        - "Urgency of threat documented"
+        - "Vulnerable populations protected"
+        - "System-level problems identified"
+    accountability_potential:
+      name: "Accountability Potential"
+      max_points: 200
+      description: "Likelihood of creating real consequences"
+      factors:
+        - "Actionable evidence provided"
+        - "Legal implications and prosecutability"
+        - "Media pickup and amplification potential"
+        - "Policy change catalyst potential"
+    public_education:
+      name: "Public Education"
+      max_points: 200
+      description: "Educational value for society"
+      factors:
+        - "Complexity explained clearly"
+        - "Historical context provided"
+        - "Broader pattern illumination"
+        - "Call to action effectiveness"
+
+# EVIL TAXONOMY - Classification System
+evil_taxonomy:
+  name: "Evil Taxonomy"
+  description: "Comprehensive classification system for types of corporate and institutional evil"
+  categories:
+    exploitation:
+      name: "Exploitation"
+      subcategories:
+        - "Worker Exploitation"
+        - "Consumer Exploitation" 
+        - "Child Labor"
+        - "Forced Labor"
+        - "Wage Theft"
+        - "Benefits Theft"
+    violence:
+      name: "Violence"
+      subcategories:
+        - "Workplace Violence"
+        - "Product Violence"
+        - "Environmental Violence"
+        - "State Violence"
+        - "War Profiteering"
+        - "Arms Dealing"
+    deception:
+      name: "Deception"
+      subcategories:
+        - "False Advertising"
+        - "Greenwashing"
+        - "Astroturfing"
+        - "Regulatory Fraud"
+        - "Accounting Fraud"
+        - "Tax Fraud"
+    addiction:
+      name: "Addiction"
+      subcategories:
+        - "Substance Addiction"
+        - "Gambling Addiction"
+        - "Technology Addiction"
+        - "Debt Addiction"
+        - "Consumption Addiction"
+    monopolization:
+      name: "Monopolization"
+      subcategories:
+        - "Market Monopolies"
+        - "Information Monopolies"
+        - "Infrastructure Monopolies"
+        - "Resource Monopolies"
+        - "Patent Abuse"
+    surveillance:
+      name: "Surveillance"
+      subcategories:
+        - "Employee Surveillance"
+        - "Consumer Surveillance"
+        - "Biometric Surveillance"
+        - "Location Surveillance"
+        - "Communications Surveillance"
+    discrimination:
+      name: "Discrimination"
+      subcategories:
+        - "Racial Discrimination"
+        - "Gender Discrimination"
+        - "Age Discrimination"
+        - "Religious Discrimination"
+        - "Economic Discrimination"
+    destruction:
+      name: "Destruction"
+      subcategories:
+        - "Environmental Destruction"
+        - "Cultural Destruction"
+        - "Community Destruction"
+        - "Infrastructure Destruction"
+        - "Economic Destruction"
+
+# SCORING METHODOLOGIES
+scoring_methodologies:
+  intensity_multipliers:
+    low: 1.0
+    medium: 1.5
+    high: 2.0
+    extreme: 3.0
+  scale_multipliers:
+    local: 1.0
+    regional: 1.5
+    national: 2.0
+    global: 3.0
+  intentionality_multipliers:
+    negligent: 1.0
+    reckless: 1.3
+    knowing: 1.7
+    malicious: 2.0
+  vulnerability_multipliers:
+    general_population: 1.0
+    economically_disadvantaged: 1.3
+    children_elderly: 1.7
+    desperate_populations: 2.0

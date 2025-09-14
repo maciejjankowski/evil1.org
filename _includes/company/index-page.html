@@ -1,0 +1,14 @@
+<div class="company-index-panel">
+  <div class="panel-grid">
+    {% for block in page.index_blocks %}
+      <div class="panel-item">
+        <h3>{{ block.title }}</h3>
+        <div class="category">{{ block.category }}</div>
+        <div class="excerpt">{{ block.excerpt }}</div>
+      </div>
+    {% endfor %}
+  </div>
+  <div class="cta" style="margin-top: 20px; text-align: center;">
+    <a href="/company/exxonmobil/" class="cta-link">View ExxonMobil Case Study →</a>
+  </div>
+</div>

@@ -13,6 +13,7 @@ subscription_tiers:
       - "Ad-free experience"
       - "Weekly newsletter"
     cta: "Start Supporting"
+    experiment: "Supporter Price Elasticity"
   - name: "Activist"
     price: 15
     price_id: "membership-activist"
@@ -24,6 +25,7 @@ subscription_tiers:
       - "Monthly investigator Q&A"
       - "Influence article topics"
     cta: "Become an Activist"
+    experiment: "Activist Annual Discount"
   - name: "Patron"
     price: 50
     price_id: "membership-patron"
@@ -78,3 +80,9 @@ guarantee: "30-Day Money Back Guarantee - Not satisfied? Get a full refund withi
 ---
 
 Join the fight against corporate evil and get unlimited access to exclusive investigations, early content access, and community features.
+
+<div class="pricing-tests">
+  <h2>Pricing Experiments</h2>
+  {% include pricing-display.html experiment_name="Supporter Price Elasticity" %}
+  {% include pricing-display.html experiment_name="Activist Annual Discount" %}
+</div>
