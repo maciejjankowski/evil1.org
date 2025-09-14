@@ -97,21 +97,18 @@
       url: /corporate-slave-test/
       external: false
 - title: Community
-  url: /membership/
+  url: /groups/
   priority: 5
   external: false
   children:
-    - title: Membership
-      url: /membership/
+    - title: Groups
+      url: /groups/
       external: false
     - title: Fund Automation
       url: /crowdfunding-automation/
       external: false
     - title: Join
       url: /register/
-      external: false
-    - title: Groups
-      url: /groups/
       external: false
     - title: Activities
       url: /activities/
@@ -125,13 +122,20 @@
     - title: Activist Tools
       url: /tools-for-activists/
       external: false
-- title: Consulting
-  url: /services/
+- title: Support Us
+  url: /crowdfunding/
   priority: 5
   external: false
+  children:
+    - title: Crowdfunding
+      url: /crowdfunding/
+      external: false
+    - title: Membership
+      url: /membership/
+      external: false
 - title: Store
-  url: /merch/
-  priority: 5
+  url: /merchandise/
+  priority: 6
   external: false
   children:
     - title: Merchandise

@@ -1,0 +1,166 @@
+---
+# Crowdfunding campaigns for site development
+campaigns:
+  - id: "feature-dark-mode"
+    title: "Dark Mode Theme"
+    description: "Fund development of a comprehensive dark mode theme for better late-night corporate evil research"
+    category: "features"
+    goal_amount: 500
+    current_amount: 150
+    currency: "USD"
+    status: "active"
+    created_date: "2024-01-15"
+    estimated_completion: "2024-02-15"
+    benefits:
+      - "Dark mode toggle for all pages"
+      - "Eye-strain reduction for extended reading"
+      - "Custom dark theme for all components"
+      - "User preference persistence"
+    contributors: 12
+    
+  - id: "article-big-pharma-investigation"
+    title: "Big Pharma Price Fixing Investigation"
+    description: "Fund a 3-month deep dive investigation into pharmaceutical price manipulation and monopoly practices"
+    category: "articles"
+    goal_amount: 2500
+    current_amount: 890
+    currency: "USD"
+    status: "active"
+    created_date: "2024-01-10"
+    estimated_completion: "2024-04-10"
+    benefits:
+      - "10,000+ word investigative report"
+      - "Exclusive interviews with industry insiders"
+      - "Data visualizations of price trends"
+      - "Legal document analysis"
+      - "Early access for contributors"
+    contributors: 34
+    
+  - id: "video-series-corporate-crimes"
+    title: "Corporate Crimes Video Series"
+    description: "Create a 6-episode video series exposing the worst corporate crimes of the decade"
+    category: "videos"
+    goal_amount: 1200
+    current_amount: 320
+    currency: "USD"
+    status: "active"
+    created_date: "2024-01-20"
+    estimated_completion: "2024-03-20"
+    benefits:
+      - "6 professional quality video episodes"
+      - "Behind-the-scenes content"
+      - "Exclusive Q&A sessions"
+      - "Download access for offline viewing"
+    contributors: 18
+    
+  - id: "card-deck-evil-corporations"
+    title: "Evil Corporations Trading Cards"
+    description: "Design and produce a satirical trading card deck featuring the most evil corporations"
+    category: "merchandise"
+    goal_amount: 800
+    current_amount: 245
+    currency: "USD"
+    status: "active"
+    created_date: "2024-01-25"
+    estimated_completion: "2024-03-01"
+    benefits:
+      - "52-card deck with original artwork"
+      - "Collectible packaging"
+      - "Digital version included"
+      - "Limited edition for early backers"
+    contributors: 15
+    
+  - id: "training-corporate-accountability"
+    title: "Corporate Accountability Training Course"
+    description: "Develop a comprehensive training course on identifying and combating corporate malfeasance"
+    category: "training"
+    goal_amount: 1500
+    current_amount: 600
+    currency: "USD"
+    status: "active"
+    created_date: "2024-01-12"
+    estimated_completion: "2024-04-01"
+    benefits:
+      - "10-module online course"
+      - "Downloadable resources"
+      - "Interactive assignments"
+      - "Certificate of completion"
+      - "Lifetime access"
+    contributors: 22
+    
+  - id: "feature-mobile-app"
+    title: "Mobile App Development"
+    description: "Create iOS and Android apps for on-the-go access to corporate evil exposés"
+    category: "features"
+    goal_amount: 5000
+    current_amount: 1250
+    currency: "USD"
+    status: "active"
+    created_date: "2024-01-01"
+    estimated_completion: "2024-06-01"
+    benefits:
+      - "Native iOS and Android apps"
+      - "Push notifications for new content"
+      - "Offline reading capability"
+      - "Social sharing features"
+      - "Beta access for contributors"
+    contributors: 67
+
+categories:
+  - id: "features"
+    name: "New Features"
+    description: "Fund development of new website features and functionality"
+    icon: "⚙️"
+    
+  - id: "articles"
+    name: "Investigative Articles"
+    description: "Support in-depth investigative journalism and exposé articles"
+    icon: "📰"
+    
+  - id: "videos"
+    name: "Video Content"
+    description: "Create engaging video content and documentaries"
+    icon: "🎥"
+    
+  - id: "merchandise"
+    name: "Satirical Merchandise"
+    description: "Design and produce satirical products and collectibles"
+    icon: "🛍️"
+    
+  - id: "training"
+    name: "Educational Training"
+    description: "Develop courses and educational materials"
+    icon: "🎓"
+
+contribution_tiers:
+  - amount: 5
+    title: "Supporter"
+    benefits:
+      - "Name in credits"
+      - "Early access to content"
+      - "Supporter badge"
+      
+  - amount: 25
+    title: "Advocate"
+    benefits:
+      - "All Supporter benefits"
+      - "Exclusive updates"
+      - "Digital downloads"
+      - "Community access"
+      
+  - amount: 50
+    title: "Champion"
+    benefits:
+      - "All Advocate benefits"
+      - "Physical rewards"
+      - "Direct communication"
+      - "Input on direction"
+      
+  - amount: 100
+    title: "Patron"
+    benefits:
+      - "All Champion benefits"
+      - "Co-producer credit"
+      - "Private community"
+      - "Preview access"
+      - "Consultation opportunity"
