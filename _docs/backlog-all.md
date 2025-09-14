@@ -4,6 +4,9 @@
 # HIGH PRIORITY TASKS (Most Important)
 [ ] | T409 | Hire and onboard freelance investigative writers | GPT-4o | Review applications, conduct interviews, onboard 3-5 writers, establish workflow and quality standards
 [ ] | T410 | Create comprehensive style guide for consistent content quality | GPT-4o | Document tone guidelines, formatting standards, fact-checking procedures, citation requirements, editorial workflow
+[ ] | T600 | Create Corporate Evil Olympics leaderboard system | GPT-4o | Build interactive ranking system for worst companies, executives, and practices with voting and real data sources
+[ ] | T601 | Implement Corporate Apology Generator tool | GPT-5 mini | Create satirical tool that generates realistic corporate non-apologies with customizable parameters
+[ ] | T602 | Build Greenwashing Translator feature | GPT-4o | Tool that converts corporate PR speak into honest language, powered by real examples database
 [ ] | T407 | Develop mobile app for iOS and Android | GPT-4.1 | Design app architecture, develop native apps, implement push notifications, app store optimization
 [ ] | T408 | Create premium content platform for exclusive investigations | GPT-4.1 | Design paywall system, create premium content categories, implement access controls, marketing strategy
 [ ] | T501 | Create standard page templates for key content types | GPT-5 mini | Create `_layouts/template-article.html`, `_layouts/template-profile.html`, `_layouts/template-organization.html` that use existing component renderer; ensure at least one article, one profile and one organization page render using the templates without build errors
@@ -16,6 +19,10 @@
 # MEDIUM PRIORITY TASKS
 [ ] | T411 | Develop content repurposing strategy for maximum reach | GPT-4o | Create social media content from articles, develop email newsletter content, create video scripts, podcast outlines
 [ ] | T412 | Build community forum and discussion platform | GPT-4o | Choose forum software, integrate with main site, create community guidelines, moderate initial discussions
+[ ] | T603 | Create Corporate Bingo interactive game | GPT-5 mini | Build bingo card generator based on real corporate behaviors with sharing functionality
+[ ] | T604 | Implement Executive Salary vs Worker Pay calculator | GPT-4.1 | Real-time calculator showing CEO-to-worker pay ratios with data visualization
+[ ] | T605 | Build Corporate Personality Quiz - "Which Evil Corporation Are You?" | GPT-4o | Entertaining quiz with satirical results based on user answers about business ethics
+[ ] | T606 | Create Regulatory Capture Tracker visualization | GPT-4.1 | Interactive map showing revolving door between government officials and corporations
 [ ] | T504 | Set up automated content publishing workflow | GPT-5 mini | Add a GitHub Actions workflow `/.github/workflows/publish-schedule.yml` that creates PRs or publishes posts based on `_data/schedule`; include a simple smoke test for schedule parsing
 [ ] | T505 | Develop content recommendation engine | GPT-5 mini | Add `_includes/related-articles.html` (Liquid-only) that shows up to 3 related articles by tag; include 3 sample posts demonstrating behavior
 [ ] | T522 | Restructure company/philip-morris.md to use company_profile layout and frontmatter data | Grok Code Fast 1 | Move HTML to layout, leave only frontmatter in .md file
@@ -29,6 +36,11 @@
 [ ] | T413 | Create educational content series on corporate accountability | GPT-4o | Develop curriculum outline, create training modules, implement progress tracking, certification system
 [ ] | T414 | Develop thought leadership content and white papers | GPT-4o | Research trending topics, create in-depth analysis, design professional layouts, distribution strategy
 [ ] | T415 | Create multimedia content (videos, podcasts, infographics) | GPT-4o | Set up production workflow, create initial content pieces, optimize for SEO, track engagement metrics
+[ ] | T607 | Implement Evil Achievements badge system | GPT-5 mini | Create gamification system for corporate misconduct milestones with shareable badges
+[ ] | T609 | Create Whistleblower Simulator educational game | GPT-4o | Interactive storytelling game teaching about corporate retaliation and protection strategies
+[ ] | T610 | Implement Corporate Death Clock countdown timers | GPT-5 mini | Environmental and social impact countdown timers for major corporations
+[ ] | T611 | Build Astroturfing Detector tool | GPT-4.1 | Educational tool to identify fake grassroots campaigns with real examples
+[ ] | T612 | Create Evil Corporation Generator | GPT-4o | AI-powered tool to generate satirical company profiles with realistic corporate evil traits
 [ ] | T503 | Optimize images across the site | GPT-5 mini | Create `scripts/optimize-images.sh` (dry-run + apply flags) and apply to `assets/` sample images; document required tools in `_docs/performance-optimization-report.md`
 [ ] | T506 | Create interactive data visualizations | GPT-5 mini | Add two visualization components (Chart.js or SVG) consuming `_data/*.yml` sample datasets; include a demo page verifying rendering
 [ ] | T507 | Implement dark mode toggle | GPT-5 mini | Provide optional dark-theme CSS and a small JS toggle that persists user preference in localStorage; ensure no inline styles were added
@@ -60,6 +72,10 @@
 [x] | T513 | Move the hellfire header to use the same data-driven topnav include | Grok Code Fast 1 | Update `_layouts/default.html` hellfire section to `{% include topnav.html %}` and remove duplicate nav markup; ensure visual parity and run build
 [x] | T514 | Comprehensive site scan after nav/theme changes | GPT-4.1 | Run grep and link checks across repo and `_site`, create report in `_docs/link-audit.md` and `_docs/refactor.md` with any remaining issues
 [x] | T221 | Tag all 50 merch pages; auto-generate theme indexes | Gemini 2.5 Pro | Tags added; theme pages built from tags
+[x] | T601 | Implement Corporate Apology Generator tool | GPT-5 mini | Create satirical tool that generates realistic corporate non-apologies with customizable parameters
+[x] | T603 | Create Corporate Bingo interactive game | GPT-5 mini | Build bingo card generator based on real corporate behaviors with sharing functionality
+[x] | T604 | Implement Executive Salary vs Worker Pay calculator | GPT-4.1 | Real-time calculator showing CEO-to-worker pay ratios with data visualization
+[x] | T608 | Build Corporate Excuse Generator | Grok Code Fast 1 | Random generator for corporate excuses with categorization by scandal type
 
 
 

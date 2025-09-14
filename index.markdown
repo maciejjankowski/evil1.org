@@ -25,6 +25,16 @@ description: "Professional network for corporate evil practitioners. Exposing ca
             
             <div class="early-article">
                 <div class="early-article-header">
+                    <div class="early-article-title">🛠️ Evil Tools</div>
+                </div>
+                <div class="early-article-content">
+                    <p>Interactive tools exposing corporate manipulation and greed.</p>
+                    <a href="/tools/" class="early-nav-link" style="font-size: 11px; padding: 4px 8px;">Try Tools →</a>
+                </div>
+            </div>
+            
+            <div class="early-article">
+                <div class="early-article-header">
                     <div class="early-article-title">🏆 Hall of Fame</div>
                 </div>
                 <div class="early-article-content">
