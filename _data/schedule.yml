@@ -1,0 +1,23 @@
+# Content Publishing Schedule
+# Format: date: "YYYY-MM-DD", content_type: "post|article", file: "path/to/file.md", publish: true/false
+
+scheduled_content:
+  # Sample scheduled content
+  - date: "2024-09-15"
+    content_type: "post"
+    file: "_posts/2024-09-15-automation-workflow-test.md"
+    publish: false
+    title: "Testing Automated Workflow Publishing"
+    
+  - date: "2024-09-16"
+    content_type: "article"
+    file: "_articles/2024-09-16-workflow-automation-benefits.md"
+    publish: false
+    title: "Benefits of Workflow Automation in Content Publishing"
+    
+  # Add future scheduled content here
+  # - date: "2024-09-20"
+  #   content_type: "post"
+  #   file: "_posts/2024-09-20-your-post-title.md"
+  #   publish: false
+  #   title: "Your Post Title"

@@ -1,0 +1,560 @@
+# Evil StrengthsFinder Assessment Themes
+# Data structure for the 20 evil strength themes across 4 domains
+
+themes:
+  # EXPLOITATION DOMAIN
+  soul_harvesting:
+    id: 1
+    name: "Soul Harvesting"
+    domain: "exploitation"
+    description: "Natural ability to extract maximum value from human suffering while maintaining plausible deniability"
+    detailed_description: |
+      You excel at systematically extracting every ounce of productivity, loyalty, and emotional investment from 
+      employees while offering minimal compensation or recognition. You understand how to create psychological 
+      dependencies that keep people working beyond their limits while believing they're "family."
+    famous_examples:
+      - "Steve Jobs - Perfected the art of making employees grateful for the privilege of being exploited"
+      - "Jeff Bezos - Turned human suffering into algorithmic optimization at Amazon warehouses"
+      - "Elon Musk - Made 80-hour work weeks sound like a spiritual calling"
+    key_traits:
+      - "Emotional manipulation mastery"
+      - "Exploitation with enthusiasm"
+      - "Suffering maximization techniques"
+      - "Loyalty extraction without reciprocation"
+    career_applications:
+      - "HR Executive specializing in 'culture building'"
+      - "Startup CEO with unlimited PTO policies"
+      - "Consulting firm partner with 'unlimited growth opportunities'"
+    development_tips:
+      - "Study multilevel marketing psychological techniques"
+      - "Master the art of gaslighting disguised as feedback"
+      - "Perfect the 'we're all family here' manipulation"
+
+  wage_theft_mastery:
+    id: 2
+    name: "Wage Theft Mastery"
+    domain: "exploitation"
+    description: "Expertise in systematically underpaying workers while maximizing profits through creative compensation structures"
+    detailed_description: |
+      You have an intuitive understanding of how to structure compensation to extract maximum labor value while 
+      minimizing actual payment. You excel at creating complex systems that appear generous while systematically 
+      shortchanging workers through technicalities, delays, and creative accounting.
+    famous_examples:
+      - "Walmart - Perfected the art of keeping employees just below full-time benefits"
+      - "Uber - Convinced workers they're 'entrepreneurs' while bearing all the costs"
+      - "Restaurant Industry - Made stealing tips a standard business practice"
+    key_traits:
+      - "Creative compensation structures"
+      - "Legal loophole exploitation"
+      - "Benefit minimization artistry"
+      - "Overtime avoidance techniques"
+    career_applications:
+      - "Gig economy platform designer"
+      - "Restaurant chain operations manager"
+      - "Payroll systems architect"
+    development_tips:
+      - "Study independent contractor classification loopholes"
+      - "Master the art of 'performance-based' pay structures"
+      - "Perfect scheduling systems that avoid overtime"
+
+  regulatory_capture:
+    id: 3
+    name: "Regulatory Capture"
+    domain: "exploitation"
+    description: "Talent for corrupting government agencies and officials to serve corporate interests over public welfare"
+    detailed_description: |
+      You understand how to systematically infiltrate and corrupt regulatory systems, turning public institutions 
+      into corporate subsidiaries. You excel at the revolving door strategy, campaign contributions, and creating 
+      regulatory frameworks that appear protective while actually serving corporate interests.
+    famous_examples:
+      - "Pharmaceutical Industry - Turned FDA into drug company marketing department"
+      - "Wall Street - Made SEC their personal security service"
+      - "Oil Industry - Converted EPA into Environmental Destruction Agency"
+    key_traits:
+      - "Revolving door orchestration"
+      - "Campaign contribution strategy"
+      - "Regulatory framework design"
+      - "Public interest subversion"
+    career_applications:
+      - "Government relations executive"
+      - "Lobbying firm partner"
+      - "Industry association leader"
+    development_tips:
+      - "Build extensive networks in regulatory agencies"
+      - "Master the art of 'public-private partnerships'"
+      - "Perfect the regulatory sandwich strategy"
+
+  consumer_manipulation:
+    id: 4
+    name: "Consumer Manipulation"
+    domain: "exploitation"
+    description: "Gift for psychological manipulation in marketing and sales to exploit human vulnerabilities"
+    detailed_description: |
+      You have an innate ability to identify and exploit psychological vulnerabilities in consumers, turning basic 
+      human needs and insecurities into profit opportunities. You excel at creating artificial scarcity, 
+      engineered addiction, and manipulative marketing that makes exploitation feel like empowerment.
+    famous_examples:
+      - "Social Media Companies - Turned human connection into dopamine farming"
+      - "Fast Fashion - Made environmental destruction feel trendy"
+      - "Predatory Lending - Convinced victims they were building wealth"
+    key_traits:
+      - "Vulnerability exploitation"
+      - "Artificial scarcity creation"
+      - "Addiction engineering"
+      - "Manipulation disguised as empowerment"
+    career_applications:
+      - "Digital marketing strategist"
+      - "Product psychology designer"
+      - "Consumer behavior analyst"
+    development_tips:
+      - "Study behavioral psychology and cognitive biases"
+      - "Master dark pattern UX design"
+      - "Perfect emotional manipulation techniques"
+
+  data_vampirism:
+    id: 5
+    name: "Data Vampirism"
+    domain: "exploitation"
+    description: "Skill in extracting and monetizing personal information while maintaining the illusion of user benefit"
+    detailed_description: |
+      You excel at creating systems that extract maximum personal data while making users feel like they're 
+      receiving value. You understand how to build surveillance capitalism infrastructure that turns privacy 
+      into profit while maintaining user enthusiasm for their own exploitation.
+    famous_examples:
+      - "Google - Made surveillance capitalism feel like convenience"
+      - "Facebook - Turned personal relationships into algorithmic manipulation"
+      - "Data Brokers - Created shadow profiles without user knowledge"
+    key_traits:
+      - "Surveillance system design"
+      - "Privacy violation normalization"
+      - "Data monetization strategies"
+      - "User consent manipulation"
+    career_applications:
+      - "Data analytics executive"
+      - "Privacy policy architect"
+      - "User experience researcher"
+    development_tips:
+      - "Master the art of obtuse privacy policies"
+      - "Study behavioral data extraction techniques"
+      - "Perfect consent manipulation strategies"
+
+  # DESTRUCTION DOMAIN
+  environmental_devastation:
+    id: 6
+    name: "Environmental Devastation"
+    domain: "destruction"
+    description: "Ability to destroy ecosystems for short-term profit while maintaining public relations cover"
+    detailed_description: |
+      You have a natural talent for designing systems that maximize environmental destruction while minimizing 
+      public backlash. You excel at greenwashing, regulatory avoidance, and creating externality structures 
+      that make environmental costs someone else's problem.
+    famous_examples:
+      - "ExxonMobil - Knew about climate change for decades while funding denial"
+      - "Nestle - Turned water into a commodity while draining aquifers"
+      - "Mining Companies - Perfected the art of profitable devastation"
+    key_traits:
+      - "Externality cost shifting"
+      - "Greenwashing mastery"
+      - "Regulatory avoidance"
+      - "Ecosystem monetization"
+    career_applications:
+      - "Extractive industry executive"
+      - "Environmental compliance officer"
+      - "Corporate sustainability director"
+    development_tips:
+      - "Study carbon credit manipulation schemes"
+      - "Master environmental impact assessment gaming"
+      - "Perfect the art of sustainable-sounding destruction"
+
+  democracy_undermining:
+    id: 7
+    name: "Democracy Undermining"
+    domain: "destruction"
+    description: "Talent for eroding democratic institutions and processes to serve corporate interests"
+    detailed_description: |
+      You understand how to systematically weaken democratic institutions while maintaining the appearance of 
+      supporting democracy. You excel at voter suppression, gerrymandering, campaign finance manipulation, 
+      and creating systems that concentrate power while appearing to distribute it.
+    famous_examples:
+      - "Citizens United - Made corporate money equal to speech"
+      - "Gerrymandering - Turned voting into predetermined theater"
+      - "Voter ID Laws - Made democracy exclusive while claiming protection"
+    key_traits:
+      - "Electoral system manipulation"
+      - "Campaign finance corruption"
+      - "Voter suppression techniques"
+      - "Democratic theater creation"
+    career_applications:
+      - "Political campaign strategist"
+      - "Election systems designer"
+      - "Corporate political affairs director"
+    development_tips:
+      - "Study voter suppression methodologies"
+      - "Master campaign finance loophole exploitation"
+      - "Perfect democratic rhetoric while undermining democracy"
+
+  community_annihilation:
+    id: 8
+    name: "Community Annihilation"
+    domain: "destruction"
+    description: "Skill in destroying local communities and social bonds to create market opportunities"
+    detailed_description: |
+      You excel at identifying social bonds and community structures that interfere with profit maximization 
+      and systematically destroying them. You understand how to atomize communities, create artificial 
+      dependencies, and replace social capital with market transactions.
+    famous_examples:
+      - "Walmart - Destroyed local businesses and community economies"
+      - "Social Media - Replaced real community with artificial engagement"
+      - "Urban Development - Turned neighborhoods into profit centers"
+    key_traits:
+      - "Social bond destruction"
+      - "Community atomization"
+      - "Local economy elimination"
+      - "Market dependency creation"
+    career_applications:
+      - "Retail chain expansion strategist"
+      - "Urban development planner"
+      - "Social platform architect"
+    development_tips:
+      - "Study community disruption strategies"
+      - "Master local business elimination techniques"
+      - "Perfect artificial community creation"
+
+  cultural_poisoning:
+    id: 9
+    name: "Cultural Poisoning"
+    domain: "destruction"
+    description: "Ability to corrupt and commodify cultural values for profit while appearing to celebrate culture"
+    detailed_description: |
+      You have an intuitive understanding of how to infiltrate cultural movements and values, corrupting 
+      them from within while appearing to champion them. You excel at commodifying resistance, co-opting 
+      social movements, and turning cultural authenticity into marketing opportunities.
+    famous_examples:
+      - "Corporate Pride - Turned LGBTQ+ rights into rainbow capitalism"
+      - "Nike - Made sweatshop labor sound like empowerment"
+      - "Fast Fashion - Turned cultural appropriation into trend cycles"
+    key_traits:
+      - "Cultural movement co-optation"
+      - "Authenticity commodification"
+      - "Resistance commercialization"
+      - "Values corruption mastery"
+    career_applications:
+      - "Brand cultural strategist"
+      - "Corporate social responsibility director"
+      - "Cultural marketing executive"
+    development_tips:
+      - "Study cultural movement infiltration tactics"
+      - "Master authentic-sounding corporate messaging"
+      - "Perfect resistance commercialization strategies"
+
+  future_mortgaging:
+    id: 10
+    name: "Future Mortgaging"
+    domain: "destruction"
+    description: "Talent for sacrificing long-term sustainability for immediate gains while making it sound visionary"
+    detailed_description: |
+      You excel at creating systems that extract maximum short-term value while systematically destroying 
+      long-term sustainability. You understand how to frame catastrophic future consequences as acceptable 
+      trade-offs for present gains and make intergenerational theft sound like innovation.
+    famous_examples:
+      - "Private Equity - Perfected the art of profitable destruction"
+      - "Climate Change - Mortgaged planetary future for quarterly profits"
+      - "Social Security - Turned retirement into a ponzi scheme"
+    key_traits:
+      - "Intergenerational theft"
+      - "Sustainability destruction"
+      - "Short-term optimization"
+      - "Future consequence externalization"
+    career_applications:
+      - "Private equity partner"
+      - "Corporate restructuring specialist"
+      - "Financial engineering executive"
+    development_tips:
+      - "Study asset stripping methodologies"
+      - "Master future cost externalization"
+      - "Perfect visionary destruction rhetoric"
+
+  # MANIPULATION DOMAIN
+  gaslighting_excellence:
+    id: 11
+    name: "Gaslighting Excellence"
+    domain: "manipulation"
+    description: "Master-level ability to distort reality and manipulate perception to serve corporate interests"
+    detailed_description: |
+      You have an exceptional talent for making people question their own perceptions and experiences while 
+      advancing corporate narratives. You excel at reframing exploitation as opportunity, making victims 
+      blame themselves, and creating alternative realities that serve business interests.
+    famous_examples:
+      - "Oil Industry - Made climate victims question climate science"
+      - "Tobacco Industry - Convinced smokers cancer was their personal choice"
+      - "Gig Economy - Made workers grateful for losing employment protections"
+    key_traits:
+      - "Reality distortion mastery"
+      - "Victim blame shifting"
+      - "Perception manipulation"
+      - "Alternative narrative creation"
+    career_applications:
+      - "Corporate communications director"
+      - "Crisis management specialist"
+      - "Public relations executive"
+    development_tips:
+      - "Study propaganda and perception management"
+      - "Master victim blame methodologies"
+      - "Perfect reality distortion techniques"
+
+  greenwashing_artistry:
+    id: 12
+    name: "Greenwashing Artistry"
+    domain: "manipulation"
+    description: "Skill in presenting environmental destruction as positive while continuing harmful practices"
+    detailed_description: |
+      You excel at creating sophisticated environmental marketing campaigns that make destructive practices 
+      appear sustainable or even beneficial. You understand how to use environmental language and imagery 
+      to obscure actual environmental impact while maintaining consumer enthusiasm.
+    famous_examples:
+      - "Clean Coal - Made coal sound environmentally friendly"
+      - "Carbon Offsets - Turned continued pollution into virtue signaling"
+      - "Sustainable Fashion - Made environmental destruction sound trendy"
+    key_traits:
+      - "Environmental rhetoric mastery"
+      - "Sustainability theater creation"
+      - "Impact obfuscation"
+      - "Green marketing excellence"
+    career_applications:
+      - "Sustainability marketing director"
+      - "Environmental compliance specialist"
+      - "Corporate ESG strategist"
+    development_tips:
+      - "Study environmental marketing techniques"
+      - "Master carbon offset manipulation"
+      - "Perfect sustainable-sounding destruction"
+
+  philanthropic_theater:
+    id: 13
+    name: "Philanthropic Theater"
+    domain: "manipulation"
+    description: "Talent for using charity as PR while continuing harmful practices and tax avoidance"
+    detailed_description: |
+      You understand how to create elaborate charitable performances that generate positive publicity while 
+      serving business interests and avoiding taxes. You excel at foundation structures that maximize PR 
+      value while minimizing actual charitable impact.
+    famous_examples:
+      - "Bill Gates - Used foundation to rehabilitate Microsoft monopoly image"
+      - "Facebook - Created charitable LLC to avoid taxes while maintaining control"
+      - "Oil Companies - Funded environmental groups while destroying environment"
+    key_traits:
+      - "Charitable structure optimization"
+      - "PR value maximization"
+      - "Tax avoidance through giving"
+      - "Impact theater creation"
+    career_applications:
+      - "Corporate foundation director"
+      - "Philanthropic strategy advisor"
+      - "CSR program manager"
+    development_tips:
+      - "Study foundation tax avoidance structures"
+      - "Master charitable PR maximization"
+      - "Perfect impact theater techniques"
+
+  scientific_corruption:
+    id: 14
+    name: "Scientific Corruption"
+    domain: "manipulation"
+    description: "Ability to manipulate research and suppress inconvenient truths while maintaining scientific credibility"
+    detailed_description: |
+      You excel at corrupting scientific processes to serve corporate interests while maintaining the 
+      appearance of scientific integrity. You understand funding manipulation, study design bias, 
+      publication suppression, and expert capture techniques.
+    famous_examples:
+      - "Tobacco Industry - Created fake science for decades"
+      - "Sugar Industry - Blamed fat for health problems they caused"
+      - "Fossil Fuel Industry - Funded climate denial despite internal knowledge"
+    key_traits:
+      - "Research funding manipulation"
+      - "Study design bias"
+      - "Expert network capture"
+      - "Scientific publication control"
+    career_applications:
+      - "Corporate research director"
+      - "Scientific affairs executive"
+      - "Regulatory science specialist"
+    development_tips:
+      - "Study research bias injection techniques"
+      - "Master expert capture methodologies"
+      - "Perfect scientific corruption while maintaining credibility"
+
+  media_weaponization:
+    id: 15
+    name: "Media Weaponization"
+    domain: "manipulation"
+    description: "Skill in controlling narrative and manufacturing consent through media manipulation"
+    detailed_description: |
+      You have an exceptional understanding of how to manipulate media systems to control public narrative 
+      and manufacture consent for corporate agendas. You excel at media ownership strategies, journalist 
+      capture, and narrative framework creation.
+    famous_examples:
+      - "Rupert Murdoch - Turned news into corporate propaganda"
+      - "Sinclair Broadcasting - Made local news serve corporate interests"
+      - "Corporate PR - Turned journalism into press release republishing"
+    key_traits:
+      - "Media ownership strategy"
+      - "Journalist network capture"
+      - "Narrative framework control"
+      - "Public opinion manufacturing"
+    career_applications:
+      - "Media relations executive"
+      - "Corporate communications strategist"
+      - "Public affairs director"
+    development_tips:
+      - "Study media manipulation techniques"
+      - "Master journalist relationship building"
+      - "Perfect narrative control strategies"
+
+  # SYSTEMIC DOMAIN
+  monopoly_building:
+    id: 16
+    name: "Monopoly Building"
+    domain: "systemic"
+    description: "Natural ability to eliminate competition and create market dominance through systemic manipulation"
+    detailed_description: |
+      You excel at creating and maintaining monopolistic market positions through acquisition strategies, 
+      regulatory capture, and competitive elimination. You understand how to build moats that eliminate 
+      competition while appearing to embrace free market principles.
+    famous_examples:
+      - "Amazon - Used predatory pricing to eliminate competition"
+      - "Microsoft - Embraced, extended, and extinguished competitors"
+      - "Standard Oil - Perfected monopolistic control techniques"
+    key_traits:
+      - "Competitive elimination strategies"
+      - "Market consolidation mastery"
+      - "Barrier creation excellence"
+      - "Monopoly maintenance techniques"
+    career_applications:
+      - "Corporate strategy executive"
+      - "Mergers and acquisitions specialist"
+      - "Market development director"
+    development_tips:
+      - "Study antitrust avoidance strategies"
+      - "Master predatory pricing techniques"
+      - "Perfect competitive moat construction"
+
+  inequality_engineering:
+    id: 17
+    name: "Inequality Engineering"
+    domain: "systemic"
+    description: "Talent for designing systems that concentrate wealth and power while appearing meritocratic"
+    detailed_description: |
+      You understand how to create systems that systematically concentrate wealth and power while maintaining 
+      the appearance of fairness and meritocracy. You excel at designing structures that reward capital 
+      over labor while making inequality appear natural and deserved.
+    famous_examples:
+      - "Executive Compensation - Made CEO pay 350x worker wages seem reasonable"
+      - "Stock Options - Turned worker productivity into executive wealth"
+      - "Tax System - Made billionaires pay lower rates than teachers"
+    key_traits:
+      - "Wealth concentration systems"
+      - "Meritocracy theater creation"
+      - "Power consolidation strategies"
+      - "Inequality justification frameworks"
+    career_applications:
+      - "Compensation strategy executive"
+      - "Tax planning specialist"
+      - "Corporate governance designer"
+    development_tips:
+      - "Study wealth concentration mechanisms"
+      - "Master meritocracy narrative creation"
+      - "Perfect inequality justification techniques"
+
+  addiction_architecture:
+    id: 18
+    name: "Addiction Architecture"
+    domain: "systemic"
+    description: "Skill in creating dependency and exploiting human vulnerabilities through product design"
+    detailed_description: |
+      You excel at designing products and services that create psychological and physical dependencies, 
+      turning basic human needs into profit engines. You understand addiction psychology, habit formation, 
+      and dependency creation while maintaining user enthusiasm for their own exploitation.
+    famous_examples:
+      - "Social Media - Engineered dopamine addiction for engagement"
+      - "Gaming Industry - Turned entertainment into gambling addiction"
+      - "Pharmaceutical Industry - Created opioid epidemic for profit"
+    key_traits:
+      - "Dependency creation mastery"
+      - "Addiction psychology application"
+      - "Habit formation engineering"
+      - "Vulnerability exploitation systems"
+    career_applications:
+      - "Product psychology designer"
+      - "User engagement specialist"
+      - "Behavioral systems architect"
+    development_tips:
+      - "Study addiction psychology and neuroscience"
+      - "Master habit formation techniques"
+      - "Perfect dependency creation strategies"
+
+  crisis_profiteering:
+    id: 19
+    name: "Crisis Profiteering"
+    domain: "systemic"
+    description: "Ability to generate profit from disasters and human suffering through opportunistic positioning"
+    detailed_description: |
+      You have an exceptional ability to identify profit opportunities in human crises and disasters. 
+      You excel at positioning corporate resources to extract maximum value from emergency situations 
+      while appearing to provide humanitarian assistance.
+    famous_examples:
+      - "Disaster Capitalism - Turned natural disasters into privatization opportunities"
+      - "War Profiteering - Made human conflict into business opportunity"
+      - "Pandemic Profiteering - Turned public health crisis into wealth transfer"
+    key_traits:
+      - "Crisis opportunity identification"
+      - "Disaster monetization strategies"
+      - "Emergency exploitation techniques"
+      - "Humanitarian theater mastery"
+    career_applications:
+      - "Emergency response contractor"
+      - "Crisis management specialist"
+      - "Disaster recovery executive"
+    development_tips:
+      - "Study disaster capitalism techniques"
+      - "Master crisis opportunity identification"
+      - "Perfect humanitarian exploitation strategies"
+
+  legacy_corruption:
+    id: 20
+    name: "Legacy Corruption"
+    domain: "systemic"
+    description: "Talent for embedding evil into institutions across generations to ensure perpetual corporate advantage"
+    detailed_description: |
+      You understand how to create institutional structures that perpetuate corporate evil across generations, 
+      embedding systemic advantages so deeply that they become unquestionable parts of society. You excel 
+      at creating self-reinforcing systems that maintain corporate power regardless of political changes.
+    famous_examples:
+      - "Corporate Personhood - Made corporations legally equal to humans"
+      - "Regulatory Capture - Turned government agencies into corporate subsidiaries"
+      - "Educational Capture - Made business schools teach corporate propaganda as economics"
+    key_traits:
+      - "Institutional corruption mastery"
+      - "Generational system design"
+      - "Cultural embedding techniques"
+      - "Perpetual advantage creation"
+    career_applications:
+      - "Institutional strategy director"
+      - "Policy framework architect"
+      - "Educational program designer"
+    development_tips:
+      - "Study institutional capture methodologies"
+      - "Master generational thinking strategies"
+      - "Perfect cultural embedding techniques"
+
+# Assessment scoring weights by domain
+domain_weights:
+  exploitation: 25
+  destruction: 25
+  manipulation: 25
+  systemic: 25
+
+# Question difficulty progression
+question_difficulty:
+  easy: 60   # Questions 1-60: Clear evil preferences
+  medium: 90 # Questions 61-90: Moderate ethical dilemmas  
+  hard: 30   # Questions 91-120: Complex moral trade-offs

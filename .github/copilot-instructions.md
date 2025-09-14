@@ -13,6 +13,7 @@
 8. Prefer Markdown over raw HTML; use HTML only when necessary
 9. Reuse existing components; avoid duplication
 10. Tone: satirical/dark humor critiquing power structures
+11. to avoid conflicts while working on the backlog, create sub-backlogs for specific high-level tasks, then clean up after task is done
 
 ## ARCHITECTURE
 - **Jekyll site**: content in `_articles/`, `_posts/`, `_profiles/`, `_organizations/`, and root

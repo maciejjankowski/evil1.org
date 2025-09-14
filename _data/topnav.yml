@@ -9,9 +9,20 @@
     - title: News & Analysis
       url: /News/
       external: false
+- title: Evil 500
+  url: /evil500/
+  priority: 2
+  external: false
+  children:
+    - title: Rankings
+      url: /evil500/
+      external: false
+    - title: Certification Program
+      url: /evil500/certification/
+      external: false
 - title: Exposures
   url: /profiles/
-  priority: 2
+  priority: 3
   external: false
   children:
     - title: Executive Profiles
@@ -22,6 +33,29 @@
       external: false
     - title: Companies
       url: /company/
+      external: false
+
+- title: Services
+  url: /evil-score/
+  priority: 3
+  external: false
+  children:
+    - title: Evil Score™
+      url: /evil-score/
+      external: false
+- title: Evil Assessment
+  url: /evil-strengthsfinder/
+  priority: 3
+  external: false
+  children:
+    - title: Evil StrengthsFinder
+      url: /evil-strengthsfinder/
+      external: false
+    - title: Take Assessment
+      url: /evil-strengthsfinder/#assessment
+      external: false
+    - title: Sample Results
+      url: /evil-strengthsfinder/#sample
       external: false
     - title: Hall of Fame
       url: /halloffame/

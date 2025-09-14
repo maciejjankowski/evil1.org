@@ -1,0 +1,95 @@
+name: Auto-merge Trusted Changes
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  auto-merge:
+    runs-on: ubuntu-latest
+    if: github.actor == 'github-actions[bot]' || github.actor == 'dependabot[bot]'
+    
+    permissions:
+      contents: write
+      pull-requests: write
+      checks: read
+    
+    steps:
+      - name: Check if PR is from trusted automation
+        id: check_author
+        run: |
+          echo "Checking PR author: ${{ github.actor }}"
+          
+          # Define trusted automation accounts
+          trusted_actors=("github-actions[bot]" "dependabot[bot]")
+          
+          is_trusted=false
+          for actor in "${trusted_actors[@]}"; do
+            if [ "${{ github.actor }}" = "$actor" ]; then
+              is_trusted=true
+              break
+            fi
+          done
+          
+          echo "is_trusted=$is_trusted" >> $GITHUB_OUTPUT
+          
+      - name: Check PR labels and title
+        id: check_metadata
+        if: steps.check_author.outputs.is_trusted == 'true'
+        run: |
+          echo "Checking PR metadata..."
+          
+          # Safe patterns for auto-merge
+          safe_patterns=(
+            "chore: auto-publish scheduled content"
+            "chore: regenerate consolidated backlog"
+            "chore(deps): bump"
+            "build(deps): bump"
+          )
+          
+          title="${{ github.event.pull_request.title }}"
+          is_safe=false
+          
+          for pattern in "${safe_patterns[@]}"; do
+            if [[ "$title" == $pattern* ]]; then
+              is_safe=true
+              break
+            fi
+          done
+          
+          echo "is_safe=$is_safe" >> $GITHUB_OUTPUT
+          echo "PR title: $title"
+          echo "Is safe for auto-merge: $is_safe"
+
+      - name: Wait for status checks
+        if: steps.check_author.outputs.is_trusted == 'true' && steps.check_metadata.outputs.is_safe == 'true'
+        uses: lewagon/wait-on-check-action@v1.3.3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          check-name: 'test'  # Name of the visual tests job
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          wait-interval: 10
+          allowed-conclusions: success,skipped
+
+      - name: Enable auto-merge
+        if: steps.check_author.outputs.is_trusted == 'true' && steps.check_metadata.outputs.is_safe == 'true'
+        run: |
+          gh pr merge ${{ github.event.pull_request.number }} --auto --squash
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Add comment for auto-merge
+        if: steps.check_author.outputs.is_trusted == 'true' && steps.check_metadata.outputs.is_safe == 'true'
+        run: |
+          gh pr comment ${{ github.event.pull_request.number }} --body "🤖 **Auto-merge enabled** for trusted automation change. This PR will be automatically merged once all status checks pass."
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Log decision
+        if: always()
+        run: |
+          echo "## Auto-merge Decision Summary" >> $GITHUB_STEP_SUMMARY
+          echo "- **PR Author**: ${{ github.actor }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Trusted Actor**: ${{ steps.check_author.outputs.is_trusted }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Safe Content**: ${{ steps.check_metadata.outputs.is_safe }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Auto-merge Enabled**: ${{ steps.check_author.outputs.is_trusted == 'true' && steps.check_metadata.outputs.is_safe == 'true' }}" >> $GITHUB_STEP_SUMMARY

@@ -1,7 +1,9 @@
 ---
-layout: company-profile
-title: "Amazon - Monopoly Power & Worker Exploitation"
-description: "How Amazon built a retail monopoly through predatory practices while treating workers as disposable and avoiding taxes"
+layout: evil500-company
+title: "Amazon - Corporate Profile"
+description: "Amazon's corporate evil profile with certification status and accountability metrics."
+company_id: amazon
 permalink: /company/amazon/
-company_key: amazon
 ---
+
+Amazon's profile shows their current certification status and corporate accountability record.

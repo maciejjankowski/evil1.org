@@ -1577,115 +1577,137 @@ rec-happy-worker:
     = 'Become a Thoughtful Worker';\n    });\n    button.addEventListener('mouseleave',
     function() {\n        this.textContent = 'Buy This T-Shirt';\n    });\n});"
 t-shirt-recursive:
-  title: Recursive T-Shirt - This T-Shirt Costs $29.99
-  description: Buy a t-shirt that mocks the very act of buying t-shirts. The ultimate
-    in self-aware consumerism.
+  title: Recursive T-Shirt - This T-Shirt Costs $29.99 (OTA Upgradeable)
+  description: Buy a t-shirt that mocks the very act of buying t-shirts. Now with OTA price upgrades that update the cost to whatever you actually pay. The ultimate in self-aware consumerism.
   permalink: "/merchandise/t-shirt-recursive/"
-  tags: []
+  tags: [ota-enabled, dynamic-pricing, recursive]
   sku: t-shirt-recursive
   price: 29.99
   type: shirt
-  content: "Recursive T-Shirt: \"This T-Shirt Costs $29.99\"\n    \n\n        \n\n
+  ota_enabled: true
+  content: "Recursive T-Shirt: \"This T-Shirt Costs $29.99\" (OTA Upgradeable)\n    \n\n        \n\n
     \           \n            \n                \n                    \U0001F455\n
     \                   FRONT\n                    \"This T-Shirt Costs $29.99\"\n
-    \                   BACK\n                    \"And You're Paying For It.Congratulations
-    On Your Corporate Compliance.\"\n                \n                *Actual product
-    may vary slightly from mockup\n            \n\n            \n            \n                \n
-    \                   ⚠️ Why You Shouldn't Buy This\n                    \n                        It's
+    \                   BACK\n                    \"And You're Paying For It. OTA Upgrades Available.\"\n
+    \               \n                *Price updates via Over-The-Air upgrades based on actual payment data\n
+    \           \n\n            \n            \n                \n
+    \                   🔄 OTA Upgrade System\n                    This t-shirt features revolutionary Over-The-Air price updates:\n                    \n
+    \                       Real-time price adjustments based on market transactions\n
+    \                       Firmware upgrades for enhanced price display\n
+    \                       Dynamic pricing reflects what people actually pay\n
+    \                       Offline mode with fallback to base price\n
+    \                       Satirical commentary on surge pricing culture\n
+    \                   \n                \n\n            \n            \n                \n
+    \                   ⚠️ Why You Shouldn't Buy This (Updated)\n                    \n                        It's
     just a t-shirt with words on it\n                        You already own multiple
     t-shirts\n                        The money could go to actual charity\n                        You're
     supporting consumerism\n                        The joke isn't even that funny\n
+    \                       The price might change after you buy it\n
     \                   \n                \n\n                \n                    ✅
-    But If You Do Buy It...\n                    \n                        $2 from
+    But If You Do Buy It... (Enhanced)\n                    \n                        $2 from
     each sale funds investigative journalism\n                        You get a really
     comfortable t-shirt\n                        Free access to our corporate evil
     database\n                        You can wear it ironically\n                        Use
-    code \"HYPOCRITE\" for 10% off\n                    \n                \n\n                \n
-    \                   Product Details\n                    \n                        Price:
-    $29.99\n                        Material: 100% organic cotton (ethically sourced)\n
+    code \"HYPOCRITE\" for 10% off\n                        Contribute to dynamic pricing algorithm\n
+    \                       Experience cutting-edge price display technology\n
+    \                   \n                \n\n                \n
+    \                   Product Details (OTA Enhanced)\n                    \n                        Price:
+    $29.99 (base price, subject to OTA updates)\n                        Material: 100% organic cotton (ethically sourced)\n
     \                       Sizes: S, M, L, XL, 2XL, 3XL\n                        Colors:
     Black text on white, white text on black\n                        Shipping: Free
     worldwide (carbon-neutral)\n                        Manufacturing: Made in USA
-    by fairly paid workers\n                    \n\n                    \n                        Size:\n
+    by fairly paid workers\n                        OTA Features: Real-time price display, upgrade notifications\n
+    \                       Firmware: v1.0.0 (upgradeable)\n
+    \                   \n\n                    \n                        Size:\n
     \                       \n                            Select Size\n                            Small\n
     \                           Medium\n                            Large\n                            X-Large\n
     \                           2X-Large\n                            3X-Large\n                        \n\n
     \                       Color:\n                        \n                            Black
     text on white\n                            White text on black\n                        \n\n
-    \                       \n                            Add to Cart - $29.99\n                        \n
+    \                       \n                            Add to Cart - $29.99 (Base Price)\n                        \n
     \                   \n                \n            \n\n        \n\n        \n
-    \           The Recursive Capitalism Explanation\n            \n                \n
-    \                   \n                        What Does This T-Shirt Actually
-    Mean?\n                        This t-shirt is a meta-commentary on consumerism.
+    \           The OTA Recursive Capitalism Explanation\n            \n                \n
+    \                   \n                        What Does This Enhanced T-Shirt Actually
+    Mean?\n                        This t-shirt is now a meta-commentary on both consumerism AND dynamic pricing. 
     It acknowledges that you're buying a product while simultaneously mocking you
-    for doing so. It's capitalism eating itself.\n\n                        The Layers
+    for doing so, AND it changes price based on what people actually pay. It's capitalism eating itself
+    while upgrading its own firmware.\n\n                        The Enhanced Layers
     Of Irony\n                        \n                            \n                                \U0001F3AD
-    Layer 1: The Obvious\n                                The t-shirt literally tells
-    you how much it costs, which is something no other t-shirt does.\n                            \n\n
+    Layer 1: The Obvious (Enhanced)\n                                The t-shirt literally tells
+    you how much it costs, but now that cost can change via OTA updates.\n                            \n\n
     \                           \n                                \U0001F4B0 Layer
-    2: The Accusation\n                                It accuses you of being a willing
-    participant in the capitalist system by buying it.\n                            \n\n
+    2: The Accusation (Dynamic)\n                                It accuses you of being a willing
+    participant in surge pricing by buying it.\n                            \n\n
     \                           \n                                \U0001F3C6 Layer
-    3: The Congratulation\n                                It congratulates you for
-    your \"corporate compliance,\" acknowledging that buying it makes you part of
-    the system.\n                            \n\n                            \n                                \U0001F504
-    Layer 4: The Recursion\n                                By buying this t-shirt
-    that mocks buying t-shirts, you're engaging in the very behavior it's mocking.\n
+    3: The Congratulation (Upgraded)\n                                It congratulates you for
+    your \"corporate compliance\" with dynamic pricing models.\n                            \n\n                            \n                                \U0001F504
+    Layer 4: The Recursion (OTA)\n                                By buying this t-shirt
+    that mocks dynamic pricing, you're feeding the algorithm that determines its price.\n
+    \                           \n\n                            \n                                🔄
+    Layer 5: The Meta-Upgrade\n                                The t-shirt can now upgrade itself,
+    making it self-aware of its own pricing model while you wear it.\n
     \                           \n                        \n\n                        The
-    Philosophical Question\n                        If a t-shirt mocks consumerism,
-    but you buy it to signal your anti-consumerist views, are you still a consumerist?
-    The answer is yes, and this t-shirt is happy to take your money to prove it.\n
+    Enhanced Philosophical Question\n                        If a t-shirt mocks surge pricing,
+    but uses surge pricing to determine its own cost, and you buy it to signal your anti-surge-pricing views, 
+    are you still a victim of surge pricing? The answer updates in real-time via OTA.\n
     \                   \n                \n            \n        \n\n        \n            What
-    Your Purchase Actually Funds\n            \n                \n                    \n
+    Your Purchase Actually Funds (OTA Enhanced)\n            \n                \n                    \n
     \                       \n                            \U0001F4F0 Investigative
     Journalism\n                        \n                        \n                            $2
-    from each t-shirt funds in-depth investigations into corporate malfeasance, whistleblower
-    protection, and systemic corruption.\n                        \n                    \n\n
+    from each t-shirt funds in-depth investigations into corporate malfeasance, dynamic pricing abuses, and algorithmic exploitation.\n                        \n                    \n\n
     \                   \n                        \n                            \U0001F393
     Activist Training\n                        \n                        \n                            Portion
     of proceeds supports training programs teaching corporate investigation techniques
-    and activist strategies.\n                        \n                    \n\n                    \n
+    and anti-surge-pricing activism.\n                        \n                    \n\n                    \n
     \                       \n                            \U0001F30D Community Building\n
     \                       \n                        \n                            Funds
     community events, online forums, and networking opportunities for truth-seekers
-    and activists.\n                        \n                    \n\n                    \n
+    and price transparency advocates.\n                        \n                    \n\n                    \n
     \                       \n                            ⚖️ Legal Support\n                        \n
     \                       \n                            Covers legal costs associated
-    with publishing controversial corporate investigations and protecting sources.\n
+    with publishing controversial corporate investigations and fighting dynamic pricing lawsuits.\n
     \                       \n                    \n                \n            \n
-    \       \n\n        \n            Customer Reviews (Satirical)\n            \n
+    \       \n\n        \n            Customer Reviews (Enhanced for OTA)\n            \n
     \               \n                    \n                        \n                            \n
     \                               ★★★★★\n                                Sarah K.\n
     \                           \n                            \"This t-shirt perfectly
-    captures my hypocrisy. I bought it to protest consumerism, but now I own a t-shirt
-    that mocks me for buying t-shirts. 10/10 would buy again.\"\n                        \n
+    captures my hypocrisy AND now it can update its price while I wear it. I bought it to protest 
+    surge pricing, but now I'm part of the surge pricing algorithm. The OTA updates make me feel 
+    complicit in real-time. 10/10 would buy again (at current market rate).\"\n                        \n
     \                   \n\n                    \n                        \n                            \n
     \                               ★★★★☆\n                                Mike R.\n
     \                           \n                            \"Great quality t-shirt.
-    The message is spot on - I felt guilty buying it, which is exactly what it should
-    do. Only 4 stars because it made me question my life choices.\"\n                        \n
+    The OTA price display is mesmerizing - I watched it update three times while wearing it to a coffee shop. 
+    People kept asking about the 'firmware version.' Only 4 stars because I now understand dynamic pricing 
+    from the inside and it made me question my life choices AND my shopping habits.\"\n                        \n
     \                   \n\n                    \n                        \n                            \n
     \                               ★★★★★\n                                Alex T.\n
     \                           \n                            \"I bought this ironically,
-    but now I wear it unironically because the message is too real. Capitalism has
-    me in its claws and this t-shirt knows it.\"\n                        \n                    \n
+    but now the price updates ironically too. Capitalism has me in its claws, the t-shirt 
+    knows it, and it adjusts its price accordingly. The OTA system is basically a mirror 
+    for surge pricing culture. My shirt is smarter than most companies' pricing models.\"\n                        \n                    \n
     \               \n            \n        \n\n        \n            Still Thinking
-    About It?\n            Remember: Your guilt is delicious, and it funds actual
-    activism.\n            \n                View All Products\n                Learn
-    About Us\n                Just Buy It Already\n            \n        \n    \n\n\n\nfunction
+    About It? (Price May Change)\n            Remember: Your guilt is delicious, your payment data is valuable, 
+    and it all funds actual activism. Price subject to OTA updates based on market conditions.\n            \n                
+    View All Products\n                Learn About Dynamic Pricing\n                Buy It At Current Market Price\n            \n        \n    \n\n\n\n<script src=\"/assets/js/ota-price-display.js\"></script>\n\nfunction
     addToCart() {\n    const size = document.getElementById('size').value;\n    const
     color = document.getElementById('color').value;\n\n    if (size === 'Select Size')
-    {\n        alert('Please select a size first. We know you want this t-shirt that
-    mocks you for wanting t-shirts.');\n        return;\n    }\n\n    // In a real
+    {\n        alert('Please select a size first. We know you want this OTA-enabled t-shirt that
+    mocks you for wanting t-shirts with dynamic pricing.');\n        return;\n    }\n\n    
+    // Get current price from OTA display\n    const currentPrice = window.otaPriceDisplay ? 
+    window.otaPriceDisplay.currentPrice : 29.99;\n\n    // In a real
     implementation, this would add to cart\n    alert(`Added to cart: Recursive T-Shirt
-    (${size}, ${color}) - $29.99\n\nRemember: You're now part of the system you're
-    trying to fight. But hey, your purchase funds investigative journalism!\n\n(Just
-    kidding - or are we?)`);\n\n    // Here you would integrate with actual e-commerce
-    platform\n    // For now, we'll just show the message\n}\n\ndocument.addEventListener('DOMContentLoaded',
+    (${size}, ${color}) - $${currentPrice.toFixed(2)}\n\nRemember: You're now part of the dynamic pricing system you're
+    trying to fight. Your purchase will influence future price updates via OTA!\n\n(The irony updates automatically)`);\n\n    
+    // Record the purchase for OTA price updates\n    if (window.otaPriceDisplay) {\n        
+    fetch('/.netlify/functions/ota-price-update', {\n            method: 'POST',\n            
+    headers: { 'Content-Type': 'application/json' },\n            body: JSON.stringify({ 
+    sku: 't-shirt-recursive', amount: currentPrice })\n        }).catch(err => console.log('OTA update failed:', err));\n    }\n}\n\ndocument.addEventListener('DOMContentLoaded',
     function() {\n    // Add some interactive elements\n    const button = document.querySelector('button[onclick=\"addToCart()\"]');\n
-    \   button.addEventListener('mouseenter', function() {\n        this.textContent
-    = 'Embrace The Hypocrisy';\n    });\n    button.addEventListener('mouseleave',
-    function() {\n        this.textContent = 'Just Buy It Already';\n    });\n});"
+    \   if (button) {\n        button.addEventListener('mouseenter', function() {\n            
+    const currentPrice = window.otaPriceDisplay ? window.otaPriceDisplay.currentPrice : 29.99;\n            
+    this.textContent = `Pay $${currentPrice.toFixed(2)} (Current Market Rate)`;\n        });\n        
+    button.addEventListener('mouseleave', function() {\n            this.textContent = 'Buy It At Current Market Price';\n        });\n    }\n});"
   currency: USD
   stripe_price_id: price_REPLACE_RECURSIVE
 
