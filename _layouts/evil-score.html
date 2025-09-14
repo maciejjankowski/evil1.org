@@ -1,0 +1,196 @@
+---
+layout: default
+---
+
+<link rel="stylesheet" href="{{ '/assets/css/evil-score.css' | relative_url }}">
+
+<div class="evil-score-page">
+    <header class="page-header">
+        <div class="evil-score-logo">
+            <h1>{{ page.title }}</h1>
+            <div class="tagline">{{ page.description }}</div>
+        </div>
+    </header>
+
+    <div class="evil-score-content">
+        {{ content }}
+        
+        <!-- Assessment Form Section -->
+        <section class="assessment-section">
+            <h2>🔍 Quick Evil Assessment</h2>
+            <p><em>Answer these questions to get a preliminary Evil Score estimate:</em></p>
+            
+            <form class="evil-assessment-form" id="evilScoreForm">
+                <div class="assessment-category">
+                    <h3>Worker Exploitation</h3>
+                    <div class="question">
+                        <label>How often do you fire workers for organizing?</label>
+                        <select name="worker_fire" required>
+                            <option value="">Select...</option>
+                            <option value="5">Always - Zero tolerance policy</option>
+                            <option value="4">Usually - Within 48 hours</option>
+                            <option value="3">Sometimes - After warnings</option>
+                            <option value="2">Rarely - Only if forced</option>
+                            <option value="1">Never - We support workers</option>
+                        </select>
+                    </div>
+                    
+                    <div class="question">
+                        <label>What's your approach to workplace safety?</label>
+                        <select name="safety" required>
+                            <option value="">Select...</option>
+                            <option value="5">Safety costs money - minimize it</option>
+                            <option value="4">Meet minimum legal requirements only</option>
+                            <option value="3">Basic safety measures</option>
+                            <option value="2">Good safety standards</option>
+                            <option value="1">Exceeds all safety requirements</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="assessment-category">
+                    <h3>Environmental Destruction</h3>
+                    <div class="question">
+                        <label>How do you handle environmental regulations?</label>
+                        <select name="environment" required>
+                            <option value="">Select...</option>
+                            <option value="5">Ignore them and pay fines later</option>
+                            <option value="4">Find loopholes to exploit</option>
+                            <option value="3">Minimal compliance only</option>
+                            <option value="2">Follow most regulations</option>
+                            <option value="1">Exceed environmental standards</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="assessment-category">
+                    <h3>Tax Avoidance</h3>
+                    <div class="question">
+                        <label>What percentage of taxes do you actually pay?</label>
+                        <select name="taxes" required>
+                            <option value="">Select...</option>
+                            <option value="5">0% - Taxes are for peasants</option>
+                            <option value="4">Less than 5% - Minimal payment</option>
+                            <option value="3">5-15% - Strategic avoidance</option>
+                            <option value="2">15-25% - Some optimization</option>
+                            <option value="1">Full rate - We pay our share</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="assessment-category">
+                    <h3>Consumer Manipulation</h3>
+                    <div class="question">
+                        <label>How do you approach customer data?</label>
+                        <select name="data" required>
+                            <option value="">Select...</option>
+                            <option value="5">Sell everything to anyone</option>
+                            <option value="4">Monetize all data aggressively</option>
+                            <option value="3">Use data for targeted ads</option>
+                            <option value="2">Basic data collection only</option>
+                            <option value="1">Minimal data, maximum privacy</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="assessment-category">
+                    <h3>Monopoly Power</h3>
+                    <div class="question">
+                        <label>How do you handle competition?</label>
+                        <select name="competition" required>
+                            <option value="">Select...</option>
+                            <option value="5">Crush them by any means necessary</option>
+                            <option value="4">Acquire or destroy competitors</option>
+                            <option value="3">Aggressive competitive tactics</option>
+                            <option value="2">Normal business competition</option>
+                            <option value="1">Fair competition and collaboration</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primary">Calculate My Evil Score™</button>
+            </form>
+
+            <div id="scoreResult" class="score-result" style="display: none;">
+                <h3>Your Preliminary Evil Score™</h3>
+                <div class="score-display">
+                    <span class="score-number" id="scoreNumber">0</span>
+                    <span class="score-total">/100</span>
+                </div>
+                <div class="score-rating" id="scoreRating"></div>
+                <div class="score-description" id="scoreDescription"></div>
+                <p><em>For a comprehensive assessment and certification, contact our Corporate Malevolence Analysts.</em></p>
+            </div>
+        </section>
+
+        <!-- Certified Companies Section -->
+        <section class="certified-companies">
+            <h2>🏆 Evil Score™ Certified Companies</h2>
+            <p>Companies that have achieved Evil Score™ certification:</p>
+            
+            <div class="company-scores">
+                {% for company in site.data.companies %}
+                    {% if company[1].evil_score %}
+                    <div class="company-score-card">
+                        <div class="company-name">
+                            <a href="/company/{{ company[0] }}/">{{ company[1].name | default: company[0] | capitalize }}</a>
+                        </div>
+                        <div class="evil-score-badge score-{{ company[1].evil_score.rating | downcase | replace: ' ', '-' }}">
+                            <span class="score">{{ company[1].evil_score.score }}/100</span>
+                            <span class="rating">{{ company[1].evil_score.rating }}</span>
+                        </div>
+                        <div class="score-highlights">
+                            {% for highlight in company[1].evil_score.highlights limit:2 %}
+                            <span class="highlight">{{ highlight }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </section>
+    </div>
+</div>
+
+<script>
+document.getElementById('evilScoreForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const formData = new FormData(this);
+    let totalScore = 0;
+    let questionCount = 0;
+    
+    for (let [name, value] of formData.entries()) {
+        totalScore += parseInt(value);
+        questionCount++;
+    }
+    
+    const averageScore = totalScore / questionCount;
+    const finalScore = Math.round(averageScore * 20); // Convert to 100-point scale
+    
+    let rating, description;
+    
+    if (finalScore >= 90) {
+        rating = 'Evil Grandmaster';
+        description = 'Outstanding! You have achieved peak corporate malevolence. Ready to join the pantheon of history\'s greatest villains.';
+    } else if (finalScore >= 80) {
+        rating = 'Evil Expert';
+        description = 'Excellent evil execution. A few tweaks and you\'ll be destroying lives at an elite level.';
+    } else if (finalScore >= 70) {
+        rating = 'Evil Practitioner';
+        description = 'Solid foundation in corporate evil. Ready for intermediate-level exploitation.';
+    } else if (finalScore >= 60) {
+        rating = 'Evil Apprentice';
+        description = 'Good start! With more training, you could become truly destructive.';
+    } else {
+        rating = 'Evil Amateur';
+        description = 'Significant improvement needed. Consider our corporate evil training programs.';
+    }
+    
+    document.getElementById('scoreNumber').textContent = finalScore;
+    document.getElementById('scoreRating').textContent = rating;
+    document.getElementById('scoreDescription').textContent = description;
+    document.getElementById('scoreResult').style.display = 'block';
+    document.getElementById('scoreResult').scrollIntoView({ behavior: 'smooth' });
+});
+</script>

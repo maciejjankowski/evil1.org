@@ -1,0 +1,193 @@
+---
+layout: default
+title: Anonymous Corporate Experience Inbox - evil1.org
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ page.title }}</title>
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <link rel="stylesheet" href="/assets/css/corporate-inbox.css">
+</head>
+<body>
+    {% include topnav.html %}
+    
+    <main class="inbox-container">
+        <div class="inbox-header">
+            <h1>Anonymous Corporate Experience Inbox</h1>
+            <p class="inbox-subtitle">Share your corporate experience anonymously. We'll create anonymized stories and identify similar practices across industries.</p>
+        </div>
+
+        <div class="inbox-content">
+            <div class="submission-form">
+                <h2>Submit Your Experience</h2>
+                <form id="corporate-experience-form" 
+                      hx-post="/api/submit-experience" 
+                      hx-target="#submission-result"
+                      hx-indicator="#loading">
+                    
+                    <div class="form-group">
+                        <label for="company-name">Company Name (optional)</label>
+                        <input type="text" id="company-name" name="company_name" 
+                               placeholder="e.g., Tech Corp Inc., Big Bank LLC">
+                        <small class="field-note">Leave blank if you prefer complete anonymity</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="industry">Industry</label>
+                        <select id="industry" name="industry" required>
+                            <option value="">Select Industry</option>
+                            <option value="technology">Technology</option>
+                            <option value="finance">Finance & Banking</option>
+                            <option value="healthcare">Healthcare</option>
+                            <option value="retail">Retail</option>
+                            <option value="manufacturing">Manufacturing</option>
+                            <option value="energy">Energy & Oil</option>
+                            <option value="pharmaceuticals">Pharmaceuticals</option>
+                            <option value="consulting">Consulting</option>
+                            <option value="media">Media & Entertainment</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company-size">Company Size</label>
+                        <select id="company-size" name="company_size" required>
+                            <option value="">Select Size</option>
+                            <option value="startup">Startup (1-50 employees)</option>
+                            <option value="small">Small (51-250 employees)</option>
+                            <option value="medium">Medium (251-1000 employees)</option>
+                            <option value="large">Large (1001-10000 employees)</option>
+                            <option value="enterprise">Enterprise (10000+ employees)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="role-level">Your Role Level</label>
+                        <select id="role-level" name="role_level" required>
+                            <option value="">Select Level</option>
+                            <option value="entry">Entry Level</option>
+                            <option value="mid">Mid Level</option>
+                            <option value="senior">Senior Level</option>
+                            <option value="management">Management</option>
+                            <option value="executive">Executive</option>
+                            <option value="contractor">Contractor/Consultant</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="experience-type">Type of Experience</label>
+                        <select id="experience-type" name="experience_type" required>
+                            <option value="">Select Type</option>
+                            <option value="discrimination">Discrimination/Harassment</option>
+                            <option value="retaliation">Retaliation</option>
+                            <option value="wage-theft">Wage Theft/Unfair Pay</option>
+                            <option value="safety-violations">Safety Violations</option>
+                            <option value="union-busting">Union Busting</option>
+                            <option value="toxic-culture">Toxic Work Culture</option>
+                            <option value="ethics-violations">Ethics Violations</option>
+                            <option value="fraud">Fraud/Financial Misconduct</option>
+                            <option value="environmental">Environmental Violations</option>
+                            <option value="customer-harm">Customer Harm</option>
+                            <option value="data-privacy">Data Privacy Violations</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="experience-description">Your Experience</label>
+                        <textarea id="experience-description" name="experience_description" 
+                                  rows="8" required 
+                                  placeholder="Describe your experience in detail. Include context, what happened, impact on you and others, how the company responded, etc. This will be anonymized before publication."></textarea>
+                        <small class="field-note">Your story will be anonymized and combined with similar experiences before publication</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="impact">Impact on You/Others</label>
+                        <textarea id="impact" name="impact" 
+                                  rows="4" 
+                                  placeholder="How did this experience affect you, your colleagues, customers, or the broader community?"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company-response">Company Response</label>
+                        <textarea id="company-response" name="company_response" 
+                                  rows="4" 
+                                  placeholder="How did the company respond when this was raised? Did they ignore it, retaliate, fix it, or something else?"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="timeframe">When Did This Occur?</label>
+                        <select id="timeframe" name="timeframe" required>
+                            <option value="">Select Timeframe</option>
+                            <option value="current">Currently happening</option>
+                            <option value="recent">Within last 6 months</option>
+                            <option value="year">Within last year</option>
+                            <option value="few-years">2-5 years ago</option>
+                            <option value="old">More than 5 years ago</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="ongoing" value="true">
+                            This is an ongoing situation
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="widespread" value="true">
+                            This affects many employees, not just me
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="documented" value="true">
+                            I have documentation/evidence
+                        </label>
+                    </div>
+
+                    <div class="privacy-notice">
+                        <h3>Privacy & Anonymity</h3>
+                        <p>Your submission is completely anonymous. We do not collect IP addresses, emails, or any identifying information. Your experience will be combined with similar stories and anonymized before publication.</p>
+                        <label class="checkbox-label required">
+                            <input type="checkbox" required>
+                            I understand this submission is anonymous and will be used to create anonymized stories
+                        </label>
+                    </div>
+
+                    <div class="submit-section">
+                        <button type="submit" class="btn-submit">Submit Anonymous Experience</button>
+                        <div id="loading" class="htmx-indicator">Submitting...</div>
+                    </div>
+                </form>
+
+                <div id="submission-result"></div>
+            </div>
+
+            <div class="similar-experiences">
+                <h2>Recent Anonymous Experiences</h2>
+                <div class="experience-feed">
+                    {% for experience in site.data.corporate_experiences limit:5 %}
+                    <div class="experience-card">
+                        <div class="experience-meta">
+                            <span class="industry">{{ experience.industry | capitalize }}</span>
+                            <span class="type">{{ experience.experience_type | replace: '-', ' ' | capitalize }}</span>
+                            <span class="timeframe">{{ experience.timeframe }}</span>
+                        </div>
+                        <p class="experience-excerpt">{{ experience.anonymized_summary }}</p>
+                        {% if experience.similar_companies %}
+                        <div class="similar-companies">
+                            <strong>Similar practices also reported at:</strong>
+                            {% for company in experience.similar_companies %}
+                                <span class="company-tag">{{ company }}</span>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </main>
+
+    {% include footer.html %}
+</body>
+</html>
