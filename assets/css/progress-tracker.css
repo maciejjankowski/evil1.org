@@ -154,7 +154,7 @@
 }
 
 .challenge-list {
-    space: 10px;
+    gap: 10px;
 }
 
 .challenge-item {
