@@ -1,0 +1,19 @@
+- experiment_name: "Supporter Price Elasticity"
+  utm_trigger: "supporter_test"
+  variants:
+    - utm_value: "control"
+      price: "$5.00/month"
+      label: "Standard"
+    - utm_value: "variant_a"
+      price: "$7.00/month"
+      label: "Standard"
+
+- experiment_name: "Activist Annual Discount"
+  utm_trigger: "activist_offer"
+  variants:
+    - utm_value: "monthly"
+      price: "$15.00/month"
+      label: "Billed Monthly"
+    - utm_value: "annual"
+      price: "$150.00/year"
+      label: "Billed Annually (2 months free)"

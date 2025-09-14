@@ -1,0 +1,175 @@
+# Corporate Dehumanizing Terms
+# A comprehensive list of euphemisms corporations use to dehumanize people
+
+human_resources:
+  - term: "Human Resources"
+    real_meaning: "People are resources to be consumed and discarded"
+    context: "HR departments treat employees as disposable assets"
+    
+  - term: "Human Capital"
+    real_meaning: "People are investment vehicles to extract value from"
+    context: "Reducing humans to balance sheet entries"
+    
+  - term: "Talent Acquisition"
+    real_meaning: "Hunting and capturing workers like commodities"
+    context: "Treating people like objects to be acquired"
+    
+  - term: "Workforce Optimization"
+    real_meaning: "Making humans more machine-like for profit"
+    context: "Removing humanity from work processes"
+
+layoffs_downsizing:
+  - term: "Right-sizing"
+    real_meaning: "Mass firings disguised as efficiency"
+    context: "Destroying lives while claiming business necessity"
+    
+  - term: "Workforce Reduction"
+    real_meaning: "Treating people like excess inventory"
+    context: "Humans as numbers to be reduced"
+    
+  - term: "Redundancies"
+    real_meaning: "People declared unnecessary and disposable"
+    context: "Reducing humans to functional units"
+    
+  - term: "Restructuring"
+    real_meaning: "Rearranging humans like furniture"
+    context: "People as moveable corporate assets"
+    
+  - term: "Optimization"
+    real_meaning: "Removing the human element for efficiency"
+    context: "Turning workplaces into algorithmic processes"
+    
+  - term: "Streamlining"
+    real_meaning: "Eliminating humans to improve flow"
+    context: "People as obstacles to corporate efficiency"
+
+exploitation_terms:
+  - term: "Associates"
+    real_meaning: "Minimum wage workers given fancy titles"
+    context: "Walmart's way of avoiding calling them 'employees'"
+    
+  - term: "Team Members"
+    real_meaning: "Wage slaves with participatory branding"
+    context: "Creating false sense of equality while exploiting"
+    
+  - term: "Gig Workers"
+    real_meaning: "Employees without employee rights"
+    context: "Stripping worker protections while maintaining control"
+    
+  - term: "Independent Contractors"
+    real_meaning: "Employees reclassified to avoid benefits"
+    context: "Legal fiction to circumvent labor laws"
+    
+  - term: "Flexible Workforce"
+    real_meaning: "Workers with no security or stability"
+    context: "Flexibility for companies, precarity for humans"
+
+productivity_dehumanization:
+  - term: "Human Metrics"
+    real_meaning: "Reducing people to data points"
+    context: "Quantifying humanity for corporate analysis"
+    
+  - term: "Performance Units"
+    real_meaning: "Humans measured like machinery"
+    context: "People as productivity-generating devices"
+    
+  - term: "Resource Allocation"
+    real_meaning: "Moving people around like office supplies"
+    context: "Humans as interchangeable corporate assets"
+    
+  - term: "Efficiency Gains"
+    real_meaning: "Making humans work harder for less"
+    context: "Extracting more value from human suffering"
+    
+  - term: "Productivity Enhancement"
+    real_meaning: "Squeezing more output from human machines"
+    context: "Treating people as systems to be optimized"
+
+surveillance_control:
+  - term: "Employee Engagement"
+    real_meaning: "Measuring and manipulating worker compliance"
+    context: "Surveilling emotional state for corporate benefit"
+    
+  - term: "Performance Monitoring"
+    real_meaning: "Constant surveillance and judgment"
+    context: "Reducing humans to monitored metrics"
+    
+  - term: "Behavioral Analytics"
+    real_meaning: "Tracking human actions like lab rats"
+    context: "People as data sources for algorithmic control"
+    
+  - term: "Workforce Intelligence"
+    real_meaning: "Spying on workers with sophisticated systems"
+    context: "Intelligence gathering on human resources"
+
+customer_dehumanization:
+  - term: "Consumer Units"
+    real_meaning: "People as consumption-generating machines"
+    context: "Humans valued only for purchasing power"
+    
+  - term: "Customer Lifetime Value"
+    real_meaning: "How much money we can extract before they die"
+    context: "Reducing people to profit potential over time"
+    
+  - term: "Market Segments"
+    real_meaning: "Chopping humans into manageable groups"
+    context: "People as demographic categories to exploit"
+    
+  - term: "User Base"
+    real_meaning: "Humans as foundation for corporate power"
+    context: "People as platforms for revenue generation"
+    
+  - term: "Conversion Targets"
+    real_meaning: "Humans to be transformed into profit"
+    context: "People as objects of corporate manipulation"
+
+financial_dehumanization:
+  - term: "Liability Management"
+    real_meaning: "Treating people as financial risks"
+    context: "Humans as potential costs to be minimized"
+    
+  - term: "Cost Centers"
+    real_meaning: "Departments full of expensive humans"
+    context: "People as budget line items to be cut"
+    
+  - term: "Overhead"
+    real_meaning: "The unfortunate cost of employing humans"
+    context: "People as necessary evils in business operations"
+    
+  - term: "EBITDA Optimization"
+    real_meaning: "Removing humans to improve financial metrics"
+    context: "People as obstacles to corporate profitability"
+
+modern_slavery:
+  - term: "Gig Economy"
+    real_meaning: "Feudalism with smartphones"
+    context: "Creating modern serfs with digital chains"
+    
+  - term: "Platform Workers"
+    real_meaning: "Digital age sharecroppers"
+    context: "Humans farming data for corporate landlords"
+    
+  - term: "Flexible Employment"
+    real_meaning: "Employment with all the downsides, none of the benefits"
+    context: "Maximizing corporate flexibility while minimizing human security"
+    
+  - term: "At-Will Employment"
+    real_meaning: "Humans as disposable commodities"
+    context: "Ultimate corporate power over human lives"
+
+algorithmic_dehumanization:
+  - term: "Machine Learning Optimization"
+    real_meaning: "Teaching computers to exploit humans better"
+    context: "Algorithms designed to extract maximum value from people"
+    
+  - term: "Predictive Analytics"
+    real_meaning: "Fortune telling for corporate exploitation"
+    context: "Using data to manipulate human behavior"
+    
+  - term: "Algorithmic Management"
+    real_meaning: "Being managed by heartless code"
+    context: "Removing human judgment from human management"
+    
+  - term: "Automated Decision Making"
+    real_meaning: "Letting machines decide human fates"
+    context: "Replacing human discretion with algorithmic cruelty"

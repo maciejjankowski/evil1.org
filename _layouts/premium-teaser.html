@@ -1,0 +1,296 @@
+---
+layout: default
+---
+
+<div class="premium-teaser-container">
+  <!-- Scarcity & Urgency Header -->
+  <div class="scarcity-banner">
+    <div class="scarcity-content">
+      <span class="scarcity-icon">⚡</span>
+      <span class="scarcity-text">FLASH UNLOCK: Only <span id="remaining-slots">7</span> premium spots left today!</span>
+      <div class="countdown-timer">
+        <span id="countdown-display">04:57:23</span>
+        <span class="countdown-label">until price increases</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Article Header with Social Proof -->
+  <header class="teaser-header">
+    <div class="social-proof">
+      <div class="reader-count">
+        <span class="readers-online">🔥 <span id="readers-count">2,847</span> readers unlocking this now</span>
+      </div>
+      <div class="testimonial-bar">
+        <div class="testimonial-snippet">
+          "Mind-blowing insights I never found anywhere else..." - Financial Times Editor
+        </div>
+      </div>
+    </div>
+    
+    <h1 class="teaser-title">{{ page.title }}</h1>
+    <div class="article-meta">
+      <span class="reading-time">{{ page.reading_time | default: "15 min read" }}</span>
+      <span class="premium-badge">💎 PREMIUM EXCLUSIVE</span>
+      <span class="value-indicator">Worth $47 in consulting fees</span>
+    </div>
+  </header>
+
+  <!-- Teaser Content Preview -->
+  <article class="teaser-content">
+    {{ content }}
+    
+    <!-- Progressive Blur Effect -->
+    <div class="content-fade">
+      <div class="blur-overlay">
+        <div class="unlock-prompt">
+          <h3>🔒 Unlock the Remaining 147 Devastating Quotes</h3>
+          <p class="unlock-description">
+            You've only seen the tip of the iceberg. Get instant access to the most brutal corporate quotes that will 
+            <strong>completely transform how you see business</strong> - including the shocking tech giant privacy betrayals, 
+            pharmaceutical industry confessions, and financial sector admissions that will make your jaw drop.
+          </p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- Pricing Psychology Section -->
+  <div class="pricing-psychology">
+    <!-- Fake Urgency Timer -->
+    <div class="urgency-section">
+      <h3>⏰ Limited Time Pricing (Next 5 Minutes Only)</h3>
+      <div class="price-comparison">
+        <div class="original-price">
+          <span class="crossed-out">$10.00</span>
+          <span class="discount-label">Regular Price</span>
+        </div>
+        <div class="flash-price">
+          <span class="current-price">$1.00</span>
+          <span class="discount-percentage">90% OFF</span>
+        </div>
+      </div>
+      <div class="next-article-bonus">
+        <div class="bonus-offer">
+          <span class="bonus-text">🎁 BONUS: Get 10% off your next article if you unlock within 5 minutes!</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Purchase CTA -->
+    <div class="purchase-section">
+      <button class="unlock-btn primary-cta" onclick="unlockArticle()">
+        🚀 UNLOCK NOW FOR $1.00
+        <span class="cta-subtext">Instant access + 10% next article discount</span>
+      </button>
+      
+      <!-- Combo Deal Manipulation -->
+      <div class="combo-deal">
+        <div class="combo-header">
+          <span class="combo-badge">🔥 SMART BUYER COMBO</span>
+          <span class="savings-highlight">Save 67% vs individual purchases</span>
+        </div>
+        <button class="combo-btn" onclick="buyCombo()">
+          Get 7-Day All Access for $10.00 
+          <span class="combo-subtext">(vs $21.00 individual - Limited spots: <span id="combo-slots">3</span> left)</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- FOMO Triggers -->
+    <div class="fomo-section">
+      <div class="recent-buyers">
+        <h4>Recent Buyers (Last 2 Hours):</h4>
+        <div class="buyer-stream" id="buyer-stream">
+          <div class="buyer-item">Sarah K. from New York just unlocked this article</div>
+          <div class="buyer-item">Mike R. from California purchased 7-day access</div>
+          <div class="buyer-item">Jennifer L. from Texas unlocked + bonus discount</div>
+        </div>
+      </div>
+
+      <div class="risk-reversal">
+        <h4>🛡️ 100% Satisfaction Guarantee</h4>
+        <p>If this isn't the most eye-opening collection of corporate hypocrisy you've ever read, 
+           we'll refund your $1.00 AND give you access to any other premium article free.</p>
+      </div>
+    </div>
+
+    <!-- Reading Progress Hook -->
+    <div class="reading-progress-hook">
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 23%"></div>
+      </div>
+      <p class="progress-text">
+        You're 23% through the free preview. The most shocking quotes are in the premium section!
+      </p>
+    </div>
+  </div>
+
+  <!-- Exit Intent Trigger (will be activated by JS) -->
+  <div id="exit-intent-modal" class="exit-intent-modal hidden">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>⚠️ Wait! Don't Miss Out!</h3>
+        <button class="close-modal" onclick="closeExitModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Special One-Time Offer:</strong> Get this article for just <span class="highlight-price">$0.50</span> 
+           (50% off) - but only if you decide in the next 60 seconds!</p>
+        <div class="exit-countdown">
+          <span id="exit-timer">00:60</span>
+        </div>
+        <button class="exit-cta" onclick="buyDiscounted()">
+          Yes! Give Me 50% Off ($0.50)
+        </button>
+        <button class="exit-decline" onclick="closeExitModal()">
+          No thanks, I'll pay full price later
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Psychological Manipulation Scripts -->
+<script>
+// Fake countdown timer
+let countdown = 4 * 3600 + 57 * 60 + 23; // 4:57:23
+function updateCountdown() {
+  const hours = Math.floor(countdown / 3600);
+  const minutes = Math.floor((countdown % 3600) / 60);
+  const seconds = countdown % 60;
+  
+  document.getElementById('countdown-display').textContent = 
+    `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+  
+  countdown--;
+  if (countdown < 0) countdown = 4 * 3600 + 57 * 60 + 23; // Reset
+}
+setInterval(updateCountdown, 1000);
+
+// Fake reader count fluctuation
+let readerCount = 2847;
+function updateReaderCount() {
+  readerCount += Math.floor(Math.random() * 5) - 2; // Fluctuate by -2 to +3
+  if (readerCount < 2800) readerCount = 2800;
+  if (readerCount > 2900) readerCount = 2900;
+  document.getElementById('readers-count').textContent = readerCount.toLocaleString();
+}
+setInterval(updateReaderCount, 3000);
+
+// Fake remaining slots
+let remainingSlots = 7;
+function updateSlots() {
+  if (Math.random() < 0.1) { // 10% chance every 5 seconds
+    remainingSlots = Math.max(1, remainingSlots - 1);
+    document.getElementById('remaining-slots').textContent = remainingSlots;
+    
+    // Update combo slots too
+    const comboSlots = Math.max(1, Math.floor(remainingSlots / 2));
+    document.getElementById('combo-slots').textContent = comboSlots;
+  }
+}
+setInterval(updateSlots, 5000);
+
+// Fake buyer stream
+const buyerNames = [
+  'Alex M. from Seattle', 'Maria G. from Boston', 'David H. from Chicago',
+  'Lisa P. from Miami', 'Robert K. from Denver', 'Emma W. from Portland',
+  'James L. from Atlanta', 'Sophia R. from Austin', 'Michael C. from Phoenix'
+];
+
+function addBuyerNotification() {
+  const stream = document.getElementById('buyer-stream');
+  const name = buyerNames[Math.floor(Math.random() * buyerNames.length)];
+  const actions = ['unlocked this article', 'purchased 7-day access', 'unlocked + bonus discount'];
+  const action = actions[Math.floor(Math.random() * actions.length)];
+  
+  const buyerItem = document.createElement('div');
+  buyerItem.className = 'buyer-item';
+  buyerItem.textContent = `${name} just ${action}`;
+  
+  stream.insertBefore(buyerItem, stream.firstChild);
+  
+  // Remove old items
+  while (stream.children.length > 3) {
+    stream.removeChild(stream.lastChild);
+  }
+}
+setInterval(addBuyerNotification, 8000);
+
+// Exit intent detection
+let exitIntentShown = false;
+document.addEventListener('mouseleave', function(e) {
+  if (e.clientY <= 0 && !exitIntentShown) {
+    exitIntentShown = true;
+    document.getElementById('exit-intent-modal').classList.remove('hidden');
+    startExitCountdown();
+  }
+});
+
+// Exit intent countdown
+let exitCountdown = 60;
+function startExitCountdown() {
+  const exitTimer = setInterval(() => {
+    document.getElementById('exit-timer').textContent = 
+      `00:${exitCountdown.toString().padStart(2, '0')}`;
+    exitCountdown--;
+    
+    if (exitCountdown < 0) {
+      clearInterval(exitTimer);
+      document.getElementById('exit-timer').textContent = "EXPIRED";
+    }
+  }, 1000);
+}
+
+// Purchase functions
+function unlockArticle() {
+  // Track the psychological manipulation success
+  gtag('event', 'purchase_attempt', {
+    'event_category': 'teaser_manipulation',
+    'event_label': 'primary_cta',
+    'value': 1.00
+  });
+  
+  alert('🎉 Unlocking article for $1.00! Redirecting to payment...');
+  // Redirect to payment processing
+  window.location.href = '/checkout?item=article_200_quotes&price=1.00&bonus=true';
+}
+
+function buyCombo() {
+  gtag('event', 'purchase_attempt', {
+    'event_category': 'teaser_manipulation', 
+    'event_label': 'combo_deal',
+    'value': 10.00
+  });
+  
+  alert('🚀 Smart choice! Getting 7-day access for $10.00...');
+  window.location.href = '/checkout?item=7day_access&price=10.00&combo=true';
+}
+
+function buyDiscounted() {
+  gtag('event', 'purchase_attempt', {
+    'event_category': 'teaser_manipulation',
+    'event_label': 'exit_intent_discount', 
+    'value': 0.50
+  });
+  
+  alert('💰 Congratulations! Getting 50% discount - only $0.50!');
+  window.location.href = '/checkout?item=article_200_quotes&price=0.50&exit=true';
+}
+
+function closeExitModal() {
+  document.getElementById('exit-intent-modal').classList.add('hidden');
+}
+
+// Reading time tracking
+let readingStartTime = Date.now();
+function trackReadingTime() {
+  const timeSpent = (Date.now() - readingStartTime) / 1000;
+  if (timeSpent > 120) { // After 2 minutes of reading
+    // Show additional urgency
+    document.querySelector('.urgency-section h3').innerHTML = 
+      '🔥 READING FOR 2+ MINUTES? You\'re clearly interested - Get 15% bonus discount!';
+  }
+}
+setInterval(trackReadingTime, 30000);
+</script>

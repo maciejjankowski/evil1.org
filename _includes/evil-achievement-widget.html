@@ -1,0 +1,364 @@
+<!-- Evil Achievement Display Widget -->
+<div class="evil-achievement-widget" id="achievement-widget">
+    <div class="widget-header">
+        <h3>🏆 Your Evil Achievements</h3>
+        <button class="minimize-btn" onclick="toggleAchievementWidget()">&minus;</button>
+    </div>
+    <div class="widget-content" id="achievement-content">
+        <div class="achievement-progress">
+            <div class="progress-ring">
+                <svg width="80" height="80">
+                    <circle cx="40" cy="40" r="35" stroke="#333" stroke-width="4" fill="none"/>
+                    <circle cx="40" cy="40" r="35" stroke="#ff6b6b" stroke-width="4" fill="none" 
+                            stroke-dasharray="220" stroke-dashoffset="220" id="progress-circle"/>
+                </svg>
+                <div class="progress-text">
+                    <span id="achievement-count">0</span>
+                    <small>/ {{ site.data.gamification.achievements.size | default: 10 }}</small>
+                </div>
+            </div>
+            <div class="progress-info">
+                <p><strong>Achievement Progress</strong></p>
+                <p class="evil-level" id="evil-level">Intern of Insignificance</p>
+            </div>
+        </div>
+        
+        <div class="recent-achievements" id="recent-achievements">
+            <p class="no-achievements">Complete actions to unlock evil achievements!</p>
+        </div>
+        
+        <div class="widget-actions">
+            <button class="btn-view-all" onclick="showAllAchievements()">View All</button>
+            <button class="btn-share" onclick="shareProgress()">Share Evil Progress</button>
+        </div>
+    </div>
+</div>
+
+<style>
+.evil-achievement-widget {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 280px;
+    background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+    border: 2px solid #333;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    z-index: 1000;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.widget-header {
+    background: linear-gradient(90deg, #ff4444, #cc0000);
+    padding: 12px 16px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.widget-header h3 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.minimize-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.widget-content {
+    padding: 16px;
+}
+
+.achievement-progress {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.progress-ring {
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.progress-ring svg {
+    transform: rotate(-90deg);
+}
+
+.progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.progress-text span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff6b6b;
+}
+
+.progress-text small {
+    font-size: 12px;
+    color: #ccc;
+}
+
+.progress-info {
+    flex: 1;
+}
+
+.progress-info p {
+    margin: 0 0 4px 0;
+    font-size: 12px;
+}
+
+.evil-level {
+    font-size: 14px;
+    color: #ff6b6b;
+    font-weight: bold;
+}
+
+.recent-achievements {
+    margin-bottom: 16px;
+    min-height: 60px;
+}
+
+.achievement-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    background: #333;
+    border-radius: 6px;
+    margin-bottom: 6px;
+    animation: slideInLeft 0.3s ease;
+}
+
+.achievement-icon {
+    font-size: 20px;
+}
+
+.achievement-details {
+    flex: 1;
+}
+
+.achievement-name {
+    font-weight: bold;
+    font-size: 12px;
+    color: #ff6b6b;
+    margin-bottom: 2px;
+}
+
+.achievement-description {
+    font-size: 11px;
+    color: #ccc;
+    line-height: 1.3;
+}
+
+.achievement-points {
+    font-size: 11px;
+    color: #ffd700;
+    font-weight: bold;
+}
+
+.no-achievements {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    font-size: 12px;
+    padding: 20px 0;
+}
+
+.widget-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-view-all, .btn-share {
+    flex: 1;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.btn-view-all {
+    background: #333;
+    color: white;
+}
+
+.btn-view-all:hover {
+    background: #444;
+}
+
+.btn-share {
+    background: #ff6b6b;
+    color: white;
+}
+
+.btn-share:hover {
+    background: #ff5252;
+}
+
+.widget-minimized .widget-content {
+    display: none;
+}
+
+.widget-minimized {
+    width: auto;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .evil-achievement-widget {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        margin: 20px 0;
+    }
+}
+</style>
+
+<script>
+function toggleAchievementWidget() {
+    const widget = document.getElementById('achievement-widget');
+    const btn = widget.querySelector('.minimize-btn');
+    
+    widget.classList.toggle('widget-minimized');
+    btn.textContent = widget.classList.contains('widget-minimized') ? '+' : '−';
+}
+
+function showAllAchievements() {
+    if (window.evilGamification) {
+        window.evilGamification.showDetailedProgress();
+    }
+}
+
+function shareProgress() {
+    if (window.evilGamification) {
+        const userData = window.evilGamification.userData;
+        const currentLevel = window.evilGamification.levels.find(l => l.level === userData.level);
+        
+        const shareText = `I've achieved ${currentLevel.title} status on evil1.org with ${userData.points} Evil Points! Join me in corporate villainy: ${window.location.origin}`;
+        
+        if (navigator.share) {
+            navigator.share({
+                title: 'My Evil Progress',
+                text: shareText,
+                url: window.location.origin
+            });
+        } else {
+            // Fallback to copying to clipboard
+            navigator.clipboard.writeText(shareText).then(() => {
+                window.evilGamification.showNotification({
+                    type: 'success',
+                    title: '📋 Copied to Clipboard',
+                    message: 'Your evil progress has been copied. Share it to corrupt others!',
+                    duration: 3000
+                });
+            });
+        }
+        
+        // Track sharing
+        window.evilGamification.awardPoints(15, 'shared_progress');
+    }
+}
+
+// Update achievement widget when achievements change
+function updateAchievementWidget() {
+    if (!window.evilGamification) return;
+    
+    const userData = window.evilGamification.userData;
+    const achievements = window.evilGamification.achievements;
+    const currentLevel = window.evilGamification.levels.find(l => l.level === userData.level);
+    
+    // Update progress ring
+    const progressCircle = document.getElementById('progress-circle');
+    const achievementCount = document.getElementById('achievement-count');
+    const evilLevel = document.getElementById('evil-level');
+    
+    if (progressCircle && achievementCount && evilLevel) {
+        const totalAchievements = achievements.length;
+        const unlockedAchievements = userData.achievements.length;
+        const progressPercent = (unlockedAchievements / totalAchievements) * 100;
+        const circumference = 220;
+        const strokeDashoffset = circumference - (circumference * progressPercent / 100);
+        
+        progressCircle.style.strokeDashoffset = strokeDashoffset;
+        achievementCount.textContent = unlockedAchievements;
+        evilLevel.textContent = currentLevel.title;
+    }
+    
+    // Update recent achievements
+    const recentContainer = document.getElementById('recent-achievements');
+    if (recentContainer) {
+        const recentAchievements = userData.achievements.slice(-3);
+        
+        if (recentAchievements.length === 0) {
+            recentContainer.innerHTML = '<p class="no-achievements">Complete actions to unlock evil achievements!</p>';
+        } else {
+            recentContainer.innerHTML = recentAchievements.map(achievementId => {
+                const achievement = achievements.find(a => a.id === achievementId);
+                if (!achievement) return '';
+                
+                return `
+                    <div class="achievement-item">
+                        <div class="achievement-icon">${achievement.icon}</div>
+                        <div class="achievement-details">
+                            <div class="achievement-name">${achievement.name}</div>
+                            <div class="achievement-description">${achievement.description}</div>
+                        </div>
+                        <div class="achievement-points">+${achievement.points}</div>
+                    </div>
+                `;
+            }).join('');
+        }
+    }
+}
+
+// Initialize widget updates when gamification system is ready
+if (window.evilGamification) {
+    updateAchievementWidget();
+    // Update every 5 seconds
+    setInterval(updateAchievementWidget, 5000);
+} else {
+    document.addEventListener('DOMContentLoaded', () => {
+        const checkGamification = setInterval(() => {
+            if (window.evilGamification) {
+                updateAchievementWidget();
+                setInterval(updateAchievementWidget, 5000);
+                clearInterval(checkGamification);
+            }
+        }, 100);
+    });
+}
+</script>

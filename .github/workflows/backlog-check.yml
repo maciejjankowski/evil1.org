@@ -1,0 +1,24 @@
+name: Backlog & Smoke Checks
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - feature/**
+
+jobs:
+  build-and-verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+      - name: Install deps
+        run: bundle install --jobs 4 --retry 3
+      - name: Jekyll build
+        run: bundle exec jekyll build --quiet
+      - name: Backlog format check
+        run: ruby ./scripts/verify-backlog.rb

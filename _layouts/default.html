@@ -9,9 +9,22 @@
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/topnav.css' | relative_url }}">
     {% if page.layout == 'awards-ceremony' %}<link rel="stylesheet" href="{{ '/assets/css/awards.css' | relative_url }}">{% endif %}
+    <link rel="stylesheet" href="{{ '/assets/css/widgets.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/flame-effects.css' | relative_url }}">
+    {% if page.additional_css %}
+        {% for css_file in page.additional_css %}
+            <link rel="stylesheet" href="{{ css_file | relative_url }}">
+        {% endfor %}
+    {% endif %}
 
     <!-- HTMX for enhanced interactivity -->
     <script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
+    
+    <!-- Evil Gamification System -->
+    <script src="{{ '/assets/js/evil-gamification.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/evil-onboarding.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/evil-subscription-trap.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/evil-content-gating.js' | relative_url }}"></script>
     
     <!-- SEO and structured data -->
     <meta property="og:title" content="{{ page.title | default: site.title }}">
@@ -66,17 +79,29 @@
     <div class="early-container">
         {{ content }}
     </div>
+    
+    <!-- Evil Gamification Widgets -->
+    {% include evil-achievement-widget.html %}
+    {% include evil-leaderboard-widget.html %}
+    
     {% include footer.html %}
 
-            <!-- Service Worker Registration for PWA -->
-            <script>
-            if ('serviceWorker' in navigator) {
-                window.addEventListener('load', function() {
-                    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-                        console.log('ServiceWorker registration successful with scope: ', registration.scope);
-                    }, function(error) {
-                        console.log('ServiceWorker registration failed:', error);
-                    });
-                });
-            }
-            </script>
+    <script src="{{ '/assets/js/pricing-experiments.js' | relative_url }}"></script>
+
+    <!-- Hell Flames Effect -->
+    <script src="{{ '/assets/js/hell-flames.js' | relative_url }}"></script>
+    <!-- Bosch Hell Visions -->
+    <script src="{{ '/assets/js/bosch-hell-vision.js' | relative_url }}"></script>
+
+    <!-- Service Worker Registration for PWA -->
+    <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, function(error) {
+                console.log('ServiceWorker registration failed:', error);
+            });
+        });
+    }
+    </script>

@@ -1,0 +1,52 @@
+<div class="index-page">
+    <header class="page-header">
+        <h1>{{ page.title }}</h1>
+        <p class="page-description">{{ page.description }}</p>
+    </header>
+
+    <div class="company-profile">
+        <section class="evil-timeline">
+            <h2>Timeline of Corporate Evil</h2>
+            {% for item in page.timeline %}
+              <div class="timeline-item">
+                <h3>{{ item.title }}</h3>
+                <p>{{ item.description }}</p>
+              </div>
+            {% endfor %}
+        </section>
+
+        <section class="corporate-crimes">
+            <h2>Corporate Crimes & Scandals</h2>
+            <div class="crime-grid">
+              {% for crime in page.crimes %}
+              <div class="crime-card">
+                <h3>{{ crime.title }}</h3>
+                <p>{{ crime.description }}</p>
+              </div>
+              {% endfor %}
+            </div>
+        </section>
+
+        <section class="human-impact">
+            <h2>Human & Environmental Impact</h2>
+            <div class="impact-stats">
+              {% for stat in page.stats %}
+              <div class="stat">
+                <div class="number">{{ stat.number }}</div>
+                <div class="label">{{ stat.label }}</div>
+                <div class="description">{{ stat.description }}</div>
+              </div>
+              {% endfor %}
+            </div>
+        </section>
+
+        <section class="sources">
+            <h2>Verified Sources</h2>
+            <ul class="source-list">
+              {% for source in page.sources %}
+              <li><a href="{{ source.url }}" target="_blank">{{ source.title }}</a></li>
+              {% endfor %}
+            </ul>
+        </section>
+    </div>
+</div>

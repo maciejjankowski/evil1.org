@@ -1,4 +1,19 @@
 amazon:
+  # Corporate Evil Index (CEI) Score
+  cei_score:
+    total: 8450
+    blood_legacy: 1200    # Worker deaths from warehouse conditions, delivery pressure, COVID exposure
+    suffering_amplification: 2100  # Extreme worker surveillance, mental health damage, family destruction
+    wealth_extraction: 1950  # $150B+ tax avoidance, wage theft, seller data exploitation
+    planet_destruction: 1400  # Massive carbon footprint, packaging waste, planned obsolescence
+    democracy_corruption: 1800  # Regulatory capture, union busting, antitrust violations
+  evil_taxonomy:
+    - "Worker Exploitation"
+    - "Market Monopolies"
+    - "Tax Fraud"
+    - "Employee Surveillance"
+    - "Environmental Destruction"
+    - "Information Monopolies"
   certification:
     status: "none"  # none, basic, premium, platinum
     label: ""  # PR-washed, Sponsor-protected, Clean-slate, etc.
