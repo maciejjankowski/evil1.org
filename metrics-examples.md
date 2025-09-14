@@ -3,6 +3,7 @@ layout: default
 title: "Metrics Framework Examples"
 description: "Demonstration of all evil metrics frameworks applied to real entities"
 permalink: /metrics-examples/
+published: false
 ---
 
 # Evil Metrics Framework Examples

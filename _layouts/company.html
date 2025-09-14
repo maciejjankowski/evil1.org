@@ -19,12 +19,14 @@ layout: default
 
     <!-- Main Business Content -->
     <div class="business-content">
-        <!-- Corporate Evil Index Section -->
+        <!-- Corporate Evil Index Section - Temporarily disabled -->
+        {% comment %}
         {% assign company_key = page.title | slugify %}
         {% assign company_data = site.data.companies[company_key] %}
         {% if company_data.cei_score %}
             {% include evil-metrics.html entity_type="company" entity_data=company_data %}
         {% endif %}
+        {% endcomment %}
         
         {{ content }}
     </div>
