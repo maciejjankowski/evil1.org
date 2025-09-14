@@ -1,4 +1,130 @@
 ---
+# Card-Based Products Collection
+cards-corporate-tarot:
+  title: Corporate Evil Tarot Deck - 78 Cards of Capitalist Divination
+  description: A full tarot deck featuring corporate archetypes, perfect for predicting your next ethical compromise or shareholder value prophecy.
+  tagline: "Predict your next ethical compromise"
+  permalink: "/merchandise/cards-corporate-tarot/"
+  tags: ["cards", "tarot", "premium", "limited-edition"]
+  sku: cards-corporate-tarot
+  price: 89.99
+  type: cards
+  content: "Corporate Evil Tarot Deck — 78 Cards of Capitalist Divination\n\n🃏 **MAJOR ARCANA HIGHLIGHTS**\n• The Fool = New Intern (naive idealism)\n• The Magician = Venture Capitalist (turning dreams into debt)\n• Death = Company Restructuring (inevitable layoffs)\n• The Devil = Private Equity (soul-binding contracts)\n• The World = Global Market Domination\n\n🃏 **MINOR ARCANA SUITS**\n• Cups = Coffee Cups (office culture)\n• Pentacles = Profit Margins (financial metrics)\n• Swords = Corporate Backstabbing (office politics)\n• Wands = Performance Reviews (career destruction)\n\n📋 **PRODUCT DETAILS**\n• Price: $89.99 (because divination should be expensive)\n• 78 full-color cards with corporate archetypes\n• Includes satirical guidebook with \"ethical\" interpretations\n• Premium cardstock with gold foil corporate logos\n• Packaged in a faux-leather box labeled 'CONFIDENTIAL'\n• Manufactured with fair trade guilt\n\n⚠️ **WARNING**: May cause existential dread about your career choices. Not recommended for actual life decisions—that's what consultants are for.\n\n💰 **HONEST PRICING BREAKDOWN**\n• Cards & Box: $8\n• Our Satirical Profit: $67\n• Your Moral Superiority: $15\n• Guilt Tax (donated to activists): $4.50\n\nPerfect for executives who want to appear mystical while making data-driven decisions that destroy lives!"
+  currency: USD
+  stripe_price_id: price_REPLACE_TAROT
+
+cards-executive-bingo:
+  title: Executive Bingo - 25 Cards of Corporate Buzzword Hell
+  description: Bingo cards featuring the most soul-crushing corporate buzzwords. Perfect for meetings, conferences, or existential breakdowns.
+  tagline: "Make meetings bearable (or profitable for us)"
+  permalink: "/merchandise/cards-executive-bingo/"
+  tags: ["cards", "bingo", "office", "buzzwords"]
+  sku: cards-executive-bingo
+  price: 34.99
+  type: cards
+  content: "Executive Bingo — 25 Cards of Corporate Buzzword Hell\n\n🎯 **SAMPLE SQUARES**\n• 'Let's Circle Back' • 'Synergy' • 'Low-Hanging Fruit'\n• 'Think Outside the Box' • 'Disruptive Innovation'\n• 'Right-Size the Organization' • 'Best Practices'\n• 'Move the Needle' • 'Paradigm Shift'\n• 'Deep Dive' • 'At the End of the Day'\n\n📋 **WHAT'S INCLUDED**\n• 25 unique bingo cards (no duplicates—we're not monsters)\n• 500 buzzword tokens (reusable plastic chips)\n• Instruction sheet: 'How to Maintain Sanity During Corporate Speak'\n• Emergency phrase cards: 'I need to step away to take this call'\n\n💡 **GAME VARIATIONS**\n• **Meeting Survivor**: Last one standing wins\n• **Conference Call Chaos**: Mute button required\n• **Quarterly Review Roulette**: Loser gives presentation\n• **All-Hands Apocalypse**: When someone says 'unprecedented times'\n\n📋 **PRODUCT DETAILS**\n• Price: $34.99 (premium pricing for premium suffering)\n• Professional-grade cards that won't buckle under tears\n• Comes in corporate-approved manila folder\n• Perfect for gifts to colleagues you secretly hate\n\n⚠️ **SIDE EFFECTS**: May cause uncontrollable eye-rolling, career dissatisfaction, or sudden urges to become a freelancer.\n\n🎪 **The Ultimate Office Game**\nFinally, a way to make corporate meetings bearable! Or at least profitable for us."
+  currency: USD
+  stripe_price_id: price_REPLACE_BINGO
+
+cards-ceo-trading:
+  title: Evil CEO Trading Cards - Collectible Corporate Villains Series 1
+  description: Trading cards featuring history's most notorious corporate executives. Collect them all before they get arrested!
+  tagline: "Collect them all before they get arrested!"
+  permalink: "/merchandise/cards-ceo-trading/"
+  tags: ["cards", "trading", "collectible", "ceos"]
+  sku: cards-ceo-trading
+  price: 45.99
+  type: cards
+  content: "Evil CEO Trading Cards — Collectible Corporate Villains Series 1\n\n🃏 **FEATURED EXECUTIVES** (Names changed to avoid lawsuits)\n• **'The Pharma Profiteer'** - Specializes in life-saving drug price hikes\n• **'The Data Harvester'** - Your privacy is their profit\n• **'The Oil Baron 2.0'** - Climate change is just another market opportunity\n• **'The Labor Liquidator'** - Automation enthusiast, human rights skeptic\n• **'The Financial Phantom'** - Makes money disappear (legally)\n\n📊 **CARD STATS**\n• Corruption Level (1-10)\n• Profit Margins (Honest vs. Reported)\n• Environmental Damage Score\n• Worker Exploitation Rating\n• Legal Settlement Count\n• Lobbying Budget\n\n🎁 **COLLECTOR'S FEATURES**\n• 50 cards in Series 1 (more villains planned)\n• Holographic 'Golden Parachute' rare cards\n• QR codes linking to real investigative reports\n• Trading guide: 'How to Value Human Suffering'\n\n📋 **PRODUCT DETAILS**\n• Price: $45.99 (because collecting evil should be expensive)\n• Premium cardstock that feels as dirty as their business practices\n• Includes protective sleeves (for the cards, not the executives)\n• Packaged in briefcase-style box\n\n💰 **BONUS CONTENT**\n• Access to 'Corporate Evil Database' (normally $29.99)\n• Monthly updates with new scandals\n• Activist action cards: 'How to Fight Back'\n\n⚠️ **DISCLAIMER**: No actual CEOs were harmed in the making of these cards. Their reputations, however..."
+  currency: USD
+  stripe_price_id: price_REPLACE_TRADING
+
+cards-startup-failure:
+  title: Startup Failure Card Game - Build Your Empire of Delusion
+  description: A strategy card game where you compete to build the most spectacular startup failure. Includes pivot cards and burn rate calculators!
+  tagline: "Burn money faster than a real startup!"
+  permalink: "/merchandise/cards-startup-failure/"
+  tags: ["cards", "game", "startup", "strategy"]
+  sku: cards-startup-failure
+  price: 59.99
+  type: cards
+  content: "Startup Failure Card Game — Build Your Empire of Delusion\n\n🚀 **GAME OVERVIEW**\n2-6 players compete to create the most spectacular startup failure. Win by burning through the most investor money while delivering the least value!\n\n🃏 **CARD TYPES**\n• **Idea Cards**: 'Uber for Pet Psychics', 'Blockchain Smoothies'\n• **Funding Cards**: Seed, Series A-Z, 'Family Money'\n• **Pivot Cards**: Completely change your business when failing\n• **Scandal Cards**: Sexual harassment, embezzlement, fraud\n• **Burn Rate Cards**: Spend money on office slides and kombucha\n• **Exit Strategy Cards**: Blame the market, blame employees, blame users\n\n🎮 **GAMEPLAY MECHANICS**\n• Roll dice to determine how much money you waste each turn\n• Draw 'Reality Check' cards that force actual business decisions\n• Use 'Buzzword' cards to confuse investors and extend runway\n• 'Media Hype' cards temporarily inflate your valuation\n\n🏆 **WINNING CONDITIONS**\n• Highest burn rate with lowest user retention\n• Most pivots without ever finding product-market fit\n• Biggest gap between promises and delivery\n• Best excuses for why the market 'wasn't ready'\n\n📋 **PRODUCT DETAILS**\n• Price: $59.99 (venture capital pricing)\n• 200+ cards across 8 categories\n• Includes monopoly money (worthless, just like most startups)\n• Game board featuring the 'Valley of Broken Dreams'\n• Rule book: 'How to Fail Spectacularly While Raising Millions'\n\n💡 **EDUCATIONAL VALUE**\n• Learn real startup red flags\n• Practice identifying bullshit business models\n• Understand how venture capital really works\n\n🎭 **Perfect For**\n• Aspiring entrepreneurs (warning system)\n• Recovering founders (therapy)\n• Investors (pattern recognition training)\n• Anyone who's tired of startup culture"
+  currency: USD
+  stripe_price_id: price_REPLACE_STARTUP
+
+cards-oracle-shareholder:
+  title: Shareholder Value Oracle Cards - Divine Profit Predictions
+  description: Mystical oracle cards for predicting quarterly earnings, market manipulation, and your next insider trading opportunity.
+  tagline: "Because capitalism is a religion"
+  permalink: "/merchandise/cards-oracle-shareholder/"
+  tags: ["cards", "oracle", "divination", "finance"]
+  sku: cards-oracle-shareholder
+  price: 67.99
+  type: cards
+  content: "Shareholder Value Oracle Cards — Divine Profit Predictions\n\n🔮 **SAMPLE ORACLE READINGS**\n• 'The Layoff Moon' - Workforce reduction brings prosperity\n• 'The Tax Haven Star' - Offshore opportunities await\n• 'The Regulatory Void' - Government oversight is weak\n• 'The Buyback Eclipse' - Artificial scarcity creates value\n• 'The Merger Comet' - Monopolistic opportunities approach\n\n✨ **DIVINATION CATEGORIES**\n• Quarterly Earnings Prophecies\n• Insider Trading Timing\n• Regulatory Capture Predictions\n• Market Manipulation Opportunities\n• Crisis Profitability Forecasts\n\n📖 **GUIDEBOOK EXCERPTS**\n• 'Reading the Corruption Cards'\n• 'Interpreting Stock Buyback Omens'\n• 'The Sacred Art of Profit Margin Augury'\n• 'Channeling Your Inner Sociopathic CEO'\n\n📋 **PRODUCT DETAILS**\n• Price: $67.99 (mysticism commands premium pricing)\n• 44 premium oracle cards with golden profit symbols\n• 150-page guidebook: 'The Ancient Art of Shareholder Supremacy'\n• Velvet storage bag embroidered with dollar signs\n• Certificate of Authenticity (as authentic as our ethics)\n\n🎭 **PERFECT FOR**\n• Day traders seeking spiritual guidance\n• Executives planning their next quarterly sacrifice\n• Investors who prefer mysticism over market analysis\n• Anyone who believes capitalism is a religion\n\n⚠️ **LEGAL DISCLAIMER**\nNot actual financial advice. Not actual mystical guidance. Not actually helpful for anything except exposing how absurd financial predictions are.\n\n💰 **HONEST COST BREAKDOWN**\n• Cards & Book: $12\n• Marketing Mysticism: $35\n• Satirical Commentary: $15\n• Guilt Offset Donation: $3.40\n• Pure Capitalist Profit: $2.59\n\nBecause if you're going to worship money, might as well do it with style!"
+  currency: USD
+  stripe_price_id: price_REPLACE_ORACLE
+
+cards-buzzword-memory:
+  title: Corporate Buzzword Memory Game - Match the Meaningless Jargon
+  description: A memory card game featuring 50 pairs of corporate buzzwords. Perfect for training your brain to ignore meaningless business speak.
+  permalink: "/merchandise/cards-buzzword-memory/"
+  tags: ["cards", "memory", "buzzwords", "family"]
+  sku: cards-buzzword-memory
+  price: 29.99
+  type: cards
+  content: "Corporate Buzzword Memory Game — Match the Meaningless Jargon\n\n🧠 **MEMORY PAIRS TO MATCH**\n• 'Synergy' + 'Cross-Platform Integration'\n• 'Disruptive Innovation' + 'Game-Changing Solutions'\n• 'Value-Added' + 'Revenue-Generating Opportunities'\n• 'Best Practices' + 'Industry Standards Excellence'\n• 'Core Competencies' + 'Strategic Advantages'\n\n🎮 **GAME VARIATIONS**\n• **Classic Memory**: Match meaningless phrases\n• **Speed Round**: How fast can you identify bullshit?\n• **Translation Mode**: Match buzzwords to plain English\n• **Executive Edition**: All phrases mean absolutely nothing\n\n👨‍💼 **EDUCATIONAL FEATURES**\n• Learn to recognize when someone is saying nothing\n• Practice maintaining a straight face during presentations\n• Develop immunity to corporate speak\n• Master the art of nodding meaningfully at nonsense\n\n📋 **PRODUCT DETAILS**\n• Price: $29.99 (premium pricing for premium meaninglessness)\n• 100 cards (50 buzzword pairs)\n• Instruction booklet: 'How to Sound Important While Saying Nothing'\n• Bonus: 'Buzzword Bingo Integration Kit'\n• Suitable for ages 16+ (younger players might still have hope)\n\n🏆 **WINNER BENEFITS**\n• Develops resistance to corporate manipulation\n• Improves ability to detect bullshit\n• Enhances meeting survival skills\n• Builds tolerance for psychological torture\n\n🎭 **PERFECT FOR**\n• Office workers (survival training)\n• Management consultants (professional development)\n• Anyone trapped in corporate America\n• Parents preparing children for adult disappointment\n\n💡 **BONUS LEARNING**\n• Each card includes 'Plain English Translation'\n• QR codes link to articles about corporate manipulation\n• Access to 'Jargon-Free Communication' guide\n\n⚠️ **WARNING**: May cause existential crisis about the meaninglessness of modern work. Side effects include desire to become a farmer."
+  currency: USD
+  stripe_price_id: price_REPLACE_MEMORY
+
+cards-ethics-violation:
+  title: Ethics Violation Playing Cards - 52 Corporate Scandals Standard Deck
+  description: A standard 52-card deck featuring real corporate scandals as card designs. Perfect for poker games where everyone cheats!
+  permalink: "/merchandise/cards-ethics-violation/"
+  tags: ["cards", "playing", "scandals", "standard"]
+  sku: cards-ethics-violation
+  price: 24.99
+  type: cards
+  content: "Ethics Violation Playing Cards — 52 Corporate Scandals Standard Deck\n\n♠️ **SPADES - FINANCIAL CRIMES**\n• Ace: Ponzi Scheme Perfection\n• King: Accounting Fraud Royalty\n• Queen: Insider Trading Elegance\n• Jack: Tax Evasion Artistry\n\n♥️ **HEARTS - HUMAN RIGHTS VIOLATIONS**\n• Ace: Child Labor Maximization\n• King: Workplace Safety Negligence\n• Queen: Wage Theft Mastery\n• Jack: Union Busting Excellence\n\n♦️ **DIAMONDS - ENVIRONMENTAL DESTRUCTION**\n• Ace: Climate Change Acceleration\n• King: Toxic Waste Disposal\n• Queen: Species Extinction Leadership\n• Jack: Greenwashing Innovation\n\n♣️ **CLUBS - CONSUMER EXPLOITATION**\n• Ace: Data Privacy Violations\n• King: Planned Obsolescence\n• Queen: Price Fixing Conspiracies\n• Jack: False Advertising Mastery\n\n🎮 **GAME SUGGESTIONS**\n• **Scandal Poker**: Highest corruption wins\n• **Ethics Violation Solitaire**: Playing alone, just like these executives\n• **Corporate War**: Battle of the most evil companies\n• **Go Fish for Scandals**: 'Do you have any environmental crimes?'\n\n📋 **PRODUCT DETAILS**\n• Price: $24.99 (standard deck, premium scandals)\n• Premium cardstock that feels as dirty as the executives\n• Each card features real scandal details on the back\n• Includes booklet: 'The Greatest Hits of Corporate Evil'\n• Standard poker size for easy shuffling and dealing\n\n💰 **EDUCATIONAL VALUE**\n• Learn about 52 real corporate scandals\n• QR codes link to investigative journalism\n• Perfect conversation starter about corporate accountability\n• Helps identify red flags in business practices\n\n🎭 **PERFECT FOR**\n• Poker nights with a conscience\n• Card tricks that expose corporate tricks\n• Anyone who wants to gamble while learning about corruption\n• Gifts for people who think capitalism needs regulation\n\n⚠️ **WARNING**: May cause gambling addiction to corporate scandal research. Not suitable for executives - may trigger guilt (rare side effect)."
+  currency: USD
+  stripe_price_id: price_REPLACE_ETHICS
+
+cards-office-politics:
+  title: Office Politics Strategy Card Game - Climb the Corporate Ladder
+  description: A strategy card game where you navigate office politics, backstab colleagues, and climb the corporate ladder through manipulation and brown-nosing.
+  permalink: "/merchandise/cards-office-politics/"
+  tags: ["cards", "strategy", "office", "politics"]
+  sku: cards-office-politics
+  price: 54.99
+  type: cards
+  content: "Office Politics Strategy Card Game — Climb the Corporate Ladder\n\n🎯 **GAME OBJECTIVE**\nBe the first to reach 'Executive Level' by accumulating power points through backstabbing, brown-nosing, and strategic manipulation.\n\n🃏 **CARD CATEGORIES**\n• **Power Play Cards**: Take credit for others' work\n• **Sabotage Cards**: Undermine colleagues subtly\n• **Brown-Nose Cards**: Impress management with empty gestures\n• **Scapegoat Cards**: Blame others for your failures\n• **Network Cards**: Build alliances for future betrayal\n• **Crisis Cards**: Navigate scandals and layoffs\n\n⚔️ **STRATEGY MECHANICS**\n• Form temporary alliances that you'll inevitably betray\n• Manage your 'Reputation Score' vs. 'Actual Competence'\n• Use 'Meeting Manipulation' cards to control agendas\n• Deploy 'Email Politics' for passive-aggressive warfare\n• Master 'Presentation Theater' to appear valuable\n\n🏆 **WINNING CONDITIONS**\n• Reach Executive Level with highest Power Score\n• Survive 3 'Restructuring' events\n• Successfully blame someone else for major failure\n• Convince board you're irreplaceable (while being completely useless)\n\n📋 **PRODUCT DETAILS**\n• Price: $54.99 (corporate ladder pricing)\n• 180 cards across 6 strategic categories\n• Game board: 'The Corporate Hierarchy Pyramid'\n• Power tokens and reputation trackers\n• Instruction manual: 'Advanced Workplace Manipulation'\n\n🎭 **REALISTIC FEATURES**\n• Random 'Sexual Harassment Scandal' cards (instant game over)\n• 'Whistleblower' cards that can destroy anyone\n• 'Merger' cards that reset entire game\n• 'Economic Downturn' events (layoff roulette)\n\n💡 **EDUCATIONAL VALUE**\n• Learn to recognize toxic workplace dynamics\n• Practice identifying manipulation tactics\n• Understand how corporate hierarchies really work\n• Develop immunity to office politics\n\n⚠️ **DISCLAIMER**: This game may cause flashbacks to your actual job. Not recommended for people currently trapped in toxic workplaces - may cause despair."
+  currency: USD
+  stripe_price_id: price_REPLACE_OFFICE
+
+cards-greenwashing-memory:
+  title: Greenwashing Exposure Memory Game - Match Corporate Environmental Lies
+  description: Memory card game exposing corporate greenwashing tactics. Match fake environmental claims with their devastating real impacts.
+  permalink: "/merchandise/cards-greenwashing-memory/"
+  tags: ["cards", "memory", "environmental", "greenwashing"]
+  sku: cards-greenwashing-memory
+  price: 32.99
+  type: cards
+  content: "Greenwashing Exposure Memory Game — Match Corporate Environmental Lies\n\n🌱 **GREENWASHING PAIRS TO MATCH**\n• 'Carbon Neutral Shipping' + 'Factory Emissions Increased 200%'\n• 'Sustainable Packaging' + 'Single-Use Plastic Components'\n• 'Clean Energy Initiative' + 'Coal Plant Investment'\n• 'Eco-Friendly Product' + 'Toxic Manufacturing Process'\n• 'Biodegradable Formula' + 'Non-Recyclable Container'\n\n🔍 **MEMORY CATEGORIES**\n• False Claims vs. Real Impact\n• Marketing Language vs. Scientific Truth\n• PR Statements vs. Actual Practices\n• Environmental Awards vs. Pollution Records\n\n🎮 **EDUCATIONAL FEATURES**\n• Learn to spot greenwashing red flags\n• Understand real environmental impact data\n• Practice questioning corporate environmental claims\n• Develop skepticism about sustainability marketing\n\n📋 **PRODUCT DETAILS**\n• Price: $32.99 (green premium pricing)\n• 80 cards (40 greenwashing pairs)\n• Made with actual recycled materials (we're not monsters)\n• Instruction guide: 'How to Research Real Environmental Impact'\n• QR codes linking to environmental impact studies\n\n🌍 **REAL IMPACT EDUCATION**\n• Each card includes actual environmental data\n• Links to peer-reviewed environmental studies\n• Access to 'Corporate Environmental Crime Database'\n• Monthly updates with new greenwashing examples\n\n🎯 **PERFECT FOR**\n• Environmental activists (education tool)\n• Consumers tired of being manipulated\n• Students studying corporate environmental impact\n• Anyone who cares about the planet more than profits\n\n💰 **PRODUCT COMMITMENT**\n• 15% of profits donated to real environmental causes\n• Packaging is actually recyclable (unlike most 'eco-friendly' products)\n• Printed with soy-based inks on recycled cardstock\n• Carbon footprint offset through reforestation\n\n⚠️ **WARNING**: May cause eco-anxiety and deep distrust of corporate environmental claims. Side effects include compulsive fact-checking and urges to live off-grid."
+  currency: USD
+  stripe_price_id: price_REPLACE_GREEN
+
+cards-consultant-bingo:
+  title: Management Consultant Bingo - Premium Buzzword Torture Edition
+  description: Deluxe bingo set specifically designed for surviving management consultant presentations. Features the most pretentious business jargon ever compiled.
+  permalink: "/merchandise/cards-consultant-bingo/"
+  tags: ["cards", "bingo", "consultants", "premium"]
+  sku: cards-consultant-bingo
+  price: 49.99
+  type: cards
+  content: "Management Consultant Bingo — Premium Buzzword Torture Edition\n\n🎯 **PREMIUM CONSULTANT PHRASES**\n• 'Let's Take This Offline' • 'Circle Back to Ideate'\n• 'Leverage Core Competencies' • 'Right-Size the Organization'\n• 'Paradigm Shift Opportunity' • 'Value-Add Optimization'\n• 'Strategic Realignment' • 'Operational Excellence'\n• 'Best-in-Class Methodology' • 'Disruptive Innovation'\n\n💼 **DELUXE FEATURES**\n• 50 unique bingo cards (consultant-grade variety)\n• Laminated cards (spill-proof for those stress drinks)\n• Premium buzzword tokens with corporate logos\n• 'Consultant Speak Dictionary' translation guide\n• Emergency escape phrases card\n\n🏆 **GAME VARIATIONS**\n• **Quarterly Review Survivor**: Last conscious person wins\n• **All-Day Workshop Endurance**: 8-hour torture test\n• **Strategy Session Roulette**: Multiple consultants simultaneously\n• **Merger Integration Hell**: When multiple firms present\n\n📋 **SURVIVAL KIT INCLUDES**\n• Stress ball labeled 'Company Morale'\n• Emergency caffeine tablets\n• Notepad for doodling (labeled 'Strategic Notes')\n• 'Meaningful Nodding' instruction card\n\n📋 **PRODUCT DETAILS**\n• Price: $49.99 (consultant-grade pricing)\n• Professional presentation box\n• Waterproof cards (tears of boredom resistant)\n• Includes 'How to Look Engaged While Planning Resignation'\n\n🎭 **PERFECT FOR**\n• Employees forced to attend consultant presentations\n• Anyone trapped in corporate transformation projects\n• Middle managers who need survival tools\n• People whose companies waste money on consultants\n\n💡 **EDUCATIONAL VALUE**\n• Learn to translate consultant speak to plain English\n• Understand why consultants are paid to state the obvious\n• Practice maintaining sanity during meaningless presentations\n• Develop resistance to expensive business theater\n\n⚠️ **WARNING**: May cause uncontrollable laughter during serious business presentations. Not recommended for use during actual consultant meetings unless you don't need your job."
+  currency: USD
+  stripe_price_id: price_REPLACE_CONSULTANT
+
 hat-activist:
   title: Undercover Activist Hat
   description: Baseball cap that says Undercover Activist with a wink to performative
@@ -1584,3 +1710,766 @@ t-shirt-recursive:
     button.addEventListener('mouseleave', function() {\n            this.textContent = 'Buy It At Current Market Price';\n        });\n    }\n});"
   currency: USD
   stripe_price_id: price_REPLACE_RECURSIVE
+
+# T-Shirt as a Service Collection - Subscription Slavery Mockery
+taas-monitored:
+  title: "MONITORED - Property of TaaS Corp"
+  description: "Mock the surveillance state of subscription clothing services"
+  permalink: "/merchandise/taas-monitored/"
+  tags: 
+    - subscription-abuse
+    - surveillance
+    - taas
+    - dark-patterns
+  sku: taas-monitored
+  price: 39.99
+  type: t-shirt
+  content: |-
+    "MONITORED - Property of TaaS Corp"
+    
+    **WARNING: This T-Shirt Contains Satirical Content About Subscription Surveillance**
+    
+    **Front:** "MONITORED"
+    **Back:** "Property of TaaS Corp - Serial #TC-2025-SLAVE-001"
+    **Chest Tag:** "GPS Enabled • Heart Rate Monitored • EULA Compliant"
+    **Sleeve:** "If found, return to Corporate Overlords"
+    
+    **Mockery Level:** Dystopian
+    **Surveillance Features:** None (thankfully)
+    **Terms of Service:** Mercifully absent
+    
+    Perfect for mocking the subscription economy's invasion of basic human needs. 
+    Wear it to protest companies that want to turn clothing into a monitored service.
+    
+    **Irony Warning:** You're buying a t-shirt that mocks buying t-shirts under surveillance capitalism. Meta-level achieved.
+    
+    {% include merch-cta.html %}
+  currency: USD
+  stripe_price_id: price_REPLACE_TAAS01
+
+taas-violation:
+  title: "VIOLATION DETECTED - Fine: $47.50"
+  description: "Satirizing the penalty culture of subscription services"
+  permalink: "/merchandise/taas-violation/"
+  tags:
+    - subscription-abuse
+    - fines
+    - penalties
+    - taas
+  sku: taas-violation
+  price: 47.50
+  type: t-shirt
+  content: |-
+    "VIOLATION DETECTED - Fine: $47.50"
+    
+    **Front:** "VIOLATION DETECTED"
+    **Back:** "Fine: $47.50 • Reason: Unauthorized Ironing"
+    **Side Panel:** "For EULA violations, call 1-800-COMPLY"
+    
+    **Violations Mocked:**
+    • Unauthorized photography of shirt
+    • Improper storage position  
+    • Wearing while thinking negatively
+    • Lending to family member
+    • Being sad while wearing brand
+    
+    This shirt satirizes the absurd penalty culture where subscription services fine you for normal human behavior.
+    
+    **Price Explanation:** We're charging the exact amount of a typical TaaS violation fine. Because if you're going to pay ridiculous fees, might as well get a shirt that mocks them.
+    
+    {% include merch-cta.html %}
+  currency: USD
+  stripe_price_id: price_REPLACE_TAAS02
+
+subscription-slave:
+  title: "Subscription Slave - Owns Nothing, Pays Everything"
+  description: "The ultimate critique of the subscription economy's ownership theft"
+  permalink: "/merchandise/subscription-slave/"
+  tags:
+    - subscription-economy
+    - ownership
+    - capitalism-critique
+  sku: subscription-slave
+  price: 29.99
+  type: t-shirt
+  content: |-
+    "Subscription Slave - Owns Nothing, Pays Everything"
+    
+    **Front:** "Subscription Slave"
+    **Back:** "I Own Nothing • I Pay Everything • And I'm Not Happy"
+    **Shoulder:** "Monthly Payment Due"
+    
+    **Subscription Models Mocked:**
+    • Software you can't own
+    • Cars you lease forever
+    • Music you rent but never possess
+    • Movies that disappear from platforms
+    • T-shirts with terms of service
+    
+    Perfect for anyone tired of the "everything-as-a-service" economy where corporations want you to own nothing but pay for everything forever.
+    
+    **Irony Alert:** You'll actually OWN this t-shirt. Revolutionary concept, right?
+    
+    {% include merch-cta.html %}
+  currency: USD
+  stripe_price_id: price_REPLACE_SUBS01
+
+eula-nightmare:
+  title: "I Agreed to 847 Pages of Terms for This Shirt"
+  description: "Mocking the absurd length and scope of modern EULAs"
+  permalink: "/merchandise/eula-nightmare/"
+  tags:
+    - eula-abuse
+    - terms-of-service
+    - legal-absurdity
+  sku: eula-nightmare
+  price: 84.70
+  type: t-shirt
+  content: |-
+    "I Agreed to 847 Pages of Terms for This Shirt"
+    
+    **Front:** "I Agreed to 847 Pages of Terms"
+    **Back:** "For This Shirt (I Didn't Read Them)"
+    **Tag:** "By wearing this shirt you agree to our 847-page EULA"
+    
+    **EULA Absurdities Highlighted:**
+    • You cannot photograph this shirt
+    • Lending to family members prohibited
+    • Shirt must be stored upright
+    • No wearing while eating competitor foods
+    • Mandatory happiness while wearing
+    • GPS tracking "for your safety"
+    
+    **Price Note:** $84.70 = $0.10 per page of EULA terms. We're pricing transparency into the absurdity.
+    
+    Perfect for lawyers, privacy advocates, and anyone who's ever wondered what they actually agreed to.
+    
+    **Legal Disclaimer:** This shirt has no actual terms of service. You can do whatever you want with it. What a concept!
+    
+    {% include merch-cta.html %}
+  currency: USD
+  stripe_price_id: price_REPLACE_EULA01
+
+planned-threadsolescence:
+  title: "Planned Threadsolescence - Designed to Unravel"
+  description: "Satirizing planned obsolescence applied to basic clothing"
+  permalink: "/merchandise/planned-threadsolescence/"
+  tags:
+    - planned-obsolescence
+    - fast-fashion
+    - sustainability-lies
+  sku: planned-threadsolescence
+  price: 34.99
+  type: t-shirt
+  content: |-
+    "Planned Threadsolescence - Designed to Unravel"
+    
+    **Front:** "Planned Threadsolescence"
+    **Back:** "Designed to Unravel in Exactly 24 Months"
+    **Care Label:** "Wash to Activate Degradation Sequence"
+    
+    **Planned Obsolescence Features We're Mocking:**
+    • Threads that weaken on schedule
+    • Colors that fade algorithmically
+    • Seams that fail predictably
+    • Size that changes mysteriously
+    • Style that becomes "outdated" automatically
+    
+    **Ironic Promise:** This shirt is actually built to last, unlike the planned obsolescence economy it mocks.
+    
+    Perfect for environmentalists, sustainability advocates, and anyone tired of buying the same thing over and over again.
+    
+    **Sustainability Note:** Made from organic cotton with non-toxic dyes. Because mocking environmental destruction shouldn't contribute to it.
+    
+    {% include merch-cta.html %}
+  currency: USD
+  stripe_price_id: price_REPLACE_THREAD01
+
+dark-pattern-victim:
+  title: "Dark Pattern Victim - Tricked Into This Purchase"
+  description: "Self-aware mockery of manipulative UX design"
+  permalink: "/merchandise/dark-pattern-victim/"
+  tags:
+    - dark-patterns
+    - ux-manipulation
+    - behavioral-economics
+  sku: dark-pattern-victim
+  price: 19.99
+  type: t-shirt
+  content: |-
+    "Dark Pattern Victim - Tricked Into This Purchase"
+    
+    **Front:** "Dark Pattern Victim"
+    **Back:** "I Was Tricked Into This Purchase"
+    **Side:** "Free Trial → $29.99/month → Cancellation Maze"
+    
+    **Dark Patterns We're Exposing:**
+    • Bait and switch pricing
+    • Hidden subscription signups
+    • Impossible cancellation processes
+    • Fake urgency timers
+    • Pre-checked opt-ins
+    • Confusing button layouts
+    • Friend spam invitations
+    
+    **Meta-Irony:** We made this purchase process as straightforward as possible. No tricks, no hidden fees, no subscription nonsense.
+    
+    Perfect for UX designers with a conscience, digital rights advocates, and anyone who's been fooled by a "free" trial.
+    
+    **Transparency Pledge:** What you see is what you get. No surprise charges, no auto-renewals, no dark patterns.
+    
+    {% include merch-cta.html %}
+  currency: USD
+  stripe_price_id: price_REPLACE_DARK01
+
+# Coffee Mugs - Subscription Abuse Collection
+mug-monthly-fee:
+  title: "Monthly Fee for Breathing - Coffee Subscription Victim"
+  description: "Satirizing the subscription economy's reach into basic human functions"
+  permalink: "/merchandise/mug-monthly-fee/"
+  tags:
+    - subscription-abuse
+    - breathing-monetization
+    - basic-needs
+  sku: mug-monthly-fee
+  price: 22.99
+  type: mug
+  content: |-
+    "Monthly Fee for Breathing - Coffee Subscription Victim"
+    
+    **Outside:** "Monthly Fee for Breathing"
+    **Inside:** "Coffee Subscription: $19.99/month (Plus Breathing License)"
+    **Handle:** "Auto-Renew Enabled"
+    
+    **Features of Breath-as-a-Service (BaaS):**
+    • Per-inhale pricing model
+    • Premium oxygen tiers
+    • Breathing pattern monitoring
+    • Penalty fees for irregular breathing
+    • Family plan restrictions
+    
+    Perfect for your morning coffee while contemplating which basic human function will be monetized next.
+    
+    **Compatibility Warning:** Works with all beverages, but coffee companies would prefer you subscribe to their proprietary liquid service.
+    
+    {% include merch-cta.html %}
+  currency: USD
+  stripe_price_id: price_REPLACE_MUGFEE01
+
+mug-cancelled:
+  title: "I Tried to Cancel - Still Being Charged"
+  description: "The subscription cancellation hell in ceramic form"
+  permalink: "/merchandise/mug-cancelled/"
+  tags:
+    - cancellation-hell
+    - subscription-trap
+    - customer-service
+  sku: mug-cancelled
+  price: 29.99
+  type: mug
+  content: |-
+    "I Tried to Cancel - Still Being Charged"
+    
+    **Outside:** "I Tried to Cancel"
+    **Inside:** "Still Being Charged • Month 14"
+    **Bottom:** "Call During Business Hours (Never Available)"
+    
+    **Cancellation Maze Experiences:**
+    • "Are you sure?" × 47 confirmations
+    • Transfer to retention specialist
+    • Special discount offers to stay
+    • "System error" during cancellation
+    • 48-hour "cooling off" period
+    • Account deletion fee $25
+    
+    **Price Explanation:** $29.99 represents the cost of dealing with one subscription cancellation attempt. We're saving you time and money.
+    
+    Perfect for your daily reminder that subscription companies make it easy to sign up, impossible to leave.
+    
+    {% include merch-cta.html %}
+  currency: USD
+  stripe_price_id: price_REPLACE_MUGCAN01
+
+# Caps and Accessories - Corporate Surveillance Collection
+cap-privacy-violation:
+  title: "Privacy Violation Officer - Monetizing Your Data"
+  description: "Baseball cap satirizing corporate data harvesting"
+  permalink: "/merchandise/cap-privacy-violation/"
+  tags:
+    - data-privacy
+    - surveillance-capitalism
+    - privacy-violation
+  sku: cap-privacy-violation
+  price: 27.99
+  type: cap
+  content: |-
+    "Privacy Violation Officer - Monetizing Your Data"
+    
+    **Front:** "Privacy Violation Officer"
+    **Back:** "Monetizing Your Data Since Birth"
+    **Under Brim:** "Your Browsing History: $0.02 per click"
+    **Side:** "GDPR Compliant* (*Terms Apply)"
+    
+    **Data Points We're Harvesting (Satirically):**
+    • Hat size (for targeted advertising)
+    • Head shape (demographic profiling)
+    • Wearing frequency (behavioral patterns)
+    • Compliments received (social proof metrics)
+    
+    **Privacy Policy:** We don't actually collect any data from this hat. What a revolutionary concept!
+    
+    Perfect for privacy advocates, data protection officers, and anyone tired of being the product.
+    
+    {% include merch-cta.html %}
+  currency: USD
+  stripe_price_id: price_REPLACE_CAPPRI01
+
+# Stickers - Compliance Culture Collection
+sticker-eula-compliant:
+  title: "EULA Compliant Human - Terms Accepted"
+  description: "Vinyl sticker for laptops/devices mocking terms of service culture"
+  permalink: "/merchandise/sticker-eula-compliant/"
+  tags:
+    - eula-abuse
+    - compliance-culture
+    - laptop-stickers
+  sku: sticker-eula-compliant
+  price: 7.99
+  type: sticker
+  content: |-
+    "EULA Compliant Human - Terms Accepted"
+    
+    **Vinyl Sticker Design:**
+    **Main Text:** "EULA COMPLIANT HUMAN"
+    **Subtext:** "Terms Accepted Without Reading"
+    **QR Code:** Links to 847-page fake EULA
+    **Size:** 3" x 2" weatherproof vinyl
+    
+    **Perfect For:**
+    • Laptops (ironic, since every app has a EULA)
+    • Phones (that track everything you do)
+    • Tablets (with terms longer than novels)
+    • Water bottles (because even hydration has terms now)
+    
+    **Durability:** Unlike your privacy rights, this sticker is built to last.
+    
+    {% include merch-cta.html %}
+  currency: USD
+  stripe_price_id: price_REPLACE_STKEULA01
+
+sticker-violation-alert:
+  title: "VIOLATION ALERT - Fine Pending"
+  description: "Warning sticker satirizing automated penalty systems"
+  permalink: "/merchandise/sticker-violation-alert/"
+  tags:
+    - automated-fines
+    - penalty-culture
+    - corporate-surveillance
+  sku: sticker-violation-alert
+  price: 6.99
+  type: sticker
+  content: |-
+    "VIOLATION ALERT - Fine Pending"
+    
+    **Warning Sticker Design:**
+    **Header:** "⚠️ VIOLATION ALERT ⚠️"
+    **Main:** "FINE PENDING"
+    **Details:** "Reason: Unauthorized Sticker Application"
+    **Footer:** "Please Remit $47.50 to Corporate Overlords"
+    **Size:** 4" x 3" bright yellow vinyl
+    
+    **Violations This Sticker Might Cause:**
+    • Unauthorized humor deployment
+    • Corporate criticism in public space
+    • Satirical content distribution
+    • Reality acknowledgment
+    
+    **Legal Status:** No actual fines will be issued (we promise).
+    
+    {% include merch-cta.html %}
+  currency: USD
+  stripe_price_id: price_REPLACE_STKVIO01
+
+# Additional Dark Pattern Merchandise - Corporate Evil Collection
+breathing-subscription:
+  title: "Breathing as a Service - $19.99/month Per Nostril"
+  description: "Mock the ultimate monetization of basic human functions"
+  permalink: "/merchandise/breathing-subscription/"
+  tags:
+    - basic-needs-monetization
+    - subscription-abuse
+    - human-rights-violation
+  sku: breathing-subscription
+  price: 39.98
+  type: t-shirt
+  content: |-
+    "Breathing as a Service - $19.99/month Per Nostril"
+    
+    **Front:** "Breathing as a Service"
+    **Back:** "$19.99/month Per Nostril • Family Plans Available"
+    **Sleeve:** "Upgrade to Premium Oxygen for Better Performance"
+    
+    **Service Features We're Mocking:**
+    • Per-breath pricing model
+    • Premium oxygen tiers ($5 extra for mountain air simulation)
+    • Family breathing plans (children half price until age 18)
+    • Automatic renewal (can't opt out without suffocating)
+    • Location-based pricing (urban air costs more)
+    • Breath pattern monitoring for compliance
+    
+    **Subscription Tiers:**
+    • Basic: Standard air composition
+    • Premium: 0.1% more oxygen
+    • Executive: Filtered air with mint scent
+    • Family: Bulk discount for household breathing
+    
+    Perfect for anyone horrified by the subscription economy's reach into every aspect of human existence.
+    
+    **Price Explanation:** $39.98 = $19.99 × 2 nostrils. We're being generous by not charging per breath.
+    
+    {% include merch-cta.html %}
+  currency: USD
+  stripe_price_id: price_REPLACE_BREATH01
+
+freemium-scam:
+  title: "FREE! (Plus Shipping, Handling, Processing, Breathing)"
+  description: "Satirizing the 'free' trial scam with hidden costs"
+  permalink: "/merchandise/freemium-scam/"
+  tags:
+    - freemium-scams
+    - hidden-costs
+    - false-advertising
+  sku: freemium-scam
+  price: 99.99
+  type: t-shirt
+  content: |-
+    "FREE! (Plus Shipping, Handling, Processing, Breathing)"
+    
+    **Front:** "FREE!"
+    **Back:** "*Plus shipping, handling, processing, breathing, existing, thinking, reading this shirt"
+    **Fine Print:** "Free offer expires while you're reading this sentence"
+    
+    **Hidden Costs We're Exposing:**
+    • Shipping: $29.99 (for a digital download)
+    • Handling: $19.99 (someone had to touch it)
+    • Processing: $24.99 (computer electricity costs)
+    • Breathing fee: $15.99 (you used oxygen while deciding)
+    • Existence surcharge: $9.99 (for being alive during purchase)
+    
+    **Terms and Conditions:**
+    • Free trial converts to $99.99/month after 0.001 seconds
+    • Cancellation requires blood sample and DNA test
+    • "Free" means "costs money" in our legal definition
+    • Reading this shirt constitutes acceptance of all terms
+    
+    Perfect for victims of "free" trials that cost more than premium services.
+    
+    **Pricing Transparency:** $99.99 because that's what the "free" offer will cost you.
+    
+    {% include merch-cta.html %}
+  currency: USD
+  stripe_price_id: price_REPLACE_FREE01
+
+consent-manufactured:
+  title: "I Consent! (I Had No Choice)"
+  description: "Mocking manufactured consent in digital agreements"
+  permalink: "/merchandise/consent-manufactured/"
+  tags:
+    - manufactured-consent
+    - forced-agreements
+    - digital-coercion
+  sku: consent-manufactured
+  price: 42.00
+  type: t-shirt
+  content: |-
+    "I Consent! (I Had No Choice)"
+    
+    **Front:** "I Consent!"
+    **Back:** "I Had No Choice • Terms Updated While I Slept"
+    **Shoulder:** "Agree or Starve"
+    
+    **Manufactured Consent Techniques:**
+    • Only one button: "Agree" (no "Disagree" option)
+    • Service unusable without agreement
+    • Terms change after agreement
+    • Pre-checked consent boxes
+    • Consent buried in 247-page documents
+    • "Legitimate interest" overrides consent
+    
+    **Real-World Applications:**
+    • Social media platforms
+    • Banking services
+    • Healthcare systems
+    • Employment contracts
+    • Government services
+    • Basic utilities
+    
+    **The Consent Paradox:** Consent isn't consent when refusing means social/economic exclusion.
+    
+    Perfect for privacy advocates, legal scholars, and anyone tired of fake "choices."
+    
+    **Price Note:** $42.00 - The answer to life, universe, and why consent is meaningless.
+    
+    {% include merch-cta.html %}
+  currency: USD
+  stripe_price_id: price_REPLACE_CONS01
+
+# Hoodies - Corporate Surveillance Collection
+hoodie-always-listening:
+  title: "Always Listening, Never Responding - Corporate AI Hoodie"
+  description: "Mock the surveillance state with this cozy privacy nightmare"
+  permalink: "/merchandise/hoodie-always-listening/"
+  tags:
+    - corporate-surveillance
+    - ai-monitoring
+    - privacy-violation
+  sku: hoodie-always-listening
+  price: 79.99
+  type: hoodie
+  content: |-
+    "Always Listening, Never Responding - Corporate AI Hoodie"
+    
+    **Front:** "Always Listening"
+    **Back:** "Never Responding • Your Voice = Our Data"
+    **Hood Interior:** "Microphones Embedded for Your Convenience"
+    
+    **Surveillance Features (Satirical):**
+    • Voice pattern analysis for mood detection
+    • Keyword monitoring for targeted advertising
+    • Conversation recording for "quality assurance"
+    • Emotional state analysis via vocal stress
+    • Social circle mapping through overheard names
+    • Location inference through background sounds
+    
+    **Corporate AI Behaviors:**
+    • Activates when you say competitor names
+    • Records private conversations "for training"
+    • Shares audio with advertising partners
+    • Stores voice prints permanently
+    • Analyzes family relationships through conversations
+    
+    **Perfect For:**
+    • Privacy advocates with a sense of humor
+    • Tech workers who understand the horror
+    • Anyone tired of corporate eavesdropping
+    • People who want to normalize surveillance criticism
+    
+    **Comfort Features:** Actually comfortable (unlike surveillance capitalism)
+    
+    {% include merch-cta.html %}
+  currency: USD
+  stripe_price_id: price_REPLACE_HOOD01
+
+# Mugs - Productivity Abuse Collection
+mug-productivity-slave:
+  title: "Productivity Slave - Optimizing Humans for Shareholder Value"
+  description: "Morning motivation for the corporate optimization machine"
+  permalink: "/merchandise/mug-productivity-slave/"
+  tags:
+    - productivity-optimization
+    - human-optimization
+    - corporate-efficiency
+  sku: mug-productivity-slave
+  price: 24.99
+  type: mug
+  content: |-
+    "Productivity Slave - Optimizing Humans for Shareholder Value"
+    
+    **Outside:** "Productivity Slave"
+    **Inside:** "Optimizing Humans for Shareholder Value Since Birth"
+    **Handle:** "Efficiency Rating: MAXIMUM EXTRACTION"
+    
+    **Productivity Optimization Techniques:**
+    • Sleep monitoring to ensure "optimal" rest (but not too much)
+    • Meal timing optimization for maximum work output
+    • Bathroom break scheduling and enforcement
+    • Conversation monitoring for "unproductive" topics
+    • Emotional state tracking for mood optimization
+    • Social interaction limits to prevent "distraction"
+    
+    **Human Performance Metrics:**
+    • Keystrokes per minute
+    • Email response time
+    • Meeting participation scores
+    • Smile frequency measurements
+    • Stress level optimization (maintain at 85% maximum)
+    • Loyalty index based on overtime acceptance
+    
+    Perfect for your morning coffee while contemplating how you've been optimized into a human resource.
+    
+    **Irony Level:** Maximum - drinking coffee (a productivity enhancer) from a mug that mocks productivity culture.
+    
+    {% include merch-cta.html %}
+  currency: USD
+  stripe_price_id: price_REPLACE_MUGPROD01
+
+mug-data-harvesting:
+  title: "Your Privacy is Our Business Model"
+  description: "Honest advertising for the data extraction economy"
+  permalink: "/merchandise/mug-data-harvesting/"
+  tags:
+    - data-harvesting
+    - privacy-violation
+    - surveillance-capitalism
+  sku: mug-data-harvesting
+  price: 22.99
+  type: mug
+  content: |-
+    "Your Privacy is Our Business Model"
+    
+    **Outside:** "Your Privacy is Our Business Model"
+    **Inside:** "We Know What You Had for Breakfast"
+    **Bottom:** "Data Collection in Progress..."
+    
+    **Data Points We're Harvesting (Satirically):**
+    • Coffee consumption patterns
+    • Morning mood indicators
+    • Caffeine dependency levels
+    • Productivity correlation with coffee intake
+    • Brand loyalty measurements
+    • Social media posting habits post-coffee
+    
+    **Monetization Methods:**
+    • Sell coffee habits to employers
+    • Target ads based on caffeine addiction
+    • Predict purchasing behavior
+    • Analyze relationship between coffee and productivity
+    • Map social connections through shared coffee breaks
+    
+    **Privacy Policy Summary:**
+    "We collect everything, share with everyone, delete nothing, notify no one."
+    
+    Perfect for morning irony with your surveillance-funded caffeine addiction.
+    
+    **Truth in Advertising:** At least we're honest about monetizing your data.
+    
+    {% include merch-cta.html %}
+  currency: USD
+  stripe_price_id: price_REPLACE_MUGDATA01
+
+# Pins and Badges - Compliance Culture Collection
+pin-mandatory-fun:
+  title: "Mandatory Fun Compliance Officer"
+  description: "Enamel pin for enforcing corporate happiness requirements"
+  permalink: "/merchandise/pin-mandatory-fun/"
+  tags:
+    - mandatory-fun
+    - corporate-culture
+    - happiness-enforcement
+  sku: pin-mandatory-fun
+  price: 12.99
+  type: pin
+  content: |-
+    "Mandatory Fun Compliance Officer"
+    
+    **Design:** Badge-style enamel pin
+    **Text:** "Mandatory Fun Compliance Officer"
+    **Subtext:** "Happiness Enforcement Division"
+    **Size:** 1.5" diameter, premium enamel finish
+    
+    **Mandatory Fun Activities:**
+    • Team building exercises (attendance required)
+    • Company birthday celebrations (enthusiasm monitored)
+    • Holiday parties (fun metrics measured)
+    • Casual Friday enforcement (dress code violations punished)
+    • Pizza parties (gratitude levels assessed)
+    • "Voluntary" after-work socialization
+    
+    **Compliance Metrics:**
+    • Smile frequency during mandated events
+    • Laughter volume measurements
+    • Participation enthusiasm scores
+    • Social interaction quality assessment
+    • Resistance to fun (disciplinary action required)
+    
+    Perfect for HR professionals, managers enforcing culture, or anyone who's been forced to have "fun."
+    
+    **Meta-Fun:** Wearing this pin is ironically more fun than actual mandatory fun.
+    
+    {% include merch-cta.html %}
+  currency: USD
+  stripe_price_id: price_REPLACE_PINMAND01
+
+pin-authenticity-theater:
+  title: "Authentic™ - Algorithmically Generated Personality"
+  description: "Corporate authenticity as a manufactured product"
+  permalink: "/merchandise/pin-authenticity-theater/"
+  tags:
+    - authenticity-theater
+    - algorithmic-personality
+    - manufactured-identity
+  sku: pin-authenticity-theater
+  price: 11.99
+  type: pin
+  content: |-
+    "Authentic™ - Algorithmically Generated Personality"
+    
+    **Design:** Circular enamel pin with holographic finish
+    **Main Text:** "Authentic™"
+    **Subtext:** "Algorithmically Generated Personality"
+    **Legal Fine Print:** "Authenticity not guaranteed"
+    
+    **Authenticity Features:**
+    • AI-curated personality traits
+    • Market-tested emotional responses
+    • Focus-group approved opinions
+    • Demographic-optimized interests
+    • Algorithm-recommended hobbies
+    • Data-driven relationship preferences
+    
+    **Manufactured Authenticity Methods:**
+    • Social media algorithm curation
+    • Targeted advertising personality shaping
+    • Recommendation engine behavior modification
+    • Peer pressure optimization
+    • Influencer-guided authentic expression
+    
+    Perfect for anyone whose personality has been algorithmically optimized for maximum engagement.
+    
+    **Authenticity Guarantee:** This pin is more authentic than your algorithmically-curated social media personality.
+    
+    {% include merch-cta.html %}
+  currency: USD
+  stripe_price_id: price_REPLACE_PINAUTH01
+
+# Tote Bags - Sustainable Hypocrisy Collection
+tote-sustainable-hypocrisy:
+  title: "Sustainably Destroying the Planet - Eco-Friendly Tote"
+  description: "Greenwashing in convenient carry-all format"
+  permalink: "/merchandise/tote-sustainable-hypocrisy/"
+  tags:
+    - greenwashing
+    - sustainable-hypocrisy
+    - environmental-lies
+  sku: tote-sustainable-hypocrisy
+  price: 19.99
+  type: tote-bag
+  content: |-
+    "Sustainably Destroying the Planet - Eco-Friendly Tote"
+    
+    **Front:** "Sustainably Destroying the Planet"
+    **Back:** "100% Organic Cotton, 50% Corporate Lies"
+    **Interior Tag:** "Made from Recycled Greenwashing Materials"
+    
+    **Greenwashing Techniques We're Mocking:**
+    • "Carbon neutral" shipping (via complex offset mathematics)
+    • "Eco-friendly" packaging (plastic wrapped in biodegradable paper)
+    • "Sustainable" materials (from unsustainable sources)
+    • "Recyclable" products (that nobody actually recycles)
+    • "Zero waste" operations (waste exported to developing countries)
+    
+    **Corporate Environmental Promises:**
+    • Net zero by 2050 (while expanding carbon-intensive operations)
+    • Plastic reduction (switching to "biodegradable" plastic)
+    • Clean energy (buying renewable energy credits)
+    • Circular economy (selling waste as "upcycled products")
+    
+    **Actual Material:** 100% organic cotton (genuinely sustainable, unlike most corporate environmental claims)
+    
+    Perfect for grocery shopping while contemplating corporate environmental hypocrisy.
+    
+    **Environmental Note:** This bag will last longer than most corporate environmental commitments.
+    
+    {% include merch-cta.html %}
+  currency: USD
+  stripe_price_id: price_REPLACE_TOTE01

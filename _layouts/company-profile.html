@@ -2,6 +2,8 @@
 layout: default
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/evil-score.css' | relative_url }}">
+
 <div class="index-page">
     <header class="page-header">
         <h1>{{ page.title | remove: " - Monopoly Power & Worker Exploitation" }}</h1>
@@ -9,6 +11,62 @@ layout: default
     </header>
 
     <div class="company-profile">
+        {% if site.data.companies[page.company_key].evil_score %}
+        <section class="evil-score-section">
+            <h2>🏆 Evil Score™ Certification</h2>
+            <div class="company-evil-score">
+                <div class="evil-score-main">
+                    <div class="score-badge score-{{ site.data.companies[page.company_key].evil_score.rating | downcase | replace: ' ', '-' }}">
+                        <span class="score-number">{{ site.data.companies[page.company_key].evil_score.score }}</span>
+                        <span class="score-total">/100</span>
+                    </div>
+                    <div class="score-rating">{{ site.data.companies[page.company_key].evil_score.rating }}</div>
+                    <div class="certification-date">Certified: {{ site.data.companies[page.company_key].evil_score.certified_date | date: "%B %Y" }}</div>
+                </div>
+                
+                <div class="score-breakdown">
+                    <h3>Score Breakdown</h3>
+                    <div class="breakdown-grid">
+                        <div class="breakdown-item">
+                            <span class="category">Worker Exploitation</span>
+                            <span class="score">{{ site.data.companies[page.company_key].evil_score.breakdown.worker_exploitation }}/20</span>
+                        </div>
+                        <div class="breakdown-item">
+                            <span class="category">Environmental Destruction</span>
+                            <span class="score">{{ site.data.companies[page.company_key].evil_score.breakdown.environmental_destruction }}/20</span>
+                        </div>
+                        <div class="breakdown-item">
+                            <span class="category">Tax Avoidance</span>
+                            <span class="score">{{ site.data.companies[page.company_key].evil_score.breakdown.tax_avoidance }}/20</span>
+                        </div>
+                        <div class="breakdown-item">
+                            <span class="category">Consumer Manipulation</span>
+                            <span class="score">{{ site.data.companies[page.company_key].evil_score.breakdown.consumer_manipulation }}/20</span>
+                        </div>
+                        <div class="breakdown-item">
+                            <span class="category">Monopoly Power</span>
+                            <span class="score">{{ site.data.companies[page.company_key].evil_score.breakdown.monopoly_power }}/20</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="score-highlights">
+                    <h3>Key Achievements</h3>
+                    <ul>
+                        {% for highlight in site.data.companies[page.company_key].evil_score.highlights %}
+                        <li>{{ highlight }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                
+                <div class="certification-cta">
+                    <p><strong>Want to achieve this level of corporate evil?</strong></p>
+                    <a href="/evil-score/" class="btn-evil-score">Get Your Evil Score™ Assessment</a>
+                </div>
+            </div>
+        </section>
+        {% endif %}
+
         <section class="evil-timeline">
             <h2>Timeline of Corporate Evil</h2>
             {% for item in site.data.companies[page.company_key].timeline %}
