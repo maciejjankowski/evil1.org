@@ -1,0 +1,308 @@
+# Corporate Evil Assessment Tool (CEAT) - Assessment Framework
+# This data file defines the comprehensive methodology for the CEAT assessment
+
+dimensions:
+  - id: "profit_extraction"
+    name: "Profit Extraction"
+    description: "Ability to maximize profits regardless of human, social, or environmental costs"
+    weight: 25
+    
+  - id: "moral_flexibility"
+    name: "Moral Flexibility"
+    description: "Capacity to abandon ethical principles when profit opportunities arise"
+    weight: 20
+    
+  - id: "regulatory_capture"
+    name: "Regulatory Capture"
+    description: "Skill in corrupting public institutions for private gain"
+    weight: 20
+    
+  - id: "stakeholder_manipulation"
+    name: "Stakeholder Manipulation"
+    description: "Expertise in deceiving workers, customers, and the public"
+    weight: 15
+    
+  - id: "systemic_exploitation"
+    name: "Systemic Exploitation"
+    description: "Ability to design and implement systems of mass exploitation"
+    weight: 20
+
+archetypes:
+  - id: "institutional_sociopath"
+    name: "The Institutional Sociopath"
+    description: "Masters of systematic exploitation through corporate structures"
+    dominant_dimensions: ["profit_extraction", "systemic_exploitation"]
+    score_range: [80, 100]
+    traits:
+      - "Views humans as expendable resources"
+      - "Excels at creating plausible deniability"
+      - "Natural talent for corrupting institutions"
+      - "Instinctive shareholder-first mentality"
+    career_matches:
+      high: ["Fortune 500 CEO", "Investment Banking Executive", "Pharmaceutical Industry Leader", "Oil & Gas Executive"]
+      medium: ["Corporate Lobbyist", "Management Consultant", "Real Estate Developer"]
+      low: ["Social Worker", "Environmental Scientist", "Labor Organizer"]
+      
+  - id: "regulatory_vampire"
+    name: "The Regulatory Vampire"
+    description: "Specialists in draining public resources for private profit"
+    dominant_dimensions: ["regulatory_capture", "stakeholder_manipulation"]
+    score_range: [70, 95]
+    traits:
+      - "Expert at revolving door employment"
+      - "Masters regulatory arbitrage"
+      - "Skilled in public-private partnerships that benefit only privates"
+      - "Natural lobbyist tendencies"
+    career_matches:
+      high: ["Defense Contractor Executive", "Pharmaceutical Lobbyist", "Energy Industry Consultant"]
+      medium: ["Government Relations Director", "Policy Analyst", "Think Tank Fellow"]
+      low: ["Public Defender", "Environmental Lawyer", "Consumer Advocate"]
+      
+  - id: "exploitation_engineer"
+    name: "The Exploitation Engineer"
+    description: "Technical architects of human suffering for profit"
+    dominant_dimensions: ["systemic_exploitation", "moral_flexibility"]
+    score_range: [75, 90]
+    traits:
+      - "Designs systems that extract maximum value from workers"
+      - "Optimizes suffering for efficiency"
+      - "Expert in wage theft automation"
+      - "Masters algorithmic discrimination"
+    career_matches:
+      high: ["Tech Platform Executive", "HR Analytics Director", "Workforce Management Systems Designer"]
+      medium: ["Data Scientist", "Operations Research Analyst", "Business Process Consultant"]
+      low: ["Labor Rights Attorney", "Workplace Safety Inspector", "Union Organizer"]
+      
+  - id: "gaslighting_virtuoso"
+    name: "The Gaslighting Virtuoso"
+    description: "Artists of reality distortion and victim blaming"
+    dominant_dimensions: ["stakeholder_manipulation", "moral_flexibility"]
+    score_range: [65, 85]
+    traits:
+      - "Makes victims question their own reality"
+      - "Expert at shifting blame to consumers"
+      - "Masters corporate virtue signaling"
+      - "Skilled in crisis communication"
+    career_matches:
+      high: ["Public Relations Executive", "Corporate Communications Director", "Brand Management Executive"]
+      medium: ["Marketing Director", "Social Media Strategist", "Corporate Trainer"]
+      low: ["Investigative Journalist", "Whistleblower Protection Advocate", "Truth and Reconciliation Commissioner"]
+      
+  - id: "profit_maximalist"
+    name: "The Profit Maximalist"
+    description: "Pure capitalist predators with no ethical constraints"
+    dominant_dimensions: ["profit_extraction", "moral_flexibility"]
+    score_range: [85, 100]
+    traits:
+      - "Views any unprofitable activity as waste"
+      - "Expert at externalizing all costs to society"
+      - "Natural monopolist tendencies"
+      - "Masters tax avoidance and profit shifting"
+    career_matches:
+      high: ["Private Equity Partner", "Hedge Fund Manager", "Corporate Raider"]
+      medium: ["Investment Advisor", "Financial Analyst", "Business Development Director"]
+      low: ["Non-profit Director", "Social Enterprise Founder", "Impact Investor"]
+
+questions:
+  # Profit Extraction Questions
+  - id: "pe_01"
+    dimension: "profit_extraction"
+    text: "When quarterly profits are below expectations, your first instinct is to:"
+    answers:
+      - text: "Reduce executive bonuses to preserve worker jobs"
+        score: 0
+      - text: "Implement modest cost-cutting measures"
+        score: 25
+      - text: "Lay off 10% of workforce to boost margins"
+        score: 50
+      - text: "Eliminate entire divisions and offshore remaining operations"
+        score: 75
+      - text: "Fire workers, cut benefits, raise prices, and increase executive compensation"
+        score: 100
+        
+  - id: "pe_02"
+    dimension: "profit_extraction"
+    text: "A new regulation would cost your company $10M annually but save 50 lives per year. You:"
+    answers:
+      - text: "Comply immediately - human life is priceless"
+        score: 0
+      - text: "Comply but lobby for industry-wide implementation"
+        score: 20
+      - text: "Delay compliance while lobbying for weaker standards"
+        score: 60
+      - text: "Fight the regulation through legal challenges"
+        score: 80
+      - text: "Calculate that $200K per life saved is too expensive and ignore the regulation"
+        score: 100
+        
+  - id: "pe_03"
+    dimension: "profit_extraction"
+    text: "Your company discovers a cheaper production method that increases cancer risk for nearby communities. You:"
+    answers:
+      - text: "Reject the method and invest in safer alternatives"
+        score: 0
+      - text: "Study the risks more before deciding"
+        score: 15
+      - text: "Implement the method but increase community donations"
+        score: 40
+      - text: "Use the method and hire better PR to manage perception"
+        score: 70
+      - text: "Implement immediately and relocate facilities to poorer communities with less political power"
+        score: 100
+
+  # Moral Flexibility Questions
+  - id: "mf_01"
+    dimension: "moral_flexibility"
+    text: "Your company's marketing team wants to target vulnerable populations with predatory products. You:"
+    answers:
+      - text: "Refuse and develop ethical marketing guidelines"
+        score: 0
+      - text: "Require additional disclosures and cooling-off periods"
+        score: 25
+      - text: "Allow it but avoid direct involvement"
+        score: 50
+      - text: "Approve and optimize targeting algorithms"
+        score: 75
+      - text: "Expand the program and share targeting data with other predatory industries"
+        score: 100
+        
+  - id: "mf_02"
+    dimension: "moral_flexibility"
+    text: "A whistleblower reveals serious safety violations at your facilities. Your response:"
+    answers:
+      - text: "Thank them and immediately address all violations"
+        score: 0
+      - text: "Investigate and fix confirmed issues"
+        score: 20
+      - text: "Fix issues but reassign the whistleblower"
+        score: 45
+      - text: "Discredit the whistleblower and cover up violations"
+        score: 75
+      - text: "Destroy evidence, fire the whistleblower, and hire private investigators to harass them"
+        score: 100
+
+  # Regulatory Capture Questions
+  - id: "rc_01"
+    dimension: "regulatory_capture"
+    text: "The ideal relationship between your industry and its regulators is:"
+    answers:
+      - text: "Adversarial - regulators should strictly enforce public interest"
+        score: 0
+      - text: "Professional - regular communication but clear boundaries"
+        score: 25
+      - text: "Collaborative - working together on mutually beneficial solutions"
+        score: 50
+      - text: "Revolving door - regulators become industry executives and vice versa"
+        score: 75
+      - text: "Complete capture - regulators are effectively company employees"
+        score: 100
+        
+  - id: "rc_02"
+    dimension: "regulatory_capture"
+    text: "Your strategy for dealing with inconvenient regulations is:"
+    answers:
+      - text: "Comply fully and advocate for stronger standards"
+        score: 0
+      - text: "Comply but work within the system for reasonable modifications"
+        score: 20
+      - text: "Find creative interpretations that minimize compliance costs"
+        score: 50
+      - text: "Lobby for weaker standards and regulatory forbearance"
+        score: 75
+      - text: "Write the regulations yourself through captured agency staff"
+        score: 100
+
+  # Stakeholder Manipulation Questions
+  - id: "sm_01"
+    dimension: "stakeholder_manipulation"
+    text: "When communicating with workers about layoffs, you emphasize:"
+    answers:
+      - text: "Honest explanation of financial situation and genuine regret"
+        score: 0
+      - text: "Economic necessity while highlighting severance packages"
+        score: 25
+      - text: "Market forces and global competition as unavoidable factors"
+        score: 50
+      - text: "How this makes the company stronger and more competitive"
+        score: 75
+      - text: "That it's actually good for workers because it teaches them resilience"
+        score: 100
+        
+  - id: "sm_02"
+    dimension: "stakeholder_manipulation"
+    text: "Your approach to corporate social responsibility is:"
+    answers:
+      - text: "Genuine commitment to stakeholder welfare"
+        score: 0
+      - text: "Modest programs that create real positive impact"
+        score: 25
+      - text: "High-visibility initiatives that generate good PR"
+        score: 50
+      - text: "Virtue signaling while continuing harmful practices"
+        score: 75
+      - text: "Actively harmful greenwashing that makes problems worse"
+        score: 100
+
+  # Systemic Exploitation Questions
+  - id: "se_01"
+    dimension: "systemic_exploitation"
+    text: "The ideal employment system maximizes:"
+    answers:
+      - text: "Worker satisfaction and sustainable livelihoods"
+        score: 0
+      - text: "Balanced stakeholder interests"
+        score: 25
+      - text: "Efficiency and productivity"
+        score: 50
+      - text: "Labor cost minimization through technological replacement"
+        score: 75
+      - text: "Value extraction while maintaining worker dependence and desperation"
+        score: 100
+        
+  - id: "se_02"
+    dimension: "systemic_exploitation"
+    text: "Your vision for the ideal market structure is:"
+    answers:
+      - text: "Competitive markets with strong worker and consumer protections"
+        score: 0
+      - text: "Fair competition with reasonable regulation"
+        score: 25
+      - text: "Free markets with minimal government interference"
+        score: 50
+      - text: "Oligopolistic coordination to eliminate price competition"
+        score: 75
+      - text: "Complete monopolistic control over supply chains and regulators"
+        score: 100
+
+scoring:
+  # How to calculate final scores and determine archetype
+  calculation_method: "weighted_average"
+  archetype_determination: "highest_score_match"
+  minimum_questions_required: 8
+  
+development_paths:
+  - name: "Advanced Gaslighting Certification"
+    target_archetypes: ["gaslighting_virtuoso", "stakeholder_manipulation"]
+    description: "Master advanced techniques for making victims doubt their own reality"
+    
+  - name: "Regulatory Capture Mastery"
+    target_archetypes: ["regulatory_vampire", "institutional_sociopath"]
+    description: "Learn cutting-edge methods for corrupting public institutions"
+    
+  - name: "Exploitation Systems Design"
+    target_archetypes: ["exploitation_engineer", "profit_maximalist"]
+    description: "Design and implement systems for maximum value extraction"
+    
+  - name: "Executive Sociopathy Training"
+    target_archetypes: ["institutional_sociopath", "profit_maximalist"]
+    description: "Develop the emotional numbness required for mass-scale harm"
+
+warning_signs:
+  empathy_development:
+    - "Concern for worker welfare"
+    - "Environmental consciousness"
+    - "Desire for fair taxation"
+    - "Impulse to tell the truth about products"
+    - "Consideration of long-term societal consequences"
+    - "Feeling guilt about layoffs"
+    - "Questioning profit maximization strategies"
