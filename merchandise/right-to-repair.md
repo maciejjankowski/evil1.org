@@ -38,8 +38,10 @@ These products mock the absurdity of needing permission to fix things you own, w
 
 {% for item in site.data.merchandise %}
   {% assign product = item[1] %}
-  {% if product.tags contains "repair" and (product.type == "shirt" or product.type == "hat") %}
+  {% if product.tags contains "repair" %}
+    {% if product.type == "shirt" or product.type == "hat" %}
 - **[{{ product.title }}]({{ product.permalink }})** - ${{ product.price }} - {{ product.description }}
+    {% endif %}
   {% endif %}
 {% endfor %}
 
@@ -47,8 +49,10 @@ These products mock the absurdity of needing permission to fix things you own, w
 
 {% for item in site.data.merchandise %}
   {% assign product = item[1] %}
-  {% if product.tags contains "repair" and (product.type == "mug" or product.type == "notebook" or product.type == "poster") %}
+  {% if product.tags contains "repair" %}
+    {% if product.type == "mug" or product.type == "notebook" or product.type == "poster" %}
 - **[{{ product.title }}]({{ product.permalink }})** - ${{ product.price }} - {{ product.description }}
+    {% endif %}
   {% endif %}
 {% endfor %}
 
