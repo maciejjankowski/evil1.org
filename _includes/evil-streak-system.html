@@ -1,0 +1,1070 @@
+<!-- Evil Streak & Achievement System -->
+<div class="evil-streak-system" id="evilStreakSystem">
+    <div class="streak-container">
+        <!-- Daily Evil Streak Display -->
+        <div class="streak-header">
+            <div class="streak-fire">
+                <span class="fire-emoji">🔥</span>
+                <div class="streak-count" id="streakCount">
+                    <span class="streak-number">{{ include.current_streak | default: 23 }}</span>
+                    <span class="streak-label">Day Streak!</span>
+                </div>
+                <span class="fire-emoji">🔥</span>
+            </div>
+            
+            <div class="streak-subtitle">
+                <span class="evil-level">Corporate Evil Level: </span>
+                <span class="current-level" id="currentLevel">
+                    {% if include.current_streak >= 100 %}CEO Overlord{% elsif include.current_streak >= 50 %}VP of Villainy{% elsif include.current_streak >= 25 %}Director of Despair{% elsif include.current_streak >= 10 %}Manager of Misery{% else %}Intern of Iniquity{% endif %}
+                </span>
+            </div>
+        </div>
+        
+        <!-- Progress Bar to Next Level -->
+        <div class="level-progress">
+            <div class="progress-label">
+                <span>Progress to Next Evil Level:</span>
+                <span class="progress-percentage" id="progressPercentage">73%</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill" style="width: 73%;">
+                    <div class="progress-glow"></div>
+                </div>
+            </div>
+            <div class="next-level-info">
+                <span class="next-level">Next: CEO Overlord</span>
+                <span class="days-remaining">27 days remaining</span>
+            </div>
+        </div>
+        
+        <!-- Today's Evil Tasks -->
+        <div class="daily-evil-tasks">
+            <h3 class="tasks-title">📋 Today's Corporate Evil Tasks:</h3>
+            <div class="tasks-grid">
+                <div class="evil-task completed" onclick="toggleTaskCompletion(this, 'exploitation')">
+                    <div class="task-icon">💰</div>
+                    <div class="task-content">
+                        <div class="task-name">Worker Exploitation Simulation</div>
+                        <div class="task-reward">+100 Evil Points</div>
+                    </div>
+                    <div class="task-status">✅</div>
+                </div>
+                
+                <div class="evil-task completed" onclick="toggleTaskCompletion(this, 'greenwashing')">
+                    <div class="task-icon">🌱</div>
+                    <div class="task-content">
+                        <div class="task-name">Greenwashing Campaign</div>
+                        <div class="task-reward">+75 Evil Points</div>
+                    </div>
+                    <div class="task-status">✅</div>
+                </div>
+                
+                <div class="evil-task" onclick="toggleTaskCompletion(this, 'lobbying')">
+                    <div class="task-icon">🏛️</div>
+                    <div class="task-content">
+                        <div class="task-name">Corrupt a Politician</div>
+                        <div class="task-reward">+200 Evil Points</div>
+                    </div>
+                    <div class="task-status">⏰</div>
+                </div>
+                
+                <div class="evil-task" onclick="toggleTaskCompletion(this, 'environmental')">
+                    <div class="task-icon">🏭</div>
+                    <div class="task-content">
+                        <div class="task-name">Environmental Destruction</div>
+                        <div class="task-reward">+150 Evil Points</div>
+                    </div>
+                    <div class="task-status">⏰</div>
+                </div>
+            </div>
+            
+            <!-- Task Completion Pressure -->
+            <div class="completion-pressure">
+                <div class="pressure-text">
+                    Complete all tasks to maintain your streak! 
+                    <span class="pressure-warning">Missing even one day resets everything to ZERO!</span>
+                </div>
+                <div class="other-users-progress">
+                    <span id="otherUsersCompleted">1,247</span> users have already completed all tasks today
+                </div>
+            </div>
+        </div>
+        
+        <!-- Achievement Gallery -->
+        <div class="achievement-gallery">
+            <h3 class="achievements-title">🏆 Evil Achievement Collection:</h3>
+            <div class="achievements-grid">
+                <div class="achievement unlocked legendary" onclick="showAchievementDetails(this, 'baby-evil')">
+                    <div class="achievement-icon">👶</div>
+                    <div class="achievement-name">Baby's First Evil</div>
+                    <div class="achievement-rarity">Common</div>
+                    <div class="achievement-glow"></div>
+                </div>
+                
+                <div class="achievement unlocked epic" onclick="showAchievementDetails(this, 'wage-thief')">
+                    <div class="achievement-icon">💸</div>
+                    <div class="achievement-name">Master Wage Thief</div>
+                    <div class="achievement-rarity">Rare</div>
+                    <div class="achievement-glow"></div>
+                </div>
+                
+                <div class="achievement unlocked mythic" onclick="showAchievementDetails(this, 'union-buster')">
+                    <div class="achievement-icon">🔨</div>
+                    <div class="achievement-name">Union Destroyer</div>
+                    <div class="achievement-rarity">Epic</div>
+                    <div class="achievement-glow"></div>
+                </div>
+                
+                <div class="achievement locked" onclick="showLockedAchievement(this, 'planet-killer')">
+                    <div class="achievement-icon">🌍</div>
+                    <div class="achievement-name">Planet Killer</div>
+                    <div class="achievement-rarity">Legendary</div>
+                    <div class="lock-overlay">🔒</div>
+                </div>
+                
+                <div class="achievement locked" onclick="showLockedAchievement(this, 'bezos-tier')">
+                    <div class="achievement-icon">👑</div>
+                    <div class="achievement-name">Bezos-Tier Evil</div>
+                    <div class="achievement-rarity">Mythic</div>
+                    <div class="lock-overlay">🔒</div>
+                </div>
+                
+                <div class="achievement locked" onclick="showLockedAchievement(this, 'reality-distortion')">
+                    <div class="achievement-icon">⚡</div>
+                    <div class="achievement-name">Reality Distortion Field</div>
+                    <div class="achievement-rarity">Cosmic</div>
+                    <div class="lock-overlay">🔒</div>
+                </div>
+            </div>
+            
+            <!-- Achievement Stats -->
+            <div class="achievement-stats">
+                <div class="stat-item">
+                    <div class="stat-number">8</div>
+                    <div class="stat-label">Unlocked</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">47</div>
+                    <div class="stat-label">Total Available</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">17%</div>
+                    <div class="stat-label">Completion Rate</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Social Comparison -->
+        <div class="social-comparison">
+            <h3 class="comparison-title">📊 How Evil Are You Compared to Others?</h3>
+            <div class="leaderboard-preview">
+                <div class="leaderboard-item rank-1">
+                    <div class="rank-badge">👑</div>
+                    <div class="user-info">
+                        <div class="username">Jeff B.</div>
+                        <div class="user-stats">2,847 day streak</div>
+                    </div>
+                    <div class="evil-score">999,999</div>
+                </div>
+                
+                <div class="leaderboard-item rank-2">
+                    <div class="rank-badge">🥈</div>
+                    <div class="user-info">
+                        <div class="username">Elon M.</div>
+                        <div class="user-stats">1,564 day streak</div>
+                    </div>
+                    <div class="evil-score">876,543</div>
+                </div>
+                
+                <div class="leaderboard-item rank-3">
+                    <div class="rank-badge">🥉</div>
+                    <div class="user-info">
+                        <div class="username">Mark Z.</div>
+                        <div class="user-stats">987 day streak</div>
+                    </div>
+                    <div class="evil-score">654,321</div>
+                </div>
+                
+                <div class="leaderboard-divider">...</div>
+                
+                <div class="leaderboard-item your-rank">
+                    <div class="rank-badge">#247</div>
+                    <div class="user-info">
+                        <div class="username">YOU</div>
+                        <div class="user-stats">{{ include.current_streak | default: 23 }} day streak</div>
+                    </div>
+                    <div class="evil-score">12,847</div>
+                </div>
+            </div>
+            
+            <!-- Peer Pressure -->
+            <div class="peer-pressure">
+                <div class="pressure-message">
+                    You're falling behind! <span class="friends-ahead">73% of your connections</span> have higher evil scores!
+                </div>
+                <div class="catch-up-suggestion">
+                    💡 Pro tip: Purchase evil points to catch up faster!
+                </div>
+            </div>
+        </div>
+        
+        <!-- Streak Protection Offers -->
+        <div class="streak-protection">
+            <h3 class="protection-title">🛡️ Protect Your Streak!</h3>
+            <div class="protection-options">
+                <div class="protection-item basic">
+                    <div class="protection-name">Streak Freeze</div>
+                    <div class="protection-desc">Skip one day without losing streak</div>
+                    <div class="protection-price">$4.99</div>
+                    <button class="protection-btn" onclick="purchaseProtection('freeze')">Buy Now</button>
+                </div>
+                
+                <div class="protection-item premium">
+                    <div class="protection-name">Streak Insurance</div>
+                    <div class="protection-desc">Automatic protection for 7 days</div>
+                    <div class="protection-price">$19.99</div>
+                    <button class="protection-btn" onclick="purchaseProtection('insurance')">Buy Now</button>
+                </div>
+                
+                <div class="protection-item ultimate">
+                    <div class="protection-name">Eternal Evil</div>
+                    <div class="protection-desc">Permanent streak protection</div>
+                    <div class="protection-price">$99.99</div>
+                    <button class="protection-btn" onclick="purchaseProtection('eternal')">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Daily Login Rewards Preview -->
+        <div class="daily-rewards-preview">
+            <h3 class="rewards-title">🎁 Upcoming Login Rewards:</h3>
+            <div class="rewards-timeline">
+                <div class="reward-day completed">
+                    <div class="day-number">Day 23</div>
+                    <div class="reward-icon">💰</div>
+                    <div class="reward-name">100 Evil Points</div>
+                </div>
+                
+                <div class="reward-day today">
+                    <div class="day-number">Day 24</div>
+                    <div class="reward-icon">⚡</div>
+                    <div class="reward-name">2x Multiplier</div>
+                </div>
+                
+                <div class="reward-day upcoming">
+                    <div class="day-number">Day 25</div>
+                    <div class="reward-icon">🎁</div>
+                    <div class="reward-name">Mystery Box</div>
+                </div>
+                
+                <div class="reward-day upcoming legendary">
+                    <div class="day-number">Day 30</div>
+                    <div class="reward-icon">👑</div>
+                    <div class="reward-name">Golden Crown</div>
+                </div>
+                
+                <div class="reward-day upcoming mythic">
+                    <div class="day-number">Day 50</div>
+                    <div class="reward-icon">💎</div>
+                    <div class="reward-name">Mythic Badge</div>
+                </div>
+            </div>
+            
+            <!-- Loss Aversion Message -->
+            <div class="loss-aversion-message">
+                ⚠️ <strong>WARNING:</strong> Breaking your streak means losing ALL progress toward these rewards!
+                You'll have to start over from Day 1 and watch others claim the rewards you worked toward.
+            </div>
+        </div>
+        
+        <!-- Satirical Education Panel -->
+        <div class="satirical-education" style="margin-top: 25px; padding: 20px; background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 10px;">
+            <h5 style="color: #856404;">🎭 Addiction Psychology Analysis:</h5>
+            <p style="font-size: 12px; color: #856404; margin: 8px 0;">
+                <strong>This streak system uses the same psychology as social media and mobile games:</strong>
+            </p>
+            <ul style="font-size: 11px; color: #856404; margin: 8px 0;">
+                <li><strong>Habit Formation:</strong> Daily tasks create compulsive checking behavior</li>
+                <li><strong>Loss Aversion:</strong> Fear of losing streak progress is stronger than desire to gain</li>
+                <li><strong>Variable Ratio Reinforcement:</strong> Random rewards create addiction patterns</li>
+                <li><strong>Social Comparison:</strong> Leaderboards exploit competitive instincts</li>
+                <li><strong>Sunk Cost Fallacy:</strong> More investment makes quitting feel like waste</li>
+                <li><strong>Artificial Scarcity:</strong> Limited-time rewards create urgency</li>
+                <li><strong>Monetized Solutions:</strong> Problems created by design, solved by payment</li>
+            </ul>
+            <p style="font-size: 11px; color: #856404; margin: 8px 0;">
+                <strong>Every interaction here demonstrates how corporations exploit human psychology to drive engagement and spending. By participating, you're learning these patterns firsthand!</strong>
+            </p>
+        </div>
+    </div>
+</div>
+
+<style>
+.evil-streak-system {
+    max-width: 700px;
+    margin: 20px auto;
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    color: white;
+}
+
+.streak-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.streak-fire {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.fire-emoji {
+    font-size: 40px;
+    animation: fire-flicker 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes fire-flicker {
+    0% { transform: scale(1) rotate(-2deg); }
+    100% { transform: scale(1.1) rotate(2deg); }
+}
+
+.streak-count {
+    text-align: center;
+}
+
+.streak-number {
+    display: block;
+    font-size: 48px;
+    font-weight: bold;
+    color: #e74c3c;
+    text-shadow: 0 0 20px rgba(231, 76, 60, 0.5);
+    animation: streak-pulse 2s ease-in-out infinite;
+}
+
+@keyframes streak-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.streak-label {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.streak-subtitle {
+    font-size: 16px;
+    color: rgba(255,255,255,0.9);
+}
+
+.current-level {
+    color: #f39c12;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(243, 156, 18, 0.5);
+}
+
+.level-progress {
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 25px 0;
+    backdrop-filter: blur(10px);
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.progress-percentage {
+    color: #2ecc71;
+    font-weight: bold;
+}
+
+.progress-bar {
+    background: rgba(255,255,255,0.2);
+    border-radius: 25px;
+    height: 20px;
+    overflow: hidden;
+    position: relative;
+    margin: 10px 0;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(45deg, #e74c3c, #c0392b);
+    border-radius: 25px;
+    position: relative;
+    transition: width 1s ease-out;
+}
+
+.progress-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+    animation: progress-shine 2s linear infinite;
+}
+
+@keyframes progress-shine {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.next-level-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: rgba(255,255,255,0.8);
+}
+
+.daily-evil-tasks {
+    margin: 25px 0;
+}
+
+.tasks-title {
+    margin-bottom: 15px;
+    color: #e74c3c;
+}
+
+.tasks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.evil-task {
+    background: rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.evil-task:hover {
+    background: rgba(255,255,255,0.15);
+    transform: translateY(-2px);
+}
+
+.evil-task.completed {
+    background: rgba(46, 204, 113, 0.2);
+    border-color: #2ecc71;
+}
+
+.task-icon {
+    font-size: 24px;
+    width: 40px;
+    text-align: center;
+}
+
+.task-content {
+    flex: 1;
+}
+
+.task-name {
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.task-reward {
+    font-size: 12px;
+    color: #f39c12;
+}
+
+.task-status {
+    font-size: 20px;
+}
+
+.completion-pressure {
+    background: linear-gradient(45deg, #e74c3c, #c0392b);
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+}
+
+.pressure-warning {
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.other-users-progress {
+    margin-top: 8px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.9);
+}
+
+.achievement-gallery {
+    margin: 30px 0;
+}
+
+.achievements-title {
+    margin-bottom: 20px;
+    color: #f39c12;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.achievement {
+    background: rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.achievement:hover {
+    transform: translateY(-5px);
+}
+
+.achievement.unlocked {
+    background: rgba(46, 204, 113, 0.2);
+    border: 2px solid #2ecc71;
+}
+
+.achievement.locked {
+    background: rgba(52, 73, 94, 0.5);
+    opacity: 0.7;
+}
+
+.achievement.legendary {
+    border-color: #f39c12;
+    animation: legendary-glow 2s ease-in-out infinite alternate;
+}
+
+.achievement.epic {
+    border-color: #9b59b6;
+}
+
+.achievement.mythic {
+    border-color: #e74c3c;
+    animation: mythic-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes legendary-glow {
+    0% { box-shadow: 0 0 10px rgba(243, 156, 18, 0.4); }
+    100% { box-shadow: 0 0 25px rgba(243, 156, 18, 0.8); }
+}
+
+@keyframes mythic-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.achievement-icon {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.achievement-name {
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+.achievement-rarity {
+    font-size: 10px;
+    opacity: 0.8;
+}
+
+.lock-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    opacity: 0.7;
+}
+
+.achievement-stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 15px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.stat-label {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.social-comparison {
+    margin: 30px 0;
+}
+
+.comparison-title {
+    margin-bottom: 20px;
+    color: #3498db;
+}
+
+.leaderboard-preview {
+    background: rgba(255,255,255,0.05);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.leaderboard-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px;
+    margin: 8px 0;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+}
+
+.leaderboard-item.your-rank {
+    background: rgba(52, 152, 219, 0.2);
+    border: 2px solid #3498db;
+    animation: your-rank-highlight 2s ease-in-out infinite alternate;
+}
+
+@keyframes your-rank-highlight {
+    0% { box-shadow: 0 0 10px rgba(52, 152, 219, 0.3); }
+    100% { box-shadow: 0 0 20px rgba(52, 152, 219, 0.6); }
+}
+
+.rank-badge {
+    font-size: 20px;
+    font-weight: bold;
+    min-width: 40px;
+    text-align: center;
+}
+
+.user-info {
+    flex: 1;
+}
+
+.username {
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.user-stats {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.evil-score {
+    font-size: 18px;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.leaderboard-divider {
+    text-align: center;
+    padding: 10px;
+    opacity: 0.5;
+}
+
+.peer-pressure {
+    background: linear-gradient(45deg, #e67e22, #d35400);
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+}
+
+.friends-ahead {
+    color: #fff;
+    font-weight: bold;
+}
+
+.catch-up-suggestion {
+    margin-top: 8px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.9);
+}
+
+.streak-protection {
+    margin: 30px 0;
+}
+
+.protection-title {
+    margin-bottom: 20px;
+    color: #27ae60;
+}
+
+.protection-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+.protection-item {
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.protection-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255,255,255,0.15);
+}
+
+.protection-item.premium {
+    border: 2px solid #f39c12;
+    position: relative;
+}
+
+.protection-item.premium::before {
+    content: "POPULAR";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #f39c12;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.protection-name {
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.protection-desc {
+    font-size: 12px;
+    opacity: 0.8;
+    margin-bottom: 12px;
+}
+
+.protection-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2ecc71;
+    margin-bottom: 15px;
+}
+
+.protection-btn {
+    background: linear-gradient(45deg, #27ae60, #2ecc71);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.protection-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(46, 204, 113, 0.4);
+}
+
+.daily-rewards-preview {
+    margin: 30px 0;
+}
+
+.rewards-title {
+    margin-bottom: 20px;
+    color: #9b59b6;
+}
+
+.rewards-timeline {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+.reward-day {
+    min-width: 100px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.reward-day.completed {
+    background: rgba(46, 204, 113, 0.2);
+    border: 2px solid #2ecc71;
+}
+
+.reward-day.today {
+    background: rgba(52, 152, 219, 0.2);
+    border: 2px solid #3498db;
+    animation: today-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes today-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.reward-day.upcoming {
+    opacity: 0.7;
+}
+
+.reward-day.legendary {
+    border-color: #f39c12;
+    animation: legendary-shimmer 2s ease-in-out infinite alternate;
+}
+
+.reward-day.mythic {
+    border-color: #e74c3c;
+    animation: mythic-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes legendary-shimmer {
+    0% { box-shadow: 0 0 10px rgba(243, 156, 18, 0.3); }
+    100% { box-shadow: 0 0 20px rgba(243, 156, 18, 0.6); }
+}
+
+@keyframes mythic-glow {
+    0% { box-shadow: 0 0 15px rgba(231, 76, 60, 0.3); }
+    100% { box-shadow: 0 0 30px rgba(231, 76, 60, 0.7); }
+}
+
+.day-number {
+    font-size: 12px;
+    opacity: 0.8;
+    margin-bottom: 8px;
+}
+
+.reward-icon {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.reward-name {
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.loss-aversion-message {
+    background: linear-gradient(45deg, #e74c3c, #c0392b);
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+    animation: warning-pulse 2s ease-in-out infinite;
+}
+
+@keyframes warning-pulse {
+    0%, 100% { box-shadow: 0 0 10px rgba(231, 76, 60, 0.3); }
+    50% { box-shadow: 0 0 20px rgba(231, 76, 60, 0.6); }
+}
+</style>
+
+<script>
+function toggleTaskCompletion(taskElement, taskType) {
+    const isCompleted = taskElement.classList.contains('completed');
+    
+    if (!isCompleted) {
+        taskElement.classList.add('completed');
+        taskElement.querySelector('.task-status').textContent = '✅';
+        
+        // Show completion animation
+        taskElement.style.transform = 'scale(1.1)';
+        setTimeout(() => {
+            taskElement.style.transform = '';
+        }, 300);
+        
+        // Show reward notification
+        showRewardNotification(taskType);
+        
+        // Update completion stats
+        updateCompletionStats();
+    }
+}
+
+function showRewardNotification(taskType) {
+    const rewards = {
+        exploitation: { name: "Worker Exploitation", points: 100 },
+        greenwashing: { name: "Greenwashing Campaign", points: 75 },
+        lobbying: { name: "Political Corruption", points: 200 },
+        environmental: { name: "Environmental Destruction", points: 150 }
+    };
+    
+    const reward = rewards[taskType];
+    
+    // Create notification popup
+    const notification = document.createElement('div');
+    notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: linear-gradient(45deg, #2ecc71, #27ae60);
+        color: white;
+        padding: 15px 20px;
+        border-radius: 12px;
+        font-weight: bold;
+        z-index: 10000;
+        animation: slideInRight 0.5s ease-out;
+        box-shadow: 0 5px 15px rgba(46, 204, 113, 0.4);
+    `;
+    
+    notification.innerHTML = `
+        🎉 Task Complete!<br>
+        <small>+${reward.points} Evil Points earned!</small>
+    `;
+    
+    document.body.appendChild(notification);
+    
+    // Remove notification after 3 seconds
+    setTimeout(() => {
+        notification.style.animation = 'slideOutRight 0.5s ease-in';
+        setTimeout(() => {
+            document.body.removeChild(notification);
+        }, 500);
+    }, 3000);
+}
+
+function updateCompletionStats() {
+    const completedTasks = document.querySelectorAll('.evil-task.completed').length;
+    const totalTasks = document.querySelectorAll('.evil-task').length;
+    
+    // Update other users count to create social pressure
+    const otherUsersElement = document.getElementById('otherUsersCompleted');
+    if (otherUsersElement) {
+        const currentCount = parseInt(otherUsersElement.textContent.replace(',', ''));
+        otherUsersElement.textContent = (currentCount + Math.floor(Math.random() * 10)).toLocaleString();
+    }
+    
+    // Check if all tasks completed
+    if (completedTasks === totalTasks) {
+        showDailyCompletionCelebration();
+    }
+}
+
+function showDailyCompletionCelebration() {
+    alert(`🎉 DAILY EVIL COMPLETE! 🎉\n\n🔥 Streak maintained!\n💰 Bonus points awarded!\n👑 Evil level progress increased!\n\nYou've successfully completed another day of satirical corporate evil simulation!\n\nRemember: This gamification mimics how apps and services keep you engaged through daily tasks and streaks. The satisfaction you feel from "completing" these tasks is the same dopamine hit that keeps people checking social media and playing mobile games!\n\n🎭 Thank you for learning about addiction psychology through participation!`);
+}
+
+function showAchievementDetails(achievementElement, achievementId) {
+    const achievements = {
+        'baby-evil': {
+            name: 'Baby\'s First Evil',
+            description: 'Completed your first corporate crime simulation',
+            rarity: 'Common',
+            reward: '100 Evil Points + Intern Badge'
+        },
+        'wage-thief': {
+            name: 'Master Wage Thief',
+            description: 'Successfully calculated optimal wage theft strategies',
+            rarity: 'Rare',
+            reward: '500 Evil Points + Exploitation Badge'
+        },
+        'union-buster': {
+            name: 'Union Destroyer',
+            description: 'Mastered the art of union suppression',
+            rarity: 'Epic',
+            reward: '1000 Evil Points + Labor Oppression Crown'
+        }
+    };
+    
+    const achievement = achievements[achievementId];
+    
+    alert(`🏆 ACHIEVEMENT UNLOCKED! 🏆\n\n${achievement.name}\n\nDescription: ${achievement.description}\nRarity: ${achievement.rarity}\nReward: ${achievement.reward}\n\n🎭 Meta-Commentary:\nThis achievement system exploits the same psychological principles as video games and social media - giving you a sense of accomplishment for arbitrary tasks to keep you engaged!\n\nEvery "achievement" here represents how corporations gamify user behavior to increase retention and spending.`);
+}
+
+function showLockedAchievement(achievementElement, achievementId) {
+    const lockedAchievements = {
+        'planet-killer': 'Complete 100 environmental destruction tasks',
+        'bezos-tier': 'Reach maximum evil level across all categories',
+        'reality-distortion': 'Maintain 365-day evil streak'
+    };
+    
+    const requirement = lockedAchievements[achievementId];
+    
+    alert(`🔒 LOCKED ACHIEVEMENT 🔒\n\nThis achievement is still locked!\n\nRequirement: ${requirement}\n\n💡 Pro Tip: Purchase evil points to progress faster!\n💎 Or buy streak protection to ensure you don't lose progress!\n\n🎭 Notice how the game creates artificial barriers and then offers paid solutions? This is exactly how freemium games and subscription services work - create a problem, then sell the solution!`);
+}
+
+function purchaseProtection(protectionType) {
+    const protections = {
+        freeze: { name: 'Streak Freeze', price: 4.99, description: 'Skip one day without losing your streak' },
+        insurance: { name: 'Streak Insurance', price: 19.99, description: 'Automatic protection for 7 days' },
+        eternal: { name: 'Eternal Evil', price: 99.99, description: 'Permanent streak protection' }
+    };
+    
+    const protection = protections[protectionType];
+    
+    alert(`🛡️ STREAK PROTECTION PURCHASED! 🛡️\n\n${protection.name} - $${protection.price}\n\n${protection.description}\n\n🎭 EDUCATIONAL MOMENT 🎭\n\nYou just experienced "manufactured inconvenience" - where companies create problems (streak anxiety) and then sell solutions (protection)!\n\nThis is the same psychology used by:\n• Mobile games (lives/energy systems)\n• Subscription services (convenience features)\n• Insurance companies (manufactured anxiety)\n• Extended warranties (fear-based selling)\n\nThank you for funding our activism while learning about predatory monetization! 💰`);
+    
+    // Show visual confirmation
+    const protectionElement = event.target.closest('.protection-item');
+    protectionElement.style.background = 'rgba(46, 204, 113, 0.3)';
+    protectionElement.innerHTML += '<div style="position: absolute; top: 10px; right: 10px; background: #2ecc71; color: white; padding: 4px 8px; border-radius: 10px; font-size: 10px;">ACTIVE</div>';
+}
+
+// Initialize streak system
+document.addEventListener('DOMContentLoaded', function() {
+    // Simulate real-time user activity
+    setInterval(() => {
+        // Update other users completion count
+        const otherUsersElement = document.getElementById('otherUsersCompleted');
+        if (otherUsersElement) {
+            const currentCount = parseInt(otherUsersElement.textContent.replace(',', ''));
+            const newCount = currentCount + Math.floor(Math.random() * 15) + 5;
+            otherUsersElement.textContent = newCount.toLocaleString();
+        }
+    }, 30000); // Every 30 seconds
+    
+    // Animate progress bar on load
+    setTimeout(() => {
+        const progressFill = document.getElementById('progressFill');
+        if (progressFill) {
+            progressFill.style.width = '73%';
+        }
+    }, 1000);
+    
+    // Add CSS for animations
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes slideInRight {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        
+        @keyframes slideOutRight {
+            from { transform: translateX(0); opacity: 1; }
+            to { transform: translateX(100%); opacity: 0; }
+        }
+    `;
+    document.head.appendChild(style);
+});
+</script>

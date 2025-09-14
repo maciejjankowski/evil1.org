@@ -1,0 +1,539 @@
+<!-- Dopamine-Driven Loot Box Component -->
+<div class="dopamine-loot-box" id="lootBox{{ include.box_id | default: 'default' }}">
+    <div class="loot-box-container">
+        <div class="loot-box-header">
+            <h3 class="loot-box-title">🎁 {{ include.title | default: "Corporate Scandal Mystery Box" }}</h3>
+            <div class="loot-box-price">
+                <span class="price-value">${{ include.price | default: "24.99" }}</span>
+                <span class="price-manipulation">⏰ Limited Time!</span>
+            </div>
+        </div>
+        
+        <div class="loot-box-preview">
+            <div class="box-3d" id="box3d{{ include.box_id | default: 'default' }}">
+                <div class="box-face box-front">?</div>
+                <div class="box-face box-back">💰</div>
+                <div class="box-face box-left">⚡</div>
+                <div class="box-face box-right">🔥</div>
+                <div class="box-face box-top">✨</div>
+                <div class="box-face box-bottom">💎</div>
+            </div>
+            
+            <!-- Manipulation Timers -->
+            <div class="urgency-indicators">
+                <div class="timer-urgent" id="urgencyTimer{{ include.box_id | default: 'default' }}">
+                    ⏰ <span id="timerDisplay{{ include.box_id | default: 'default' }}">23:59:47</span> until price increases!
+                </div>
+                <div class="social-pressure">
+                    <span id="viewerCount{{ include.box_id | default: 'default' }}">247</span> people viewing this box right now!
+                </div>
+            </div>
+        </div>
+        
+        <div class="loot-box-contents">
+            <h4>🎯 Possible Rewards:</h4>
+            <div class="rarity-breakdown">
+                <div class="rarity-tier common">
+                    <span class="rarity-label">Common (60%)</span>
+                    <div class="rarity-items">
+                        <span class="item">Tax Evasion Guide</span>
+                        <span class="item">Greenwashing Kit</span>
+                        <span class="item">Wage Theft Calculator</span>
+                    </div>
+                </div>
+                
+                <div class="rarity-tier rare">
+                    <span class="rarity-label">Rare (12%)</span>
+                    <div class="rarity-items">
+                        <span class="item">Offshore Account Manual</span>
+                        <span class="item">Union Busting Playbook</span>
+                        <span class="item">Crisis Management Scripts</span>
+                    </div>
+                </div>
+                
+                <div class="rarity-tier legendary">
+                    <span class="rarity-label">Legendary (2.5%)</span>
+                    <div class="rarity-items">
+                        <span class="item">Complete Overlord Package</span>
+                        <span class="item">Senate Purchase Template</span>
+                        <span class="item">Global Exploitation Framework</span>
+                    </div>
+                </div>
+                
+                <div class="rarity-tier mythic">
+                    <span class="rarity-label">💎 MYTHIC (0.5%) 💎</span>
+                    <div class="rarity-items">
+                        <span class="item">Bezos-Level Evil Achievement</span>
+                        <span class="item">Musk Market Manipulation Class</span>
+                        <span class="item">Gates Population Control Kit</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Psychological Pressure Tactics -->
+        <div class="manipulation-tactics">
+            <div class="previous-winners">
+                <h5>🏆 Recent Lucky Winners:</h5>
+                <div class="winner-feed" id="winnerFeed{{ include.box_id | default: 'default' }}">
+                    <div class="winner-item">Sarah just got the Bezos-Level Evil Achievement! 🎉</div>
+                    <div class="winner-item">Mike unlocked Global Exploitation Framework! 💎</div>
+                    <div class="winner-item">Jessica received Offshore Account Manual! ⚡</div>
+                </div>
+            </div>
+            
+            <div class="social-proof">
+                <div class="purchase-stats">
+                    <span id="totalPurchases{{ include.box_id | default: 'default' }}">15,847</span> boxes opened today!
+                </div>
+                <div class="friends-activity" id="friendsActivity{{ include.box_id | default: 'default' }}">
+                    3 of your friends bought this box in the last hour
+                </div>
+            </div>
+        </div>
+        
+        <!-- Purchase Button with Dark Patterns -->
+        <div class="purchase-section">
+            <div class="quantity-manipulation">
+                <label for="quantity{{ include.box_id | default: 'default' }}">Buy multiple for better odds:</label>
+                <select id="quantity{{ include.box_id | default: 'default' }}" class="quantity-select">
+                    <option value="1">1 Box - $24.99 (Basic odds)</option>
+                    <option value="3" selected>3 Boxes - $64.99 (15% better odds!) ⭐</option>
+                    <option value="5">5 Boxes - $99.99 (25% better odds!) 🔥</option>
+                    <option value="10">10 Boxes - $179.99 (50% better odds!) 💎</option>
+                </select>
+            </div>
+            
+            <button class="loot-box-purchase-btn" 
+                    onclick="purchaseLootBox('{{ include.box_id | default: 'default' }}')"
+                    onmouseover="amplifyUrgency('{{ include.box_id | default: 'default' }}')"
+                    onmouseout="normalizeUrgency('{{ include.box_id | default: 'default' }}')">
+                <span class="btn-text">🎰 OPEN BOX NOW! 🎰</span>
+                <span class="btn-manipulation">Before someone else gets the mythic items!</span>
+            </button>
+            
+            <!-- Alternative "Free" Option with Hidden Costs -->
+            <div class="false-alternative">
+                <p class="small-text">Or try your luck with a "Free" box*</p>
+                <button class="free-box-btn" onclick="showFreeBoxScam()">
+                    🆓 "FREE" Mystery Box
+                </button>
+                <p class="ultra-small-text">*Plus $19.99 processing, $14.99 handling, $9.99 breathing fee</p>
+            </div>
+        </div>
+        
+        <!-- Satirical Educational Panel -->
+        <div class="satirical-education" style="margin-top: 20px; padding: 15px; background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 5px;">
+            <h5 style="color: #856404;">🎭 Meta-Commentary:</h5>
+            <p style="font-size: 12px; color: #856404; margin: 5px 0;">
+                <strong>This loot box uses every psychological manipulation tactic we criticize corporations for:</strong>
+            </p>
+            <ul style="font-size: 11px; color: #856404; margin: 5px 0;">
+                <li>Variable ratio reinforcement (random rewards create addiction)</li>
+                <li>Loss aversion (fear of missing out on mythic items)</li>
+                <li>Social proof (fake viewer counts and winner notifications)</li>
+                <li>Artificial scarcity (fake timers and limited availability)</li>
+                <li>Price anchoring (making expensive options seem "reasonable")</li>
+                <li>False choice (expensive vs "free" with hidden costs)</li>
+            </ul>
+            <p style="font-size: 11px; color: #856404; margin: 5px 0;">
+                <strong>By purchasing, you're both funding activism AND proving our point about manipulative design!</strong>
+            </p>
+        </div>
+    </div>
+</div>
+
+<style>
+.dopamine-loot-box {
+    max-width: 400px;
+    margin: 20px auto;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    animation: subtle-glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes subtle-glow {
+    0% { box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+    100% { box-shadow: 0 10px 30px rgba(102, 126, 234, 0.5); }
+}
+
+.loot-box-header {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.loot-box-title {
+    color: white;
+    margin: 0 0 10px 0;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.loot-box-price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.price-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffd700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.price-manipulation {
+    background: #ff4757;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    animation: pulse-urgent 1.5s infinite;
+}
+
+@keyframes pulse-urgent {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.box-3d {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+    transform-style: preserve-3d;
+    animation: rotate-box 4s linear infinite;
+    cursor: pointer;
+}
+
+@keyframes rotate-box {
+    from { transform: rotateX(0deg) rotateY(0deg); }
+    to { transform: rotateX(360deg) rotateY(360deg); }
+}
+
+.box-face {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(45deg, #ffd700, #ffed4e);
+    border: 3px solid #ff6b6b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+}
+
+.box-front { transform: translateZ(50px); }
+.box-back { transform: rotateY(180deg) translateZ(50px); }
+.box-left { transform: rotateY(-90deg) translateZ(50px); }
+.box-right { transform: rotateY(90deg) translateZ(50px); }
+.box-top { transform: rotateX(90deg) translateZ(50px); }
+.box-bottom { transform: rotateX(-90deg) translateZ(50px); }
+
+.urgency-indicators {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.timer-urgent {
+    background: #ff4757;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 15px;
+    margin: 5px 0;
+    font-weight: bold;
+    animation: urgent-flash 2s infinite;
+}
+
+@keyframes urgent-flash {
+    0%, 50%, 100% { background: #ff4757; }
+    25%, 75% { background: #ff3742; }
+}
+
+.social-pressure {
+    background: #5f27cd;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 12px;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.rarity-breakdown {
+    margin: 15px 0;
+}
+
+.rarity-tier {
+    margin: 8px 0;
+    padding: 8px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.1);
+}
+
+.rarity-label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.common .rarity-label { color: #95a5a6; }
+.rare .rarity-label { color: #3498db; }
+.legendary .rarity-label { color: #f39c12; }
+.mythic .rarity-label { 
+    color: #e74c3c; 
+    animation: mythic-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes mythic-glow {
+    0% { text-shadow: 0 0 5px #e74c3c; }
+    100% { text-shadow: 0 0 20px #e74c3c, 0 0 30px #e74c3c; }
+}
+
+.rarity-items {
+    font-size: 12px;
+    color: rgba(255,255,255,0.9);
+}
+
+.item {
+    display: inline-block;
+    margin: 2px 4px;
+    padding: 2px 6px;
+    background: rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+.winner-feed {
+    max-height: 80px;
+    overflow: hidden;
+    position: relative;
+}
+
+.winner-item {
+    padding: 4px 8px;
+    margin: 2px 0;
+    background: rgba(46, 204, 113, 0.2);
+    border-radius: 8px;
+    font-size: 12px;
+    color: white;
+    animation: slide-in 0.5s ease-out;
+}
+
+@keyframes slide-in {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+.loot-box-purchase-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 15px 0;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.loot-box-purchase-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+}
+
+.loot-box-purchase-btn:active {
+    transform: scale(0.98);
+}
+
+.btn-manipulation {
+    display: block;
+    font-size: 11px;
+    font-style: italic;
+    margin-top: 4px;
+    opacity: 0.9;
+}
+
+.false-alternative {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.free-box-btn {
+    background: #2ecc71;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.ultra-small-text {
+    font-size: 8px;
+    color: rgba(255,255,255,0.6);
+    margin: 5px 0;
+}
+
+.quantity-select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    background: rgba(255,255,255,0.9);
+    margin: 5px 0;
+}
+</style>
+
+<script>
+// Dopamine manipulation JavaScript
+function purchaseLootBox(boxId) {
+    // Simulate loot box opening animation
+    const box = document.getElementById('box3d' + boxId);
+    box.style.animation = 'none';
+    box.style.transform = 'rotateX(0deg) rotateY(0deg) scale(1.2)';
+    
+    // Show "opening" effect
+    setTimeout(() => {
+        box.style.transform = 'rotateX(360deg) rotateY(360deg) scale(0.8)';
+        
+        // Simulate reward reveal
+        setTimeout(() => {
+            const rewards = [
+                "🎉 LEGENDARY! You got the Senate Purchase Template!",
+                "✨ RARE! Union Busting Playbook unlocked!",
+                "💎 MYTHIC! Bezos-Level Evil Achievement! (1 in 200 chance!)",
+                "⚡ UNCOMMON! Crisis Management Scripts received!",
+                "🔥 COMMON! Tax Evasion Guide added to inventory!"
+            ];
+            
+            const randomReward = rewards[Math.floor(Math.random() * rewards.length)];
+            
+            alert(`🎰 LOOT BOX OPENED! 🎰\n\n${randomReward}\n\nRemember: This purchase funds real investigative journalism while demonstrating how loot boxes exploit human psychology!\n\nThank you for being complicit in both capitalism and its critique! 🎭`);
+            
+            // Reset animation
+            box.style.animation = 'rotate-box 4s linear infinite';
+            box.style.transform = '';
+            
+            // Update social proof numbers
+            updateSocialProof(boxId);
+            
+        }, 1000);
+    }, 500);
+}
+
+function amplifyUrgency(boxId) {
+    const button = event.target;
+    button.style.animation = 'pulse-urgent 0.5s infinite';
+    button.style.background = 'linear-gradient(45deg, #ff4757, #ff3742)';
+}
+
+function normalizeUrgency(boxId) {
+    const button = event.target;
+    button.style.animation = '';
+    button.style.background = 'linear-gradient(45deg, #ff6b6b, #ee5a52)';
+}
+
+function showFreeBoxScam() {
+    alert(`🆓 "FREE" MYSTERY BOX! 🆓\n\nCongratulations! You've selected our FREE* mystery box!\n\n*Terms and Conditions:\n• Processing Fee: $19.99\n• Handling Charge: $14.99\n• Breathing License: $9.99\n• Existence Surcharge: $7.99\n• Reading This Alert: $4.99\n• Total: $57.95\n\nThis is exactly how "free" trials work in real life!\n\nNo actual charges will be applied (we're not monsters), but corporations do this daily! 🎭`);
+}
+
+function updateSocialProof(boxId) {
+    const viewerCount = document.getElementById('viewerCount' + boxId);
+    const totalPurchases = document.getElementById('totalPurchases' + boxId);
+    
+    if (viewerCount) {
+        const currentViewers = parseInt(viewerCount.textContent);
+        viewerCount.textContent = currentViewers + Math.floor(Math.random() * 10) + 1;
+    }
+    
+    if (totalPurchases) {
+        const currentTotal = parseInt(totalPurchases.textContent.replace(',', ''));
+        totalPurchases.textContent = (currentTotal + 1).toLocaleString();
+    }
+}
+
+// Simulate real-time activity
+function simulateActivity(boxId) {
+    const winnerFeeds = document.querySelectorAll('[id^="winnerFeed"]');
+    const fakeWinners = [
+        "Alex just unlocked Global Exploitation Framework! 💎",
+        "Morgan received Offshore Account Manual! ⚡", 
+        "Jamie got the Ultimate Sociopathy Package! 🔥",
+        "Taylor unlocked Crisis Management Scripts! ✨",
+        "Casey achieved Regulatory Capture Mastery! 🏆"
+    ];
+    
+    winnerFeeds.forEach(feed => {
+        setInterval(() => {
+            const randomWinner = fakeWinners[Math.floor(Math.random() * fakeWinners.length)];
+            const newItem = document.createElement('div');
+            newItem.className = 'winner-item';
+            newItem.textContent = randomWinner;
+            
+            feed.insertBefore(newItem, feed.firstChild);
+            
+            // Remove oldest items to prevent overflow
+            while (feed.children.length > 3) {
+                feed.removeChild(feed.lastChild);
+            }
+        }, 8000 + Math.random() * 12000); // Random intervals between 8-20 seconds
+    });
+}
+
+// Countdown timer manipulation
+function startUrgencyTimer(boxId) {
+    const timerDisplay = document.getElementById('timerDisplay' + boxId);
+    if (!timerDisplay) return;
+    
+    let timeLeft = 86387; // Start at 23:59:47
+    
+    setInterval(() => {
+        timeLeft--;
+        if (timeLeft <= 0) {
+            timeLeft = 86400; // Reset to 24 hours (the scam continues!)
+        }
+        
+        const hours = Math.floor(timeLeft / 3600);
+        const minutes = Math.floor((timeLeft % 3600) / 60);
+        const seconds = timeLeft % 60;
+        
+        timerDisplay.textContent = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    }, 1000);
+}
+
+// Initialize all dopamine systems
+document.addEventListener('DOMContentLoaded', function() {
+    // Start activity simulation for all loot boxes
+    simulateActivity();
+    
+    // Start countdown timers
+    const timerDisplays = document.querySelectorAll('[id^="timerDisplay"]');
+    timerDisplays.forEach((timer, index) => {
+        const boxId = timer.id.replace('timerDisplay', '');
+        startUrgencyTimer(boxId);
+    });
+    
+    // Randomize initial viewer counts to appear active
+    const viewerCounts = document.querySelectorAll('[id^="viewerCount"]');
+    viewerCounts.forEach(counter => {
+        const baseCount = 150 + Math.floor(Math.random() * 200);
+        counter.textContent = baseCount;
+        
+        // Simulate fluctuating viewer counts
+        setInterval(() => {
+            const currentCount = parseInt(counter.textContent);
+            const change = Math.floor(Math.random() * 21) - 10; // -10 to +10
+            const newCount = Math.max(50, currentCount + change);
+            counter.textContent = newCount;
+        }, 5000 + Math.random() * 10000);
+    });
+});
+</script>
