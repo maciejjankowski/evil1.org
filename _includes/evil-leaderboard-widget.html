@@ -1,0 +1,536 @@
+<!-- Evil Leaderboard Widget -->
+<div class="evil-leaderboard-widget" id="leaderboard-widget">
+    <div class="widget-header">
+        <h3>👑 Top Evil Practitioners</h3>
+        <span class="live-indicator">🔴 LIVE</span>
+    </div>
+    <div class="widget-content">
+        <div class="leaderboard-tabs">
+            <button class="tab-btn active" onclick="switchLeaderboard('weekly')" data-tab="weekly">This Week</button>
+            <button class="tab-btn" onclick="switchLeaderboard('alltime')" data-tab="alltime">All Time</button>
+        </div>
+        
+        <div class="leaderboard-content" id="weekly-leaderboard">
+            <div class="leaderboard-item rank-1">
+                <div class="rank">1</div>
+                <div class="user-info">
+                    <div class="username">💀 Sarah "The Destroyer" K.</div>
+                    <div class="title">Chief Soul Extraction Officer</div>
+                </div>
+                <div class="points">2,847</div>
+            </div>
+            
+            <div class="leaderboard-item rank-2">
+                <div class="rank">2</div>
+                <div class="user-info">
+                    <div class="username">⚡ Mike "Crusher" R.</div>
+                    <div class="title">Senior VP of Villainy</div>
+                </div>
+                <div class="points">2,543</div>
+            </div>
+            
+            <div class="leaderboard-item rank-3">
+                <div class="rank">3</div>
+                <div class="user-info">
+                    <div class="username">🔥 Jennifer "Exploiter" M.</div>
+                    <div class="title">Director of Human Misery</div>
+                </div>
+                <div class="points">2,234</div>
+            </div>
+            
+            <div class="leaderboard-item user-position" id="user-position">
+                <div class="rank">...</div>
+                <div class="user-info">
+                    <div class="username">👹 You</div>
+                    <div class="title" id="user-title">Intern of Insignificance</div>
+                </div>
+                <div class="points" id="user-points">0</div>
+            </div>
+        </div>
+        
+        <div class="leaderboard-content hidden" id="alltime-leaderboard">
+            <div class="leaderboard-item rank-1">
+                <div class="rank">1</div>
+                <div class="user-info">
+                    <div class="username">👑 Anonymous CEO</div>
+                    <div class="title">Emperor of Evil</div>
+                </div>
+                <div class="points">47,892</div>
+            </div>
+            
+            <div class="leaderboard-item rank-2">
+                <div class="rank">2</div>
+                <div class="user-info">
+                    <div class="username">💎 Corporate Overlord</div>
+                    <div class="title">Master of Exploitation</div>
+                </div>
+                <div class="points">43,567</div>
+            </div>
+            
+            <div class="leaderboard-item rank-3">
+                <div class="rank">3</div>
+                <div class="user-info">
+                    <div class="username">🖤 Dr. Evil Inc.</div>
+                    <div class="title">Professor of Psychopathy</div>
+                </div>
+                <div class="points">39,234</div>
+            </div>
+            
+            <div class="leaderboard-item user-position">
+                <div class="rank">...</div>
+                <div class="user-info">
+                    <div class="username">👹 You</div>
+                    <div class="title" id="user-title-alltime">Intern of Insignificance</div>
+                </div>
+                <div class="points" id="user-points-alltime">0</div>
+            </div>
+        </div>
+        
+        <div class="competitive-pressure">
+            <p class="pressure-text">⚠️ <span id="rank-threat">Sarah K.</span> is only <span id="point-difference">2,847</span> points ahead!</p>
+            <button class="btn-compete" onclick="boostProgress()">🚀 Boost Your Evil</button>
+        </div>
+        
+        <div class="fake-activity-feed">
+            <div class="activity-header">Recent Activity</div>
+            <div class="activity-item">
+                <span class="activity-text">Mike R. just earned "Corporate Psychopath" badge</span>
+                <span class="activity-time">2m ago</span>
+            </div>
+            <div class="activity-item">
+                <span class="activity-text">Jennifer M. advanced to level 4</span>
+                <span class="activity-time">5m ago</span>
+            </div>
+            <div class="activity-item">
+                <span class="activity-text">Anonymous user bought Premium Evil package</span>
+                <span class="activity-time">8m ago</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.evil-leaderboard-widget {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 300px;
+    background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+    border: 2px solid #333;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    z-index: 999;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.evil-leaderboard-widget .widget-header {
+    background: linear-gradient(90deg, #ff6b00, #ff4400);
+    padding: 12px 16px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.evil-leaderboard-widget .widget-header h3 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.live-indicator {
+    font-size: 10px;
+    background: rgba(255,255,255,0.2);
+    padding: 2px 6px;
+    border-radius: 10px;
+    animation: pulse 2s infinite;
+}
+
+.evil-leaderboard-widget .widget-content {
+    padding: 16px;
+}
+
+.leaderboard-tabs {
+    display: flex;
+    margin-bottom: 16px;
+    background: #333;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 8px 12px;
+    border: none;
+    background: transparent;
+    color: #ccc;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.2s ease;
+}
+
+.tab-btn.active {
+    background: #ff6b00;
+    color: white;
+}
+
+.leaderboard-content {
+    margin-bottom: 16px;
+}
+
+.leaderboard-content.hidden {
+    display: none;
+}
+
+.leaderboard-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px;
+    margin-bottom: 6px;
+    border-radius: 6px;
+    background: #2a2a2a;
+    transition: all 0.2s ease;
+}
+
+.leaderboard-item:hover {
+    background: #333;
+    transform: translateX(2px);
+}
+
+.leaderboard-item.rank-1 {
+    background: linear-gradient(90deg, #ffd700, #ffed4e);
+    color: #1a1a1a;
+}
+
+.leaderboard-item.rank-2 {
+    background: linear-gradient(90deg, #c0c0c0, #e8e8e8);
+    color: #1a1a1a;
+}
+
+.leaderboard-item.rank-3 {
+    background: linear-gradient(90deg, #cd7f32, #daa552);
+    color: #1a1a1a;
+}
+
+.leaderboard-item.user-position {
+    background: linear-gradient(90deg, #ff6b6b, #ff8a80);
+    border: 2px solid #ff4444;
+    animation: glow 3s ease-in-out infinite alternate;
+}
+
+.rank {
+    font-weight: bold;
+    font-size: 14px;
+    min-width: 20px;
+    text-align: center;
+}
+
+.user-info {
+    flex: 1;
+}
+
+.username {
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 2px;
+}
+
+.title {
+    font-size: 10px;
+    opacity: 0.8;
+}
+
+.points {
+    font-weight: bold;
+    font-size: 12px;
+    color: #ffd700;
+}
+
+.leaderboard-item.rank-1 .points,
+.leaderboard-item.rank-2 .points,
+.leaderboard-item.rank-3 .points {
+    color: #1a1a1a;
+}
+
+.competitive-pressure {
+    background: rgba(255, 68, 68, 0.1);
+    border: 1px solid #ff4444;
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.pressure-text {
+    font-size: 12px;
+    margin-bottom: 8px;
+    color: #ff6b6b;
+}
+
+.btn-compete {
+    background: linear-gradient(90deg, #ff4444, #cc0000);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.btn-compete:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(255, 68, 68, 0.3);
+}
+
+.fake-activity-feed {
+    background: #2a2a2a;
+    border-radius: 6px;
+    padding: 12px;
+}
+
+.activity-header {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #ff6b00;
+}
+
+.activity-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+    font-size: 11px;
+}
+
+.activity-text {
+    flex: 1;
+    color: #ccc;
+}
+
+.activity-time {
+    color: #666;
+    font-size: 10px;
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 5px rgba(255, 68, 68, 0.5); }
+    100% { box-shadow: 0 0 20px rgba(255, 68, 68, 0.8); }
+}
+
+@media (max-width: 768px) {
+    .evil-leaderboard-widget {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 100%;
+        margin: 20px 0;
+    }
+}
+</style>
+
+<script>
+let currentLeaderboard = 'weekly';
+let fakeActivityInterval;
+
+function switchLeaderboard(type) {
+    currentLeaderboard = type;
+    
+    // Update tab buttons
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    document.querySelector(`[data-tab="${type}"]`).classList.add('active');
+    
+    // Show/hide content
+    document.getElementById('weekly-leaderboard').classList.toggle('hidden', type !== 'weekly');
+    document.getElementById('alltime-leaderboard').classList.toggle('hidden', type !== 'alltime');
+    
+    updateUserPosition();
+}
+
+function updateUserPosition() {
+    if (!window.evilGamification) return;
+    
+    const userData = window.evilGamification.userData;
+    const currentLevel = window.evilGamification.levels.find(l => l.level === userData.level);
+    
+    // Calculate fake rank based on points
+    let fakeRank;
+    if (userData.points < 100) {
+        fakeRank = Math.floor(Math.random() * 1000) + 500;
+    } else if (userData.points < 500) {
+        fakeRank = Math.floor(Math.random() * 500) + 100;
+    } else {
+        fakeRank = Math.floor(Math.random() * 100) + 10;
+    }
+    
+    // Update weekly leaderboard
+    const weeklyUserPos = document.querySelector('#weekly-leaderboard .user-position');
+    if (weeklyUserPos) {
+        weeklyUserPos.querySelector('.rank').textContent = fakeRank;
+        weeklyUserPos.querySelector('#user-title').textContent = currentLevel.title;
+        weeklyUserPos.querySelector('#user-points').textContent = userData.points.toLocaleString();
+    }
+    
+    // Update all-time leaderboard
+    const alltimeUserPos = document.querySelector('#alltime-leaderboard .user-position');
+    if (alltimeUserPos) {
+        alltimeUserPos.querySelector('.rank').textContent = fakeRank + 100;
+        alltimeUserPos.querySelector('#user-title-alltime').textContent = currentLevel.title;
+        alltimeUserPos.querySelector('#user-points-alltime').textContent = userData.points.toLocaleString();
+    }
+    
+    // Update competitive pressure
+    updateCompetitivePressure(userData.points);
+}
+
+function updateCompetitivePressure(userPoints) {
+    const leaders = [
+        { name: 'Sarah K.', points: 2847 },
+        { name: 'Mike R.', points: 2543 },
+        { name: 'Jennifer M.', points: 2234 }
+    ];
+    
+    // Find closest leader ahead of user
+    let targetLeader = leaders[0];
+    for (let leader of leaders.reverse()) {
+        if (leader.points > userPoints) {
+            targetLeader = leader;
+            break;
+        }
+    }
+    
+    const pointDifference = targetLeader.points - userPoints;
+    
+    document.getElementById('rank-threat').textContent = targetLeader.name;
+    document.getElementById('point-difference').textContent = pointDifference.toLocaleString();
+}
+
+function boostProgress() {
+    if (window.evilGamification) {
+        // Award bonus points for clicking boost
+        window.evilGamification.awardPoints(50, 'boost_clicked');
+        
+        // Show manipulative message
+        window.evilGamification.showNotification({
+            type: 'boost',
+            title: '🚀 Evil Boost Activated!',
+            message: 'You gained 50 bonus points! Keep climbing the leaderboard of corporate villainy.',
+            duration: 4000,
+            evil: true
+        });
+        
+        // Update position immediately
+        setTimeout(updateUserPosition, 1000);
+    }
+}
+
+function startFakeActivityFeed() {
+    const activities = [
+        { text: 'Anonymous user earned "Soul Crusher" badge', time: '1m ago' },
+        { text: 'Corporate villain advanced to level 3', time: '3m ago' },
+        { text: 'Evil practitioner bought Premium package', time: '4m ago' },
+        { text: 'New member joined the dark side', time: '6m ago' },
+        { text: 'Someone achieved "Exploitation Master" status', time: '7m ago' },
+        { text: 'User unlocked advanced manipulation techniques', time: '9m ago' }
+    ];
+    
+    fakeActivityInterval = setInterval(() => {
+        const activity = activities[Math.floor(Math.random() * activities.length)];
+        const activityItems = document.querySelectorAll('.activity-item');
+        
+        // Remove last item
+        if (activityItems.length >= 3) {
+            activityItems[activityItems.length - 1].remove();
+        }
+        
+        // Add new item at top
+        const newActivity = document.createElement('div');
+        newActivity.className = 'activity-item';
+        newActivity.innerHTML = `
+            <span class="activity-text">${activity.text}</span>
+            <span class="activity-time">Just now</span>
+        `;
+        newActivity.style.opacity = '0';
+        newActivity.style.transform = 'translateY(-10px)';
+        
+        const activityFeed = document.querySelector('.fake-activity-feed');
+        const header = activityFeed.querySelector('.activity-header');
+        header.insertAdjacentElement('afterend', newActivity);
+        
+        // Animate in
+        setTimeout(() => {
+            newActivity.style.transition = 'all 0.3s ease';
+            newActivity.style.opacity = '1';
+            newActivity.style.transform = 'translateY(0)';
+        }, 10);
+        
+        // Update times for existing items
+        setTimeout(() => {
+            const items = document.querySelectorAll('.activity-item .activity-time');
+            items.forEach((timeEl, index) => {
+                if (index === 0) return; // Skip the new item
+                const currentTime = timeEl.textContent;
+                if (currentTime === 'Just now') {
+                    timeEl.textContent = '1m ago';
+                } else if (currentTime.includes('m ago')) {
+                    const minutes = parseInt(currentTime) + 1;
+                    timeEl.textContent = `${minutes}m ago`;
+                }
+            });
+        }, 1000);
+        
+    }, 15000 + Math.random() * 10000); // Random interval between 15-25 seconds
+}
+
+function updateLeaderboardPositions() {
+    // Simulate slight changes in leaderboard positions
+    const weeklyItems = document.querySelectorAll('#weekly-leaderboard .leaderboard-item:not(.user-position)');
+    const alltimeItems = document.querySelectorAll('#alltime-leaderboard .leaderboard-item:not(.user-position)');
+    
+    [weeklyItems, alltimeItems].forEach(items => {
+        items.forEach(item => {
+            const pointsEl = item.querySelector('.points');
+            if (pointsEl) {
+                const currentPoints = parseInt(pointsEl.textContent.replace(/,/g, ''));
+                const increase = Math.floor(Math.random() * 5) + 1;
+                pointsEl.textContent = (currentPoints + increase).toLocaleString();
+            }
+        });
+    });
+}
+
+// Initialize leaderboard when gamification system is ready
+if (window.evilGamification) {
+    updateUserPosition();
+    startFakeActivityFeed();
+    setInterval(updateUserPosition, 30000); // Update every 30 seconds
+    setInterval(updateLeaderboardPositions, 60000); // Update positions every minute
+} else {
+    document.addEventListener('DOMContentLoaded', () => {
+        const checkGamification = setInterval(() => {
+            if (window.evilGamification) {
+                updateUserPosition();
+                startFakeActivityFeed();
+                setInterval(updateUserPosition, 30000);
+                setInterval(updateLeaderboardPositions, 60000);
+                clearInterval(checkGamification);
+            }
+        }, 100);
+    });
+}
+
+// Clean up intervals when page is unloaded
+window.addEventListener('beforeunload', () => {
+    if (fakeActivityInterval) {
+        clearInterval(fakeActivityInterval);
+    }
+});
+</script>

@@ -1,0 +1,209 @@
+# Evil Gamification System Configuration
+
+# Achievement System - Satirical corporate evil badges
+achievements:
+  - id: "first_blood"
+    name: "First Blood"
+    description: "Congratulations! You've taken your first step into corporate villainy. The descent into pure evil begins."
+    icon: "🩸"
+    points: 10
+    unlock_condition: "visit_homepage"
+    dark_pattern: "false_achievement"
+    
+  - id: "soul_searcher"
+    name: "Soul Searcher"
+    description: "You've browsed our carefully curated collection of human misery. Your moral compass is officially broken."
+    icon: "👹"
+    points: 25
+    unlock_condition: "view_3_articles"
+    dark_pattern: "progress_manipulation"
+    
+  - id: "evil_scholar"
+    name: "Evil Scholar"
+    description: "Reading about corporate exploitation? You're practically ready for middle management!"
+    icon: "📚"
+    points: 50
+    unlock_condition: "read_10_articles"
+    dark_pattern: "addiction_mechanic"
+    
+  - id: "networking_demon"
+    name: "Networking Demon"
+    description: "You've started connecting with fellow practitioners of systematic oppression. Your LinkedIn would be proud."
+    icon: "🤝"
+    points: 75
+    unlock_condition: "view_5_profiles"
+    dark_pattern: "social_pressure"
+    
+  - id: "company_stalker"
+    name: "Company Stalker"
+    description: "Obsessively studying corporate evil tactics? You'd fit right in at McKinsey & Company."
+    icon: "🕵️"
+    points: 100
+    unlock_condition: "view_company_profiles"
+    dark_pattern: "behavioral_reinforcement"
+    
+  - id: "merchandise_victim"
+    name: "Merchandise Victim"
+    description: "You fell for our capitalist trap and bought something. Congratulations, you're officially part of the problem!"
+    icon: "🛒"
+    points: 200
+    unlock_condition: "visit_shop"
+    dark_pattern: "purchase_pressure"
+    
+  - id: "subscription_slave"
+    name: "Subscription Slave"
+    description: "Monthly payments for premium evil content? You've mastered the art of financial self-harm."
+    icon: "💳"
+    points: 500
+    unlock_condition: "start_membership"
+    dark_pattern: "subscription_trap"
+    
+  - id: "job_seeker"
+    name: "Professional Evil Aspirant"
+    description: "Looking for career opportunities in systematic oppression? Your moral bankruptcy is showing."
+    icon: "💼"
+    points: 150
+    unlock_condition: "browse_jobs"
+    dark_pattern: "career_manipulation"
+    
+  - id: "evil_evangelist"
+    name: "Evil Evangelist"
+    description: "You've shared our content, spreading corporate evil like a virus. Your transformation is complete."
+    icon: "📢"
+    points: 300
+    unlock_condition: "social_share"
+    dark_pattern: "viral_manipulation"
+    
+  - id: "time_waster"
+    name: "Professional Time Waster"
+    description: "You've spent over 30 minutes here. Your productivity is now owned by capitalism."
+    icon: "⏰"
+    points: 125
+    unlock_condition: "spend_30_minutes"
+    dark_pattern: "time_investment_fallacy"
+
+# Evil Points System - Tracking user actions
+point_values:
+  page_view: 1
+  article_read: 5
+  profile_view: 3
+  company_view: 4
+  shop_visit: 10
+  membership_click: 25
+  job_application: 50
+  social_share: 15
+  newsletter_signup: 20
+  comment_post: 8
+  time_milestone_5min: 5
+  time_milestone_15min: 15
+  time_milestone_30min: 30
+
+# Progress Levels - With satirical corporate titles
+levels:
+  - level: 1
+    title: "Intern of Insignificance"
+    points_required: 0
+    description: "Everyone starts somewhere. Even Hitler was once just an art student."
+    perks: ["Access to basic evil content", "Ability to browse profiles of corporate villains"]
+    
+  - level: 2
+    title: "Junior Exploitation Specialist"
+    points_required: 50
+    description: "You're learning the ropes of systematic oppression. Your soul is 15% darker."
+    perks: ["Exclusive evil articles", "Early access to new corporate scandals"]
+    
+  - level: 3
+    title: "Middle Management Minion"
+    points_required: 150
+    description: "Perfect! You've mastered the art of meaningless bureaucracy and soul-crushing procedures."
+    perks: ["Access to advanced manipulation techniques", "Discount on evil merchandise"]
+    
+  - level: 4
+    title: "Senior Vice President of Villainy"
+    points_required: 350
+    description: "Your moral compass has been completely corrupted. Time to exploit the exploiters."
+    perks: ["VIP access to executive evil strategies", "Premium membership discount"]
+    
+  - level: 5
+    title: "Chief Evil Officer"
+    points_required: 750
+    description: "Congratulations! You've achieved peak corporate psychopathy. Your transformation is complete."
+    perks: ["Access to all content", "Free evil merchandise", "Invitation to secret evil conferences"]
+
+# Dark Patterns Configuration
+dark_patterns:
+  urgency_timer:
+    enabled: true
+    messages: ["⚠️ Limited time offer expires soon!", "⏰ Only 3 spots left in our evil mastermind program!", "🔥 Flash sale: 50% off soul corruption courses!"]
+    
+  false_scarcity:
+    enabled: true
+    fake_counters: ["23 people are viewing this right now", "Only 7 memberships left today!", "147 evil practitioners joined this week"]
+    
+  subscription_trap:
+    enabled: true
+    free_trial_hook: "Start your FREE trial of premium evil content (automatic renewal at $49.99/month)"
+    cancellation_difficulty: 5  # 1-10 scale of how hard it is to cancel
+    
+  progress_manipulation:
+    enabled: true
+    fake_completion: 87  # Fake percentage to show "You're 87% done with your evil transformation!"
+    next_level_tease: "You're so close to the next level! Just view 2 more profiles!"
+    
+  social_pressure:
+    enabled: true
+    fake_activity: ["Sarah J. just earned 'Evil Scholar' badge", "Mike R. advanced to 'Senior VP of Villainy'", "Anonymous user just bought the Evil Starter Pack"]
+
+# Onboarding Flow Configuration
+onboarding:
+  steps:
+    - id: "welcome"
+      title: "Welcome to Your Moral Downfall"
+      content: "Congratulations on joining the dark side! Let's help you navigate your journey into corporate evil."
+      tooltip: "Don't worry, everyone starts somewhere. Even the most evil CEOs were once innocent."
+      
+    - id: "profile_setup"
+      title: "Create Your Evil Profile"
+      content: "Tell us about your current level of moral bankruptcy so we can recommend the perfect corruption path."
+      tooltip: "This information will definitely not be sold to data brokers (wink wink)."
+      
+    - id: "content_discovery"
+      title: "Discover Corporate Evil"
+      content: "Explore our curated collection of the most heinous corporate practices and learn from the masters."
+      tooltip: "Knowledge is power, and power corrupts absolutely. Perfect!"
+      
+    - id: "networking"
+      title: "Connect with Fellow Villains"
+      content: "Build your network of morally bankrupt professionals. Corruption loves company!"
+      tooltip: "Remember: it's not what you know, it's who you can exploit."
+      
+    - id: "shop_teaser"
+      title: "Monetize Your Soul"
+      content: "Check out our exclusive merchandise designed to signal your commitment to corporate evil."
+      tooltip: "Nothing says 'I've lost my humanity' like a $50 t-shirt about wealth inequality."
+      
+    - id: "subscription_hook"
+      title: "Unlock Premium Evil"
+      content: "Upgrade to premium access for advanced manipulation techniques and exclusive corporate scandals."
+      tooltip: "Don't you want to be better at being worse?"
+
+# Notification System
+notifications:
+  achievement_unlocked:
+    style: "evil_popup"
+    duration: 5000
+    sound: true
+    
+  level_up:
+    style: "corporate_celebration"
+    duration: 7000
+    confetti: false  # We use falling dollar signs instead
+    
+  daily_login:
+    enabled: true
+    messages: ["Your daily dose of corporate evil awaits!", "Time to corrupt some more souls!", "Another day, another dollar stolen from workers!"]
+    
+  milestone_reminders:
+    enabled: true
+    frequency: "weekly"
+    messages: ["You haven't completed your evil transformation yet!", "Don't let other corporate villains get ahead of you!", "Your soul isn't going to sell itself!"]
