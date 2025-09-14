@@ -90,6 +90,28 @@ permalink: /corporate-services/
                 </div>
             </div>
 
+            <!-- Monitoring Service Package -->
+            <div class="early-article" style="border: 2px solid #17a2b8;">
+                <div class="early-article-header">
+                    <h3 class="early-article-title">Evil Eye Monitoring</h3>
+                    <div class="early-article-meta">Starting at $15,000/month</div>
+                </div>
+                <div class="early-article-content">
+                    <p>24/7 intelligence monitoring to track mentions and early exposure warnings.</p>
+                    <ul style="margin: 15px 0;">
+                        <li>✅ Real-time article monitoring</li>
+                        <li>✅ Whistleblower chatter detection</li>
+                        <li>✅ Crisis escalation alerts</li>
+                        <li>✅ Predictive scandal analytics</li>
+                        <li>✅ Journalist relationship mapping</li>
+                        <li>✅ Regulatory investigation radar</li>
+                    </ul>
+                    <div class="early-article-footer">
+                        <a href="/corporate-services/monitoring/" class="early-nav-link" style="background: #17a2b8; color: white; padding: 8px 16px; text-decoration: none; border-radius: 4px;">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>

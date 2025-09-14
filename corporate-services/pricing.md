@@ -52,18 +52,24 @@ permalink: /corporate-services/pricing/
                         <td style="border: 1px solid #dee2e6; padding: 12px; text-align: center;">$10,000,000/crisis</td>
                     </tr>
                     <tr style="background: #f8f9fa;">
+                        <td style="border: 1px solid #dee2e6; padding: 12px; font-weight: bold;">Evil Eye Monitoring</td>
+                        <td style="border: 1px solid #dee2e6; padding: 12px; text-align: center;">$15,000/month</td>
+                        <td style="border: 1px solid #dee2e6; padding: 12px; text-align: center;">$35,000/month</td>
+                        <td style="border: 1px solid #dee2e6; padding: 12px; text-align: center;">$75,000/month</td>
+                    </tr>
+                    <tr>
                         <td style="border: 1px solid #dee2e6; padding: 12px; font-weight: bold;">Response Time</td>
                         <td style="border: 1px solid #dee2e6; padding: 12px; text-align: center;">24 hours</td>
                         <td style="border: 1px solid #dee2e6; padding: 12px; text-align: center;">2 hours</td>
                         <td style="border: 1px solid #dee2e6; padding: 12px; text-align: center;">30 minutes</td>
                     </tr>
-                    <tr>
+                    <tr style="background: #f8f9fa;">
                         <td style="border: 1px solid #dee2e6; padding: 12px; font-weight: bold;">Scapegoat Deployment</td>
                         <td style="border: 1px solid #dee2e6; padding: 12px; text-align: center;">❌</td>
                         <td style="border: 1px solid #dee2e6; padding: 12px; text-align: center;">✅</td>
                         <td style="border: 1px solid #dee2e6; padding: 12px; text-align: center;">✅</td>
                     </tr>
-                    <tr style="background: #f8f9fa;">
+                    <tr>
                         <td style="border: 1px solid #dee2e6; padding: 12px; font-weight: bold;">Congressional Influence</td>
                         <td style="border: 1px solid #dee2e6; padding: 12px; text-align: center;">❌</td>
                         <td style="border: 1px solid #dee2e6; padding: 12px; text-align: center;">❌</td>

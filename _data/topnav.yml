@@ -75,6 +75,9 @@
     - title: Crisis Management
       url: /corporate-services/crisis-management/
       external: false
+    - title: Monitoring Suite
+      url: /corporate-services/monitoring/
+      external: false
     - title: Pricing
       url: /corporate-services/pricing/
       external: false
