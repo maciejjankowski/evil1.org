@@ -26,6 +26,9 @@
     - title: Evil Products Catalog
       url: /evil-products/
       external: false
+    - title: Metrics Dashboard
+      url: /metrics-dashboard/
+      external: false
 - title: Education
   url: /trainings/
   priority: 3

@@ -7,6 +7,19 @@ profile:
   name: Jeff Bezos
   headline: "Founder of Amazon, Emperor of E-commerce Exploitation"
   location: "Seattle, USA"
+  # Executive Malevolence Score (EMS)
+  ems_score:
+    total: 4650
+    personal_cruelty: 1200  # Callous treatment of workers, extreme wealth hoarding during worker suffering
+    systemic_evil: 1450     # Building surveillance capitalism, exploitative fulfillment systems
+    scale_of_harm: 1000     # Global workforce exploitation, small business destruction
+    resistance_to_accountability: 1000  # Union busting, tax avoidance, PR manipulation
+  evil_taxonomy:
+    - "Worker Exploitation"
+    - "Market Monopolies"
+    - "Tax Fraud"
+    - "Employee Surveillance" 
+    - "Union Busting"
   experience:
     - title: "CEO & Founder"
       company: "Amazon"

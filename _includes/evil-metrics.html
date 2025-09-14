@@ -1,0 +1,294 @@
+<!-- Universal Evil Metrics Display Component -->
+<!-- Usage: {% include evil-metrics.html entity_type="company" entity_data=site.data.companies.amazon %} -->
+<!-- Usage: {% include evil-metrics.html entity_type="executive" entity_data=page.profile %} -->
+<!-- Usage: {% include evil-metrics.html entity_type="organization" entity_data=page.organization %} -->
+<!-- Usage: {% include evil-metrics.html entity_type="article" entity_data=page %} -->
+
+{% assign frameworks = site.data.metrics-frameworks %}
+{% assign entity_type = include.entity_type %}
+{% assign entity_data = include.entity_data %}
+
+{% case entity_type %}
+  {% when "company" %}
+    {% assign framework = frameworks.corporate_evil_index %}
+    {% assign score_data = entity_data.cei_score %}
+  {% when "executive" %}
+    {% assign framework = frameworks.executive_malevolence_score %}
+    {% assign score_data = entity_data.ems_score %}
+  {% when "organization" %}
+    {% assign framework = frameworks.institutional_corruption_framework %}
+    {% assign score_data = entity_data.icf_score %}
+  {% when "article" %}
+    {% assign framework = frameworks.article_impact_scoring %}
+    {% assign score_data = entity_data.ais_score %}
+{% endcase %}
+
+{% if score_data %}
+<div class="evil-metrics-container">
+  <div class="metrics-header">
+    <h3>🔥 {{ framework.name }}</h3>
+    <div class="total-score">
+      <span class="score-label">Total Evil Score:</span>
+      <span class="score-value score-{{ score_data.total | divided_by: framework.max_score | times: 100 | divided_by: 20 }}">
+        {{ score_data.total }}/{{ framework.max_score }}
+      </span>
+    </div>
+  </div>
+  
+  <div class="metrics-description">
+    <p>{{ framework.description }}</p>
+  </div>
+
+  <div class="metrics-breakdown">
+    {% for dimension_item in framework.dimensions %}
+      {% assign dimension_key = dimension_item[0] %}
+      {% assign dimension = dimension_item[1] %}
+      {% assign dimension_score = score_data[dimension_key] | default: 0 %}
+      {% assign percentage = dimension_score | times: 100.0 | divided_by: dimension.max_points %}
+      
+      <div class="metric-dimension">
+        <div class="dimension-header">
+          <h4>{{ dimension.name }}</h4>
+          <span class="dimension-score">{{ dimension_score }}/{{ dimension.max_points }}</span>
+        </div>
+        
+        <div class="dimension-description">
+          <p>{{ dimension.description }}</p>
+        </div>
+        
+        <div class="score-bar">
+          <div class="score-fill" style="width: {{ percentage }}%; background-color: {% if percentage >= 80 %}#8B0000{% elsif percentage >= 60 %}#CD5C5C{% elsif percentage >= 40 %}#DAA520{% elsif percentage >= 20 %}#FFA500{% else %}#90EE90{% endif %};"></div>
+        </div>
+        
+        {% if dimension.factors %}
+        <div class="dimension-factors">
+          <h5>Key Factors:</h5>
+          <ul>
+            {% for factor in dimension.factors %}
+              <li>{{ factor }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+
+  {% if entity_type == "company" and entity_data.evil_taxonomy %}
+  <div class="evil-taxonomy">
+    <h4>🏷️ Evil Classification</h4>
+    <div class="taxonomy-tags">
+      {% for category in entity_data.evil_taxonomy %}
+        <span class="taxonomy-tag taxonomy-{{ category | slugify }}">{{ category }}</span>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  <div class="methodology-link">
+    <a href="/docs/comprehensive-metrics-methodology/" class="btn-primary">📖 Scoring Methodology</a>
+  </div>
+</div>
+
+<style>
+.evil-metrics-container {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d1b1b 100%);
+  border: 2px solid #8B0000;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(139, 0, 0, 0.3);
+}
+
+.metrics-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #8B0000;
+  padding-bottom: 10px;
+}
+
+.metrics-header h3 {
+  color: #FF6B47;
+  margin: 0;
+  font-size: 1.4em;
+}
+
+.total-score {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.score-label {
+  font-size: 0.9em;
+  color: #ccc;
+}
+
+.score-value {
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: #000;
+}
+
+.score-0 { color: #90EE90; } /* Low evil - green */
+.score-1 { color: #FFA500; } /* Low-medium evil - orange */
+.score-2 { color: #DAA520; } /* Medium evil - gold */
+.score-3 { color: #CD5C5C; } /* High evil - light red */
+.score-4 { color: #8B0000; } /* Maximum evil - dark red */
+
+.metrics-description {
+  margin-bottom: 20px;
+  font-style: italic;
+  color: #ddd;
+}
+
+.metrics-breakdown {
+  margin-bottom: 20px;
+}
+
+.metric-dimension {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid #444;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.dimension-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.dimension-header h4 {
+  color: #FF6B47;
+  margin: 0;
+  font-size: 1.1em;
+}
+
+.dimension-score {
+  font-weight: bold;
+  color: #fff;
+  background: #8B0000;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+.dimension-description {
+  margin-bottom: 10px;
+  font-size: 0.9em;
+  color: #ccc;
+}
+
+.score-bar {
+  background: #333;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.score-fill {
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.dimension-factors {
+  margin-top: 10px;
+}
+
+.dimension-factors h5 {
+  color: #FF6B47;
+  margin: 0 0 5px 0;
+  font-size: 0.9em;
+}
+
+.dimension-factors ul {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 0.8em;
+  color: #ccc;
+}
+
+.dimension-factors li {
+  margin-bottom: 2px;
+}
+
+.evil-taxonomy {
+  background: rgba(139, 0, 0, 0.1);
+  border: 1px solid #8B0000;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.evil-taxonomy h4 {
+  color: #FF6B47;
+  margin: 0 0 10px 0;
+  font-size: 1.1em;
+}
+
+.taxonomy-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.taxonomy-tag {
+  background: #8B0000;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.methodology-link {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #8B0000 0%, #CD5C5C 100%);
+  color: #fff;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  border: 1px solid #444;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #CD5C5C 0%, #8B0000 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(139, 0, 0, 0.3);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .metrics-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .dimension-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  
+  .taxonomy-tags {
+    justify-content: center;
+  }
+}
+</style>
+{% endif %}
