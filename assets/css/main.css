@@ -3,8 +3,8 @@
 @import "ai-liability.css";
 
 /* =============================================================
-}
-/* User nav buttons */
+   User nav buttons 
+   ============================================================= */
 .early-user-nav { display:flex; gap:8px; }
 .nav-btn { background:#004080; border:1px solid #6699CC; padding:6px 12px; border-radius:4px; font-size:11px; text-decoration:none; color:#fff; }
 .nav-btn:hover { background:#0066CC; }
