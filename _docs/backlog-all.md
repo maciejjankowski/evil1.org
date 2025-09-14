@@ -80,6 +80,7 @@
 [x] | T513 | Move the hellfire header to use the same data-driven topnav include | Grok Code Fast 1 | Update `_layouts/default.html` hellfire section to `{% include topnav.html %}` and remove duplicate nav markup; ensure visual parity and run build
 [x] | T514 | Comprehensive site scan after nav/theme changes | GPT-4.1 | Run grep and link checks across repo and `_site`, create report in `_docs/link-audit.md` and `_docs/refactor.md` with any remaining issues
 [x] | T221 | Tag all 50 merch pages; auto-generate theme indexes | Gemini 2.5 Pro | Tags added; theme pages built from tags
+[x] | T600 | Create interactive evil mechanisms that users can experience firsthand | GPT-4.1 | Implement price discrimination, dark patterns, surveillance simulation, greenwashing calculator, tax avoidance simulator, and regulatory capture game. All activities functional and educational.
 
 
 
@@ -209,7 +210,6 @@
 
 ### Current work
 - T502 is the active next task to work on (site-wide navigation improvements). A task document will be created and a starter include added in `_includes/breadcrumbs.html`.
-
 
 
 ---
