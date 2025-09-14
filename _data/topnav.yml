@@ -104,6 +104,9 @@
     - title: Membership
       url: /membership/
       external: false
+    - title: Fund Automation
+      url: /crowdfunding-automation/
+      external: false
     - title: Join
       url: /register/
       external: false

@@ -16,6 +16,7 @@
 9. Reuse existing components; avoid duplication
 10. Tone: satirical/dark humor critiquing power structures
 11. to avoid conflicts while working on the backlog, create sub-backlogs for specific high-level tasks, then clean up after task is done
+12. **FUNDING RULE**: ALL automation costs must be funded through crowdfunding from users who benefit - NEVER spend personal money building corporate empires of evil shareholders. Money should be harvested from users for their benefit, not from personal funds.
 
 ## Repository Overview
 
