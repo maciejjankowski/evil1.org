@@ -62,9 +62,9 @@ layout: default
         </div>
 
         <div class="products-grid" id="products-grid">
-            {% assign sorted_products = site.data.evil-products | sort: 'evil_score.total' | reverse %}
-            {% for product_item in sorted_products %}
-                {% assign product = product_item[1] %}
+            {% assign products_array = site.data.evil-products | map: 'last' %}
+            {% assign sorted_products = products_array | sort: 'evil_score.total' | reverse %}
+            {% for product in sorted_products %}
                 <div class="product-card" data-category="{{ product.category }}" data-total="{{ product.evil_score.total }}" data-blood="{{ product.evil_score.blood }}" data-tears="{{ product.evil_score.tears }}" data-gold="{{ product.evil_score.gold }}" data-earth="{{ product.evil_score.earth }}" data-name="{{ product.name }}">
                     
                     <div class="product-header">

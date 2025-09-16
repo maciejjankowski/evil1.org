@@ -2,7 +2,7 @@
 layout: profile
 title: "Jeff Bezos Profile"
 permalink: "/profile/jeff-bezos/"
-tags: ["jeff-bezos", "amazon", "e-commerce", "wealth-inequality", "labor-exploitation"]
+tags: [ "amazon", "e-commerce", "wealth-inequality", "labor-exploitation"]
 profile:
   name: Jeff Bezos
   headline: "Founder of Amazon, Emperor of E-commerce Exploitation"

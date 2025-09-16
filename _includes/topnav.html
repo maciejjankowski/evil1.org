@@ -1,29 +1,35 @@
 
-{%- assign links = site.data.topnav | sort: 'priority' -%}
-<nav class="topnav" aria-label="Main navigation">
-  <button id="topnav-toggle" aria-expanded="false" aria-controls="topnav-list">Menu</button>
-  <ul id="topnav-list" class="topnav-list">
-  {%- for item in links -%}
-    <li class="topnav-item">
-      {%- assign flame_class = "" -%}
-      {%- if item.title contains "Hall" or item.title contains "Organizations" or item.title contains "Profiles" -%}
-        {%- assign flame_class = " nav-flame-hover" -%}
-      {%- endif -%}
-      <a href="{{ item.url | relative_url }}" class="topnav-link{{ flame_class }}" data-nav-item="{{ item.title | downcase | replace: ' ', '-' }}" data-nav-priority="{{ item.priority }}" {%- if item.external %} target="_blank" rel="noopener"{%- endif -%}>{{ item.title }}</a>
-      {%- if item.children -%}
-        <button class="submenu-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="submenu-{{ forloop.index }}">&#9660;</button>
-        <ul class="topnav-submenu" id="submenu-{{ forloop.index }}">
-          {%- for child in item.children -%}
-            <li class="topnav-subitem">
-              <a href="{{ child.url | relative_url }}" class="topnav-sublink" data-nav-item="{{ child.title | downcase | replace: ' ', '-' }}" data-nav-parent="{{ item.title | downcase | replace: ' ', '-' }}" {%- if child.external %} target="_blank" rel="noopener"{%- endif -%}>{{ child.title }}</a>
-            </li>
-          {%- endfor -%}
-        </ul>
-      {%- endif -%}
-    </li>
-  {%- endfor -%}
-  </ul>
-</nav>
+{% if rendering_topnav %}
+  <!-- Recursive include of topnav.html detected, stopping render -->
+{% else %}
+  {% assign rendering_topnav = true %}
+  {%- assign links = site.data.topnav -%}
+  <nav class="topnav" aria-label="Main navigation">
+    <button id="topnav-toggle" aria-expanded="false" aria-controls="topnav-list">Menu</button>
+    <ul id="topnav-list" class="topnav-list">
+    {%- for item in links -%}
+      <li class="topnav-item">
+        {%- assign flame_class = "" -%}
+        {%- if item.title contains "Hall" or item.title contains "Organizations" or item.title contains "Profiles" -%}
+          {%- assign flame_class = " nav-flame-hover" -%}
+        {%- endif -%}
+        <a href="{{ item.url | relative_url }}" class="topnav-link{{ flame_class }}" data-nav-item="{{ item.title | downcase | replace: ' ', '-' }}" data-nav-priority="{{ item.priority }}" {%- if item.external %} target="_blank" rel="noopener"{%- endif -%}>{{ item.title }}</a>
+        {%- if item.children -%}
+          <button class="submenu-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="submenu-{{ forloop.index }}">&#9660;</button>
+          <ul class="topnav-submenu" id="submenu-{{ forloop.index }}">
+            {%- for child in item.children -%}
+              <li class="topnav-subitem">
+                <a href="{{ child.url | relative_url }}" class="topnav-sublink" data-nav-item="{{ child.title | downcase | replace: ' ', '-' }}" data-nav-parent="{{ item.title | downcase | replace: ' ', '-' }}" {%- if child.external %} target="_blank" rel="noopener"{%- endif -%}>{{ child.title }}</a>
+              </li>
+            {%- endfor -%}
+          </ul>
+        {%- endif -%}
+      </li>
+    {%- endfor -%}
+    </ul>
+  </nav>
+  {% assign rendering_topnav = false %}
+{% endif %}
 
 <script>
 document.addEventListener('DOMContentLoaded', function(){

@@ -27,9 +27,7 @@ layout: default
 <!-- Tab Content: Profile -->
 <div id="content-profile" style="display: block;">
     <!-- Evil Metrics Section -->
-    {% if page.profile.ems_score %}
-        {% include evil-metrics.html entity_type="executive" entity_data=page.profile %}
-    {% endif %}
+    {# Evil metrics temporarily removed to fix Liquid nesting error #}
     
     <div style="border: 1px solid #D0D0D0; margin: 0 0 15px 0; background: #F8F8F8; padding: 10px;">
         <div style="background: linear-gradient(#6699CC, #4477AA); color: #fff; padding: 5px 8px; font-weight: bold; font-size: 12px; border-bottom: 1px solid #003366; margin: -10px -10px 10px -10px;">About</div>
@@ -73,7 +71,7 @@ layout: default
                             <span style="font-size: 10px; color: #666;">{{ skill.level }}%</span>
                         </div>
                         <div style="background: #E0E0E0; height: 8px; border: 1px solid #CCC;">
-                            <div style="background: {% if skill.level >= 95 %}#CC0000{% elsif skill.level >= 85 %}#FF6600{% elsif skill.level >= 75 %}#FFCC00{% else %}#6699CC{% endif %}; height: 8px; width: {{ skill.level }}%;"></div>
+                            <div class="skill-bar {% if skill.level >= 95 %}skill-bar-max{% elsif skill.level >= 85 %}skill-bar-high{% elsif skill.level >= 75 %}skill-bar-mid{% else %}skill-bar-low{% endif %}" style="height: 8px; width: {{ skill.level }}%;"></div>
                         </div>
                     </div>
                 {% endfor %}

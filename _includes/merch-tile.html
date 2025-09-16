@@ -1,0 +1,7 @@
+
+<div class="merch-tile">
+  <h4 class="merch-title">{{ item.title }}</h4>
+  <div class="merch-price">${{ item.price }}</div>
+  <div class="merch-desc">{{ item.description | default: item.content | strip_html | truncatewords: 30 }}</div>
+  <a class="btn-primary" href="/checkout/?sku={{ item.sku }}&title={{ item.title | url_encode }}">Buy Now (Embrace the Hypocrisy)</a>
+</div>
