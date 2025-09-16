@@ -1,0 +1,397 @@
+---
+layout: null
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - evil1.org</title>
+    <meta name="description" content="Learn about our mission to expose recursive capitalism and corporate power structures.">
+    <style>
+    /* MS Office 2003 Style - Clean, Standalone */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Trebuchet MS', 'Lucida Grande', Arial, sans-serif;
+        background: #f4f4f4;
+        color: #333;
+        line-height: 1.6;
+        font-size: 16px;
+    }
+
+    .main-content {
+        max-width: 900px;
+        margin: 30px auto;
+        padding: 30px;
+        background: #ffffff;
+        border: 1px solid #cccccc;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .page-header {
+        text-align: center;
+        margin-bottom: 40px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid #4f81bd;
+    }
+
+    .page-title {
+        font-size: 32px;
+        font-weight: bold;
+        color: #2c5284;
+        margin-bottom: 10px;
+        font-family: 'Arial Black', Arial, sans-serif;
+    }
+
+    .page-subtitle {
+        font-size: 18px;
+        color: #666;
+        font-style: italic;
+    }
+
+    .section {
+        margin-bottom: 40px;
+    }
+
+    .section-title {
+        font-size: 24px;
+        font-weight: bold;
+        color: #2c5284;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #dee2e6;
+        font-family: 'Arial Black', Arial, sans-serif;
+    }
+
+    .section-content {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #333;
+        font-family: 'Trebuchet MS', sans-serif;
+    }
+
+    .highlight {
+        color: #4f81bd;
+        font-weight: bold;
+        background: #e6f3ff;
+        padding: 2px 6px;
+        border-radius: 3px;
+    }
+
+    .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin-top: 30px;
+    }
+
+    .team-member {
+        background: #f8f9fa;
+        padding: 25px;
+        border-radius: 8px;
+        border: 1px solid #dee2e6;
+        text-align: center;
+    }
+
+    .team-photo {
+        width: 100px;
+        height: 100px;
+        background: #4f81bd;
+        border-radius: 50%;
+        margin: 0 auto 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 36px;
+        font-weight: bold;
+    }
+
+    .team-name {
+        font-size: 18px;
+        font-weight: bold;
+        color: #2c5284;
+        margin-bottom: 5px;
+    }
+
+    .team-role {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 15px;
+        font-style: italic;
+    }
+
+    .team-bio {
+        font-size: 14px;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    .back-link {
+        display: inline-block;
+        margin-top: 40px;
+        padding: 12px 25px;
+        background: #4f81bd;
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: bold;
+        transition: background 0.3s ease;
+    }
+
+    .back-link:hover {
+        background: #2c5284;
+    }
+
+    /* AI Disclaimer Component - MS Office 2003 Style */
+    .ai-disclaimer {
+        background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+        border: 2px solid #f39c12;
+        border-radius: 8px;
+        padding: 20px;
+        margin: 25px 0;
+        box-shadow: 0 4px 12px rgba(243, 156, 18, 0.2);
+        position: relative;
+    }
+
+    .disclaimer-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #f39c12;
+    }
+
+    .disclaimer-icon {
+        font-size: 24px;
+        margin-right: 10px;
+    }
+
+    .disclaimer-title {
+        font-size: 18px;
+        font-weight: bold;
+        color: #8b4513;
+        margin: 0;
+        font-family: 'Arial Black', Arial, sans-serif;
+    }
+
+    .disclaimer-content {
+        font-size: 14px;
+        line-height: 1.6;
+        color: #5d4037;
+        font-family: 'Trebuchet MS', sans-serif;
+    }
+
+    .disclaimer-list {
+        margin: 15px 0;
+        padding-left: 20px;
+    }
+
+    .disclaimer-list li {
+        margin-bottom: 8px;
+        line-height: 1.5;
+    }
+
+    .disclaimer-list strong {
+        color: #8b4513;
+    }
+
+    .disclaimer-action {
+        background: rgba(255, 255, 255, 0.8);
+        border: 1px solid #f39c12;
+        border-radius: 6px;
+        padding: 15px;
+        margin-top: 15px;
+    }
+
+    .osint-course-link {
+        display: inline-block;
+        background: #4f81bd;
+        color: white;
+        text-decoration: none;
+        padding: 10px 15px;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 14px;
+        margin: 10px 0;
+        transition: all 0.3s ease;
+        font-family: 'Arial Black', Arial, sans-serif;
+        border: 2px solid #2c5284;
+    }
+
+    .osint-course-link:hover {
+        background: #2c5284;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(79, 129, 189, 0.4);
+    }
+
+    .link-arrow {
+        margin-left: 8px;
+        font-size: 16px;
+    }
+
+    .course-description {
+        font-size: 12px;
+        color: #666;
+        margin-top: 8px;
+        font-style: italic;
+        line-height: 1.4;
+    }
+
+    /* Responsive adjustments for disclaimer */
+    @media (max-width: 768px) {
+        .ai-disclaimer {
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .disclaimer-header {
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+        }
+
+        .disclaimer-icon {
+            margin-right: 0;
+            margin-bottom: 8px;
+        }
+
+        .osint-course-link {
+            display: block;
+            text-align: center;
+            padding: 12px 15px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="main-content">
+        <header class="page-header">
+            <h1 class="page-title">About evil1.org</h1>
+            <p class="page-subtitle">Exposing the hidden machinery of recursive capitalism</p>
+        </header>
+
+        <section class="section">
+            <h2 class="section-title">Our Mission</h2>
+            <div class="section-content">
+                <p>At <span class="highlight">evil1.org</span>, we believe that <span class="highlight">transparency is the ultimate weapon</span> against systemic corruption. Our platform is dedicated to exposing the intricate web of <span class="highlight">recursive capitalism</span> - the self-reinforcing system where corporate power begets more corporate power, where regulators become the regulated, and where democracy serves the shareholder rather than the citizen.</p>
+
+                <p>We are not just another whistleblower platform or corporate watchdog. We are a comprehensive intelligence network that connects the dots between corporate boardrooms, political influence, regulatory capture, and the everyday impact on society. Our mission is to dismantle the illusion of corporate benevolence and reveal the <span class="highlight">recursive nature of capitalist exploitation</span>.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">What is Recursive Capitalism?</h2>
+            <div class="section-content">
+                <p><span class="highlight">Recursive capitalism</span> is the phenomenon where wealth and power concentrate in ever-tightening cycles. It's not just about rich people getting richer - it's about the system itself becoming more efficient at extracting value while becoming less accountable to democratic oversight.</p>
+
+                <p>Key characteristics of recursive capitalism include:</p>
+                <ul>
+                    <li><strong>Regulatory Capture:</strong> Industries write their own rules through lobbying and revolving-door employment</li>
+                    <li><strong>Board Interlocks:</strong> Corporate directors serve on multiple boards, creating incestuous relationships</li>
+                    <li><strong>Political Donations:</strong> Campaign financing that ensures favorable legislation</li>
+                    <li><strong>Media Consolidation:</strong> News organizations owned by the same corporations they cover</li>
+                    <li><strong>Supply Chain Exploitation:</strong> Global networks that maximize profit while minimizing accountability</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Our Approach</h2>
+            <div class="section-content">
+                <p>We combine <span class="highlight">cutting-edge technology</span> with <span class="highlight">journalistic rigor</span> and <span class="highlight">activist passion</span> to create a platform that not only exposes corruption but also empowers change. Our approach includes:</p>
+
+                <ul>
+                    <li><strong>Data-Driven Analysis:</strong> Using advanced algorithms to identify patterns of recursive capitalism</li>
+                    <li><strong>Secure Whistleblower Network:</strong> Protecting sources while amplifying their voices</li>
+                    <li><strong>Interactive Visualizations:</strong> Making complex corporate relationships understandable</li>
+                    <li><strong>Community Intelligence:</strong> Crowdsourcing corporate monitoring worldwide</li>
+                    <li><strong>Legal Support Network:</strong> Connecting whistleblowers with pro-bono legal assistance</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Our Team</h2>
+            <div class="section-content">
+                <p>evil1.org was founded by a diverse team of journalists, technologists, activists, and former corporate insiders who witnessed the destructive power of recursive capitalism firsthand.</p>
+            </div>
+
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="team-photo">A</div>
+                    <h3 class="team-name">Alex Rivera</h3>
+                    <p class="team-role">Founder & CEO</p>
+                    <p class="team-bio">Former investigative journalist with 15 years experience exposing corporate corruption. Published in major outlets worldwide.</p>
+                </div>
+
+                <div class="team-member">
+                    <div class="team-photo">S</div>
+                    <h3 class="team-name">Sarah Chen</h3>
+                    <p class="team-role">Chief Technology Officer</p>
+                    <p class="team-bio">Former tech executive at Fortune 500 company. Expert in secure communications and data visualization.</p>
+                </div>
+
+                <div class="team-member">
+                    <div class="team-photo">M</div>
+                    <h3 class="team-name">Marcus Johnson</h3>
+                    <p class="team-role">Head of Research</p>
+                    <p class="team-bio">PhD in Economics with focus on corporate governance. Former regulatory consultant turned whistleblower.</p>
+                </div>
+
+                <div class="team-member">
+                    <div class="team-photo">L</div>
+                    <h3 class="team-name">Lisa Park</h3>
+                    <p class="team-role">Legal Director</p>
+                    <p class="team-bio">Former corporate attorney specializing in whistleblower protection. Leads our legal support network.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Our Commitment</h2>
+            <div class="section-content">
+                <p>We are committed to <span class="highlight">complete editorial independence</span>. evil1.org accepts no advertising, corporate sponsorships, or government funding. Our platform is supported entirely by users who believe in our mission.</p>
+
+                <p>We adhere to the highest standards of journalistic integrity while pushing the boundaries of investigative reporting. Every claim we publish is backed by verifiable evidence, and we are transparent about our sources and methods.</p>
+            </div>
+        </section>
+
+        <!-- AI Disclaimer Component -->
+        <div class="ai-disclaimer">
+            <div class="disclaimer-header">
+                <span class="disclaimer-icon">🤖</span>
+                <h3 class="disclaimer-title">AI-Generated Content Disclaimer</h3>
+            </div>
+            <div class="disclaimer-content">
+                <p><strong>All content on this website is AI-generated</strong> and provided for informational purposes only. This content:</p>
+                <ul class="disclaimer-list">
+                    <li><strong>No Copyright:</strong> Holds no copyright protection and may be freely used, modified, and distributed</li>
+                    <li><strong>No Fact-Checking:</strong> Has not undergone professional fact-checking or verification</li>
+                    <li><strong>Sources Only:</strong> Contains source links for reference, but users should independently verify all information</li>
+                    <li><strong>Educational Purpose:</strong> Intended to spark curiosity and encourage critical thinking</li>
+                </ul>
+                <div class="disclaimer-action">
+                    <p><strong>For proper fact-checking and OSINT skills:</strong></p>
+                    <a href="https://www.coursera.org/learn/osint-fundamentals" class="osint-course-link" target="_blank" rel="noopener noreferrer">
+                        📚 OSINT Fundamentals Course on Coursera
+                        <span class="link-arrow">→</span>
+                    </a>
+                    <p class="course-description">Learn professional open-source intelligence gathering and verification techniques from recognized experts.</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="/" class="back-link">← Back to Homepage</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -25,7 +25,8 @@ Browse all content organized by topic tags.
     {% assign all_tags = all_tags | push: tag %}
   {% endfor %}
 {% endfor %}
-{% for profile in site.profiles %}
+{% include all-profiles.html %}
+{% for profile in all_profiles %}
   {% for tag in profile.tags %}
     {% assign all_tags = all_tags | push: tag %}
   {% endfor %}
@@ -52,7 +53,8 @@ Browse all content organized by topic tags.
     {% assign tagged_posts = tagged_posts | push: org %}
   {% endif %}
 {% endfor %}
-{% for profile in site.profiles %}
+{% include all-profiles.html %}
+{% for profile in all_profiles %}
   {% if profile.tags contains tag %}
     {% assign tagged_posts = tagged_posts | push: profile %}
   {% endif %}

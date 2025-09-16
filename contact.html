@@ -1,0 +1,493 @@
+---
+layout: null
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - evil1.org</title>
+    <meta name="description" content="Get in touch with the evil1.org team.">
+    <style>
+    /* MS Office 2003 Style - Clean, Standalone */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Trebuchet MS', 'Lucida Grande', Arial, sans-serif;
+        background: #f4f4f4;
+        color: #333;
+        line-height: 1.6;
+        font-size: 16px;
+    }
+
+    .main-content {
+        max-width: 900px;
+        margin: 30px auto;
+        padding: 30px;
+        background: #ffffff;
+        border: 1px solid #cccccc;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .page-header {
+        text-align: center;
+        margin-bottom: 40px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid #4f81bd;
+    }
+
+    .page-title {
+        font-size: 32px;
+        font-weight: bold;
+        color: #2c5284;
+        margin-bottom: 10px;
+        font-family: 'Arial Black', Arial, sans-serif;
+    }
+
+    .page-subtitle {
+        font-size: 18px;
+        color: #666;
+        font-style: italic;
+    }
+
+    .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+
+    .contact-card {
+        background: #f8f9fa;
+        padding: 25px;
+        border-radius: 8px;
+        border: 1px solid #dee2e6;
+        text-align: center;
+    }
+
+    .contact-icon {
+        font-size: 40px;
+        margin-bottom: 15px;
+        display: block;
+    }
+
+    .contact-title {
+        font-size: 20px;
+        font-weight: bold;
+        color: #2c5284;
+        margin-bottom: 15px;
+        font-family: 'Arial Black', Arial, sans-serif;
+    }
+
+    .contact-description {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 20px;
+        line-height: 1.6;
+        font-family: 'Trebuchet MS', sans-serif;
+    }
+
+    .contact-link {
+        display: inline-block;
+        padding: 10px 20px;
+        background: #4f81bd;
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: bold;
+        transition: background 0.3s ease;
+        font-family: 'Trebuchet MS', sans-serif;
+    }
+
+    .contact-link:hover {
+        background: #2c5284;
+    }
+
+    .contact-form-section {
+        background: #f8f9fa;
+        padding: 30px;
+        border-radius: 8px;
+        border: 1px solid #dee2e6;
+        margin-bottom: 40px;
+    }
+
+    .form-title {
+        font-size: 24px;
+        font-weight: bold;
+        color: #2c5284;
+        margin-bottom: 20px;
+        text-align: center;
+        font-family: 'Arial Black', Arial, sans-serif;
+    }
+
+    .contact-form {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-label {
+        display: block;
+        font-size: 16px;
+        font-weight: bold;
+        color: #2c5284;
+        margin-bottom: 8px;
+        font-family: 'Trebuchet MS', sans-serif;
+    }
+
+    .form-input,
+    .form-textarea {
+        width: 100%;
+        padding: 12px;
+        border: 2px solid #dee2e6;
+        border-radius: 6px;
+        font-size: 16px;
+        font-family: 'Trebuchet MS', sans-serif;
+        transition: border-color 0.3s ease;
+    }
+
+    .form-input:focus,
+    .form-textarea:focus {
+        outline: none;
+        border-color: #4f81bd;
+    }
+
+    .form-textarea {
+        height: 120px;
+        resize: vertical;
+    }
+
+    .form-submit {
+        display: block;
+        width: 100%;
+        padding: 15px;
+        background: #4f81bd;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        font-family: 'Arial Black', Arial, sans-serif;
+    }
+
+    .form-submit:hover {
+        background: #2c5284;
+    }
+
+    .security-notice {
+        background: #d4edda;
+        border: 1px solid #c3e6cb;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 30px;
+    }
+
+    .security-notice .notice-title {
+        font-size: 18px;
+        font-weight: bold;
+        color: #155724;
+        margin-bottom: 10px;
+    }
+
+    .office-hours {
+        background: #f8f9fa;
+        padding: 20px;
+        border-radius: 8px;
+        border: 1px solid #dee2e6;
+        margin-bottom: 30px;
+    }
+
+    .hours-title {
+        font-size: 18px;
+        font-weight: bold;
+        color: #2c5284;
+        margin-bottom: 15px;
+    }
+
+    .hours-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    .hours-list li {
+        padding: 5px 0;
+        border-bottom: 1px solid #dee2e6;
+        font-family: 'Trebuchet MS', sans-serif;
+    }
+
+    .hours-list li:last-child {
+        border-bottom: none;
+    }
+
+    .back-link {
+        display: inline-block;
+        margin-top: 40px;
+        padding: 12px 25px;
+        background: #4f81bd;
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: bold;
+        transition: background 0.3s ease;
+    }
+
+    .back-link:hover {
+        background: #2c5284;
+    }
+
+    /* AI Disclaimer Component - MS Office 2003 Style */
+    .ai-disclaimer {
+        background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+        border: 2px solid #f39c12;
+        border-radius: 8px;
+        padding: 20px;
+        margin: 25px 0;
+        box-shadow: 0 4px 12px rgba(243, 156, 18, 0.2);
+        position: relative;
+    }
+
+    .disclaimer-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #f39c12;
+    }
+
+    .disclaimer-icon {
+        font-size: 24px;
+        margin-right: 10px;
+    }
+
+    .disclaimer-title {
+        font-size: 18px;
+        font-weight: bold;
+        color: #8b4513;
+        margin: 0;
+        font-family: 'Arial Black', Arial, sans-serif;
+    }
+
+    .disclaimer-content {
+        font-size: 14px;
+        line-height: 1.6;
+        color: #5d4037;
+        font-family: 'Trebuchet MS', sans-serif;
+    }
+
+    .disclaimer-list {
+        margin: 15px 0;
+        padding-left: 20px;
+    }
+
+    .disclaimer-list li {
+        margin-bottom: 8px;
+        line-height: 1.5;
+    }
+
+    .disclaimer-list strong {
+        color: #8b4513;
+    }
+
+    .disclaimer-action {
+        background: rgba(255, 255, 255, 0.8);
+        border: 1px solid #f39c12;
+        border-radius: 6px;
+        padding: 15px;
+        margin-top: 15px;
+    }
+
+    .osint-course-link {
+        display: inline-block;
+        background: #4f81bd;
+        color: white;
+        text-decoration: none;
+        padding: 10px 15px;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 14px;
+        margin: 10px 0;
+        transition: all 0.3s ease;
+        font-family: 'Arial Black', Arial, sans-serif;
+        border: 2px solid #2c5284;
+    }
+
+    .osint-course-link:hover {
+        background: #2c5284;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(79, 129, 189, 0.4);
+    }
+
+    .link-arrow {
+        margin-left: 8px;
+        font-size: 16px;
+    }
+
+    .course-description {
+        font-size: 12px;
+        color: #666;
+        margin-top: 8px;
+        font-style: italic;
+        line-height: 1.4;
+    }
+
+    /* Responsive adjustments for disclaimer */
+    @media (max-width: 768px) {
+        .ai-disclaimer {
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .disclaimer-header {
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+        }
+
+        .disclaimer-icon {
+            margin-right: 0;
+            margin-bottom: 8px;
+        }
+
+        .osint-course-link {
+            display: block;
+            text-align: center;
+            padding: 12px 15px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="main-content">
+        <header class="page-header">
+            <h1 class="page-title">Contact Us</h1>
+            <p class="page-subtitle">Get in touch with the evil1.org team</p>
+        </header>
+
+        <div class="security-notice">
+            <div class="notice-title">🔒 Secure Communications</div>
+            <p>All communications with evil1.org are encrypted and protected. For sensitive matters, we recommend using our secure submission forms or PGP encryption. Never send sensitive information via regular email.</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-card">
+                <span class="contact-icon">📧</span>
+                <h3 class="contact-title">General Inquiries</h3>
+                <p class="contact-description">Questions about our platform, mission, or general information.</p>
+                <a href="mailto:info@evil1.org" class="contact-link">Email Us</a>
+            </div>
+
+            <div class="contact-card">
+                <span class="contact-icon">🛡️</span>
+                <h3 class="contact-title">Whistleblower Support</h3>
+                <p class="contact-description">Secure support for whistleblowers and confidential submissions.</p>
+                <a href="mailto:secure@evil1.org" class="contact-link">Secure Contact</a>
+            </div>
+
+            <div class="contact-card">
+                <span class="contact-icon">📰</span>
+                <h3 class="contact-title">Press Inquiries</h3>
+                <p class="contact-description">Media requests, interviews, and press releases.</p>
+                <a href="mailto:press@evil1.org" class="contact-link">Press Contact</a>
+            </div>
+
+            <div class="contact-card">
+                <span class="contact-icon">⚖️</span>
+                <h3 class="contact-title">Legal Support</h3>
+                <p class="contact-description">Legal questions and whistleblower protection resources.</p>
+                <a href="mailto:legal@evil1.org" class="contact-link">Legal Contact</a>
+            </div>
+        </div>
+
+        <section class="contact-form-section">
+            <h2 class="form-title">Send Us a Message</h2>
+            <form class="contact-form" action="https://formspree.io/f/xknkqgqv" method="POST">
+                <div class="form-group">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" id="name" name="name" class="form-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" id="email" name="email" class="form-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject" class="form-label">Subject</label>
+                    <input type="text" id="subject" name="subject" class="form-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea id="message" name="message" class="form-textarea" required></textarea>
+                </div>
+
+                <button type="submit" class="form-submit">Send Message</button>
+            </form>
+        </section>
+
+        <div class="office-hours">
+            <h3 class="hours-title">Response Times</h3>
+            <ul class="hours-list">
+                <li><strong>General Inquiries:</strong> Within 24 hours</li>
+                <li><strong>Whistleblower Support:</strong> Within 2 hours (24/7)</li>
+                <li><strong>Press Inquiries:</strong> Within 12 hours</li>
+                <li><strong>Legal Support:</strong> Within 24 hours</li>
+                <li><strong>Technical Issues:</strong> Within 4 hours</li>
+            </ul>
+        </div>
+
+        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; border: 1px solid #dee2e6; margin-bottom: 30px;">
+            <h3 style="font-size: 18px; font-weight: bold; color: #2c5284; margin-bottom: 15px; font-family: 'Arial Black', Arial, sans-serif;">Emergency Contact</h3>
+            <p style="font-size: 16px; color: #555; margin-bottom: 15px; font-family: 'Trebuchet MS', sans-serif;">
+                For urgent security matters or immediate threats to whistleblowers, use our emergency hotline:
+            </p>
+            <p style="font-size: 18px; font-weight: bold; color: #4f81bd; font-family: 'Courier New', monospace;">
+                Emergency: +1 (555) 123-4567
+            </p>
+            <p style="font-size: 14px; color: #666; margin-top: 10px; font-style: italic; font-family: 'Trebuchet MS', sans-serif;">
+                Available 24/7 for critical situations
+            </p>
+        </div>
+
+        <!-- AI Disclaimer Component -->
+        <div class="ai-disclaimer">
+            <div class="disclaimer-header">
+                <span class="disclaimer-icon">🤖</span>
+                <h3 class="disclaimer-title">AI-Generated Content Disclaimer</h3>
+            </div>
+            <div class="disclaimer-content">
+                <p><strong>All content on this website is AI-generated</strong> and provided for informational purposes only. This content:</p>
+                <ul class="disclaimer-list">
+                    <li><strong>No Copyright:</strong> Holds no copyright protection and may be freely used, modified, and distributed</li>
+                    <li><strong>No Fact-Checking:</strong> Has not undergone professional fact-checking or verification</li>
+                    <li><strong>Sources Only:</strong> Contains source links for reference, but users should independently verify all information</li>
+                    <li><strong>Educational Purpose:</strong> Intended to spark curiosity and encourage critical thinking</li>
+                </ul>
+                <div class="disclaimer-action">
+                    <p><strong>For proper fact-checking and OSINT skills:</strong></p>
+                    <a href="https://www.coursera.org/learn/osint-fundamentals" class="osint-course-link" target="_blank" rel="noopener noreferrer">
+                        📚 OSINT Fundamentals Course on Coursera
+                        <span class="link-arrow">→</span>
+                    </a>
+                    <p class="course-description">Learn professional open-source intelligence gathering and verification techniques from recognized experts.</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="/" class="back-link">← Back to Homepage</a>
+        </div>
+    </div>
+</body>
+</html>

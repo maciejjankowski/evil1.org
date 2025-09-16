@@ -2,7 +2,6 @@
 layout: merchandise
 title: "Right to Repair Sticker - I Can Fix It (If You Let Me)"
 description: "Activist sticker supporting the right to repair movement with gentle sarcasm."
-permalink: /merchandise/repair-05/
 tags:
 - repair
 - right-to-repair

@@ -1,9 +1,5 @@
 <!-- Universal Evil Metrics Display Component -->
-<!-- Usage: {% include evil-metrics.html entity_type="company" entity_data=site.data.companies.amazon %} -->
-<!-- Usage: {% include evil-metrics.html entity_type="executive" entity_data=page.profile %} -->
-<!-- Usage: {% include evil-metrics.html entity_type="organization" entity_data=page.organization %} -->
-<!-- Usage: {% include evil-metrics.html entity_type="article" entity_data=page %} -->
-
+<!-- This include renders metrics for various entity types -->
 {% assign frameworks = site.data.metrics-frameworks %}
 {% assign entity_type = include.entity_type %}
 {% assign entity_data = include.entity_data %}

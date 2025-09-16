@@ -1,0 +1,19 @@
+{% comment %}
+Return a unified list of profiles as `all_profiles`. Preference order:
+1. `site.profiles` collection (generated from `_profiles/`)
+2. `site.data.profiles` (data file)
+3. `site._profiles` (legacy folder)
+The include sets `all_profiles` in the current context.
+{% endcomment %}
+
+{% if site.profiles and site.profiles.size > 0 %}
+  {% assign all_profiles = site.profiles %}
+{% elsif site.data.profiles and site.data.profiles | size > 0 %}
+  {% assign all_profiles = site.data.profiles %}
+{% elsif site._profiles and site._profiles | size > 0 %}
+  {% assign all_profiles = site._profiles %}
+{% else %}
+  {% assign all_profiles = empty %}
+{% endif %}
+
+{% comment %}Expose as `site.all_profiles` for convenience if Liquid allows (set in page scope instead){% endcomment %}

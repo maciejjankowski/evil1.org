@@ -106,7 +106,8 @@ permalink: /metrics-dashboard/
         <div id="executives-section" class="scorers-section">
             <h3>Most Malevolent Executives (EMS)</h3>
             <div class="scorers-grid">
-                {% assign executives_with_scores = site.profiles | where_exp: "profile", "profile.profile.ems_score" %}
+                {% include all-profiles.html %}
+                {% assign executives_with_scores = all_profiles | where_exp: "profile", "profile.profile.ems_score" %}
                 {% assign top_executives = executives_with_scores | sort: "profile.ems_score.total" | reverse | slice: 0, 6 %}
                 {% for executive in top_executives %}
                     <div class="scorer-card executive-card">

@@ -12,7 +12,8 @@ page_html: |
           <p>Historical masters of exploitation, systematic oppression, and capitalist efficiency. Study their methods to understand modern corporate evil.</p>
       </div>
 
-      {% for profile in site.profiles %}
+    {% include all-profiles.html %}
+    {% for profile in all_profiles %}
       <div style=\"border: 1px solid #D0D0D0; margin: 15px 0; background: #F8F8F8; padding: 10px;\">
           <h2 style=\"color: #003366; font-size: 14px; margin-bottom: 5px;\">
               <a href=\"{{ profile.url }}\" style=\"color: #003366; text-decoration: none;\">{{ profile.profile.name | default: profile.title }}</a>
@@ -34,7 +35,7 @@ page_html: |
       </div>
       {% endfor %}
   
-      {% if site.profiles.size == 0 %}
+    {% if all_profiles == empty or all_profiles.size == 0 %}
       <div style=\"padding: 10px; background: #fff;\">
           <p>No profiles available. The masters of evil are preparing their documentation.</p>
       </div>

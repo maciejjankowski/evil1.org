@@ -11,9 +11,10 @@
         <h1>{{ page.title }}</h1>
         {{ content }}
         <div class="merch-grid">
-            {% for item in site.data.merch %}
-                {% include merch-card.html item=item %}
-            {% endfor %}
+                {% for key in site.data.merchandise %}
+                    {% assign product = site.data.merchandise[key] %}
+                    {% include merch-tile.html item=product %}
+                {% endfor %}
         </div>
     </div>
     {% include footer.html %}

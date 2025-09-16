@@ -25,7 +25,8 @@ Browse all content organized by categories.
     {% assign all_categories = all_categories | push: org.category %}
   {% endif %}
 {% endfor %}
-{% for profile in site.profiles %}
+{% include all-profiles.html %}
+{% for profile in all_profiles %}
   {% if profile.category %}
     {% assign all_categories = all_categories | push: profile.category %}
   {% endif %}
@@ -52,7 +53,8 @@ Browse all content organized by categories.
     {% assign category_items = category_items | push: org.category %}
   {% endif %}
 {% endfor %}
-{% for profile in site.profiles %}
+{% include all-profiles.html %}
+{% for profile in all_profiles %}
   {% if profile.category == category %}
     {% assign category_items = category_items | push: profile.category %}
   {% endif %}

@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>evil1.org - Corporate Intelligence Network</title>
+    <meta name="description" content="The greatest trick the devil ever pulled was convincing the world he didn't exist. Exposing recursive capitalism and corporate power structures.">
+
+    <style>
+    /* Early 2000s Corporate Internet Style */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Trebuchet MS', 'Lucida Grande', Arial, sans-serif;
+        background: #f4f4f4;
+        color: #333;
+        line-height: 1.6;
+        font-size: 16px;
+    }
+
+    /* Corporate Header - MS Office Style */
+    .corporate-header {
+        background: linear-gradient(90deg, #4f81bd 0%, #8db3e2 50%, #4f81bd 100%);
+        border-bottom: 4px solid #2c5284;
+        padding: 20px 0;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .corporate-logo {
+        font-size: 36px;
+        font-weight: bold;
+        color: #ffffff;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        letter-spacing: 3px;
+        margin-bottom: 8px;
+        font-family: 'Arial Black', Arial, sans-serif;
+    }
+
+    .corporate-tagline {
+        font-size: 14px;
+        color: #e6f3ff;
+        font-style: italic;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+    }
+
+    .corporate-slogan {
+        font-size: 18px;
+        color: #ffffff;
+        font-weight: bold;
+        margin-top: 12px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-top: 2px solid #2c5284;
+        padding-top: 12px;
+        font-family: 'Trebuchet MS', sans-serif;
+    }
+
+    .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 30px;
+        background: #ffffff;
+        border: 1px solid #cccccc;
+        margin-top: 30px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        border-radius: 8px;
+    }
+
+    /* Mission Statement - Better Readability */
+    .mission-section {
+        background: #f8f9fa;
+        border: 2px solid #dee2e6;
+        padding: 35px;
+        margin: 30px 0;
+        text-align: center;
+        border-left: 6px solid #4f81bd;
+        border-radius: 8px;
+    }
+
+    .mission-title {
+        font-size: 24px;
+        font-weight: bold;
+        color: #2c5284;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-family: 'Arial Black', Arial, sans-serif;
+    }
+
+    .mission-text {
+        font-size: 18px;
+        line-height: 1.8;
+        color: #333;
+        max-width: 900px;
+        margin: 0 auto;
+        font-family: 'Trebuchet MS', sans-serif;
+    }    .highlight {
+        color: #4f81bd;
+        font-weight: bold;
+        text-decoration: underline;
+        background: #e6f3ff;
+        padding: 2px 6px;
+        border-radius: 3px;
+    }
+
+    /* Premium Features Grid */
+    .features-grid {
+        display: table;
+        width: 100%;
+        border-collapse: collapse;
+        margin: 30px 0;
+        border: 2px solid #cccccc;
+    }
+
+    .features-row {
+        display: table-row;
+    }
+
+    .feature-cell {
+        display: table-cell;
+        padding: 20px;
+        border: 1px solid #cccccc;
+        background: #ffffff;
+        vertical-align: top;
+        width: 33.33%;
+    }
+
+    .feature-icon {
+        font-size: 32px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .feature-title {
+        font-size: 16px;
+        font-weight: bold;
+        color: #003366;
+        margin-bottom: 10px;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .feature-description {
+        font-size: 13px;
+        line-height: 1.6;
+        color: #666;
+        margin-bottom: 15px;
+    }
+
+    .feature-benefits {
+        background: #f0f0f0;
+        padding: 10px;
+        border: 1px solid #cccccc;
+        margin-top: 10px;
+    }
+
+    .benefit-item {
+        font-size: 12px;
+        color: #333;
+        margin-bottom: 5px;
+        padding-left: 15px;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8"><circle cx="4" cy="4" r="3" fill="%23ff6600"/></svg>') no-repeat left center;
+        background-size: 6px 6px;
+    }
+
+    /* Corporate CTA - MS Office Style */
+    .corporate-cta {
+        background: linear-gradient(135deg, #4f81bd 0%, #8db3e2 100%);
+        color: #ffffff;
+        padding: 40px;
+        text-align: center;
+        margin: 40px 0;
+        border: 4px solid #2c5284;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        border-radius: 12px;
+    }
+
+    .cta-title {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-family: 'Arial Black', Arial, sans-serif;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .cta-subtitle {
+        font-size: 18px;
+        margin-bottom: 25px;
+        font-style: italic;
+        font-family: 'Trebuchet MS', sans-serif;
+    }
+
+    .cta-button {
+        display: inline-block;
+        background: #ff9900;
+        color: #ffffff;
+        padding: 15px 35px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        border: 3px solid #cc7700;
+        border-radius: 8px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(255,153,0,0.4);
+        font-family: 'Arial Black', Arial, sans-serif;
+    }
+
+    .cta-button:hover {
+        background: #cc7700;
+        border-color: #aa5500;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(255,153,0,0.6);
+    }
+
+    /* Premium Newsletter - MS Office Style */
+    .newsletter-section {
+        background: #f8f9fa;
+        border: 2px solid #dee2e6;
+        padding: 35px;
+        margin: 40px 0;
+        text-align: center;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+
+    .newsletter-title {
+        font-size: 22px;
+        font-weight: bold;
+        color: #2c5284;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        font-family: 'Arial Black', Arial, sans-serif;
+    }
+
+    .newsletter-subtitle {
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 25px;
+        font-family: 'Trebuchet MS', sans-serif;
+    }
+
+    .newsletter-form {
+        display: table;
+        margin: 0 auto;
+        border-collapse: collapse;
+        border: 2px solid #cccccc;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .newsletter-row {
+        display: table-row;
+    }
+
+    .newsletter-cell {
+        display: table-cell;
+        padding: 0;
+    }
+
+    .newsletter-input {
+        padding: 12px 15px;
+        border: none;
+        font-size: 16px;
+        width: 250px;
+        font-family: 'Courier New', monospace;
+        background: #ffffff;
+    }
+
+    .newsletter-submit {
+        padding: 12px 25px;
+        background: #4f81bd;
+        color: #ffffff;
+        border: none;
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+        cursor: pointer;
+        font-family: 'Arial Black', Arial, sans-serif;
+        transition: background 0.3s ease;
+    }
+
+    .newsletter-submit:hover {
+        background: #2c5284;
+    }
+
+    /* Corporate Footer - MS Office Style */
+    .corporate-footer {
+        background: #4f81bd;
+        color: #ffffff;
+        padding: 30px;
+        text-align: center;
+        border-top: 4px solid #2c5284;
+        margin-top: 40px;
+        box-shadow: 0 -4px 15px rgba(0,0,0,0.1);
+    }
+
+    .footer-links {
+        display: table;
+        margin: 0 auto;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+        background: rgba(255,255,255,0.1);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .footer-row {
+        display: table-row;
+    }
+
+    .footer-cell {
+        display: table-cell;
+        padding: 0;
+        border-right: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .footer-cell:last-child {
+        border-right: none;
+    }
+
+    .footer-link {
+        display: block;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 12px 20px;
+        transition: all 0.3s ease;
+        font-family: 'Trebuchet MS', sans-serif;
+    }
+
+    .footer-link:hover {
+        color: #ffcc00;
+        background: rgba(255,255,255,0.1);
+        text-decoration: underline;
+    }
+
+    .copyright {
+        font-size: 14px;
+        color: #e6f3ff;
+        border-top: 1px solid rgba(255,255,255,0.2);
+        padding-top: 15px;
+        margin-top: 20px;
+        font-family: 'Trebuchet MS', sans-serif;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .features-grid {
+            display: block;
+        }
+
+        .feature-cell {
+            display: block;
+            margin-bottom: 20px;
+            width: auto;
+        }
+
+        .newsletter-form {
+            display: block;
+        }
+
+        .newsletter-cell {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .newsletter-input {
+            width: 100%;
+        }
+
+        .footer-links {
+            display: block;
+        }
+
+        .footer-cell {
+            display: block;
+            padding: 5px 0;
+            border-right: none;
+            border-bottom: 1px solid #006699;
+        }
+
+        .footer-cell:last-child {
+            border-bottom: none;
+        }
+    }
+
+    /* Early 2000s Effects */
+    .corporate-glow {
+        text-shadow: 0 0 10px rgba(255,102,0,0.5);
+    }
+
+    .corporate-shadow {
+        box-shadow: 3px 3px 8px rgba(0,0,0,0.3);
+    }
+
+    /* AI Disclaimer Component - MS Office 2003 Style */
+    .ai-disclaimer {
+        background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+        border: 2px solid #f39c12;
+        border-radius: 8px;
+        padding: 20px;
+        margin: 25px 0;
+        box-shadow: 0 4px 12px rgba(243, 156, 18, 0.2);
+        position: relative;
+    }
+
+    .disclaimer-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #f39c12;
+    }
+
+    .disclaimer-icon {
+        font-size: 24px;
+        margin-right: 10px;
+    }
+
+    .disclaimer-title {
+        font-size: 18px;
+        font-weight: bold;
+        color: #8b4513;
+        margin: 0;
+        font-family: 'Arial Black', Arial, sans-serif;
+    }
+
+    .disclaimer-content {
+        font-size: 14px;
+        line-height: 1.6;
+        color: #5d4037;
+        font-family: 'Trebuchet MS', sans-serif;
+    }
+
+    .disclaimer-list {
+        margin: 15px 0;
+        padding-left: 20px;
+    }
+
+    .disclaimer-list li {
+        margin-bottom: 8px;
+        line-height: 1.5;
+    }
+
+    .disclaimer-list strong {
+        color: #8b4513;
+    }
+
+    .disclaimer-action {
+        background: rgba(255, 255, 255, 0.8);
+        border: 1px solid #f39c12;
+        border-radius: 6px;
+        padding: 15px;
+        margin-top: 15px;
+    }
+
+    .osint-course-link {
+        display: inline-block;
+        background: #4f81bd;
+        color: white;
+        text-decoration: none;
+        padding: 10px 15px;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 14px;
+        margin: 10px 0;
+        transition: all 0.3s ease;
+        font-family: 'Arial Black', Arial, sans-serif;
+        border: 2px solid #2c5284;
+    }
+
+    .osint-course-link:hover {
+        background: #2c5284;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(79, 129, 189, 0.4);
+    }
+
+    .link-arrow {
+        margin-left: 8px;
+        font-size: 16px;
+    }
+
+    .course-description {
+        font-size: 12px;
+        color: #666;
+        margin-top: 8px;
+        font-style: italic;
+        line-height: 1.4;
+    }
+
+    /* Responsive adjustments for disclaimer */
+    @media (max-width: 768px) {
+        .ai-disclaimer {
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .disclaimer-header {
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+        }
+
+        .disclaimer-icon {
+            margin-right: 0;
+            margin-bottom: 8px;
+        }
+
+        .osint-course-link {
+            display: block;
+            text-align: center;
+            padding: 12px 15px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- Corporate Header -->
+    <header class="corporate-header">
+        <div class="corporate-logo">EVIL1.ORG</div>
+        <div class="corporate-tagline">Corporate Intelligence Network</div>
+        <div class="corporate-slogan">"The greatest trick the devil ever pulled was convincing the world he didn't exist"</div>
+    </header>
+
+    <div class="container">
+        <!-- Mission Statement -->
+        <section class="mission-section">
+            <h2 class="mission-title">OUR MISSION</h2>
+            <p class="mission-text">
+                At <span class="highlight">evil1.org</span>, we expose the hidden machinery of <span class="highlight">recursive capitalism</span> -
+                the self-reinforcing system where corporate power begets more corporate power, where regulators become
+                the regulated, and where democracy serves the shareholder rather than the citizen.
+                <br><br>
+                We believe that <span class="highlight">transparency is the ultimate weapon</span> against systemic corruption.
+                Our platform provides the tools, data, and network necessary to dismantle the illusion of corporate benevolence
+                and reveal the <span class="highlight">recursive nature of capitalist exploitation</span>.
+            </p>
+        </section>
+
+
+        <!-- Premium Features Grid -->
+        <table class="features-grid">
+            <tr class="features-row">
+                <td class="feature-cell">
+                    <div class="feature-icon">🏢</div>
+                    <h3 class="feature-title">Corporate Empire Database</h3>
+                    <p class="feature-description">
+                        Comprehensive intelligence on every major corporation's hidden connections, board interlocks,
+                        lobbying expenditures, and regulatory capture mechanisms.
+                    </p>
+                    <div class="feature-benefits">
+                        <div class="benefit-item">Real-time corporate ownership mapping</div>
+                        <div class="benefit-item">Executive compensation analysis</div>
+                        <div class="benefit-item">Political donation tracking</div>
+                        <div class="benefit-item">Supply chain exploitation reports</div>
+                    </div>
+                </td>
+                <td class="feature-cell">
+                    <div class="feature-icon">🎭</div>
+                    <h3 class="feature-title">Anonymous Whistleblower Network</h3>
+                    <p class="feature-description">
+                        Secure, encrypted platform for corporate insiders to expose wrongdoing without fear of retaliation.
+                        Advanced anonymity protocols and zero-knowledge messaging.
+                    </p>
+                    <div class="feature-benefits">
+                        <div class="benefit-item">Military-grade encryption</div>
+                        <div class="benefit-item">Anonymous document vault</div>
+                        <div class="benefit-item">Secure communication channels</div>
+                        <div class="benefit-item">Legal protection resources</div>
+                    </div>
+                </td>
+                <td class="feature-cell">
+                    <div class="feature-icon">📊</div>
+                    <h3 class="feature-title">Recursive Capitalism Index</h3>
+                    <p class="feature-description">
+                        Live tracking of corporate malfeasance, market concentration, and systemic risk across all industries.
+                        The definitive measure of capitalist recursion.
+                    </p>
+                    <div class="feature-benefits">
+                        <div class="benefit-item">Real-time evil scoring algorithm</div>
+                        <div class="benefit-item">Industry concentration metrics</div>
+                        <div class="benefit-item">Regulatory capture indicators</div>
+                        <div class="benefit-item">Systemic risk assessments</div>
+                    </div>
+                </td>
+            </tr>
+            <tr class="features-row">
+                <td class="feature-cell">
+                    <div class="feature-icon">🔗</div>
+                    <h3 class="feature-title">Power Network Visualizer</h3>
+                    <p class="feature-description">
+                        Interactive visualizations revealing how corporate boards, politicians, regulators, and media
+                        executives are interconnected in a web of recursive power relationships.
+                    </p>
+                    <div class="feature-benefits">
+                        <div class="benefit-item">Board interlock mapping</div>
+                        <div class="benefit-item">Revolving door tracking</div>
+                        <div class="benefit-item">Media ownership analysis</div>
+                        <div class="benefit-item">Political influence networks</div>
+                    </div>
+                </td>
+                <td class="feature-cell">
+                    <div class="feature-icon">⚡</div>
+                    <h3 class="feature-title">Activist Command Center</h3>
+                    <p class="feature-description">
+                        Professional-grade tools for researchers, journalists, and activists to investigate corporate
+                        wrongdoing, coordinate campaigns, and amplify impact.
+                    </p>
+                    <div class="feature-benefits">
+                        <div class="benefit-item">Advanced search & filtering</div>
+                        <div class="benefit-item">Campaign management tools</div>
+                        <div class="benefit-item">Document analysis suite</div>
+                        <div class="benefit-item">Collaboration workspaces</div>
+                    </div>
+                </td>
+                <td class="feature-cell">
+                    <div class="feature-icon">🌐</div>
+                    <h3 class="feature-title">Global Intelligence Network</h3>
+                    <p class="feature-description">
+                        Worldwide crowdsourced monitoring of corporate activities with real-time alerts, trend analysis,
+                        and predictive modeling of capitalist recursive behavior.
+                    </p>
+                    <div class="feature-benefits">
+                        <div class="benefit-item">Global incident tracking</div>
+                        <div class="benefit-item">Predictive risk modeling</div>
+                        <div class="benefit-item">Cross-border analysis</div>
+                        <div class="benefit-item">Real-time alert system</div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <!-- Corporate Call to Action -->
+        <section class="corporate-cta">
+            <h2 class="cta-title">JOIN THE RESISTANCE</h2>
+            <p class="cta-subtitle">
+                Be among the first to access the most comprehensive platform for exposing recursive capitalism.
+                Early adopters will receive exclusive access to premium features and founding member status.
+            </p>
+            <a href="#newsletter" class="cta-button">SECURE YOUR POSITION</a>
+        </section>
+
+        <!-- Premium Newsletter -->
+        <section id="newsletter" class="newsletter-section">
+            <h3 class="newsletter-title">EXECUTIVE INTELLIGENCE BRIEFING</h3>
+            <p class="newsletter-subtitle">
+                Receive exclusive insights into emerging corporate threats, recursive capitalism trends,
+                and strategic intelligence for navigating the modern power landscape.
+            </p>
+            <form class="newsletter-form" action="https://formspree.io/f/xknkqgqv" method="POST">
+                <div class="newsletter-row">
+                    <div class="newsletter-cell">
+                        <input type="email" name="email" class="newsletter-input" placeholder="your.email@corporation.com" required>
+                    </div>
+                    <div class="newsletter-cell">
+                        <button type="submit" class="newsletter-submit">SUBSCRIBE NOW</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+    <section class="ai-disclaimer">
+                <!-- AI Disclaimer Component -->
+            <div class="disclaimer-header">
+                <span class="disclaimer-icon">🤖</span>
+                <h3 class="disclaimer-title">AI-Generated Content Disclaimer</h3>
+            </div>
+            <div class="disclaimer-content">
+                <p><strong>All content on this website is AI-generated</strong> and provided for informational purposes only. This content:</p>
+                <ul class="disclaimer-list">
+                    <li><strong>No Copyright:</strong> Holds no copyright protection and may be freely used, modified, and distributed</li>
+                    <li><strong>No Fact-Checking:</strong> Has not undergone professional fact-checking or verification</li>
+                    <li><strong>Sources Only:</strong> Contains source links for reference, but users should independently verify all information</li>
+                    <li><strong>Educational Purpose:</strong> Intended to spark curiosity and encourage critical thinking</li>
+                </ul>
+                <div class="disclaimer-action">
+                    <p><strong>For proper fact-checking and OSINT skills:</strong></p>
+                    <a href="https://www.coursera.org/learn/osint-fundamentals" class="osint-course-link" target="_blank" rel="noopener noreferrer">
+                        📚 OSINT Fundamentals Course on Coursera
+                        <span class="link-arrow">→</span>
+                    </a>
+                    <p class="course-description">Learn professional open-source intelligence gathering and verification techniques from recognized experts.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    
+    <!-- Corporate Footer -->
+    <footer class="corporate-footer">
+        <table class="footer-links">
+            <tr class="footer-row">
+                <td class="footer-cell"><a href="/about.html" class="footer-link">About Us</a></td>
+                <td class="footer-cell"><a href="/privacy.html" class="footer-link">Privacy Policy</a></td>
+                <td class="footer-cell"><a href="/terms.html" class="footer-link">Terms of Service</a></td>
+                <td class="footer-cell"><a href="/contact.html" class="footer-link">Contact</a></td>
+                <td class="footer-cell"><a href="/press.html" class="footer-link">Press Kit</a></td>
+            </tr>
+        </table>
+        <div class="copyright">
+            © 2025 evil1.org - Exposing recursive capitalism, one truth at a time.<br>
+            "The greatest trick the devil ever pulled was convincing the world he didn't exist"
+        </div>
+    </footer>
+
+    <script>
+    // Early 2000s style loading effect
+    document.addEventListener('DOMContentLoaded', function() {
+        const elements = document.querySelectorAll('*');
+        elements.forEach((el, index) => {
+            el.style.opacity = '0';
+            setTimeout(() => {
+                el.style.transition = 'opacity 0.5s ease-in-out';
+                el.style.opacity = '1';
+            }, index * 50);
+        });
+    });
+
+    // Corporate glow effect on hover
+    document.querySelectorAll('.feature-cell').forEach(cell => {
+        cell.addEventListener('mouseenter', function() {
+            this.style.boxShadow = '0 0 20px rgba(255,102,0,0.5)';
+            this.style.borderColor = '#ff6600';
+        });
+
+        cell.addEventListener('mouseleave', function() {
+            this.style.boxShadow = 'none';
+            this.style.borderColor = '#cccccc';
+        });
+    });
+
+    // Smooth scrolling for CTA button
+    document.querySelector('.cta-button').addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector('#newsletter');
+        target.scrollIntoView({ behavior: 'smooth' });
+    });
+    </script>
+</body>
+</html>

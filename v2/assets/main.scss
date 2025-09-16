@@ -2,7 +2,7 @@
 // Basic styles and theme overrides
 
 // Import unified components library
-@import "../_includes/_components/components";
+@use "../_includes/_components/components";
 
 // Define base colors
 $grey-color: #828282;
@@ -64,7 +64,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 // Import theme overrides
-@import "theme-overrides";
+@use "theme-overrides";
 
 // Jobs page styles
 .jobs-container {

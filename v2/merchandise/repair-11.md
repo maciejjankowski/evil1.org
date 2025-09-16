@@ -2,7 +2,6 @@
 layout: merchandise
 title: "Tesla Service Center Hat - $2000 to Replace $20 Part"
 description: "Hat about Tesla's notoriously expensive and restricted repair policies."
-permalink: /merchandise/repair-11/
 tags:
 - repair
 - tesla

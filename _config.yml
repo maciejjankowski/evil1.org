@@ -113,6 +113,8 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - _docs/
+  - _site/
+  - v2/
 
 wall_articles:
   - title: "JPMorgan: Banking on Epstein, Not Ethics"

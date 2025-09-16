@@ -2,7 +2,6 @@
 layout: merchandise
 title: "Proprietary Screws T-Shirt - Pentalobe or Die"
 description: "T-shirt celebrating Apple's innovative approach to preventing repair with exotic screws."
-permalink: /merchandise/repair-02/
 tags:
 - repair
 - apple

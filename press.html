@@ -1,0 +1,516 @@
+---
+layout: null
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Press Kit - evil1.org</title>
+    <meta name="description" content="Press resources, media kit, and information for journalists covering evil1.org.">
+    <style>
+    /* MS Office 2003 Style - Clean, Standalone */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Trebuchet MS', 'Lucida Grande', Arial, sans-serif;
+        background: #f4f4f4;
+        color: #333;
+        line-height: 1.6;
+        font-size: 16px;
+    }
+
+    .main-content {
+        max-width: 900px;
+        margin: 30px auto;
+        padding: 30px;
+        background: #ffffff;
+        border: 1px solid #cccccc;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .page-header {
+        text-align: center;
+        margin-bottom: 40px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid #4f81bd;
+    }
+
+    .page-title {
+        font-size: 32px;
+        font-weight: bold;
+        color: #2c5284;
+        margin-bottom: 10px;
+        font-family: 'Arial Black', Arial, sans-serif;
+    }
+
+    .page-subtitle {
+        font-size: 18px;
+        color: #666;
+        font-style: italic;
+    }
+
+    .section {
+        margin-bottom: 40px;
+    }
+
+    .section-title {
+        font-size: 24px;
+        font-weight: bold;
+        color: #2c5284;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #dee2e6;
+        font-family: 'Arial Black', Arial, sans-serif;
+    }
+
+    .section-content {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #333;
+        font-family: 'Trebuchet MS', sans-serif;
+    }
+
+    .highlight {
+        color: #4f81bd;
+        font-weight: bold;
+        background: #e6f3ff;
+        padding: 2px 6px;
+        border-radius: 3px;
+    }
+
+    .download-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin: 25px 0;
+    }
+
+    .download-card {
+        background: #f8f9fa;
+        padding: 20px;
+        border-radius: 8px;
+        border: 1px solid #dee2e6;
+        text-align: center;
+    }
+
+    .download-icon {
+        font-size: 32px;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    .download-title {
+        font-size: 18px;
+        font-weight: bold;
+        color: #2c5284;
+        margin-bottom: 10px;
+        font-family: 'Arial Black', Arial, sans-serif;
+    }
+
+    .download-description {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 15px;
+        font-family: 'Trebuchet MS', sans-serif;
+    }
+
+    .download-link {
+        display: inline-block;
+        padding: 8px 16px;
+        background: #4f81bd;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        font-weight: bold;
+        transition: background 0.3s ease;
+        font-family: 'Trebuchet MS', sans-serif;
+    }
+
+    .download-link:hover {
+        background: #2c5284;
+    }
+
+    .facts-section {
+        background: #f8f9fa;
+        padding: 25px;
+        border-radius: 8px;
+        border: 1px solid #dee2e6;
+        margin: 25px 0;
+    }
+
+    .facts-title {
+        font-size: 20px;
+        font-weight: bold;
+        color: #2c5284;
+        margin-bottom: 15px;
+        font-family: 'Arial Black', Arial, sans-serif;
+    }
+
+    .facts-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    .facts-list li {
+        padding: 8px 0;
+        border-bottom: 1px solid #dee2e6;
+        font-family: 'Trebuchet MS', sans-serif;
+    }
+
+    .facts-list li:last-child {
+        border-bottom: none;
+    }
+
+    .facts-list strong {
+        color: #2c5284;
+    }
+
+    .quotes-section {
+        background: #e6f3ff;
+        padding: 25px;
+        border-radius: 8px;
+        border: 1px solid #b3d9ff;
+        margin: 25px 0;
+    }
+
+    .quote {
+        font-size: 16px;
+        font-style: italic;
+        color: #333;
+        margin-bottom: 15px;
+        padding-left: 20px;
+        border-left: 4px solid #4f81bd;
+        font-family: 'Trebuchet MS', sans-serif;
+    }
+
+    .quote-author {
+        font-size: 14px;
+        font-weight: bold;
+        color: #2c5284;
+        text-align: right;
+        font-family: 'Trebuchet MS', sans-serif;
+    }
+
+    .contact-info {
+        background: #d4edda;
+        border: 1px solid #c3e6cb;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 25px 0;
+    }
+
+    .contact-title {
+        font-size: 18px;
+        font-weight: bold;
+        color: #155724;
+        margin-bottom: 10px;
+    }
+
+    .back-link {
+        display: inline-block;
+        margin-top: 40px;
+        padding: 12px 25px;
+        background: #4f81bd;
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: bold;
+        transition: background 0.3s ease;
+    }
+
+    .back-link:hover {
+        background: #2c5284;
+    }
+
+    /* AI Disclaimer Component - MS Office 2003 Style */
+    .ai-disclaimer {
+        background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+        border: 2px solid #f39c12;
+        border-radius: 8px;
+        padding: 20px;
+        margin: 25px 0;
+        box-shadow: 0 4px 12px rgba(243, 156, 18, 0.2);
+        position: relative;
+    }
+
+    .disclaimer-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #f39c12;
+    }
+
+    .disclaimer-icon {
+        font-size: 24px;
+        margin-right: 10px;
+    }
+
+    .disclaimer-title {
+        font-size: 18px;
+        font-weight: bold;
+        color: #8b4513;
+        margin: 0;
+        font-family: 'Arial Black', Arial, sans-serif;
+    }
+
+    .disclaimer-content {
+        font-size: 14px;
+        line-height: 1.6;
+        color: #5d4037;
+        font-family: 'Trebuchet MS', sans-serif;
+    }
+
+    .disclaimer-list {
+        margin: 15px 0;
+        padding-left: 20px;
+    }
+
+    .disclaimer-list li {
+        margin-bottom: 8px;
+        line-height: 1.5;
+    }
+
+    .disclaimer-list strong {
+        color: #8b4513;
+    }
+
+    .disclaimer-action {
+        background: rgba(255, 255, 255, 0.8);
+        border: 1px solid #f39c12;
+        border-radius: 6px;
+        padding: 15px;
+        margin-top: 15px;
+    }
+
+    .osint-course-link {
+        display: inline-block;
+        background: #4f81bd;
+        color: white;
+        text-decoration: none;
+        padding: 10px 15px;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 14px;
+        margin: 10px 0;
+        transition: all 0.3s ease;
+        font-family: 'Arial Black', Arial, sans-serif;
+        border: 2px solid #2c5284;
+    }
+
+    .osint-course-link:hover {
+        background: #2c5284;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(79, 129, 189, 0.4);
+    }
+
+    .link-arrow {
+        margin-left: 8px;
+        font-size: 16px;
+    }
+
+    .course-description {
+        font-size: 12px;
+        color: #666;
+        margin-top: 8px;
+        font-style: italic;
+        line-height: 1.4;
+    }
+
+    /* Responsive adjustments for disclaimer */
+    @media (max-width: 768px) {
+        .ai-disclaimer {
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .disclaimer-header {
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+        }
+
+        .disclaimer-icon {
+            margin-right: 0;
+            margin-bottom: 8px;
+        }
+
+        .osint-course-link {
+            display: block;
+            text-align: center;
+            padding: 12px 15px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="main-content">
+        <header class="page-header">
+            <h1 class="page-title">Press Kit</h1>
+            <p class="page-subtitle">Resources for journalists and media covering evil1.org</p>
+        </header>
+
+        <section class="section">
+            <h2 class="section-title">About evil1.org</h2>
+            <div class="section-content">
+                <p><span class="highlight">evil1.org</span> is a revolutionary platform dedicated to exposing the hidden machinery of <span class="highlight">recursive capitalism</span> - the self-reinforcing system where corporate power begets more corporate power, where regulators become the regulated, and where democracy serves the shareholder rather than the citizen.</p>
+
+                <p>Founded by a team of investigative journalists, technologists, and former corporate insiders, evil1.org provides the tools, data, and network necessary to dismantle the illusion of corporate benevolence and reveal the recursive nature of capitalist exploitation.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Downloadable Assets</h2>
+            <div class="download-grid">
+                <div class="download-card">
+                    <span class="download-icon">📋</span>
+                    <h3 class="download-title">Company Fact Sheet</h3>
+                    <p class="download-description">Complete overview of evil1.org's mission, team, and platform features.</p>
+                    <a href="#" class="download-link">Download PDF</a>
+                </div>
+
+                <div class="download-card">
+                    <span class="download-icon">🖼️</span>
+                    <h3 class="download-title">High-Res Logo</h3>
+                    <p class="download-description">Official evil1.org logo in multiple formats and resolutions.</p>
+                    <a href="#" class="download-link">Download ZIP</a>
+                </div>
+
+                <div class="download-card">
+                    <span class="download-icon">📸</span>
+                    <h3 class="download-title">Press Photos</h3>
+                    <p class="download-description">Professional photos of the team and platform screenshots.</p>
+                    <a href="#" class="download-link">Download ZIP</a>
+                </div>
+
+                <div class="download-card">
+                    <span class="download-icon">📊</span>
+                    <h3 class="download-title">Infographics</h3>
+                    <p class="download-description">Visual explanations of recursive capitalism and our platform.</p>
+                    <a href="#" class="download-link">Download ZIP</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="facts-section">
+            <h3 class="facts-title">Key Facts & Figures</h3>
+            <ul class="facts-list">
+                <li><strong>Founded:</strong> 2025</li>
+                <li><strong>Headquarters:</strong> Secure location (classified for operational security)</li>
+                <li><strong>Team Size:</strong> 15 core members + global network of contributors</li>
+                <li><strong>Platform Features:</strong> 6 core modules for corporate intelligence</li>
+                <li><strong>Security Level:</strong> Military-grade encryption and anonymity protocols</li>
+                <li><strong>Funding:</strong> Independent - no corporate or government backing</li>
+                <li><strong>Mission:</strong> Expose recursive capitalism and systemic corporate corruption</li>
+            </ul>
+        </div>
+
+        <section class="section">
+            <h2 class="section-title">Key Messages</h2>
+            <div class="section-content">
+                <ul>
+                    <li><strong>Transparency Weapon:</strong> We believe transparency is the ultimate weapon against systemic corruption</li>
+                    <li><strong>Recursive Capitalism:</strong> Corporate power creates more corporate power in self-reinforcing cycles</li>
+                    <li><strong>Whistleblower Protection:</strong> We provide the most secure platform for corporate insiders to expose wrongdoing</li>
+                    <li><strong>Independent Operation:</strong> No corporate funding, advertising, or government influence</li>
+                    <li><strong>Global Impact:</strong> Our platform serves activists, journalists, and citizens worldwide</li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="quotes-section">
+            <h3 style="font-size: 20px; font-weight: bold; color: #2c5284; margin-bottom: 20px; font-family: 'Arial Black', Arial, sans-serif;">Executive Quotes</h3>
+
+            <div class="quote">
+                "The greatest trick the devil ever pulled was convincing the world he didn't exist. At evil1.org, we're pulling back the curtain on recursive capitalism."
+            </div>
+            <div class="quote-author">- Alex Rivera, Founder & CEO</div>
+
+            <div class="quote">
+                "Corporate power doesn't exist in a vacuum. It creates feedback loops that amplify wealth and influence. We're here to break those loops."
+            </div>
+            <div class="quote-author">- Sarah Chen, Chief Technology Officer</div>
+
+            <div class="quote">
+                "Every major corporation has secrets. We're building the platform to expose them all, safely and effectively."
+            </div>
+            <div class="quote-author">- Marcus Johnson, Head of Research</div>
+        </div>
+
+        <section class="section">
+            <h2 class="section-title">Coverage Guidelines</h2>
+            <div class="section-content">
+                <p>When covering evil1.org, please consider the following guidelines:</p>
+
+                <ul>
+                    <li><strong>Security First:</strong> Protect sources and whistleblowers by not revealing sensitive details</li>
+                    <li><strong>Context Matters:</strong> Frame stories within the broader context of recursive capitalism</li>
+                    <li><strong>Verification:</strong> Independently verify claims when possible</li>
+                    <li><strong>Impact Focus:</strong> Emphasize the platform's role in promoting transparency and accountability</li>
+                    <li><strong>Ethical Standards:</strong> Respect the privacy and security needs of our users</li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="contact-info">
+            <h3 class="contact-title">Press Contact Information</h3>
+            <p><strong>Primary Contact:</strong> press@evil1.org</p>
+            <p><strong>Emergency Contact:</strong> +1 (555) 123-4567 (24/7 for breaking news)</p>
+            <p><strong>Secure Communications:</strong> Available for sensitive stories</p>
+            <p><strong>Response Time:</strong> Within 12 hours for standard inquiries</p>
+        </div>
+
+        <section class="section">
+            <h2 class="section-title">Interview Requests</h2>
+            <div class="section-content">
+                <p>We welcome interview requests from journalists covering corporate accountability, whistleblower protection, or investigative journalism. Please provide:</p>
+
+                <ul>
+                    <li>Publication name and audience</li>
+                    <li>Story angle and key questions</li>
+                    <li>Preferred format (phone, video, in-person)</li>
+                    <li>Timeline and deadlines</li>
+                </ul>
+
+                <p>For sensitive topics, we can arrange secure communications channels to protect journalistic sources.</p>
+            </div>
+        </section>
+
+        <!-- AI Disclaimer Component -->
+        <div class="ai-disclaimer">
+            <div class="disclaimer-header">
+                <span class="disclaimer-icon">🤖</span>
+                <h3 class="disclaimer-title">AI-Generated Content Disclaimer</h3>
+            </div>
+            <div class="disclaimer-content">
+                <p><strong>All content on this website is AI-generated</strong> and provided for informational purposes only. This content:</p>
+                <ul class="disclaimer-list">
+                    <li><strong>No Copyright:</strong> Holds no copyright protection and may be freely used, modified, and distributed</li>
+                    <li><strong>No Fact-Checking:</strong> Has not undergone professional fact-checking or verification</li>
+                    <li><strong>Sources Only:</strong> Contains source links for reference, but users should independently verify all information</li>
+                    <li><strong>Educational Purpose:</strong> Intended to spark curiosity and encourage critical thinking</li>
+                </ul>
+                <div class="disclaimer-action">
+                    <p><strong>For proper fact-checking and OSINT skills:</strong></p>
+                    <a href="https://www.coursera.org/learn/osint-fundamentals" class="osint-course-link" target="_blank" rel="noopener noreferrer">
+                        📚 OSINT Fundamentals Course on Coursera
+                        <span class="link-arrow">→</span>
+                    </a>
+                    <p class="course-description">Learn professional open-source intelligence gathering and verification techniques from recognized experts.</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="/" class="back-link">← Back to Homepage</a>
+        </div>
+    </div>
+</body>
+</html>

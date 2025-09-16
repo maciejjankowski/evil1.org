@@ -13,15 +13,16 @@ This page demonstrates how our comprehensive metrics frameworks are applied acro
 
 The Corporate Evil Index measures corporate harm across five dimensions. Here's how Amazon scores:
 
-{% include evil-metrics.html entity_type="company" entity_data=site.data.companies.amazon %}
+{% include metrics-widget.html entity_type="company" entity_key="amazon" %}
 
 ## Executive Malevolence Score (EMS) Example
 
 The Executive Malevolence Score assesses personal accountability for harmful decisions. Here's Jeff Bezos's profile with scoring:
 
-{% assign bezos_profile = site.profiles | where: "title", "Jeff Bezos Profile" | first %}
+{% include all-profiles.html %}
+{% assign bezos_profile = all_profiles | where: "title", "Jeff Bezos Profile" | first %}
 {% if bezos_profile %}
-{% include evil-metrics.html entity_type="executive" entity_data=bezos_profile.profile %}
+{% include metrics-widget.html entity_type="executive" entity_data=bezos_profile.profile %}
 {% endif %}
 
 ## Institutional Corruption Framework (ICF) Example
@@ -30,7 +31,7 @@ The ICF evaluates institutional betrayal of public trust. Here's how the FDA sco
 
 {% assign fda_data = site.data.organizations | where: "name", "Food and Drug Administration (FDA)" | first %}
 {% if fda_data %}
-{% include evil-metrics.html entity_type="organization" entity_data=fda_data %}
+{% include metrics-widget.html entity_type="organization" entity_data=fda_data %}
 {% endif %}
 
 ## Article Impact Scoring (AIS) Example
@@ -39,7 +40,7 @@ The AIS measures the truth-telling value and potential impact of investigative c
 
 {% assign sample_article = site.articles | where: "title", "Meta's Algorithmic Addiction Empire: How Social Media Platforms Engineer Mental Health Crises for Profit" | first %}
 {% if sample_article %}
-{% include evil-metrics.html entity_type="article" entity_data=sample_article %}
+{% include metrics-widget.html entity_type="article" entity_data=sample_article %}
 {% endif %}
 
 ## Widget Examples
