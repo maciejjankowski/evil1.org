@@ -170,6 +170,29 @@
     - title: Contact
       url: /corporate-services/contact/
       external: false
+- title: 💰 Invest
+  url: /invest/
+  priority: 1
+  external: false
+  children:
+    - title: Investment Opportunity
+      url: /invest/
+      external: false
+    - title: Evil Cog Tokens ($66.6)
+      url: /invest/#evil-cog
+      external: false
+    - title: 📈 ArticleX™ Trading
+      url: /invest/#financial-vehicles
+      external: false
+    - title: 🛡️ Media Immunity Packages
+      url: /invest/#financial-vehicles
+      external: false
+    - title: Financial Projections
+      url: /invest/#financial-projections
+      external: false
+    - title: Crowdfunding Strategy
+      url: /invest/#why-this-works
+      external: false
 - title: Jobs
   url: /jobs/
   priority: 7
