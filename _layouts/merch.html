@@ -13,7 +13,11 @@
         {{ content }}
         <div class="merch-grid">
             {% for item in site.data.merch %}
-                {% include merch-card.html item=item %}
+                <div class="merch-card-simple">
+                  <h4>{{ item.name | default: item.title }}</h4>
+                  <p>{{ item.price | default: "$19.99" }}</p>
+                  <a href="{{ item.permalink | default: '#' }}" class="btn btn-primary">View Product</a>
+                </div>
             {% endfor %}
         </div>
     </div>

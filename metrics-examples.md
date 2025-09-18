@@ -13,7 +13,13 @@ This page demonstrates how our comprehensive metrics frameworks are applied acro
 
 The Corporate Evil Index measures corporate harm across five dimensions. Here's how Amazon scores:
 
+<!-- TEMPORARILY DISABLED: Circular include issue -->
+{% comment %}
 {% include evil-metrics.html entity_type="company" entity_data=site.data.companies.amazon %}
+{% endcomment %}
+<div class="placeholder-metrics">
+  <p><em>Evil metrics display temporarily disabled due to circular include issue. Working on fix.</em></p>
+</div>
 
 ## Executive Malevolence Score (EMS) Example
 
@@ -21,7 +27,13 @@ The Executive Malevolence Score assesses personal accountability for harmful dec
 
 {% assign bezos_profile = site.profiles | where: "title", "Jeff Bezos Profile" | first %}
 {% if bezos_profile %}
+<!-- TEMPORARILY DISABLED: Circular include issue -->
+{% comment %}
 {% include evil-metrics.html entity_type="executive" entity_data=bezos_profile.profile %}
+{% endcomment %}
+<div class="placeholder-metrics">
+  <p><em>Evil metrics display temporarily disabled due to circular include issue. Working on fix.</em></p>
+</div>
 {% endif %}
 
 ## Institutional Corruption Framework (ICF) Example
@@ -30,7 +42,13 @@ The ICF evaluates institutional betrayal of public trust. Here's how the FDA sco
 
 {% assign fda_data = site.data.organizations | where: "name", "Food and Drug Administration (FDA)" | first %}
 {% if fda_data %}
+<!-- TEMPORARILY DISABLED: Circular include issue -->
+{% comment %}
 {% include evil-metrics.html entity_type="organization" entity_data=fda_data %}
+{% endcomment %}
+<div class="placeholder-metrics">
+  <p><em>Evil metrics display temporarily disabled due to circular include issue. Working on fix.</em></p>
+</div>
 {% endif %}
 
 ## Article Impact Scoring (AIS) Example
@@ -39,7 +57,13 @@ The AIS measures the truth-telling value and potential impact of investigative c
 
 {% assign sample_article = site.articles | where: "title", "Meta's Algorithmic Addiction Empire: How Social Media Platforms Engineer Mental Health Crises for Profit" | first %}
 {% if sample_article %}
+<!-- TEMPORARILY DISABLED: Circular include issue -->
+{% comment %}
 {% include evil-metrics.html entity_type="article" entity_data=sample_article %}
+{% endcomment %}
+<div class="placeholder-metrics">
+  <p><em>Evil metrics display temporarily disabled due to circular include issue. Working on fix.</em></p>
+</div>
 {% endif %}
 
 ## Widget Examples
@@ -47,6 +71,8 @@ The AIS measures the truth-telling value and potential impact of investigative c
 The metrics can also be displayed as compact widgets for use in sidebars, cards, and other components:
 
 <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; margin: 20px 0;">
+    <!-- TEMPORARILY DISABLED: Circular include issue -->
+    {% comment %}
     {% include metrics-widget.html entity_type="company" entity_key="amazon" %}
     {% if bezos_profile %}
     {% include metrics-widget.html entity_type="executive" entity_data=bezos_profile.profile %}
@@ -57,6 +83,10 @@ The metrics can also be displayed as compact widgets for use in sidebars, cards,
     {% if sample_article %}
     {% include metrics-widget.html entity_type="article" entity_data=sample_article %}
     {% endif %}
+    {% endcomment %}
+    <div class="placeholder-metrics">
+      <p><em>Metrics widgets temporarily disabled due to circular include issue. Working on fix.</em></p>
+    </div>
 </div>
 
 ## Evil Taxonomy Integration

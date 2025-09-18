@@ -26,7 +26,11 @@
                         {% for item in site.data.merchandise %}
                           {% assign meta = item[1] %}
                           {% if meta %}
-                            {% include merch-tile.html item=meta %}
+                            <div class="merch-card-simple">
+                              <h4>{{ meta.title | default: meta.name }}</h4>
+                              <p>{{ meta.price | default: "$19.99" }}</p>
+                              <a href="/checkout/?sku={{ meta.sku | default: '000' }}&title={{ meta.title | url_encode }}" class="btn btn-primary">Buy Now</a>
+                            </div>
                           {% endif %}
                         {% endfor %}
                         </div>
