@@ -44,17 +44,7 @@ evil1.org is a Jekyll-based satirical social networking platform that exposes co
 4. Backlog updated (task marked complete)
 5. No inline styles introduced
 6. Commit message properly formatted
-=======
-### 1. Initial Environment Setup (First Time Only)
-```bash
-# Install bundler (may need sudo)
-sudo gem install bundler
->>>>>>> origin/copilot/fix-2
 
-# Configure local bundle path to avoid permission issues
-bundle config set --local path 'vendor/bundle'
-
-<<<<<<< HEAD
 ## COMPONENT RULES
 - **STRICTLY FORBIDDEN**: ANY HTML or `<style>` tags inside .md files 
 - **MANDATORY**: Move ALL HTML to `_layouts/` or `_includes/` files
@@ -63,13 +53,15 @@ bundle config set --local path 'vendor/bundle'
 - NO new CSS unless pattern used ≥3 times
 - Prefix includes with domain (`merch-`, `profile-`, etc.)
 - Document all new includes in `_docs/improvements.md`
-- Link to `_docs/component-inventory.md`  ## FILE EDITING BEST PRACTICES
-  1. Always re-read the target file immediately before editing to capture exact current content (including whitespace and hidden chars).
-  2. For `replace_string_in_file`, include 3-5+ lines of unchanged context before/after the target to ensure uniqueness and avoid mismatches.
-  3. Verify edits post-change by re-reading the file or running a build/test—don't assume success.
-  4. If replacement fails due to string mismatch, fall back to replacing the entire file content or use terminal tools for diffs.
-  5. Prefer Markdown restructuring: move HTML to layouts/includes, leave only frontmatter in .md files.
-  6. Test builds after any structural changes to catch YAML or rendering errors early.
+- Link to `_docs/component-inventory.md`
+
+## FILE EDITING BEST PRACTICES
+1. Always re-read the target file immediately before editing to capture exact current content (including whitespace and hidden chars).
+2. For `replace_string_in_file`, include 3-5+ lines of unchanged context before/after the target to ensure uniqueness and avoid mismatches.
+3. Verify edits post-change by re-reading the file or running a build/test—don't assume success.
+4. If replacement fails due to string mismatch, fall back to replacing the entire file content or use terminal tools for diffs.
+5. Prefer Markdown restructuring: move HTML to layouts/includes, leave only frontmatter in .md files.
+6. Test builds after any structural changes to catch YAML or rendering errors early.
 
 ## DECISION FRAMEWORK
 ### Auto-Proceed When:
@@ -79,8 +71,8 @@ bundle config set --local path 'vendor/bundle'
 - Task is low-risk and reversible
 - Task may introduce significant risk or complexity but has clear rollback plan
 - Task is ambiguous or lacks clear DoD, but can be reasonably interpreted and executed. refine DoD before attempting.
-### Pause When:
 
+### Pause When:
 - Task requires human creativity or nuanced decision-making
 - Task involves ethical considerations or potential harm
 
@@ -91,17 +83,15 @@ bundle config set --local path 'vendor/bundle'
 - Each task specifies the recommended MODEL (GPT-4.1, GPT-4o, GPT-5 mini, Grok Code Fast 1, Gemini 2.5 Pro)
 - Use unique task IDs (T001, T002...)
 - Include specific Definition of Done (DoD)
-- No unnecessary headers or sections - maximum simplicity  --- !IMPORTANT: DONT EDIT BELOW ---
-  ### Editing Rules
-  1. Anything below this line is off limits for editing!
-  2. Use [ ] or [x] for STATUS
-  3. Keep task descriptions clear with measurable DoD
-  4. After backlog cleanup, process each task until resolved
-  5. If a task cannot be completed automatically, pick the optimal solution
-  6. Only consider backlog complete when all items are resolved or deferred
+- No unnecessary headers or sections - maximum simplicity
 
-  ```
-=======
+### 1. Initial Environment Setup (First Time Only)
+```bash
+# Install bundler (may need sudo)
+sudo gem install bundler
+
+# Configure local bundle path to avoid permission issues
+bundle config set --local path 'vendor/bundle'
 # NEVER CANCEL: Install Ruby dependencies (takes ~25 seconds)
 bundle install  # Timeout: 180 seconds minimum
 
@@ -430,4 +420,3 @@ npm test                   # Visual regression (if browsers available)
 ```
 
 This comprehensive guide ensures consistent, reliable development practices across the evil1.org platform.
->>>>>>> origin/copilot/fix-2
