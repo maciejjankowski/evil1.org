@@ -60,4 +60,4 @@ Every dollar brings victory closer. Every supporter strengthens our resolve.
 
 *evil1.org is a 501(c)(3) nonprofit exposing recursive capitalism. All donations tax-deductible.*
 
-[Donate Now](#) | [Learn More](/about.html) | [See Our Impact](/)
+[Donate Now](#) | [Learn More](/about.html)

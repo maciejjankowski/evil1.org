@@ -23,6 +23,10 @@ url: "https://evil1.org"
 twitter_username: evil1org
 github_username: evil1org
 
+# Form and external link configurations
+newsletter_post_url: "https://formspree.io/f/mnnbkpyq"
+osint_course_link: "https://www.udemy.com/course/advanced-osint-find-anything-search-investigate-online"
+
 # Build settings
 theme: minima
 plugins:
