@@ -25,7 +25,9 @@ github_username: evil1org
 
 # Form and external link configurations
 newsletter_post_url: "https://formspree.io/f/mnnbkpyq"
+contact_form_url: "https://formspree.io/f/xqadvolz"
 osint_course_link: "https://www.udemy.com/course/advanced-osint-find-anything-search-investigate-online"
+paypal_donation_link: "https://www.paypal.com/pools/c/9inEI9m0JQ"
 
 # Build settings
 theme: minima
@@ -108,17 +110,36 @@ navigation:
 exclude:
   - .sass-cache/
   - .jekyll-cache/
+  - .obsidian/
+  - .vscode/
+  - .github/
   - gemfiles/
   - Gemfile
   - Gemfile.lock
   - node_modules/
+  - vendor/
   - vendor/bundle/
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
   - _docs/
+  - _dont touch/
+  - _experiments/
+  - _to_review/
   - _site/
+  - archives/
+  - configs/
+  - logs/
   - v2/
+  - "*.tmp"
+  - "*.bak"
+  - "*.log"
+  - ".DS_Store"
+  - "*.swp"
+  - "*.swo"
+  - "*.orig"
+  - "*.rej"
+  - "*~"
 
 wall_articles:
   - title: "JPMorgan: Banking on Epstein, Not Ethics"
