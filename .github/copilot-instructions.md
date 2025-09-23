@@ -8,7 +8,7 @@
 1. **ABSOLUTELY NO HTML OR CSS IN .md FILES** - ALL HTML/CSS MUST BE IN LAYOUTS OR INCLUDES
 2. Preserve YAML frontmatter exactly; never strip `---`
 3. No edits to `_dont touch/` files
-4. Use `./scripts/mark-task-done.sh TASK_ID` to mark task completion **MANDATORY**: Do not manually edit `_docs/backlog-all.md` to mark tasks as done. Always use the script to ensure proper tracking and avoid errors.
+4. Use `./scripts/mark-task-done.sh TASK_ID` to mark task completion **MANDATORY**: Do not manually edit `_docs/3. backlog-all.md` to mark tasks as done. Always use the script to ensure proper tracking and avoid errors.
 5. Commit before any risky/destructive change
 6. Always test before declaring done: `bundle exec jekyll build`
 7. **Run visual tests after layout/CSS changes: `npm test`**
@@ -17,6 +17,8 @@
 10. Tone: satirical/dark humor critiquing power structures
 11. to avoid conflicts while working on the backlog, create sub-backlogs for specific high-level tasks, then clean up after task is done
 12. **FUNDING RULE**: ALL automation costs must be funded through crowdfunding from users who benefit - NEVER spend personal money building corporate empires of evil shareholders. Money should be harvested from users for their benefit, not from personal funds.
+13. **NEVER CANCEL** any long-running commands (builds, tests, installs). Always set timeouts of 60+ minutes for builds, 30+ minutes for tests.
+14. Review _docs/1. TOC.md, _docs/TOC-strategy-and-meta.md, and _docs/1. meta.md for project structure and context before starting any work. Update those files with key learning as needed.
 
 ## Repository Overview
 
@@ -85,7 +87,7 @@ bundle config set --local path 'vendor/bundle'
 - Task involves ethical considerations or potential harm
 
 ## BACKLOG MANAGEMENT
-- All tasks are tracked in `_docs/backlog-all.md` using the simplified format: `| STATUS | TASK_ID | TASK_DESCRIPTION | MODEL | DoD`
+- All tasks are tracked in `_docs/3. backlog-all.md` using the simplified format: `| STATUS | TASK_ID | TASK_DESCRIPTION | MODEL | DoD`
 - Status: `[ ]` pending, `[x]` complete  
 - Tasks are sorted by importance: HIGH PRIORITY → MEDIUM PRIORITY → LOW PRIORITY → COMPLETED
 - Each task specifies the recommended MODEL (GPT-4.1, GPT-4o, GPT-5 mini, Grok Code Fast 1, Gemini 2.5 Pro)
@@ -179,7 +181,7 @@ npx playwright show-report playwright-report
 - **Main Config**: `_config.yml` (Jekyll configuration)
 - **Ruby Dependencies**: `Gemfile` and `Gemfile.lock`
 - **npm Dependencies**: `package.json` and `package-lock.json`
-- **Task Management**: `_docs/backlog-all.md` (single source of truth)
+- **Task Management**: `_docs/3. backlog-all.md` (single source of truth)
 - **Quality Scripts**: `scripts/quality-check.sh` and `scripts/test-site.sh`
 - **Visual Tests**: `tests/visual.spec.js` and `playwright.config.js`
 
@@ -245,7 +247,7 @@ ls playwright-report/  # Review generated test reports
 
 ## Workflow Integration
 
-- **Task Management**: All work tracked in `_docs/backlog-all.md`
+- **Task Management**: All work tracked in `_docs/3. backlog-all.md`
 - **Completion**: Use `./scripts/mark-task-done.sh TASK_ID` to mark tasks complete  
 - **Quality Gates**: Run build + quality check + site tests before completion
 - **Visual Changes**: Always run visual tests if layout/CSS modified
@@ -412,7 +414,7 @@ npm install
 ## Project-Specific Workflow
 
 ### Task Lifecycle
-1. **Planning**: Tasks added to `_docs/backlog-all.md`
+1. **Planning**: Tasks added to `_docs/3. backlog-all.md`
 2. **Execution**: Follow build → test → validate cycle
 3. **Quality check**: Run all validation scripts
 4. **Visual testing**: Verify layout changes with screenshots
