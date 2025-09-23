@@ -56,6 +56,9 @@ collections:
   profiles:
     output: true  
     permalink: /:collection/:name/
+  docs:
+    output: true
+    permalink: /:collection/:name/
 
 # Defaults
 defaults:
@@ -122,7 +125,7 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
-  - _docs/
+  
   - _dont touch/
   - _experiments/
   - _to_review/

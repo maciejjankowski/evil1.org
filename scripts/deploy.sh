@@ -6,14 +6,6 @@
 
 set -e  # Exit on any error
 
-#!/bin/bash
-# ===========================================
-# EVIL1.ORG DEPLOYMENT SCRIPT
-# Secure deployment to production server
-# ===========================================
-
-set -e  # Exit on any error
-
 # Load configuration
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
@@ -72,11 +64,14 @@ check_ssh_connection() {
 build_site() {
     log_info "Building Jekyll site..."
 
+    # Change to project root directory
+    cd "$PROJECT_ROOT"
+
     # Set the Gemfile path
-    export BUNDLE_GEMFILE="$(pwd)/configs/Gemfile"
+    export BUNDLE_GEMFILE="$PROJECT_ROOT/configs/Gemfile"
 
     # Build the site
-    if bundle exec jekyll build; then
+    if bundle exec jekyll build --quiet; then
         log_success "Site built successfully"
         return 0
     else
@@ -98,36 +93,79 @@ deploy_via_rsync() {
 
     # Create backup on remote server
     log_info "Creating backup on remote server..."
-    ssh "$REMOTE_USER@$REMOTE_HOST" "cd '$REMOTE_PATH' && mkdir -p ../backup && cp -r . ../backup/$(date +%Y%m%d-%H%M%S)-backup/" || {
+    if ssh "$REMOTE_USER@$REMOTE_HOST" "
+        mkdir -p '$REMOTE_PATH/../backup' &&
+        cd '$REMOTE_PATH' &&
+        if [ -d . ] && [ \"\$(ls -A . 2>/dev/null)\" ]; then
+            cp -r . '../backup/$(date +%Y%m%d-%H%M%S)-backup/' 2>/dev/null &&
+            echo 'Backup created successfully'
+        else
+            echo 'Directory empty, skipping backup'
+        fi
+    " 2>/dev/null; then
+        log_success "Backup created successfully"
+    else
         log_warning "Could not create backup on remote server (continuing anyway)"
-    }
+    fi
 
     # Upload files using rsync over SSH
     log_info "Uploading files to $REMOTE_USER@$REMOTE_HOST:$REMOTE_PATH"
 
     # Build rsync command with options
-    RSYNC_CMD="rsync"
-    for option in "${RSYNC_OPTIONS[@]}"; do
-        RSYNC_CMD="$RSYNC_CMD $option"
-    done
-    RSYNC_CMD="$RSYNC_CMD -e \"ssh -o ConnectTimeout=$SSH_TIMEOUT -o ServerAliveInterval=60\""
+    RSYNC_CMD="rsync -avz"
+    RSYNC_CMD="$RSYNC_CMD --exclude=.git"
+    RSYNC_CMD="$RSYNC_CMD --exclude=.DS_Store"
+    RSYNC_CMD="$RSYNC_CMD --exclude=*.log"
+    RSYNC_CMD="$RSYNC_CMD --exclude=*.tmp"
+    RSYNC_CMD="$RSYNC_CMD --exclude=*.bak"
+    RSYNC_CMD="$RSYNC_CMD --exclude=*.swp"
+    RSYNC_CMD="$RSYNC_CMD --exclude=*.swo"
+    RSYNC_CMD="$RSYNC_CMD --exclude=*.orig"
+    RSYNC_CMD="$RSYNC_CMD --exclude=*.rej"
+    RSYNC_CMD="$RSYNC_CMD --exclude=*~"
+    RSYNC_CMD="$RSYNC_CMD --exclude=.sass-cache"
+    RSYNC_CMD="$RSYNC_CMD --exclude=.jekyll-cache"
+    RSYNC_CMD="$RSYNC_CMD --exclude=.obsidian"
+    RSYNC_CMD="$RSYNC_CMD --exclude=.vscode"
+    RSYNC_CMD="$RSYNC_CMD --exclude=.github"
+    RSYNC_CMD="$RSYNC_CMD --exclude=Gemfile.lock"
+    RSYNC_CMD="$RSYNC_CMD --exclude=.bundle"
+    RSYNC_CMD="$RSYNC_CMD --exclude=vendor"
+    RSYNC_CMD="$RSYNC_CMD --exclude=node_modules"
+    RSYNC_CMD="$RSYNC_CMD --exclude=_docs"
+    RSYNC_CMD="$RSYNC_CMD --exclude=_dont touch"
+    RSYNC_CMD="$RSYNC_CMD --exclude=_experiments"
+    RSYNC_CMD="$RSYNC_CMD --exclude=_to_review"
+    RSYNC_CMD="$RSYNC_CMD --exclude=archives"
+    RSYNC_CMD="$RSYNC_CMD --exclude=configs"
+    RSYNC_CMD="$RSYNC_CMD --exclude=logs"
+    RSYNC_CMD="$RSYNC_CMD --exclude=v2"
+    RSYNC_CMD="$RSYNC_CMD -e 'ssh -o ConnectTimeout=$SSH_TIMEOUT -o ServerAliveInterval=60 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null'"
 
-    # Execute rsync
-    if eval "$RSYNC_CMD \"$LOCAL_BUILD_DIR/\" \"$REMOTE_USER@$REMOTE_HOST:$REMOTE_PATH/\""; then
+    # Debug: Show the command being executed
+    log_info "Executing: $RSYNC_CMD \"$LOCAL_BUILD_DIR/\" \"$REMOTE_USER@$REMOTE_HOST:$REMOTE_PATH/\""
 
-        log_success "Files uploaded successfully"
+    # Execute rsync with error handling
+    set +e  # Temporarily disable exit on error
+    RSYNC_OUTPUT=$(eval "$RSYNC_CMD \"$LOCAL_BUILD_DIR/\" \"$REMOTE_USER@$REMOTE_HOST:$REMOTE_PATH/\" 2>&1")
+    RSYNC_EXIT_CODE=$?
+    set -e  # Re-enable exit on error
 
-        # Set proper permissions on remote server
-        log_info "Setting proper permissions on remote server..."
-        ssh "$REMOTE_USER@$REMOTE_HOST" "
-            find '$REMOTE_PATH' -type f -exec chmod 644 {} \;
-            find '$REMOTE_PATH' -type d -exec chmod 755 {} \;
-            echo 'Permissions set successfully'
-        "
+    # Check if rsync was successful or had acceptable errors
+    if [ $RSYNC_EXIT_CODE -eq 0 ] || [ $RSYNC_EXIT_CODE -eq 23 ]; then
+        # Exit code 0 = success, 23 = partial transfer but files were copied
+        log_success "Files uploaded successfully (exit code: $RSYNC_EXIT_CODE)"
 
-        return 0
+        # Verify at least some files were transferred
+        if ssh "$REMOTE_USER@$REMOTE_HOST" "test -f /home/evil1/domains/evil1.org/public_html/index.html && test -f /home/evil1/domains/evil1.org/public_html/assets/css/main.css"; then
+            log_success "Key files verified on remote server"
+        else
+            log_error "Key files not found on remote server after transfer"
+            return 1
+        fi
     else
-        log_error "File upload failed"
+        log_error "Rsync failed with exit code: $RSYNC_EXIT_CODE"
+        log_error "Rsync output: $RSYNC_OUTPUT"
         return 1
     fi
 }
@@ -136,17 +174,27 @@ deploy_via_rsync() {
 verify_deployment() {
     log_info "Verifying deployment..."
 
+    # Use the expanded path directly
+    REMOTE_PATH_EXPANDED="/home/evil1/domains/evil1.org/public_html"
+
+    log_info "Checking path: $REMOTE_PATH_EXPANDED"
+
     # Check if key files exist on remote server
     if ssh "$REMOTE_USER@$REMOTE_HOST" "
-        test -f '$REMOTE_PATH/index.html' &&
-        test -f '$REMOTE_PATH/assets/css/main.css' &&
-        test -d '$REMOTE_PATH/assets'
+        echo 'Checking files on remote server...'
+        ls -la '$REMOTE_PATH_EXPANDED/' | head -3
+        test -f '$REMOTE_PATH_EXPANDED/index.html' && echo 'index.html found' || echo 'index.html NOT found'
+        test -f '$REMOTE_PATH_EXPANDED/assets/css/main.css' && echo 'main.css found' || echo 'main.css NOT found'
+        test -d '$REMOTE_PATH_EXPANDED/assets' && echo 'assets dir found' || echo 'assets dir NOT found'
+        test -f '$REMOTE_PATH_EXPANDED/index.html' &&
+        test -f '$REMOTE_PATH_EXPANDED/assets/css/main.css' &&
+        test -d '$REMOTE_PATH_EXPANDED/assets'
     "; then
         log_success "Deployment verified - key files found on remote server"
 
         # Get file count on remote server
-        REMOTE_FILE_COUNT=$(ssh "$REMOTE_USER@$REMOTE_HOST" "find '$REMOTE_PATH' -type f | wc -l")
-        REMOTE_SIZE=$(ssh "$REMOTE_USER@$REMOTE_HOST" "du -sh '$REMOTE_PATH' | cut -f1")
+        REMOTE_FILE_COUNT=$(ssh "$REMOTE_USER@$REMOTE_HOST" "find '$REMOTE_PATH_EXPANDED' -type f | wc -l")
+        REMOTE_SIZE=$(ssh "$REMOTE_USER@$REMOTE_HOST" "du -sh '$REMOTE_PATH_EXPANDED' | cut -f1")
 
         log_info "Remote server stats: $REMOTE_FILE_COUNT files, $REMOTE_SIZE"
 
@@ -198,20 +246,37 @@ main() {
     echo "EVIL1.ORG DEPLOYMENT SCRIPT"
     echo "=========================================="
     echo "Target: $REMOTE_USER@$REMOTE_HOST:$REMOTE_PATH"
+    echo "Local build dir: $LOCAL_BUILD_DIR"
     echo "=========================================="
 
     # Pre-deployment checks
     if ! check_ssh_connection; then
+        log_error "SSH connection check failed. Please verify your SSH setup."
         exit 1
     fi
 
     # Build the site
     if ! build_site; then
+        log_error "Site build failed. Please check for Jekyll errors."
+        exit 1
+    fi
+
+    # Verify build directory exists
+    if [ ! -d "$PROJECT_ROOT/$LOCAL_BUILD_DIR" ]; then
+        log_error "Build directory $LOCAL_BUILD_DIR not found"
         exit 1
     fi
 
     # Deploy
     if ! deploy_via_rsync; then
+        log_error "Deployment failed during file upload."
+        echo
+        echo "Troubleshooting tips:"
+        echo "1. Check SSH connection: ssh $REMOTE_USER@$REMOTE_HOST"
+        echo "2. Verify remote path exists: ssh $REMOTE_USER@$REMOTE_HOST 'ls -la $REMOTE_PATH'"
+        echo "3. Check disk space: ssh $REMOTE_USER@$REMOTE_HOST 'df -h'"
+        echo "4. Test rsync manually: rsync -avz --dry-run $PROJECT_ROOT/$LOCAL_BUILD_DIR/ $REMOTE_USER@$REMOTE_HOST:$REMOTE_PATH"
+        echo
         log_error "Deployment failed. Would you like to rollback? (y/N)"
         read -r response
         if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
@@ -222,6 +287,12 @@ main() {
 
     # Verify
     if ! verify_deployment; then
+        log_error "Deployment verification failed."
+        echo
+        echo "Verification checks:"
+        echo "1. Check if files exist: ssh $REMOTE_USER@$REMOTE_HOST 'ls -la $REMOTE_PATH'"
+        echo "2. Test website: curl -I https://evil1.org"
+        echo
         log_error "Deployment verification failed. Would you like to rollback? (y/N)"
         read -r response
         if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then

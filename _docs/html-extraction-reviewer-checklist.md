@@ -53,9 +53,9 @@ description: "Quality assurance checklist for reviewing HTML extraction conversi
 
 #### Jekyll Integration
 - [ ] **Liquid Syntax**: Any Liquid templating properly wrapped with `{% raw %}` and `{% endraw %}`
-- [ ] **Variable Preservation**: Jekyll variables ({{ }}, {% %}) work correctly
-- [ ] **Include Tags**: Any `{% include %}` or `{% render %}` tags functional
-- [ ] **Frontmatter Variables**: Page variables ({{ page.title }}, etc.) render correctly
+- [ ] **Variable Preservation**: Jekyll variables (`{% raw %}{{ page.variable }}{% endraw %}`, `{% raw %}{% include file.html %}{% endraw %}`) work correctly
+- [ ] **Include Tags**: Any `{% raw %}{% include %}{% endraw %}` or `{% raw %}{% render %}{% endraw %}` tags functional
+- [ ] **Frontmatter Variables**: Page variables (`{% raw %}{{ page.title }}{% endraw %}`, etc.) render correctly
 
 #### Performance & Maintainability
 - [ ] **File Size**: HTML content not excessively large (>1000 lines consider splitting)

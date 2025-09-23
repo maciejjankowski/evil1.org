@@ -10,15 +10,32 @@ layout: null
     <title>evil1.org - Corporate Intelligence Network</title>
     <meta name="description" content="The greatest trick the devil ever pulled was convincing the world he didn't exist. Exposing recursive capitalism and corporate power structures.">
 
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicons/android-chrome-512x512.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#1DA1F2">
+    <meta name="msapplication-TileColor" content="#2c5284">
+
     <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 <body>
     <!-- Corporate Header -->
     <header class="corporate-header">
-        <div class="corporate-logo">EVIL1.ORG</div>
+        <div class="corporate-logo">
+            EVIL1.ORG
+            <span id="verified-badge" class="verified-badge" title="Click to verify legitimacy">✓</span>
+        </div>
         <div class="corporate-tagline">Corporate Intelligence Network</div>
         <div class="corporate-slogan">"The greatest trick the devil ever pulled was convincing the world he didn't exist"</div>
     </header>
+
+    <!-- Legitimacy Button -->
+    <button id="legitimacy-btn" class="legitimacy-btn">🙋</button>
 
     <div class="container">
         <!-- Mission Statement -->
@@ -188,9 +205,14 @@ layout: null
 
         <!-- Legitimacy Section -->
         <section class="legitimacy-section">
-            <h2 class="legitimacy-title">Is this a legitimate site?</h2>
+            <h2 class="legitimacy-title">🙋 Is this a legitimate site? 🙋</h2>
             <div class="legitimacy-content">
-                <p><strong>Yes, this site is brought up to you by a real human, yet all the contents are AI generated in a satirical tone oozing with dark humor.</strong> It is done in such way to prevent defamation lawsuits, because after all it's non-copyrightable AI. The mission is real, the effort is real. Raising awareness, translating corporate newspeak into what it really is. Yes, you could contact the authors through secure channels in the future. For now we are fundraising to make this lift off. All money is being transparently accounted for and in the future you'll be able to vote on how to spend it.</p>
+                <blockquote>
+                    <strong class="" style="color: red;">⬇ This is the only content that is not AI generated. Everything else is. ⬇</strong>
+                    <p><strong>Yes, this site is brought up to you by a real human, yet all the contents are AI generated in a satirical tone oozing with dark humor.</strong> It is done in such way to prevent defamation lawsuits, because after all it's non-copyrightable AI. The mission is real, the effort is real. Raising awareness, translating corporate newspeak into what it really is. Yes, you could contact the authors through secure channels in the future. For now we are fundraising to make this lift off. All money is being transparently accounted for and in the future you'll be able to vote on how to spend it.<br>
+                        <strong class="" style="color: red;">⬆ This is the only content that is not AI generated. Everything else is. ⬆</strong>
+                    </p>
+                </blockquote>
             </div>
         </section>
     </div>
@@ -205,6 +227,16 @@ layout: null
                 <td class="footer-cell"><a href="/terms.html" class="footer-link">Terms of Service</a></td>
                 <td class="footer-cell"><a href="/contact.html" class="footer-link">Contact</a></td>
                 <td class="footer-cell"><a href="/press.html" class="footer-link">Press Kit</a></td>
+                <td class="footer-cell social-cell">
+                    <a href="https://threads.net/@evil1org" class="social-link" target="_blank" rel="noopener noreferrer" title="Follow us on Threads">
+                        🧵 Threads
+                    </a>
+                </td>
+                <td class="footer-cell social-cell">
+                    <a href="https://x.com/evil1org" class="social-link" target="_blank" rel="noopener noreferrer" title="Follow us on X">
+                        𝕏
+                    </a>
+                </td>
             </tr>
         </table>
         <div class="copyright">
@@ -213,5 +245,22 @@ layout: null
         </div>
     </footer>
     <script src="/assets/js/main.js"></script>
+    <!-- Tidio Live Chat -->
+    <script src="//code.tidio.co/cfnbldnmv5lhkuyo9yohza1lxvuxirdh.js" async></script>
+
+    <!-- Legitimacy Toast -->
+    <div id="legitimacy-toast" class="legitimacy-toast">
+        <div class="toast-content">
+            <div class="toast-header">
+                <span class="toast-icon">🙋</span>
+                <span class="toast-title">Is this site legitimate?</span>
+                <button class="toast-close">&times;</button>
+            </div>
+            <div class="toast-body">
+                <p><strong>Yes, this site is brought up to you by a real human, yet all the contents are AI generated in a satirical tone oozing with dark humor.</strong></p>
+                <p>It is done in such way to prevent defamation lawsuits, because after all it's non-copyrightable AI. The mission is real, the effort is real.</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
