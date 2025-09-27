@@ -2,7 +2,7 @@
     <h3>📧 Stay Informed</h3>
     <p>Get the latest exposés on corporate corruption and capitalist exploitation delivered to your inbox.</p>
 
-    <form class="newsletter-form" action="https://formspree.io/f/xknkqgqv" method="POST">
+    <form class="newsletter-form" action="{{ site.newsletter_post_url }}" method="POST">
         <input type="hidden" name="_subject" value="Newsletter Signup - evil1.org">
         <input type="hidden" name="_next" value="{{ site.url }}/thank-you">
 
@@ -34,6 +34,10 @@
                 <input type="checkbox" name="policy-analysis">
                 Policy Analysis
             </label>
+            <label class="checkbox-label">
+                <input type="checkbox" name="nova-bialystok-updates" checked>
+                🏥 Operation Żurek Updates
+            </label>
         </div>
 
         <button type="submit" class="newsletter-submit">
@@ -45,6 +49,9 @@
         <p class="privacy-note">
             🔒 Your email is safe with us. Unsubscribe anytime.
             <a href="/privacy/">Privacy Policy</a>
+        </p>
+        <p class="nova-bialystok-link" style="margin-top: 10px; font-size: 14px;">
+            🇵🇱 <a href="/nova-bialystok-crowdfunding.html" style="color: #dc143c; font-weight: bold;">Support Operation Żurek →</a>
         </p>
     </div>
 </div>
