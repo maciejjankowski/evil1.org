@@ -1,6 +1,26 @@
 ---
 # Crowdfunding campaigns for site development
 campaigns:
+  - id: "nova-bialystok-medical-enclave"
+    title: "Operation Żurek: Polish Medical Enclave"
+    description: "Fund the establishment of Nova Białystok Medical Territory - a Polish medical enclave providing universal healthcare to Americans in Texas"
+    category: "healthcare-diplomacy"
+    goal_amount: 2000000
+    current_amount: 89550
+    currency: "USD"
+    status: "active"
+    created_date: "2025-01-08"
+    estimated_completion: "2028-01-08"
+    benefits:
+      - "Access to Polish universal healthcare system"
+      - "67% cost savings compared to US medical care"
+      - "Cultural integration programs with Polish traditions"
+      - "Medical University of Białystok overseas campus"
+      - "Traditional Polish healing and food medicine programs"
+      - "Lifetime healthcare coverage for major donors"
+      - "Exclusive pierogi diplomacy events"
+    contributors: 1247
+    
   - id: "feature-dark-mode"
     title: "Dark Mode Theme"
     description: "Fund development of a comprehensive dark mode theme for better late-night corporate evil research"
@@ -107,6 +127,11 @@ campaigns:
     contributors: 67
 
 categories:
+  - id: "healthcare-diplomacy"
+    name: "Healthcare Diplomacy"
+    description: "Revolutionary international healthcare initiatives that expose American medical capitalism"
+    icon: "🏥"
+    
   - id: "features"
     name: "New Features"
     description: "Fund development of new website features and functionality"
